@@ -8,7 +8,7 @@ import shutil
 import subprocess
 from collections import Counter
 
-from smells import (
+from models.smells import (
     IMPLEMENTATION_SMELLS,
     IMPL_SMELL_TO_COL,
     DESIGN_SMELLS,
@@ -91,16 +91,15 @@ def run_dpy_and_collect_smells(project_path: str,
         for s in impl_smells:
             name = s.get("Smell", "")
             if name in IMPLEMENTATION_SMELLS:
-                impl_counts[name] += 1
                 smell_details.append({
                     "Smell": name,
                     "Package": s.get("Package", ""),
                     "Module": s.get("Module", ""),
                     "Class": s.get("Class", ""),
-                    "Method": s.get("Method", ""),
+                    "Function/Method": s.get("Function/Method", ""),
                     "Line no": s.get("Line no", ""),
                     "File": s.get("File", ""),
-                    "Description": s.get("Description", "")
+                    "Details": s.get("Details", "")
                 })
 
         for smell_name, count in impl_counts.items():
@@ -114,16 +113,15 @@ def run_dpy_and_collect_smells(project_path: str,
         for s in design_smells:
             name = s.get("Smell", "")
             if name in DESIGN_SMELLS:
-                design_counts[name] += 1
                 smell_details.append({
                     "Smell": name,
                     "Package": s.get("Package", ""),
                     "Module": s.get("Module", ""),
                     "Class": s.get("Class", ""),
-                    "Method": s.get("Method", ""),
+                    "Function/Method": s.get("Function/Method", ""),
                     "Line no": s.get("Line no", ""),
                     "File": s.get("File", ""),
-                    "Description": s.get("Description", "")
+                    "Details": s.get("Details", "")
                 })
 
         for smell_name, count in design_counts.items():

@@ -15,7 +15,6 @@ class CommitMetrics:
     commit_deletions: int
     commit_files_changed: int
     commit_churn: int
-    commit_files: str = ""  # Comma-separated list of modified files
     repo_stars: int
     repo_forks: int
     repo_loc: int
@@ -23,9 +22,10 @@ class CommitMetrics:
     repo_contributors: int
     ref_type: str
     ref_name: str
-    is_release: bool = False  # True if commit is tagged as a release
     fix_commit: int
     fix_commit_tags: str
+    commit_files: str = ""  # Comma-separated list of modified files
+    is_release: bool = False  # True if commit is tagged as a release
     szz_introducing_commits: str = ""
     szz_introducing_commits_count: int = 0
     issue_bodies: str = ""
