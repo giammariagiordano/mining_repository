@@ -73,7 +73,7 @@ def run_smell_ai_and_collect_smells(
 
     # Final check: if still not a valid directory, warn and skip
     if not os.path.isdir(smell_ai_path):
-        print(f"  [SMELL_AI] WARNING: smell_ai_path '{smell_ai_path}' does not exist. Skipping analysis.")
+        print(f"  [CodeSmile] WARNING: smell_ai_path '{smell_ai_path}' does not exist. Skipping analysis.")
         return metrics
     
     # Create temporary output directory
@@ -113,7 +113,7 @@ def run_smell_ai_and_collect_smells(
                 try:
                     smells_df = pd.read_csv(overview_path)
                 except Exception as e:
-                    print(f"  [SMELL_AI] ERROR reading overview.csv: {e}")
+                    print(f"  [CodeSmile] ERROR reading overview.csv: {e}")
             else:
                 # Fallback to project_details if overview.csv is missing (unlikely for single project)
                 project_details_dir = os.path.join(out_dir, "output", "project_details")
@@ -174,15 +174,15 @@ def run_smell_ai_and_collect_smells(
 
         except subprocess.CalledProcessError as e:
             print(
-                f"  [SMELL_AI] ERROR (exit code {e.returncode}) for {project_path}. "
+                f"  [CodeSmile] ERROR (exit code {e.returncode}) for {project_path}. "
                 f"stderr (partial): {e.stderr.decode(errors='ignore')[:300]}"
             )
             return metrics
         except subprocess.TimeoutExpired:
-            print(f"  [SMELL_AI] TIMEOUT after {timeout} seconds on {project_path}")
+            print(f"  [CodeSmile] TIMEOUT after {timeout} seconds on {project_path}")
             return metrics
         except FileNotFoundError:
-            print(f"  [SMELL_AI] Python or smell_ai CLI not found at {smell_ai_path}")
+            print(f"  [CodeSmile] Python or smell_ai CLI not found at {smell_ai_path}")
             return metrics
         
     finally:

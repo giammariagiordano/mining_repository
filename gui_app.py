@@ -13,7 +13,7 @@ from config import MiningConfig
 
 
 
-ctk.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
+ctk.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"
 ctk.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
 
@@ -209,8 +209,21 @@ class MiningGUI(ctk.CTk):
         ctk.CTkEntry(self.form_frame, textvariable=self.vulture_binary_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
-        # Smell AI path
-        ctk.CTkLabel(self.form_frame, text="Smell AI path (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        # CodeSmile path
+        codesmile_label_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
+        codesmile_label_frame.grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        
+        try:
+            logo_path = os.path.join(os.path.dirname(__file__), "smell_ai", "code_smile_logo.png")
+            if os.path.exists(logo_path):
+                pil_img = Image.open(logo_path)
+                pil_img = pil_img.resize((20, 20), Image.Resampling.LANCZOS)
+                logo_img = ctk.CTkImage(light_image=pil_img, dark_image=pil_img, size=(20, 20))
+                ctk.CTkLabel(codesmile_label_frame, text="", image=logo_img).pack(side=tk.LEFT, padx=(0, 5))
+        except Exception:
+            pass
+            
+        ctk.CTkLabel(codesmile_label_frame, text="CodeSmile path (optional):").pack(side=tk.LEFT)
         self.smell_ai_path_var = tk.StringVar()
         ctk.CTkEntry(self.form_frame, textvariable=self.smell_ai_path_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_smell_ai_path, width=100).grid(row=row, column=2, padx=10, pady=5)
