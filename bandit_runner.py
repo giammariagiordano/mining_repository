@@ -81,6 +81,8 @@ def run_bandit_and_collect_vulns(
     test_ids = set()
     issue_summaries = set()
 
+    vuln_details = []
+
     for item in results:
         sev = str(item.get("issue_severity", "")).upper().strip()
         if sev:
@@ -94,6 +96,15 @@ def run_bandit_and_collect_vulns(
             if issue_text:
                 # Compact summary "BXXX: description"
                 issue_summaries.add(f"{test_id}: {issue_text}")
+        
+        vuln_details.append({
+            "filename": item.get("filename", ""),
+            "line_number": item.get("line_number", ""),
+            "test_id": test_id,
+            "issue_text": issue_text,
+            "issue_severity": sev,
+            "issue_confidence": item.get("issue_confidence", "")
+        })
 
     total = sum(severity_counter.values())
 
@@ -106,6 +117,7 @@ def run_bandit_and_collect_vulns(
         "vuln_bandit_issue_summaries": " || ".join(sorted(issue_summaries))
         if issue_summaries
         else "",
+        "vuln_details": json.dumps(vuln_details)
     }
 
     return metrics

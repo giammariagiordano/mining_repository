@@ -10,9 +10,9 @@ import pandas as pd
 from git import Repo, GitCommandError
 
 from config import MiningConfig
-from github_api import get_github_repo_stats
+from utils.github_api import get_github_repo_stats, get_issue_body
 from dpy_runner import run_dpy_and_collect_smells
-from git_utils import (
+from utils.git_utils import (
     detect_default_branch,
     clone_or_update_repo,
     list_release_tags,
@@ -542,9 +542,28 @@ def mine_repo_commits(
                     ",".join(sorted(introducing)) if introducing else ""
                 )
                 metrics["szz_introducing_commits_count"] = len(introducing)
+
+                # Fetch issue bodies
+                issue_bodies = []
+                for tag in fix_tags:
+                    if tag.startswith("issue:"):
+                        issue_num = tag.split(":", 1)[1]
+                        # Remove leading '#' if present (though regex in _detect_fixing_commit keeps it)
+                        issue_num = issue_num.lstrip("#")
+                        body = get_issue_body(
+                            project_name=project_name,
+                            issue_number=issue_num,
+                            github_token=config.github_token,
+                        )
+                        if body:
+                            issue_bodies.append(f"Issue #{issue_num}: {body}")
+                
+                metrics["issue_bodies"] = "\n---\n".join(issue_bodies)
+
             else:
                 metrics["szz_introducing_commits"] = ""
                 metrics["szz_introducing_commits_count"] = 0
+                metrics["issue_bodies"] = ""
 
             rows.append(metrics)
 
@@ -1026,9 +1045,10 @@ def run_mining(config: MiningConfig) -> None:
         print("[DONE] No projects to process.")
         return
 
-    print("[PARALLEL] Starting up to {} parallel processes.".format(config.jobs))
+    max_workers = config.jobs if config.jobs > 0 else None
+    print("[PARALLEL] Starting parallel processes (max_workers={}).".format(max_workers))
 
-    executor = ProcessPoolExecutor(max_workers=config.jobs)
+    executor = ProcessPoolExecutor(max_workers=max_workers)
     try:
         future_to_project: Dict[Any, str] = {}
         for project_name in project_names:

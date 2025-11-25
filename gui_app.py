@@ -4,12 +4,16 @@ import os
 import sys
 import threading
 import ctypes
-
 import tkinter as tk
-from tkinter import scrolledtext, filedialog, messagebox
+from tkinter import filedialog, messagebox
+import customtkinter as ctk
 
 from config import MiningConfig
-from miner import run_mining
+
+
+
+ctk.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
+ctk.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
 
 class TextRedirector:
@@ -34,7 +38,6 @@ class TextRedirector:
 def _async_raise(tid, exctype):
     """
     Raise an exception in the thread with id 'tid'.
-    Uses CPython internal API PyThreadState_SetAsyncExc.
     """
     if not tid:
         return
@@ -48,13 +51,17 @@ def _async_raise(tid, exctype):
         raise SystemError("PyThreadState_SetAsyncExc failed")
 
 
-class MiningGUI(tk.Tk):
+class MiningGUI(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("DPy Mining Tool")
-        self.geometry("950x700")
+        self.geometry("1000x800")
 
         self.mining_thread = None
+
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=0)  # Form area
+        self.grid_rowconfigure(1, weight=1)  # Log area
 
         self._build_form()
         self._build_log_area()
@@ -64,196 +71,145 @@ class MiningGUI(tk.Tk):
     # -------------------------------------------------------------------------
 
     def _build_form(self):
-        frm = tk.Frame(self)
-        frm.pack(side=tk.TOP, fill=tk.X, padx=10, pady=10)
+        self.form_frame = ctk.CTkFrame(self)
+        self.form_frame.grid(row=0, column=0, sticky="nsew", padx=20, pady=20)
+        self.form_frame.grid_columnconfigure(1, weight=1)
 
         row = 0
 
         # Input CSV
-        tk.Label(frm, text="Input CSV:").grid(row=row, column=0, sticky="e")
+        ctk.CTkLabel(self.form_frame, text="Input CSV:").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.input_csv_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.input_csv_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
-        tk.Button(frm, text="Browse", command=self.browse_input_csv).grid(
-            row=row, column=2, padx=5
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.input_csv_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_input_csv, width=100).grid(row=row, column=2, padx=10, pady=5)
         row += 1
 
         # Output CSV
-        tk.Label(frm, text="Output CSV:").grid(row=row, column=0, sticky="e")
+        ctk.CTkLabel(self.form_frame, text="Output CSV:").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.output_csv_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.output_csv_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
-        tk.Button(frm, text="Browse", command=self.browse_output_csv).grid(
-            row=row, column=2, padx=5
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.output_csv_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_output_csv, width=100).grid(row=row, column=2, padx=10, pady=5)
         row += 1
 
         # Repos dir
-        tk.Label(frm, text="Repos dir:").grid(row=row, column=0, sticky="e")
+        ctk.CTkLabel(self.form_frame, text="Repos dir:").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.repos_dir_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.repos_dir_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
-        tk.Button(frm, text="Browse", command=self.browse_repos_dir).grid(
-            row=row, column=2, padx=5
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.repos_dir_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_repos_dir, width=100).grid(row=row, column=2, padx=10, pady=5)
         row += 1
 
         # DPy binary
-        tk.Label(frm, text="DPy binary:").grid(row=row, column=0, sticky="e")
+        ctk.CTkLabel(self.form_frame, text="DPy binary:").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.dpy_binary_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.dpy_binary_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
-        tk.Button(frm, text="Browse", command=self.browse_dpy_binary).grid(
-            row=row, column=2, padx=5
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.dpy_binary_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_dpy_binary, width=100).grid(row=row, column=2, padx=10, pady=5)
         row += 1
 
         # Max commits
-        tk.Label(frm, text="Max commits (0 = all):").grid(
-            row=row, column=0, sticky="e"
-        )
+        ctk.CTkLabel(self.form_frame, text="Max commits (0 = all):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.max_commits_var = tk.StringVar(value="0")
-        tk.Entry(frm, textvariable=self.max_commits_var, width=10).grid(
-            row=row, column=1, sticky="w"
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.max_commits_var, width=100).grid(row=row, column=1, sticky="w", padx=10, pady=5)
         row += 1
 
         # Analysis mode
-        tk.Label(frm, text="Analysis mode:").grid(row=row, column=0, sticky="e")
+        ctk.CTkLabel(self.form_frame, text="Analysis mode:").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.analysis_mode_var = tk.StringVar(value="commits")
-        mode_frame = tk.Frame(frm)
-        mode_frame.grid(row=row, column=1, sticky="w")
+        mode_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
+        mode_frame.grid(row=row, column=1, sticky="w", padx=10, pady=5)
 
-        tk.Radiobutton(
-            mode_frame,
-            text="Commits",
-            variable=self.analysis_mode_var,
-            value="commits",
-            command=self._on_mode_changed,
-        ).pack(side=tk.LEFT, padx=(0, 10))
-
-        tk.Radiobutton(
-            mode_frame,
-            text="Releases (tags)",
-            variable=self.analysis_mode_var,
-            value="releases",
-            command=self._on_mode_changed,
-        ).pack(side=tk.LEFT, padx=(0, 10))
-
-        tk.Radiobutton(
-            mode_frame,
-            text="Single version",
-            variable=self.analysis_mode_var,
-            value="version",
-            command=self._on_mode_changed,
-        ).pack(side=tk.LEFT)
+        ctk.CTkRadioButton(mode_frame, text="Commits", variable=self.analysis_mode_var, value="commits", command=self._on_mode_changed).pack(side=tk.LEFT, padx=(0, 10))
+        ctk.CTkRadioButton(mode_frame, text="Releases (tags)", variable=self.analysis_mode_var, value="releases", command=self._on_mode_changed).pack(side=tk.LEFT, padx=(0, 10))
+        ctk.CTkRadioButton(mode_frame, text="Single version", variable=self.analysis_mode_var, value="version", command=self._on_mode_changed).pack(side=tk.LEFT)
         row += 1
 
         # Tag pattern (for releases)
-        self.tag_pattern_label = tk.Label(frm, text="Tag pattern (releases):")
-        self.tag_pattern_label.grid(row=row, column=0, sticky="e")
+        self.tag_pattern_label = ctk.CTkLabel(self.form_frame, text="Tag pattern (releases):")
+        self.tag_pattern_label.grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.tag_pattern_var = tk.StringVar()
-        self.tag_pattern_entry = tk.Entry(
-            frm, textvariable=self.tag_pattern_var, width=30
-        )
-        self.tag_pattern_entry.grid(row=row, column=1, sticky="w")
+        self.tag_pattern_entry = ctk.CTkEntry(self.form_frame, textvariable=self.tag_pattern_var, width=200)
+        self.tag_pattern_entry.grid(row=row, column=1, sticky="w", padx=10, pady=5)
         row += 1
 
         # Single ref (for version)
-        self.single_ref_label = tk.Label(
-            frm, text="Single ref (tag/branch/SHA):"
-        )
-        self.single_ref_label.grid(row=row, column=0, sticky="e")
+        self.single_ref_label = ctk.CTkLabel(self.form_frame, text="Single ref (tag/branch/SHA):")
+        self.single_ref_label.grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.single_ref_var = tk.StringVar()
-        self.single_ref_entry = tk.Entry(
-            frm, textvariable=self.single_ref_var, width=30
-        )
-        self.single_ref_entry.grid(row=row, column=1, sticky="w")
+        self.single_ref_entry = ctk.CTkEntry(self.form_frame, textvariable=self.single_ref_var, width=200)
+        self.single_ref_entry.grid(row=row, column=1, sticky="w", padx=10, pady=5)
         row += 1
 
         # Jobs
-        tk.Label(frm, text="Jobs (processes):").grid(row=row, column=0, sticky="e")
-        default_jobs = os.cpu_count() or 1
-        self.jobs_var = tk.StringVar(value=str(default_jobs))
-        tk.Entry(frm, textvariable=self.jobs_var, width=10).grid(
-            row=row, column=1, sticky="w"
-        )
+        ctk.CTkLabel(self.form_frame, text="Jobs (0 = all):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        self.jobs_var = tk.StringVar(value="0")
+        ctk.CTkEntry(self.form_frame, textvariable=self.jobs_var, width=100).grid(row=row, column=1, sticky="w", padx=10, pady=5)
+        row += 1
+
+        # Max project time
+        ctk.CTkLabel(self.form_frame, text="Max time per project (min, 0 = no limit):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        self.max_time_var = tk.StringVar(value="0")
+        ctk.CTkEntry(self.form_frame, textvariable=self.max_time_var, width=100).grid(row=row, column=1, sticky="w", padx=10, pady=5)
         row += 1
 
         # GitHub token
-        tk.Label(frm, text="GitHub token (optional):").grid(
-            row=row, column=0, sticky="e"
-        )
+        ctk.CTkLabel(self.form_frame, text="GitHub token (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.github_token_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.github_token_var, width=70, show="*").grid(
-            row=row, column=1, sticky="w"
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.github_token_var, show="*").grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
         # Bandit command
-        tk.Label(frm, text="Bandit command (optional):").grid(
-            row=row, column=0, sticky="e"
-        )
+        ctk.CTkLabel(self.form_frame, text="Bandit command (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.bandit_binary_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.bandit_binary_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.bandit_binary_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
         # Vulture command
-        tk.Label(frm, text="Vulture command (optional):").grid(
-            row=row, column=0, sticky="e"
-        )
+        ctk.CTkLabel(self.form_frame, text="Vulture command (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.vulture_binary_var = tk.StringVar()
-        tk.Entry(frm, textvariable=self.vulture_binary_var, width=70).grid(
-            row=row, column=1, sticky="w"
-        )
+        ctk.CTkEntry(self.form_frame, textvariable=self.vulture_binary_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
-        # Start button
-        self.start_button = tk.Button(
-            frm, text="Start Mining", command=self.start_mining_thread
-        )
-        self.start_button.grid(row=row, column=1, pady=10, sticky="w")
+        # Buttons
+        button_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
+        button_frame.grid(row=row, column=1, sticky="w", padx=10, pady=20)
+        
+        self.start_button = ctk.CTkButton(button_frame, text="Start Mining", command=self.start_mining_thread, fg_color="green", hover_color="darkgreen")
+        self.start_button.pack(side=tk.LEFT, padx=(0, 20))
 
-        # Stop button
-        self.stop_button = tk.Button(
-            frm, text="Stop", command=self.stop_mining, state="disabled"
-        )
-        self.stop_button.grid(row=row, column=2, pady=10, sticky="w")
+        self.stop_button = ctk.CTkButton(button_frame, text="Stop", command=self.stop_mining, state="disabled", fg_color="red", hover_color="darkred")
+        self.stop_button.pack(side=tk.LEFT)
 
         self._on_mode_changed()
 
     def _build_log_area(self):
-        self.log_text = scrolledtext.ScrolledText(self, state="disabled")
-        self.log_text.pack(
-            side=tk.BOTTOM, fill=tk.BOTH, expand=True, padx=10, pady=10
-        )
+        self.log_frame = ctk.CTkFrame(self)
+        self.log_frame.grid(row=1, column=0, sticky="nsew", padx=20, pady=(0, 20))
+        self.log_frame.grid_rowconfigure(0, weight=1)
+        self.log_frame.grid_columnconfigure(0, weight=1)
 
-        self.log_text.tag_configure("stdout", foreground="black")
-        self.log_text.tag_configure("stderr", foreground="red")
+        self.log_text = ctk.CTkTextbox(self.log_frame, state="disabled", font=("Consolas", 12))
+        self.log_text.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+        
+        # Progress label
+        self.progress_label = ctk.CTkLabel(self.log_frame, text="Ready to start mining", font=("Arial", 12, "bold"))
+        self.progress_label.grid(row=1, column=0, sticky="ew", padx=5, pady=(5, 0))
+
+        # Configure tags for colors (CustomTkinter Textbox doesn't support tags exactly like Tkinter Text, 
+        # but we can insert text. For simplicity, we'll just insert text. 
+        # If we need colors, we might need a different approach or just use plain text).
+        # Actually CTkTextbox is a wrapper around Tkinter Text, so tags might work if we access the underlying widget.
+        # But for now let's keep it simple.
 
     # -------------------------------------------------------------------------
     # Browse helpers
     # -------------------------------------------------------------------------
 
     def browse_input_csv(self):
-        path = filedialog.askopenfilename(
-            filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
-        )
+        path = filedialog.askopenfilename(filetypes=[("CSV files", "*.csv"), ("All files", "*.*")])
         if path:
             self.input_csv_var.set(path)
 
     def browse_output_csv(self):
-        path = filedialog.asksaveasfilename(
-            defaultextension=".csv",
-            filetypes=[("CSV files", "*.csv"), ("All files", "*.*")],
-        )
+        path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV files", "*.csv"), ("All files", "*.*")])
         if path:
             self.output_csv_var.set(path)
 
@@ -263,9 +219,7 @@ class MiningGUI(tk.Tk):
             self.repos_dir_var.set(path)
 
     def browse_dpy_binary(self):
-        path = filedialog.askopenfilename(
-            filetypes=[("Executable", "*"), ("All files", "*.*")]
-        )
+        path = filedialog.askopenfilename(filetypes=[("Executable", "*"), ("All files", "*.*")])
         if path:
             self.dpy_binary_var.set(path)
 
@@ -277,18 +231,18 @@ class MiningGUI(tk.Tk):
         mode = self.analysis_mode_var.get()
 
         if mode == "releases":
-            self.tag_pattern_entry.config(state="normal")
-            self.tag_pattern_label.config(fg="black")
+            self.tag_pattern_entry.configure(state="normal")
+            self.tag_pattern_label.configure(text_color=("black", "white"))
         else:
-            self.tag_pattern_entry.config(state="disabled")
-            self.tag_pattern_label.config(fg="gray")
+            self.tag_pattern_entry.configure(state="disabled")
+            self.tag_pattern_label.configure(text_color="gray")
 
         if mode == "version":
-            self.single_ref_entry.config(state="normal")
-            self.single_ref_label.config(fg="black")
+            self.single_ref_entry.configure(state="normal")
+            self.single_ref_label.configure(text_color=("black", "white"))
         else:
-            self.single_ref_entry.config(state="disabled")
-            self.single_ref_label.config(fg="gray")
+            self.single_ref_entry.configure(state="disabled")
+            self.single_ref_label.configure(text_color="gray")
 
     # -------------------------------------------------------------------------
     # Mining control
@@ -305,9 +259,13 @@ class MiningGUI(tk.Tk):
             messagebox.showerror("Configuration error", str(e))
             return
 
-        self.start_button.config(state="disabled")
-        self.stop_button.config(state="normal")
+        self.start_button.configure(state="disabled")
+        self.stop_button.configure(state="normal")
+        self.progress_label.configure(text="Starting mining process...")
 
+        # Redirect stdout/stderr
+        # Note: CTkTextbox doesn't fully support the same tag methods as Tkinter Text easily exposed.
+        # We will use a simpler redirector that just inserts at end.
         sys.stdout = TextRedirector(self.log_text, "stdout")
         sys.stderr = TextRedirector(self.log_text, "stderr")
 
@@ -334,9 +292,7 @@ class MiningGUI(tk.Tk):
         dpy_binary = self.dpy_binary_var.get().strip()
 
         if not input_csv or not output_csv or not repos_dir or not dpy_binary:
-            raise ValueError(
-                "Please fill in all required fields (CSV paths, repos dir, DPy binary)."
-            )
+            raise ValueError("Please fill in all required fields (CSV paths, repos dir, DPy binary).")
 
         try:
             max_commits = int(self.max_commits_var.get())
@@ -347,6 +303,11 @@ class MiningGUI(tk.Tk):
             jobs = int(self.jobs_var.get())
         except ValueError:
             raise ValueError("Jobs must be an integer.")
+
+        try:
+            max_time = int(self.max_time_var.get())
+        except ValueError:
+            raise ValueError("Max time per project must be an integer.")
 
         github_token = self.github_token_var.get().strip() or None
         if github_token is None:
@@ -360,16 +321,10 @@ class MiningGUI(tk.Tk):
         vulture_binary = self.vulture_binary_var.get().strip() or None
 
         if analysis_mode == "releases" and not tag_pattern:
-            print(
-                "[GUI] WARNING: 'Releases' mode selected but no tag pattern provided. "
-                "All tags will be considered."
-            )
+            print("[GUI] WARNING: 'Releases' mode selected but no tag pattern provided. All tags will be considered.")
 
         if analysis_mode == "version" and not single_ref:
-            raise ValueError(
-                "Single-version analysis requires a ref "
-                "(tag/branch/SHA) in the 'Single ref' field."
-            )
+            raise ValueError("Single-version analysis requires a ref (tag/branch/SHA) in the 'Single ref' field.")
 
         cfg = MiningConfig(
             input_csv=input_csv,
@@ -384,18 +339,39 @@ class MiningGUI(tk.Tk):
             single_ref=single_ref,
             bandit_binary=bandit_binary,
             vulture_binary=vulture_binary,
+            max_project_time_minutes=max_time,
         )
         return cfg
 
     def _run_mining_safe(self, cfg: MiningConfig):
         try:
-            run_mining(cfg)
+            from core.engine import MiningEngine
+            
+            def progress_callback(completed, total):
+                # Update progress label from worker thread
+                self.after(0, self._update_progress, completed, total)
+            
+            engine = MiningEngine(cfg, progress_callback=progress_callback)
+            engine.run()
         except Exception as e:
             print(f"[GUI] ERROR during mining: {e}")
         finally:
-            self.start_button.config(state="normal")
-            self.stop_button.config(state="disabled")
+            # We need to schedule the button update on the main thread
+            self.after(0, self._reset_buttons)
             self.mining_thread = None
+
+    def _update_progress(self, completed, total):
+        """Update the progress label with current status"""
+        remaining = total - completed
+        self.progress_label.configure(
+            text=f"Progress: {completed}/{total} projects completed ({remaining} remaining)"
+        )
+
+    def _reset_buttons(self):
+        self.start_button.configure(state="normal")
+        self.stop_button.configure(state="disabled")
+        self.progress_label.configure(text="Mining completed!")
+
 
 
 def main():

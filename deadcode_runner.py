@@ -83,6 +83,19 @@ def _aggregate_items(items: List[Dict[str, Any]]) -> Dict[str, Any]:
     )
     metrics["deadcode_items_other"] = other_count
     metrics["deadcode_items_summaries"] = " || ".join(summaries) if summaries else ""
+    
+    deadcode_details = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        deadcode_details.append({
+            "type": str(item.get("type", "other")).lower().strip(),
+            "name": str(item.get("name", "")).strip(),
+            "filename": str(item.get("filename", "")).strip(),
+            "lineno": item.get("lineno"),
+            "confidence": item.get("confidence")
+        })
+    metrics["deadcode_details"] = json.dumps(deadcode_details)
 
     return metrics
 

@@ -2,7 +2,7 @@
 
 import argparse
 from config import MiningConfig
-from miner import run_mining
+
 
 
 def parse_args() -> argparse.Namespace:
@@ -56,8 +56,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--vulture-binary",
+        type=str,
         default=None,
         help="Vulture command or path (optional), e.g. 'vulture'.",
+    )
+
+    parser.add_argument(
+        "--max-time",
+        type=int,
+        default=0,
+        help="Max time per project in minutes (0 = no limit).",
+    )
+
+    parser.add_argument(
+        "--tui",
+        action="store_true",
+        help="Launch the Textual TUI.",
     )
 
     return parser.parse_args()
@@ -67,6 +81,16 @@ def main():
     args = parse_args()
 
     github_token = args.github_token or None
+
+    if args.tui:
+        try:
+            from tui_app import MiningTUI
+            app = MiningTUI()
+            app.run()
+        except ImportError:
+            print("Error: 'textual' is not installed. Please install it to use the TUI.")
+            exit(1)
+        return
 
     cfg = MiningConfig(
         input_csv=args.input_csv,
@@ -81,9 +105,12 @@ def main():
         single_ref=args.single_ref,
         bandit_binary=args.bandit_binary,
         vulture_binary=args.vulture_binary,
+        max_project_time_minutes=args.max_time,
     )
 
-    run_mining(cfg)
+    from core.engine import MiningEngine
+    engine = MiningEngine(cfg)
+    engine.run()
 
 
 if __name__ == "__main__":

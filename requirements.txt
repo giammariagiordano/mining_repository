@@ -20,3 +20,5 @@ stevedore==5.5.0
 typing_extensions==4.15.0
 tzdata==2025.2
 urllib3==1.26.20
+textual==0.86.1
+customtkinter==5.2.2

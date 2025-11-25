@@ -85,7 +85,24 @@ def run_dpy_and_collect_smells(project_path: str,
             if name in DESIGN_SMELLS:
                 design_counts[name] += 1
 
+        smell_details = []
+
         impl_total = 0
+        for s in impl_smells:
+            name = s.get("Smell", "")
+            if name in IMPLEMENTATION_SMELLS:
+                impl_counts[name] += 1
+                smell_details.append({
+                    "Smell": name,
+                    "Package": s.get("Package", ""),
+                    "Module": s.get("Module", ""),
+                    "Class": s.get("Class", ""),
+                    "Method": s.get("Method", ""),
+                    "Line no": s.get("Line no", ""),
+                    "File": s.get("File", ""),
+                    "Description": s.get("Description", "")
+                })
+
         for smell_name, count in impl_counts.items():
             col = IMPL_SMELL_TO_COL.get(smell_name)
             if col is None:
@@ -94,6 +111,21 @@ def run_dpy_and_collect_smells(project_path: str,
             impl_total += count
 
         design_total = 0
+        for s in design_smells:
+            name = s.get("Smell", "")
+            if name in DESIGN_SMELLS:
+                design_counts[name] += 1
+                smell_details.append({
+                    "Smell": name,
+                    "Package": s.get("Package", ""),
+                    "Module": s.get("Module", ""),
+                    "Class": s.get("Class", ""),
+                    "Method": s.get("Method", ""),
+                    "Line no": s.get("Line no", ""),
+                    "File": s.get("File", ""),
+                    "Description": s.get("Description", "")
+                })
+
         for smell_name, count in design_counts.items():
             col = DESIGN_SMELL_TO_COL.get(smell_name)
             if col is None:
@@ -103,6 +135,7 @@ def run_dpy_and_collect_smells(project_path: str,
 
         metrics["impl_smells_total"] = impl_total
         metrics["design_smells_total"] = design_total
+        metrics["smell_details"] = json.dumps(smell_details)
         return metrics
 
     finally:
