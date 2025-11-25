@@ -29,6 +29,7 @@ class MiningConfig:
     # Optional external tools
     bandit_binary: Optional[str] = None      # e.g. "bandit"
     vulture_binary: Optional[str] = None     # e.g. "vulture"
+    smell_ai_path: Optional[str] = None      # e.g. "./smell_ai"
     
     # Timeout per project (in minutes, 0 = no timeout)
     max_project_time_minutes: int = 0

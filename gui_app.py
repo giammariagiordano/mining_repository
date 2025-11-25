@@ -209,6 +209,13 @@ class MiningGUI(ctk.CTk):
         ctk.CTkEntry(self.form_frame, textvariable=self.vulture_binary_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
+        # Smell AI path
+        ctk.CTkLabel(self.form_frame, text="Smell AI path (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        self.smell_ai_path_var = tk.StringVar()
+        ctk.CTkEntry(self.form_frame, textvariable=self.smell_ai_path_var).grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        ctk.CTkButton(self.form_frame, text="Browse", command=self.browse_smell_ai_path, width=100).grid(row=row, column=2, padx=10, pady=5)
+        row += 1
+
         # Buttons
         button_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
         button_frame.grid(row=row, column=1, sticky="w", padx=10, pady=20)
@@ -269,6 +276,11 @@ class MiningGUI(ctk.CTk):
         path = filedialog.askopenfilename(filetypes=[("Executable", "*"), ("All files", "*.*")])
         if path:
             self.dpy_binary_var.set(path)
+
+    def browse_smell_ai_path(self):
+        path = filedialog.askdirectory()
+        if path:
+            self.smell_ai_path_var.set(path)
 
     # -------------------------------------------------------------------------
     # Mode-dependent fields
@@ -366,6 +378,7 @@ class MiningGUI(ctk.CTk):
 
         bandit_binary = self.bandit_binary_var.get().strip() or None
         vulture_binary = self.vulture_binary_var.get().strip() or None
+        smell_ai_path = self.smell_ai_path_var.get().strip() or None
 
         if analysis_mode == "releases" and not tag_pattern:
             print("[GUI] WARNING: 'Releases' mode selected but no tag pattern provided. All tags will be considered.")
@@ -386,6 +399,7 @@ class MiningGUI(ctk.CTk):
             single_ref=single_ref,
             bandit_binary=bandit_binary,
             vulture_binary=vulture_binary,
+            smell_ai_path=smell_ai_path,
             max_project_time_minutes=max_time,
         )
         return cfg

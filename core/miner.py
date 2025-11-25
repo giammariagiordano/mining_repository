@@ -11,6 +11,7 @@ from core.szz import szz_find_introducing_commits
 from analyzers.bandit_analyzer import BanditAnalyzer
 from analyzers.vulture_analyzer import VultureAnalyzer
 from analyzers.dpy_analyzer import DPyAnalyzer
+from analyzers.smell_ai_analyzer import SmellAiAnalyzer
 from utils.git_utils import detect_default_branch, list_release_tags, resolve_ref
 from utils.github_api import get_issue_body, get_issue_comments
 
@@ -100,6 +101,7 @@ class RepositoryMiner:
         self.bandit_analyzer = BanditAnalyzer()
         self.vulture_analyzer = VultureAnalyzer()
         self.dpy_analyzer = DPyAnalyzer()
+        self.smell_ai_analyzer = SmellAiAnalyzer()
 
     def mine(self, repo: Repo, project_name: str, repo_path: str, repo_stars: int, repo_forks: int, already_processed_shas: Set[str]) -> pd.DataFrame:
         if self.config.analysis_mode == "commits":
@@ -202,6 +204,7 @@ class RepositoryMiner:
                 metrics.extra_metrics.update(self.dpy_analyzer.run(repo.working_tree_dir, self.config.dpy_binary))
                 metrics.extra_metrics.update(self.bandit_analyzer.run(repo.working_tree_dir, self.config.bandit_binary))
                 metrics.extra_metrics.update(self.vulture_analyzer.run(repo.working_tree_dir, self.config.vulture_binary))
+                metrics.extra_metrics.update(self.smell_ai_analyzer.run(repo.working_tree_dir, self.config.smell_ai_path))
 
                 if is_fix:
                     introducing = szz_find_introducing_commits(repo, commit)
@@ -323,6 +326,7 @@ class RepositoryMiner:
                 metrics.extra_metrics.update(self.dpy_analyzer.run(repo.working_tree_dir, self.config.dpy_binary))
                 metrics.extra_metrics.update(self.bandit_analyzer.run(repo.working_tree_dir, self.config.bandit_binary))
                 metrics.extra_metrics.update(self.vulture_analyzer.run(repo.working_tree_dir, self.config.vulture_binary))
+                metrics.extra_metrics.update(self.smell_ai_analyzer.run(repo.working_tree_dir, self.config.smell_ai_path))
                 
                 rows.append(metrics.to_dict())
 
@@ -397,6 +401,7 @@ class RepositoryMiner:
             metrics.extra_metrics.update(self.dpy_analyzer.run(repo.working_tree_dir, self.config.dpy_binary))
             metrics.extra_metrics.update(self.bandit_analyzer.run(repo.working_tree_dir, self.config.bandit_binary))
             metrics.extra_metrics.update(self.vulture_analyzer.run(repo.working_tree_dir, self.config.vulture_binary))
+            metrics.extra_metrics.update(self.smell_ai_analyzer.run(repo.working_tree_dir, self.config.smell_ai_path))
             
             rows.append(metrics.to_dict())
             
