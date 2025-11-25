@@ -15,6 +15,7 @@ class CommitMetrics:
     commit_deletions: int
     commit_files_changed: int
     commit_churn: int
+    commit_files: str = ""  # Comma-separated list of modified files
     repo_stars: int
     repo_forks: int
     repo_loc: int
@@ -22,6 +23,7 @@ class CommitMetrics:
     repo_contributors: int
     ref_type: str
     ref_name: str
+    is_release: bool = False  # True if commit is tagged as a release
     fix_commit: int
     fix_commit_tags: str
     szz_introducing_commits: str = ""
@@ -46,6 +48,7 @@ class CommitMetrics:
             "commit_deletions": self.commit_deletions,
             "commit_files_changed": self.commit_files_changed,
             "commit_churn": self.commit_churn,
+            "commit_files": self.commit_files,
             "repo_stars": self.repo_stars,
             "repo_forks": self.repo_forks,
             "repo_loc": self.repo_loc,
@@ -53,6 +56,7 @@ class CommitMetrics:
             "repo_contributors": self.repo_contributors,
             "ref_type": self.ref_type,
             "ref_name": self.ref_name,
+            "is_release": self.is_release,
             "fix_commit": self.fix_commit,
             "fix_commit_tags": self.fix_commit_tags,
             "szz_introducing_commits": self.szz_introducing_commits,

@@ -1,8 +1,8 @@
 import json
 import unittest
 from unittest.mock import patch, MagicMock
-from bandit_runner import run_bandit_and_collect_vulns
-from deadcode_runner import run_vulture_and_collect_deadcode
+from analyzers.bandit_runner import run_bandit_and_collect_vulns
+from analyzers.deadcode_runner import run_vulture_and_collect_deadcode
 
 class TestRunners(unittest.TestCase):
     def test_bandit_runner(self):

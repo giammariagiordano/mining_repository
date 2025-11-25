@@ -148,6 +148,10 @@ class RepositoryMiner:
                 total_deletions = stats.total.get("deletions", 0)
                 total_files_changed = stats.total.get("files", 0)
                 total_churn = total_insertions + total_deletions
+                
+                # Extract list of modified files
+                modified_files = list(stats.files.keys()) if stats.files else []
+                modified_files_str = ",".join(modified_files)
 
                 if idx == 1:
                     repo_loc = base_loc
@@ -181,6 +185,7 @@ class RepositoryMiner:
                     commit_deletions=total_deletions,
                     commit_files_changed=total_files_changed,
                     commit_churn=total_churn,
+                    commit_files=modified_files_str,
                     repo_stars=repo_stars,
                     repo_forks=repo_forks,
                     repo_loc=repo_loc,
@@ -188,6 +193,7 @@ class RepositoryMiner:
                     repo_contributors=repo_contributors,
                     ref_type="commit",
                     ref_name=sha,
+                    is_release=False,  # Regular commits are not releases
                     fix_commit=int(is_fix),
                     fix_commit_tags=fix_tags_str,
                 )
@@ -270,6 +276,10 @@ class RepositoryMiner:
                 total_files_changed = stats.total.get("files", 0)
                 total_churn = total_insertions + total_deletions
                 
+                # Extract list of modified files
+                modified_files = list(stats.files.keys()) if stats.files else []
+                modified_files_str = ",".join(modified_files)
+                
                 commit_date = datetime.fromtimestamp(commit.committed_date)
                 author_name = commit.author.name or "Unknown"
                 message = (commit.message or "").strip()
@@ -297,6 +307,7 @@ class RepositoryMiner:
                     commit_deletions=total_deletions,
                     commit_files_changed=total_files_changed,
                     commit_churn=total_churn,
+                    commit_files=modified_files_str,
                     repo_stars=repo_stars,
                     repo_forks=repo_forks,
                     repo_loc=repo_loc,
@@ -304,6 +315,7 @@ class RepositoryMiner:
                     repo_contributors=repo_contributors,
                     ref_type="tag",
                     ref_name=tag.name,
+                    is_release=True,  # Tagged commits are releases
                     fix_commit=int(is_fix),
                     fix_commit_tags=fix_tags_str,
                 )
@@ -347,6 +359,10 @@ class RepositoryMiner:
             total_files_changed = stats.total.get("files", 0)
             total_churn = total_insertions + total_deletions
             
+            # Extract list of modified files
+            modified_files = list(stats.files.keys()) if stats.files else []
+            modified_files_str = ",".join(modified_files)
+            
             commit_date = datetime.fromtimestamp(commit.committed_date)
             author_name = commit.author.name or "Unknown"
             message = (commit.message or "").strip()
@@ -365,6 +381,7 @@ class RepositoryMiner:
                 commit_deletions=total_deletions,
                 commit_files_changed=total_files_changed,
                 commit_churn=total_churn,
+                commit_files=modified_files_str,
                 repo_stars=repo_stars,
                 repo_forks=repo_forks,
                 repo_loc=repo_loc,
@@ -372,6 +389,7 @@ class RepositoryMiner:
                 repo_contributors=repo_contributors,
                 ref_type="ref",
                 ref_name=self.config.single_ref,
+                is_release=False,  # Single version analysis, not necessarily a release
                 fix_commit=int(is_fix),
                 fix_commit_tags=fix_tags_str,
             )

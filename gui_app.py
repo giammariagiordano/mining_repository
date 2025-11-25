@@ -7,6 +7,7 @@ import ctypes
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import customtkinter as ctk
+from PIL import Image
 
 from config import MiningConfig
 
@@ -54,25 +55,65 @@ def _async_raise(tid, exctype):
 class MiningGUI(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("DPy Mining Tool")
-        self.geometry("1000x800")
+
+        self.title("PyLiME - Python Library Mining Engine")
+        self.geometry("900x800")
+        
+        # Load and set logo
+        try:
+            logo_path = os.path.join(os.path.dirname(__file__), "img", "pyLime.png")
+            logo_image = Image.open(logo_path)
+            # Resize logo to fit window icon
+            logo_image = logo_image.resize((64, 64), Image.Resampling.LANCZOS)
+            self.logo_photo = ctk.CTkImage(light_image=logo_image, dark_image=logo_image, size=(64, 64))
+            
+            # Set window icon (for taskbar)
+            self.iconphoto(True, tk.PhotoImage(file=logo_path))
+        except Exception as e:
+            print(f"Could not load logo: {e}")
+            self.logo_photo = None
 
         self.mining_thread = None
 
-        self.grid_columnconfigure(0, weight=1)
-        self.grid_rowconfigure(0, weight=0)  # Form area
-        self.grid_rowconfigure(1, weight=1)  # Log area
+        # Main container
+        main_container = ctk.CTkFrame(self)
+        main_container.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        
+        # Header with logo
+        header_frame = ctk.CTkFrame(main_container, fg_color="transparent")
+        header_frame.pack(fill=tk.X, padx=10, pady=(10, 20))
+        
+        if self.logo_photo:
+            logo_label = ctk.CTkLabel(header_frame, image=self.logo_photo, text="")
+            logo_label.pack(side=tk.LEFT, padx=(0, 15))
+        
+        title_label = ctk.CTkLabel(
+            header_frame, 
+            text="PyLiME", 
+            font=("Arial", 28, "bold")
+        )
+        title_label.pack(side=tk.LEFT)
+        
+        subtitle_label = ctk.CTkLabel(
+            header_frame, 
+            text="Python Library Mining Engine", 
+            font=("Arial", 14),
+            text_color="gray"
+        )
+        subtitle_label.pack(side=tk.LEFT, padx=(10, 0))
 
-        self._build_form()
-        self._build_log_area()
+        self._build_form(main_container)
+        self._build_log_area(main_container)
 
     # -------------------------------------------------------------------------
     # UI construction
     # -------------------------------------------------------------------------
 
-    def _build_form(self):
-        self.form_frame = ctk.CTkFrame(self)
-        self.form_frame.grid(row=0, column=0, sticky="nsew", padx=20, pady=20)
+    def _build_form(self, parent_frame):
+        form_frame = ctk.CTkScrollableFrame(parent_frame, label_text="Configuration")
+        form_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        
+        self.form_frame = form_frame
         self.form_frame.grid_columnconfigure(1, weight=1)
 
         row = 0
@@ -172,26 +213,32 @@ class MiningGUI(ctk.CTk):
         button_frame = ctk.CTkFrame(self.form_frame, fg_color="transparent")
         button_frame.grid(row=row, column=1, sticky="w", padx=10, pady=20)
         
-        self.start_button = ctk.CTkButton(button_frame, text="Start Mining", command=self.start_mining_thread, fg_color="green", hover_color="darkgreen")
-        self.start_button.pack(side=tk.LEFT, padx=(0, 20))
+        self.start_button = ctk.CTkButton(button_frame, text="Start Mining", command=self.start_mining_thread, width=150)
+        self.start_button.grid(row=0, column=0, padx=10, pady=10)
 
-        self.stop_button = ctk.CTkButton(button_frame, text="Stop", command=self.stop_mining, state="disabled", fg_color="red", hover_color="darkred")
-        self.stop_button.pack(side=tk.LEFT)
+        self.stop_button = ctk.CTkButton(
+            button_frame, 
+            text="Stop Mining", 
+            command=self.stop_mining, 
+            width=150, 
+            state="disabled",
+            fg_color="#973327",  # Custom red color
+            hover_color="#7a2820"  # Darker shade for hover
+        )
+        self.stop_button.grid(row=0, column=1, padx=10, pady=10)
 
         self._on_mode_changed()
 
-    def _build_log_area(self):
-        self.log_frame = ctk.CTkFrame(self)
-        self.log_frame.grid(row=1, column=0, sticky="nsew", padx=20, pady=(0, 20))
-        self.log_frame.grid_rowconfigure(0, weight=1)
-        self.log_frame.grid_columnconfigure(0, weight=1)
+    def _build_log_area(self, parent_frame):
+        self.log_frame = ctk.CTkFrame(parent_frame)
+        self.log_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=(0, 10))
 
         self.log_text = ctk.CTkTextbox(self.log_frame, state="disabled", font=("Consolas", 12))
-        self.log_text.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+        self.log_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
         # Progress label
         self.progress_label = ctk.CTkLabel(self.log_frame, text="Ready to start mining", font=("Arial", 12, "bold"))
-        self.progress_label.grid(row=1, column=0, sticky="ew", padx=5, pady=(5, 0))
+        self.progress_label.pack(fill=tk.X, padx=5, pady=(5, 0))
 
         # Configure tags for colors (CustomTkinter Textbox doesn't support tags exactly like Tkinter Text, 
         # but we can insert text. For simplicity, we'll just insert text. 

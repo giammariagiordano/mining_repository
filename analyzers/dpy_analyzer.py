@@ -1,6 +1,6 @@
 from typing import Dict, Any, Optional
 from interfaces.analyzer import Analyzer
-from dpy_runner import run_dpy_and_collect_smells
+from analyzers.dpy_runner import run_dpy_and_collect_smells
 
 class DPyAnalyzer(Analyzer):
     def run(self, project_path: str, binary_path: Optional[str] = None) -> Dict[str, Any]:
