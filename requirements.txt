@@ -6,7 +6,7 @@ GitPython==3.1.45
 idna==3.11
 markdown-it-py==3.0.0
 mdurl==0.1.2
-numpy==2.0.2
+numpy==2.3.5
 pandas==2.3.3
 Pygments==2.19.2
 python-dateutil==2.9.0.post0
@@ -22,4 +22,4 @@ tzdata==2025.2
 urllib3==1.26.20
 textual==0.86.1
 customtkinter==5.2.2
-Pillow==5.2.2
+Pillow==12.0.0
