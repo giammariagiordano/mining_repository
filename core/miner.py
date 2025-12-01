@@ -13,7 +13,9 @@ from analyzers.vulture_analyzer import VultureAnalyzer
 from analyzers.dpy_analyzer import DPyAnalyzer
 from analyzers.smell_ai_analyzer import SmellAiAnalyzer
 from utils.git_utils import detect_default_branch, list_release_tags, resolve_ref
+from utils.git_utils import detect_default_branch, list_release_tags, resolve_ref
 from utils.github_api import get_issue_body, get_issue_comments
+from utils.text_utils import clean_text_for_json
 
 # Move these constants here or to a utils file
 _FIX_KEYWORDS = [
@@ -223,7 +225,9 @@ class RepositoryMiner:
                             # Get issue body
                             body = get_issue_body(project_name, issue_num, self.config.github_token)
                             if body:
-                                issue_bodies.append(f"Issue #{issue_num}: {body}")
+                                cleaned_body = clean_text_for_json(body)
+                                if cleaned_body:
+                                    issue_bodies.append(f"Issue #{issue_num}: {cleaned_body}")
                             
                             # Get issue comments (developer conversations)
                             comments = get_issue_comments(project_name, issue_num, self.config.github_token)
@@ -233,7 +237,7 @@ class RepositoryMiner:
                                         "issue": issue_num,
                                         "user": comment["user"],
                                         "created_at": comment["created_at"],
-                                        "body": comment["body"]
+                                        "body": clean_text_for_json(comment["body"])
                                     })
                     
                     metrics.issue_bodies = "\n---\n".join(issue_bodies)

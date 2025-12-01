@@ -30,7 +30,6 @@ class CommitMetrics:
     szz_introducing_commits_count: int = 0
     issue_bodies: str = ""
     issue_comments: str = ""  # JSON string of comments
-    repo_all_issues: str = ""  # JSON string of all repository issues
     
     # Dynamic fields for smells and other tools
     extra_metrics: Dict[str, Any] = field(default_factory=dict)
@@ -63,7 +62,6 @@ class CommitMetrics:
             "szz_introducing_commits_count": self.szz_introducing_commits_count,
             "issue_bodies": self.issue_bodies,
             "issue_comments": self.issue_comments,
-            "repo_all_issues": self.repo_all_issues,
         }
         base.update(self.extra_metrics)
         return base

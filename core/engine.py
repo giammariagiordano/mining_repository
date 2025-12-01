@@ -7,7 +7,8 @@ import json
 from config import MiningConfig
 from core.miner import RepositoryMiner
 from utils.git_utils import clone_or_update_repo
-from utils.github_api import get_github_repo_stats, get_all_issues
+from utils.github_api import get_github_repo_stats, get_all_issues, get_issue_comments
+from utils.text_utils import clean_text_for_json
 
 def process_one_project(project_name: str, config: MiningConfig, already_processed_shas: Set[str]) -> tuple[str, pd.DataFrame]:
     print(f"[START] Processing {project_name}...")
@@ -29,16 +30,48 @@ def process_one_project(project_name: str, config: MiningConfig, already_process
     # Fetch all repository issues
     print(f"[ISSUES] Fetching all issues for {project_name}...")
     all_issues = get_all_issues(project_name, config.github_token)
-    all_issues_json = json.dumps(all_issues, ensure_ascii=False) if all_issues else ""
+    
+    # Clean and save issues to JSON
+    if all_issues:
+        cleaned_issues = []
+        for issue in all_issues:
+            cleaned_issue = issue.copy()
+            cleaned_issue["body"] = clean_text_for_json(issue.get("body", ""))
+            
+            # Fetch and clean comments
+            issue_number = issue.get("number")
+            if issue_number:
+                comments = get_issue_comments(project_name, issue_number, config.github_token)
+                cleaned_comments = []
+                for comment in comments:
+                    cleaned_comment = comment.copy()
+                    cleaned_comment["body"] = clean_text_for_json(comment.get("body", ""))
+                    cleaned_comments.append(cleaned_comment)
+                cleaned_issue["comments"] = cleaned_comments
+            else:
+                cleaned_issue["comments"] = []
+
+            cleaned_issues.append(cleaned_issue)
+            
+        output_dir = os.path.dirname(config.output_csv)
+        issues_dir = os.path.join(output_dir, "issues")
+        os.makedirs(issues_dir, exist_ok=True)
+        
+        safe_project_name = project_name.replace("/", "_")
+        json_path = os.path.join(issues_dir, f"{safe_project_name}_issues.json")
+        
+        try:
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(cleaned_issues, f, ensure_ascii=False, indent=2)
+            print(f"[ISSUES] Saved {len(cleaned_issues)} issues to {json_path}")
+        except Exception as e:
+            print(f"[ERROR] Failed to save issues to JSON: {e}")
+    
     print(f"[ISSUES] Found {len(all_issues)} issues for {project_name}")
     
     miner = RepositoryMiner(config)
     try:
         df = miner.mine(repo, project_name, repo_path, stars, forks, already_processed_shas)
-        
-        # Add all_issues to every row
-        if not df.empty:
-            df["repo_all_issues"] = all_issues_json
         
         return project_name, df
     except Exception as e:
