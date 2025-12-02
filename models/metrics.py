@@ -30,6 +30,10 @@ class CommitMetrics:
     szz_introducing_commits_count: int = 0
     issue_bodies: str = ""
     issue_comments: str = ""  # JSON string of comments
+    developer_type: str = ""  # ML-engineer or SE-engineer
+    developer_type_explanation: str = ""  # Short explanation
+    ml_score: int = 0
+    se_score: int = 0
     
     # Dynamic fields for smells and other tools
     extra_metrics: Dict[str, Any] = field(default_factory=dict)
@@ -62,6 +66,10 @@ class CommitMetrics:
             "szz_introducing_commits_count": self.szz_introducing_commits_count,
             "issue_bodies": self.issue_bodies,
             "issue_comments": self.issue_comments,
+            "developer_type": self.developer_type,
+            "developer_type_explanation": self.developer_type_explanation,
+            "ml_score": self.ml_score,
+            "se_score": self.se_score,
         }
         base.update(self.extra_metrics)
         return base

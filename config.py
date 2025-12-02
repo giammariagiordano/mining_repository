@@ -33,3 +33,6 @@ class MiningConfig:
     
     # Timeout per project (in minutes, 0 = no timeout)
     max_project_time_minutes: int = 0
+    
+    # OpenAI API key for developer classification
+    openai_api_key: Optional[str] = None

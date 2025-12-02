@@ -197,6 +197,12 @@ class MiningGUI(ctk.CTk):
         ctk.CTkEntry(self.form_frame, textvariable=self.github_token_var, show="*").grid(row=row, column=1, sticky="ew", padx=10, pady=5)
         row += 1
 
+        # OpenAI API Key
+        ctk.CTkLabel(self.form_frame, text="OpenAI API Key (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
+        self.openai_api_key_var = tk.StringVar()
+        ctk.CTkEntry(self.form_frame, textvariable=self.openai_api_key_var, show="*").grid(row=row, column=1, sticky="ew", padx=10, pady=5)
+        row += 1
+
         # Bandit command
         ctk.CTkLabel(self.form_frame, text="Bandit command (optional):").grid(row=row, column=0, sticky="e", padx=10, pady=5)
         self.bandit_binary_var = tk.StringVar()
@@ -392,6 +398,7 @@ class MiningGUI(ctk.CTk):
         bandit_binary = self.bandit_binary_var.get().strip() or None
         vulture_binary = self.vulture_binary_var.get().strip() or None
         smell_ai_path = self.smell_ai_path_var.get().strip() or None
+        openai_api_key = self.openai_api_key_var.get().strip() or None
 
         if analysis_mode == "releases" and not tag_pattern:
             print("[GUI] WARNING: 'Releases' mode selected but no tag pattern provided. All tags will be considered.")
@@ -414,6 +421,7 @@ class MiningGUI(ctk.CTk):
             vulture_binary=vulture_binary,
             smell_ai_path=smell_ai_path,
             max_project_time_minutes=max_time,
+            openai_api_key=openai_api_key,
         )
         return cfg
 

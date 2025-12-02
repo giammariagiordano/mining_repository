@@ -12,7 +12,7 @@ from analyzers.bandit_analyzer import BanditAnalyzer
 from analyzers.vulture_analyzer import VultureAnalyzer
 from analyzers.dpy_analyzer import DPyAnalyzer
 from analyzers.smell_ai_analyzer import SmellAiAnalyzer
-from utils.git_utils import detect_default_branch, list_release_tags, resolve_ref
+from analyzers.openai_classifier import OpenAIClassifier
 from utils.git_utils import detect_default_branch, list_release_tags, resolve_ref
 from utils.github_api import get_issue_body, get_issue_comments
 from utils.text_utils import clean_text_for_json
@@ -104,6 +104,7 @@ class RepositoryMiner:
         self.vulture_analyzer = VultureAnalyzer()
         self.dpy_analyzer = DPyAnalyzer()
         self.smell_ai_analyzer = SmellAiAnalyzer()
+        self.openai_classifier = OpenAIClassifier(config.openai_api_key)
 
     def mine(self, repo: Repo, project_name: str, repo_path: str, repo_stars: int, repo_forks: int, already_processed_shas: Set[str]) -> pd.DataFrame:
         if self.config.analysis_mode == "commits":
@@ -246,11 +247,37 @@ class RepositoryMiner:
 
                 rows.append(metrics.to_dict())
 
+
         finally:
             try:
                 repo.git.checkout(original_head)
             except Exception:
                 pass
+
+        # Per-author classification
+        if rows and self.openai_classifier.enabled:
+            print(f"[OpenAI] Classifying developers for {project_name}...")
+            
+            # Group commits by author
+            commits_by_author: Dict[str, List[Dict[str, Any]]] = {}
+            for row in rows:
+                author = row.get("author_name", "Unknown")
+                if author not in commits_by_author:
+                    commits_by_author[author] = []
+                commits_by_author[author].append(row)
+            
+            # Classify each author
+            for author, author_commits in commits_by_author.items():
+                classification = self.openai_classifier.classify_author(author, author_commits)
+                
+                # Apply classification to all commits by this author
+                for row in author_commits:
+                    row["developer_type"] = classification["developer_type"]
+                    row["developer_type_explanation"] = classification["developer_type_explanation"]
+                    row["ml_score"] = classification.get("ml_score", 0)
+                    row["se_score"] = classification.get("se_score", 0)
+                
+                print(f"  [OpenAI] {author}: {classification['developer_type']}")
 
         return pd.DataFrame(rows)
 
