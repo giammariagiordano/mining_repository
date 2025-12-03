@@ -6,6 +6,55 @@ from collections import Counter
 from typing import Dict, Any, Optional
 
 
+# ---------------------------------------------------------------------------
+# CSV-safe helpers
+# ---------------------------------------------------------------------------
+
+def _sanitize_for_csv(value: Any) -> str:
+    """
+    Sanitize a value so that it is safe to place inside a single CSV cell
+    without needing quoting/escaping.
+
+    - Converts to string
+    - Removes newlines and carriage returns
+    - Removes commas and semicolons (common CSV delimiters)
+    - Replaces double quotes with single quotes
+    - Collapses multiple spaces
+    """
+    if value is None:
+        return ""
+    text = str(value)
+
+    text = text.replace("\n", " ")
+    text = text.replace("\r", " ")
+    text = text.replace(",", " ")
+    text = text.replace(";", " ")
+    text = text.replace('"', "'")
+
+    # Collapse multiple spaces
+    text = " ".join(text.split())
+    return text.strip()
+
+
+def _format_vuln_record(item: Dict[str, Any]) -> str:
+    """
+    Format a single Bandit issue as plain free text, already sanitized
+    for safe use inside a CSV cell.
+    """
+    return (
+        "filename=" + _sanitize_for_csv(item.get("filename", "")) +
+        " line=" + _sanitize_for_csv(item.get("line_number", "")) +
+        " test_id=" + _sanitize_for_csv(item.get("test_id", "")) +
+        " severity=" + _sanitize_for_csv(item.get("issue_severity", "")) +
+        " confidence=" + _sanitize_for_csv(item.get("issue_confidence", "")) +
+        " issue=" + _sanitize_for_csv(item.get("issue_text", ""))
+    )
+
+
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
 def run_bandit_and_collect_vulns(
     project_path: str,
     bandit_binary: Optional[str] = None,
@@ -22,14 +71,17 @@ def run_bandit_and_collect_vulns(
       - vuln_bandit_issues_high
       - vuln_bandit_test_ids
       - vuln_bandit_issue_summaries
-
-    If bandit_binary is None or Bandit is not available, returns an empty dict.
+      - vuln_details
 
     Notes:
-    - vuln_bandit_test_ids is a comma-separated list of unique Bandit test IDs
-      (e.g., "B101,B303,B608").
-    - vuln_bandit_issue_summaries is a " || " separated list of strings in the form
-      "<TEST_ID>: <issue_text>".
+    - All free-text fields are pre-sanitized to avoid characters that break CSV
+      (no commas, semicolons, newlines, or double quotes).
+    - vuln_bandit_test_ids is a space-separated list of unique Bandit test IDs
+      (e.g., "B101 B303 B608").
+    - vuln_bandit_issue_summaries is una lista separata da " || " di stringhe
+      nella forma "<TEST_ID>: <issue_text>", già sanificate.
+    - vuln_details è un'unica stringa di testo libero con i dettagli delle
+      vulnerabilità, con record separati da " /// ".
     """
     if not bandit_binary:
         # Bandit explicitly disabled
@@ -80,8 +132,7 @@ def run_bandit_and_collect_vulns(
     severity_counter: Counter = Counter()
     test_ids = set()
     issue_summaries = set()
-
-    vuln_details = []
+    vuln_detail_rows = []
 
     for item in results:
         sev = str(item.get("issue_severity", "")).upper().strip()
@@ -94,30 +145,43 @@ def run_bandit_and_collect_vulns(
         if test_id:
             test_ids.add(test_id)
             if issue_text:
-                # Compact summary "BXXX: description"
-                issue_summaries.add(f"{test_id}: {issue_text}")
-        
-        vuln_details.append({
-            "filename": item.get("filename", ""),
-            "line_number": item.get("line_number", ""),
-            "test_id": test_id,
-            "issue_text": issue_text,
-            "issue_severity": sev,
-            "issue_confidence": item.get("issue_confidence", "")
-        })
+                # Compact summary "BXXX: description" (sanitized)
+                summary = f"{test_id}: {issue_text}"
+                issue_summaries.add(_sanitize_for_csv(summary))
+
+        # Build a full detail record (sanitized)
+        vuln_detail_rows.append(
+            _format_vuln_record(
+                {
+                    "filename": item.get("filename", ""),
+                    "line_number": item.get("line_number", ""),
+                    "test_id": test_id,
+                    "issue_text": issue_text,
+                    "issue_severity": sev,
+                    "issue_confidence": item.get("issue_confidence", ""),
+                }
+            )
+        )
 
     total = sum(severity_counter.values())
+
+    # test_ids: join with space, then sanitize (even if dovrebbe già essere ok)
+    if test_ids:
+        test_ids_str = _sanitize_for_csv(" ".join(sorted(test_ids)))
+    else:
+        test_ids_str = ""
 
     metrics: Dict[str, Any] = {
         "vuln_bandit_issues_total": total,
         "vuln_bandit_issues_low": severity_counter.get("LOW", 0),
         "vuln_bandit_issues_medium": severity_counter.get("MEDIUM", 0),
         "vuln_bandit_issues_high": severity_counter.get("HIGH", 0),
-        "vuln_bandit_test_ids": ",".join(sorted(test_ids)) if test_ids else "",
+        "vuln_bandit_test_ids": test_ids_str,
         "vuln_bandit_issue_summaries": " || ".join(sorted(issue_summaries))
         if issue_summaries
         else "",
-        "vuln_details": json.dumps(vuln_details)
+        # Dettagli come testo libero, record separati da " /// "
+        "vuln_details": " /// ".join(vuln_detail_rows) if vuln_detail_rows else "",
     }
 
     return metrics

@@ -3,13 +3,12 @@
 import os
 import sys
 import glob
-import json
 import tempfile
 import shutil
 import subprocess
 import pandas as pd
 from collections import Counter
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 
 # ML-specific code smell types detected by smell_ai
@@ -33,6 +32,58 @@ ML_SMELL_TYPES = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# CSV-safe helpers
+# ---------------------------------------------------------------------------
+
+def _sanitize_for_csv(value: Any) -> str:
+    """
+    Sanitize a value so that it is safe to place inside a single CSV cell
+    without needing quoting/escaping.
+
+    - Converts to string
+    - Removes newlines and carriage returns
+    - Removes commas and semicolons (common CSV delimiters)
+    - Replaces double quotes with single quotes
+    - Collapses multiple spaces
+    """
+    if value is None:
+        return ""
+    text = str(value)
+
+    text = text.replace("\n", " ")
+    text = text.replace("\r", " ")
+    text = text.replace(",", " ")
+    text = text.replace(";", " ")
+    text = text.replace('"', "'")
+
+    # Collapse multiple spaces
+    text = " ".join(text.split())
+    return text.strip()
+
+
+def _format_mlsmell_record(
+    filename: str,
+    function_name: str,
+    smell_name: str,
+    message: str
+) -> str:
+    """
+    Format a single ML smell record as plain free text, already sanitized
+    for safe use inside a CSV cell.
+    """
+    return (
+        "filename=" + _sanitize_for_csv(filename) +
+        " function=" + _sanitize_for_csv(function_name) +
+        " smell_name=" + _sanitize_for_csv(smell_name) +
+        " message=" + _sanitize_for_csv(message)
+    )
+
+
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
 def run_smell_ai_and_collect_smells(
     project_path: str,
     smell_ai_path: str = "./smell_ai",
@@ -50,11 +101,18 @@ def run_smell_ai_and_collect_smells(
         Dictionary with metrics:
         - mlsmell_total: Total number of ML-specific smells
         - mlsmell_<smell_type>: Count for each smell type
-        - mlsmell_details: JSON string with full details
+        - mlsmell_files: space-separated list of files with ML smells (CSV-safe)
+        - mlsmell_details: single free-text string with full details, records
+                           separated by " /// ". Se vale 0 significa che
+                           non ci sono dettagli / nessuno smell rilevato.
     """
-    metrics = {"mlsmell_total": 0}
+    metrics: Dict[str, Any] = {
+        "mlsmell_total": 0,
+        "mlsmell_files": "",   # List of files with ML smells (CSV-safe)
+        "mlsmell_details": 0,  # Deve essere 0 quando non ci sono dettagli
+    }
     
-    # Initialize counters for each smell type
+    # Initialize counters for each known smell type
     for smell_type in ML_SMELL_TYPES:
         metrics[f"mlsmell_{smell_type}"] = 0
     
@@ -69,7 +127,7 @@ def run_smell_ai_and_collect_smells(
         if os.path.isdir(possible_path):
             smell_ai_path = possible_path
         elif os.path.isdir(os.path.abspath(smell_ai_path)):
-             smell_ai_path = os.path.abspath(smell_ai_path)
+            smell_ai_path = os.path.abspath(smell_ai_path)
 
     # Final check: if still not a valid directory, warn and skip
     if not os.path.isdir(smell_ai_path):
@@ -87,7 +145,6 @@ def run_smell_ai_and_collect_smells(
             "--output", out_dir
         ]
         
-        # Run from smell_ai directory
         try:
             # Add smell_ai_path to PYTHONPATH to ensure imports work
             env = os.environ.copy()
@@ -104,7 +161,6 @@ def run_smell_ai_and_collect_smells(
             )
             
             # For single project analysis, results are saved in overview.csv
-            # containing full details (filename, function_name, smell_name, etc.)
             overview_path = os.path.join(out_dir, "output", "overview.csv")
             
             smells_df = pd.DataFrame()
@@ -115,11 +171,11 @@ def run_smell_ai_and_collect_smells(
                 except Exception as e:
                     print(f"  [CodeSmile] ERROR reading overview.csv: {e}")
             else:
-                # Fallback to project_details if overview.csv is missing (unlikely for single project)
+                # Fallback to project_details if overview.csv is missing
                 project_details_dir = os.path.join(out_dir, "output", "project_details")
                 if os.path.exists(project_details_dir):
                     csv_files = glob.glob(os.path.join(project_details_dir, "*.csv"))
-                    dfs = []
+                    dfs: List[pd.DataFrame] = []
                     for csv_file in csv_files:
                         try:
                             df = pd.read_csv(csv_file)
@@ -130,33 +186,44 @@ def run_smell_ai_and_collect_smells(
                     if dfs:
                         smells_df = pd.concat(dfs, ignore_index=True)
             
+            # No smells found → keep defaults (including mlsmell_details = 0)
             if smells_df.empty:
                 return metrics
             
             # Count smells by type
-            smell_counts = Counter()
-            smell_details = []
+            smell_counts: Counter = Counter()
+            smell_detail_rows: List[str] = []
+            files_with_smells: List[str] = []
             
             for _, row in smells_df.iterrows():
                 # CSV has columns: filename, function_name, smell_name, etc.
                 # Handle both smell_name and name_smell just in case
-                smell_name = str(row.get("smell_name", row.get("name_smell", ""))).strip().lower()
+                smell_name_raw = row.get("smell_name", row.get("name_smell", ""))
+                smell_name = str(smell_name_raw).strip().lower()
                 filename = str(row.get("filename", ""))
                 function_name = str(row.get("function_name", ""))
                 message = str(row.get("message", ""))
                 
-                if smell_name and smell_name != "nan":
-                    # Normalize smell name (replace spaces with underscores)
-                    normalized_smell = smell_name.replace(" ", "_").replace("-", "_")
-                    smell_counts[normalized_smell] += 1
-                    
-                    # Store detailed information
-                    smell_details.append({
-                        "filename": filename,
-                        "function_name": function_name,
-                        "smell_name": smell_name,
-                        "message": message
-                    })
+                if not smell_name or smell_name == "nan":
+                    continue
+
+                # Normalize smell name (replace spaces and hyphens with underscores)
+                normalized_smell = smell_name.replace(" ", "_").replace("-", "_")
+                smell_counts[normalized_smell] += 1
+
+                # Keep track of files (will sanitize later)
+                if filename:
+                    files_with_smells.append(filename)
+
+                # Build detailed record (CSV-safe)
+                smell_detail_rows.append(
+                    _format_mlsmell_record(
+                        filename=filename,
+                        function_name=function_name,
+                        smell_name=smell_name,
+                        message=message,
+                    )
+                )
             
             # Update metrics
             total_smells = sum(smell_counts.values())
@@ -167,9 +234,23 @@ def run_smell_ai_and_collect_smells(
                 metric_key = f"mlsmell_{smell_type}"
                 metrics[metric_key] = count
             
-            # Store detailed information as JSON
-            metrics["mlsmell_details"] = json.dumps(smell_details)
+            # Store detailed information as free text (no JSON),
+            # records separated by " /// ". Quando non ci sono dettagli,
+            # mlsmell_details rimane 0.
+            if smell_detail_rows:
+                metrics["mlsmell_details"] = " /// ".join(smell_detail_rows)
+            else:
+                metrics["mlsmell_details"] = 0
             
+            # Store list of files with smells: unique, sorted, CSV-safe
+            unique_files = sorted(set(files_with_smells))
+            if unique_files:
+                sanitized_files = [_sanitize_for_csv(f) for f in unique_files]
+                # Avoid commas, use space as separator (safe for CSV)
+                metrics["mlsmell_files"] = " ".join(sanitized_files)
+            else:
+                metrics["mlsmell_files"] = ""
+
             return metrics
 
         except subprocess.CalledProcessError as e:

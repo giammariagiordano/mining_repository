@@ -11,15 +11,17 @@ from git import Repo, GitCommandError
 
 from config import MiningConfig
 from utils.github_api import get_github_repo_stats, get_issue_body
-from dpy_runner import run_dpy_and_collect_smells
+from analyzers.dpy_runner import run_dpy_and_collect_smells
 from utils.git_utils import (
     detect_default_branch,
     clone_or_update_repo,
     list_release_tags,
     resolve_ref,
 )
-from bandit_runner import run_bandit_and_collect_vulns
-from deadcode_runner import run_vulture_and_collect_deadcode
+from analyzers.bandit_runner import run_bandit_and_collect_vulns
+from analyzers.deadcode_runner import run_vulture_and_collect_deadcode
+from utils.text_utils import clean_text_for_json, sanitize_for_csv
+from analyzers.smell_ai_runner import ML_SMELL_TYPES, run_smell_ai_and_collect_smells
 
 
 # =============================================================================
@@ -258,6 +260,31 @@ def _add_vulture_metrics(
 
 
 # =============================================================================
+# Smell AI integration
+# =============================================================================
+
+
+def _add_smell_ai_metrics(
+    metrics: Dict[str, Any],
+    project_path: str,
+    smell_ai_path: Optional[str],
+) -> Dict[str, Any]:
+    """
+    Run Smell AI (if enabled) and merge metrics into 'metrics' dict.
+    """
+    if not smell_ai_path:
+        return metrics
+
+    smell_metrics = run_smell_ai_and_collect_smells(
+        project_path=project_path,
+        smell_ai_path=smell_ai_path,
+    )
+    if smell_metrics:
+        metrics.update(smell_metrics)
+    return metrics
+
+
+# =============================================================================
 # SZZ-like introducing commits (robust version)
 # =============================================================================
 
@@ -461,6 +488,10 @@ def mine_repo_commits(
             total_deletions = stats.total.get("deletions", 0)
             total_files_changed = stats.total.get("files", 0)
             total_churn = total_insertions + total_deletions
+            
+            # Extract list of modified files
+            modified_files = list(stats.files.keys()) if stats.files else []
+            modified_files_str = sanitize_for_csv(",".join(modified_files), keep_chars="/._-")
 
             if idx == 1:
                 repo_loc = base_loc
@@ -469,8 +500,8 @@ def mine_repo_commits(
                 repo_loc = base_loc + current_loc_delta
 
             commit_date = datetime.fromtimestamp(commit.committed_date)
-            author_name = commit.author.name or "Unknown"
-            message = (commit.message or "").strip()
+            author_name = sanitize_for_csv(commit.author.name or "Unknown")
+            message = clean_text_for_json(commit.message or "")
 
             is_fix, fix_tags = _detect_fixing_commit(message)
             fix_tags_str = ";".join(fix_tags) if fix_tags else ""
@@ -501,10 +532,10 @@ def mine_repo_commits(
             )
 
             metrics: Dict[str, Any] = {
-                "project_name": project_name,
-                "repo_path": repo_path,
-                "branch": default_branch,
-                "commit_sha": sha,
+                "project_name": sanitize_for_csv(project_name),
+                "repo_path": sanitize_for_csv(repo_path, keep_chars="/\\:._-"),
+                "branch": sanitize_for_csv(default_branch, keep_chars="/._-"),
+                "commit_sha": sanitize_for_csv(sha),
                 "commit_date": commit_date,
                 "author_name": author_name,
                 "commit_message": message,
@@ -518,16 +549,39 @@ def mine_repo_commits(
                 "repo_commit_count": repo_commit_count,
                 "repo_contributors": repo_contributors,
                 "ref_type": "commit",
-                "ref_name": sha,
+                "ref_name": sanitize_for_csv(sha),
                 "fix_commit": int(is_fix),
                 "fix_commit_tags": fix_tags_str,
+                "commit_files": modified_files_str,
+                "is_release": False,
+                "developer_type": "",
+                "developer_type_explanation": "",
+                "ml_score": 0,
+                "se_score": 0,
+                "szz_introducing_commits": "",
+                "szz_introducing_commits_count": 0,
+                "issue_bodies": "-",
+                "issue_comments": "-",
+                "mlsmell_total": 0,
+                "mlsmell_files": 0,
+                "mlsmell_details": 0,
             }
+            # Add individual ML smell fields
+            for smell_type in ML_SMELL_TYPES:
+                metrics[f"mlsmell_{smell_type}"] = 0
+
             metrics.update(smell_metrics)
 
             metrics = _add_bandit_metrics(
                 metrics=metrics,
                 project_path=repo.working_tree_dir,
                 bandit_binary=config.bandit_binary,
+            )
+
+            metrics = _add_smell_ai_metrics(
+                metrics=metrics,
+                project_path=repo.working_tree_dir,
+                smell_ai_path=config.smell_ai_path,
             )
 
             metrics = _add_vulture_metrics(
@@ -538,9 +592,7 @@ def mine_repo_commits(
 
             if is_fix:
                 introducing = _szz_find_introducing_commits(repo, commit)
-                metrics["szz_introducing_commits"] = (
-                    ",".join(sorted(introducing)) if introducing else ""
-                )
+                metrics["szz_introducing_commits"] = ",".join(sorted(introducing)) if introducing else ""
                 metrics["szz_introducing_commits_count"] = len(introducing)
 
                 # Fetch issue bodies
@@ -558,12 +610,7 @@ def mine_repo_commits(
                         if body:
                             issue_bodies.append(f"Issue #{issue_num}: {body}")
                 
-                metrics["issue_bodies"] = "\n---\n".join(issue_bodies)
-
-            else:
-                metrics["szz_introducing_commits"] = ""
-                metrics["szz_introducing_commits_count"] = 0
-                metrics["issue_bodies"] = ""
+                metrics["issue_bodies"] = " | ".join(issue_bodies)
 
             rows.append(metrics)
 
@@ -648,10 +695,14 @@ def mine_repo_releases(
             total_deletions = stats.total.get("deletions", 0)
             total_files_changed = stats.total.get("files", 0)
             total_churn = total_insertions + total_deletions
+            
+            # Extract list of modified files
+            modified_files = list(stats.files.keys()) if stats.files else []
+            modified_files_str = sanitize_for_csv(",".join(modified_files), keep_chars="/._-")
 
             commit_date = datetime.fromtimestamp(commit.committed_date)
-            author_name = commit.author.name or "Unknown"
-            message = (commit.message or "").strip()
+            author_name = sanitize_for_csv(commit.author.name or "Unknown")
+            message = clean_text_for_json(commit.message or "")
 
             is_fix, fix_tags = _detect_fixing_commit(message)
             fix_tags_str = ";".join(fix_tags) if fix_tags else ""
@@ -681,10 +732,10 @@ def mine_repo_releases(
             )
 
             metrics: Dict[str, Any] = {
-                "project_name": project_name,
-                "repo_path": repo_path,
-                "branch": default_branch,
-                "commit_sha": sha,
+                "project_name": sanitize_for_csv(project_name),
+                "repo_path": sanitize_for_csv(repo_path, keep_chars="/\\:._-"),
+                "branch": sanitize_for_csv(default_branch, keep_chars="/._-"),
+                "commit_sha": sanitize_for_csv(sha),
                 "commit_date": commit_date,
                 "author_name": author_name,
                 "commit_message": message,
@@ -698,18 +749,39 @@ def mine_repo_releases(
                 "repo_commit_count": repo_commit_count,
                 "repo_contributors": repo_contributors,
                 "ref_type": "tag",
-                "ref_name": tag.name,
+                "ref_name": sanitize_for_csv(tag.name),
                 "fix_commit": int(is_fix),
                 "fix_commit_tags": fix_tags_str,
+                "commit_files": modified_files_str,
+                "is_release": True,
+                "developer_type": "",
+                "developer_type_explanation": "",
+                "ml_score": 0,
+                "se_score": 0,
                 "szz_introducing_commits": "",
                 "szz_introducing_commits_count": 0,
+                "issue_bodies": "",
+                "issue_comments": "",
+                "mlsmell_total": 0,
+                "mlsmell_files": 0,
+                "mlsmell_details": 0,
             }
+            # Add individual ML smell fields
+            for smell_type in ML_SMELL_TYPES:
+                metrics[f"mlsmell_{smell_type}"] = 0
+
             metrics.update(smell_metrics)
 
             metrics = _add_bandit_metrics(
                 metrics=metrics,
                 project_path=repo.working_tree_dir,
                 bandit_binary=config.bandit_binary,
+            )
+
+            metrics = _add_smell_ai_metrics(
+                metrics=metrics,
+                project_path=repo.working_tree_dir,
+                smell_ai_path=config.smell_ai_path,
             )
 
             metrics = _add_vulture_metrics(
@@ -790,10 +862,14 @@ def mine_repo_single_version(
     total_deletions = stats.total.get("deletions", 0)
     total_files_changed = stats.total.get("files", 0)
     total_churn = total_insertions + total_deletions
+    
+    # Extract list of modified files
+    modified_files = list(stats.files.keys()) if stats.files else []
+    modified_files_str = sanitize_for_csv(",".join(modified_files), keep_chars="/._-")
 
     commit_date = datetime.fromtimestamp(commit.committed_date)
-    author_name = commit.author.name or "Unknown"
-    message = (commit.message or "").strip()
+    author_name = sanitize_for_csv(commit.author.name or "Unknown")
+    message = clean_text_for_json(commit.message or "")
 
     is_fix, fix_tags = _detect_fixing_commit(message)
     fix_tags_str = ";".join(fix_tags) if fix_tags else ""
@@ -827,10 +903,10 @@ def mine_repo_single_version(
         )
 
         metrics: Dict[str, Any] = {
-            "project_name": project_name,
-            "repo_path": repo_path,
-            "branch": default_branch,
-            "commit_sha": sha,
+            "project_name": sanitize_for_csv(project_name),
+            "repo_path": sanitize_for_csv(repo_path, keep_chars="/\\:._-"),
+            "branch": sanitize_for_csv(default_branch, keep_chars="/._-"),
+            "commit_sha": sanitize_for_csv(sha),
             "commit_date": commit_date,
             "author_name": author_name,
             "commit_message": message,
@@ -844,12 +920,27 @@ def mine_repo_single_version(
             "repo_commit_count": repo_commit_count,
             "repo_contributors": repo_contributors,
             "ref_type": "version",
-            "ref_name": config.single_ref,
+            "ref_name": sanitize_for_csv(config.single_ref),
             "fix_commit": int(is_fix),
             "fix_commit_tags": fix_tags_str,
+            "commit_files": modified_files_str,
+            "is_release": False,
+            "developer_type": "",
+            "developer_type_explanation": "",
+            "ml_score": 0,
+            "se_score": 0,
             "szz_introducing_commits": "",
             "szz_introducing_commits_count": 0,
+            "issue_bodies": "",
+            "issue_comments": "",
+            "mlsmell_total": 0,
+            "mlsmell_files": "",
+            "mlsmell_details": 0,
         }
+        # Add individual ML smell fields
+        for smell_type in ML_SMELL_TYPES:
+            metrics[f"mlsmell_{smell_type}"] = 0
+
         metrics.update(smell_metrics)
 
         metrics = _add_bandit_metrics(

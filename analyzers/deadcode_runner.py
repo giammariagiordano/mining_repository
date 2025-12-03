@@ -8,6 +8,50 @@ from typing import Dict, Any, Optional, List
 
 
 # ---------------------------------------------------------------------------
+# CSV-safe helpers
+# ---------------------------------------------------------------------------
+
+def _sanitize_for_csv(value: Any) -> str:
+    """
+    Sanitize a value so that it is safe to place inside a single CSV cell
+    without needing quoting/escaping.
+
+    - Converts to string
+    - Removes newlines and carriage returns
+    - Removes commas and semicolons (common CSV delimiters)
+    - Replaces double quotes with single quotes
+    - Collapses multiple spaces
+    """
+    if value is None:
+        return ""
+    text = str(value)
+
+    text = text.replace("\n", " ")
+    text = text.replace("\r", " ")
+    text = text.replace(",", " ")
+    text = text.replace(";", " ")
+    text = text.replace('"', "'")
+
+    # Collapse multiple spaces
+    text = " ".join(text.split())
+    return text.strip()
+
+
+def _format_deadcode_record(item: Dict[str, Any]) -> str:
+    """
+    Format a single deadcode record as plain free text, already sanitized
+    for safe use inside a CSV cell.
+    """
+    return (
+        "type=" + _sanitize_for_csv(str(item.get("type", "other")).lower().strip()) +
+        " name=" + _sanitize_for_csv(item.get("name", "")) +
+        " filename=" + _sanitize_for_csv(item.get("filename", "")) +
+        " lineno=" + _sanitize_for_csv(item.get("lineno")) +
+        " confidence=" + _sanitize_for_csv(item.get("confidence"))
+    )
+
+
+# ---------------------------------------------------------------------------
 # Common aggregation helper
 # ---------------------------------------------------------------------------
 
@@ -24,6 +68,7 @@ def _aggregate_items(items: List[Dict[str, Any]]) -> Dict[str, Any]:
     """
     type_counter: Counter = Counter()
     summaries: List[str] = []
+    detail_rows: List[str] = []
 
     for item in items:
         if not isinstance(item, dict):
@@ -39,7 +84,7 @@ def _aggregate_items(items: List[Dict[str, Any]]) -> Dict[str, Any]:
             itype = "other"
         type_counter[itype] += 1
 
-        # Build compact summary string
+        # Build compact summary string (sanitized)
         parts = [itype]
         if name:
             parts.append(name)
@@ -61,7 +106,20 @@ def _aggregate_items(items: List[Dict[str, Any]]) -> Dict[str, Any]:
         if meta_parts:
             text += " (" + ", ".join(meta_parts) + ")"
 
-        summaries.append(text)
+        summaries.append(_sanitize_for_csv(text))
+
+        # Build full detail record (sanitized)
+        detail_rows.append(
+            _format_deadcode_record(
+                {
+                    "type": itype,
+                    "name": name,
+                    "filename": filename,
+                    "lineno": lineno,
+                    "confidence": confidence,
+                }
+            )
+        )
 
     total = sum(type_counter.values())
 
@@ -82,20 +140,12 @@ def _aggregate_items(items: List[Dict[str, Any]]) -> Dict[str, Any]:
         cnt for t, cnt in type_counter.items() if t not in known_types
     )
     metrics["deadcode_items_other"] = other_count
+
+    # Summaries: già sanificate, unite con separatore che non rompe CSV
     metrics["deadcode_items_summaries"] = " || ".join(summaries) if summaries else ""
-    
-    deadcode_details = []
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        deadcode_details.append({
-            "type": str(item.get("type", "other")).lower().strip(),
-            "name": str(item.get("name", "")).strip(),
-            "filename": str(item.get("filename", "")).strip(),
-            "lineno": item.get("lineno"),
-            "confidence": item.get("confidence")
-        })
-    metrics["deadcode_details"] = json.dumps(deadcode_details)
+
+    # Dettagli: testo libero, già sanificato, separato da " /// "
+    metrics["deadcode_details"] = " /// ".join(detail_rows) if detail_rows else ""
 
     return metrics
 

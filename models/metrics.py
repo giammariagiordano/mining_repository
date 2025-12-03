@@ -34,6 +34,9 @@ class CommitMetrics:
     developer_type_explanation: str = ""  # Short explanation
     ml_score: int = 0
     se_score: int = 0
+    mlsmell_total: int = 0
+    mlsmell_files: str = ""
+    mlsmell_details: Any = 0  # Can be int(0) or str
     
     # Dynamic fields for smells and other tools
     extra_metrics: Dict[str, Any] = field(default_factory=dict)
@@ -70,6 +73,9 @@ class CommitMetrics:
             "developer_type_explanation": self.developer_type_explanation,
             "ml_score": self.ml_score,
             "se_score": self.se_score,
+            "mlsmell_total": self.mlsmell_total,
+            "mlsmell_files": self.mlsmell_files,
+            "mlsmell_details": self.mlsmell_details,
         }
         base.update(self.extra_metrics)
         return base

@@ -6,6 +6,40 @@ from typing import List, Dict, Any, Optional
 from openai import OpenAI
 
 
+def sanitize_for_csv(value: Any) -> str:
+    """
+    Pulisce una stringa rimuovendo/sostituendo caratteri che possono rompere un CSV:
+    - caratteri di controllo ASCII (inclusi \n, \r, \t)
+    - virgole, punti e virgola
+    - doppi apici
+
+    Restituisce sempre una stringa "piatta" e sicura per il CSV.
+    """
+    if value is None:
+        return ""
+
+    text = str(value)
+
+    # Rimuove caratteri di controllo (0x00-0x1F, 0x7F)
+    text = re.sub(r"[\x00-\x1f\x7f]", " ", text)
+
+    # Sostituisce newline espliciti se presenti in forma testuale
+    text = text.replace("\\n", " ").replace("\\r", " ")
+
+    # Rimuove newline reali (nel caso la stringa li contenga davvero)
+    text = text.replace("\n", " ").replace("\r", " ")
+
+    # Rimpiazza caratteri problematici per il CSV
+    text = text.replace('"', "'")
+    text = text.replace(",", " ")
+    text = text.replace(";", " ")
+
+    # Normalizza spazi multipli
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
+
+
 class OpenAIClassifier:
     """
     Classifies developers as ML-engineer, SE-engineer or Hybrid-engineer
@@ -87,11 +121,13 @@ class OpenAIClassifier:
             "ml_score": <int>,
             "se_score": <int>
         }
+
+        Tutti i valori stringa ritornati sono sanitizzati per l'uso in CSV.
         """
         if not self.enabled:
             return {
                 "developer_type": "Unknown",
-                "developer_type_explanation": "OpenAI API key not configured",
+                "developer_type_explanation": sanitize_for_csv("OpenAI API key not configured"),
                 "ml_score": 0,
                 "se_score": 0,
             }
@@ -109,16 +145,17 @@ class OpenAIClassifier:
         # Chiamata al modello
         try:
             result = self._call_openai(messages)
-            # Use confidence scores from LLM
-            # result already contains ml_score and se_score from _call_openai
+            # result contiene già ml_score e se_score dal modello
 
+            # Salvataggio in cache (già sanitizzato)
             self.classification_cache[author_name] = result
             return result
         except Exception as e:
             print(f"[OpenAI] Error classifying {author_name}: {e}")
+            explanation = f"Classification failed: {str(e)[:80]}"
             return {
                 "developer_type": "Unknown",
-                "developer_type_explanation": f"Classification failed: {str(e)[:80]}",
+                "developer_type_explanation": sanitize_for_csv(explanation),
                 "ml_score": 0,
                 "se_score": 0,
             }
@@ -189,9 +226,9 @@ class OpenAIClassifier:
                 se_score += 2 * count
 
         top_ext = ext_counter.most_common(5)
-        
-        # Note: Heuristic scores are now only used as hints for the LLM, 
-        # the final score comes from the LLM's confidence.
+
+        # Note: i punteggi euristici sono solo hint per il modello,
+        # il punteggio finale arriva dalle confidence del modello.
 
         return {
             "total_commits": total_commits,
@@ -316,8 +353,11 @@ Related issues:
     # --------------------------------------------------------------------- #
     # Chiamata al modello OpenAI
     # --------------------------------------------------------------------- #
-    def _call_openai(self, messages: List[Dict[str, str]]) -> Dict[str, str]:
-        """Chiama l'API OpenAI e normalizza l'output in un dizionario standard."""
+    def _call_openai(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
+        """Chiama l'API OpenAI e normalizza l'output in un dizionario standard.
+
+        Le stringhe ritornate vengono sanitizzate per l'uso in CSV.
+        """
 
         if not self.client:
             raise RuntimeError("OpenAI client not initialized")
@@ -335,19 +375,22 @@ Related issues:
         except json.JSONDecodeError:
             return {
                 "developer_type": "Unknown",
-                "developer_type_explanation": "JSON parsing error from model response",
+                "developer_type_explanation": sanitize_for_csv("JSON parsing error from model response"),
                 "ml_score": 0,
                 "se_score": 0,
             }
 
-        developer_type = result.get("developer_type", "Unknown")
-        explanation = result.get("explanation", "")
+        developer_type_raw = result.get("developer_type", "Unknown")
+        explanation_raw = result.get("explanation", "")
         ml_confidence = result.get("ml_confidence", 0)
         se_confidence = result.get("se_confidence", 0)
 
+        developer_type = sanitize_for_csv(developer_type_raw)
+        explanation = sanitize_for_csv(explanation_raw)[:200] if explanation_raw else ""
+
         return {
             "developer_type": developer_type,
-            "developer_type_explanation": explanation[:200] if explanation else "",
+            "developer_type_explanation": explanation,
             "ml_score": ml_confidence,
             "se_score": se_confidence,
         }
