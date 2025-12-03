@@ -1,0 +1,772 @@
+=== STRATIFIED ANALYSIS: HIGH ===
+Files in stratum: 249
+
+==== COARSE-GRANULARITY OUTCOMES ====
+
+================================================================================
+[HIGH - COARSE] Outcome: bugs_introduced (col: bugs_introduced)
+================================================================================
+Kruskal–Wallis H = 16.122465088757394, p = 5.9375524936814204e-05
+
+Raw summaries:
+  SE     n=169   mean=9.367 median=4.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=32.500 median=21.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4629.0, p_raw=5.961316253555358e-05, p_adj=0.00017883948760666075 ***, delta=-0.31523668639053254
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - COARSE] Outcome: vulnerabilities (col: vuln_bandit_issues_total)
+================================================================================
+Kruskal–Wallis H = 1.5512018309516484, p = 0.21295810575736127
+
+Raw summaries:
+  SE     n=169   mean=0.118 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.013 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6099.0, p_raw=0.21330441040390025, p_adj=0.6399132312117007 , delta=-0.09778106508875739
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - COARSE] Outcome: generic_code_smells_total (col: generic_code_smells_total)
+================================================================================
+Kruskal–Wallis H = 17.497278106508816, p = 2.877193057091225e-05
+
+Raw summaries:
+  SE     n=169   mean=3245.118 median=2089.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=6735.587 median=2198.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4540.0, p_raw=2.8891442878072697e-05, p_adj=8.66743286342181e-05 ***, delta=-0.32840236686390534
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - COARSE] Outcome: ml_smells_total (col: ml_smells_total)
+================================================================================
+Kruskal–Wallis H = 6.374916197843454, p = 0.011574450753258431
+
+Raw summaries:
+  SE     n=169   mean=8.580 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=27.538 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=8100.0, p_raw=0.011605515199060877, p_adj=0.034816545597182634 *, delta=0.19822485207100593
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - COARSE] Outcome: deadcode_items_total (col: deadcode_items_total)
+================================================================================
+Kruskal–Wallis H = 2.850234319526521, p = 0.09136062017450845
+
+Raw summaries:
+  SE     n=169   mean=646.882 median=397.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=965.250 median=501.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5864.0, p_raw=0.09154153209393558, p_adj=0.27462459628180674 , delta=-0.13254437869822486
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+==== FINE-GRANULARITY OUTCOMES ====
+
+================================================================================
+[HIGH - FINE] vuln_bandit_issues_high
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] vuln_bandit_issues_low
+================================================================================
+Kruskal–Wallis H = 1.5512018309516484, p = 0.21295810575736127
+
+Raw summaries:
+  SE     n=169   mean=0.118 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.013 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6099.0, p_raw=0.21330441040390025, p_adj=0.6399132312117007 , delta=-0.09778106508875739
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] vuln_bandit_issues_medium
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_attribute
+================================================================================
+Kruskal–Wallis H = 9.25998480982461, p = 0.0023421496424861554
+
+Raw summaries:
+  SE     n=169   mean=239.734 median=31.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=66.250 median=40.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=8375.0, p_raw=0.0023494928388291154, p_adj=0.007048478516487346 **, delta=0.23890532544378698
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_class
+================================================================================
+Kruskal–Wallis H = 10.092072493925198, p = 0.0014890853663437162
+
+Raw summaries:
+  SE     n=169   mean=21.302 median=8.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=87.400 median=20.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5074.0, p_raw=0.0014939296211340263, p_adj=0.0044817888634020794 **, delta=-0.24940828402366863
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_function
+================================================================================
+Kruskal–Wallis H = 12.641803084969448, p = 0.00037721597909842866
+
+Raw summaries:
+  SE     n=169   mean=83.947 median=52.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=158.200 median=45.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4873.0, p_raw=0.00037857003793153324, p_adj=0.0011357101137945997 **, delta=-0.2791420118343195
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_other
+================================================================================
+Kruskal–Wallis H = 0.07882011834317382, p = 0.7789027626704572
+
+Raw summaries:
+  SE     n=169   mean=194.124 median=82.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=289.938 median=122.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6611.0, p_raw=0.7796255060785102, p_adj=1.0 , delta=-0.022041420118343195
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_property
+================================================================================
+Kruskal–Wallis H = 10.50321567671852, p = 0.001191669769471958
+
+Raw summaries:
+  SE     n=169   mean=1.722 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=18.600 median=4.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5040.0, p_raw=0.001195613993430592, p_adj=0.003586841980291776 **, delta=-0.25443786982248523
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] deadcode_items_variable
+================================================================================
+Kruskal–Wallis H = 47.117570414201055, p = 6.685368298317107e-12
+
+Raw summaries:
+  SE     n=169   mean=106.053 median=72.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=344.863 median=237.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=3117.0, p_raw=6.729626817288744e-12, p_adj=2.018888045186623e-11 ***, delta=-0.538905325443787
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_broken_hierarchy
+================================================================================
+Kruskal–Wallis H = 10.77361674872393, p = 0.0010295712988019699
+
+Raw summaries:
+  SE     n=169   mean=36.787 median=12.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=15.912 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=8502.0, p_raw=0.0010330168056711644, p_adj=0.003099050417013493 **, delta=0.25769230769230766
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_broken_modularization
+================================================================================
+Kruskal–Wallis H = 6.186037907170643, p = 0.012876215701348405
+
+Raw summaries:
+  SE     n=169   mean=64.272 median=33.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=92.713 median=6.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5440.0, p_raw=0.012910356227727128, p_adj=0.03873106868318139 *, delta=-0.1952662721893491
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_deep_hierarchy
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_deficient_encapsulation
+================================================================================
+Kruskal–Wallis H = 26.227936632083225, p = 3.0340142662333145e-07
+
+Raw summaries:
+  SE     n=169   mean=54.343 median=9.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=168.225 median=101.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4042.0, p_raw=3.0492115741407303e-07, p_adj=9.147634722422191e-07 ***, delta=-0.4020710059171598
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_feature_envy
+================================================================================
+Kruskal–Wallis H = 7.58857037711508, p = 0.0058739512151778995
+
+Raw summaries:
+  SE     n=169   mean=5.296 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=15.188 median=3.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5298.0, p_raw=0.005890885590053846, p_adj=0.01767265677016154 *, delta=-0.21627218934911244
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_hub_like_modularization
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_insufficient_modularization
+================================================================================
+Kruskal–Wallis H = 4.727993148980705, p = 0.02967549133427041
+
+Raw summaries:
+  SE     n=169   mean=9.089 median=6.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=14.200 median=4.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5606.0, p_raw=0.02974625606390047, p_adj=0.08923876819170141 , delta=-0.17071005917159762
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_multifaceted_abstraction
+================================================================================
+Kruskal–Wallis H = 14.158617337085735, p = 0.00016802572160705176
+
+Raw summaries:
+  SE     n=169   mean=118.858 median=63.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=214.575 median=80.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4763.0, p_raw=0.00016866004054341493, p_adj=0.0005059801216302448 ***, delta=-0.295414201183432
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_rebellious_hierarchy
+================================================================================
+Kruskal–Wallis H = 20.398643546163417, p = 6.287434561440718e-06
+
+Raw summaries:
+  SE     n=169   mean=4.231 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=11.950 median=4.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4363.0, p_raw=6.315453891283965e-06, p_adj=1.8946361673851896e-05 ***, delta=-0.35458579881656804
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] design_smell_wide_hierarchy
+================================================================================
+Kruskal–Wallis H = 22.761067337143633, p = 1.8344462015085734e-06
+
+Raw summaries:
+  SE     n=169   mean=3.899 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=9292.0, p_raw=1.8430465492549886e-06, p_adj=5.529139647764966e-06 ***, delta=0.3745562130177515
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_complex_conditional
+================================================================================
+Kruskal–Wallis H = 14.003084491166002, p = 0.00018251098632185477
+
+Raw summaries:
+  SE     n=169   mean=5.941 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=8.900 median=5.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4774.0, p_raw=0.0001831965964371308, p_adj=0.0005495897893113924 ***, delta=-0.29378698224852073
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_complex_method
+================================================================================
+Kruskal–Wallis H = 35.60912873092897, p = 2.411547885399596e-09
+
+Raw summaries:
+  SE     n=169   mean=62.876 median=28.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=206.387 median=124.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=3593.0, p_raw=2.425506422583649e-09, p_adj=7.276519267750947e-09 ***, delta=-0.46849112426035505
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_empty_catch_clause
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_identifier
+================================================================================
+Kruskal–Wallis H = 18.310469885675847, p = 1.8767289944264238e-05
+
+Raw summaries:
+  SE     n=169   mean=424.675 median=218.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=780.062 median=61.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4489.0, p_raw=1.884687843885285e-05, p_adj=5.654063531655855e-05 ***, delta=-0.33594674556213017
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_lambda_function
+================================================================================
+Kruskal–Wallis H = 3.070656854649063, p = 0.07971725562039203
+
+Raw summaries:
+  SE     n=169   mean=1.089 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=6.450 median=1.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5830.0, p_raw=0.07987929350624592, p_adj=0.23963788051873777 , delta=-0.13757396449704143
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_message_chain
+================================================================================
+Kruskal–Wallis H = 12.924744353233894, p = 0.0003242669381819787
+
+Raw summaries:
+  SE     n=169   mean=14.118 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=41.212 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4852.0, p_raw=0.00032544239239866825, p_adj=0.0009763271771960048 ***, delta=-0.2822485207100592
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_method
+================================================================================
+Kruskal–Wallis H = 34.47149500969464, p = 4.325395770821059e-09
+
+Raw summaries:
+  SE     n=169   mean=28.059 median=2.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=93.375 median=49.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=3644.0, p_raw=4.350047889760105e-09, p_adj=1.3050143669280314e-08 ***, delta=-0.46094674556213017
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_parameter_list
+================================================================================
+Kruskal–Wallis H = 18.94476317944395, p = 1.3455811454957213e-05
+
+Raw summaries:
+  SE     n=169   mean=74.195 median=44.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=152.150 median=73.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4450.0, p_raw=1.351377171094446e-05, p_adj=4.054131513283338e-05 ***, delta=-0.34171597633136097
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_long_statement
+================================================================================
+Kruskal–Wallis H = 22.029873372780912, p = 2.684397368078323e-06
+
+Raw summaries:
+  SE     n=169   mean=1344.911 median=876.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=3121.000 median=1183.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4269.0, p_raw=2.6967932265408733e-06, p_adj=8.09037967962262e-06 ***, delta=-0.368491124260355
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_magic_number
+================================================================================
+Kruskal–Wallis H = 13.115091124260289, p = 0.00029292656105492864
+
+Raw summaries:
+  SE     n=169   mean=992.479 median=519.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=1793.287 median=671.500
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=4838.0, p_raw=0.00029399531443928675, p_adj=0.0008819859433178603 ***, delta=-0.28431952662721893
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] impl_smell_missing_default
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_broadcasting_feature_not_used
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_chain_indexing
+================================================================================
+Kruskal–Wallis H = 12.19035149963549, p = 0.00048037330852951783
+
+Raw summaries:
+  SE     n=169   mean=0.935 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=1.350 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=8613.0, p_raw=0.0004820702074456416, p_adj=0.0014462106223369247 **, delta=0.27411242603550295
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_columns_and_datatype_not_explicitly_set
+================================================================================
+Kruskal–Wallis H = 3.1237125790518028, p = 0.07716079807476936
+
+Raw summaries:
+  SE     n=169   mean=1.728 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=20.312 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=7698.0, p_raw=0.07731859507709594, p_adj=0.23195578523128785 , delta=0.13875739644970414
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_dataframe_conversion_api_misused
+================================================================================
+Kruskal–Wallis H = 0.0010260374966866445, p = 0.9744466751685413
+
+Raw summaries:
+  SE     n=169   mean=0.077 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=3.138 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6777.0, p_raw=0.9751979977591424, p_adj=1.0 , delta=0.002514792899408284
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_deterministic_algorithm_option_not_used
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_empty_column_misinitialization
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_gradients_not_cleared
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_hyperparameters_not_explicitly_set
+================================================================================
+Kruskal–Wallis H = 30.854630372674457, p = 2.7809779155233837e-08
+
+Raw summaries:
+  SE     n=169   mean=1.923 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=1.137 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=9708.0, p_raw=2.796015625312475e-08, p_adj=8.388046875937425e-08 ***, delta=0.43609467455621304
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_in_place_apis_misused
+================================================================================
+Kruskal–Wallis H = 0.11502980933123629, p = 0.734488863326868
+
+Raw summaries:
+  SE     n=169   mean=2.254 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.350 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6580.0, p_raw=0.7351986595383441, p_adj=1.0 , delta=-0.026627218934911243
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_matrix_multiplication_api_misused
+================================================================================
+Kruskal–Wallis H = 1.227495876464108, p = 0.26789458376069114
+
+Raw summaries:
+  SE     n=169   mean=1.207 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.500 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=6172.0, p_raw=0.2683017033775873, p_adj=0.8049051101327619 , delta=-0.08698224852071006
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_memory_not_freed
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_merge_api_parameter_not_explicitly_set
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_nan_equivalence_comparison_misused
+================================================================================
+Kruskal–Wallis H = 3.0904994967588015, p = 0.07875063090063254
+
+Raw summaries:
+  SE     n=169   mean=0.284 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=7693.0, p_raw=0.07891106953252099, p_adj=0.23673320859756297 , delta=0.13801775147928994
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_pytorch_call_method_misused
+================================================================================
+Kruskal–Wallis H = 3.5574027651790154, p = 0.059280424722617055
+
+Raw summaries:
+  SE     n=169   mean=0.136 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=7761.0, p_raw=0.05940746696747059, p_adj=0.17822240090241176 , delta=0.14807692307692308
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_tensor_array_not_used
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw summaries:
+  SE     n=169   mean=0.000 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.000 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+
+================================================================================
+[HIGH - FINE] mlsmell_unnecessary_iteration
+================================================================================
+Kruskal–Wallis H = 2.404723016189804, p = 0.12096953400244068
+
+Raw summaries:
+  SE     n=169   mean=0.036 median=0.000
+  ML     n=0     mean=nan median=nan
+  Hybrid n=80    mean=0.750 median=0.000
+
+Post-hoc (Bonferroni) + Cliff's delta:
+  SE vs ML: U=nan, p_raw=nan, p_adj=nan , delta=nan
+  SE vs Hybrid: U=5937.0, p_raw=0.12119557176927147, p_adj=0.3635867153078144 , delta=-0.12174556213017751
+  ML vs Hybrid: U=nan, p_raw=nan, p_adj=nan , delta=nan
+

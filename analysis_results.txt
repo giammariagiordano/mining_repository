@@ -1,0 +1,778 @@
+SE / ML / Hybrid analysis
+CSV: C:\Users\Giammaria\Desktop\mining_repository\output\file_level_metrics_clean.csv
+PLOTS_DIR: C:\Users\Giammaria\Desktop\mining_repository\analysis_plots
+SUMMARY_TABLE: C:\Users\Giammaria\Desktop\mining_repository\pairwise_summary.csv
+================================================================================
+
+==== COARSE-GRANULARITY OUTCOMES ====
+
+================================================================================
+[COARSE] Outcome: bugs_introduced  (column: bugs_introduced)
+================================================================================
+Kruskal–Wallis H = 238.504, p = 1.620e-52
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=13.139  median=0.000
+  ML     n=261    mean=0.307  median=0.000
+  Hybrid n=557    mean=7.648  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 33179.0, p_raw = 1.323e-41, p_adj = 3.969e-41 ***, Cliff's delta = -0.578
+  SE vs Hybrid: U = 96803.5, p_raw = 9.824e-36, p_adj = 2.947e-35 ***, Cliff's delta = -0.424
+  ML vs Hybrid: U = 77486.0, p_raw = 1.278e-01, p_adj = 3.834e-01 , Cliff's delta = 0.066
+
+================================================================================
+[COARSE] Outcome: vulnerabilities  (column: vuln_bandit_issues_total)
+================================================================================
+Kruskal–Wallis H = 462.588, p = 3.550e-101
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.567  median=0.000
+  ML     n=261    mean=2.333  median=0.000
+  Hybrid n=557    mean=0.154  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 125032.0, p_raw = 4.551e-43, p_adj = 1.365e-42 ***, Cliff's delta = 0.589
+  SE vs Hybrid: U = 285907.5, p_raw = 3.842e-95, p_adj = 1.153e-94 ***, Cliff's delta = 0.702
+  ML vs Hybrid: U = 71124.5, p_raw = 6.196e-01, p_adj = 1.000e+00 , Cliff's delta = -0.022
+
+================================================================================
+[COARSE] Outcome: generic_code_smells_total  (column: generic_code_smells_total)
+================================================================================
+Kruskal–Wallis H = 342.665, p = 3.902e-75
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=1933.254  median=448.000
+  ML     n=261    mean=469.149  median=398.000
+  Hybrid n=557    mean=1790.664  median=406.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 26953.0, p_raw = 2.999e-53, p_adj = 8.998e-53 ***, Cliff's delta = -0.657
+  SE vs Hybrid: U = 79545.0, p_raw = 3.174e-54, p_adj = 9.523e-54 ***, Cliff's delta = -0.526
+  ML vs Hybrid: U = 79843.0, p_raw = 2.314e-02, p_adj = 6.941e-02 , Cliff's delta = 0.098
+
+================================================================================
+[COARSE] Outcome: ml_smells_total  (column: ml_smells_total)
+================================================================================
+Kruskal–Wallis H = 2.735, p = 2.547e-01
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=19.441  median=0.000
+  ML     n=261    mean=3.824  median=0.000
+  Hybrid n=557    mean=15.079  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 73762.0, p_raw = 1.434e-01, p_adj = 4.301e-01 , Cliff's delta = -0.063
+  SE vs Hybrid: U = 160261.5, p_raw = 1.783e-01, p_adj = 5.348e-01 , Cliff's delta = -0.046
+  ML vs Hybrid: U = 72503.0, p_raw = 9.532e-01, p_adj = 1.000e+00 , Cliff's delta = -0.003
+
+================================================================================
+[COARSE] Outcome: deadcode_items_total  (column: deadcode_items_total)
+================================================================================
+Kruskal–Wallis H = 359.047, p = 1.081e-78
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=319.368  median=114.000
+  ML     n=261    mean=99.433  median=49.000
+  Hybrid n=557    mean=279.224  median=84.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 26060.0, p_raw = 4.850e-55, p_adj = 1.455e-54 ***, Cliff's delta = -0.669
+  SE vs Hybrid: U = 76701.0, p_raw = 1.187e-57, p_adj = 3.560e-57 ***, Cliff's delta = -0.543
+  ML vs Hybrid: U = 78126.0, p_raw = 8.433e-02, p_adj = 2.530e-01 , Cliff's delta = 0.075
+
+
+==== FINE-GRANULARITY OUTCOMES ====
+
+================================================================================
+[FINE] Outcome: vuln_bandit_issues_high  (column: vuln_bandit_issues_high)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: vuln_bandit_issues_low  (column: vuln_bandit_issues_low)
+================================================================================
+Kruskal–Wallis H = 462.588, p = 3.550e-101
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.567  median=0.000
+  ML     n=261    mean=2.333  median=0.000
+  Hybrid n=557    mean=0.154  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 125032.0, p_raw = 4.551e-43, p_adj = 1.365e-42 ***, Cliff's delta = 0.589
+  SE vs Hybrid: U = 285907.5, p_raw = 3.842e-95, p_adj = 1.153e-94 ***, Cliff's delta = 0.702
+  ML vs Hybrid: U = 71124.5, p_raw = 6.196e-01, p_adj = 1.000e+00 , Cliff's delta = -0.022
+
+================================================================================
+[FINE] Outcome: vuln_bandit_issues_medium  (column: vuln_bandit_issues_medium)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: deadcode_items_attribute  (column: deadcode_items_attribute)
+================================================================================
+Kruskal–Wallis H = 294.527, p = 1.107e-64
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=95.018  median=7.000
+  ML     n=261    mean=37.264  median=8.000
+  Hybrid n=557    mean=22.808  median=8.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 24646.0, p_raw = 6.124e-58, p_adj = 1.837e-57 ***, Cliff's delta = -0.687
+  SE vs Hybrid: U = 101136.0, p_raw = 1.029e-31, p_adj = 3.088e-31 ***, Cliff's delta = -0.398
+  ML vs Hybrid: U = 93769.0, p_raw = 2.198e-11, p_adj = 6.593e-11 ***, Cliff's delta = 0.290
+
+================================================================================
+[FINE] Outcome: deadcode_items_class  (column: deadcode_items_class)
+================================================================================
+Kruskal–Wallis H = 350.806, p = 6.658e-77
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=14.199  median=6.000
+  ML     n=261    mean=3.046  median=3.000
+  Hybrid n=557    mean=19.172  median=2.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 25176.0, p_raw = 7.629e-57, p_adj = 2.289e-56 ***, Cliff's delta = -0.680
+  SE vs Hybrid: U = 79640.0, p_raw = 4.114e-54, p_adj = 1.234e-53 ***, Cliff's delta = -0.526
+  ML vs Hybrid: U = 78632.5, p_raw = 5.918e-02, p_adj = 1.775e-01 , Cliff's delta = 0.082
+
+================================================================================
+[FINE] Outcome: deadcode_items_function  (column: deadcode_items_function)
+================================================================================
+Kruskal–Wallis H = 492.782, p = 9.859e-108
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=33.519  median=10.000
+  ML     n=261    mean=9.751  median=10.000
+  Hybrid n=557    mean=50.549  median=14.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 14907.0, p_raw = 5.633e-80, p_adj = 1.690e-79 ***, Cliff's delta = -0.811
+  SE vs Hybrid: U = 62213.5, p_raw = 8.776e-77, p_adj = 2.633e-76 ***, Cliff's delta = -0.630
+  ML vs Hybrid: U = 69014.5, p_raw = 2.435e-01, p_adj = 7.306e-01 , Cliff's delta = -0.051
+
+================================================================================
+[FINE] Outcome: deadcode_items_other  (column: deadcode_items_other)
+================================================================================
+Kruskal–Wallis H = 351.763, p = 4.127e-77
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=97.083  median=29.000
+  ML     n=261    mean=29.015  median=14.000
+  Hybrid n=557    mean=82.930  median=15.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 25384.0, p_raw = 2.039e-56, p_adj = 6.117e-56 ***, Cliff's delta = -0.677
+  SE vs Hybrid: U = 81667.0, p_raw = 9.745e-52, p_adj = 2.923e-51 ***, Cliff's delta = -0.514
+  ML vs Hybrid: U = 87423.0, p_raw = 2.903e-06, p_adj = 8.708e-06 ***, Cliff's delta = 0.203
+
+================================================================================
+[FINE] Outcome: deadcode_items_property  (column: deadcode_items_property)
+================================================================================
+Kruskal–Wallis H = 362.569, p = 1.858e-79
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=1.353  median=0.000
+  ML     n=261    mean=1.801  median=0.000
+  Hybrid n=557    mean=5.740  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 24542.0, p_raw = 3.723e-58, p_adj = 1.117e-57 ***, Cliff's delta = -0.688
+  SE vs Hybrid: U = 80275.0, p_raw = 2.312e-53, p_adj = 6.936e-53 ***, Cliff's delta = -0.522
+  ML vs Hybrid: U = 87326.5, p_raw = 3.369e-06, p_adj = 1.011e-05 ***, Cliff's delta = 0.201
+
+================================================================================
+[FINE] Outcome: deadcode_items_variable  (column: deadcode_items_variable)
+================================================================================
+Kruskal–Wallis H = 374.095, p = 5.839e-82
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=78.196  median=29.000
+  ML     n=261    mean=18.556  median=14.000
+  Hybrid n=557    mean=98.025  median=30.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 31058.0, p_raw = 2.092e-45, p_adj = 6.275e-45 ***, Cliff's delta = -0.605
+  SE vs Hybrid: U = 68982.0, p_raw = 1.695e-67, p_adj = 5.085e-67 ***, Cliff's delta = -0.589
+  ML vs Hybrid: U = 57909.0, p_raw = 2.707e-06, p_adj = 8.122e-06 ***, Cliff's delta = -0.203
+
+================================================================================
+[FINE] Outcome: design_smell_broken_hierarchy  (column: design_smell_broken_hierarchy)
+================================================================================
+Kruskal–Wallis H = 295.010, p = 8.698e-65
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=13.167  median=0.000
+  ML     n=261    mean=0.398  median=0.000
+  Hybrid n=557    mean=4.391  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 25270.0, p_raw = 1.190e-56, p_adj = 3.571e-56 ***, Cliff's delta = -0.679
+  SE vs Hybrid: U = 95670.0, p_raw = 7.931e-37, p_adj = 2.379e-36 ***, Cliff's delta = -0.430
+  ML vs Hybrid: U = 86582.0, p_raw = 1.031e-05, p_adj = 3.093e-05 ***, Cliff's delta = 0.191
+
+================================================================================
+[FINE] Outcome: design_smell_broken_modularization  (column: design_smell_broken_modularization)
+================================================================================
+Kruskal–Wallis H = 490.628, p = 2.895e-107
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=22.166  median=0.000
+  ML     n=261    mean=4.184  median=0.000
+  Hybrid n=557    mean=19.068  median=1.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 11959.0, p_raw = 2.326e-87, p_adj = 6.977e-87 ***, Cliff's delta = -0.848
+  SE vs Hybrid: U = 67481.5, p_raw = 1.672e-69, p_adj = 5.016e-69 ***, Cliff's delta = -0.598
+  ML vs Hybrid: U = 78582.0, p_raw = 6.137e-02, p_adj = 1.841e-01 , Cliff's delta = 0.081
+
+================================================================================
+[FINE] Outcome: design_smell_deep_hierarchy  (column: design_smell_deep_hierarchy)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: design_smell_deficient_encapsulation  (column: design_smell_deficient_encapsulation)
+================================================================================
+Kruskal–Wallis H = 282.551, p = 4.414e-62
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=72.861  median=5.000
+  ML     n=261    mean=8.203  median=5.000
+  Hybrid n=557    mean=35.063  median=3.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 31824.0, p_raw = 5.164e-44, p_adj = 1.549e-43 ***, Cliff's delta = -0.596
+  SE vs Hybrid: U = 89611.5, p_raw = 5.864e-43, p_adj = 1.759e-42 ***, Cliff's delta = -0.466
+  ML vs Hybrid: U = 86533.5, p_raw = 1.107e-05, p_adj = 3.320e-05 ***, Cliff's delta = 0.190
+
+================================================================================
+[FINE] Outcome: design_smell_feature_envy  (column: design_smell_feature_envy)
+================================================================================
+Kruskal–Wallis H = 122.199, p = 2.916e-27
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=9.310  median=0.000
+  ML     n=261    mean=3.057  median=3.000
+  Hybrid n=557    mean=9.989  median=2.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 48353.0, p_raw = 2.114e-19, p_adj = 6.341e-19 ***, Cliff's delta = -0.386
+  SE vs Hybrid: U = 113766.5, p_raw = 2.050e-21, p_adj = 6.151e-21 ***, Cliff's delta = -0.323
+  ML vs Hybrid: U = 70064.0, p_raw = 4.048e-01, p_adj = 1.000e+00 , Cliff's delta = -0.036
+
+================================================================================
+[FINE] Outcome: design_smell_hub_like_modularization  (column: design_smell_hub_like_modularization)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: design_smell_insufficient_modularization  (column: design_smell_insufficient_modularization)
+================================================================================
+Kruskal–Wallis H = 281.032, p = 9.432e-62
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=5.318  median=1.000
+  ML     n=261    mean=0.716  median=0.000
+  Hybrid n=557    mean=4.088  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 29242.0, p_raw = 8.509e-49, p_adj = 2.553e-48 ***, Cliff's delta = -0.628
+  SE vs Hybrid: U = 92792.0, p_raw = 1.116e-39, p_adj = 3.348e-39 ***, Cliff's delta = -0.447
+  ML vs Hybrid: U = 84496.0, p_raw = 1.780e-04, p_adj = 5.340e-04 ***, Cliff's delta = 0.162
+
+================================================================================
+[FINE] Outcome: design_smell_multifaceted_abstraction  (column: design_smell_multifaceted_abstraction)
+================================================================================
+Kruskal–Wallis H = 486.951, p = 1.819e-106
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=49.262  median=10.000
+  ML     n=261    mean=5.234  median=3.000
+  Hybrid n=557    mean=48.334  median=5.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 14712.0, p_raw = 1.873e-80, p_adj = 5.619e-80 ***, Cliff's delta = -0.813
+  SE vs Hybrid: U = 64609.5, p_raw = 1.996e-73, p_adj = 5.989e-73 ***, Cliff's delta = -0.615
+  ML vs Hybrid: U = 77628.0, p_raw = 1.169e-01, p_adj = 3.507e-01 , Cliff's delta = 0.068
+
+================================================================================
+[FINE] Outcome: design_smell_rebellious_hierarchy  (column: design_smell_rebellious_hierarchy)
+================================================================================
+Kruskal–Wallis H = 478.399, p = 1.309e-104
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=2.191  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=2.763  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 16229.0, p_raw = 9.001e-77, p_adj = 2.700e-76 ***, Cliff's delta = -0.794
+  SE vs Hybrid: U = 63531.5, p_raw = 6.300e-75, p_adj = 1.890e-74 ***, Cliff's delta = -0.622
+  ML vs Hybrid: U = 71250.0, p_raw = 6.480e-01, p_adj = 1.000e+00 , Cliff's delta = -0.020
+
+================================================================================
+[FINE] Outcome: design_smell_wide_hierarchy  (column: design_smell_wide_hierarchy)
+================================================================================
+Kruskal–Wallis H = 382.526, p = 8.619e-84
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=1.095  median=0.000
+  ML     n=261    mean=0.261  median=0.000
+  Hybrid n=557    mean=0.557  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 15494.0, p_raw = 1.519e-78, p_adj = 4.556e-78 ***, Cliff's delta = -0.803
+  SE vs Hybrid: U = 87236.0, p_raw = 1.702e-45, p_adj = 5.107e-45 ***, Cliff's delta = -0.481
+  ML vs Hybrid: U = 84492.0, p_raw = 1.789e-04, p_adj = 5.367e-04 ***, Cliff's delta = 0.162
+
+================================================================================
+[FINE] Outcome: impl_smell_complex_conditional  (column: impl_smell_complex_conditional)
+================================================================================
+Kruskal–Wallis H = 276.865, p = 7.577e-61
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=3.597  median=0.000
+  ML     n=261    mean=4.092  median=0.000
+  Hybrid n=557    mean=3.996  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 29807.0, p_raw = 9.959e-48, p_adj = 2.988e-47 ***, Cliff's delta = -0.621
+  SE vs Hybrid: U = 92145.0, p_raw = 2.463e-40, p_adj = 7.388e-40 ***, Cliff's delta = -0.451
+  ML vs Hybrid: U = 81673.0, p_raw = 4.343e-03, p_adj = 1.303e-02 *, Cliff's delta = 0.124
+
+================================================================================
+[FINE] Outcome: impl_smell_complex_method  (column: impl_smell_complex_method)
+================================================================================
+Kruskal–Wallis H = 312.140, p = 1.659e-68
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=64.294  median=12.000
+  ML     n=261    mean=21.391  median=12.000
+  Hybrid n=557    mean=64.743  median=18.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 30059.0, p_raw = 2.957e-47, p_adj = 8.870e-47 ***, Cliff's delta = -0.618
+  SE vs Hybrid: U = 82163.0, p_raw = 3.643e-51, p_adj = 1.093e-50 ***, Cliff's delta = -0.511
+  ML vs Hybrid: U = 76542.0, p_raw = 2.213e-01, p_adj = 6.638e-01 , Cliff's delta = 0.053
+
+================================================================================
+[FINE] Outcome: impl_smell_empty_catch_clause  (column: impl_smell_empty_catch_clause)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: impl_smell_long_identifier  (column: impl_smell_long_identifier)
+================================================================================
+Kruskal–Wallis H = 501.882, p = 1.042e-109
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=149.519  median=7.000
+  ML     n=261    mean=7.954  median=3.000
+  Hybrid n=557    mean=151.476  median=5.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 11987.0, p_raw = 2.743e-87, p_adj = 8.229e-87 ***, Cliff's delta = -0.848
+  SE vs Hybrid: U = 65440.0, p_raw = 2.792e-72, p_adj = 8.377e-72 ***, Cliff's delta = -0.610
+  ML vs Hybrid: U = 78992.0, p_raw = 4.539e-02, p_adj = 1.362e-01 , Cliff's delta = 0.087
+
+================================================================================
+[FINE] Outcome: impl_smell_long_lambda_function  (column: impl_smell_long_lambda_function)
+================================================================================
+Kruskal–Wallis H = 159.350, p = 2.498e-35
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=2.773  median=0.000
+  ML     n=261    mean=0.701  median=0.000
+  Hybrid n=557    mean=2.377  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 39646.0, p_raw = 4.509e-31, p_adj = 1.353e-30 ***, Cliff's delta = -0.496
+  SE vs Hybrid: U = 112897.0, p_raw = 4.683e-22, p_adj = 1.405e-21 ***, Cliff's delta = -0.328
+  ML vs Hybrid: U = 79047.5, p_raw = 4.353e-02, p_adj = 1.306e-01 , Cliff's delta = 0.087
+
+================================================================================
+[FINE] Outcome: impl_smell_long_message_chain  (column: impl_smell_long_message_chain)
+================================================================================
+Kruskal–Wallis H = 502.506, p = 7.625e-110
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=4.496  median=0.000
+  ML     n=261    mean=0.598  median=0.000
+  Hybrid n=557    mean=7.199  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 13403.0, p_raw = 1.059e-83, p_adj = 3.177e-83 ***, Cliff's delta = -0.830
+  SE vs Hybrid: U = 65224.5, p_raw = 1.411e-72, p_adj = 4.233e-72 ***, Cliff's delta = -0.612
+  ML vs Hybrid: U = 85247.0, p_raw = 6.698e-05, p_adj = 2.009e-04 ***, Cliff's delta = 0.173
+
+================================================================================
+[FINE] Outcome: impl_smell_long_method  (column: impl_smell_long_method)
+================================================================================
+Kruskal–Wallis H = 397.185, p = 5.655e-87
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=18.655  median=3.000
+  ML     n=261    mean=7.517  median=7.000
+  Hybrid n=557    mean=27.111  median=7.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 24482.0, p_raw = 2.792e-58, p_adj = 8.376e-58 ***, Cliff's delta = -0.689
+  SE vs Hybrid: U = 70036.0, p_raw = 4.172e-66, p_adj = 1.251e-65 ***, Cliff's delta = -0.583
+  ML vs Hybrid: U = 73354.0, p_raw = 8.328e-01, p_adj = 1.000e+00 , Cliff's delta = 0.009
+
+================================================================================
+[FINE] Outcome: impl_smell_long_parameter_list  (column: impl_smell_long_parameter_list)
+================================================================================
+Kruskal–Wallis H = 466.210, p = 5.806e-102
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=35.474  median=7.000
+  ML     n=261    mean=16.801  median=13.000
+  Hybrid n=557    mean=44.122  median=13.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 18539.0, p_raw = 2.466e-71, p_adj = 7.399e-71 ***, Cliff's delta = -0.764
+  SE vs Hybrid: U = 65533.0, p_raw = 3.747e-72, p_adj = 1.124e-71 ***, Cliff's delta = -0.610
+  ML vs Hybrid: U = 84968.5, p_raw = 9.685e-05, p_adj = 2.905e-04 ***, Cliff's delta = 0.169
+
+================================================================================
+[FINE] Outcome: impl_smell_long_statement  (column: impl_smell_long_statement)
+================================================================================
+Kruskal–Wallis H = 379.000, p = 5.025e-83
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=794.662  median=232.000
+  ML     n=261    mean=211.368  median=153.000
+  Hybrid n=557    mean=847.215  median=182.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 25067.0, p_raw = 4.551e-57, p_adj = 1.365e-56 ***, Cliff's delta = -0.681
+  SE vs Hybrid: U = 74026.0, p_raw = 5.654e-61, p_adj = 1.696e-60 ***, Cliff's delta = -0.559
+  ML vs Hybrid: U = 80205.0, p_raw = 1.703e-02, p_adj = 5.109e-02 , Cliff's delta = 0.103
+
+================================================================================
+[FINE] Outcome: impl_smell_magic_number  (column: impl_smell_magic_number)
+================================================================================
+Kruskal–Wallis H = 259.163, p = 5.290e-57
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=684.415  median=153.000
+  ML     n=261    mean=176.674  median=154.000
+  Hybrid n=557    mean=518.171  median=177.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 33119.0, p_raw = 1.038e-41, p_adj = 3.115e-41 ***, Cliff's delta = -0.579
+  SE vs Hybrid: U = 91860.0, p_raw = 1.261e-40, p_adj = 3.782e-40 ***, Cliff's delta = -0.453
+  ML vs Hybrid: U = 79317.0, p_raw = 3.536e-02, p_adj = 1.061e-01 , Cliff's delta = 0.091
+
+================================================================================
+[FINE] Outcome: impl_smell_missing_default  (column: impl_smell_missing_default)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_broadcasting_feature_not_used  (column: mlsmell_broadcasting_feature_not_used)
+================================================================================
+Kruskal–Wallis H = 269.648, p = 2.798e-59
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.597  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.059  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 30049.0, p_raw = 2.832e-47, p_adj = 8.496e-47 ***, Cliff's delta = -0.618
+  SE vs Hybrid: U = 93521.5, p_raw = 6.038e-39, p_adj = 1.811e-38 ***, Cliff's delta = -0.443
+  ML vs Hybrid: U = 81100.0, p_raw = 7.580e-03, p_adj = 2.274e-02 *, Cliff's delta = 0.116
+
+================================================================================
+[FINE] Outcome: mlsmell_chain_indexing  (column: mlsmell_chain_indexing)
+================================================================================
+Kruskal–Wallis H = 266.195, p = 1.572e-58
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=1.834  median=0.000
+  ML     n=261    mean=0.575  median=0.000
+  Hybrid n=557    mean=0.208  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 27826.0, p_raw = 1.581e-51, p_adj = 4.742e-51 ***, Cliff's delta = -0.646
+  SE vs Hybrid: U = 98896.5, p_raw = 9.237e-34, p_adj = 2.771e-33 ***, Cliff's delta = -0.411
+  ML vs Hybrid: U = 84683.0, p_raw = 1.403e-04, p_adj = 4.208e-04 ***, Cliff's delta = 0.165
+
+================================================================================
+[FINE] Outcome: mlsmell_columns_and_datatype_not_explicitly_set  (column: mlsmell_columns_and_datatype_not_explicitly_set)
+================================================================================
+Kruskal–Wallis H = 23.978, p = 6.212e-06
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=7.771  median=0.000
+  ML     n=261    mean=2.368  median=0.000
+  Hybrid n=557    mean=9.366  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 63124.0, p_raw = 3.805e-06, p_adj = 1.141e-05 ***, Cliff's delta = -0.198
+  SE vs Hybrid: U = 147176.0, p_raw = 2.709e-04, p_adj = 8.128e-04 ***, Cliff's delta = -0.124
+  ML vs Hybrid: U = 75186.5, p_raw = 4.278e-01, p_adj = 1.000e+00 , Cliff's delta = 0.034
+
+================================================================================
+[FINE] Outcome: mlsmell_dataframe_conversion_api_misused  (column: mlsmell_dataframe_conversion_api_misused)
+================================================================================
+Kruskal–Wallis H = 151.630, p = 1.185e-33
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.163  median=0.000
+  ML     n=261    mean=0.180  median=0.000
+  Hybrid n=557    mean=2.282  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 120506.0, p_raw = 2.183e-35, p_adj = 6.550e-35 ***, Cliff's delta = 0.531
+  SE vs Hybrid: U = 212085.0, p_raw = 9.575e-15, p_adj = 2.872e-14 ***, Cliff's delta = 0.263
+  ML vs Hybrid: U = 59611.5, p_raw = 3.305e-05, p_adj = 9.914e-05 ***, Cliff's delta = -0.180
+
+================================================================================
+[FINE] Outcome: mlsmell_deterministic_algorithm_option_not_used  (column: mlsmell_deterministic_algorithm_option_not_used)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_empty_column_misinitialization  (column: mlsmell_empty_column_misinitialization)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_gradients_not_cleared  (column: mlsmell_gradients_not_cleared)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_hyperparameters_not_explicitly_set  (column: mlsmell_hyperparameters_not_explicitly_set)
+================================================================================
+Kruskal–Wallis H = 140.595, p = 2.952e-31
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=1.592  median=0.000
+  ML     n=261    mean=0.142  median=0.000
+  Hybrid n=557    mean=0.795  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 41233.0, p_raw = 9.903e-29, p_adj = 2.971e-28 ***, Cliff's delta = -0.476
+  SE vs Hybrid: U = 119537.5, p_raw = 2.065e-17, p_adj = 6.195e-17 ***, Cliff's delta = -0.288
+  ML vs Hybrid: U = 83443.0, p_raw = 6.400e-04, p_adj = 1.920e-03 **, Cliff's delta = 0.148
+
+================================================================================
+[FINE] Outcome: mlsmell_in_place_apis_misused  (column: mlsmell_in_place_apis_misused)
+================================================================================
+Kruskal–Wallis H = 51.503, p = 6.549e-12
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=6.325  median=0.000
+  ML     n=261    mean=0.195  median=0.000
+  Hybrid n=557    mean=1.418  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 53140.0, p_raw = 3.300e-14, p_adj = 9.900e-14 ***, Cliff's delta = -0.325
+  SE vs Hybrid: U = 145120.0, p_raw = 6.273e-05, p_adj = 1.882e-04 ***, Cliff's delta = -0.136
+  ML vs Hybrid: U = 81105.0, p_raw = 7.544e-03, p_adj = 2.263e-02 *, Cliff's delta = 0.116
+
+================================================================================
+[FINE] Outcome: mlsmell_matrix_multiplication_api_misused  (column: mlsmell_matrix_multiplication_api_misused)
+================================================================================
+Kruskal–Wallis H = 394.657, p = 2.002e-86
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.881  median=0.000
+  ML     n=261    mean=0.253  median=0.000
+  Hybrid n=557    mean=0.474  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 17383.0, p_raw = 4.969e-74, p_adj = 1.491e-73 ***, Cliff's delta = -0.779
+  SE vs Hybrid: U = 82027.0, p_raw = 2.540e-51, p_adj = 7.619e-51 ***, Cliff's delta = -0.512
+  ML vs Hybrid: U = 85078.5, p_raw = 8.379e-05, p_adj = 2.514e-04 ***, Cliff's delta = 0.170
+
+================================================================================
+[FINE] Outcome: mlsmell_memory_not_freed  (column: mlsmell_memory_not_freed)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_merge_api_parameter_not_explicitly_set  (column: mlsmell_merge_api_parameter_not_explicitly_set)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_nan_equivalence_comparison_misused  (column: mlsmell_nan_equivalence_comparison_misused)
+================================================================================
+Kruskal–Wallis H = 612.623, p = 9.346e-134
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.080  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 2648.0, p_raw = 7.321e-113, p_adj = 2.196e-112 ***, Cliff's delta = -0.966
+  SE vs Hybrid: U = 63910.5, p_raw = 2.132e-74, p_adj = 6.396e-74 ***, Cliff's delta = -0.619
+  ML vs Hybrid: U = 95721.0, p_raw = 2.633e-13, p_adj = 7.899e-13 ***, Cliff's delta = 0.317
+
+================================================================================
+[FINE] Outcome: mlsmell_pytorch_call_method_misused  (column: mlsmell_pytorch_call_method_misused)
+================================================================================
+Kruskal–Wallis H = 286.020, p = 7.791e-63
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.149  median=0.000
+  ML     n=261    mean=0.111  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 28540.0, p_raw = 3.850e-50, p_adj = 1.155e-49 ***, Cliff's delta = -0.637
+  SE vs Hybrid: U = 93491.5, p_raw = 5.635e-39, p_adj = 1.690e-38 ***, Cliff's delta = -0.443
+  ML vs Hybrid: U = 87016.5, p_raw = 5.402e-06, p_adj = 1.621e-05 ***, Cliff's delta = 0.197
+
+================================================================================
+[FINE] Outcome: mlsmell_tensor_array_not_used  (column: mlsmell_tensor_array_not_used)
+================================================================================
+Kruskal–Wallis H = nan, p = nan
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.000  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.000  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  SE vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+  ML vs Hybrid: U = nan, p_raw = nan, p_adj = nan , Cliff's delta = nan
+
+================================================================================
+[FINE] Outcome: mlsmell_unnecessary_iteration  (column: mlsmell_unnecessary_iteration)
+================================================================================
+Kruskal–Wallis H = 169.006, p = 1.999e-37
+
+Raw group summaries (no control for LOC/cc_avg/ratio_control):
+  SE     n=603    mean=0.050  median=0.000
+  ML     n=261    mean=0.000  median=0.000
+  Hybrid n=557    mean=0.476  median=0.000
+
+Post-hoc Mann–Whitney U on residuals (Bonferroni corrected p) + Cliff's delta:
+  SE vs ML: U = 121487.0, p_raw = 5.501e-37, p_adj = 1.650e-36 ***, Cliff's delta = 0.544
+  SE vs Hybrid: U = 218069.5, p_raw = 1.436e-18, p_adj = 4.307e-18 ***, Cliff's delta = 0.299
+  ML vs Hybrid: U = 60610.0, p_raw = 1.259e-04, p_adj = 3.776e-04 ***, Cliff's delta = -0.166
+
+
+Analysis completed.
