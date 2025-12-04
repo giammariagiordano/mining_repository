@@ -1,0 +1,462 @@
+[
+  {
+    "number": 17,
+    "title": "'WebDriver' object has no attribute 'fill_form_field'",
+    "state": "closed",
+    "body": "Expected Behavior Scrape data from Garmin Connect Actual Behavior It gets stuck on the login screen The exact error is as follows 2020 07 29 20 52 29 376 pygce ERROR WebDriver object has no attribute fill form field 2020 07 29 20 52 29 376 pygce DEBUG GET https connect garmin com modern 2020 07 29 20 52 32 031 pygce DEBUG attempt 0 So it looks as though it has something to do with the pyhal package I was getting a different error before but changed the imports to from hal internet selenium forms import SeleniumFormFiller which fixed that issue And now I am getting the issue that WebDriver object has no attribute fill form field Steps to Reproduce the Problem 1 pygce user redacted gmail com p redacted c c Users name documents folder fitness scrapesteps chromedriver exe d 2018 09 05 2020 07 28 o c Users name documents folder fitness scrapesteps f json Specifications pygce version check pip3 show pygce 1 9 8 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Windows 10 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com Default connection Python version check python version 3 8 3",
+    "created_at": "2020-07-30T04:07:18Z",
+    "closed_at": "2020-08-05T07:40:32Z",
+    "user": "suttondaniel",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2020-07-30T18:12:20Z",
+        "body": "suttondaniel update to latest version 2 2 0 pip install U from the fresh cloned local repository and let me know"
+      },
+      {
+        "user": "suttondaniel",
+        "created_at": "2020-07-30T21:46:00Z",
+        "body": "pygce user redacted gmail com password password123 c c Users name documents folder fitness scrapesteps chromedriver exe d 2018 09 05 2020 07 28 out c Users name documents folder fitness scrapesteps testing 2020 07 30 14 39 49 924 pygce DEBUG Region garmin com I did a fresh install with the latest version and am now running into trouble keeping the webdriver open The selenium window opens then closes pretty much immediately Let me know thoughts Thanks sirfoga"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2020-07-31T07:52:45Z",
+        "body": "Any debug trace I have never tested it under Windows Is your chromedriver updated"
+      },
+      {
+        "user": "suttondaniel",
+        "created_at": "2020-07-31T22:35:03Z",
+        "body": "No debug trace and the chromedriver is up to date and was working before I updated the package"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2020-08-02T09:09:05Z",
+        "body": "Please run it with a proper output file I use your output file c Users name documents folder fitness scrapesteps testing to parse the format so if you want json format use c Users name documents folder fitness scrapesteps testing json if you want csv format use c Users name documents folder fitness scrapesteps testing csv"
+      },
+      {
+        "user": "suttondaniel",
+        "created_at": "2020-08-05T02:24:48Z",
+        "body": "Thanks sirfoga that fixed the webdriver issue"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Daily summary content failing to load",
+    "state": "closed",
+    "body": "Expected Behavior Daily summary content successfully loads in chromedriver and is able to be scraped Actual Behavior Daily summary content does not load menu bars do as shown in screenshot below This page will load in a normal browsing tab ie this same URL has been copied across to a normal chrome window and loads instantly Note that the timeout length has been extended to 60s and the same issue still occurs img width 1198 alt Screen Shot 2020 06 23 at 2 37 43 pm src https user images githubusercontent com 8462475 85361620 c469a580 b55f 11ea 8738 5853de02209b png Steps to Reproduce the Problem 1 Install pygce 2 Run with single date 3 Wait for page to not load Specifications pygce version check pip3 show pygce Version 2 1 2 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 macOS Catalina 10 15 4 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com https connect garmin com Python version check python version Python 3 8 3",
+    "created_at": "2020-06-23T04:50:04Z",
+    "closed_at": "2021-04-30T10:10:16Z",
+    "user": "FelixHarvey",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2020-06-26T12:19:42Z",
+        "body": "Dear FelixHarvey thanks Garmin just updated its front end and pygce relies just on that to see if the page has been loaded correctly 41f35aa22d6a522066b96a47162660070e6e983e hopefully solves your issue Give it a try and let me know"
+      },
+      {
+        "user": "FelixHarvey",
+        "created_at": "2020-06-30T10:18:11Z",
+        "body": "sirfoga thank you very much That has fixed the problem outlined above However along with the front end update it seems that the way in which the daily data is displayed has changed When I run the script in the output JSON file activities breakdown sleep steps summary all are blank or None I assume and think from a quick look this is because the html tags have changed with the UI update Let me know if I should open a new issue or can be of any assistance in fixing this"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2020-07-02T12:23:17Z",
+        "body": "FelixHarvey yes indeed If you want to contribute with the fixed tags please do so Open a pull request Thanks"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Example usage shows -u username, but using -u username results in an error",
+    "state": "closed",
+    "body": "Expected Behavior The output from h usage u username email to login to Garmin Connect should match how arguments are actually parsed Actual Behavior h says to use u to specify the username but actually running pygce with u username fails because u is ambiguous and could mean url Steps to Reproduce the Problem 1 Run pygce h and observe the first line of output 1 Attempt to run pygce according to the usage line using u 1 Observe that the application fails to run stating that u is ambiguous Specifications pygce version check pip3 show pygce cd3ebec6006839c6a2a47e9355b310a2304e8ed6 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 ubuntu 16 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com default Python version check python version 3 5 2 Related issue 13",
+    "created_at": "2019-07-08T12:43:50Z",
+    "closed_at": "2019-07-08T14:18:14Z",
+    "user": "jakkarth",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Pygce crashes with \"No such file or directory\" error",
+    "state": "closed",
+    "body": "Expected Behavior pygce should run and produce an output file or a reasonable error should be shown so the user can take corrective action Actual Behavior Program crashes with backtrace and error No indication is provided as to what directory is missing or why the application expects it to be there nor what the user can do to fix it Steps to Reproduce the Problem 1 pygce user redacted email address c path to Downloads chromedriver chromedriver o foo json d 2019 07 01 p redacted password 1 Observe crash output Traceback most recent call last File usr local bin pygce line 9 in module load entry point pygce 2 1 2 console scripts pygce File usr local lib python3 5 dist packages pygce 2 1 2 py3 5 egg pygce cli py line 124 in main File usr local lib python3 5 dist packages pygce 2 1 2 py3 5 egg pygce cli py line 115 in check args File usr lib python3 5 os py line 241 in makedirs mkdir name mode FileNotFoundError Errno 2 No such file or directory Specifications pygce version check pip3 show pygce 2 1 2 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 ubuntu 16 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com default Python version check python version 2 7 12 3 5 2",
+    "created_at": "2019-07-07T15:50:07Z",
+    "closed_at": "2019-07-08T09:49:17Z",
+    "user": "jakkarth",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jakkarth",
+        "created_at": "2019-07-08T12:38:47Z",
+        "body": "This issue is not resolved The new version of the code outputs the following line Trying to create output folder in And then it crashes with the same backtrace There s also still no indication of what the user should do to fix the situation when it occurs"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2019-07-08T14:16:51Z",
+        "body": "see d3953774e4fb0a655664e429bfad612932c6efb6 I took into account your situation"
+      },
+      {
+        "user": "jakkarth",
+        "created_at": "2019-07-08T14:40:47Z",
+        "body": "Ok based on that code it looks like you re going to try to create the directory for the output file if it doesn t exist That s not what I was expecting If the directory didn t exist I expected an error saying the directory doesn t exist like most programs do Your fix makes sense since I wasn t specifying a path for my output file I will try this out and report back"
+      },
+      {
+        "user": "jakkarth",
+        "created_at": "2019-07-08T19:49:47Z",
+        "body": "That seems to have resolved this particular problem Thanks"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Usage instructions indicate -f option to specify format, but using that option results in an error",
+    "state": "closed",
+    "body": "Expected Behavior Adding f json to execution should specify that the output format of the file should be json Actual Behavior Specifying f json results in an error unrecognized arguments f json Steps to Reproduce the Problem 1 Run pygce h 1 Read the usage summary f format of output file json csv 1 Attempt to use the flag mentioned Specifications pygce version check pip3 show pygce 2 1 2 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 ubuntu 16 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com default Python version check python version 2 7 12 3 5 2",
+    "created_at": "2019-07-07T15:44:05Z",
+    "closed_at": "2019-07-08T09:44:09Z",
+    "user": "jakkarth",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2019-07-08T09:44:09Z",
+        "body": "Fixed in f2c17e0fdc9bd9c2c11140a151536055a8cca49b"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Missing docs on what a chromedriver is and what to specify",
+    "state": "closed",
+    "body": "Expected Behavior Documentation should include what a chromedriver is and what to specify for that option and should have a default if possible like the url does Actual Behavior Neither the readme nor the h output indicates what goes in this field Steps to Reproduce the Problem 1 Try to run it without specifying a chromedriver 1 Try to run it with h 1 Try to read the readme file Specifications pygce version check pip3 show pygce 2ca3adc96fe5610a27497746912fd61813198e43 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Ubutun 16 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com default Python version check python version 2 7 12 3 5 2",
+    "created_at": "2019-07-05T18:22:10Z",
+    "closed_at": "2019-07-07T15:19:07Z",
+    "user": "jakkarth",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2019-07-06T15:59:52Z",
+        "body": "See the Chromedriver download page http chromedriver chromium org downloads"
+      },
+      {
+        "user": "jakkarth",
+        "created_at": "2019-07-07T12:54:07Z",
+        "body": "Thanks but this doesn t answer the question I need to know what to type on the commandline when using pygce or what it is Presumably downloading it will be a necessary step but your link doesn t explain what it is or what to type when using pygce"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2019-07-07T15:19:07Z",
+        "body": "tl dr put the path of the chromedriver you just downloaded For more info what to type on the commandline Repository front page file called README Usage section https github com sirfoga pygce usage"
+      },
+      {
+        "user": "jakkarth",
+        "created_at": "2019-07-07T15:36:33Z",
+        "body": "As I mentioned in my original ticket I ve read through the readme file including the usage section Nowhere in the readme is it explained how to install the chromedriver dependency or that it needs to be installed at all Based on the readme I had assumed it was installed as part of the setup py step You ve provided a link to the download page here which I appreciate but that information would be very useful in the readme Additionally the usage section of the readme just repeats the information available via h What I want is an example invocation with real values provided Such an example with real values would be very helpful for understanding what to type when trying to use your software I m not trying to argue with you I am trying to get the program to work and in doing I ve found some places where I think the documentation could be improved I m trying to improve the readme so that in the future people will be able to use your program more easily"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2019-07-08T09:40:45Z",
+        "body": "See f2c17e0fdc9bd9c2c11140a151536055a8cca49b"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "module not found... ",
+    "state": "closed",
+    "body": "Hi I get the following on my Raspi when running pygce pi raspberrypi pygce pygce Traceback most recent call last File usr local bin pygce line 11 in module load entry point pygce 2 1 2 console scripts pygce File usr lib python3 dist packages pkg resources init py line 561 in load entry point return get distribution dist load entry point group name File usr lib python3 dist packages pkg resources init py line 2631 in load entry point return ep load File usr lib python3 dist packages pkg resources init py line 2291 in load return self resolve File usr lib python3 dist packages pkg resources init py line 2297 in resolve module import self module name fromlist name level 0 File usr local lib python3 5 dist packages pygce 2 1 2 py3 5 egg pygce cli py line 9 in module File usr local lib python3 5 dist packages pygce 2 1 2 py3 5 egg pygce models bot py line 19 in module ImportError No module named models Any idea what it might be and how to fix it Cheers Jens",
+    "created_at": "2019-05-15T14:49:56Z",
+    "closed_at": "2019-05-16T06:25:27Z",
+    "user": "JensSam",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2019-05-16T06:26:47Z",
+        "body": "You have to set the PYTHONPATH variable to the folder where pygce is located With the latest https github com sirfoga pygce commit 2ca3adc96fe5610a27497746912fd61813198e43 commit it is not more necessary just clone the repository run pip install and run pygce"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "daily step format",
+    "state": "closed",
+    "body": "Expected Behavior Is it possible to output the 15 min bin step counts without formatting such that 1 897 is outputted as 1897 or 835 0 is outputted as 835 Actual Behavior 1897 steps is output as 1897 835 is output as 835 0 Steps to Reproduce the Problem 1 login 1 download daily steps details Specifications pygce version check pip3 show pygce 2 0 6 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Ubuntu 18 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com Python version check python version 3 6 7",
+    "created_at": "2019-02-08T07:57:46Z",
+    "closed_at": "2019-02-08T08:01:30Z",
+    "user": "sirfoga",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 9,
+    "title": "Garmin step details output off by varying amounts",
+    "state": "closed",
+    "body": "Expected Behavior Garmin step details output for the day Actual Behavior However the 15 min bin counts are off by varying amounts When comparing the pygce json generated 15 min counts against what is displayed on the Garmin step details screen I see that the generated json files are always missing the last 4 or 5 hours of data The 15 min bin output for day 2018 05 10 15 min bins time 2018 05 10 04 00 00 steps 0 time 2018 05 10 04 15 00 steps 0 etc etc etc Steps to Reproduce the Problem 1 login 1 view step details for a day Specifications pygce version check pip3 show pygce 2 0 6 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Ubuntu 18 04 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com Python version check python version 3 6 7",
+    "created_at": "2019-02-08T07:50:08Z",
+    "closed_at": "2019-02-08T07:52:10Z",
+    "user": "sirfoga",
+    "comments_count": 2,
+    "labels": [
+      "bug",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2019-02-08T07:50:25Z",
+        "body": "It turns out that the python script starts recording 15 min bin data 4 or 5 hours later than time 00 00 00 This results in the first data point receiving an index of 4am or 5am By the time it reaches 12 00am the 15 min data collection stops and moves on to the next day starting with a 4 or 5 hour offset After some pondering it occurred to me that the dates are off by GMT and daylight savings time in the United States"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2019-02-08T07:51:45Z",
+        "body": "In addition to this the function that retrieves the step details for the day now retrieves them also for the day before and the day after when possible it is left to the final user to make the right adjustments GMT whatever timezone you re in"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Capture 15-min bin steps",
+    "state": "closed",
+    "body": "Expected Behavior Cmd line option should allow download 15 min bin steps Actual Behavior No such option Details e g this page https connect garmin com modern proxy wellness service wellness dailySummaryChart 224c636b 79ca 4934 a1a4 5cf0e01fe0fb date 2018 12 14 shows such data startGMT 2018 12 13T23 00 00 0 endGMT 2018 12 13T23 15 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 13T23 15 00 0 endGMT 2018 12 13T23 30 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 13T23 30 00 0 endGMT 2018 12 13T23 45 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 13T23 45 00 0 endGMT 2018 12 14T00 00 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 14T00 00 00 0 endGMT 2018 12 14T00 15 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 14T00 15 00 0 endGMT 2018 12 14T00 30 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 14T00 30 00 0 endGMT 2018 12 14T00 45 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 14T00 45 00 0 endGMT 2018 12 14T01 00 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant true startGMT 2018 12 14T01 00 00 0 endGMT 2018 12 14T01 15 00 0 steps 0 primaryActivityLevel sedentary activityLevelConstant false startGMT 2018 12 14T01 15 00 0 endGMT 2018 12 14T01 30 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T01 30 00 0 endGMT 2018 12 14T01 45 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T01 45 00 0 endGMT 2018 12 14T02 00 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T02 00 00 0 endGMT 2018 12 14T02 15 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T02 15 00 0 endGMT 2018 12 14T02 30 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T02 30 00 0 endGMT 2018 12 14T02 45 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T02 45 00 0 endGMT 2018 12 14T03 00 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T03 00 00 0 endGMT 2018 12 14T03 15 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true startGMT 2018 12 14T03 15 00 0 endGMT 2018 12 14T03 30 00 0 steps 0 primaryActivityLevel sleeping activityLevelConstant true Specifications pygce version check pip3 show pygce 2 0 6 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 any Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com Python version check python version 3 6",
+    "created_at": "2019-01-02T21:39:42Z",
+    "closed_at": "2019-01-03T11:27:51Z",
+    "user": "sirfoga",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "No module named 'hal.internet.selenium_bots'",
+    "state": "closed",
+    "body": "Expected Behavior pygce h returns a help screen Actual Behavior pygce h returns the following ModuleNotFoundError No module named hal internet selenium bots Traceback most recent call last File Users paredes venv pygce bin pygce line 7 in module from pygce cli import main File Users paredes venv pygce lib python3 7 site packages pygce cli py line 9 in module from pygce models bot import GarminConnectBot File Users paredes venv pygce lib python3 7 site packages pygce models bot py line 10 in module from hal internet selenium bots import SeleniumForm ModuleNotFoundError No module named hal internet selenium bots venv pygce Steps to Solve the Problem 1 Reinstalled Python 1 Reinstalled Selenium 1 Reinstalled chromedriver 1 Reinstalled pygce Specifications pygce version check pip3 show pygce 1 9 8 Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Mac OSX High Sierra ver 10 13 6 Url of connection e g https connect garmin com if you don t know it then it s the stock one https connect garmin com Https connect garmin com en US signin Python version check python version Python 3 7 0 Selenium ver 3 141 0 urllib3 ver 1 24 1",
+    "created_at": "2018-12-28T20:20:58Z",
+    "closed_at": "2018-12-29T08:51:58Z",
+    "user": "b-paredes",
+    "comments_count": 1,
+    "labels": [
+      "duplicate"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2018-12-29T08:51:58Z",
+        "body": "Please b paredes make sure you have the latest version installed The latest version is the 2 0 6 https github com sirfoga pygce blob master VERSION Moreover this bug has been fixed in 6"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "cannot import SeleniumFormFiller",
+    "state": "closed",
+    "body": "Steps to Reproduce the Problem 1 git clone the repository 2 install with given command python3 setup py install force 3 run pygce h which gives following output Traceback most recent call last File Library Frameworks Python framework Versions 3 7 bin pygce line 11 in module load entry point pygce 2 0 6 console scripts pygce File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pkg resources init py line 487 in load entry point return get distribution dist load entry point group name File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pkg resources init py line 2728 in load entry point return ep load File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pkg resources init py line 2346 in load return self resolve File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pkg resources init py line 2352 in resolve module import self module name fromlist name level 0 File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pygce 2 0 6 py3 7 egg pygce cli py line 9 in module File Library Frameworks Python framework Versions 3 7 lib python3 7 site packages pygce 2 0 6 py3 7 egg pygce models bot py line 10 in module ImportError cannot import name SeleniumFormFiller from hal internet selenium Library Frameworks Python framework Versions 3 7 lib python3 7 site packages hal internet selenium init py Solution on my machine change one line in bot py from from hal internet selenium import SeleniumFormFiller to from hal internet selenium forms import SeleniumFormFiller not sure if this is a quirk on my machine of more widespread as im not that familiar with python yet",
+    "created_at": "2018-12-11T13:59:04Z",
+    "closed_at": "2018-12-12T08:24:25Z",
+    "user": "bavodaniels",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2018-12-12T08:25:06Z",
+        "body": "thanks bavodaniels it s due to the recent upgrade of the pyhal https github com sirfoga pyhal library"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "'NoneType' object has no attribute 'date'",
+    "state": "closed",
+    "body": "Hi So 1st I wanted to say a Massive Thankyou I ve been pestering the Garmin people for API and they turn you away saying Pay the Money or Jog on So I have got Virtualbox and installed Ubuntu LTS 18 04 1 I have got Python 3 6 on Ubuntu This satisfies some of the min installation critera of Numpy https stackoverflow com questions 42662104 how to install pip for python 3 6 on ubuntu 16 10 Anyway I have run the Setup for pygce as you have suggested in your detailed Readme I have given the correct parameters to the pygce application It starts Chromium in Automation mode It logs in successfully as me It goes to https connect garmin com modern and then stops with the following exception Getting day 2018 10 02 00 00 00 Getting user dashboard from https connect garmin com modern Message Traceback most recent call last File usr local bin pygce line 11 in module load entry point pygce 1 9 8 console scripts pygce File home eastabrooka local lib python3 6 site packages pygce cli py line 133 in main bot save json days days 0 days 1 path out File home eastabrooka local lib python3 6 site packages pygce models bot py line 227 in save json days print Parsing day str d date AttributeError NoneType object has no attribute date Expected Behavior The pygce to pull the daily summary for yesterday Actual Behavior Exception Steps to Reproduce the Problem 1 pygce user user account com p password c home eastabrooka Downloads chromedriver d 2018 10 02 f json o output txt 1 exception occurs Specifications pygce version check pip3 show pygce Name pygce Version 1 9 8 Summary pygce is an unofficial Garmin Connect data exporter Home page https github com sirfoga pygce Author sirfoga Author email sirfoga protonmail com License UNKNOWN Location home eastabrooka local lib python3 6 site packages Requires bs4 pyhal lxml numpy sklearn Platform e g Windows 8 Mac OSX Sierra Ubuntu 18 04 Ubuntu LTS 18 04 1 Url of connection e g https connect garmin com Stock Whatever Pygce uses as default Python version check python version eastabrooka GarminScraper pygce python3 version Python 3 6 6 Thank you again for posting Pygce its very useful",
+    "created_at": "2018-10-03T13:32:54Z",
+    "closed_at": "2018-10-15T10:56:23Z",
+    "user": "eastabrooka",
+    "comments_count": 11,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "eastabrooka",
+        "created_at": "2018-10-03T15:10:08Z",
+        "body": "So One thing I have noticed is when I go to my daily summary page it isnt using the self user id that find user id will parse It is using https connect garmin com modern daily summary Eastabrooka 2018 10 03 timeline When I try and go to https connect garmin com modern daily summary USER ID 2018 10 03 timeline it says You don t have permission to see this I have done a small mod to this function to force it to return self user id Eastabrooka I can see in Chromium the Daily Summary now being loaded correctly It still fails to parse the day days I will upload a detailed log next"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-04T11:05:34Z",
+        "body": "The user id thing is not a problem whereas the NoneType object has no attribute date is actually a bug caused by the Garmin website too slow to load in time One workaround that you actually performed is to set a larger timeout but this does not scale On the other hand now since e261727618b6c395d106eb2d5fc5a49b675bc25b I grab user id in a different way I parse the top bar that is loaded before anything else at the bottom The issue should be resolved but please try it Thank you again for testing this out"
+      },
+      {
+        "user": "eastabrooka",
+        "created_at": "2018-10-06T08:50:04Z",
+        "body": "Hi Sirfoga Thanks again for looking into this but I think I still have the issue I have screen capped the process I have taken in checking out the update you have pushed and the error that I encounter I have uploaded it here https www youtube com watch v wkGiytDYWVg I hope this helps I don t fully know why Garmin would give some users a ID and some users a Name in the URL Bar I just wish they had just given us an API Thanks Again"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-06T13:59:38Z",
+        "body": "eastabrooka Thanks so it is actually the used id the problem Go to your dashboard view the source of the top right icon For instance screenshot from 2018 10 06 15 04 50 https user images githubusercontent com 14162628 46572113 d1f08d80 c980 11e8 808d 79ec17025227 png"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-06T14:01:24Z",
+        "body": "Anyway if you just want the activities and not the daily summary you can also use this https github com pe st garmin connect export unofficial Garmin Connect exporter"
+      },
+      {
+        "user": "eastabrooka",
+        "created_at": "2018-10-06T14:15:37Z",
+        "body": "Hi image https user images githubusercontent com 11888681 46572218 d49bb480 c979 11e8 871d 8d08c2f81dac png Here is the requested Source from the dashboard To be honest Its the Steps that are my main interest In my fork I have it working for me But by hacky hardcoded patch Primary use was I wanted to tie the Steps into some Home Automation stuff i e If Not 10000 Steps Do X Y etc But I am still very interested in getting the ability to dump out all the data ive ever given Garmin to make a dataset for analysis Thanks again for your help"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-06T15:20:51Z",
+        "body": "I ve watched your youtube video one more time are you sure it s the latest version What commit are you in Have you forced the re installation My outputs are a little different u https user images githubusercontent com 14162628 46572805 1e8d9600 c98c 11e8 90c6 2ab3fa1b00e0 png I ve just added a version checker to be sure Please run pip3 install upgrade force reinstall from the source The output version should be 1 9 8 for instance running pip3 show pygce shows Name pygce Version 1 9 8 Summary pygce is an unofficial Garmin Connect data exporter Home page https github com sirfoga pygce Author sirfoga Author email sirfoga protonmail com License UNKNOWN Location usr local lib python3 6 dist packages Requires lxml numpy sklearn pyhal bs4 Required by"
+      },
+      {
+        "user": "eastabrooka",
+        "created_at": "2018-10-10T21:03:31Z",
+        "body": "Hi Sorry to drop the cadence on the replies Its been busy Thank you again for looking into this 1 I was running the old Pygce I missed the force reinstall 2 Its getting closer It does load the correct page now But it still delivers the out of range problem 3 https www youtube com watch v lcBSQZqz98M feature youtu be 4 https pastebin com KfhxFzX1 5 I did run pip3 show pygce and it now says 1 9 8 I also thought to give you the raw HTML from what is on My page I do think that it may be that as with our User IDs being different the HTML vended may also be different RawHTMLGarminDump txt https github com sirfoga pygce files 2466495 RawHTMLGarminDump txt"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-11T15:46:06Z",
+        "body": "Thank you again for your detailed report It seems that while I have a Breakdown section you don t which seems strange since I have a Forerunner 235 while your watch is a lot better sweat smile Anyway I added a try except block in all parse methods I ve tried it with your source page and it works fine it doesn t log the Breakdown section but at least it exits without errors innocent"
+      },
+      {
+        "user": "eastabrooka",
+        "created_at": "2018-10-12T07:18:36Z",
+        "body": "Ahh Garmin Non Uniform ness So I have updated to your change set and rebuit reinstalled Problem 1 Is it doesn t enter the Username and Password in the first hurdle anymore So As shown by the comment I made https github com sirfoga pygce commit 2099c0ba45e7260c9df274f66fe7783f1cabbc3b I reverted this change on my local check out rebuilt And now image https user images githubusercontent com 11888681 46853844 2ff4f900 cdf7 11e8 9b89 9294ba0cb2be png It correctly parses and dumps to file"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-10-12T07:36:47Z",
+        "body": "Oops really my bad here The thing is I m working on my other repo and I just did not release the latest version so that I can use SeleniumForm self browser fill login form instead of SeleniumForm fill login form Now running pip3 install upgrade force reinstall will install the latest library version and there should not be any more problems sweat smile"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "how to use this script for a different garmin website",
+    "state": "closed",
+    "body": "Hi I find the script is made for https connect garmin com can this script also work for https connect garmin cn Thank you for your time",
+    "created_at": "2018-08-26T13:11:49Z",
+    "closed_at": "2018-08-27T09:08:26Z",
+    "user": "TheKiteRunning",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2018-08-27T09:09:53Z",
+        "body": "TheKiteRunning just run with url https connect garmin cn Please note that I have not tested it since I don t have a chinese accont If you find any bugs please open a issue"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Can i save gpx files from garmin connect, too?!?",
+    "state": "closed",
+    "body": "Only a question Can i save gpx files from garmin connect too",
+    "created_at": "2018-08-21T17:24:28Z",
+    "closed_at": "2018-08-21T20:59:44Z",
+    "user": "jedie",
+    "comments_count": 3,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2018-08-21T21:01:04Z",
+        "body": "jedie just run with gpx yes and you can find your gpx in your downloads folder"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-08-21T21:02:21Z",
+        "body": "I know it s kinda messy but you need to have a GarminConnect validated cookie in order to download the gpx files If you have Strava you can import your activities there and download the gpx with https github com albymor StravaGpxDownloader"
+      },
+      {
+        "user": "jedie",
+        "created_at": "2018-08-22T08:21:38Z",
+        "body": "I used https github com pe st garmin connect export to download the gpx files I think it makes sense to work together"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Could not find suitable distribution for Requirement.parse('pyhal')",
+    "state": "closed",
+    "body": "Hi I try to install pygce After running python3 setup py install force i got following Error Installed usr lib python3 4 site packages pygce 0 1 2 py3 4 egg Processing dependencies for pygce 0 1 2 Searching for pyhal Reading https pypi python org simple pyhal No local packages or download links found for pyhal error Could not find suitable distribution for Requirement parse pyhal System openSUSE Leap 42 2 BYe Harald",
+    "created_at": "2017-09-15T19:44:10Z",
+    "closed_at": "2018-07-25T20:32:07Z",
+    "user": "EmptySoft",
+    "comments_count": 8,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "sirfoga",
+        "created_at": "2017-09-16T10:55:41Z",
+        "body": "The pypi package pyhal is outdated as long as the new pypi website is not ready I cannot update the package so you should install pyhal before installing pygce with the following commands shell git clone https github com sirfoga pyhal cd pyhal python3 setup py install"
+      },
+      {
+        "user": "EmptySoft",
+        "created_at": "2017-09-17T16:55:54Z",
+        "body": "Thanks for your replay But if i try to install pyhal i got the Error statsmodels nonparametric linbin c 4 20 fatal error Python h Datei oder Verzeichnis nicht gefunden include Python h I dont know where i can find Python h System now openSUSE Leap 42 3"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2017-09-17T17:04:22Z",
+        "body": "This is a problem of the statsmodels installation it cannot find a necessary header but it needs to be present in system Usually it s because you are missing python3 dev or python dev packages See also this stackoverflow answer https stackoverflow com a 21530768 7643222 Also pyhal build is successful according to travis https travis ci org sirfoga pyhal see the config file https github com sirfoga pyhal blob master travis yml for details"
+      },
+      {
+        "user": "EmptySoft",
+        "created_at": "2017-09-17T17:16:42Z",
+        "body": "Hi Stefano Thanks for your really fast replay I have installed python dev and the file Python h is present Perhaps it is in the wrong Path I will try to remove all python packages and reinstall them Sorry for my noob in Python"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2017-09-17T17:43:34Z",
+        "body": "Try with apt install python3 dev statsmodel has to be compiled with python 3 version so installing python dev is not enough"
+      },
+      {
+        "user": "EmptySoft",
+        "created_at": "2017-09-17T20:46:41Z",
+        "body": "Sorry for the late answer I have crashed my Laptop Your Tip solves my Problem withe the Python h file Now i have another problem during setup pyhal Installed usr lib python3 4 site packages PyHal 4 6 3 py3 4 egg Processing dependencies for PyHal 4 6 3 Searching for scipy Reading https pypi python org simple scipy Best match scipy 0 19 1 Downloading https pypi python org packages 52 67 d9ef9b5058d4a9e3f0ae641ec151790622cbeb37f157de5773358e2bf3da scipy 0 19 1 tar gz md5 6b4d91b62f1926282b127194a06b72b3 Processing scipy 0 19 1 tar gz Writing tmp easy install 4cphfsps scipy 0 19 1 setup cfg Running scipy 0 19 1 setup py q bdist egg dist dir tmp easy install 4cphfsps scipy 0 19 1 egg dist tmp 3tc8qmh tmp easy install 4cphfsps scipy 0 19 1 setup py 323 UserWarning Unrecognized setuptools command proceeding with generating Cython sources and expanding templates warnings warn Unrecognized setuptools command proceeding with usr lib64 python3 4 site packages numpy distutils system info py 572 UserWarning Atlas http math atlas sourceforge net libraries not found Directories to search for the libraries can be specified in the numpy distutils site cfg file section atlas or by setting the ATLAS environment variable self calc info usr lib64 python3 4 site packages numpy distutils system info py 572 UserWarning Lapack http www netlib org lapack libraries not found Directories to search for the libraries can be specified in the numpy distutils site cfg file section lapack or by setting the LAPACK environment variable self calc info usr lib64 python3 4 site packages numpy distutils system info py 572 UserWarning Lapack http www netlib org lapack sources not found Directories to search for the sources can be specified in the numpy distutils site cfg file section lapack src or by setting the LAPACK SRC environment variable self calc info Running from scipy source directory non existing path in scipy integrate quadpack h Warning Can t read registry to find the necessary compiler setting Make sure that Python modules winreg win32api or win32con are installed error no lapack blas resources found runs pyhal only on Windows"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2017-09-18T06:22:39Z",
+        "body": "pyhal has been tested successfully on Ubuntu 16 04 Maybe Make sure that Python modules winreg win32api or win32con are installed is a hint to what packages to install i e winreg win32api or win32con Note that this error comes up while installing scipy you can remove the dependency in the setup file https github com sirfoga pyhal blob master setup py L72 and continue installation However you won t be able to run modules depending on scipy"
+      },
+      {
+        "user": "sirfoga",
+        "created_at": "2018-07-25T20:32:07Z",
+        "body": "closed for inactivity"
+      }
+    ]
+  }
+]

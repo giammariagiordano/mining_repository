@@ -1,0 +1,1364 @@
+[
+  {
+    "number": 61,
+    "title": "can somebody share with me their latest repo",
+    "state": "open",
+    "body": "",
+    "created_at": "2024-11-17T16:02:04Z",
+    "closed_at": null,
+    "user": "Anmol-002",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 60,
+    "title": "How to input a depth map so that GGCNN can predict the grasping angle, width, and quality?",
+    "state": "open",
+    "body": "Which script can be used to input your own depth map",
+    "created_at": "2024-10-30T09:18:51Z",
+    "closed_at": null,
+    "user": "t-272",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Anmol-002",
+        "created_at": "2024-11-17T09:13:08Z",
+        "body": "can you please share your repository of this code t 272"
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "title": "grasp.py问题",
+    "state": "open",
+    "body": "File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn train ggcnn py line 253 in run test results validate net device val data args val batches File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn train ggcnn py line 103 in validate val data dataset get gtbb didx rot zoom factor File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn utils data jacquard data py line 42 in get gtbb gtbbs rotate rot c c File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn utils dataset processing grasp py line 42 in lambda return lambda args kwargs list map lambda gr getattr gr attr args kwargs self grs File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn utils dataset processing grasp py line 42 in lambda return lambda args kwargs list map lambda gr getattr gr attr args kwargs self grs File C Users adminster Desktop yolo ggcnn main yolo ggcnn main ggcnn utils dataset processing grasp py line 316 in rotate self points np dot R self points c T T c astype np int64 ValueError shapes 2 2 1 and 2 4 not aligned 1 dim 2 2 dim 0",
+    "created_at": "2024-09-12T01:57:08Z",
+    "closed_at": null,
+    "user": "zsgwq",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "zsgwq",
+        "created_at": "2024-09-18T03:02:45Z",
+        "body": "jacquard"
+      },
+      {
+        "user": "t-272",
+        "created_at": "2024-10-25T06:57:04Z",
+        "body": "jacquard"
+      },
+      {
+        "user": "xiaoming-gong",
+        "created_at": "2024-12-17T06:32:25Z",
+        "body": "I m having the same issue have you solved it now"
+      },
+      {
+        "user": "xiaoming-gong",
+        "created_at": "2024-12-17T06:57:01Z",
+        "body": "Using python 3 8 and numpy 1 21 1 can solve this problem"
+      },
+      {
+        "user": "laplace-beauty",
+        "created_at": "2025-07-25T19:54:30Z",
+        "body": "Using python 3 8 and numpy 1 21 1 can solve this problem God man you are good Xiaoming"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "something wrong about eval_ggcnn.py",
+    "state": "closed",
+    "body": "1715248740292 https github com dougsm ggcnn assets 151015238 05810be1 226d 4fc2 be77 3a41849e2f1d",
+    "created_at": "2024-05-09T10:00:15Z",
+    "closed_at": "2024-10-25T07:07:26Z",
+    "user": "t-272",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 57,
+    "title": "AttributeError",
+    "state": "open",
+    "body": "I appreciated your amazing research After the pcd files were converted to depth images using function generate cornell depth I got some errors when I tried to train the network with Cornell dataset python3 train ggcnn py description training network ggcnn2 dataset cornell dataset path cornell AttributeError Caught AttributeError in DataLoader worker process 0 AttributeError Couldn t find function center in BoundingBoxes or BoundingBox There was same result with evaluation code with pre trained model python3 eval ggcnn py network ggcnn weights cornell ggcnn epoch 23 cornell dataset cornell dataset path cornell iou eval AttributeError Caught AttributeError in DataLoader worker process 0 AttributeError Couldn t find function center in BoundingBoxes or BoundingBox But I tested the task to loading the ggcnn using pre trained model from models ggcnn import GGCNN model GGCNN model load state dict torch load ggcnn weights cornell ggcnn epoch 23 cornell statedict pt All keys matched successfully I would like to thank you once again",
+    "created_at": "2023-09-19T04:54:50Z",
+    "closed_at": null,
+    "user": "normajeane-m",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kalyanksk",
+        "created_at": "2023-10-01T02:15:10Z",
+        "body": "I also faced the issue and changing numpy version worked for me pip uninstall numpy pip install numpy 1 22"
+      },
+      {
+        "user": "Anmol-002",
+        "created_at": "2024-11-17T09:12:57Z",
+        "body": "can you please share your repository of this code t 272 normajeane m kalyanksk"
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "title": "UnicodeEncodedError",
+    "state": "open",
+    "body": "When I use command to trainning with Cornell Grasping Datasheet an error occurs Traceback most recent call last File D ggcnn master ggcnn master train ggcnn py line 272 in module run File D ggcnn master ggcnn master train ggcnn py line 237 in run summary net input channels 300 300 File C Python Python310 lib site packages torchsummary torchsummary py line 157 in summary print results File C Python Python310 lib encodings cp1252 py line 19 in encode return codecs charmap encode input self errors encoding table 0 UnicodeEncodeError charmap codec can t encode characters in position 260 261 character maps to undefined What should I do now Thank you",
+    "created_at": "2023-06-12T07:53:18Z",
+    "closed_at": null,
+    "user": "gplminhduc147",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 55,
+    "title": "models.common.py",
+    "state": "open",
+    "body": "def post process output q img cos img sin img width img width img width img cpu numpy squeeze 150 0 Hi Dougsm What does 150 0 use for and why do we need to use it here Thanks Hongbo",
+    "created_at": "2023-03-23T12:13:24Z",
+    "closed_at": null,
+    "user": "Hongbo-Z",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 54,
+    "title": "How to visualise with 3D graspping pose?",
+    "state": "open",
+    "body": "Hi Doug thanks for your amazing work I managed to run your project and get some results Figure1 from cornell dataset and Jacquard dataset My question is how to get the visualisation as shown in your paper Figure2 thanks Figure 1 Figure 1 https user images githubusercontent com 35995716 224006316 39fc118e 7ecf 494f 8c4e 9718f39320b0 png Figure 2 Screenshot from 2023 03 09 11 10 08 https user images githubusercontent com 35995716 224006479 84395a1d 6486 419f b727 1131281c6e78 png",
+    "created_at": "2023-03-09T11:11:09Z",
+    "closed_at": null,
+    "user": "yananliusdu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2023-03-15T19:52:13Z",
+        "body": "Hey there The second visualisation is from RViz the visualisation tool from ROS You can see an example of how it s published here https github com dougsm mvp grasp blob c301ba2f4b0c0fb0c92b61a34f2821e56c693163 dougsm helpers src dougsm helpers tf helpers py L117 But converting the GG CNN output to a 6D Pose requires the camera intrinsics see here https github com dougsm mvp grasp blob c301ba2f4b0c0fb0c92b61a34f2821e56c693163 ggcnn ros nodes ggcnn service py L92 so it may not be possible just from the Cornell or Jacquard datasets Hope that helps"
+      }
+    ]
+  },
+  {
+    "number": 53,
+    "title": "Error while evaluating",
+    "state": "closed",
+    "body": "I keep getting this error whenever i try to evaluate the model python eval ggcnn py network home aakaash ggcnn ggcnn weights cornell ggcnn epoch 23 cornell dataset cornell dataset path home aakaash Downloads archive vis home aakaash myen lib python3 6 site packages torch serialization py 671 SourceChangeWarning source code of class torch nn modules conv Conv2d has changed you can retrieve the original source code by accessing the object s source attribute or set torch nn Module dump patches True and use the patch tool to revert the changes warnings warn msg SourceChangeWarning home aakaash myen lib python3 6 site packages torch serialization py 671 SourceChangeWarning source code of class torch nn modules conv ConvTranspose2d has changed you can retrieve the original source code by accessing the object s source attribute or set torch nn Module dump patches True and use the patch tool to revert the changes warnings warn msg SourceChangeWarning INFO root Loading Cornell Dataset INFO root Done INFO root Processing 1 89 Traceback most recent call last File eval ggcnn py line 78 in module lossd net compute loss xc yc File home aakaash ggcnn models ggcnn py line 49 in compute loss pos pred cos pred sin pred width pred self xc File home aakaash myen lib python3 6 site packages torch nn modules module py line 1102 in call impl return forward call input kwargs File home aakaash ggcnn models ggcnn py line 33 in forward x F relu self conv1 x File home aakaash myen lib python3 6 site packages torch nn modules module py line 1102 in call impl return forward call input kwargs File home aakaash myen lib python3 6 site packages torch nn modules conv py line 446 in forward return self conv forward input self weight self bias File home aakaash myen lib python3 6 site packages torch nn modules conv py line 443 in conv forward self padding self dilation self groups RuntimeError Input type torch cuda FloatTensor and weight type torch FloatTensor should be the same",
+    "created_at": "2023-03-07T05:53:51Z",
+    "closed_at": "2023-03-14T06:40:08Z",
+    "user": "aakaash06",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 52,
+    "title": "How to set parameters when train on Jacquard dataset",
+    "state": "open",
+    "body": "Hello I want to train on jacquard datasets I want wo know how to set parameters such as batches per epoch Thanks",
+    "created_at": "2023-01-11T06:22:13Z",
+    "closed_at": null,
+    "user": "JerryZhang24",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Hongbo-Z",
+        "created_at": "2023-03-23T11:59:10Z",
+        "body": "python train ggcnn py description training on jacquard network ggcnn batches per epoch value dataset jacquard dataset path Jacquard vis Just set the value as you want"
+      },
+      {
+        "user": "YangXuanyi",
+        "created_at": "2023-03-26T01:41:52Z",
+        "body": "Hello I want to know how to set the values of these parameters to reproduce the acc in the paper when training Jaquard data The acc I have trained is only 0 84"
+      },
+      {
+        "user": "kerwinwanga",
+        "created_at": "2025-06-12T08:34:53Z",
+        "body": "Hello I want to know how to set the values of these parameters to reproduce the acc in the paper when training Jaquard data The acc I have trained is only 0 84 how do you deal with this problem"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "title": "can the ggcnn deal with the image of different size",
+    "state": "open",
+    "body": "Can this network handle 1280 720 pictures",
+    "created_at": "2023-01-07T12:03:32Z",
+    "closed_at": null,
+    "user": "CodeKingWang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2023-01-09T15:00:33Z",
+        "body": "Because it is a CNN there is no technical reason why it shouldn t work The network was trained on 300 300 images so might not work properly out of the box in which case you could re train it for your desired size Hope that helps"
+      },
+      {
+        "user": "Hongbo-Z",
+        "created_at": "2023-03-23T12:09:11Z",
+        "body": "Can this network handle 1280 720 pictures An easy way is to crop your images and make length width such as from 1280 720 to 720 720 then resize it to 300 300 to fit the input size of GG CNN"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "can the ggcnn",
+    "state": "closed",
+    "body": "",
+    "created_at": "2023-01-07T12:01:32Z",
+    "closed_at": "2023-01-09T14:58:53Z",
+    "user": "CodeKingWang",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 49,
+    "title": "About \"train_ggcnn.py\"",
+    "state": "open",
+    "body": "I extracted some of the information from the Cornell dataset to form a miniorell dataset I think I ve successfully converted the PCD files to depth images but when I want to training run train ggcnn py it can generate the appropriate files output models The files in models folder are empty folders I don t know what went wrong what should be done to be right If you know hopefully you can tell me thank you",
+    "created_at": "2022-07-31T08:33:50Z",
+    "closed_at": null,
+    "user": "linjuechu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 48,
+    "title": "Error while converting pcd to depth image",
+    "state": "closed",
+    "body": "Hello I have some question when I run Convert the PCD files to depth images by running python m utils dataset processing generate cornell depth The eorror shows bash newline I don t know what can I do If you know something please tell me Thank you 20220727214539 https user images githubusercontent com 101687662 181262754 ff741281 2460 4131 b0fa 8d9a94a3d109 jpg and 20220727215254 https user images githubusercontent com 101687662 181264585 4ac1642a f584 487b 9dba 3f8289ab69d2 jpg",
+    "created_at": "2022-07-27T13:46:26Z",
+    "closed_at": "2022-07-31T08:21:09Z",
+    "user": "linjuechu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 47,
+    "title": "Error while converting pcd to depth image",
+    "state": "closed",
+    "body": "hello I have some question when I run Convert the PCD files to depth images by running python m utils dataset processing generate cornell depth Path To Dataset The eorror shows bash newline I don t know what can I do If you know something please tell me Thank you",
+    "created_at": "2022-07-27T13:44:36Z",
+    "closed_at": "2022-07-27T13:47:41Z",
+    "user": "linjuechu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 46,
+    "title": "Labeling the dataset",
+    "state": "open",
+    "body": "Hi Doug Sorry for my question in advance How do you labeled the dataset in order to obtain the txt file did you use a specific tool Moreover do you apply some augmentation to your dataset in order to increment it I ve found this grasping labeling tool for labeling the images https github com ulaval damas grasp rectangle labelling but the format I obtain is different from your txt file Bests Olivia",
+    "created_at": "2022-05-24T12:51:17Z",
+    "closed_at": null,
+    "user": "OliviaNocentini",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2022-05-25T17:36:36Z",
+        "body": "Hi Olivia I never labelled any of the data myself I used either the existing Cornell dataset which has one point of the rectangle per line x y or the Jacquard dataset which has format like x y angle width height Yes the data loader applies random rotate and zoom crop https github com dougsm ggcnn blob master utils data grasp data py L51"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "problem with Cornell dataset",
+    "state": "open",
+    "body": "Traceback most recent call last File train ggcnn py line 306 in module run File train ggcnn py line 231 in run Dataset get dataset args dataset File D develop demo learning ggcnn master utils data init py line 9 in get dataset raise NotImplementedError Dataset Type is Not implemented format dataset name NotImplementedError Dataset Type Cornell is Not implemented",
+    "created_at": "2022-04-25T07:50:00Z",
+    "closed_at": null,
+    "user": "Demoyuge",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jdrew1303",
+        "created_at": "2022-05-21T01:33:42Z",
+        "body": "Hey Demoyuge I think the issue youre facing is that the dataset name is case sensitive It should be cornell not Cornell Hope this helps"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "Problem with training on macOS  ",
+    "state": "open",
+    "body": "I came across a problem when I train GG CNN on Cornell Dataset on my MacBook Pro 15 inch 2019 python train ggcnn py description training example network ggcnn dataset cornell dataset path Cornell Grasping Dataset INFO root Loading Cornell Dataset INFO root Done INFO root Loading Network Traceback most recent call last File train ggcnn py line 272 in module run File train ggcnn py line 229 in run net net to device raise AssertionError Torch not compiled with CUDA enabled",
+    "created_at": "2022-01-03T14:36:55Z",
+    "closed_at": null,
+    "user": "Hongbo-Z",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2022-01-09T07:56:30Z",
+        "body": "It looks like the code assumes you re training on GPU You can change https github com dougsm ggcnn blob 0c50aa7600e8a30d44c5c85cebd6e3394a81f30e train ggcnn py L228 to cpu instead and it should work on your computer but it will be quite slow to train"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "How to use image-wise (IW) and object-wise (OW)Cornell data splits mentioned in the paper?Did you use data augment by default when you trained Cornell?Thank you.",
+    "state": "closed",
+    "body": "",
+    "created_at": "2021-09-15T08:21:43Z",
+    "closed_at": "2021-09-21T16:59:06Z",
+    "user": "thk8181",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2021-09-21T16:59:06Z",
+        "body": "Hello The code here only supports image wise split which is what s quoted in the paper The data is augmented by default with random crop and rotate https github com dougsm ggcnn blob master train ggcnn py L202"
+      },
+      {
+        "user": "thk8181",
+        "created_at": "2021-09-22T04:58:04Z",
+        "body": "Thank you for reply"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "Is there a bug in models/ggcnn.py?",
+    "state": "closed",
+    "body": "Hi I think the padding here is 4 instead of 3 https github com dougsm ggcnn blob 0c50aa7600e8a30d44c5c85cebd6e3394a81f30e models ggcnn py L16",
+    "created_at": "2021-08-16T12:01:30Z",
+    "closed_at": "2021-08-16T12:15:15Z",
+    "user": "OranHe",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "OranHe",
+        "created_at": "2021-08-16T12:09:01Z",
+        "body": "In the paper the first layer input size is 300x300x1c kernel size is 9x9 and stride is 3 I assume the output size is 100x100x1c So the padding size should be 4 9 1 2 When padding size is 3 the output size will be 99x99x1c it looks a bit strange Can you explain why u use padding3 instead of padding4 to me Thank u so much"
+      },
+      {
+        "user": "OranHe",
+        "created_at": "2021-08-16T12:15:45Z",
+        "body": "Thank you I ve figured it out"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "What IoU % metric is used in the paper?",
+    "state": "closed",
+    "body": "Question Solved",
+    "created_at": "2021-08-11T22:06:23Z",
+    "closed_at": "2021-08-26T23:11:02Z",
+    "user": "kch0127",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 40,
+    "title": "Cannot download Cornell Grasping Dataset",
+    "state": "closed",
+    "body": "could u plz check the link of Cornell Grasping Dataset I cannot open the link",
+    "created_at": "2021-08-10T06:30:06Z",
+    "closed_at": "2021-08-10T06:50:51Z",
+    "user": "OranHe",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2021-08-10T06:50:51Z",
+        "body": "It has been taken offline Apparently there are some other places it can be downloaded See 35"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Processing of data set labels.",
+    "state": "closed",
+    "body": "Hello I am following your work GG CNN I have a question to ask when GG CNN is based on Cornell and Jacquard data sets it needs to process the original labels of data sets Could you please tell me which program it is based on",
+    "created_at": "2021-07-16T03:03:46Z",
+    "closed_at": "2021-09-21T16:53:12Z",
+    "user": "thk8181",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2021-07-19T08:42:10Z",
+        "body": "Hello the code for loading and converting the Cornell and Jacquard data can be found here https github com dougsm ggcnn blob 0c50aa7600e8a30d44c5c85cebd6e3394a81f30e utils dataset processing grasp py L63"
+      },
+      {
+        "user": "thk8181",
+        "created_at": "2021-07-20T01:12:45Z",
+        "body": "Thank you very much for your reply I have understood Best wishes"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "python eval_ggcnn.py error",
+    "state": "open",
+    "body": "AttributeError collections OrderedDict object has no attribute compute loss When I run python python eval ggcnn py network epoch 41 iou 1 00 statedict pt dataset jacquard dataset path home luai luai Samples jacquard output iou eval AttributeError collections OrderedDict object has no attribute compute loss how to solve this problem",
+    "created_at": "2021-03-06T12:21:32Z",
+    "closed_at": null,
+    "user": "luaisi",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xiaofeiso",
+        "created_at": "2022-09-10T09:35:57Z",
+        "body": "I have the same problem have you solved this problem"
+      },
+      {
+        "user": "CHDrago",
+        "created_at": "2022-09-20T12:16:40Z",
+        "body": "I have the same problem too have you solved this problem"
+      },
+      {
+        "user": "CHDrago",
+        "created_at": "2022-09-20T13:18:36Z",
+        "body": "Sovel it By replacing epoch 41 iou 1 00 statedict pt with epoch 41 iou 1 00"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "One problem ＞﹏＜",
+    "state": "open",
+    "body": "Hi teacher I m new to this field I read this paper and tried to reproduce it but meet some problems Could you tell me how to calculation speed of single image use eval ggcnn Just like the 6ms for a single depth image presented in the paper I used the jacquard dataset",
+    "created_at": "2021-01-20T15:08:28Z",
+    "closed_at": null,
+    "user": "74284853",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HanwenCao",
+        "created_at": "2021-01-20T16:00:53Z",
+        "body": "Hi I hope I can help you But I am not 100 sure You might want to monitor the run time of https github com dougsm ggcnn blob 0c50aa7600e8a30d44c5c85cebd6e3394a81f30e eval ggcnn py L78 using a python timer"
+      },
+      {
+        "user": "74284853",
+        "created_at": "2021-01-21T02:38:14Z",
+        "body": "Hi I hope I can help you But I am not 100 sure You might want to monitor the run time of https github com dougsm ggcnn blob 0c50aa7600e8a30d44c5c85cebd6e3394a81f30e eval ggcnn py L78 using a python timer could you tell me your email I look forward to further communication with you"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "About validate code",
+    "state": "open",
+    "body": "Dear Doug when I read your code I have a question hope u can help me thanks a lot In train ggcnn py file s validate function when you store the model s val loss and you use the code below results loss loss item ld my question is why we should divide ld in there because I found you do not do the same thing in the train function you divide the batch idx in the train function I don t understand what causes the difference could u help me thxxxxxx",
+    "created_at": "2021-01-13T14:39:04Z",
+    "closed_at": null,
+    "user": "catisthebest",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 35,
+    "title": "About Cornell Grasping Dataset ",
+    "state": "closed",
+    "body": "Hello because the Cornell Grasping Dataset link is invalid do you have any files you can provide to me Thank you",
+    "created_at": "2021-01-13T05:14:43Z",
+    "closed_at": "2021-07-19T08:43:20Z",
+    "user": "silver60229",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "soongjian",
+        "created_at": "2021-01-26T05:55:30Z",
+        "body": "https aistudio baidu com aistudio datasetdetail 27422"
+      },
+      {
+        "user": "Janx1913",
+        "created_at": "2021-03-19T14:02:36Z",
+        "body": "It can be found on Kaggle aswell https www kaggle com oneoneliu cornell grasp"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "About Depth Input processing in paper",
+    "state": "closed",
+    "body": "Dear Doug when I read the paper I have some questions about the input depth image s process I have search on the internet but I could not find an understandable answer I am a newbie learner on deep learning and robot the questions I have maybe is a little silly hope you do not mind it Could you help me to answer these questions thanks a lot Background As you mentioned in your paper you subtract the mean of each depth image center its value around 0 to provide depth invariance Question 1 I have a little confused about why we need to provide the depth invariance Question 2 what situation would happen if we don t do this step provide depth invariance Question3 In run ggcnn py file line 111 we calculate the depth by use the code below depth center depth center 10 mean 1000 0 my question is why we set the scale to be 1000 0 which factors decided the scale s setting camera or anything else if I want to run this code on my robot and camera should I change this scale Thanks a lotttt for ur answer",
+    "created_at": "2020-12-08T03:53:46Z",
+    "closed_at": "2020-12-08T12:14:52Z",
+    "user": "kendj-staff",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-12-08T12:05:29Z",
+        "body": "Hi kendj staff I hope I can answer your questions 1 2 This is mostly for the beneift of the neural network For training and inference it is important that the value is close to zero and in most tasks you would normalise data by subtracting the mean and dividing by the standard deviation Here we subtract the mean to zero centre the data so that it doesn t matter the distance from the image to the object Otherwise the same image from 1m away would give very different output to the same image from 1 5m away for example 3 I believe that is just scaling from metres to millimetres"
+      },
+      {
+        "user": "kendj-staff",
+        "created_at": "2020-12-08T12:14:48Z",
+        "body": "oh I got it your answer is really clearly for me thank you for your patiently explanation again"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Fine tuning on pretrained weights",
+    "state": "closed",
+    "body": "Dear author May I ask you questions about training on customized data I have a specific application in mind So I guess I should get some depth data from my scene setting and train with the pretrained weights you have provided But I am quite new to deep learning so I am not sure if that is correct Any suggestions on starting my own application would be highly appreciated I also tried along that way What I did was to load your pretrained network and continue to train it on the same dataset Cornell Dataset But surprisingly the pretrained network did not perform well on the same dataset Here is some log info INFO root Beginning Epoch 00 INFO root Epoch 0 Batch 100 Loss 0 0716 INFO root Epoch 0 Batch 200 Loss 0 1626 INFO root Epoch 0 Batch 300 Loss 0 0423 INFO root Epoch 0 Batch 400 Loss 0 0685 INFO root Epoch 0 Batch 500 Loss 0 1163 INFO root Epoch 0 Batch 600 Loss 0 0476 INFO root Epoch 0 Batch 700 Loss 0 0870 INFO root Epoch 0 Batch 800 Loss 0 2107 INFO root Epoch 0 Batch 900 Loss 0 1240 INFO root Validating INFO root 176 249 0 706827 The pretrained network only achieve 0 7 on Cornell Dataset data02 tar gz for the first epoch I was wondering is it normal Thank you",
+    "created_at": "2020-10-17T08:50:55Z",
+    "closed_at": "2020-11-05T09:49:31Z",
+    "user": "HanwenCao",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 32,
+    "title": "Something wrong when I converted pcd files to depth images, using the python script ",
+    "state": "closed",
+    "body": "dougsm Thank you for your code and paper first when I used the file generate cornell depth py with the commandline python m utils dataset processing generate cornell depth Path To Dataset the result depth picture is strange all result depth images look the same just like this 2020 08 07 15 56 02 https user images githubusercontent com 55437106 89623028 8bdf1a80 d8c6 11ea 8e60 c317da2dc7ef png",
+    "created_at": "2020-08-07T07:56:43Z",
+    "closed_at": "2020-08-10T08:54:04Z",
+    "user": "Zhangeaky",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-08-10T04:31:40Z",
+        "body": "Hey Zhangeaky I ve seen this before I think the problem isn t that the files are incorrect but rather the image viewer e g the default viewer in ubuntu doesn t know how to interpret the floating point data To test you can try and visualise it using matplotlib instead import matplotlib pyplot as plt import imageio img imageio imread path to img tiff plt imshow img plt show Hopefully that will show that the correct data has been saved Otherwise shoot me a reply and I ll take another look"
+      },
+      {
+        "user": "Zhangeaky",
+        "created_at": "2020-08-10T08:54:04Z",
+        "body": "Thanks I just solved it by your solution"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "How calculated robot grasp(g') and image grasp(g) relation  g'=T(RC)*(T(CI)*g).",
+    "state": "closed",
+    "body": "If all elements represents matrices then what was the dimension of each elements as T CI is 3 3 by default can you detail how you used that procedure to get transformation between robot and camera",
+    "created_at": "2020-07-09T17:40:28Z",
+    "closed_at": "2020-08-10T04:31:49Z",
+    "user": "priyashkla",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-07-10T05:19:15Z",
+        "body": "Hi priyashkla That wasn t meant to be a literal matrix equation In theory there s a number of ways you can do this and depends what information you have Normally you would do it in two steps 1 Inverse of the 3x3 projection matrix K and measured depth z to get camera coordinates image https user images githubusercontent com 26375098 87118966 10d31600 c2c0 11ea 8bcf 69fb2a3d5b31 png 2 Get world robot coordinates using the appropriate 4x4 transform matrix T between camera and robot image https user images githubusercontent com 26375098 87119039 3eb85a80 c2c0 11ea 8fa7 0a0dee8412e3 png The intrinsic matrix and camera extrinsic matrix can also both be represented as 4x4 homogenous transforms or a single 4x4 camera matrix which allow you to do this in a single step Practically speaking what we actually did here for our ROS implementation was 1 Compute the position of the point in the frame this is equivalent to the inverse of K but hardcoded https github com dougsm mvp grasp blob master ggcnn ros nodes ggcnn predict rt py L95 2 Use tf to compute and apply the transform from the camera frame to the robot frame automatically based on our URDF https github com dougsm mvp grasp blob master dougsm helpers src dougsm helpers tf helpers py L35 This article also discusses the inverse projection problem quite well https towardsdatascience com inverse projection transformation c866ccedef1c Hope that helps"
+      },
+      {
+        "user": "priyashkla",
+        "created_at": "2020-07-10T16:52:45Z",
+        "body": "For transformation from g to g you included position only If no then how parameters have been used during transformation position mapping is linear but orientation mapping is highly non linear because for any specific pose more than one orientation can give same result"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-07-14T06:43:15Z",
+        "body": "Once you have the x y z component in the camera frame you can copmute a full pose including rotation in the frame of the camera by using the grasp angle as the yaw angle like we do here also includes some angle wrapping in thise case as a quaternion in the pose https github com dougsm mvp grasp blob master ggcnn ros nodes ggcnn service py L109 If you want to think about this in terms of matrices then the two position vectors in step 2 above would just become 4x4 pose matrices and the maths is the same In practice though we just represent thse a ROS Pose type and convert using tf as I mentioned above"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Pytorch weights",
+    "state": "open",
+    "body": "dougsm There s something wrong with your saved pytorch model It seems that only you can load the file with torch load image https user images githubusercontent com 35657426 86567857 339abd00 bf96 11ea 95e1 97e3ca4fb844 png for example in your weight file what is the ggcnn large I think it must be ggcnn2 but when I changed it manually it turned out another errors etc So i think it d better if you can send me the weights only",
+    "created_at": "2020-07-06T07:38:26Z",
+    "closed_at": null,
+    "user": "trungpham2606",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-07-10T03:42:38Z",
+        "body": "Hi trungpham2606 Sorry about that I ve uploaded new weights files both the full pytorch model and the state dicts and added instructions to the README Please make sure you pull the newest version of the repo just to make sure the code all matches the weights I just uploaded"
+      },
+      {
+        "user": "trungpham2606",
+        "created_at": "2020-07-10T03:45:00Z",
+        "body": "dougsm Thank you so much Iam gonna test it right now Can you release the weights on Jacquard dataset PS 1 more question is that have you made a comparison with dex net yet"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Angle definition in training and network inference",
+    "state": "closed",
+    "body": "Dear Doug First of all congratulations for this awesome work and all the research you have been focusing including the MVP and EGAD dataset I m following your brilliant steps and I m highly inspired by your grasping methods Can you help me with this Question 1 Why do you define the grasp as a vector component sin 2 theta and cos 2 theta I known that is proposed by Hara et al 2017 as a way to facilitate the network training but I didn t understand the argument 2 theta inside sin and cos You do this in this part of the code https github com dougsm ggcnn blob f10fc95d081ae723cce18779621096811eb62d6e utils data grasp data py L91 L92 Question 2 In your paper you define the grasp angle as the equation bellow Fig 1 Howerver if we calculate the grasp angle by using this equation you get values between 0 785 and 0 785 rad am I missing something Despite that you do not consider the sin 2 theta and cos 2 theta when predicting the grasp angle in code https github com dougsm ggcnn kinova grasping blob 004139fedd5ad304f36de76b43466b4474b2081b ggcnn kinova grasping scripts run ggcnn py L126 Should I consider the grasp angle equation as the following without 2 in cos and sin argument img src https user images githubusercontent com 67082064 84968453 e5a83d00 b0ec 11ea 8074 293a00bdb647 png width 300 Would this be Figure 1 image https user images githubusercontent com 67082064 84967392 39fded80 b0ea 11ea 9512 7c50856cc006 png",
+    "created_at": "2020-06-18T02:06:11Z",
+    "closed_at": "2020-06-23T13:36:51Z",
+    "user": "caiobarrosv2",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-06-18T02:47:27Z",
+        "body": "hey peterschnitman thanks for the detailed question Q1 So as you know encoding the angle as the vector components is a trick to facilitate the training This works because it turns the discontinuous value the angle into two continuous values the cos and sin of the angle This means that the network doesn t have to learn that an angle of 3 13 and 3 13 are close to each other assuming angles normalised to the range in the range pi pi because the sin cos components are 0 01 0 99 and 0 01 0 99 This looks like Figure 3 https user images githubusercontent com 26375098 84971710 aca9b000 b160 11ea 92c1 2eded00b220e png The important part is that the representation is the same at both end of the graph pi reflecting the circular nature The problem with the grasp is that it is symmetrical around pi 2 rather than at pi That is for two fingers a grasp with theta pi 2 is the same as a grasp with theta pi 2 In this case if you use the sin cos trick to encode the angles you would get the following representation Figure 1 https user images githubusercontent com 26375098 84971449 21301f00 b160 11ea 8eac b52f9d356e73 png Note that the sin component is 1 for theta pi 2 and 1 for theta pi 2 This means that there are two different values for the exact same grasp pi 2 It also means that two grasps that are almost identical say theta 1 5 have two completely different representations This would be almost impossible to train since following the gradient would take you further away from the desired grasp rather than closer If you encode with 2 theta you get the following Figure 2 https user images githubusercontent com 26375098 84972031 58eb9680 b161 11ea 805c 545582483ded png And so we re back to a representatithat is continuous around the points pi 2 pi 2 and reflects their circular nature in the context of grasping Question 2 I think this might be just a result of lazy coding and documentation on my part In the line you linked the outputs of the network cos out and sin out are the raw output of the network which has learnt the 2 theta representation from the above graph so the values contained within are actually cos 2 theta and sin 2 theta despite the misleading names which matches the expected arctan sin 2 theta cos 2 theta that you re expecting Sorry for the confusion"
+      },
+      {
+        "user": "caiobarrosv2",
+        "created_at": "2020-06-18T14:11:18Z",
+        "body": "Thank you sou much Doug You really made it easy to understand I think that actually I made the confusion hahah By encoding with 2 theta the grasp angle is limited to pi 2 pi 2 while avoiding discontinuity and we represent the grasp angle pi 2 and pi 2 with the same cos sin value 1 0 right"
+      },
+      {
+        "user": "caiobarrosv2",
+        "created_at": "2020-06-23T13:36:51Z",
+        "body": "Thank you"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "About the output results and 6D description",
+    "state": "closed",
+    "body": "dear author thank you for your code and literature I have run the program you provided and the outputs are four images RGB Depth Q and Angle But the g mentioned in the article is p phi w q I wonder how can I get g from the outputs the four images Looking for your reply",
+    "created_at": "2020-06-16T12:34:56Z",
+    "closed_at": "2020-07-06T05:59:45Z",
+    "user": "SWEETYT",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-06-17T23:12:04Z",
+        "body": "Hi SWEETYT To get from the pixel coordinates to you need to use the camera intrinsic matrix We have an example in our ROS deployment of GG CNN here https github com dougsm mvp grasp blob c301ba2f4b0c0fb0c92b61a34f2821e56c693163 ggcnn ros nodes ggcnn predict rt py L95 If you re unfamiliar with using the camera intrinsics this link has a good overview of what that means https docs opencv org 2 4 modules calib3d doc camera calibration and 3d reconstruction html"
+      },
+      {
+        "user": "SWEETYT",
+        "created_at": "2020-06-24T02:31:53Z",
+        "body": "dear author thank you very much for your reply I already know how to get six dimensional pose params And I have another question If I use my own RGB image and depth image can I also get the grasp box through the network test you provided But I checked eval ggcnn py Cornell dataset and Jacquard dataset provide not only RGB img and depth img but also the coordinates of grasp boxes Is it necessary to mark the graspable box and provide the coordinates when I test Thank you for your patience Looking for your reply"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-07-03T02:05:38Z",
+        "body": "If you want to evaluate on your own dataset you will need to provide ground truth grasp rectangles The easiest way to to this would be to use the same format as the Cornell or Jacquard datasets then you can use the existing code for evaluation If you don t want to evaluate but just see the output on some custom images then you don t need the ground truth data You can just get the outputs by doing a forward pass of the network then use dataset processing grasp detect grasps to get the best grasps and visualise them using dataset processing grasp Grasp plot onto your custom images Hope that helps"
+      },
+      {
+        "user": "SWEETYT",
+        "created_at": "2020-07-04T01:13:46Z",
+        "body": "If you want to evaluate on your own dataset you will need to provide ground truth grasp rectangles The easiest way to to this would be to use the same format as the Cornell or Jacquard datasets then you can use the existing code for evaluation If you don t want to evaluate but just see the output on some custom images then you don t need the ground truth data You can just get the outputs by doing a forward pass of the network then use dataset processing grasp detect grasps to get the best grasps and visualise them using dataset processing grasp Grasp plot onto your custom images Hope that helps Thank you very much for your reply I have solved this problem"
+      },
+      {
+        "user": "aakaash06",
+        "created_at": "2023-03-14T06:36:30Z",
+        "body": "If you want to evaluate on your own dataset you will need to provide ground truth grasp rectangles The easiest way to to this would be to use the same format as the Cornell or Jacquard datasets then you can use the existing code for evaluation If you don t want to evaluate but just see the output on some custom images then you don t need the ground truth data You can just get the outputs by doing a forward pass of the network then use dataset processing grasp detect grasps to get the best grasps and visualise them using dataset processing grasp Grasp plot onto your custom images Hope that helps Thank you very much for your reply I have solved this problem Hey can you please provide the code for this"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Pretrained weights for pytorch version",
+    "state": "closed",
+    "body": "Thanks the sharing the code with the community Would you share the pretrained weights for pytorch as well I d like to test trained model on images of novel object for example",
+    "created_at": "2020-05-13T08:23:04Z",
+    "closed_at": "2020-06-17T23:19:02Z",
+    "user": "ancorasir",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-06-17T23:18:55Z",
+        "body": "Hi ancorasir Sorry for the super slow reply I completely missed this Pretrained weights for some different conditions are available here https github com dougsm ggcnn releases download v1 0 ggcnn2 weights zip Note that if you have a specific application in mind retraining for that scenario might provide better results especiall aspects like field of view and data augmentation"
+      },
+      {
+        "user": "trungpham2606",
+        "created_at": "2020-07-02T02:22:29Z",
+        "body": "dougsm Seem there s something wrong that I cant load your saved file Can you specify the pytorch version you used for this project Your saved model cant be loaded in other PCs excluding yours"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "about loss",
+    "state": "closed",
+    "body": "Hello dougsm Thank you very much for the code you provided I have a question why you choose the MSE function as the loss function The input is an depth image the ground truth is an image how does the MSE function ensure that the input is moving toward the label Could you tell me your understanding Thank you very much Any help will be much appreciated",
+    "created_at": "2020-04-16T08:33:31Z",
+    "closed_at": "2020-04-21T07:01:46Z",
+    "user": "Steve-Mq",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-04-20T05:36:50Z",
+        "body": "Hi Steve Mq The MSE is acting pixelwise on the image based labels at the output so the loss is computed as the pixelwise ground truths and the output grasp map set of images MSE is commonly used for reconstruction tasks I hope that helps"
+      },
+      {
+        "user": "Steve-Mq",
+        "created_at": "2020-04-21T07:01:46Z",
+        "body": "dougsm Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "About the input images",
+    "state": "closed",
+    "body": "Can i input the image by the kinect then use the model to find the grasp point",
+    "created_at": "2020-02-18T07:26:34Z",
+    "closed_at": "2020-04-20T05:37:00Z",
+    "user": "leo4707",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-19T01:19:55Z",
+        "body": "Yes you definitely can If you want to use this with a real robot I d recommend looking at this repo https github com dougsm mvp grasp There is a ggcnn package for ROS and also example of interfacing with cameras and a robot however if your hardware is different you will need to adapt the code"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-02-19T12:26:51Z",
+        "body": "dougsm In the eval ggcnn py whether the input images are the picture in the Cornell data or not Can i edit the code that it is able to input normal RGB D image"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-20T03:50:44Z",
+        "body": "That s correct you can use that to input custom depth images Keep in mind that the network is by default trained on depth only images not RGB D However you can train it as such Again the ggcnn ROS package here https github com dougsm mvp grasp has a good example of using custom depth images even if you aren t using ROS https github com dougsm mvp grasp blob master ggcnn src ggcnn ggcnn py This file contains scripts for processing any depth image from a camera including kinect and producing a network output"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-02-20T08:04:59Z",
+        "body": "dougsm So i put the depth image to process depth image then predict I can get the grasp point image right Sorry i am new to python and deep learning therefore i have plenty of problems"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-23T23:45:39Z",
+        "body": "Yes that is correct One important thing The network is expecting the depth image to be in the format of metres from the camera"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-03-04T08:39:06Z",
+        "body": "dougsm After running prediction how do i put the rectangle on the rgb img"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-05T00:45:31Z",
+        "body": "There is a function for visualising the output with the grasping rectangles here https github com dougsm ggcnn blob ad48bc5f768fe0a9ba9fd47729638e0aed46e47b utils dataset processing evaluation py L7 There is an example of using this in the evaluation script https github com dougsm ggcnn blob master eval ggcnn py L100 Hope that helps"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-03-08T07:15:38Z",
+        "body": "123 https user images githubusercontent com 54476198 76158288 5edbdf80 614f 11ea 9011 3b9e5973544f PNG I try to use the function but i get the result I don t know the rectangle doesn t on the item"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-11T23:53:12Z",
+        "body": "Hello the rectangle is not on the item because it is plotted on the best detected grasp which in this scene is the ege of the table You should not be using the full images as there is too much information like the floor etc The GG CNN is trained on images cropped around the items so the item is only on a flat background Are you using the eval ggcnn py https github com dougsm ggcnn blob master eval ggcnn py script The dataset loader should be automatically cropping the images appropriately"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "About the code",
+    "state": "closed",
+    "body": "q img q img cpu numpy squeeze ang img torch atan2 sin img cos img 2 0 cpu numpy squeeze width img width img cpu numpy squeeze 150 0 q img gaussian q img 2 0 preserve range True ang img gaussian ang img 2 0 preserve range True width img gaussian width img 1 0 preserve range True question1 What does the q img mean question2 What is the effect about cpu numpy squeeze",
+    "created_at": "2020-02-16T09:13:47Z",
+    "closed_at": "2020-02-18T06:53:00Z",
+    "user": "leo4707",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-16T22:40:33Z",
+        "body": "The network has 3 outputs the quality Q the angle and the grasp width see https arxiv org pdf 1804 05172 pdf q img corresponds to the quality output cpu numpy squeeze are operations on the pytorch tensor to move the data from the gpu to cpu turn it into a 300x300 numpy array before doing any further processing You can find out more in the pytorch documentation e g cpu numpy squeeze Hope that helps"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-02-17T11:06:45Z",
+        "body": "Thanks to your explain"
+      },
+      {
+        "user": "leo4707",
+        "created_at": "2020-02-17T12:37:23Z",
+        "body": "dougsm how about split mean"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "evaluation.calculate_iou_match() is something wrong？",
+    "state": "closed",
+    "body": "when training the ggcnn2 validating is always zero but the loss is Decreasing",
+    "created_at": "2019-12-10T13:54:11Z",
+    "closed_at": "2019-12-18T14:43:10Z",
+    "user": "Cheniitt",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Cheniitt",
+        "created_at": "2019-12-10T13:59:07Z",
+        "body": "image https user images githubusercontent com 48058507 70535559 4253f980 1b98 11ea 8049 7ac251d32be0 png"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-12-13T01:36:54Z",
+        "body": "g day Cheniitt It definitely looks like there s something strange going on Can you provide more details What dataset are you using What was the command you ran If you run it with the vis flag does it look like the network is learning properly"
+      },
+      {
+        "user": "Cheniitt",
+        "created_at": "2019-12-13T17:16:41Z",
+        "body": "thanks for your reply dougsm I used the jacquard dataset to train ggcnn2 run the command python train ggcnn py description training example2 network ggcnn2 dataset jacquard dataset path Path To Dataset vis when training with the flag vis it looks the network is learning properly"
+      },
+      {
+        "user": "Cheniitt",
+        "created_at": "2019-12-13T18:06:50Z",
+        "body": "I found in https github com dougsm ggcnn blob ad48bc5f768fe0a9ba9fd47729638e0aed46e47b utils dataset processing grasp py L269 Whenever it always returns 0"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "PyTorch & Keras ",
+    "state": "closed",
+    "body": "Hello Thank you very much for the code you provided I have a question Pytorch used python3 but ROS used python2 this is different how do you deal with it Thank you very much",
+    "created_at": "2019-11-06T09:19:36Z",
+    "closed_at": "2019-11-07T13:46:03Z",
+    "user": "WHGang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-11-06T10:00:09Z",
+        "body": "Hello It shouldn t be much of an issue as long as the required libraries are installed for both python versions"
+      },
+      {
+        "user": "WHGang",
+        "created_at": "2019-11-07T13:45:58Z",
+        "body": "Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "How to use this for real time grasp detection?",
+    "state": "closed",
+    "body": "I was trying to use this code for real time grasping As a first step I tried to run eval on a tiff image from cornell dataset without using the labels I observed that before feeding the depth image to the net the code is cropping the image using the dataset labels If I comment out the cropping function the results are not accurate",
+    "created_at": "2019-10-31T15:55:01Z",
+    "closed_at": "2019-12-11T00:15:11Z",
+    "user": "nlmenezes",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-11-04T03:35:48Z",
+        "body": "Hi skoarkid The GG CNN is trained on the cropped patches of the cornell data as this more closely resembles the scene for the real robot i e single object close up on a table The cornell data images are taken from a long way away and contain lots of background If you re interested in using this for real time grasping I d recommend looking at my other repo which contains ROS nodes for using this on a real robot https github com dougsm mvp grasp"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "question about experiment",
+    "state": "closed",
+    "body": "Hi Morrison I want to do the same experiments to compare my work with yours It is easy to get roughly the same household objects But for adversarial objects I wonder if you still have the stl files somewhere in your computer or you still remember the file name of 3d model such that I can easily find them from their databases Really appreciate your help",
+    "created_at": "2019-10-29T16:27:56Z",
+    "closed_at": "2019-10-29T22:50:25Z",
+    "user": "ruinianxu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-10-29T22:50:19Z",
+        "body": "Hello All of the adversarial objects are available directly from the DexNet data https berkeley app box com s w6bmvvkp399xtjpgskwq1cytkndmm7cn folder 28003844491"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Error while converting pcd to depth image",
+    "state": "closed",
+    "body": "Hi I am getting this error while converting pcd to depth image using generate cornell depth py bash OpenCV Error Unsupported format or combination of formats Only 8 bit 1 channel and 3 channel input output images are supported in cvInpaint file build opencv L2vuMj opencv 3 2 0 dfsg modules photo src inpaint cpp line 751 Traceback most recent call last File usr lib python3 6 runpy py line 193 in run module as main main mod spec File usr lib python3 6 runpy py line 85 in run code exec code run globals File home pranav GRASPING ggcnn utils dataset processing generate cornell depth py line 19 in module di inpaint File home pranav GRASPING ggcnn utils dataset processing image py line 185 in inpaint self img cv2 inpaint self img mask 1 cv2 INPAINT NS cv2 error build opencv L2vuMj opencv 3 2 0 dfsg modules photo src inpaint cpp 751 error 210 Only 8 bit 1 channel and 3 channel input output images are supported in function cvInpaint Please help",
+    "created_at": "2019-10-10T12:11:41Z",
+    "closed_at": "2019-10-10T14:12:00Z",
+    "user": "pranav2481",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-10-10T12:21:59Z",
+        "body": "Hi Inpainting of float valued arrays is only supported in opencv version 3 3 0 Looks like you have version 3 2 Try upgrading to a newer opencv version"
+      },
+      {
+        "user": "pranav2481",
+        "created_at": "2019-10-10T14:12:00Z",
+        "body": "It works in opencv version 4 1 2 Thank you for the help"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Any test results for cornell and jacquard dataset?",
+    "state": "closed",
+    "body": "Since I saw this repo supports Cornell and Jacquard dataset I wonder if there already exists test performance on cornell and jacquard dataset somewhere",
+    "created_at": "2019-10-03T18:42:55Z",
+    "closed_at": "2019-10-10T12:20:50Z",
+    "user": "ruinianxu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-10-08T00:24:27Z",
+        "body": "Hello We discuss the results on the datasets in this paper https journals sagepub com doi full 10 1177 0278364919859066 however one of the main findings is that performance on the datasets doesn t necessarily equate to performance on a real robot"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "potential ambiguity of angle images",
+    "state": "closed",
+    "body": "Hi there Thank you for sharing the ggcnn code The performance is quite impressive I ran your code with my own dataset and the gripper angle often closes to 0 Later I found a possible logic leak of the designing of the angular supervision Assume we have a simplest case cube We labeled with two grasps one is cube center 0 pi another is cube center 0 5 pi Each of these grasps occupy a rectangle in angle image The problem is that these rectangles are overlapped The overlapped region has ambiguity That is depending on which grasp comes first the eventual overlap region may be marked by 0 pi or 0 5 pi Averaging 0 pi and 0 5 pi may not be a good idea also since 0 25 pi makes the gripper grasp cube edges The cause of the problem is overlapping Do you have some workaround on this situation After all it is highly possible that more than one grasp exist in one object Thanks",
+    "created_at": "2019-09-19T20:27:30Z",
+    "closed_at": "2019-09-28T00:45:14Z",
+    "user": "yongxf",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-09-26T22:44:11Z",
+        "body": "You raise a good point This is something I have noticed before but don t have a good solution to In practice I have not noticed this causing any significant issues though i e I have not generally noticed the robot grasping the average grasp on symmetrical objects but rather it will tend to a single one of the grasps I think this might be in part to the size and variability of the training datasets as well as the train time augmentation If this is a significant issue for you one possible way to overcome this is to learn several different grasp maps at different grasp bins like in https berkeleyautomation github io fcgqcnn Hope that helps"
+      },
+      {
+        "user": "yongxf",
+        "created_at": "2019-09-28T00:45:09Z",
+        "body": "Thank you for the confirmation and suggestions Indeed the labeling of the positive grasps in Cornell database is different with my customized one It seems the grasps in Cornell database is more sparse than my labeling The FC GQ CNN you commended uses angle bins to encode the angular dimension I guess the same methodology can be used in GGCNN angular encoding instead of using one image to regress angle shows angle value in proper pixels we can also use 18 images 20deg per bin to classify the angle display 1 in proper pixels of proper images This is just my current idea a little concern on 1 the loss design mixed regression and classification and 2 the headache of training with lots of outputs This may be the reason that FC GQ CNN doesn t train from scratch Thanks again for the reply"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Problem converting tiff files",
+    "state": "closed",
+    "body": "Hi First thanks for the code of the GGCNN I was trying to convert the dataset to achieve depth images The problem is that when I run the command python m utils dataset processing generate cornell depth Path To Dataset changing the path to my own dataset path I get no error in the conversion but then the d tiff files are empty Could you please help me solving this problem Thank you",
+    "created_at": "2019-07-22T15:16:57Z",
+    "closed_at": "2019-07-23T09:53:05Z",
+    "user": "OliviaNocentini",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-07-22T23:09:54Z",
+        "body": "Hi Olivia Just to check try running the below script with one of the images If I open the tiff files in ubuntu they look empty but in reality the data is there I think maybe it doesn t understand what to do with the floating point format Let me know if this doesn t work import matplotlib pyplot as plt import imageio i imageio imread pcd0100d tiff plt imshow i plt show Left is how it looks in the ubuntu image viewer right is the plot from the above script image https user images githubusercontent com 26375098 61671066 6453f900 ad29 11e9 8b71 c8a9cb9aaafe png"
+      },
+      {
+        "user": "OliviaNocentini",
+        "created_at": "2019-07-23T09:46:26Z",
+        "body": "Hi thank you for answering so quickly it works so maybe as you said there was a problem with the floating point format"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "dim error when run train_ggcnn.py",
+    "state": "closed",
+    "body": "Hi I forked the repository from branch RSS2018 https github com dougsm ggcnn tree RSS2018 I already completed the step 1 2 and 3 in Training https github com dougsm ggcnn tree RSS2018 training which is described in readme md But it was an error when I run python3 train ggcnn py Using TensorFlow backend Traceback most recent call last File train ggcnn py line 92 in module x Conv2D no filters 0 kernel size filter sizes 0 strides 3 3 padding same activation relu input layer File usr local lib python3 5 dist packages keras engine topology py line 575 in call self assert input compatibility inputs File usr local lib python3 5 dist packages keras engine topology py line 474 in assert input compatibility str K ndim x ValueError Input 0 is incompatible with layer conv2d 1 expected ndim 4 found ndim 2 Can you tell me how to solve the problem",
+    "created_at": "2019-07-08T08:17:13Z",
+    "closed_at": "2019-07-15T00:14:09Z",
+    "user": "frinklai",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-07-08T22:59:28Z",
+        "body": "Hello I just ran through all of the scripts and was unable to reproduce this The issue is that the depth image that you are passing into the network for training is not the correct size First up to make sure the dataset was created correctly can you please print out x train shape in train ggcnn py and make sure that it is N 300 300 1 where N is the size of the dataset"
+      },
+      {
+        "user": "frinklai",
+        "created_at": "2019-07-10T08:42:54Z",
+        "body": "Hi thanks for your quick reply I just regenerated dataset by run python3 generate dataset py and I found it was an error below Traceback most recent call last File generate dataset py line 151 in module f create dataset s s tt name ds name data np array dataset tt name ds name MemoryError It seems that the problem is RAM out of memory Are you have any idea to solve this problem by the way my pc s memory are below iarc titan yc ggcnn ggcnn free g total used free shared buff cache available Mem 15 1 13 0 0 13 Swap 15 0 15"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-07-10T22:09:31Z",
+        "body": "Hi If you are having issues with generating the dataset I would strongly recommend using the master branch which contains a much more user friendly and more up to date implementation The network and training data is the same but one of the major improvements was removing the need to pre generate a large dataset Instead the data is read from disk as required"
+      },
+      {
+        "user": "frinklai",
+        "created_at": "2019-07-13T15:57:31Z",
+        "body": "ok I got it thank you very much for your help"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "question during the train",
+    "state": "closed",
+    "body": "INFO root Validating Traceback most recent call last File D Grasp ggcnn master train ggcnn py line 267 in module run File D Grasp ggcnn master train ggcnn py line 249 in run test results validate net device val data args val batches File D Grasp ggcnn master train ggcnn py line 101 in validate lossd pred sin lossd pred width File D Grasp ggcnn master models common py line 22 in post process output width img gaussian width img 2 0 File C Users dell Anaconda3 lib site packages skimage filters gaussian py line 104 in gaussian image img as float image File C Users dell Anaconda3 lib site packages skimage util dtype py line 301 in img as float return convert image np float64 force copy File C Users dell Anaconda3 lib site packages skimage util dtype py line 205 in convert raise ValueError Images of type float must be between 1 and 1 ValueError Images of type float must be between 1 and 1",
+    "created_at": "2019-06-23T08:33:03Z",
+    "closed_at": "2020-02-20T03:50:52Z",
+    "user": "WuXingrui",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "deal with the data",
+    "state": "closed",
+    "body": "when I download the and extract Cornell Grasping Dataset into a single directorya and I convert the PCD files to depth images by running python m utils dataset processing generate cornell depth data cornell Nect by running train ggcnn py and have the error INFO root Loading Cornell Dataset Traceback most recent call last File ggcnn train ggcnn py line 269 in module run File ggcnn train ggcnn py line 202 in run include depth args use depth include rgb args use rgb File ggcnn utils data cornell data py line 26 in init raise FileNotFoundError No dataset files found Check path format file path FileNotFoundError No dataset files found Check path data cornell",
+    "created_at": "2019-05-29T13:03:03Z",
+    "closed_at": "2019-07-11T12:06:06Z",
+    "user": "wjydou",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wjydou",
+        "created_at": "2019-05-30T02:02:58Z",
+        "body": "And run the train ggcnn py of dataset jacquard Then have the error Traceback most recent call last File ggcnn train ggcnn py line 269 in module run File ggcnn train ggcnn py line 202 in run include depth args use depth include rgb args use rgb File ggcnn utils data jacquard data py line 27 in init raise FileNotFoundError No dataset files found Check path format file path FileNotFoundError No dataset files found Check path data jacquard"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-06-10T21:52:37Z",
+        "body": "Hi Can you post the whole command that you are running It looks like you are not passing in or passing in incorrectly the dataset type and path arguments"
+      },
+      {
+        "user": "wjydou",
+        "created_at": "2019-06-11T14:23:04Z",
+        "body": "dougsm l run in the pycharm and gave the path of dataset Then the result is as shown above"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-06-11T14:37:09Z",
+        "body": "Is the path definitely correct Is it definitely data jacquard and not data jacquard"
+      },
+      {
+        "user": "WuXingrui",
+        "created_at": "2019-06-17T07:23:25Z",
+        "body": "wjydou You can try to delete in the 22nd line of jacquard data py which is in utils data"
+      },
+      {
+        "user": "wjydou",
+        "created_at": "2019-06-18T13:59:18Z",
+        "body": "WuXingrui Thanks for you I had delete in the 22nd line of jacquard data py which is in utils data but it is also useless"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-07-10T22:10:56Z",
+        "body": "Hello did you resolve this issue I did notice that the instructions may have been ambiguous The expected path format for the cornell dataset is that the 01 02 03 etc folders are still in the structure I have updated the readme"
+      },
+      {
+        "user": "wjydou",
+        "created_at": "2019-07-11T12:06:01Z",
+        "body": "dougsm Thanks"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-03-23T09:25:40Z",
+        "body": "Hello did you resolve this issue I did notice that the instructions may have been ambiguous The expected path format for the cornell dataset is that the 01 02 03 etc folders are still in the structure I have updated the readme dougsm I don t understand above very well Could you explain it one more time Let s say I have cornell dataset folder then as sub folders I should have 01 02 03 am I right For train then I should provide the path to cornell dataset Do you load each sub folder during train or should I have only one folder e g 01 with all images inside"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-23T22:49:53Z",
+        "body": "Yes that s right the directory should contain the 01 02 etc subdirectories Judging by the line that loads the files every subfolder is loaded https github com dougsm ggcnn blob ad48bc5f768fe0a9ba9fd47729638e0aed46e47b utils data cornell data py L22"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "some mistakes of this code",
+    "state": "closed",
+    "body": "First I m very interested in this paper and I want to implement this experiment But I come up with this problem python train ggcnn py Using TensorFlow backend Traceback most recent call last File train ggcnn py line 91 in module x Conv2D no filters 0 kernel size filter sizes 0 strides 3 3 padding same activation relu input layer File home user anaconda3 envs tensorflow py2 lib python2 7 site packages keras engine base layer py line 414 in call self assert input compatibility inputs File home user anaconda3 envs tensorflow py2 lib python2 7 site packages keras engine base layer py line 311 in assert input compatibility str K ndim x ValueError Input 0 is incompatible with layer conv2d 1 expected ndim 4 found ndim 2 please help me out",
+    "created_at": "2019-05-09T14:42:52Z",
+    "closed_at": "2019-05-12T22:33:12Z",
+    "user": "Yanxing-Shi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-05-09T22:15:58Z",
+        "body": "Hi thanks for the interest Judging by the error it looks like you might be passing the wrong sized array to the network If you re having issues I d first recommend having a look at the new as of yesterday version that I pushed It s written in PyTorch rather than Keras but should be a lot more user friendly and is better documented"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "The benefit of feeding the RGB data",
+    "state": "closed",
+    "body": "Hi Dougsm First of all thank you for sharing the GGCNN code I have one question does adding RGB data to the grasping network improve the grasping Best Jun",
+    "created_at": "2019-05-09T12:57:54Z",
+    "closed_at": "2019-05-12T22:33:03Z",
+    "user": "jundengdeng",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "youkenhou",
+        "created_at": "2019-05-09T15:49:07Z",
+        "body": "I trained the network with only depth for 30 epochs and the best iou is 74 With RGB being added the best iou reaches 78 although iou is not 100 equal to the performance of grasping in the real world In my opinion sometimes objects are so small that depth maps contain few information RGB can provide the network with more information in this kind of situation"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-05-09T22:11:18Z",
+        "body": "Overall I found it to not help very much and in some cases was a negative I agree with what youkenhou said that in the cases where there is minimal depth data it helps and it improves performance within the dataset However there were two main issues with using RGB that I found in practice The network can get confused by objects that have strong colour gradients like logos etc which almost outweighs the small number of benefits in the cases of poor depth information With RGB transferring to a robot with a different camera in a different setting e g with a different or cluttered textured background the RGB doesn t transfer well for example picking out of a red Amazon tote https i ytimg com vi Bb01r3DyQTE maxresdefault jpg There are things you can probably do to avoid this but since depth doesn t have this problem I didn t look into it further"
+      },
+      {
+        "user": "jundengdeng",
+        "created_at": "2019-05-10T12:12:11Z",
+        "body": "Thanks dougsm and youkenhou for your inputs We found that our method highly depends on the quality of the depth camera Currently we are using D435 and D415 which restricts our grasping method only to grasp big objects in a cluttered case If we are going to grasp one object with 2 cm width or one object with black surface for example cell phone then the depth camera can t give the depth information much In this case I m seeking some solution I was thinking that maybe RGB would help me"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Incomplete files",
+    "state": "closed",
+    "body": "Thank you for your great work and the pytorch implementation However it seems like there s some missing files such as model and utils data get dataset Could you please look into this problem Thanks in advance",
+    "created_at": "2019-05-09T03:35:25Z",
+    "closed_at": "2019-05-09T05:05:20Z",
+    "user": "youkenhou",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-05-09T03:49:24Z",
+        "body": "Whoops sorry I ve added the models folder get dataset is already there it s in init py"
+      },
+      {
+        "user": "youkenhou",
+        "created_at": "2019-05-09T05:05:20Z",
+        "body": "dougsm Thanks a lot"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "AttributeError: 'NoneType' object has no attribute 'TF_NewStatus'",
+    "state": "closed",
+    "body": "Hi I have recently read your igreat work Closing the Loop for Robotic Grasping A Real time Generative Grasp Synthesis Approach and have been trying to validate your results for a long time However I meet an error as below 2019 05 02 11 10 37 457694 I tensorflow core common runtime gpu gpu device cc 977 Creating TensorFlow device gpu 0 device 0 name GeForce GTX 1050 Ti pci bus id 0000 01 00 0 Traceback most recent call last File evaluate py line 196 in module run File evaluate py line 173 in run succeeded failed calculate iou matches grasp positions out grasp angles out bbs all no grasps NO GRASPS grasp width out grasp width out File evaluate py line 102 in calculate iou matches gt bbs BoundingBoxes load from array ground truth bbs i squeeze IndexError index 0 is out of bounds for axis 0 with size 0 Exception ignored in bound method BaseSession del of tensorflow python client session Session object at 0x7f479f396a58 Traceback most recent call last File home robot anaconda3 envs weiwuhuhu lib python3 5 site packages tensorflow python client session py line 587 in del AttributeError NoneType object has no attribute TF NewStatus Firstly I run the file evaluate py it occurs that File home robot anaconda3 envs weiwuhuhu lib python3 5 site packages h5py hl files py line 170 in make fid fid h5f open name flags fapl fapl File h5py objects pyx line 54 in h5py objects with phil wrapper File h5py objects pyx line 55 in h5py objects with phil wrapper File h5py h5f pyx line 85 in h5py h5f open OSError Unable to open file unable to open file name home douglas dev ae grasp prediction data datasets dataset rotated width zoom 171219 1516 hdf5 errno 2 error message No such file or directory flags 0 o flags 0 Sencondly i replace the dataset rotated width zoom 171219 1516 hdf5 with the dataset 190502 1033 hdf5 Finally i run the evalute py the the obove wrong AttributeError NoneType object has no attribute TF NewStatus has occured How can i resolve it Thank you very much",
+    "created_at": "2019-05-02T03:29:43Z",
+    "closed_at": "2019-05-08T23:01:04Z",
+    "user": "weiwuhuhu",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-05-02T03:48:25Z",
+        "body": "Hi So it looks like there s two different issues The first is the missing hdf5 file which I think you ve resolved by creating your own and changing the path is that correct The second one looks like it s potentially an issue with your tensorflow keras install which I m not so sure about but seems to come up in a quick google e g https github com tensorflow tensorflow issues 8652"
+      },
+      {
+        "user": "weiwuhuhu",
+        "created_at": "2019-05-02T14:16:02Z",
+        "body": "I didn t train with the train py Firstly I run the download pretrained ggcnn sh to generate the dataset 190502 2135 hdf5 in dataset file Secondly i run the evluate py then occur the error IOError Unable to open file unable to open file name home douglas dev ae grasp prediction data datasets dataset rotated width zoom 171219 1516 hdf5 errno 2 error message No such file or directory flags 0 o flags 0 So i modify the path and i dont t find the dataset rotated width zoom 171219 1516 hdf5 so i replace it with the dataset 190502 2135 hdf5 in the dataset txt Finally i run the evaluate py the error occur is that Traceback most recent call last File evaluate py line 196 in module run File evaluate py line 173 in run succeeded failed calculate iou matches grasp positions out grasp angles out bbs all no grasps NO GRASPS grasp width out grasp width out File evaluate py line 102 in calculate iou matches gt bbs BoundingBoxes load from array ground truth bbs i squeeze IndexError index 0 is out of bounds for axis 0 with size 0 This is my step i didn t run the train py can i run the evaluate py directly i can t get the result And my environment is tensorflow1 10 keras 2 0 6 Thank you very much"
+      },
+      {
+        "user": "weiwuhuhu",
+        "created_at": "2019-05-03T07:40:45Z",
+        "body": "Hi I try run the train ggcnn py the error is ValueError Input 0 is incompatible with layer conv2d 1 expected ndim 4 found ndim 2 Could you please tell me some details about it I am looing forward to your reply"
+      },
+      {
+        "user": "weiwuhuhu",
+        "created_at": "2019-05-03T14:06:06Z",
+        "body": "Hi So it looks like there s two different issues The first is the missing hdf5 file which I think you ve resolved by creating your own and changing the path is that correct The second one looks like it s potentially an issue with your tensorflow keras install which I m not so sure about but seems to come up in a quick google e g tensorflow tensorflow 8652 https github com tensorflow tensorflow issues 8652 Thank you very much for your help And I solve this problem recently You are right and the path of my cornell dataset is wrong And I run the evaluate py then i get the reult such as 190503 1859 ggcnn 9 5 3 32 16 8 5 1051 0 1760 0 59 72 How can i input the image to get the result of your paper bounding box"
+      },
+      {
+        "user": "TangBoheng",
+        "created_at": "2019-05-07T09:09:21Z",
+        "body": "I download the data from http s dougsm com ggcnn rss url just like download pretrained ggcnn sh do After I unzip it I can t find dataset rotated width zoom 171219 1516 hdf5 or dataset 190502 1033 hdf5 Is there something I done wrong"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-05-08T23:01:04Z",
+        "body": "Hello If you re still having trouble have a look at the new version that I just pushed It will require a little bit of set up it uses PyTorch rather than Tensorflow but should be a lot more user friendly There might still be some issues to work out so let me know if there is problems"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Plot output on a image",
+    "state": "closed",
+    "body": "Hello Doug thanks a lot for your code I m writing a thesis about the gg cnn Used only the half of the cornell Dataset because of lack of storage It worked fine and I will test it with a own dataset I saw the def plout output in the evaluate py Can you tell me how to use that to plot the grasp position on one of the used image pcd data Thanks for your help",
+    "created_at": "2019-03-26T16:02:38Z",
+    "closed_at": "2019-03-29T16:26:18Z",
+    "user": "Marcelbgit",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-03-26T16:41:17Z",
+        "body": "Hello sorry about that I ve been meaning to document this better for ages I just added a docstring to that function so hopefully that will help It basically just takes the images from the dataset rgb and depth along with the output from the network Have a look and if you still have questions just add another comment"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": " grasp quality",
+    "state": "closed",
+    "body": "Hello I have completed the training but how do I test the grasp quality",
+    "created_at": "2019-03-21T08:23:29Z",
+    "closed_at": "2019-03-23T07:19:03Z",
+    "user": "wjydou",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-03-21T09:11:49Z",
+        "body": "Hello after you have finished the training there is a script evaluate py that will test the network There are some parameters you can set in the file before running it e g the path to your trained models and how many grasps to evaluate per image"
+      },
+      {
+        "user": "wjydou",
+        "created_at": "2019-03-21T10:08:25Z",
+        "body": "dougsm Yes I have already run evaluate py and the result of the output is a txt text Some of the numbers of such output I don t know what that mean So can I detect the images that I have collected without running the robot to grab"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "something wrong with the 'evaluate.py'",
+    "state": "closed",
+    "body": "Hi I have recentlt read your interesing work Closing the Loop for Robotic Grasping A Real time Generative Grasp Synthesis Approach and have been trying to validate your results for a long time However I meet an error as below 190317 1538 ggcnn 9 5 3 32 16 8 1 368 0 1750 0 21 03 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 2 548 0 1750 0 31 31 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 3 763 0 1750 0 43 60 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 4 941 0 1750 0 53 77 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 5 1071 0 1750 0 61 20 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 6 1047 0 1750 0 59 83 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 7 1165 0 1750 0 66 57 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 8 1145 0 1750 0 65 43 No pre computed values Computing now 190317 1538 ggcnn 9 5 3 32 16 8 9 1157 0 1750 0 66 11 No pre computed values Computing now Traceback most recent call last File evaluate py line 188 in module run File evaluate py line 156 in run model load model model checkpoint fn File home jinhuan anaconda3 envs tf gpu 27 lib python2 7 site packages keras engine saving py line 417 in load model f h5dict filepath r File home jinhuan anaconda3 envs tf gpu 27 lib python2 7 site packages keras utils io utils py line 186 in init self data h5py File path mode mode File home jinhuan anaconda3 envs tf gpu 27 lib python2 7 site packages h5py hl files py line 394 in init swmr swmr File home jinhuan anaconda3 envs tf gpu 27 lib python2 7 site packages h5py hl files py line 170 in make fid fid h5f open name flags fapl fapl File h5py objects pyx line 54 in h5py objects with phil wrapper File h5py objects pyx line 55 in h5py objects with phil wrapper File h5py h5f pyx line 85 in h5py h5f open IOError Unable to open file unable to open file name data networks 190317 1538 ggcnn 9 5 3 32 16 8 epoch 00 model hdf5 errno 2 error message No such file or directory flags 0 o flags 0 When I run the file evaluate py it is ok at the begining and could print something However when it runs at epoch 10 it does not working well and print some errors as shown above After then I add a new file named epoch 00 model hdf5 which is modified from the others into networks It continues to work I do not know why Could you please tell me some details about it I am looing forward to your reply",
+    "created_at": "2019-03-19T03:11:38Z",
+    "closed_at": "2019-03-20T02:04:51Z",
+    "user": "jinhuan-hit",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-03-19T05:46:41Z",
+        "body": "Hi there Sorry about that it looks like I was lazy with the file parsing and it only works up to epoch 99 and is being confused by epoch 100 I ll fix the code properly but for the time being if you delete epoch 100 it should be fine There s unlikely to be any change after about epoch 50 anyway"
+      },
+      {
+        "user": "jinhuan-hit",
+        "created_at": "2019-03-20T02:04:51Z",
+        "body": "Thank you for your reply"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "How the network transforms the angle image into a specific angle?",
+    "state": "closed",
+    "body": "I know the ggcnn is input with a depth image and outputs three images But I m not sure how to use the three images to guide the robot when the robot need to grasp a specific part of something detected by it After all one angel is needed when grasping not an image",
+    "created_at": "2019-03-06T03:20:37Z",
+    "closed_at": "2019-03-08T11:01:43Z",
+    "user": "lx-onism",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-03-06T11:05:03Z",
+        "body": "Hello Each pixel in the images represents a pose in 3D space To chose the grasping pose we simply choose the pixel with the highest quality value and create a pose from the corresponding depth and angle You can see this implemented for a Kinova robot in https github com dougsm ggcnn kinova grasping blob master ggcnn kinova grasping scripts run ggcnn py L135"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": " memory overflow",
+    "state": "closed",
+    "body": "Hello I read your paper and I am more intersted in your work But my memory overflow I saw 2 have the same question I wonder if you can give a tensflow version s flie tfcords or the only way to solution is to get a bigger memory I would be greteful to your kindness",
+    "created_at": "2019-01-17T14:44:39Z",
+    "closed_at": "2019-01-18T08:58:19Z",
+    "user": "1329844541",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-01-18T08:58:19Z",
+        "body": "Hello as I mentioned in the other issue https github com dougsm ggcnn issues 2 issuecomment 455093665 you might be able to simply adjust the script so that it writes the data incrementally to the output file rather than generating it all at once which will get around the memory issue Another alternative may be to generate a smaller dataset with fewer augmentations which you can change using the parameters in the file Hope that helps"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "open epoch_29_model.hdf5 file error !",
+    "state": "closed",
+    "body": "HI I have a question about this HDF5 file epoch 29 model hdf5 mode r Traceback most recent call last File 1 py line 6 in module img ids np array f test img id File h5py objects pyx line 54 in h5py objects with phil wrapper File h5py objects pyx line 55 in h5py objects with phil wrapper File usr local lib python2 7 dist packages h5py hl group py line 262 in getitem oid h5o open self id self e name lapl self lapl File h5py objects pyx line 54 in h5py objects with phil wrapper File h5py objects pyx line 55 in h5py objects with phil wrapper File h5py h5o pyx line 190 in h5py h5o open KeyError Unable to open object component not found it s happen when open epoch 29 model hdf5 file Thanks",
+    "created_at": "2019-01-16T14:46:45Z",
+    "closed_at": "2019-01-16T14:57:10Z",
+    "user": "Tony-TF",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2019-01-16T14:57:10Z",
+        "body": "Hi epoch 29 model hdf5 is a pre trained Keras model file and should be opened with keras models load model Judging by img ids np array f test img id it looks like you re trying to open it as the gg cnn training dataset If you want a training dataset you ll have to generate your own following the instructions in the README Cheers"
+      },
+      {
+        "user": "Tony-TF",
+        "created_at": "2019-01-16T15:19:46Z",
+        "body": "when I run evaluate py KeyError Unable to open object component not found what sholud I do I think maybe dataset rotated width zoom 171219 1516 hdf5 file is empty so I try to open epoch 29 model hdf5 file check out I look forword to you reply Thanks"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-01-16T16:15:17Z",
+        "body": "Hi I think you are getting that error because as I said above the file you are opening is not the right file You will need to create the dataset file using generate dataset py which should create a file which is approx 25GB using the instructions in the Training section of README md Hope that helps"
+      },
+      {
+        "user": "Tony-TF",
+        "created_at": "2019-01-17T05:37:39Z",
+        "body": "Hi I Have a new trouble while generate data Memory overflow I have only 8G Memory Do you know how to deal this matter"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2019-01-17T08:59:53Z",
+        "body": "Hi You might be able to modify the script so that it writes the generated data to the hdf5 file incrementally rather than trying to store it all in memory at once Hope that helps"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": " How long have you learned?",
+    "state": "closed",
+    "body": "Hello I d like to get the same results as your paper data Would you tell me time for learning and GPU Spec and final score Thank you",
+    "created_at": "2018-11-13T17:56:27Z",
+    "closed_at": "2018-11-13T18:10:50Z",
+    "user": "ShunIto2015",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2018-11-13T18:10:50Z",
+        "body": "Hello Training usually only takes about 20 30 epochs only about 1 or 2 hours on a GTX1070 Final evaluation against the validation set is usually about 80"
+      },
+      {
+        "user": "ShunIto2015",
+        "created_at": "2018-11-13T23:54:06Z",
+        "body": "Thank you very much"
+      }
+    ]
+  }
+]

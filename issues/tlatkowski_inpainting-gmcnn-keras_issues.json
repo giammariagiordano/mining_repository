@@ -1,0 +1,196 @@
+[
+  {
+    "number": 40,
+    "title": "Link to dataset is dead",
+    "state": "open",
+    "body": "Hi When running notebook in colab https colab research google com github tlatkowski inpainting gmcnn keras blob master colab Image Inpainting with GMCNN model ipynb the link to Places356 dataset is dead http data csail mit edu places places365 val large tar 404 Not Found image https user images githubusercontent com 36787333 215841550 9a1d835d 9a0e 4f64 ae0e 80425c7f23eb png",
+    "created_at": "2023-01-31T17:47:52Z",
+    "closed_at": null,
+    "user": "amrzv",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "github-actions[bot]",
+        "created_at": "2023-01-31T17:48:29Z",
+        "body": "Message that will be displayed on users first issue"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "outputs file is not being made, not able to get output",
+    "state": "open",
+    "body": "outputs file is not being made not able to get output Please help me in that",
+    "created_at": "2021-10-28T08:03:32Z",
+    "closed_at": null,
+    "user": "arpit-dhamija",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "github-actions[bot]",
+        "created_at": "2021-10-28T08:04:21Z",
+        "body": "Message that will be displayed on users first issue"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": " Wrong results after Tensorflow 2x model conversion #70 ",
+    "state": "open",
+    "body": "Hi I hope you still give support for this repository I tried converting this repository model to Tensorflow 2x step by step also following the original repository by shepnerd I think everything was fine but when training and testing the model the results were not very satisfactory So maybe there is a problem with my conversion that I can t find it I tried to train the model on a small subset of OpenImages V6 The principal parameters that I used sorry because names can be slightly different than yours img size 256x256x3 batch size 4 learning rate 1e 4 gaussian steps 7 gaussian kernel size 32 gaussian kernel std 20 0 reconstruction loss weight 1 2 adversarial loss weight 0 001 gradient penalty loss weight 10 id mrf loss weight 0 03 nn stretch sigma 0 5 id mrf style weight 1 0 id mrf content weight 1 0 I pretrained the model with only confidence reconstruction loss for the recommended steps and results for this phase seem fine imagen https user images githubusercontent com 39574343 111080635 a08c2c80 84ff 11eb 80d2 77d97e9030c3 png imagen https imagen https user images githubusercontent com 39574343 111080638 a7b33a80 84ff 11eb 8d54 f42ed9aa29c6 png user images githubusercontent com 39574343 111080637 a3871d00 84ff 11eb 90cb c6de09d587f6 png However in the training phase after some steps the results do not seem to converge and eliminate the mask imagen https user images githubusercontent com 39574343 111080653 bdc0fb00 84ff 11eb 9708 187f363a2dbd png imagen https user images githubusercontent com 39574343 111080656 c1ed1880 84ff 11eb 891d 17808c2f56f9 png imagen https user images githubusercontent com 39574343 111080668 d204f800 84ff 11eb 9665 a76e40ebde28 png I would like to know if you have any idea of what could be happening or you have experienced any similar issue I reviewed the code networks and losses many times but could not find any solution Thank you very much",
+    "created_at": "2021-03-14T19:00:09Z",
+    "closed_at": null,
+    "user": "sergiocasaspastor",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "github-actions[bot]",
+        "created_at": "2021-03-14T19:00:50Z",
+        "body": "Message that will be displayed on users first issue"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Cannot predict image when I do some changes to mask dataset",
+    "state": "open",
+    "body": "Hi I m trying to use opencv to erode the mask dataset you provide however when execute runner py it cannot predict images c681cdd6 4ff7 47b2 942e 757d38fc4c2f https user images githubusercontent com 26142775 80297724 85fe7700 87b8 11ea 8bc7 a6a791774ab9 png error comes out like this Do you know why Thanks",
+    "created_at": "2020-04-26T04:23:18Z",
+    "closed_at": null,
+    "user": "daiweiwho",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "github-actions[bot]",
+        "created_at": "2020-04-26T04:24:00Z",
+        "body": "Message that will be displayed on users first issue"
+      },
+      {
+        "user": "AaronDavis2020",
+        "created_at": "2020-09-20T14:11:25Z",
+        "body": "Hi I m trying to use opencv to erode the mask dataset you provide however when execute runner py it cannot predict images c681cdd6 4ff7 47b2 942e 757d38fc4c2f https user images githubusercontent com 26142775 80297724 85fe7700 87b8 11ea 8bc7 a6a791774ab9 png error comes out like this Do you know why Thanks Hi I ve also encountered this problem Have you found the solution Thanks very much"
+      },
+      {
+        "user": "Dutra-Apex",
+        "created_at": "2023-02-21T14:24:45Z",
+        "body": "Are your input images in the jpg format and your masks in png format I got the same prediction error when using png images as input"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Error",
+    "state": "open",
+    "body": "image https user images githubusercontent com 58552914 77244406 cd6f7180 6c14 11ea 9f80 4d410f986320 png Hello I m trying to reproduce your algorithm but I will get this error What am I doing wrong",
+    "created_at": "2020-03-22T07:14:07Z",
+    "closed_at": null,
+    "user": "KK-MUT",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Dutra-Apex",
+        "created_at": "2023-02-14T19:42:40Z",
+        "body": "Try changing the cudnn and cudatoolkit versions I used conda install c conda forge cudatoolkit 9 0 cudnn 7 3 1 and it fixed the error"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Only one step for training",
+    "state": "closed",
+    "body": "Hi I m trying to test this inpainting alternative I m using code from branch tensorflow 1 15 2 and when execute runner py this run only one step of training In the outputs folder I see only step 000 png Do you know why Thanks",
+    "created_at": "2020-02-11T23:14:55Z",
+    "closed_at": "2020-02-29T17:10:53Z",
+    "user": "garispe",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "tlatkowski",
+        "created_at": "2020-02-25T10:21:30Z",
+        "body": "hi have you tried running pipeline from master branch BR"
+      },
+      {
+        "user": "garispe",
+        "created_at": "2020-02-27T02:06:51Z",
+        "body": "Hi tlatkowski I execute running pipeline from master but the result is the same I had to update tensorflow version to 1 15 at requirements requirements cpu txt After run runner py the outputs folder has this content img width 191 alt Screen Shot 2020 02 26 at 22 59 34 src https user images githubusercontent com 4588316 75405363 40264f00 58ec 11ea 8ff2 f57b7d7209d2 png Is that right I expected that these folder has more than one step step 000 step 000 png step 000 https user images githubusercontent com 4588316 75405906 c55e3380 58ed 11ea 99a4 4516392698dc png"
+      },
+      {
+        "user": "tlatkowski",
+        "created_at": "2020-02-27T08:17:36Z",
+        "body": "hi garispe it looks correct i mean pipeline saves this kind of picture every 1000 steps as defined in config main config ini parameter SAVE MODEL STEPS PERIOD you can change it if you want or wait until more pictures are generated And one other remark you d better start training from generator warm up the entire model is quite complex and contains several loss constituents and without warming generator up it will be hard to obtain proper results"
+      },
+      {
+        "user": "garispe",
+        "created_at": "2020-02-28T15:34:07Z",
+        "body": "Hi tlatkowski Indeed changing that variable to 1 I can see an image for each step What number do you recommend to use And to obtain a slightly better result than the one shown in the README image after 5 epochs how many images would be necessary to train the model I also take the opportunity to consult you if it is possible to use images that are not 256x256 Thanks in advance Regards"
+      },
+      {
+        "user": "tlatkowski",
+        "created_at": "2020-02-29T08:33:32Z",
+        "body": "garispe In my opinion setting SAVE MODEL STEPS PERIOD parameter to 1000 is fair enough but it depends on the total number of steps number of images batch size number of epochs so if you d prefer to increase the number of epochs then you should also increase SAVE MODEL STEPS PERIOD parameter Of course you can use images that are not 256x256 currently if images are bigger than 256 then input pipeline resizes them to 256x256 you can change it if you want in config file And what do you mean by saying to obtain a slightly better result than the one shown in the README image after 5 epochs The picture in README presents only pipeline output middle picture for model training in warm up mode In this mode pipeline is trained only with reconstruction loss so it has poor abilities to fill masked pixels with more advanced content If you want to obtain more robust results you have to continue training in standard mode when more advanced loss functions are used Regards"
+      },
+      {
+        "user": "garispe",
+        "created_at": "2020-02-29T17:10:29Z",
+        "body": "Hi tlatkowski Thanks for you answer As first thing I will close this issue due to I was wrong I will try that you mentioned and will tell you if I found another problem Thanks again Excellent work Regards"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Unable to run colab notebook",
+    "state": "closed",
+    "body": "Hi I m trying to run the colab notebook but I keep getting the following error when running this line Actually it first gives an error saying experiment name is required but after passing that arg in I get the error below python inpainting gmcnn keras runner py train path images mask path mask warm up generator experiment name tester Traceback most recent call last File inpainting gmcnn keras runner py line 105 in module main File inpainting gmcnn keras runner py line 52 in main config main config MainConfig MAIN CONFIG FILE File content inpainting gmcnn keras config main config py line 22 in init self model ModelConfig model config MODEL File content inpainting gmcnn keras config main config py line 41 in init self add mask as generator input parse bool model section ADD MASK AS GENERATOR INPUT File usr lib python3 6 configparser py line 1233 in getitem raise KeyError key KeyError ADD MASK AS GENERATOR INPUT",
+    "created_at": "2019-06-19T00:42:09Z",
+    "closed_at": "2019-10-07T12:20:46Z",
+    "user": "shekit",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "tlatkowski",
+        "created_at": "2019-07-17T15:20:06Z",
+        "body": "Hi shekit it looks like the colab notebook is outdated i m planning to fix it soon thanks for pointing it out"
+      },
+      {
+        "user": "GauravKrRoy",
+        "created_at": "2019-08-08T16:48:34Z",
+        "body": "Hi tlatkowski it looks like the colab notebook is outdated i m planning to fix it soon thanks for pointing it out I am also facing the similar error Can you please fix it Traceback most recent call last File inpainting gmcnn keras runner py line 105 in module main File inpainting gmcnn keras runner py line 52 in main config main config MainConfig MAIN CONFIG FILE File content inpainting gmcnn keras config main config py line 21 in init self training TrainingConfig model config TRAINING File usr lib python3 6 configparser py line 959 in getitem raise KeyError key KeyError TRAINING"
+      },
+      {
+        "user": "tlatkowski",
+        "created_at": "2019-08-09T16:00:27Z",
+        "body": "Hi GauravKrRoy I ve just updated colab notebook it should work fine now please check it out BR Tomasz"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Code for model testing",
+    "state": "open",
+    "body": "Hi Thank you so much for publishing the Keras implementation of gmcnn on Github Can you also provide the code for testing the model",
+    "created_at": "2019-04-04T14:27:02Z",
+    "closed_at": null,
+    "user": "Pavani14",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "tlatkowski",
+        "created_at": "2019-04-04T16:16:17Z",
+        "body": "Hi Pavani14 I m currently working on it I have some simple script for testing model which i use locally but it s not convenient I will provide GUI for testing soon as well as trained model"
+      },
+      {
+        "user": "morninglory729",
+        "created_at": "2021-05-11T00:52:46Z",
+        "body": "Hi Thank you for your efforts I m wondering if you have shared your code for testing If not could you provide the code for it"
+      }
+    ]
+  }
+]

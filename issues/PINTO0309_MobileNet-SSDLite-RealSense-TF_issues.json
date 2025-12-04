@@ -1,0 +1,160 @@
+[
+  {
+    "number": 6,
+    "title": "KeyError: frequency when running code",
+    "state": "closed",
+    "body": "Required RaspberryPi3 LaptopPC or other device name RaspberryPi4 Required Your device s CPU architecture armv7l x86 64 or other architecture name armv7l Required Your OS Raspbian Ubuntu1604 or other os name raspbian buster Required Details of the work you did before the problem occurred I followed the tutorial from github br br br Required Error message However I keep on getting this error when I try to run the program File home pi local lib python3 7 site packages google protobuf internal python message py line 866 in HasField field hassable fields field name KeyError frequency br br br Required Overview of problems and questions During the handling of the above error another errors occurred I searched online and I cannot find the solution The tensorflow version I am using is 1 14 0 Thank you and any help is appreciated br br br",
+    "created_at": "2021-07-17T18:39:03Z",
+    "closed_at": "2021-07-18T17:05:06Z",
+    "user": "garceling",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2021-07-18T17:05:06Z",
+        "body": "As the error message indicates it is a problem with the protocol buffer"
+      },
+      {
+        "user": "garceling",
+        "created_at": "2021-07-18T17:06:45Z",
+        "body": "sorry what does this mean and how can i fix it"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2021-07-18T17:11:57Z",
+        "body": "I haven t tested it in any environment other than the one described in the README so I think the problem is specific to your environment The only thing you can try is to match the version of the tool you are installing"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Obtain distance from detected object",
+    "state": "closed",
+    "body": "Hello Thank you for your work on this project I am doing something similar by making use of the D435i and Tensorflow on a Jetson Xavier NX Ubuntu 18 04 to run object detection inference Would like to get your advice on how to obtain the distance from the object to the camera as seen in your inference without making use of OpenGL Thanks in advance",
+    "created_at": "2020-08-05T07:35:53Z",
+    "closed_at": "2021-07-18T17:05:35Z",
+    "user": "gohsnn",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2020-08-05T15:18:10Z",
+        "body": "Just superimpose the D435 depth figures on the following implementation https github com PINTO0309 PINTO model zoo blob master 06 mobilenetv2 ssdlite 02 voc mobilenetv2ssdlite usbcam sync py"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Adding Coral, using RPi 4, and getting X,Y in addition to D",
+    "state": "closed",
+    "body": "Hello Thank you so much for all your work on this I am working on a similar project and you have helped me out Some questions maybe you can comment 1 Have you used the google coral USB accelerator yet Could you see adding it to this tensor flow project 2 Have you used the Raspberry Pi 4 with this yet 3 In addition to getting the depth d to the identified object have you worked out getting the X and Y coordinates as well Any advice for this Thank you",
+    "created_at": "2019-11-10T17:59:56Z",
+    "closed_at": "2021-07-18T17:05:41Z",
+    "user": "GOBish",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-11-11T03:47:50Z",
+        "body": "i 1 Have you used the google coral USB accelerator yet Could you see adding it to this tensor flow project No The purpose of this repository was to verify how much performance can be achieved with Pi3 without using external devices 2 Have you used the Raspberry Pi 4 with this yet Depending on the priority of the other projects I work on I can try it if I have time I am now devoted to verifying Tensorflow Select Flex delegate It takes time to start verification with Pi4 3 In addition to getting the depth d to the identified object have you worked out getting the X and Y coordinates as well Any advice for this Yes Just calculate the center point according to the object detection result X1 X2 X1 2 Y1 Y2 Y1 2 Please note that this is not a standard RealSense feature Perhaps your intentions are as follows Simultaneous acquisition of depth and coordinates of a specific point If so the RealSense return depth 2D array corresponds to the XY coordinates of the image and can be easily obtained"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Installing librealsense (Step 9) fails on raspbian stretch while make -j1                       ",
+    "state": "closed",
+    "body": "Your device Raspberry Pi 3 Model B Your device s CPU architecture The Pi 3 Model B has a 1 4GHz 64 bit quad core Broadcom Arm Cortex A53 architecture processor Your OS Raspbian Stretch OS Kernel version 4 14 Your method for Ubuntu works on my laptop everything is successful Ubuntu 18 04 Required Details of the work you did before the problem occurred br I did everything up till step 8 on the raspberry pi and step 9 fails br br Required Error message pi raspberrypi librealsense cd build pi raspberrypi librealsense build make j1 58 Built target tm 58 Built target realsense file 58 Built target realsense2 58 Linking CXX executable rs software device usr bin ld usr local lib libglfw3 a x11 window c o undefined reference to symbol XConvertSelection usr lib arm linux gnueabihf libX11 so 6 error adding symbols DSO missing from command line collect2 error ld returned 1 exit status examples software device CMakeFiles rs software device dir build make 98 recipe for target examples software device rs software device failed make 2 examples software device rs software device Error 1 CMakeFiles Makefile2 282 recipe for target examples software device CMakeFiles rs software device dir all failed make 1 examples software device CMakeFiles rs software device dir all Error 2 Makefile 127 recipe for target all failed make all Error 2 pi raspberrypi librealsense build Overview of problems and questions I followed everything up to step 8 but I can t seem to move past step 9 installing the SDK I tried different solutions but I can t seem to get it going It keeps saying usr lib arm linux gnueabihf libX11 so 6 error adding symbols DSO missing from command line On my laptop that runs ubuntu I am able to run the object detection script but not on the raspbian stretch Is there a work around to this Any help is appreciated",
+    "created_at": "2019-03-26T18:03:06Z",
+    "closed_at": "2021-07-18T17:05:51Z",
+    "user": "cheriyck",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "cheriyck",
+        "created_at": "2019-03-26T18:36:12Z",
+        "body": "image https user images githubusercontent com 22759712 55024070 7d93a580 4fd4 11e9 8e68 0ae1d673d3de png"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-03-28T14:07:40Z",
+        "body": "https stackoverflow com questions 28531014 glew and glfw compile error undefined reference to symbol xconvertselection"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Neural Compute Stick  can support TF?I want apply  NCS to TF",
+    "state": "closed",
+    "body": "your title is without Neural Compute Stick NCS Neural Compute Stick can not support TF I am only familiar with TF I want apply NCS to TF could you give me some suggestions",
+    "created_at": "2018-08-05T11:25:48Z",
+    "closed_at": "2018-08-10T14:49:58Z",
+    "user": "mk123qwe",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-08-05T11:34:47Z",
+        "body": "mk123qwe https ncsforum movidius com discussion 746 is it possible to use tensorflow ssd mobilenet on ncs As time is wasted if you are using an ARM processor we encourage you to use OpenVINO on x86 64 processor hardware Intel does not seem to have a roadmap corresponding to tensorflow"
+      },
+      {
+        "user": "mk123qwe",
+        "created_at": "2018-08-06T04:30:06Z",
+        "body": "Thank you for your answer I find information that NCS support some caffe model I prefer to gpu if using x86 64 processor I pay more attention to ARM with deeplearning"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-08-06T08:47:56Z",
+        "body": "mk123qwe Conversion from tensorflow to caffe is tough because there are a lot of layers unsupported I abandoned it already If you succeeded please tell me good luck"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-08-10T14:49:58Z",
+        "body": "Since one week passed I will close issue once Please open issue again if necessary"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "hello,about RealSense and distance",
+    "state": "closed",
+    "body": "the number meters away is the groundtruth and how to define it RealSense compute the number If I want to get the real position of the object What do I need to do thanks",
+    "created_at": "2018-07-26T07:46:15Z",
+    "closed_at": "2018-07-27T13:11:44Z",
+    "user": "mk123qwe",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-07-26T14:00:36Z",
+        "body": "mk123qwe RealSense compute the number Yes D435 measures the distance with infrared rays so I think that it is ground truth It s measure the distance of the center coordinates of the detected object Because it is infrared it can not measure normally if the surroundings are too bright Also even if the distance is too close or too far it can not be measured normally visualization utils py meters depth frame as depth frame get distance int xmin int int xmax int xmin 2 int ymin int int ymax int ymin 2 I think that you can understand by seeing the API specification but there is no explanation http intelrealsense github io librealsense doxygen classrs2 1 1depth frame html a5090d69d04ade6dd67175cae9b6bee9c"
+      },
+      {
+        "user": "mk123qwe",
+        "created_at": "2018-07-27T02:16:16Z",
+        "body": "Thank you again for your detailed answers I want to do a project on classification and pick up so I appreciate your research very much I want to know the cost of hardware compare with TX2 The most important problem is that I need to reduces cost"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-07-27T02:48:14Z",
+        "body": "mk123qwe I have no responsibility This is just an example Japanese yen RaspberryPi3 Model B 3 000 RealSense D435 28 000 HDMI Display 7inch 5 000 Total 36 000 Operation cost"
+      },
+      {
+        "user": "mk123qwe",
+        "created_at": "2018-07-27T08:54:49Z",
+        "body": "test this Tutorial to set up TensorFlow Object Detection API on the Raspberry Pi https github com PINTO0309 TensorFlow Object Detection on the Raspberry Pi I ran the program successfully showing the video but I did not recognize the result and bbox and test simple code import tensorflow as tf happy tf constant Happy new year sess tf Session sess run happy tensorflow works well"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2018-07-27T13:11:44Z",
+        "body": "Topics unrelated to this repository will be refused Please report the problem to the original fork repository"
+      }
+    ]
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "number": 9,
+    "title": "Did you load the parameters of vgg19 without the part of fc ?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-10-14T11:08:23Z",
+    "closed_at": "2019-10-27T02:16:20Z",
+    "user": "wuyang556",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wuyang556",
+        "created_at": "2019-10-14T11:08:43Z",
+        "body": "SharifAmit"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2019-10-17T05:16:59Z",
+        "body": "If you check the file https github com SharifAmit DilatedFCNSegmentation blob master surgery py and function transplant you will notice that we are transferring weights by copying matching parameters coercing parameters of incompatible shape and dropping unmatched parameters in respect to layers of the models Also it details how and why we are doing that Since we are converting the model to a Fully convolutional architecture it is necessary that all fully connected layers are converted to convolutional ones The coercion is useful to convert fully connected layers to their equivalent convolutional layers since the weights are the same and only the shapes are different In particular equivalent fully connected and convolution layers have shapes O x I and O x I x H x W respectively for O outputs channels I input channels H kernel height and W kernel width The surgery py also uses interp and upsample filt function to plant the Bilinear Weights as intializers for upsampling layers and also creates all the necessary layers after the fc7 layer Notice that in line 30 in solvesurgery py we are running it for 1 iteration so that we can save the newly created model s weight and architecture information as caffemodel So that we can load that for training for different Semantic Segmentation task Hope this answers your question"
+      },
+      {
+        "user": "wuyang556",
+        "created_at": "2019-10-18T14:04:02Z",
+        "body": "Thanks for your reply I notice you replace the fc6 layer of VGG19 with a dilated convolution which is not a tradictional convolution In FCN8s the fc6 weights is 4096x512x7x7 while this corresponding dialted convolution weight is 4096x512x3x3 each other is not matched So in survey py the function transplant discard some not matched parameters"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2019-10-20T07:10:46Z",
+        "body": "Yes that s right The dilated convolution has the same receptive field of a 7x7 which is the same as the vanilla convolution of same size So the parameter decreases many folds making the architecture s total number of parameters 1 3 of the regular FCN architecture"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "How to initialize the dilated fc6 layer whose kernel size is 3x3 while vgg16 or vgg19' s the parameter of the fc6 layer is 102760488 ?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-09-24T12:06:53Z",
+    "closed_at": "2019-10-01T19:56:28Z",
+    "user": "wuyang556",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2019-09-30T07:22:04Z",
+        "body": "You have to first perform net surgery Please check this https github com SharifAmit DilatedFCNSegmentation blob master surgery instructions txt You can then do training by following these steps https github com SharifAmit DilatedFCNSegmentation blob master training instructions txt"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "the link—FCN2s-Dilated-VGG16",
+    "state": "closed",
+    "body": "Hello The link FCN2s Dilated VGG16 can not be opened Please help me solve the problem Thank you very much",
+    "created_at": "2018-12-13T13:53:31Z",
+    "closed_at": "2019-01-02T09:07:24Z",
+    "user": "LAYNingning",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-12-13T17:24:56Z",
+        "body": "Try this https drive google com drive folders 0ByGwXEdDYIN3SW55R3NZUVg0NHc usp sharing"
+      },
+      {
+        "user": "LAYNingning",
+        "created_at": "2018-12-18T03:23:15Z",
+        "body": "I am so sorry I still can not open it Can you give me another link"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-12-21T00:11:16Z",
+        "body": "VGG19 https drive google com open id 0ByGwXEdDYIN3WDBZUUFjSDk3NzA VGG16 https drive google com open id 0ByGwXEdDYIN3SVJrWkpDdkFTOGs"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Learning from you,thank you!",
+    "state": "closed",
+    "body": "Hello I want to do transfer learning from VGG16 and VGG19 But it is always wrong when I write solver prototxt train prototxt and so on Now I need your help When do you upload these files Thank you very much",
+    "created_at": "2018-01-29T01:50:30Z",
+    "closed_at": "2018-01-29T09:11:28Z",
+    "user": "LAYning",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-01-29T08:14:19Z",
+        "body": "Uploaded solver train and val prototxt and also added voc layers for data loading Please check Dilated FCN 2s VGG16 folder"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-01-29T08:22:24Z",
+        "body": "Also I m updating the Readme md for doing the net surgery weight loading and also training the neural net See the updated Readme md in couple of hours"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-01-29T09:11:22Z",
+        "body": "Updated the readme me Closing this thread"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "learning",
+    "state": "closed",
+    "body": "Hello I want to do transfer learning from VGG16 and VGG19 But it is always wrong when I write solver prototxt train prototxt and so on Now I need your help When do you upload these files Thank you very much",
+    "created_at": "2018-01-10T02:57:41Z",
+    "closed_at": "2018-01-29T08:14:55Z",
+    "user": "LAYning",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-01-29T08:14:53Z",
+        "body": "Please check your latest issue comment Closing this"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Train.prototxt and test.prototxt",
+    "state": "closed",
+    "body": "Hello Can you provide me with the files which include the train prototxt and test prototxt If so thank you so much",
+    "created_at": "2018-01-03T02:25:24Z",
+    "closed_at": "2018-01-04T14:46:42Z",
+    "user": "LAYning",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2018-01-04T14:46:39Z",
+        "body": "I ll be uploading the train and test prototxt for Pascal VOC data and all the files for Pascal Context data in the major update next week Keep your eyes on the repo Cheers"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "the link—FCN2s-Dilated-VGG16",
+    "state": "closed",
+    "body": "Hello The link FCN2s Dilated VGG16 can not be opened Please help me solve the problem Thank you very much",
+    "created_at": "2017-12-14T02:52:41Z",
+    "closed_at": "2017-12-29T08:37:08Z",
+    "user": "LAYning",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2017-12-24T12:04:31Z",
+        "body": "Here is the download link for the model https drive google com drive folders 0ByGwXEdDYIN3SW55R3NZUVg0NHc usp sharing"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "model available",
+    "state": "closed",
+    "body": "hello i want to know if the model and the training code is available",
+    "created_at": "2017-08-18T03:41:00Z",
+    "closed_at": "2017-08-21T04:31:09Z",
+    "user": "defenceVT",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SharifAmit",
+        "created_at": "2017-08-18T09:53:15Z",
+        "body": "Yes Ill be uploading the models soon Im training on some new benchmarks and dataset So will be uploading all the versions of the models together Keep your eye on the repo"
+      },
+      {
+        "user": "SharifAmit",
+        "created_at": "2017-08-21T04:31:09Z",
+        "body": "I have uploaded the models Please see the repo readme file So I m closing the issue Regards"
+      },
+      {
+        "user": "LAYning",
+        "created_at": "2017-12-14T02:50:41Z",
+        "body": "Hello The link FCN2s Dilated VGG16 can not be opened Please help me solve the problem Thank you very much"
+      }
+    ]
+  }
+]

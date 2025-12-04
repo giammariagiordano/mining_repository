@@ -1,0 +1,152 @@
+[
+  {
+    "number": 9,
+    "title": "\"Illegal instruction (core dumped)\" error",
+    "state": "open",
+    "body": "it errors",
+    "created_at": "2020-02-23T05:45:29Z",
+    "closed_at": null,
+    "user": "nullf0",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "Update needed to TensorFlow 2.0",
+    "state": "closed",
+    "body": "Hello I ve been trying to run this repo s code but as of tensorflow 2 0 the tensorflow contrib module does not exist anymore It would be nice to update the code to be able to use TF 2 0 but I don t know how to do so Also the code is written in Python 2 7 but it s not EOL and a transition to Python 3 would be nice it s mainly about import and print statements Have a nice day",
+    "created_at": "2019-10-29T11:26:09Z",
+    "closed_at": "2020-12-27T14:40:10Z",
+    "user": "N07070",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": " File \"\", line 13     print \"Please select a dataset.\" ^ SyntaxError: Missing parentheses in call to 'print'",
+    "state": "open",
+    "body": "im new to python From what i gathered Tensorflow only runs on Python3 but i always get this syntax error about missing parentheses because im running it in Python3 instead of 2 How do i get my cake and eat it too",
+    "created_at": "2019-04-24T12:33:19Z",
+    "closed_at": null,
+    "user": "JuanERombado",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "joeycurnutt",
+        "created_at": "2021-12-12T21:16:05Z",
+        "body": "I know this is a bit late but I converted the code to python 3 using the 2to3 module Look it up and follow the instructions and it shouldn t be too difficult"
+      },
+      {
+        "user": "joeycurnutt",
+        "created_at": "2021-12-12T21:16:37Z",
+        "body": "2to3 package"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Lowercase everything",
+    "state": "open",
+    "body": "The network performance is far better with lowercase characters only it finds patterns more clearly and the loss was about 0 1 lower in my test with the lyrics of my favorite singer just put lowercase in the input string and the results will be very good",
+    "created_at": "2019-01-05T01:06:19Z",
+    "closed_at": null,
+    "user": "hermesonbf",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 5,
+    "title": "Comments for the hyper parameters",
+    "state": "open",
+    "body": "I m curious about hyper parameters like learning rate and decay but I do not know exactly what they do and how to optimize the values to try to get better results",
+    "created_at": "2019-01-04T18:38:15Z",
+    "closed_at": null,
+    "user": "hermesonbf",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "different result",
+    "state": "closed",
+    "body": "more a question than an issue I have tried with the same settings and same input source but the outcome are different in terms of the output text for each iteration Is it because you have set the random seed at the beginning or because of the self probability initialization Many thanks for this and your article is it great to prompt questions for thinking about the ML processes",
+    "created_at": "2018-12-09T14:56:02Z",
+    "closed_at": "2018-12-16T15:48:13Z",
+    "user": "siusoon",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2018-12-09T17:20:30Z",
+        "body": "You are correct Without setting same random seeds our results are expected to be different"
+      },
+      {
+        "user": "siusoon",
+        "created_at": "2018-12-09T22:02:27Z",
+        "body": "is this the line sample int np searchsorted total sum np random rand 1 sum"
+      },
+      {
+        "user": "gsurma",
+        "created_at": "2018-12-09T23:45:45Z",
+        "body": "yes and probably something like this for tensorflow tf random set random seed seed"
+      },
+      {
+        "user": "siusoon",
+        "created_at": "2018-12-10T21:26:19Z",
+        "body": "thanks"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Type Error",
+    "state": "closed",
+    "body": "Traceback most recent call last File text predictor py line 114 in module rnn File text predictor py line 76 in rnn sample text sess data provider iteration File text predictor py line 93 in sample text output write text n TypeError can t concat str to bytes Any clue",
+    "created_at": "2018-11-06T23:28:50Z",
+    "closed_at": "2018-11-15T19:09:45Z",
+    "user": "siusoon",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2018-11-06T23:39:37Z",
+        "body": "I am not 100 sure what s causing the issue but please check if your datasest is utf 8 encoded Another thing that came to my mind it might be python 2 3 compatibility issue I have tested it only with python 2"
+      },
+      {
+        "user": "fonzai",
+        "created_at": "2018-11-14T21:24:37Z",
+        "body": "With python3 you can change it to output write str text n Seemed to do the trick for me I had to also change all the print lines to use parenthesis like print"
+      },
+      {
+        "user": "siusoon",
+        "created_at": "2018-11-15T19:07:53Z",
+        "body": "Yes gsurma it is the compatibility And fonzai it works after the changes Many thanks"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Tenserflow serving ?",
+    "state": "open",
+    "body": "How can I serve this model using tensorflow serving",
+    "created_at": "2018-10-30T09:46:13Z",
+    "closed_at": null,
+    "user": "nidhikamath91",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2018-11-07T02:27:37Z",
+        "body": "You can try to implement one of these solutions https stackoverflow com questions 33759623 tensorflow how to save restore a model Load a model on init and save it every n iterations along with logs for example"
+      }
+    ]
+  }
+]

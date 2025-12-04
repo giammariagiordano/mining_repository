@@ -1,0 +1,1694 @@
+[
+  {
+    "number": 96,
+    "title": "googlenet structure problem",
+    "state": "open",
+    "body": "in googlenet py line45 nn BatchNorm2d n5x5 n5x5 it seems eps is incorrectly set to n5x5",
+    "created_at": "2024-10-19T03:44:01Z",
+    "closed_at": null,
+    "user": "kaleid0",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 92,
+    "title": "error when training, using the CIFAR100 dataset writing by dataset.py",
+    "state": "open",
+    "body": "Traceback most recent call last File D Study VGG train py line 190 in module train epoch File D Study VGG train py line 30 in train outputs net images File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1511 in wrapped call impl return self call impl args kwargs File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1520 in call impl return forward call args kwargs File D Study VGG vgg m py line 34 in forward x self features x File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1511 in wrapped call impl return self call impl args kwargs File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1520 in call impl return forward call args kwargs File C Users qinli conda envs pytorch lib site packages torch nn modules container py line 217 in forward input module input File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1511 in wrapped call impl return self call impl args kwargs File C Users qinli conda envs pytorch lib site packages torch nn modules module py line 1520 in call impl return forward call args kwargs File C Users qinli conda envs pytorch lib site packages torch nn modules conv py line 460 in forward return self conv forward input self weight self bias File C Users qinli conda envs pytorch lib site packages torch nn modules conv py line 456 in conv forward return F conv2d input weight bias self stride RuntimeError Input type int64 and bias type float should be the same",
+    "created_at": "2024-06-05T03:08:27Z",
+    "closed_at": null,
+    "user": "lqin0818",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lqin0818",
+        "created_at": "2024-06-05T03:12:43Z",
+        "body": "the model used was VGG11"
+      },
+      {
+        "user": "EarlyBloomer-byte",
+        "created_at": "2025-03-12T16:54:29Z",
+        "body": "Yeah VGG11 was used Check the READme for more information"
+      }
+    ]
+  },
+  {
+    "number": 91,
+    "title": "ResNet50 to one single Colaboratory file. Train the model and determine the type 1 and type 5 errors for testing.",
+    "state": "closed",
+    "body": "Import necessary libraries import tensorflow as tf from tensorflow keras applications import ResNet50 from tensorflow keras preprocessing image import ImageDataGenerator from tensorflow keras optimizers import Adam from tensorflow keras losses import SparseCategoricalCrossentropy from tensorflow keras metrics import SparseTopKCategoricalAccuracy import numpy as np Load the CIFAR 10 dataset x train y train x test y test tf keras datasets cifar10 load data Normalize the data x train x train astype float32 255 0 x test x test astype float32 255 0 Define the model model ResNet50 weights None input shape 32 32 3 classes 10 Compile the model model compile optimizer Adam loss SparseCategoricalCrossentropy metrics SparseTopKCategoricalAccuracy k 1 name top 1 accuracy SparseTopKCategoricalAccuracy k 5 name top 5 accuracy Data augmentation datagen ImageDataGenerator width shift range 0 1 height shift range 0 1 horizontal flip True datagen fit x train Train the model batch size 64 epochs 20 model fit datagen flow x train y train batch size batch size steps per epoch len x train batch size epochs epochs validation data x test y test Evaluate the model results model evaluate x test y test batch size batch size top 1 error 1 results 1 top 5 error 1 results 2 print f Top 1 Error Rate top 1 error 4f print f Top 5 Error Rate top 5 error 4f",
+    "created_at": "2024-06-03T17:24:31Z",
+    "closed_at": "2024-06-03T17:30:48Z",
+    "user": "EKD01",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 90,
+    "title": "no inception_resnet_v2model",
+    "state": "open",
+    "body": "",
+    "created_at": "2024-04-11T02:45:26Z",
+    "closed_at": null,
+    "user": "llsshhQaQ",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 88,
+    "title": "Have questions about function “_make_layer ”   ，add layers why is *for stride in strides， not   for i in range(0, num_blocks):",
+    "state": "open",
+    "body": "in function make layer add layers why is for stride in strides not for i in range 0 num blocks def make layer self block out channels num blocks stride make resnet layers by layer i didnt mean this layer was the same as a neuron netowork layer ex conv layer one layer may contain more than one residual block Args block block type basic block or bottle neck block out channels output depth channel number of this layer num blocks how many blocks per layer stride the stride of the first block of this layer Return return a resnet layer we have num block blocks per layer the first block could be 1 or 2 other blocks would always be 1 strides stride 1 num blocks 1 layers for stride in strides layers append block self in channels out channels stride self in channels out channels block expansion return nn Sequential layers",
+    "created_at": "2023-10-15T04:08:32Z",
+    "closed_at": null,
+    "user": "wupeng1989",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 86,
+    "title": "> 我也有这个问题，作者的实现的差不多5个G,测试准确率有78.9， pytorch官方实现差不多1.4个G，测试集准确率也只有60%，，请问有看到问题在哪吗？",
+    "state": "open",
+    "body": "5 G 78 9 pytorch 1 4 G 60 my implementation from models resnet import resnet50 net resnet50 sum p numel for p in net parameters 23705252 torchvision implementation from torchvision models import resnet50 net resnet50 sum p numel for p in net parameters 25557032 5gb Originally posted by weiaicunzai in https github com weiaicunzai pytorch cifar100 issues 17 issuecomment 667573290",
+    "created_at": "2023-07-01T02:17:51Z",
+    "closed_at": null,
+    "user": "holyswordZZQ",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "holyswordZZQ",
+        "created_at": "2023-07-02T01:09:52Z",
+        "body": "Resnet self conv1 nn Sequential nn Conv2d 3 64 kernel size 3 padding 1 bias False nn BatchNorm2d 64 nn ReLU inplace True 3 3 7 7"
+      }
+    ]
+  },
+  {
+    "number": 84,
+    "title": "Please tell me how to use other data sets, which are csv files",
+    "state": "open",
+    "body": "Please tell me how to use other data sets which are csv files",
+    "created_at": "2023-03-10T09:21:59Z",
+    "closed_at": null,
+    "user": "coisin-i",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 83,
+    "title": "Image model",
+    "state": "open",
+    "body": "",
+    "created_at": "2023-03-10T07:58:51Z",
+    "closed_at": null,
+    "user": "1810619",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 82,
+    "title": "Problems about the architecture of Attention.",
+    "state": "open",
+    "body": "In model attention AttentionModule1 shortcut short is not used You calculate the shortcut with the downsample weights python shortcut short self soft resdown3 x s AttentionModule3 shortcut short is unnecessary",
+    "created_at": "2023-03-08T02:56:42Z",
+    "closed_at": null,
+    "user": "QJ-Chen",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 81,
+    "title": "cuda version",
+    "state": "open",
+    "body": "my cuda version is 11 6 should I use a lower cuda to run this code waiting for answer thanks",
+    "created_at": "2022-11-14T08:11:35Z",
+    "closed_at": null,
+    "user": "the-hidden-moon",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 76,
+    "title": "Multi GPU Use?",
+    "state": "open",
+    "body": "I have 2GPU but exactly just work on 1GPU so do you have methods to change coding with this",
+    "created_at": "2022-09-01T04:56:10Z",
+    "closed_at": null,
+    "user": "Luadoo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "LeLe-SouthCity",
+        "created_at": "2022-11-15T10:15:05Z",
+        "body": "you can use horovod to train that easy"
+      }
+    ]
+  },
+  {
+    "number": 75,
+    "title": "There is one more Relu operation in the residual module of SEnet.",
+    "state": "open",
+    "body": "I find that there is one more nn Relu in the self residual module in SEnet file I have seen other version of SEnet where there is no Relu operation at the end of residual module",
+    "created_at": "2022-04-26T13:44:32Z",
+    "closed_at": null,
+    "user": "rascal112",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 74,
+    "title": "Is Cifar-100 classes a subset of Imagnet Classes",
+    "state": "open",
+    "body": "Is Cifar 100 classes are subset of ImagNet Classes or two datasets have mutually exclusive classes",
+    "created_at": "2022-04-16T06:51:39Z",
+    "closed_at": null,
+    "user": "gems047",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "tdye24",
+        "created_at": "2024-01-23T07:58:37Z",
+        "body": "CIFAR 100 and ImageNet are two distinct datasets with different sets of classes They do not share the same classes and the classes in CIFAR 100 are not a subset of the classes in ImageNet"
+      }
+    ]
+  },
+  {
+    "number": 73,
+    "title": "Is there some pre-trained weights that can be used to test models,like googlenet and ResNeXt?",
+    "state": "open",
+    "body": "",
+    "created_at": "2022-04-16T06:34:44Z",
+    "closed_at": null,
+    "user": "Tefufen",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 72,
+    "title": "Can you provide the pretrained models like vgg, resnet please?",
+    "state": "open",
+    "body": "Can you provide the pretrained models like vgg resnet please I ve downloaded these models but unfortunately failed with tensor size dismatching",
+    "created_at": "2022-04-14T08:15:38Z",
+    "closed_at": null,
+    "user": "xwpaul",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 71,
+    "title": "Beautiful Readme table !",
+    "state": "open",
+    "body": "Hi as a heavily ROCDer I heaviy recommand to reorganise the table in Readme md file Please Please Please That s torture",
+    "created_at": "2022-03-14T12:39:58Z",
+    "closed_at": null,
+    "user": "Zxl19990529",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 70,
+    "title": "Can you provide well-trained weights",
+    "state": "open",
+    "body": "Hey I don t want to retrain can you provide well trained models weights",
+    "created_at": "2022-02-22T13:58:28Z",
+    "closed_at": null,
+    "user": "Cuibaby",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 69,
+    "title": "Cannot achieve the comparable accuracy results with the provided",
+    "state": "open",
+    "body": "Hello thanks for code sharing I use Cifar100 to train and test the ShuffleNetV2 but the accuracy I got is just 0 499 all the parameter setting is consistent with the provided in READMe which are init lr 0 1 divide by 5 at 60th 120th 160th epochs train for 200 epochs with batchsize 128 and weight decay 5e 4 Nesterov momentum of 0 9 I have run 2 times on my end and 0 499 is the best accuracy Looking forword to anyone s reply thanks a lot again",
+    "created_at": "2022-01-21T03:03:51Z",
+    "closed_at": null,
+    "user": "EddieEduardo",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "EddieEduardo",
+        "created_at": "2022-01-21T03:28:45Z",
+        "body": "Plus my PyTorch version is 1 8 0"
+      },
+      {
+        "user": "LK-WordSnake",
+        "created_at": "2022-01-26T06:24:40Z",
+        "body": "After repeated experiments this code fails to achieve the described accuracy in the CIFAR100 You can set a higher input size for training which can achieve a higher accuracy"
+      },
+      {
+        "user": "hayleeXinyi",
+        "created_at": "2023-06-08T13:34:03Z",
+        "body": "For densenet161 Top 1 err tensor 0 2350 Top 5 err tensor 0 0520"
+      }
+    ]
+  },
+  {
+    "number": 68,
+    "title": "can tensorboard file be resumed?",
+    "state": "open",
+    "body": "when I use resume can resume the last training But it seems that the tensorboard file can not be resumed",
+    "created_at": "2021-10-11T10:35:53Z",
+    "closed_at": null,
+    "user": "jasperwt",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 67,
+    "title": "Do i need to change base LR according to batch size?",
+    "state": "open",
+    "body": "The code is written w r t batch size of 128 If i m using say batch of 32 do i need to change lr accordingly ex 0 1 batch 128 0 025 batch 32 Thank you",
+    "created_at": "2021-10-06T01:01:45Z",
+    "closed_at": null,
+    "user": "abeyang00",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 66,
+    "title": "onnx runtime result different with checkpoint",
+    "state": "open",
+    "body": "result inference by model load from checkpoint and by load from onnx is different resnet",
+    "created_at": "2021-09-04T07:26:03Z",
+    "closed_at": null,
+    "user": "hahadashi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 65,
+    "title": "Need requirement.txt file",
+    "state": "open",
+    "body": "Hi Would you like to provide requirement txt file Best regards PeterPham",
+    "created_at": "2021-08-13T18:31:58Z",
+    "closed_at": null,
+    "user": "ThanhPham1987",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 64,
+    "title": "ResNet34 and ResNet50 definitions are identical in models/resnet.py",
+    "state": "closed",
+    "body": "",
+    "created_at": "2021-07-12T08:13:02Z",
+    "closed_at": "2021-08-26T05:21:39Z",
+    "user": "keshik6",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 63,
+    "title": "Draw box on prediction",
+    "state": "open",
+    "body": "Dear weiaicunzai I am doing a classification task and I need to draw a box with the class name that the model predicts for the image Please help me Regards Khawar",
+    "created_at": "2021-07-08T06:55:05Z",
+    "closed_at": null,
+    "user": "khawar-islam",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MohamedA95",
+        "created_at": "2021-08-05T15:16:07Z",
+        "body": "AFAIK draw a box is not classification rather object detection Classification Localization"
+      }
+    ]
+  },
+  {
+    "number": 62,
+    "title": "dataset",
+    "state": "open",
+    "body": "how to use cityscapes train",
+    "created_at": "2021-06-15T07:17:23Z",
+    "closed_at": null,
+    "user": "lewisxiaoxu",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "YoudaBai",
+        "created_at": "2021-07-15T05:58:04Z",
+        "body": "How can l use my own data to train That is to say how can i replace the cifar100 with my own data Thanks"
+      },
+      {
+        "user": "YoudaBai",
+        "created_at": "2021-07-15T05:58:17Z",
+        "body": "how to use cityscapes train How can l use my own data to train That is to say how can i replace the cifar100 with my own data Thanks"
+      }
+    ]
+  },
+  {
+    "number": 61,
+    "title": "How to cite this repo?",
+    "state": "open",
+    "body": "I would like to cite this repo in my research what should i fill in in the following bibtex misc weiaicunzai author title year publisher GitHub journal GitHub repository howpublished url https github com weiaicunzai pytorch cifar100",
+    "created_at": "2021-06-04T16:41:52Z",
+    "closed_at": null,
+    "user": "garyxcheng",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 60,
+    "title": "Confusion of test result?(about test validation set split)",
+    "state": "open",
+    "body": "Firstly thanks for sharing so many models on cifar100 which is very friendly to beginner I have learned CNN for 2 years and your project can always inspire me I d like you to ask you a question In your implement train code do you use test set to detemine your best model If so all the results got from best train model I have learned that datasets alway need to be divide into train test val 3 folds And what also confused me is the accs on Imagenet Do they use val set to detemine best model and then test In my mind you use test fold to test after train and that s your best acc I also use this thought in my project and learning I ve searched on Internet and still have t find out It would be great if you can response me Bty In line 171 of your train py code you use time as file name if we train start from a certain epoch we can t get a continuous train line In my project I use runs as a default name And it seems that I can get a continuous line Maybe I saved checkpoint and trained from a certrain epoch I ve noticed this project was been updated 5 month ago and I d like to thank you again",
+    "created_at": "2021-05-26T13:29:05Z",
+    "closed_at": null,
+    "user": "Liudzz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 59,
+    "title": "Result Table",
+    "state": "closed",
+    "body": "dataset network params top1 err top5 err epoch lr 0 1 epoch lr 0 02 epoch lr 0 004 epoch lr 0 0008 total epoch cifar100 mobilenet 3 3M 34 02 10 56 60 60 40 40 200 cifar100 mobilenetv2 2 36M 31 92 09 02 60 60 40 40 200 cifar100 squeezenet 0 78M 30 59 8 36 60 60 40 40 200 cifar100 shufflenet 1 0M 29 94 8 35 60 60 40 40 200 cifar100 shufflenetv2 1 3M 30 49 8 49 60 60 40 40 200 cifar100 vgg11 bn 28 5M 31 36 11 85 60 60 40 40 200 cifar100 vgg13 bn 28 7M 28 00 9 71 60 60 40 40 200 cifar100 vgg16 bn 34 0M 27 07 8 84 60 60 40 40 200 cifar100 vgg19 bn 39 0M 27 77 8 84 60 60 40 40 200 cifar100 resnet18 11 2M 24 39 6 95 60 60 40 40 200 cifar100 resnet34 21 3M 23 24 6 63 60 60 40 40 200 cifar100 resnet50 23 7M 22 61 6 04 60 60 40 40 200 cifar100 resnet101 42 7M 22 22 5 61 60 60 40 40 200 cifar100 resnet152 58 3M 22 31 5 81 60 60 40 40 200 cifar100 preactresnet18 11 3M 27 08 8 53 60 60 40 40 200 cifar100 preactresnet34 21 5M 24 79 7 68 60 60 40 40 200 cifar100 preactresnet50 23 9M 25 73 8 15 60 60 40 40 200 cifar100 preactresnet101 42 9M 24 84 7 83 60 60 40 40 200 cifar100 preactresnet152 58 6M 22 71 6 62 60 60 40 40 200 cifar100 resnext50 14 8M 22 23 6 00 60 60 40 40 200 cifar100 resnext101 25 3M 22 22 5 99 60 60 40 40 200 cifar100 resnext152 33 3M 22 40 5 58 60 60 40 40 200 cifar100 attention59 55 7M 33 75 12 90 60 60 40 40 200 cifar100 attention92 102 5M 36 52 11 47 60 60 40 40 200 cifar100 densenet121 7 0M 22 99 6 45 60 60 40 40 200 cifar100 densenet161 26M 21 56 6 04 60 60 60 40 200 cifar100 densenet201 18M 21 46 5 9 60 60 40 40 200 cifar100 googlenet 6 2M 21 97 5 94 60 60 40 40 200 cifar100 inceptionv3 22 3M 22 81 6 39 60 60 40 40 200 cifar100 inceptionv4 41 3M 24 14 6 90 60 60 40 40 200 cifar100 inceptionresnetv2 65 4M 27 51 9 11 60 60 40 40 200 cifar100 xception 21 0M 25 07 7 32 60 60 40 40 200 cifar100 seresnet18 11 4M 23 56 6 68 60 60 40 40 200 cifar100 seresnet34 21 6M 22 07 6 12 60 60 40 40 200 cifar100 seresnet50 26 5M 21 42 5 58 60 60 40 40 200 cifar100 seresnet101 47 7M 20 98 5 41 60 60 40 40 200 cifar100 seresnet152 66 2M 20 66 5 19 60 60 40 40 200 cifar100 nasnet 5 2M 22 71 5 91 60 60 40 40 200 cifar100 wideresnet 40 10 55 9M 21 25 5 77 60 60 40 40 200 cifar100 stochasticdepth18 11 22M 31 40 8 84 60 60 40 40 200 cifar100 stochasticdepth34 21 36M 27 72 7 32 60 60 40 40 200 cifar100 stochasticdepth50 23 71M 23 35 5 76 60 60 40 40 200 cifar100 stochasticdepth101 42 69M 21 28 5 39 60 60 40 40 200",
+    "created_at": "2021-05-02T08:29:49Z",
+    "closed_at": "2021-05-02T08:30:41Z",
+    "user": "junha1125",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 58,
+    "title": "why I run the code，the accuracy is better than the table",
+    "state": "open",
+    "body": "why I run the code the accuracy is better than the table I have nothing changed but resnet50 s top1 result is 20 39 better than the table 22 51",
+    "created_at": "2021-04-29T02:58:13Z",
+    "closed_at": null,
+    "user": "a957815154",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Crystal-Pi1997",
+        "created_at": "2022-01-23T02:45:33Z",
+        "body": "resnet101 resnet152 seresnet seresnet resnet seresnet resnet"
+      },
+      {
+        "user": "syxadd",
+        "created_at": "2022-02-08T09:40:22Z",
+        "body": "I have met the same problem and still do not know how to solve it"
+      },
+      {
+        "user": "bestux7",
+        "created_at": "2023-12-19T14:12:36Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "title": "RuntimeError: CUDA error: device-side assert triggered",
+    "state": "open",
+    "body": "home user conda envs bm lib python3 7 site packages torch jit trace py 152 UserWarning The grad attribute of a Tensor that is not a leaf Tensor is being accessed Its grad attribute won t be populated during autograd backward If you indeed want the gradient for a non leaf Tensor use retain grad on the non leaf Tensor If you access the non leaf Tensor by mistake make sure you access the leaf Tensor instead See github com pytorch pytorch pull 30531 for more informations if a grad is not None checkpoint path checkpoint resnet50 128x128 16 0 1 Hair Color Wednesday 07 April 2021 23h 21m 26s Training Epoch 1 16 13670 Loss 1 5864 Acc 1 0000 LR 0 000000 epoch 1 training time consumed 241 82s Elapsed time 0 04 01 824466 opt conda conda bld pytorch 1607370128159 work aten src THCUNN ClassNLLCriterion cu 108 cunn ClassNLLCriterion updateOutput kernel block 0 0 0 thread 0 0 0 Assertion t 0 t n classes failed opt conda conda bld pytorch 1607370128159 work aten src THCUNN ClassNLLCriterion cu 108 cunn ClassNLLCriterion updateOutput kernel block 0 0 0 thread 13 0 0 Assertion t 0 t n classes failed Traceback most recent call last File train py line 289 in module acc total time eval training epoch total time File home user conda envs bm lib python3 7 site packages torch autograd grad mode py line 26 in decorate context return func args kwargs File train py line 124 in eval training test loss loss item RuntimeError CUDA error device side assert triggered",
+    "created_at": "2021-04-07T21:56:51Z",
+    "closed_at": null,
+    "user": "jS5t3r",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 55,
+    "title": "LICENSE file",
+    "state": "open",
+    "body": "Does the author s plan to include a LICENSE file for the repository It would be great to make it open source for others to use this awesome repository",
+    "created_at": "2021-04-06T13:30:50Z",
+    "closed_at": null,
+    "user": "goodboyanush-deeplite",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 54,
+    "title": "How to handle unbalanced data?",
+    "state": "open",
+    "body": "Replacing in train py the line loss function nn CrossEntropyLoss with cw torch tensor 0 11850941 0 14937713 0 11032023 0 62179323 dtype torch float32 cuda class weights for 1 2 3 4 loss function nn CrossEntropyLoss ignore index 255 weight cw reduction mean I get the error RuntimeError weight tensor should be defained either for all 100 classes or no classes but got weight tensor of shape 4 Analyzing the code loss loss function outputs labels Debug output outputs shape torch Size 1 100 labels tensor 3 device cuda 0 What do I need to change for having a loss for multiple classes",
+    "created_at": "2021-04-06T09:14:23Z",
+    "closed_at": null,
+    "user": "jS5t3r",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 53,
+    "title": "Is the data enhanced once or every epoch?",
+    "state": "open",
+    "body": "Is the data enhanced once or every epoch I want to know if the data augmentation function transform train executed once or every epoch If the data augmentation only executed once that make little difference",
+    "created_at": "2021-04-02T08:28:30Z",
+    "closed_at": null,
+    "user": "ZhaolinWang0110",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 52,
+    "title": "Densenet: wrong structure of transition layer",
+    "state": "open",
+    "body": "According to original densenet implementation the transition layer should be BN ReLU Conv Pool but the code in this repository is BN Conv Pool BN ReLU is missing which may hurt the accuracy of the model the densenet from paper author https github com liuzhuang13 DenseNet blob cf511e4add35a7d7a921901101ce7fa8f704aee2 models densenet lua L37 L52 this repo https github com weiaicunzai pytorch cifar100 blob 2149cb57f517c6e5fa7262f958652227225d125b models densenet py L47 L58 by the way maybe the description in the paper is misleading The transitionlayers used in our experiments consist of a batch normal ization layer and an 1 1 convolutional layer followed by a2 2 average pooling layer",
+    "created_at": "2021-03-15T03:41:54Z",
+    "closed_at": null,
+    "user": "crclz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 51,
+    "title": "The histogram is empty",
+    "state": "open",
+    "body": "I am doing a classification task where I have changed the CIFAR dataset to my custom dataset When I started the first epoch the loss value is too big and after some iteration the loss becomes nan After completing 1 epoch the program is crashed Traceback most recent call last File media khawar HDD Khawar1 CVPR pytorch cifar100 train py line 213 in module train epoch File media khawar HDD Khawar1 CVPR pytorch cifar100 train py line 71 in train writer add histogram format layer attr param epoch File home khawar local lib python3 6 site packages torch utils tensorboard writer py line 425 in add histogram histogram tag values bins max bins max bins global step walltime File home khawar local lib python3 6 site packages torch utils tensorboard summary py line 226 in histogram hist make histogram values astype float bins max bins File home khawar local lib python3 6 site packages torch utils tensorboard summary py line 264 in make histogram raise ValueError The histogram is empty please file a bug report ValueError The histogram is empty please file a bug report",
+    "created_at": "2021-03-12T02:01:48Z",
+    "closed_at": null,
+    "user": "khawar-islam",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 50,
+    "title": "vgg.py",
+    "state": "open",
+    "body": "nn Linear 512 4096 nn Linear 512 7 7 4096",
+    "created_at": "2021-03-11T07:01:30Z",
+    "closed_at": null,
+    "user": "YX1Q2W3E4R5T6Y",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MohamedA95",
+        "created_at": "2021-08-05T15:20:31Z",
+        "body": "Could this be due to CIFAR100 not ImgNet"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "Pretrained Models",
+    "state": "open",
+    "body": "Are your pre trained weights available to download for any of your experimental runs",
+    "created_at": "2021-01-22T17:58:41Z",
+    "closed_at": null,
+    "user": "bb912",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 47,
+    "title": "lower accuracy",
+    "state": "open",
+    "body": "Thanks for your great work I use mobilenet to train the model warm is set to 2 or 1 but the top1 acc is only 0 5747 which is about 9 difference from yours Do you know what is wrong My pytorch version is 1 2 will this affect Looking for your reply",
+    "created_at": "2021-01-16T10:04:30Z",
+    "closed_at": null,
+    "user": "UestcJay",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 46,
+    "title": "resnet50 结果",
+    "state": "open",
+    "body": "B FE 7 WSIV WBMAJ D0ARV https user images githubusercontent com 32867276 104406068 6521c000 5599 11eb 86d3 82757df10dba png resnet50 183 best pth",
+    "created_at": "2021-01-13T04:18:53Z",
+    "closed_at": null,
+    "user": "a957815154",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "chuntiandemaiya",
+        "created_at": "2021-08-12T01:35:43Z",
+        "body": "resnet50 test py"
+      },
+      {
+        "user": "s9443112",
+        "created_at": "2022-04-17T02:30:22Z",
+        "body": "code is error"
+      },
+      {
+        "user": "WakingHours-GitHub",
+        "created_at": "2023-09-05T06:48:30Z",
+        "body": "yes I get result about same as you too"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "我想知道为什么我跑了很多次 但是结果都远好于作者给出的表格里的结果 是不是我测试错了 resnet50",
+    "state": "closed",
+    "body": "image https user images githubusercontent com 32867276 104405280 913c4180 5597 11eb 967a 457f436ad6fa png image https user images githubusercontent com 32867276 104405306 9c8f6d00 5597 11eb 8fa1 1b55822fffcb png image https user images githubusercontent com 32867276 104405332 ae711000 5597 11eb 8824 ae00b4c57634 png",
+    "created_at": "2021-01-13T04:05:57Z",
+    "closed_at": "2021-01-13T04:16:57Z",
+    "user": "a957815154",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ygtxr1997",
+        "created_at": "2021-12-12T04:31:49Z",
+        "body": "topk pytorch imagenet"
+      },
+      {
+        "user": "a957815154",
+        "created_at": "2021-12-12T04:37:18Z",
+        "body": "nbsp nbsp nbsp weiaicunzai pytorch cifar100 gt nbsp 2021 12 12 12 31 gt gt State gt nbsp Re weiaicunzai pytorch cifar100 resnet50 45 topk pytorch imagenet You are receiving this because you modified the open close state Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "shufflenet的模型定义这里是不是不太对？",
+    "state": "open",
+    "body": "https github com weiaicunzai pytorch cifar100 blob 2149cb57f517c6e5fa7262f958652227225d125b models shufflenet py L98 shufflenet shufflenet bottleneck",
+    "created_at": "2021-01-12T02:49:58Z",
+    "closed_at": null,
+    "user": "SoufSilence",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 43,
+    "title": "Memory computing problems",
+    "state": "open",
+    "body": "How to calculate the memory cost The code doesn t seem to have been provided Thanks",
+    "created_at": "2021-01-07T17:35:33Z",
+    "closed_at": null,
+    "user": "ysh-strive",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 42,
+    "title": "Awesome work! Can you share your trained parameters for the neural network by the way?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-12-17T10:11:21Z",
+    "closed_at": "2020-12-28T13:34:58Z",
+    "user": "guanchuwang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-12-17T10:41:28Z",
+        "body": "Sorry I kinda just deleted the weight files once I got the evaluation result You could try to set wamup epoch to 5 when training large networks like resnet google vgg etc other hyper parameters simply use the default ones would gives you the decent results As for light weight networks shuffle net mobilenet you could set warmup epoch to 1 or 2"
+      },
+      {
+        "user": "guanchuwang",
+        "created_at": "2020-12-17T10:55:56Z",
+        "body": "Thanks a lot"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "学习率是增加的？",
+    "state": "open",
+    "body": "raining Epoch 1 3968 8000 Loss 1 3380 LR 0 004960 Training Epoch 1 3976 8000 Loss 0 3088 LR 0 004970 Training Epoch 1 3984 8000 Loss 0 6474 LR 0 004980 Training Epoch 1 3992 8000 Loss 0 4500 LR 0 004990 Training Epoch 1 4000 8000 Loss 0 6452 LR 0 005000 Training Epoch 1 4008 8000 Loss 0 9984 LR 0 005010 Training Epoch 1 4016 8000 Loss 0 7139 LR 0 005020 Training Epoch 1 4024 8000 Loss 0 6220 LR 0 005030 Training Epoch 1 4032 8000 Loss 0 4329 LR 0 005040 Training Epoch 1 4040 8000 Loss 0 4127 LR 0 005050 Training Epoch 1 4048 8000 Loss 0 4696 LR 0 005060 Training Epoch 1 4056 8000 Loss 0 5181 LR 0 005070 Training Epoch 1 4064 8000 Loss 0 4105 LR 0 005080 Training Epoch 1 4072 8000 Loss 0 7041 LR 0 005090 Training Epoch 1 4080 8000 Loss 0 3864 LR 0 005100 Training Epoch 1 4088 8000 Loss 0 6991 LR 0 005110 Training Epoch 1 4096 8000 Loss 0 3007 LR 0 005120 Training Epoch 1 4104 8000 Loss 0 3111 LR 0 005130 Training Epoch 1 4112 8000 Loss 0 3763 LR 0 005140 Training Epoch 1 4120 8000 Loss 0 5825 LR 0 005150 Training Epoch 1 4128 8000 Loss 0 5528 LR 0 005160 Training Epoch 1 4136 8000 Loss 0 3553 LR 0 005170 Training Epoch 1 4144 8000 Loss 0 2654 LR 0 005180 Training Epoch 1 4152 8000 Loss 0 3935 LR 0 005190 Training Epoch 1 4160 8000 Loss 0 2935 LR 0 005200 Training Epoch 1 4168 8000 Loss 0 2382 LR 0 005210 Training Epoch 1 4176 8000 Loss 0 2893 LR 0 005220",
+    "created_at": "2020-11-24T06:47:48Z",
+    "closed_at": null,
+    "user": "wuzuowuyou",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "robintzeng",
+        "created_at": "2020-11-25T03:47:30Z",
+        "body": "I think it is because of warm up"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-11-26T05:52:27Z",
+        "body": "According to paper Deep Residual Learning for Image Recognition So we use 0 01 to warm up the training until the training error is below 80 about 400 iterations and then go back to 0 1 and con tinue training Yolo also used this trick to train the network"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "shouldn't group in_channels inside 1x1 conv ",
+    "state": "open",
+    "body": "nn Conv2d in channels C D kernel size 1 groups C bias False doesn t make sense",
+    "created_at": "2020-11-04T08:20:01Z",
+    "closed_at": null,
+    "user": "wuyuanhang94",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "yukiTemp",
+        "created_at": "2021-07-28T03:00:59Z",
+        "body": "yeah I was confused by this too it s inconsistent to the paper"
+      },
+      {
+        "user": "richardxing",
+        "created_at": "2021-08-31T02:10:33Z",
+        "body": "Has this issue been confirmed or fixed"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "print(torch.cuda.memory_summary(), end='')",
+    "state": "closed",
+    "body": "AttributeError module torch cuda has no attribute memory summary image https user images githubusercontent com 59329144 96966518 83e75c00 1540 11eb 8814 aca81ea4003f png What the meaning of torch cuda memory summary What does the author want to express in this sentence print torch cuda memory summary end train py line 100",
+    "created_at": "2020-10-23T07:04:22Z",
+    "closed_at": "2020-10-26T15:34:04Z",
+    "user": "xiaoxiannvlgy",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-10-23T09:41:16Z",
+        "body": "Which Pytorch version are you using I am using google Colab to train my model which is currently Pytorch 1 6 If you do not want to upgrade your Pytorch simply comment that line You could check the details here torch cuda memory summary https pytorch org docs stable cuda html torch cuda memory summary"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "Hi Can't find model weights after training. What is the default weights path after training.",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-09-23T12:24:04Z",
+    "closed_at": "2020-09-23T12:34:18Z",
+    "user": "boshi1993",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "boshi1993",
+        "created_at": "2020-09-23T12:34:08Z",
+        "body": "Sorry Already solved"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Multiple GPUs",
+    "state": "closed",
+    "body": "Great thanks for sharing the codes One question does the training support multiple GPUs Kindly correct if I am mistaken but as far as I can tell the codes only support single GPU now",
+    "created_at": "2020-09-20T11:25:13Z",
+    "closed_at": "2020-09-29T02:36:03Z",
+    "user": "JanineCHEN",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-09-25T05:27:12Z",
+        "body": "My code doesn t support multi GPU sry I think you could slightly modify the code to support multi gpu training example net nn DataParallel net device ids args gpus The pytorch nn DataParallel could easily make your code to support multi GPU training docs https pytorch org docs stable generated torch nn DataParallel html"
+      },
+      {
+        "user": "JanineCHEN",
+        "created_at": "2020-09-29T02:36:03Z",
+        "body": "My code doesn t support multi GPU sry I think you could slightly modify the code to support multi gpu training example net nn DataParallel net device ids args gpus The pytorch nn DataParallel could easily make your code to support multi GPU training docs https pytorch org docs stable generated torch nn DataParallel html Thank you I have tried and it works"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "How do I change to my own data set",
+    "state": "open",
+    "body": "My data set has three categories in three folders How can I change the code that reads the data",
+    "created_at": "2020-09-02T12:29:38Z",
+    "closed_at": null,
+    "user": "6sz",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-09-25T05:34:49Z",
+        "body": "If your dataset is a image classification dataset you could implement your own dataset class to read your data see more details here https pytorch org docs stable data html torch utils data Dataset"
+      },
+      {
+        "user": "chejulien",
+        "created_at": "2020-11-11T10:12:49Z",
+        "body": "If your dataset is a image classification dataset you could implement your own dataset class to read your data see more details here https pytorch org docs stable data html torch utils data Dataset I tried implement my dataset class seems like loading goes well but there was an error when I trained not sure whether you met this before thanks in advance here the message Traceback most recent call last File train py line 209 in train epoch File train py line 44 in train outputs net images File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File pytorch cifar100 pytorch cifar100 models vgg py line 40 in forward output self classifier output File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File lib site packages torch nn modules container py line 117 in forward input module input File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File lib site packages torch nn modules linear py line 93 in forward return F linear input self weight self bias File lib site packages torch nn functional py line 1690 in linear ret torch addmm bias input weight t RuntimeError mat1 dim 1 must match mat2 dim 0"
+      },
+      {
+        "user": "starsky68",
+        "created_at": "2021-01-21T06:30:15Z",
+        "body": "If your dataset is a image classification dataset you could implement your own dataset class to read your data see more details here https pytorch org docs stable data html torch utils data Dataset I tried implement my dataset class seems like loading goes well but there was an error when I trained not sure whether you met this before thanks in advance here the message Traceback most recent call last File train py line 209 in train epoch File train py line 44 in train outputs net images File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File pytorch cifar100 pytorch cifar100 models vgg py line 40 in forward output self classifier output File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File lib site packages torch nn modules container py line 117 in forward input module input File lib site packages torch nn modules module py line 727 in call impl result self forward input kwargs File lib site packages torch nn modules linear py line 93 in forward return F linear input self weight self bias File lib site packages torch nn functional py line 1690 in linear ret torch addmm bias input weight t RuntimeError mat1 dim 1 must match mat2 dim 0 output self classifier output tensor size tensor"
+      },
+      {
+        "user": "ZhaolinWang0110",
+        "created_at": "2021-04-02T13:11:17Z",
+        "body": "use function torchvision datasets ImageFolder root path to your dir instead of function torchvision datasets CIFAR100 in utils py"
+      },
+      {
+        "user": "biel-wangdf3",
+        "created_at": "2021-04-08T08:46:24Z",
+        "body": "the cifar100 train image size 80x80 but when load train data only crop 32x32 transform train transforms Compose transforms ToPILImage transforms RandomCrop 32 padding 4 transforms RandomHorizontalFlip transforms RandomRotation 15 transforms ToTensor transforms Normalize mean std test image size 32x32 didn t need to crop image change FC layer depend on your input image size self classifier nn Sequential nn Linear 512 4096 modify fc connect layer input size nn Linear 512 7 7 4096 When train your own datasets you must keep train and test size equality use the same transform 36"
+      },
+      {
+        "user": "whisere",
+        "created_at": "2021-10-15T01:55:58Z",
+        "body": "How should we change if input image size is 100 100 Thanks"
+      },
+      {
+        "user": "coisin-i",
+        "created_at": "2023-03-10T09:24:06Z",
+        "body": "My dataset is a csv file How to change it"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "Unable to execute code on test set ",
+    "state": "closed",
+    "body": "Hi I am trying to test the model on Google Colab using the command you have put up in your README md file python test py net vgg16 weights checkpoint vgg16 Tuesday 04 August 2020 15h 05m 17s vgg16 171 best pth However I seem to be running into this issue img width 888 alt Screenshot 2020 08 04 at 18 07 46 src https user images githubusercontent com 19652780 89323331 6b704f80 d67d 11ea 9192 d5b97bad5745 png To my understanding this issue only comes up when the model is on the GPU but data is on the CPU I checked the code to see what the issue could be but found that not only is the model being loaded to the Colab GPU but also the labels and images I m not sure if this problem arises due to it being executed on Google Colab I do not have access to a GPU locally Would appreciate your help regarding this",
+    "created_at": "2020-08-04T17:12:12Z",
+    "closed_at": "2020-08-05T13:47:53Z",
+    "user": "rsundar96",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "rsundar96",
+        "created_at": "2020-08-05T13:47:53Z",
+        "body": "Issue has been resolved locally Will provide a fix to resolve issue on test py Image and Label need to be loaded onto the GPU"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "新手小白想问一下那个the weights file you want to test是指的训好网络的checkpoint文件吗？",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-08-01T10:07:40Z",
+    "closed_at": "2020-08-01T15:31:15Z",
+    "user": "XueqiaoPeng",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T11:09:44Z",
+        "body": "shi de"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "The accuracy of vgg16-bn and vgg19_bn",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-08-01T09:38:19Z",
+    "closed_at": "2020-08-01T09:59:37Z",
+    "user": "XueqiaoPeng",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "XueqiaoPeng",
+        "created_at": "2020-08-01T09:39:58Z",
+        "body": "vgg16 vgg19 68"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T15:29:40Z",
+        "body": "vgg16 vgg19 68"
+      },
+      {
+        "user": "kingrain213",
+        "created_at": "2021-06-10T03:59:39Z",
+        "body": "20"
+      },
+      {
+        "user": "kingrain213",
+        "created_at": "2021-06-10T03:59:57Z",
+        "body": "vgg16 vgg19 68 20"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "Tensor sizes mismatches",
+    "state": "open",
+    "body": "Hi I am implementing ResNet18 models using the CIFAR 100 dataset I checked all the dimensions but got this error RuntimeError The size of tensor a 100 must match the size of tensor b 32 at non singleton dimension 3 Can you please tell me how to fix it Thanks",
+    "created_at": "2020-07-30T07:47:52Z",
+    "closed_at": null,
+    "user": "tehreemnaqvi",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-07-31T18:26:51Z",
+        "body": "RuntimeError The size of tensor a 100 must match the size of tensor b 32 at non singleton dimension 3 Could you plz tell me you are implementing ResNet18 yourself or using my code Last time I checked my implementation works fine"
+      },
+      {
+        "user": "JasperMorrison",
+        "created_at": "2020-12-17T10:41:43Z",
+        "body": "own dataset img size 128x128 resnet18 is ok but vgg16 I got RuntimeError size mismatch m1 128 x 8192 m2 512 x 4096"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-12-17T10:47:28Z",
+        "body": "128 x 8192 m2 512 x 4096 VGG does not have adaptive pooling layer so you have to modify the fully connected layer in VGG16 to adapt your dataset since cifar100 only have 32x32 image size"
+      },
+      {
+        "user": "jaeho3690",
+        "created_at": "2021-12-24T03:50:34Z",
+        "body": "You have to check the dimension output in the vgg py line 38 After checking the output dimension you should modify the self classifier function that matches your size"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "CUDA out of memory problem",
+    "state": "open",
+    "body": "It seems some of the nets define in models has some hidden bug For example I use senet and will get CUDA out of memory error but my batch size is only 64 my GPU memory is 11G But when I use the model file here https github com moskomule senet pytorch tree master senet that only occupy 7G memory when batch size 90 I find senet py resnext py inceptionv4 py both has similar problem may be more models",
+    "created_at": "2020-07-24T10:03:09Z",
+    "closed_at": null,
+    "user": "monkeyDemon",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bokveizen",
+        "created_at": "2020-07-28T10:51:37Z",
+        "body": "True so I am only using resnet and VGG"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T11:00:52Z",
+        "body": "I ve just updated my code fixed this bug I ve tested my updated code on Google Colab python3 6 pytorch1 6 a K80 gpu NVIDIA SMI 450 57 Driver Version 418 67 CUDA Version 10 1 GPU Name Persistence M Bus Id Disp A Volatile Uncorr ECC Fan Temp Perf Pwr Usage Cap Memory Usage GPU Util Compute M MIG M 0 Tesla K80 Off 00000000 00 04 0 Off 0 N A 45C P8 31W 149W 0MiB 11441MiB 0 Default ERR Processes GPU GI CI PID Type Process name GPU Memory ID ID Usage No running processes found here is the output during training seresnet152 batch size 64 we can see that the GPU memory consumption is 7832MB you could try yourself If you have a different result plz let me know thanks monkeyDemon bokveizen PyTorch CUDA memory summary device ID 0 CUDA OOMs 0 cudaMalloc retries 0 Metric Cur Usage Peak Usage Tot Alloc Tot Freed Allocated memory 772034 KB 6276 MB 37813 GB 37812 GB from large pool 438784 KB 5926 MB 37354 GB 37354 GB from small pool 333250 KB 480 MB 458 GB 458 GB Active memory 772034 KB 6276 MB 37813 GB 37812 GB from large pool 438784 KB 5926 MB 37354 GB 37354 GB from small pool 333250 KB 480 MB 458 GB 458 GB GPU reserved memory 7832 MB 7832 MB 7832 MB 0 B from large pool 7350 MB 7350 MB 7350 MB 0 B from small pool 482 MB 482 MB 482 MB 0 B Non releasable memory 354366 KB 1425 MB 19691 GB 19690 GB from large pool 351744 KB 1423 MB 19197 GB 19197 GB from small pool 2622 KB 33 MB 493 GB 493 GB Allocations 2940 3808 6708 K 6705 K from large pool 141 549 2429 K 2429 K from small pool 2799 3414 4278 K 4275 K Active allocs 2940 3808 6708 K 6705 K from large pool 141 549 2429 K 2429 K from small pool 2799 3414 4278 K 4275 K GPU reserved segments 499 499 499 0 from large pool 258 258 258 0 from small pool 241 241 241 0 Non releasable allocs 106 121 3384 K 3384 K from large pool 44 83 1058 K 1058 K from small pool 62 77 2325 K 2325 K"
+      },
+      {
+        "user": "ShaoZeng",
+        "created_at": "2020-11-26T02:20:29Z",
+        "body": "I found that mobilenet py has similar problem which occupies more GPU memory Can you check it THX"
+      },
+      {
+        "user": "Vickeyhw",
+        "created_at": "2020-12-12T15:38:35Z",
+        "body": "I found that googlenet py also occupies so many gpu memory that when I train it on ImageNet dataset even 4 gpus with 20GB per gpu are not enough"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-12-13T14:07:14Z",
+        "body": "I found that googlenet py also occupies so many gpu memory that when I train it on ImageNet dataset even 4 gpus with 20GB per gpu are not enough Could you please tell me what is your input image size and batch size during training"
+      },
+      {
+        "user": "Vickeyhw",
+        "created_at": "2020-12-14T02:37:43Z",
+        "body": "I found that googlenet py also occupies so many gpu memory that when I train it on ImageNet dataset even 4 gpus with 20GB per gpu are not enough Could you please tell me what is your input image size and batch size during training weiaicunzai my input image size is 224x224 I tried to set batch size to 128 256 and 64 but none of them work"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-12-14T04:39:55Z",
+        "body": "I found that googlenet py also occupies so many gpu memory that when I train it on ImageNet dataset even 4 gpus with 20GB per gpu are not enough Could you please tell me what is your input image size and batch size during training weiaicunzai my input image size is 224x224 I tried to set batch size to 128 256 and 64 but none of them work Thanks I will try to reproduce the bug you mentioned Currently My GPU server is down due to the hardware problems already sent to repaired it might take a while sorry"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-12-29T14:47:41Z",
+        "body": "I found that googlenet py also occupies so many gpu memory that when I train it on ImageNet dataset even 4 gpus with 20GB per gpu are not enough Could you please tell me what is your input image size and batch size during training weiaicunzai my input image size is 224x224 I tried to set batch size to 128 256 and 64 but none of them work I use 3 downsampling in googlenet results larger feature map size during training thats why we have large momery consumption during training Fewer downsampling is beneficial for small input size like 32x32 I add one more downsampling layer in my googlenet implementation the GPU memory usage drops from 14GB to 7GB during training on cifar100 but accuracy also drops about 2 percent If you are going to train the large input image 224x224 you could use 5 times downsampling just as in the original paper to further reduce the memory usage without losing much network performance"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Mistakes of MobileNetV2",
+    "state": "open",
+    "body": "Dear sir I found a mistake when I use the MobileNetV2 model You can print the architecture and check it The fisrt layer has a output of 32 226 which expects 32 112 I d like to fix this error",
+    "created_at": "2020-07-12T18:59:59Z",
+    "closed_at": null,
+    "user": "GG-yuki",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "model better than torchvision model on cifar100",
+    "state": "open",
+    "body": "Hi I thank you for your repo I tried to compare the accuracy of your resnet18 with the torchvision one I do not understand why without pretrained your model gives 70 accuracy but the torchvision only 55 Have you implemented something specific for the cifar dataset cifar100",
+    "created_at": "2020-06-25T20:52:59Z",
+    "closed_at": null,
+    "user": "Shiro-LK",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Queuecumber",
+        "created_at": "2020-06-29T19:01:37Z",
+        "body": "I just spend the last few days debugging this before finding your post I also can t explain why there is such a difference in the performance"
+      },
+      {
+        "user": "Queuecumber",
+        "created_at": "2020-06-29T21:08:55Z",
+        "body": "OK I figured it out actually the original resnet as implemented by pytorch uses a 7x7 convolution in the first layer and does max pooling This repository modifies that to make it a 3x3 convolution and skips max pooling altogether My guess is that with 32x32 images the 7x7 with so much padding and the max pooling are messing up the result"
+      },
+      {
+        "user": "imr555",
+        "created_at": "2020-07-05T16:36:00Z",
+        "body": "This is just an intuition The torchvision models were specifically made for imagenet images which are 224X224 Normally all architectures made for imagenet follows the same procedures in the first two three layers Bigger kernels followed by max pooling This is done I guess to drastically decrease the number of parameters As Queuecumber pointed out the images in cifar100 are 32X32 so those architectures dont require that extensive downsampling with bigger kernels and pooling layers for this dataset and thus we come to this repository where Queuecumber mentioned the skipping of the first unnecesary layers"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T10:06:25Z",
+        "body": "I ve never trained torchvision s resnet18 on cifar100 but your question is very similar to this one 22 and you could see my answer to his question https github com weiaicunzai pytorch cifar100 issues 22 issuecomment 667652225 Hope this would help you"
+      },
+      {
+        "user": "Liudzz",
+        "created_at": "2020-08-13T01:39:08Z",
+        "body": "I used ResNet50 to train my model and I also meet the same situation Just as the owner s answer on 22 maxpool is a reason And if you print two models you will also find the kernal size of first covlutional layer is different 7 7 is too big for 32 32 images"
+      },
+      {
+        "user": "itsShnik",
+        "created_at": "2020-10-07T09:02:41Z",
+        "body": "My explanation 7 7 kernels with stride 2 and MaxPool Mentioned in the original paper and implemented in the torchvision model reduce the effective number of features in 32 32 images of CIFAR dataset drastically This leads to severe overfitting In the implementation provided in this repository the initial conv layer originally 7 7 stride 2 is replaced by a 3 3 stride 1 conv layer and the MaxPool is removed This allows the remaining residual blocks to leverage a larger number of features and thus reduces overfitting It has one disadvantage though it occupies nearly seven times the memory of original model on a GPU This was tested for 224 sized images for the 32 sized images this factor may be different"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "TypeError: forward() takes 2 positional arguments but 13 were given",
+    "state": "open",
+    "body": "when i run train py there is something wrong TypeError forward takes 2 positional arguments but 13 were given writer add graph net Variable input tensor requires grad True So you know how to deal",
+    "created_at": "2020-06-21T08:33:28Z",
+    "closed_at": null,
+    "user": "Senwang98",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "YTTHH",
+        "created_at": "2020-06-22T13:02:20Z",
+        "body": "I also want to ask whether you have known how to deal the question"
+      },
+      {
+        "user": "Senwang98",
+        "created_at": "2020-06-23T02:07:17Z",
+        "body": "I also want to ask whether you have known how to deal the question Sorry this problem was ignored by me and the whole project can still run well I just want to know how this problem happened"
+      },
+      {
+        "user": "YTTHH",
+        "created_at": "2020-06-28T11:44:07Z",
+        "body": "Thanks for your answer"
+      },
+      {
+        "user": "momo1986",
+        "created_at": "2020-07-01T15:24:26Z",
+        "body": "Met the same problem in python 3 6"
+      },
+      {
+        "user": "GuaiYiHu",
+        "created_at": "2020-07-07T08:35:05Z",
+        "body": "same problem"
+      },
+      {
+        "user": "GuaiYiHu",
+        "created_at": "2020-07-07T08:41:35Z",
+        "body": "change https github com weiaicunzai pytorch cifar100 blob 1fe2ec40dc05cd81fee6ab23de09b99fdb0d282f train py L148 to input tensor torch Tensor 1 3 32 32 cuda"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T09:58:34Z",
+        "body": "Do you guys still have the same problem I ve already updated my code using Pytorch build in module torch utils tensorboard and tested my code on Google Colab python3 6 pytorch1 6 did not encounter this bug GuaiYiHu momo1986 1187697147 YTTHH"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "resnet50 accuracy is a little bit worse than resnet18",
+    "state": "open",
+    "body": "With three runs of resnet18 I got an average acc around 76 1 However on resnet50 I got 76 0 Does anyone have the same problem By the way resnet101 work fine with acc 78 1 I think the resnet50 s acc is supposed to be around 77",
+    "created_at": "2020-06-19T09:29:11Z",
+    "closed_at": null,
+    "user": "JiyueWang",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "animesh-007",
+        "created_at": "2020-06-20T00:14:16Z",
+        "body": "With three runs of resnet18 I got an average acc around 76 1 However on resnet50 I got 76 0 Does anyone have the same problem By the way resnet101 work fine with acc 78 1 I think the resnet50 s acc is supposed to be around 77 Can you tell me what were the versions of your dependencies you used"
+      },
+      {
+        "user": "JiyueWang",
+        "created_at": "2020-06-20T10:17:46Z",
+        "body": "PyTorch 1 4 0"
+      },
+      {
+        "user": "animesh-007",
+        "created_at": "2020-06-20T10:29:47Z",
+        "body": "PyTorch 1 4 0 I m also trying to run this with PyTorch 1 0 0 and I am not able get an exact error on resnet101 Can you tell me if you made any other changes in the files"
+      },
+      {
+        "user": "JiyueWang",
+        "created_at": "2020-06-25T12:57:28Z",
+        "body": "You need to adjust the learning rate function if epoch args warm train scheduler step epoch to if epoch args warm train scheduler step print the learning rate by print lr 5 4f format optimizer param groups 0 lr to check out By the way this repo s models are not carefully designed for cifar100 The author has just modified a few input layers and output FC layers The model is still too heavy for cifar I recommend you this repo https github com junyuseu pytorch cifar models the models are just like the original papers and much lighter than this repo"
+      },
+      {
+        "user": "valencebond",
+        "created_at": "2020-10-02T02:27:13Z",
+        "body": "hai JiyueWang i can just achieve 65 67 accuracy with resnet50 under torch1 4 is there any thing i need to change except you mentioned above thanks"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "No softmax layer",
+    "state": "closed",
+    "body": "Is there no softmax layer for all models Will this problem influence the test acc",
+    "created_at": "2020-06-16T01:18:59Z",
+    "closed_at": "2020-06-16T01:55:18Z",
+    "user": "JiyueWang",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sangenan",
+        "created_at": "2020-06-19T03:38:06Z",
+        "body": "Do you already know the reason why no softmax layer for all models"
+      },
+      {
+        "user": "JiyueWang",
+        "created_at": "2020-06-19T03:40:40Z",
+        "body": "Yes because the softmax layer is included in the cross entropy loss function in PyTorch"
+      },
+      {
+        "user": "sangenan",
+        "created_at": "2020-06-19T03:45:39Z",
+        "body": "thanks a lot"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Error: for batch_index, (images, labels) in enumerate(cifar100_training_loader)",
+    "state": "open",
+    "body": "train py train 33 for batch index images labels in enumerate cifar100 training loader TypeError Traceback most recent call last File home zbs anaconda3 lib python3 6 site packages torch utils data dataloader py line 57 in worker loop samples collate fn dataset i for i in batch indices File home zbs anaconda3 lib python3 6 site packages torch utils data dataloader py line 138 in default collate return default collate samples for samples in transposed File home zbs anaconda3 lib python3 6 site packages torch utils data dataloader py line 138 in listcomp return default collate samples for samples in transposed File home zbs anaconda3 lib python3 6 site packages torch utils data dataloader py line 140 in default collate raise TypeError error msg format type batch 0 TypeError batch must contain tensors numbers dicts or lists found class torchvision transforms Compose File home zbs Desktop pytorch cifar100 train py line 33 in train for batch index images labels in enumerate cifar100 training loader File home zbs Desktop pytorch cifar100 train py line 160 in module train epoch Nice work",
+    "created_at": "2020-04-29T08:47:57Z",
+    "closed_at": null,
+    "user": "Alexander0211",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jkterry1",
+        "created_at": "2020-05-16T05:43:57Z",
+        "body": "I m getting this error too and have no idea why"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-03T03:47:00Z",
+        "body": "bug bug bug"
+      },
+      {
+        "user": "cubhe",
+        "created_at": "2020-10-30T05:00:21Z",
+        "body": "win"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "tensorboardX path",
+    "state": "closed",
+    "body": "Traceback most recent call last File D Anaconda envs PyTorch lib site packages tensorboardX record writer py line 47 in directory check factory REGISTERED FACTORIES prefix KeyError runs vgg16 2020 03 08T16",
+    "created_at": "2020-03-08T08:50:21Z",
+    "closed_at": "2020-08-02T09:52:53Z",
+    "user": "Supernova410",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "YYsmith",
+        "created_at": "2020-04-11T06:02:54Z",
+        "body": "I also meet this problem How can I solve it"
+      },
+      {
+        "user": "Kunkun-Jia",
+        "created_at": "2020-04-18T08:52:15Z",
+        "body": "Traceback most recent call last File C Users JY Anaconda3 lib site packages tensorboardX record writer py line 47 in directory check factory REGISTERED FACTORIES prefix KeyError runs vgg16 2020 04 18T16 I also meet this problem"
+      },
+      {
+        "user": "bokveizen",
+        "created_at": "2020-07-29T12:33:35Z",
+        "body": "Modifying the TIME NOW variable in conf golbal setting may solve the problem"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T09:52:52Z",
+        "body": "hello guys already fixed this bug at 1 plz update the code thanks"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Model Accuracy",
+    "state": "open",
+    "body": "i use your model seresnet18 to train cifar 100 datasets and i try your train Details 200epoch init lr 0 1 divide by 5 at 60th 120th 160th epochs train for 200 epochs with batchsize 128 and weight decay 5e 4 but i cant get the 23 56 accuracty rate i only get 33 01 accuracy rate can you help me",
+    "created_at": "2020-03-04T03:06:26Z",
+    "closed_at": null,
+    "user": "wqdong8",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-10T09:13:32Z",
+        "body": "I have the same problem"
+      },
+      {
+        "user": "JiyueWang",
+        "created_at": "2020-06-18T01:05:39Z",
+        "body": "I trained seresnet32 and got 24 5 error rate far below the 22 07 On serenet152 the error rate is 21 8"
+      },
+      {
+        "user": "THHHomas",
+        "created_at": "2020-07-23T06:24:07Z",
+        "body": "The same problem resnet18 the top1 error is 0 3430"
+      },
+      {
+        "user": "ErezBeyond",
+        "created_at": "2020-07-31T18:41:48Z",
+        "body": "I am getting 0 2565 top error on resnet18 with all the defaults So 1 point off The same problem resnet18 the top1 error is 0 3430 Same here"
+      },
+      {
+        "user": "eddiexia98",
+        "created_at": "2021-07-24T07:11:12Z",
+        "body": "i use your model seresnet18 to train cifar 100 datasets and i try your train Details 200epoch init lr 0 1 divide by 5 at 60th 120th 160th epochs train for 200 epochs with batchsize 128 and weight decay 5e 4 but i cant get the 23 56 accuracty rate i only get 33 01 accuracy rate can you help me i got same problem"
+      },
+      {
+        "user": "Pengfight",
+        "created_at": "2021-09-08T16:28:14Z",
+        "body": "i use your model seresnet18 to train cifar 100 datasets and i try your train Details 200epoch init lr 0 1 divide by 5 at 60th 120th 160th epochs train for 200 epochs with batchsize 128 and weight decay 5e 4 but i cant get the 23 56 accuracty rate i only get 33 01 accuracy rate can you help me I got the same problem"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "A little difference in shufflenetV2",
+    "state": "closed",
+    "body": "In the original paper there is a maxpool layer in pre block between image and stage2 while I can t find it in this code",
+    "created_at": "2020-02-26T15:41:56Z",
+    "closed_at": "2020-08-02T09:45:00Z",
+    "user": "DOGEwbx",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T09:44:59Z",
+        "body": "I did not add this maxpooling layer since more pooling layers could cause information loss during downsampling therefore decrease the accuracy and our data are 32x32 size images do not suit for multiple downsample operations You could add this maxpooling layer yourself and see how the accuracy goes compare with my implementation"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Links at README.md",
+    "state": "closed",
+    "body": "Thank you for the code Please note that all three links under the paragraph Training Details refer to the same paper",
+    "created_at": "2019-12-13T10:33:26Z",
+    "closed_at": "2020-08-02T09:37:21Z",
+    "user": "kupferb",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T09:34:20Z",
+        "body": "Thanks already fixed"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "ImportError: cannot import name 'OperatorExportTypes",
+    "state": "open",
+    "body": "Hello I encountered this problem ImportError cannot import name OperatorExportTypes when running my data set was downloaded in advance Ask for guidance online thank you",
+    "created_at": "2019-12-04T02:24:15Z",
+    "closed_at": null,
+    "user": "TREASUREPPY",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T09:11:58Z",
+        "body": "I ve updated the code you do not need to download anything now it will automatically download cifar100 for you"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Is there any problem with your model implementation？Many model such as shufflenetmobilenet will eventually downsample to 7x7, but some model implementations are downsampled to 28x28",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-09-25T02:49:43Z",
+    "closed_at": "2019-09-27T02:54:58Z",
+    "user": "Regeee",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "Is this a mistake in senet for fair comparison?",
+    "state": "closed",
+    "body": "I notice that the stage4 of other instance of ResNet is 512 while the SENet is 516 Is this a bug SENet https github com weiaicunzai pytorch cifar100 blob 1fe2ec40dc05cd81fee6ab23de09b99fdb0d282f models senet py L126 ResNet https github com weiaicunzai pytorch cifar100 blob 1fe2ec40dc05cd81fee6ab23de09b99fdb0d282f models resnet py L96 ReXsNet https github com weiaicunzai pytorch cifar100 blob 1fe2ec40dc05cd81fee6ab23de09b99fdb0d282f models resnext py L80",
+    "created_at": "2019-09-15T05:17:02Z",
+    "closed_at": "2020-08-02T08:52:16Z",
+    "user": "vinthony",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-02T08:53:38Z",
+        "body": "Yes it is a bug already fixed thanks"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "请问是不是models.resnet这些网络的实现有些问题？",
+    "state": "open",
+    "body": "pytorch 1 2 torchvision 0 4 0 torchvision models ResNet train py ACC 60 ResNet ACC Batch size 128 torchvision models GPU Memory 1 4G GPU Memory 5G Batch Size model pytorch",
+    "created_at": "2019-09-06T01:33:04Z",
+    "closed_at": null,
+    "user": "AmigoCDT",
+    "comments_count": 21,
+    "labels": [],
+    "comments": [
+      {
+        "user": "qiulinzhang",
+        "created_at": "2019-11-22T11:56:16Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2019-12-13T01:23:34Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch resnet"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2019-12-13T06:45:54Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch torchvision cifar100 resnet"
+      },
+      {
+        "user": "qiulinzhang",
+        "created_at": "2019-12-13T06:52:20Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch resnet resent50"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2019-12-13T06:56:08Z",
+        "body": "pytorch 1 2 torchvision 0 4 0 torchvision models ResNet train py ACC 60 ResNet ACC Batch size 128 torchvision models GPU Memory 1 4G GPU Memory 5G Batch Size model pytorch 5 G 78 9 pytorch 1 4 G 60 pytorch resnet resent50 cifar100 torchvision models imagent"
+      },
+      {
+        "user": "qiulinzhang",
+        "created_at": "2019-12-14T02:56:56Z",
+        "body": "pytorch 1 2 torchvision 0 4 0 torchvision models ResNet train py ACC 60 ResNet ACC Batch size 128 torchvision models GPU Memory 1 4G GPU Memory 5G Batch Size model pytorch 5 G 78 9 pytorch 1 4 G 60 pytorch resnet resent50 cifar100 torchvision models imagent"
+      },
+      {
+        "user": "Lornatang",
+        "created_at": "2020-01-27T06:13:23Z",
+        "body": "The implementation of CIFAR in the original ResNet paper is reproduced in my repository please see https github com Lornatang ResNet PyTorch tree master examples cifar Thank you please give me some suggestions AmigoCDT"
+      },
+      {
+        "user": "WeihanLikk",
+        "created_at": "2020-03-15T16:27:23Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 70 Cifar100 trick 70"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2020-03-15T16:42:22Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 70 Cifar100 trick 70 model"
+      },
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-10T09:08:45Z",
+        "body": "70"
+      },
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-10T09:09:31Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 70 Cifar100 trick 70"
+      },
+      {
+        "user": "WeihanLikk",
+        "created_at": "2020-06-10T09:53:56Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 70 Cifar100 trick 70 pytorch scheduler step epoch scheduler step ps resnet 18 cifar100 76"
+      },
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-15T06:12:41Z",
+        "body": "nbsp nbsp nbsp WEIHAN LI notifications github com gt nbsp 2020 6 10 5 54 nbsp weiaicunzai pytorch cifar100 pytorch cifar100 noreply github com gt nbsp 1319230184 qq com gt Comment comment noreply github com gt nbsp Re weiaicunzai pytorch cifar100 models resnet 17 5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 gt 70 Cifar100 trick 70 pytorch scheduler step epoch scheduler step You are receiving this because you commented Reply to this email directly view it on GitHub or unsubscribe"
+      },
+      {
+        "user": "animesh-007",
+        "created_at": "2020-06-17T14:51:21Z",
+        "body": ""
+      },
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-18T16:50:30Z",
+        "body": "dataloader datasets transform dataloader dataloader nbsp nbsp nbsp Animesh Gupta notifications github com gt nbsp 2020 6 17 10 51 nbsp weiaicunzai pytorch cifar100 pytorch cifar100 noreply github com gt nbsp 1319230184 qq com gt Comment comment noreply github com gt nbsp Re weiaicunzai pytorch cifar100 models resnet 17 You are receiving this because you commented Reply to this email directly view it on GitHub or unsubscribe"
+      },
+      {
+        "user": "animesh-007",
+        "created_at": "2020-06-19T07:12:06Z",
+        "body": "dataloader datasets transform dataloader dataloader nbsp nbsp nbsp Animesh Gupta notifications github com gt nbsp 2020 6 17 10 51 nbsp weiaicunzai pytorch cifar100 pytorch cifar100 noreply github com gt nbsp 1319230184 qq com gt Comment comment noreply github com gt nbsp Re weiaicunzai pytorch cifar100 models resnet 17 You are receiving this because you commented Reply to this email directly view it on GitHub or unsubscribe xyy1991"
+      },
+      {
+        "user": "xyy1991",
+        "created_at": "2020-06-22T10:09:06Z",
+        "body": "nbsp nbsp nbsp Animesh Gupta notifications github com gt nbsp 2020 6 19 3 12 nbsp weiaicunzai pytorch cifar100 pytorch cifar100 noreply github com gt nbsp 1319230184 qq com gt Mention mention noreply github com gt nbsp Re weiaicunzai pytorch cifar100 models resnet 17 dataloader datasets transform dataloader dataloader nbsp nbsp nbsp Animesh Gupta notifications github com gt nbsp 2020 6 17 10 51 nbsp weiaicunzai pytorch cifar100 pytorch cifar100 noreply github com gt nbsp 1319230184 qq com gt Comment comment noreply github com gt nbsp Re weiaicunzai pytorch cifar100 models resnet 17 You are receiving this because you commented Reply to this email directly view it on GitHub or unsubscribe xyy1991 You are receiving this because you were mentioned Reply to this email directly view it on GitHub or unsubscribe"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T18:56:55Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 my implementation from models resnet import resnet50 net resnet50 sum p numel for p in net parameters 23705252 torchvision implementation from torchvision models import resnet50 net resnet50 sum p numel for p in net parameters 25557032 5gb"
+      },
+      {
+        "user": "tjulyz",
+        "created_at": "2020-08-25T06:50:24Z",
+        "body": "resnet 64 gpu"
+      },
+      {
+        "user": "Patrickctyyx",
+        "created_at": "2020-10-05T03:28:10Z",
+        "body": "5 G 78 9 pytorch 1 4 G 60 pytorch ResNet 18 cifar cifar100 65 70 cifar100 resnet18 66 70 Cifar100 trick 70 pytorch scheduler step epoch scheduler step ps resnet 18 cifar100 76 ep"
+      },
+      {
+        "user": "Note-Liu",
+        "created_at": "2022-12-26T01:28:54Z",
+        "body": "Why the parameter epoch in scheduler step epoch will affect the lr"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "#用自己的训练集",
+    "state": "open",
+    "body": "Permission denied F rock image shierlei kc train",
+    "created_at": "2019-08-23T13:48:15Z",
+    "closed_at": null,
+    "user": "fjk123456",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "GPU利用率",
+    "state": "closed",
+    "body": "GPU 10 batch size 64 num workers 8",
+    "created_at": "2019-08-12T14:59:09Z",
+    "closed_at": "2020-08-01T18:17:17Z",
+    "user": "Clannad000000",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "chituma110",
+        "created_at": "2019-08-20T09:11:39Z",
+        "body": "dali"
+      },
+      {
+        "user": "Clannad000000",
+        "created_at": "2019-08-21T05:15:28Z",
+        "body": "dali dali"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T18:14:41Z",
+        "body": "dali dali I think he is referring to a nvidia library called dali which preloads data to gpu to accelerate training process https docs nvidia com deeplearning dali user guide docs But I think you could just simply use larger batch size to increase the GPU memory usage"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "any pretrained models for downloading?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-08-11T13:38:35Z",
+    "closed_at": "2020-08-01T18:06:11Z",
+    "user": "chenguanfu511",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Lornatang",
+        "created_at": "2020-01-27T06:14:36Z",
+        "body": "The implementation of CIFAR in the original ResNet paper is reproduced in my repository please see https github com Lornatang ResNet tree master examples cifar Thank you please give me some suggestions"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T18:06:05Z",
+        "body": "No I don t save any pre trained models"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "my own dataset",
+    "state": "closed",
+    "body": "can it train my own dataset if can how can please",
+    "created_at": "2019-08-09T12:25:45Z",
+    "closed_at": "2020-08-01T18:05:06Z",
+    "user": "cenchaojun",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T18:04:58Z",
+        "body": "You need to write your own Dataset Class to load data see pytorch document https pytorch org tutorials beginner data loading tutorial html for more details"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "RuntimeError: /pytorch/torch/csrc/jit/fuser/cuda/fused_kernel.cpp:196: NVRTC_ERROR unknown",
+    "state": "closed",
+    "body": "When I use googlenet vgg it worked normally But when I use resnet the error occured RuntimeError pytorch torch csrc jit fuser cuda fused kernel cpp 196 NVRTC ERROR unknown",
+    "created_at": "2019-08-07T00:56:52Z",
+    "closed_at": "2020-08-01T17:03:52Z",
+    "user": "HTL2018",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T17:03:44Z",
+        "body": "I ve tested resnett18 resnet152 on google colab didn t encounter the bug you mentioned so there is a highly change that something is wrong with your environment configuration"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "The function of  WarmUpLR() in the utils.py?",
+    "state": "closed",
+    "body": "thank for your great code I am confused of the function of WarmUpLR in the utils py And the lr finder py",
+    "created_at": "2019-08-06T03:17:42Z",
+    "closed_at": "2019-08-07T00:52:18Z",
+    "user": "HTL2018",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-08-01T13:55:08Z",
+        "body": "At the beginning of training phase we could slowly increase the learning rate from 0 to the given learning rate to stabilize the training phase This trick was introduced in ResNet paper yolo also use this training trick"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "boolean type can be accepted rightly as an argument in train.py ",
+    "state": "closed",
+    "body": "In the train py the argument gpu and s will be accepted as boolean However in normal ways if you input the command like the following python train py gpu False s False you will find the arg gpu and arg s are True It means that the arguments gpu and s do not accept the input rightly",
+    "created_at": "2019-08-03T09:05:06Z",
+    "closed_at": "2020-07-30T12:24:08Z",
+    "user": "lionkunonly",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lucgiffon",
+        "created_at": "2020-04-26T05:46:42Z",
+        "body": "Yes this is not how one should handle boolean arguments with argparse You can use instead parser add argument no gpu action store false default True help use gpu or not parser add argument no s action store false default True help whether shuffle the dataset and modify the rest of the code accordingly to match the new arguments names"
+      },
+      {
+        "user": "weiaicunzai",
+        "created_at": "2020-07-31T18:21:11Z",
+        "body": "Thanks guys already fixed that"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Training stage",
+    "state": "closed",
+    "body": "Do you train the model from scratch or based on pre trained weights on ImageNet",
+    "created_at": "2019-07-30T02:23:45Z",
+    "closed_at": "2019-08-02T08:53:46Z",
+    "user": "wangyongjie-ntu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-07-31T06:32:04Z",
+        "body": "all trained from the scratch"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Maybe some wrong in Xception",
+    "state": "closed",
+    "body": "Hi thanks for your nice job when i study the xception i reading the paper and compare your implementation in your model xception SeperableConv2d i get some confusion about in the paper the author tell us that xception first through the 1x1 conv but in your imple you using depthwise first which is not 1x1 conv right image https user images githubusercontent com 38312060 58062178 f3b72180 7bab 11e9 98aa dd325f090298 png def forward self x x self depthwise x x self pointwise x return x",
+    "created_at": "2019-05-21T01:37:53Z",
+    "closed_at": "2019-08-02T08:53:21Z",
+    "user": "forrestsz",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-07-29T12:39:50Z",
+        "body": "The order doesn t matter you could see this from the paper We argue that the first difference is unimportant in par ticular because these operations are meant to be used in astacked setting and other implmentations such as https github com jfzhang95 pytorch deeplab xception blob master modeling backbone xception py https github com tstandley Xception PyTorch blob master xception py"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Model estimates criterion",
+    "state": "closed",
+    "body": "I have noticed that you use the full training set to train the model and select the best model directly on the test set This practice will not underestimate the test error As I often split a validation set and choose the model based on the performance on the validation set Thanks in advance",
+    "created_at": "2019-04-28T06:34:21Z",
+    "closed_at": "2019-07-21T01:44:09Z",
+    "user": "FishWoWater",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-07-17T04:04:04Z",
+        "body": "What do you mean by underestimate the test error I will just assume that you are asking me why I choose the best performance model from the test set result the reason why I did this is just from the engineering perspective we all want a highest score model"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "About the nums of filters of the preactreanet.py",
+    "state": "closed",
+    "body": "In the 86 line of the pytorch cifar100 models preactresnet py file as the under shows https github com weiaicunzai pytorch cifar100 blob 1f0273398f79d3ea5cbea2f450b64258c44f6415 models preactresnet py L86 I think the 156 filters here should be the 512",
+    "created_at": "2019-04-17T13:34:21Z",
+    "closed_at": "2019-04-19T09:15:28Z",
+    "user": "SWHL",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-04-17T14:40:32Z",
+        "body": "Yes you are right thanks for pointing out but I dont think this could cause much lose of accuracy"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "accuracy of shufflenet v2",
+    "state": "closed",
+    "body": "I tried to train shufflenet v2 with your scipt with default hyper parameters you set It should yield 69 51 of best test accuracy but i got best test accuracy 61 68 So what hyper parameters did you use",
+    "created_at": "2019-04-04T04:05:41Z",
+    "closed_at": "2019-04-19T09:15:55Z",
+    "user": "doublejtoh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-04-17T14:32:51Z",
+        "body": "probably because of the warm up training phase you could try to set warm up training phase at 1 or 2 Sorry I cant remember the specific number I ve used"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "这训练结果你是取得200个epoch中最高纪录还是第200个epoch的结果？",
+    "state": "closed",
+    "body": "pytorch",
+    "created_at": "2019-03-22T07:10:31Z",
+    "closed_at": "2019-04-18T15:16:41Z",
+    "user": "sankin1770",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-04-17T14:31:00Z",
+        "body": "200"
+      },
+      {
+        "user": "JiyueWang",
+        "created_at": "2020-06-16T07:14:32Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "WinError123",
+    "state": "closed",
+    "body": "WinError 123 runs vgg16 2019 03 16T19 09 02 288156",
+    "created_at": "2019-03-16T11:10:02Z",
+    "closed_at": "2019-04-18T15:16:17Z",
+    "user": "Mengxianke",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "weiaicunzai",
+        "created_at": "2019-04-17T14:30:18Z",
+        "body": "filenames directory names in Windows can t contain following characters already fixed"
+      }
+    ]
+  }
+]

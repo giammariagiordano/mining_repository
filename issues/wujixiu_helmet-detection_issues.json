@@ -1,0 +1,555 @@
+[
+  {
+    "number": 29,
+    "title": "Duplicates in the train and test sets",
+    "state": "open",
+    "body": "I found that some images are duplicates but have different names Some of them appear both in test and train set and some others appear either two times in the train set or two times in the test set The images names are the following 00376 jpg 00444 jpg 00239 jpg 00676 jpg 00177 jpg 02078 jpg 00286 jpg 02142 jpg 00292 jpg 02542 jpg 02423 jpg 03286 jpg 02224 jpg 03365 jpg 00615 jpg 00641 jpg 00801 jpg 01007 jpg 00509 jpg 00832 jpg 00545 jpg 01132 jpg 00024 jpg 00151 jpg 00095 jpg 00618 jpg 01726 jpg 03087 jpg",
+    "created_at": "2021-05-07T16:19:08Z",
+    "closed_at": null,
+    "user": "saraRaris",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 28,
+    "title": "make all -j8 error ",
+    "state": "open",
+    "body": "when i run the command line make all j12 i found this error PROTOC src caffe proto caffe proto make protoc Command not found CXX src caffe layer factory cpp Makefile 632 recipe for target build release src caffe proto caffe pb cc failed make build release src caffe proto caffe pb cc Error 127 make Waiting for unfinished jobs CXX src caffe common cpp src caffe common cpp 1 10 fatal error boost thread hpp No such file or directory include boost thread hpp compilation terminated src caffe layer factory cpp 4 10 fatal error boost python hpp No such file or directory include boost python hpp compilation terminated Makefile 575 recipe for target build release src caffe common o failed make build release src caffe common o Error 1 Makefile 575 recipe for target build release src caffe layer factory o failed make build release src caffe layer factory o Error 1",
+    "created_at": "2020-06-29T08:32:36Z",
+    "closed_at": null,
+    "user": "zongoalbert",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 27,
+    "title": "yolov3-tiny score",
+    "state": "closed",
+    "body": "I downloaded yolov3 tiny final weights and yolov3 tiny cfg and compile model like this helmet net cv2 dnn readNetFromDarknet cfg yolov3 tiny cfg model weights yolov3 tiny final weights helmet net setPreferableBackend cv2 dnn DNN BACKEND OPENCV helmet net setPreferableTarget cv2 dnn DNN TARGET CPU blob cv2 dnn blobFromImage image 1 255 416 416 0 0 0 1 crop False helmet net setInput blob Runs the forward pass to get output of the output layers outs helmet net forward get outputs names helmet net after this I map outs to get only items where confidences are 0 7 and get following result result https user images githubusercontent com 32259277 80617587 f6bcc200 8a4a 11ea 8a29 977f34a0a1de jpg What can be a problem of this behavior Actually it didn t find real helmet",
+    "created_at": "2020-04-29T15:56:08Z",
+    "closed_at": "2020-05-10T20:13:50Z",
+    "user": "alexkarpxb",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2020-04-30T04:15:15Z",
+        "body": "blob cv2 dnn blobFromImage image 1 255 416 416 0 0 0 1 crop False try a different mean value instead of 0 0 0"
+      },
+      {
+        "user": "alexkarpxb",
+        "created_at": "2020-04-30T10:52:07Z",
+        "body": "wujixiu could you please provide this parameter for yolov3 I tried different values that you provide for another models but It didn t help blob cv2 dnn blobFromImage image 1 255 416 416 104 117 123 1 crop False helmet7 https user images githubusercontent com 32259277 80702444 c11ae600 8ae9 11ea 94eb b92ec91fafa2 jpg"
+      },
+      {
+        "user": "alexkarpxb",
+        "created_at": "2020-05-10T20:13:50Z",
+        "body": "There was a trouble in cfg file I used wrong one now it s working as expected thank you"
+      },
+      {
+        "user": "zongoalbert",
+        "created_at": "2020-07-13T09:07:34Z",
+        "body": "alexkarpxb hello sir could you please tell me how can be run this project the file README md is note clear please help me"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "License",
+    "state": "closed",
+    "body": "Hello wujixiu can you please add LICENSE file to your repository I would like to use some of the pretrained models Squeezenet SSD and SSD RPA300 on your dataset but it is not clear what license they are available under Currently the is no license information which technically means that your repo falls under all rights reserved",
+    "created_at": "2020-02-21T14:10:57Z",
+    "closed_at": "2020-04-14T10:16:28Z",
+    "user": "MajerMartin",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "chouxianyu",
+        "created_at": "2020-03-12T04:39:13Z",
+        "body": "I also want to ask this question because I want to use this dataset If wujixiu reply please me"
+      },
+      {
+        "user": "chouxianyu",
+        "created_at": "2020-04-10T09:36:30Z",
+        "body": "I just found out that the author wujixiu has created Apache License 2 0 21 days ago so this issue can be closed"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "How exactly can I use a pretrained model on pictures? I can't find the specific script.",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-01-16T11:31:38Z",
+    "closed_at": "2021-03-05T16:00:30Z",
+    "user": "JanikBuecher",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "Can I fine tuning the yolo3-tiny model?",
+    "state": "open",
+    "body": "Thank you for your wonderful work I wonder if I can fine tuning the yolo3 tiny model using your code If so how should I do it Thanks a lot",
+    "created_at": "2020-01-03T05:22:14Z",
+    "closed_at": null,
+    "user": "hliu2016",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "About Datasets",
+    "state": "open",
+    "body": "Hello I am very glad that you have made contributions to this field May I ask where can you download your data set It was not found in the file you uploaded Thank you very much",
+    "created_at": "2019-12-01T07:57:22Z",
+    "closed_at": null,
+    "user": "By-he",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2019-12-02T07:03:07Z",
+        "body": "Yeah dataset is available in Baidu Yun and Google cloud"
+      },
+      {
+        "user": "0816-Radhu",
+        "created_at": "2019-12-23T18:00:27Z",
+        "body": "Plz give a python code about automated helmet detection using maschine learning"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "train_image 000377.xml label 'dog', pretty funny!",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-10-12T06:05:52Z",
+    "closed_at": null,
+    "user": "AndrewChung-GitHub",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "chouxianyu",
+        "created_at": "2020-02-12T12:16:28Z",
+        "body": "i didn t find a label dog in 000377 xml"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "MaskPooling layer is not available.",
+    "state": "closed",
+    "body": "F1008 18 36 51 900141 31887 layer factory hpp 81 Check failed registry count type 1 0 vs 1 Unknown layer type MaskPooling known types AbsVal Accuracy AnnotatedData ArgMax BNLL BatchNorm BatchReindex Bias Concat ContrastiveLoss Convolution Crop Data Deconvolution DetectionEvaluate DetectionOutput Dropout DummyData ELU Eltwise Embed EuclideanLoss Exp Filter Flatten HDF5Data HDF5Output HingeLoss Im2col ImageData InfogainLoss InnerProduct Input LRN LSTM LSTMUnit Log MVN MemoryData MultiBoxLoss MultinomialLogisticLoss Normalize PReLU Parameter Permute Pooling Power PriorBox RNN ReLU Reduction Reshape SPP Scale Sigmoid SigmoidCrossEntropyLoss Silence Slice SmoothL1Loss Softmax SoftmaxWithLoss Split TanH Threshold Tile VideoData WindowData I built the caffe and trained Pelee RPA for 120000 iterations Now I am trying to make inference and it gave me this error Could anyone have an idea about this problem Thanks",
+    "created_at": "2019-10-09T01:41:42Z",
+    "closed_at": "2019-10-09T02:50:59Z",
+    "user": "Maharshi-Aupera",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Maharshi-Aupera",
+        "created_at": "2019-10-09T02:50:59Z",
+        "body": "I solved this error by setting export PYTHONPATH path to caffe python PYTHONPATH"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "How to make  dataset lmdb",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-09-20T06:59:01Z",
+    "closed_at": null,
+    "user": "aboy2018",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "请求论文全文",
+    "state": "open",
+    "body": "chy 24 163 com",
+    "created_at": "2019-08-29T14:46:15Z",
+    "closed_at": null,
+    "user": "Alvin-YCHEN",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "询问论文中的fast r cnn",
+    "state": "open",
+    "body": "fast rcnn fast rcnn",
+    "created_at": "2019-08-11T02:43:30Z",
+    "closed_at": null,
+    "user": "XcodeHw",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2019-08-12T02:52:32Z",
+        "body": "Faster R CNN"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "the value of final loss",
+    "state": "open",
+    "body": "could you please share your value of final loss when you train the models like ssd or ssd rpa when I train it the loss can t descent to a small value the min loss about 3 xxx",
+    "created_at": "2019-07-29T01:31:17Z",
+    "closed_at": null,
+    "user": "cab1211",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "when I test your SSD_RPA300.prototxt and VGG_RPA300_Hardhat_iter_112000.caffemodel",
+    "state": "open",
+    "body": "here appear Check failed registry count type 1 0 vs 1 Unknown layer type MaskPooling I can not find MaskPooling in hardhat wearing detection SSD RPA src caffe proto caffe proto I am a fresher",
+    "created_at": "2019-07-01T07:01:11Z",
+    "closed_at": null,
+    "user": "qianjun1987",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Thanks for your sharing.Can you describe how to run yolov3-tiny?",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-06-05T08:41:09Z",
+    "closed_at": null,
+    "user": "bjwbjw",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Tanks for your sharing.Can you describe how to run yolov3-tiny?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-06-05T08:40:27Z",
+    "closed_at": "2019-06-05T08:40:51Z",
+    "user": "bjwbjw",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "Hi, i cannot download the dataset from baiduyun. it is frozen.",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-05-29T06:59:58Z",
+    "closed_at": null,
+    "user": "HUSTXUECHENGXI",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2019-06-04T02:27:21Z",
+        "body": "Try the following link Baidu Yun 646 6MB https pan baidu com s 1 Jj56B05YpUv5iLB9JMb4g pwd dstk Google Drive https drive google com drive folders 12WtXQyM 7jWvWPtCXZlnycsIK72ClHgu usp sharing"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "SSD-RPA git is missing",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-05-12T10:29:26Z",
+    "closed_at": "2019-05-27T12:30:57Z",
+    "user": "wait1988",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "想问下 这个在windowns下如何编译SSD_RPA",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-04-29T09:06:45Z",
+    "closed_at": null,
+    "user": "h-acker",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "qianjun1987",
+        "created_at": "2019-06-27T08:36:56Z",
+        "body": "https pan baidu com s 1gBcIqZf53Xt Geelz0v DA k3f2 App"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": " from ._caffe import Net, SGDSolver, NesterovSolver, AdaGradSolver, \\ ImportError: No module named 'caffe._caffe'",
+    "state": "open",
+    "body": "python3 5",
+    "created_at": "2019-04-28T10:03:45Z",
+    "closed_at": null,
+    "user": "h-acker",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "qianjun1987",
+        "created_at": "2019-06-27T08:39:37Z",
+        "body": ""
+      },
+      {
+        "user": "qianjun1987",
+        "created_at": "2019-06-27T08:39:51Z",
+        "body": "https pan baidu com s 1gBcIqZf53Xt Geelz0v DA k3f2 App"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "unable to download weight files through Baidu app",
+    "state": "closed",
+    "body": "The content is not in english and unable to download the weight files can you please provide alternate link to directly download the files",
+    "created_at": "2019-03-07T06:23:58Z",
+    "closed_at": "2019-03-08T11:19:37Z",
+    "user": "Siddartha123",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "qiuchenqqb",
+        "created_at": "2019-03-08T03:02:00Z",
+        "body": "Can you please use google drive because we can t download weight files for some unknown reasons"
+      },
+      {
+        "user": "wujixiu",
+        "created_at": "2019-03-08T07:27:23Z",
+        "body": "Data and weights are available in Google Drive https drive google com drive folders 12WtXQyM 7jWvWPtCXZlnycsIK72ClHgu usp sharing Now"
+      },
+      {
+        "user": "Siddartha123",
+        "created_at": "2019-03-08T11:19:37Z",
+        "body": "Thank you"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Labeled region",
+    "state": "open",
+    "body": "Labeled region is the head but not the helmet It s a trick raise the mAP If labeled region includes only the helmet would the model converge faster or not",
+    "created_at": "2019-03-03T15:38:35Z",
+    "closed_at": null,
+    "user": "TianLei15822591582",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TianLei15822591582",
+        "created_at": "2019-03-04T02:20:45Z",
+        "body": "wujixiu thanks great job"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "How many training images are enough",
+    "state": "open",
+    "body": "Your model is great How many training images are enough such as to raise the mAP to 70 I have only a few images 100 so my own model s mAP is lower than 50 I don t know if I need to append some training data",
+    "created_at": "2019-03-03T14:59:31Z",
+    "closed_at": null,
+    "user": "TianLei15822591582",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TianLei15822591582",
+        "created_at": "2019-03-04T02:19:27Z",
+        "body": "wujixiu"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "你好，请问我可以加一下你的联系方式吗，我有几个问题想请教你。",
+    "state": "closed",
+    "body": "QQ 1018949282",
+    "created_at": "2019-02-25T10:08:16Z",
+    "closed_at": "2019-02-27T07:31:17Z",
+    "user": "YuGuii",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Jai-wei",
+        "created_at": "2020-02-25T02:13:23Z",
+        "body": "please say English"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Can I know if the person or face is detected?",
+    "state": "open",
+    "body": "",
+    "created_at": "2018-11-22T09:33:08Z",
+    "closed_at": null,
+    "user": "komalpharate",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2018-11-23T05:47:56Z",
+        "body": "This approach can detect the person or face because of a region of the head of a person is labeled for training However it s not specifically designed for such a task which makes it unreliable compared to the algorithms which are task specific"
+      },
+      {
+        "user": "komalpharate",
+        "created_at": "2018-11-23T08:49:41Z",
+        "body": "Okay Thanks a lot Also I think helmet detection is separately done So it is not possible to distinguish if the person is wearing a helmet or it is placed on the table probably people wearing helmet and helmet are considered in the same class Y R B W Right"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "False detection.",
+    "state": "open",
+    "body": "have a lot of false detection detecting people without helmet as people",
+    "created_at": "2018-10-16T11:59:01Z",
+    "closed_at": null,
+    "user": "BlcaKHat",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wujixiu",
+        "created_at": "2018-10-18T03:05:27Z",
+        "body": "The models also detect people without a helmet except for detecting people with a various color helmet"
+      },
+      {
+        "user": "BlcaKHat",
+        "created_at": "2018-10-22T07:19:24Z",
+        "body": "can it be useful for counting the number of people wearing helmet"
+      },
+      {
+        "user": "komalpharate",
+        "created_at": "2018-10-22T09:15:08Z",
+        "body": "It also detects cap with Red Yellow White Blue as helmet Also people wearing RYWB t shirts are also getting detected as wearing helmet"
+      },
+      {
+        "user": "komalpharate",
+        "created_at": "2018-10-22T09:25:20Z",
+        "body": "I think About counting people Line 140 in ssd pelee py Decide your score limit as expected value countPeopleWearingHelmet 0 if score expected value and label name N countPeopleWearingHelmet countPeopleWearingHelmet 1 or you can consider changing this parameter than score conf thresh"
+      },
+      {
+        "user": "sayanmutd",
+        "created_at": "2019-02-27T14:04:28Z",
+        "body": "komalpharate How did you download the pretrained model files These are uploaded in Baidu cloud which cannot be accessed wujixiu Could you suggest something"
+      },
+      {
+        "user": "rsingh2083",
+        "created_at": "2020-11-08T19:31:02Z",
+        "body": "have a lot of false detection detecting people without helmet as people Hi how do I even run the detection Downloaded the model etc but which script to run Can you please help"
+      },
+      {
+        "user": "BlcaKHat",
+        "created_at": "2020-11-09T04:52:43Z",
+        "body": "https github com BlcaKHat yolov3 Helmet Detection try this rsingh2083"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "About the training data",
+    "state": "open",
+    "body": "SSD tensorflow 70 13026107060 163 com github",
+    "created_at": "2018-08-23T07:49:27Z",
+    "closed_at": null,
+    "user": "Janezzliu",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HarminDo",
+        "created_at": "2018-11-08T12:23:02Z",
+        "body": ""
+      },
+      {
+        "user": "komalpharate",
+        "created_at": "2018-11-21T09:45:08Z",
+        "body": "Hello The pretrained models are having good acuracy Can we get the training steps and training data"
+      },
+      {
+        "user": "wujixiu",
+        "created_at": "2018-11-23T05:50:18Z",
+        "body": "Hi everyone the training data will available sooner or later for more data are added to the dataset"
+      },
+      {
+        "user": "amenegola",
+        "created_at": "2019-02-06T15:41:04Z",
+        "body": "Hi there wujixiu Really nice code and trained networks For medium to large objects it works perfectly I would like to know if possible more details about your training data This would help me to build my own dataset I would like to know things like How many images does your training set have How did you annotate your images By hand or with some sort of pre detection How much is your positive negative samples ratio Really nice work congrats"
+      },
+      {
+        "user": "wujixiu",
+        "created_at": "2019-02-12T16:30:30Z",
+        "body": "Hi amenegola Our dataset provides 3 174 images containing 18 893 hardhats instances including non hardhats regions All images are labelled mannually with labelImg Same pos neg ratio in SSD Training Data will be released at the end of this month"
+      },
+      {
+        "user": "amenegola",
+        "created_at": "2019-02-18T12:46:39Z",
+        "body": "Hello wujixiu Awesome thanks for this reply you are very helpful Congrats again on the model Cheers Afonso"
+      },
+      {
+        "user": "codeqby",
+        "created_at": "2019-02-19T06:46:22Z",
+        "body": "I m looking forward to the training data too Thanks for your great job"
+      },
+      {
+        "user": "YuGuii",
+        "created_at": "2019-02-23T09:03:18Z",
+        "body": "QQ 1018949282"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "model weight file",
+    "state": "open",
+    "body": "good job could you share the model weight files again It seems that download link both google driver and baidu is not available",
+    "created_at": "2018-08-21T08:16:39Z",
+    "closed_at": null,
+    "user": "hymanzhu1983",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wwzh2003",
+        "created_at": "2018-08-21T18:22:39Z",
+        "body": "model"
+      },
+      {
+        "user": "wujixiu",
+        "created_at": "2018-08-22T05:54:07Z",
+        "body": "The weights files are now available now"
+      }
+    ]
+  }
+]

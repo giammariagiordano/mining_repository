@@ -1,0 +1,60 @@
+[
+  {
+    "number": 3,
+    "title": "When i change my sgd to Nadam,my loss become to NaN,why?",
+    "state": "open",
+    "body": "",
+    "created_at": "2022-10-29T06:49:07Z",
+    "closed_at": null,
+    "user": "Crane1043778796",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Quick Question on adam.py",
+    "state": "open",
+    "body": "Awesome work The adam py implementation is very useful I just had a quick question about alpha t tf sqrt 1 beta2 power 1 beta1 power What does this achieve Wouldn t the original Adam implementation be var lr m t tf sqrt v t eps rather than var lr m t alpha t tf sqrt v t eps Are you adding weight decay with alpha t maybe",
+    "created_at": "2019-04-19T02:53:50Z",
+    "closed_at": null,
+    "user": "btahir",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "angetato",
+        "created_at": "2019-07-13T18:56:22Z",
+        "body": "Hello btahir I know my answer is late but for those with the same question here is the answer In the original paper https arxiv org pdf 1412 6980 pdf see algorithm 1 they use equation https latex codecogs com gif latex widehat m t space space m t space 1 beta 1 space t instead of m t same for v t to compute the update Thus equation https latex codecogs com gif latex var space space lr space space hat m t space sqrt hat v t space plus space varepsilon space space var space space lr space space m t alpha t sqrt v t space plus space varepsilon Thanks"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "is AADAM suited for Self driving cars context ?",
+    "state": "open",
+    "body": "I am working on avod method for self driving cars using deep learning https github com kujason avod I tried aadam aadam1 and aadam2 and all of them perform worst then adam what do you think the reason would be",
+    "created_at": "2018-05-06T23:11:19Z",
+    "closed_at": null,
+    "user": "Oussamab21",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "angetato",
+        "created_at": "2018-05-09T16:02:17Z",
+        "body": "Interesting I tried it on images and textual data only The reason might be related to the type of data Of course there exist some exceptions to the proposed methods I am working on specifications about that I will try with your dataset Thanks for the comment"
+      },
+      {
+        "user": "Oussamab21",
+        "created_at": "2018-05-13T18:31:13Z",
+        "body": "You are welcome please tell me what result you will get by the end"
+      },
+      {
+        "user": "angetato",
+        "created_at": "2019-07-13T18:58:47Z",
+        "body": "Oussamab21 Did you try the new versions they are available here https github com angetato Custom Optimizer on Keras Let me know Thanks"
+      }
+    ]
+  }
+]

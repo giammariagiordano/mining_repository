@@ -1,0 +1,175 @@
+[
+  {
+    "number": 8,
+    "title": "Is there any way I can use the pretrained model to fine-tune it?",
+    "state": "closed",
+    "body": "I m trying to use the pre trained model in my training process with my own dataset It keeps throwing the error No file found latest net D1 pth I only used the flag continue training",
+    "created_at": "2022-05-25T18:20:18Z",
+    "closed_at": "2022-05-26T05:44:57Z",
+    "user": "ali-ahnaf",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2022-05-25T18:54:04Z",
+        "body": "For fine tuning the discriminator model latest net D1 pth is required but we can t provide it because I can t find it anymore I suggest you train from scratch yourself and then fine tune on your data"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "How/Where is the skeleton image embedding implemented? ",
+    "state": "open",
+    "body": "Hello Ha0Tang I read through the GestureGAN paper and noticed under Experimental setup that the skeleton images are embedded by passing through an encoder I cannot identify where this has been implemented in the code The dataloader seggregates the incoming input image into four 256x256 blocks RealA RealB RealC RealD This is then fed to the model using set input function Am I missing something here Kindly help Thanks jysa01",
+    "created_at": "2021-05-18T08:25:19Z",
+    "closed_at": null,
+    "user": "jysa01",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "Filter failure cases manually from train set?",
+    "state": "closed",
+    "body": "I am interested to understand the working of gestureGAN twocycle model I downloaded the senz3d dataset and prepared training and test data as indicated When I saw the training output I noticed that there are many images for which the pose is wrongly identified Did you manually delete them from the 135 504 training samples Can you please provide a txt file with the correct sample s filenames Thanks and best regards jysa01",
+    "created_at": "2021-05-07T12:10:22Z",
+    "closed_at": "2021-05-10T08:47:27Z",
+    "user": "jysa01",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-05-07T12:20:43Z",
+        "body": "Can you share with me some examples"
+      },
+      {
+        "user": "jysa01",
+        "created_at": "2021-05-09T17:44:48Z",
+        "body": "Below are some samples from the train set G5 S3 7 color G6 S3 1 color AB lr png image https user images githubusercontent com 40629869 117581385 bd5a7000 b0fc 11eb 8d0d a7ab61e1c652 png G5 S3 5 color G1 S3 13 color png image https user images githubusercontent com 40629869 117581649 4cb45300 b0fe 11eb 819c 080a4eebdf25 png G3 S4 20 color G6 S4 1 color AB lr png image https user images githubusercontent com 40629869 117581760 c8ae9b00 b0fe 11eb 8cd1 f3ccfa744e3f png"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-05-09T18:12:46Z",
+        "body": "If you prepared the data according to the instructions I provided there should be nothing wrong I used all 135 504 samples for training"
+      },
+      {
+        "user": "jysa01",
+        "created_at": "2021-05-10T08:47:04Z",
+        "body": "OK Thank you Yes I did follow all the steps From my understanding the Matlab code provided prepares each data sample as A B C D by reading each filename given in senz3d split senz3d train txt from the folders senz3d image skeleton senz3d skeleton and senz3d image skeleton senz3d image respectively So the skeleton inside the senz3d skeleton folder for the sample G5 S3 5 color G1 S3 13 color png is G5 S3 5 color png G5 S3 5 color https user images githubusercontent com 40629869 117631549 a3607200 b17c 11eb 9780 31014cf49782 png I seem to have interpreted this as a wrong pose Thank you for the clarification"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Not able to download the pretrained model for CVUSA",
+    "state": "closed",
+    "body": "Hi First of all great work I am not able to download any pre trained model except ntu gesturegan twocycle pretrained tar gz Could you please provide an updated link for the other models",
+    "created_at": "2020-12-06T20:58:22Z",
+    "closed_at": "2020-12-07T12:02:53Z",
+    "user": "DeekshaDixit15",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-12-07T12:02:11Z",
+        "body": "Please try it again it should work The first time will create the folder and the second time will download the models"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "L2 loss channel-wise missing?",
+    "state": "closed",
+    "body": "Hello I ve been reading the GestureGAN paper and the way in which calculating the L2 loss in the generator channel wise avoids channel pollution However I can not find it implemented in the code Only the L1 loss is calculated channel wise which the paper states that is not necessary Is this an error en in the code and when calculating L1 loss it was meant to calculate L2 Thanks",
+    "created_at": "2020-07-02T10:36:17Z",
+    "closed_at": "2020-07-10T12:48:04Z",
+    "user": "Franborat",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-07-07T21:26:13Z",
+        "body": "Thanks for your interest in our work 1 You can replace self criterionL1 with self criterionL2 to obtain the channel wise L2 loss where self criterionL2 torch nn MSELoss 2 We also found that in our experiments the channel wise L1 loss achieves better results than the traditional L1 loss although in theory both should be the same"
+      },
+      {
+        "user": "Franborat",
+        "created_at": "2020-07-10T12:47:59Z",
+        "body": "All right Thank you for the answer I ll try both and see what works best in my research"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "can't dowload NTU hand digit dataset",
+    "state": "closed",
+    "body": "The download link in the paper is broken Do you know where else to download",
+    "created_at": "2020-03-07T09:58:42Z",
+    "closed_at": "2020-03-07T10:40:33Z",
+    "user": "waterai12",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-03-07T10:04:17Z",
+        "body": "The download link provided in this repro should be fine Can you try again"
+      },
+      {
+        "user": "waterai12",
+        "created_at": "2020-03-07T10:20:11Z",
+        "body": "The download link provided in this repro should be fine Can you try again Is this link http www ntu edu sg home renzhou HandGesture htm I tried but faild"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-03-07T10:23:21Z",
+        "body": "We also noticed that the original download link has expired so we provided the prepared data here https github com Ha0Tang GestureGAN dataset preparation"
+      },
+      {
+        "user": "waterai12",
+        "created_at": "2020-03-07T10:37:19Z",
+        "body": "We also noticed that the original download link has expired so we provided the prepared data here https github com Ha0Tang GestureGAN dataset preparation Thank you for answering my question I found it"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "hope the codes can be realeased soon",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-01-24T08:47:30Z",
+    "closed_at": "2019-07-22T10:58:29Z",
+    "user": "liyulin9541",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-07-21T06:11:32Z",
+        "body": "liyulin9541 The code data model are available now Sorry for the late release"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "When will the codes be realeased??",
+    "state": "closed",
+    "body": "Hi I d like to know when will this codes will be avaliable",
+    "created_at": "2018-12-13T05:20:10Z",
+    "closed_at": "2019-07-22T10:58:37Z",
+    "user": "Muzijiajian",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-07-21T06:11:46Z",
+        "body": "Muzijiajian The code data model are available now Sorry for the late release"
+      }
+    ]
+  }
+]

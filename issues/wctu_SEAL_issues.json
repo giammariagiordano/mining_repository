@@ -1,0 +1,170 @@
+[
+  {
+    "number": 17,
+    "title": "hi! how can I retraining the PAN model in new dataset,thanks!",
+    "state": "open",
+    "body": "",
+    "created_at": "2023-08-15T05:12:09Z",
+    "closed_at": null,
+    "user": "Rebecaa000",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "Is there a way to use python 3 to run the code?",
+    "state": "open",
+    "body": "Hi I wanted to run the code with cuda 9 1 on python 2 7 However it was hard to find a pytorch version for python 2 7 Then I have created a new environment with python 3 6 but when running python compile cpp py build I got errors inerspy cpp related to PyInt FromLong and Py InitModule I have tired to edit the code for python 3 but then I got build temp win amd64 3 6 Release ERSModule cp36 win amd64 lib fatal error LNK1120 1 unresolved externals error Is it possible for you to provide the corresponding file with python 3 6 Thanks",
+    "created_at": "2023-02-08T15:16:37Z",
+    "closed_at": null,
+    "user": "Adnan1986",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "RuntimeError: CuDNN error: CUDNN_STATUS_EXECUTION_FAILED",
+    "state": "open",
+    "body": "Hi Thank you for sharing your code to use your code I creat a new conda envirenment with python 2 7 Then I installed opencv 3 4 2 and conda install pytorch 0 4 1 cuda90 c pytorch for cuda 9 and pytorch 0 4 1 However I got RuntimeError CuDNN error CUDNN STATUS EXECUTION FAILED Previously I have tried different combination of cuda pytorch and cudnn still got this error this is the error and output of python m torch utils collect env image https user images githubusercontent com 53436210 216339262 8a8b77d3 6633 450a 99a9 393d9ced9331 png Could you please give me a help how I can fix it Thanks",
+    "created_at": "2023-02-02T13:40:07Z",
+    "closed_at": null,
+    "user": "Adnan1986",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Reproduce numbers in the paper",
+    "state": "open",
+    "body": "Hi I use the provided checkpoint on BSD500 and try to reproduce numbers in the paper but I can only get results nC 200 ASA 0 959617 BR 0 733322 nC 400 ASA 0 967188 BR 0 804939 But from the plot you showed in the paper it seems you could get 96 ASA when nC 200 and 81 BR when nC 400 I m wondering is this the checkpoint you used in the paper there seems a slight mismatch with it Thanks",
+    "created_at": "2019-11-07T05:38:35Z",
+    "closed_at": null,
+    "user": "SteveJunGao",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "the test can be run in pc without gpu?",
+    "state": "open",
+    "body": "i want to see the testing result based your model but my pc without gpu so can this code testing section be run in cpu",
+    "created_at": "2019-08-27T08:31:38Z",
+    "closed_at": null,
+    "user": "forrestsz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "About the loss function",
+    "state": "open",
+    "body": "It s a great piece of work As one of the most important contributions in your paper will you release the code for the segmentation aware affinity loss Thx ahead",
+    "created_at": "2019-05-22T14:56:56Z",
+    "closed_at": null,
+    "user": "backseason",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Is trained model on cityScapes avaliable？",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-12-18T01:08:02Z",
+    "closed_at": "2019-04-17T08:42:24Z",
+    "user": "Wanger-SJTU",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xwasco",
+        "created_at": "2019-01-24T15:22:31Z",
+        "body": "Hello wctu am interested too thanks"
+      },
+      {
+        "user": "SteveJunGao",
+        "created_at": "2019-03-29T03:57:40Z",
+        "body": "I m also interested in the model trained on the Cityscapes too could you provide it Thanks"
+      },
+      {
+        "user": "wctu",
+        "created_at": "2019-04-04T07:23:17Z",
+        "body": "Hi all The model is included in test"
+      },
+      {
+        "user": "SteveJunGao",
+        "created_at": "2019-04-04T16:27:32Z",
+        "body": "Many thanks"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Will the training code be made available?",
+    "state": "open",
+    "body": "Your work is inspiring is there a plan to publish the training code lately Thanks",
+    "created_at": "2018-12-12T05:35:47Z",
+    "closed_at": null,
+    "user": "vinjohn",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuxy1103",
+        "created_at": "2021-04-13T08:47:22Z",
+        "body": "Your work is inspiring is there a plan to publish the training code lately Thanks"
+      },
+      {
+        "user": "liuxy1103",
+        "created_at": "2021-04-13T08:47:27Z",
+        "body": "Your work is inspiring is there a plan to publish the training code lately Thanks"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Could you please specify the license for the project?",
+    "state": "closed",
+    "body": "Dear wctu could you please specify a license for the project I think github lets selecting one of the predefined license templates and generates a license file in the project automatically if i m not mistaken Thanks Best Vasili",
+    "created_at": "2018-09-19T12:47:30Z",
+    "closed_at": "2019-04-04T07:22:15Z",
+    "user": "VasiliBaranov",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "Would you please release ERS_Python module?",
+    "state": "closed",
+    "body": "I m using Python3 I encountered ImportError when I imported ERSModule ImportError home hongxin opensource SEAL test ERSModule so undefined symbol Py InitModule4 64 So would you please release ERS Python",
+    "created_at": "2018-08-28T08:11:09Z",
+    "closed_at": "2018-08-30T06:00:28Z",
+    "user": "hughplay",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wctu",
+        "created_at": "2018-08-29T10:14:29Z",
+        "body": "Thanks for your comment I put the code in the test ERS Python folder If you find the code useful please also give credit to the original ERS https github com mingyuliutw EntropyRateSuperpixel"
+      },
+      {
+        "user": "Ashish77IITM",
+        "created_at": "2019-04-15T03:44:28Z",
+        "body": "hughplay wctu Even after having ERSPython file in test folder I have encountered the same error on Linux while running test py How to solve this issue please guide me Thank You"
+      },
+      {
+        "user": "wctu",
+        "created_at": "2019-04-17T08:50:11Z",
+        "body": "Ashish77IITM The ERSModule so module in the test folder is pre built using Python 2 It is likely you are using Python 3 so that you have the ImportError issue The solution is to use Python 2 to run the code or you need to re build the module from ERSPython folder using Python 3 to obtain the correct module for your platform"
+      }
+    ]
+  }
+]

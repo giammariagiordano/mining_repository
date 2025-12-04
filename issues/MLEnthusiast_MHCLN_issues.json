@@ -1,0 +1,123 @@
+[
+  {
+    "number": 6,
+    "title": "数据集问题",
+    "state": "open",
+    "body": "",
+    "created_at": "2025-01-04T08:07:19Z",
+    "closed_at": null,
+    "user": "zmmdeid",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 5,
+    "title": "iterations when converging",
+    "state": "open",
+    "body": "Did you iterate the network model 10 000 times on the UCMD and AID datasets If not can you tell me the number of iterations when converging on these two data sets",
+    "created_at": "2020-12-06T14:31:42Z",
+    "closed_at": null,
+    "user": "cxy0616",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MLEnthusiast",
+        "created_at": "2020-12-06T14:35:59Z",
+        "body": "If I remember correctly I used 25000 iterations for AID since the dataset is larger than UCMD"
+      },
+      {
+        "user": "cxy0616",
+        "created_at": "2020-12-08T02:36:35Z",
+        "body": "Thank you for your reply I think the selection method of triples in the code is randomly selected offline Each batch size has 30 triples Have you tried to select batch all or batch hard online"
+      },
+      {
+        "user": "MLEnthusiast",
+        "created_at": "2020-12-18T10:39:27Z",
+        "body": "Yes they are always randomly selected But it s an interesting suggestion to do hard mining Please let me know if you find improvements using batch all or batch hard Thanks"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": " pre training models",
+    "state": "open",
+    "body": "Hello I don t quite understand what pre training models need to download about tensorflow Can you help me",
+    "created_at": "2019-10-08T02:56:25Z",
+    "closed_at": null,
+    "user": "ximi2018",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MLEnthusiast",
+        "created_at": "2019-10-08T08:18:09Z",
+        "body": "Hi The pre trained model is InceptionV3 trained on ImageNet Tensorflow webpage has been revamped and the instructions have changed probably Anyways I have uploaded the pre trained model on the below link Please let me know if you have further questions https drive google com file d 1FFMU1vIEPveJAzTb237wg3f019pvrvUq view usp sharing"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "pretrain_model",
+    "state": "open",
+    "body": "hello thx for your open source when I use the inception v3 ckpt pretrain model for UCMD dataset run the extract features py file will have a problem udcd5 udcbb udcb5 udcbd udcb6 udca8 udcb5 udcc4 udcce udcfe udca1 udca3 No such file or directory can you tell me which pretrain model I can use or how to fix the error thx",
+    "created_at": "2019-05-11T11:56:49Z",
+    "closed_at": null,
+    "user": "world2025",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "world2025",
+        "created_at": "2019-05-11T12:36:06Z",
+        "body": "parser add argument model dir type str default inception v3 ckpt"
+      },
+      {
+        "user": "world2025",
+        "created_at": "2019-05-11T12:47:20Z",
+        "body": "ok i solve it"
+      },
+      {
+        "user": "world2025",
+        "created_at": "2019-05-11T12:48:48Z",
+        "body": "ok I solve it"
+      },
+      {
+        "user": "ximi2018",
+        "created_at": "2019-10-08T02:56:40Z",
+        "body": "Hello I don t quite understand what pre training models need to download about tensorflow Can you help me"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "pre_train model",
+    "state": "closed",
+    "body": "hello thx for your open source but I meet a problem when I use the extract features py file for UCMD dataset the error is udcd5 udcbb udcb5 udcbd udcb6 udca8 udcb5 udcc4 udcce udcfe udca1 udca3 No such file or directory for the pretrain model but I download the inception v3 ckpt pretrain model can you tell me how to fix it thx",
+    "created_at": "2019-05-11T11:47:53Z",
+    "closed_at": "2019-05-11T12:47:35Z",
+    "user": "world2025",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "experimental result",
+    "state": "closed",
+    "body": "I have runned the code for UCM but the result of mine is different from yours In the paper 32bit mAP of UCM is 0 904 my experimental result is 0 884955 Is it a parameter problem",
+    "created_at": "2019-03-26T05:12:27Z",
+    "closed_at": "2019-03-26T13:08:35Z",
+    "user": "Zhangxintong007",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MLEnthusiast",
+        "created_at": "2019-03-26T13:06:54Z",
+        "body": "Hi I re ran the same code and I achieved map 20 as 0 9034 The results are different among different runs because the train and test splits are done randomly when you run dataset generator py To get stable results you may fix the seed of python However I have provided a link to the randomly chosen train and test split in the readme file of this project You can download and verify the results I obtained link https drive google com open id 13D3zrX0D0vr4Uz6aiZ9H9bsBr6No3vbm"
+      }
+    ]
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "number": 22,
+    "title": "Simplification Degree ",
+    "state": "open",
+    "body": "Hi thanks for the really amazing work I was trying out the demo at https sketch esslab jp but it was giving service unavailable I set up the code on my local machine and was able to get it running But I couldn t find the Simplification Degree parameter anywhere in the code which is available in the demo img width 914 alt image src https github com bobbens sketch simplification assets 43930695 7d9b53ac 6649 49d1 b8ef 17b153d0405e Few doubts Could you please help me with how I can try the simplification degree Also is this factor available for Pencil Drawing Generation How are the two models shown in demo v3 inking and v4 topsecret different from the available model mse t7 model gan t7 model pencil1 t7 and model pencil2 t7 Thanks a lot",
+    "created_at": "2023-11-21T12:16:10Z",
+    "closed_at": null,
+    "user": "harpavatkeerti",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "update code for the latest/recent pytorch version?",
+    "state": "closed",
+    "body": "hello i m trying to use your program but it gives this error ModuleNotFoundError No module named torch utils serialization a quick search and i ve found this issue on pytorch s github page https github com pytorch pytorch issues 15307 can you please update the repo or point me to the right direction as to how i can change this code to get it working",
+    "created_at": "2022-11-03T03:50:12Z",
+    "closed_at": "2022-11-07T13:19:59Z",
+    "user": "junguler",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "junguler",
+        "created_at": "2022-11-07T13:19:59Z",
+        "body": "this pr https github com bobbens sketch simplification pull 12 fixes this issue so i m closing this now"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "About Simplification Degree in Online Demo",
+    "state": "open",
+    "body": "Hi it s great to see such amazing work The online demo is so attractive I am curious about how to control the simplification degree in online demo with the code",
+    "created_at": "2021-11-07T13:30:07Z",
+    "closed_at": null,
+    "user": "mxllc",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "krummrey",
+        "created_at": "2021-12-03T21:36:57Z",
+        "body": "And is the new secret model available for download It works so much better"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Need some way to download the model like google drive.",
+    "state": "open",
+    "body": "Hi I am in China mainland and I find it hard for me to download the models via the way in download models sh file which might result from the network gap in China Can you offer another that can download the model directly via browser",
+    "created_at": "2021-10-20T09:16:51Z",
+    "closed_at": null,
+    "user": "SandroChen",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Run models in LUA",
+    "state": "open",
+    "body": "is it possible to run the models on lua",
+    "created_at": "2020-07-12T18:49:29Z",
+    "closed_at": null,
+    "user": "b4zz4",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "why i can not download the pretrained model?",
+    "state": "closed",
+    "body": "thanks for sharing i try to download the models but failed anyone can help me bobbens sailor DESKTOP N9775SB mnt d PycharmProjects2 edge detection sketch simplification bash download models sh download models sh line 2 r command not found download models sh line 3 syntax error near unexpected token r ownload models sh line 3 function download model",
+    "created_at": "2020-05-19T16:08:28Z",
+    "closed_at": "2020-05-19T17:14:02Z",
+    "user": "nywang2019",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nywang2019",
+        "created_at": "2020-05-19T16:22:07Z",
+        "body": "By the way i am using win10"
+      },
+      {
+        "user": "nywang2019",
+        "created_at": "2020-05-19T17:13:56Z",
+        "body": "i have resolved this problem it s because of the difference between Linux and windows"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "please add requirements.txt",
+    "state": "closed",
+    "body": "It is difficult to build haven t succeeded yet Please include a requirements txt",
+    "created_at": "2019-11-23T22:13:17Z",
+    "closed_at": "2019-11-23T22:15:25Z",
+    "user": "JJonesAtAvaya",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ahuirecome",
+        "created_at": "2021-11-19T09:49:22Z",
+        "body": "same problem"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "vectorization",
+    "state": "closed",
+    "body": "After simplification how can the output be made into vector graphics It is mentioned in the paper Can you suggest a preferred method Thanks",
+    "created_at": "2019-02-01T12:17:54Z",
+    "closed_at": "2019-03-20T06:45:43Z",
+    "user": "erikparr",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2019-03-20T06:45:43Z",
+        "body": "Read the notes section in Readme md I am copy and pasting the relevant section Post processing is not performed You can perform it manually with convert out png bmp mkbitmap t 0 3 o potrace svg group t 15 o out svg"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "About post processing",
+    "state": "closed",
+    "body": "Hi thanks for your great work You mentioned the post processing in the readme convert out png bmp mkbitmap t 0 3 o potrace svg group t 15 o out svg but did this command mean what kind of tools does it depends",
+    "created_at": "2019-01-20T10:28:00Z",
+    "closed_at": "2019-03-20T06:44:52Z",
+    "user": "SeaOfOcean",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2019-03-20T06:44:52Z",
+        "body": "Read the manpages for each tool to learn what the parameters mean and a bash tutorial if you are not familiar with shell scripting Dependencies are only potrace and imagemagick"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Update PyTorch API use",
+    "state": "open",
+    "body": "Apparently sketch simplifaction uses a deprecated no longer existing module in PyTorch see here https github com pytorch pytorch issues 15307 for details python simplify py Traceback most recent call last File simplify py line 4 in module from torch utils serialization import load lua ImportError No module named serialization",
+    "created_at": "2019-01-02T00:53:03Z",
+    "closed_at": null,
+    "user": "virtualritz",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2019-03-20T06:43:38Z",
+        "body": "Solution for now is to use pytorch 0 4 1 until I can get around to uploading the new models which are native pytorch"
+      },
+      {
+        "user": "ramilmsh",
+        "created_at": "2019-07-03T18:09:58Z",
+        "body": "bobbens Hi I have managed to migrate to torch 1 x using a conversion tool to update the model files would you like me to create a pull request for it and upload the updated model"
+      },
+      {
+        "user": "ramilmsh",
+        "created_at": "2019-07-04T07:19:55Z",
+        "body": "I have uploaded new models here https mega nz F 2lUn1YbY JhTkB1vdaBMeTCSs37iTVA I have not gone too deep into the code simply made it work with torch 1 1 0 12"
+      },
+      {
+        "user": "Sushanthcheerla99",
+        "created_at": "2020-02-13T16:54:09Z",
+        "body": "i am getting a error while compiling the code simplify unknown type id 1064941863 The file may be corrupted regarding the pretrained models"
+      },
+      {
+        "user": "ramilmsh",
+        "created_at": "2020-02-14T07:53:36Z",
+        "body": "Sushanthcheerla99 I don t think i will return to this so i suggest you try converting the models on your own computer it is a bit of a pain but solutions are publicly available and they with some bugfixing work"
+      },
+      {
+        "user": "krummrey",
+        "created_at": "2021-12-10T16:08:39Z",
+        "body": "This pull version works great even without a CUDA GPU https github com bobbens sketch simplification pull 12 https github com bobbens sketch simplification pull 12"
+      },
+      {
+        "user": "ramgj28",
+        "created_at": "2022-03-26T03:38:41Z",
+        "body": "torchfile is an alternative for this i think You might want to check it out"
+      },
+      {
+        "user": "aidreamwin",
+        "created_at": "2024-11-13T09:54:08Z",
+        "body": "Here is a pure pytorch implementation https github com aidreamwin sketch simplification pytorch"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Why the model can generate different results?",
+    "state": "closed",
+    "body": "As I run the code each time the model can generate different outputs from one same input For example with the input image test72 https user images githubusercontent com 32947455 42724603 e4f27832 87a7 11e8 96cd bffa806fac0f png I got two different results 1 https user images githubusercontent com 32947455 42724617 0e3ef328 87a8 11e8 8aa7 29112d75a0a7 png 2 https user images githubusercontent com 32947455 42724620 16e66b78 87a8 11e8 89e7 fc929a33d7bf png The parameters in the model should be fixed Thus the model can only output one result from one input Why the model can generate different outputs",
+    "created_at": "2018-07-14T12:56:36Z",
+    "closed_at": "2019-03-20T06:48:44Z",
+    "user": "ghaoziang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "json2d",
+        "created_at": "2018-10-13T19:13:36Z",
+        "body": "ghaoziang are you sure these two outputs are from the same model compared to mine the 1st output looks like its from model pencil t7 and the second output looks like model mse t7"
+      },
+      {
+        "user": "bobbens",
+        "created_at": "2019-03-20T06:48:44Z",
+        "body": "As per json2d s comment you are most likely using different models The output of a model given an input is deterministic and fixed there is no randomness"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "training dataset release",
+    "state": "closed",
+    "body": "Hello Thanks for sharing your wonderful work Could you release your training dataset for others reference",
+    "created_at": "2018-04-02T13:57:36Z",
+    "closed_at": "2018-04-04T05:33:08Z",
+    "user": "emma-sjwang",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2018-04-04T04:14:36Z",
+        "body": "Due to copyright issues we are unable to release the dataset used However we are working on releasing a new dataset that does share the copyright issue"
+      },
+      {
+        "user": "emma-sjwang",
+        "created_at": "2018-04-04T05:33:06Z",
+        "body": "ok Thanks anyway"
+      },
+      {
+        "user": "Yijunmaverick",
+        "created_at": "2018-04-28T00:13:40Z",
+        "body": "Great work Look forward to your data Let us know"
+      },
+      {
+        "user": "sarahradial",
+        "created_at": "2018-06-19T10:03:36Z",
+        "body": "Since you are unable to release the dataset that was used I would appreciate it if the demo on the website was back online again"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "How to use with your own sketches?",
+    "state": "open",
+    "body": "Hi I was interested in this library as a user not a developer I hate inking my comics and wanted an AI inker I could run the included example data with no issue but the application failed on my own drawings What does it take to run my own scanned pencil drawing through your neural net Is there preprocessing required Are there specific details that need to be correct in an image file What range of resolutions does it accept E g a human heads of height 30px to 700px",
+    "created_at": "2018-02-17T19:07:03Z",
+    "closed_at": null,
+    "user": "b-adkins",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2018-02-20T02:20:53Z",
+        "body": "It should run fine on your input assuming it is an image type supported by pillow Preprocessing is done by the script Image size is a bit tricky as it influences the output I usually run between 500 1500 pixel lengths but it really depends on how detailed the image is"
+      },
+      {
+        "user": "jakubLangr",
+        "created_at": "2018-04-03T11:21:29Z",
+        "body": "Thanks for the model it looks really awesome But I have a bit to add to this So I am using pytorch version 0 3 1 Running on Ubuntu with no GPUs Converted images to png to 35 7 kb 163x290 Yet the output I get is something like this Tried both gan and mse model but mse does not output anything Yet this is the ouput I get looks nothing like the original image diag https user images githubusercontent com 1884004 38246328 584b1a4c 3739 11e8 9cb0 afc649cb15cd png Any recommendations Ps if you need any extra information to help diagnose it just ask Happy to chat"
+      },
+      {
+        "user": "jakubLangr",
+        "created_at": "2018-04-03T12:07:07Z",
+        "body": "Alright I ve managed to get output with the mse model A couple of extra thoughts The test runs fine I tried a different encoding no change it seems Here s the MSE model image https user images githubusercontent com 1884004 38248304 d6017a66 373f 11e8 9ccc 7087fd2e61f2 png This file was originally jpg wonder if that has anything to do with it"
+      },
+      {
+        "user": "bobbens",
+        "created_at": "2018-04-04T04:15:26Z",
+        "body": "jakubLangr Could I see the input image I m assuming the network is firing on the paper texture and the contrast is very low which could explain those results"
+      },
+      {
+        "user": "jakubLangr",
+        "created_at": "2018-04-04T15:45:46Z",
+        "body": "Yes probably the case So how did you obtain the training dataset it does not look like it s scanned but i would never get the light so perfect For example this image produced similar results diagram2 https user images githubusercontent com 1884004 38318589 984c8632 3827 11e8 937e b8ea9ddaea9b png"
+      },
+      {
+        "user": "jakubLangr",
+        "created_at": "2018-04-04T15:46:30Z",
+        "body": "diagram https user images githubusercontent com 1884004 38318633 b51d4a26 3827 11e8 97ac 521facf8c2d4 png Or this one"
+      },
+      {
+        "user": "bobbens",
+        "created_at": "2018-06-29T00:30:14Z",
+        "body": "The models were not trained with data taken from pictures which explains the low performance on the images you supplied Retraining with data more similar to the images you want to use with would work better training code is available now Our new approach should be able to handle that much better however I still have to prepare the code and models to make them public"
+      },
+      {
+        "user": "jakubLangr",
+        "created_at": "2018-07-07T17:23:45Z",
+        "body": "Hi sure no problem Thanks for you response and let me know when the models are public p 29 6 2018 v 1 30 odes latel Edgar Simo Serra notifications github com napsal The models were not trained with data taken from pictures which explains the low performance on the images you supplied Retraining with data more similar to the images you want to use with would work better training code is available now Our new approach should be able to handle that much better however I still have to prepare the code and models to make them public You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com bobbens sketch simplification issues 4 issuecomment 401212486 or mute the thread https github com notifications unsubscribe auth ABy ZHkfMlm kqUGBfMTstUbLcyOIym2ks5uBXUXgaJpZM4SJbBr Jakub Langr Mobile UK 44 7511 624 004 Mobile CZ 420 731 088 879 Mobile US 1 650 338 8807 See my blog at jakublangr com http goo gl Zbq4t3"
+      },
+      {
+        "user": "raul1968",
+        "created_at": "2019-01-29T06:37:30Z",
+        "body": "Could you post the code that you use I get two errors when trying to run python simplify py Traceback most recent call last File simplify py line 4 in module from torch utils serialization import load lua ImportError No module named serialization and unable to load lua I even put ubuntu 16 04 to try and get it to work I have several hundred images of my own i want to use to train it but can wrap my mind around how to get it to work I m trying to use it for my animation to clean up my pencils since I don t use very much color"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Error when run ./figs.sh",
+    "state": "closed",
+    "body": "My pytorch torchvision cuda cudnn version is as follows cuda91 1 0 h4c16780 0 pytorch pytorch 0 3 1 py36 cuda9 1 85 cudnn7 0 5 2 pytorch cuda91 torchvision 0 2 0 py36h17b6947 1 pytorch And this is my whole output root sketch simplification figs sh Processing fig01 eisaku png THCudaCheck FAIL file opt conda conda bld pytorch 1518244507981 work torch lib THC generic THCStorage cu line 58 error 2 out of memory Error in python free invalid pointer 0x00007f1d45034fc0 Backtrace lib x86 64 linux gnu libc so 6 0x777e5 0x7f1d60b3d7e5 lib x86 64 linux gnu libc so 6 0x8037a 0x7f1d60b4637a lib x86 64 linux gnu libc so 6 cfree 0x4c 0x7f1d60b4a53c home whu apps anaconda3 lib python3 6 site packages torch thnn THCUNN cpython 36m x86 64 linux gnu so 0x8e242 0x7f1d048f7242 python PyCFunction FastCallDict 0x91 0x55610c06ef11 python 0x19cbec 0x55610c0fcbec python PyEval EvalFrameDefault 0x30a 0x55610c12119a python PyFunction FastCallDict 0x11b 0x55610c0f6e4b python PyObject FastCallDict 0x26f 0x55610c06f39f python PyObject Call Prepend 0x63 0x55610c073ff3 python PyObject Call 0x3e 0x55610c06edde python PyEval EvalFrameDefault 0x1b04 0x55610c122994 python 0x195dfe 0x55610c0f5dfe python 0x196a11 0x55610c0f6a11 python 0x19ccc5 0x55610c0fccc5 python PyEval EvalFrameDefault 0x30a 0x55610c12119a python PyFunction FastCallDict 0x11b 0x55610c0f6e4b python PyObject FastCallDict 0x26f 0x55610c06f39f python PyObject Call Prepend 0x63 0x55610c073ff3 python PyObject Call 0x3e 0x55610c06edde python PyEval EvalFrameDefault 0x1b04 0x55610c122994 python 0x195dfe 0x55610c0f5dfe python 0x196a11 0x55610c0f6a11 python 0x19ccc5 0x55610c0fccc5 python PyEval EvalFrameDefault 0x30a 0x55610c12119a python 0x1967db 0x55610c0f67db python 0x19ccc5 0x55610c0fccc5 python PyEval EvalFrameDefault 0x30a 0x55610c12119a python PyEval EvalCodeEx 0x329 0x55610c0f7529 python PyEval EvalCode 0x1c 0x55610c0f82cc python 0x214af4 0x55610c174af4 python PyRun FileExFlags 0xa1 0x55610c174ef1 python PyRun SimpleFileExFlags 0x1c4 0x55610c1750f4 python Py Main 0x648 0x55610c178c28 python main 0xee 0x55610c04071e lib x86 64 linux gnu libc so 6 libc start main 0xf0 0x7f1d60ae6830 python 0x1c7c98 0x55610c127c98 Memory map 200000000 200200000 rw s 00000000 00 06 603 dev nvidiactl 200200000 200400000 p 00000000 00 00 0 200400000 200404000 rw s 00000000 00 06 603 dev nvidiactl 200404000 200600000 p 00000000 00 00 0 200600000 200a00000 rw s 00000000 00 06 603 dev nvidiactl 200a00000 201200000 p 00000000 00 00 0 201200000 201204000 rw s 00000000 00 06 603 dev nvidiactl 201204000 201400000 p 00000000 00 00 0 201400000 201800000 rw s 00000000 00 06 603 dev nvidiactl 201800000 202000000 p 00000000 00 00 0 202000000 202004000 rw s 00000000 00 06 603 dev nvidiactl 202004000 202200000 p 00000000 00 00 0 202200000 202600000 rw s 00000000 00 06 603 dev nvidiactl 202600000 202e00000 p 00000000 00 00 0 202e00000 202e04000 rw s 00000000 00 06 603 dev nvidiactl 202e04000 203000000 p 00000000 00 00 0 203000000 203400000 rw s 00000000 00 06 603 dev nvidiactl 203400000 203c00000 p 00000000 00 00 0 203c00000 203c04000 rw s 00000000 00 06 603 dev nvidiactl 203c04000 203e00000 p 00000000 00 00 0 203e00000 204200000 rw s 00000000 00 06 603 dev nvidiactl 204200000 204a00000 p 00000000 00 00 0 204a00000 204a04000 rw s 00000000 00 06 603 dev nvidiactl 204a04000 204c00000 p 00000000 00 00 0 204c00000 205000000 rw s 00000000 00 06 603 dev nvidiactl 205000000 205800000 p 00000000 00 00 0 205800000 205804000 rw s 00000000 00 06 603 dev nvidiactl 205804000 205a00000 p 00000000 00 00 0 205a00000 205e00000 rw s 00000000 00 06 603 dev nvidiactl 205e00000 206600000 p 00000000 00 00 0 206600000 206604000 rw s 00000000 00 06 603 dev nvidiactl 206604000 206800000 p 00000000 00 00 0 206800000 206c00000 rw s 00000000 00 06 603 dev nvidiactl 206c00000 207400000 p 00000000 00 00 0 207400000 207404000 rw s 00000000 00 06 603 dev nvidiactl 207404000 207600000 p 00000000 00 00 0 207600000 207a00000 rw s 00000000 00 06 603 dev nvidiactl 207a00000 207a04000 rw s 00000000 00 06 603 dev nvidiactl 207a04000 207c00000 p 00000000 00 00 0 207c00000 208000000 rw s 00000000 00 06 603 dev nvidiactl 208000000 208004000 rw s 00000000 00 06 603 dev nvidiactl 208004000 208200000 p 00000000 00 00 0 208200000 208600000 rw s 00000000 00 06 603 dev nvidiactl 208600000 208604000 rw s 00000000 00 06 603 dev nvidiactl 208604000 208800000 p 00000000 00 00 0 208800000 208c00000 rw s 00000000 00 06 603 dev nvidiactl 208c00000 208c04000 rw s 00000000 00 06 603 dev nvidiactl 208c04000 208e00000 p 00000000 00 00 0 208e00000 209200000 rw s 00000000 00 06 603 dev nvidiactl 209200000 209204000 rw s 00000000 00 06 603 dev nvidiactl 209204000 209400000 p 00000000 00 00 0 209400000 209800000 rw s 00000000 00 06 603 dev nvidiactl 209800000 209804000 rw s 00000000 00 06 603 dev nvidiactl 209804000 209a00000 p 00000000 00 00 0 209a00000 209e00000 rw s 00000000 00 06 603 dev nvidiactl 209e00000 209e04000 rw s 00000000 00 06 603 dev nvidiactl 209e04000 20a000000 p 00000000 00 00 0 20a000000 20a400000 rw s 00000000 00 06 603 dev nvidiactl 20a400000 20a600000 p 00000000 00 00 0 20a600000 20a800000 rw s 00000000 00 06 603 dev nvidiactl 20a800000 20aa00000 rw s 00000000 00 06 603 dev nvidiactl 20aa00000 300200000 p 00000000 00 00 0 10000000000 10204000000 p 00000000 00 00 0 55610bf60000 55610c21e000 r xp 00000000 08 24 136255 home whu apps anaconda3 bin python3 6 55610c41e000 55610c421000 r p 002be000 08 24 136255 home whu apps anaconda3 bin python3 6 55610c421000 55610c484000 rw p 002c1000 08 24 136255 home whu apps anaconda3 bin python3 6 55610c484000 55610c4b5000 rw p 00000000 00 00 0 55610de1c000 5561563ef000 rw p 00000000 00 00 0 heap 7f1b98000000 7f1b98021000 rw p 00000000 00 00 0 7f1b98021000 7f1b9c000000 p 00000000 00 00 0 7f1b9fc00000 7f1ce0000000 p 00000000 00 00 0 7f1ce002d000 7f1ce1400000 rw p 00000000 00 00 0 7f1ce1400000 7f1ce4000000 p 00000000 00 00 0 7f1ce4000000 7f1ce4021000 rw p 00000000 00 00 0 7f1ce4021000 7f1ce8000000 p 00000000 00 00 0 7f1ce8800000 7f1cff400000 p 00000000 00 00 0 7f1cff461000 7f1d00000000 rw p 00000000 00 00 0 7f1d00000000 7f1d00021000 rw p 00000000 00 00 0 7f1d00021000 7f1d04000000 p 00000000 00 00 0 7f1d04200000 7f1d04400000 p 00000000 00 00 0 7f1d04600000 7f1d04800000 p 00000000 00 00 0 7f1d04869000 7f1d049e1000 r xp 00000000 08 24 537847 home whu apps anaconda3 lib python3 6 site packages torch thnn THCUNN cpython 36m x86 64 linux gnu so 7f1d049e1000 7f1d04be1000 p 00178000 08 24 537847 home whu apps anaconda3 lib python3 6 site packages torch thnn THCUNN cpython 36m x86 64 linux gnu so 7f1d04be1000 7f1d04be6000 r p 00178000 08 24 537847 home whu apps anaconda3 lib python3 6 site packages torch thnn THCUNN cpython 36m x86 64 linux gnu so 7f1d04be6000 7f1d04bec000 rw p 0017d000 08 24 537847 home whu apps anaconda3 lib python3 6 site packages torch thnn THCUNN cpython 36m x86 64 linux gnu so 7f1d04bec000 7f1d04c00000 rw p 00000000 00 00 0 7f1d04c00000 7f1d04e00000 p 00000000 00 00 0 7f1d04e00000 7f1d05000000 rw s 00000000 00 05 156393 dev zero deleted 7f1d05000000 7f1d05800000 p 00000000 00 00 0 7f1d05800000 7f1d05ad6000 rw s 00000000 00 06 603 dev nvidiactl 7f1d05ad6000 7f1d05c00000 p 00000000 00 00 0 7f1d05c00000 7f1d05e00000 rw s 00000000 00 06 603 dev nvidiactl 7f1d05e00000 7f1d06000000 rw s 00000000 00 05 156391 dev zero deleted 7f1d06000000 7f1d06200000 rw s 00000000 00 06 603 dev nvidiactl 7f1d06200000 7f1d06400000 rw s 00000000 00 05 156390 dev zero deleted 7f1d06400000 7f1d06600000 p 00000000 00 00 0 7f1d067ff000 7f1d06800000 p 00000000 00 00 0 7f1d06800000 7f1d07000000 rw p 00000000 00 00 0 7f1d07000000 7f1d07200000 p 00000000 00 00 0 7f1d07385000 7f1d07386000 p 00000000 00 00 0 7f1d07386000 7f1d07b86000 rw p 00000000 00 00 0 7f1d07b86000 7f1d07bcb000 r xp 00000000 08 24 1453537 home whu apps anaconda3 lib python3 6 lib dynload decimal cpython 36m x86 64 linux gnu so 7f1d07bcb000 7f1d07dca000 p 00045000 08 24 1453537 home whu apps anaconda3 lib python3 6 lib dynload decimal cpython 36m x86 64 linux gnu so 7f1d07dca000 7f1d07dcb000 r p 00044000 08 24 1453537 home whu apps anaconda3 lib python3 6 lib dynload decimal cpython 36m x86 64 linux gnu so 7f1d07dcb000 7f1d07dd3000 rw p 00045000 08 24 1453537 home whu apps anaconda3 lib python3 6 lib dynload decimal cpython 36m x86 64 linux gnu so 7f1d07dd3000 7f1d07eed000 r xp 00000000 08 24 537845 home whu apps anaconda3 lib python3 6 site packages torch thnn THNN cpython 36m x86 64 linux gnu so 7f1d07eed000 7f1d080ed000 p 0011a000 08 24 537845 home whu apps anaconda3 lib python3 6 site packages torch thnn THNN cpython 36m x86 64 linux gnu so 7f1d080ed000 7f1d080f2000 r p 0011a000 08 24 537845 home whu apps anaconda3 lib python3 6 site packages torch thnn THNN cpython 36m x86 64 linux gnu so 7f1d080f2000 7f1d080f7000 rw p 0011f000 08 24 537845 home whu apps anaconda3 lib python3 6 site packages torch thnn THNN cpython 36m x86 64 linux gnu so 7f1d080f7000 7f1d0810b000 rw p 00000000 00 00 0 7f1d0810b000 7f1d0e10b000 p 00000000 00 00 0 7f1d0e10b000 7f1d0e185000 r xp 00000000 08 24 1454313 home whu apps anaconda3 lib libtiff so 5 3 0 7f1d0e185000 7f1d0e384000 p 0007a000 08 24 1454313 home whu apps anaconda3 lib libtiff so 5 3 0 7f1d0e384000 7f1d0e388000 r p 00079000 08 24 1454313 home whu apps anaconda3 lib libtiff so 5 3 0 7f1d0e388000 7f1d0e389000 rw p 0007d000 08 24 1454313 home whu apps anaconda3 lib libtiff so 5 3 0 7f1d0e389000 7f1d0e3c4000 r xp 00000000 08 24 544152 home whu apps anaconda3 lib libjpeg so 9 2 0 7f1d0e3c4000 7f1d0e5c3000 p 0003b000 08 24 544152 home whu apps anaconda3 lib libjpeg so 9 2 0 7f1d0e5c3000 7f1d0e5c4000 r p 0003a000 08 24 544152 home whu apps anaconda3 lib libjpeg so 9 2 0 7f1d0e5c4000 7f1d0e5c5000 rw p 0003b000 08 24 544152 home whu apps anaconda3 lib libjpeg so 9 2 0 7f1d0e5c5000 7f1d0e6c5000 rw p 00000000 00 00 0 7f1d0e6c5000 7f1d0e6cb000 r xp 00000000 08 24 1453472 home whu apps anaconda3 lib python3 6 lib dynload binascii cpython 36m x86 64 linux gnu so 7f1d0e6cb000 7f1d0e8ca000 p 00006000 08 24 1453472 home whu apps anaconda3 lib python3 6 lib dynload binascii cpython 36m x86 64 linux gnu so 7f1d0e8ca000 7f1d0e8cb000 r p 00005000 08 24 1453472 home whu apps anaconda3 lib python3 6 lib dynload binascii cpython 36m x86 64 linux gnu so 7f1d0e8cb000 7f1d0e8cc000 rw p 00006000 08 24 1453472 home whu apps anaconda3 lib python3 6 lib dynload binascii cpython 36m x86 64 linux gnu so 7f1d0e8cc000 7f1d0e938000 r xp 00000000 08 24 402502 home whu apps anaconda3 lib libssl so 1 0 0 7f1d0e938000 7f1d0eb37000 p 0006c000 08 24 402502 home whu apps anaconda3 lib libssl so 1 0 0 7f1d0eb37000 7f1d0eb3c000 r p 0006b000 08 24 402502 home whu apps anaconda3 lib libssl so 1 0 0 7f1d0eb3c000 7f1d0eb42000 rw p 00070000 08 24 402502 home whu apps anaconda3 lib libssl so 1 0 0 7f1d0eb42000 7f1d0eb5c000 r xp 00000000 08 24 1453532 home whu apps anaconda3 lib python3 6 lib dynload ssl cpython 36m x86 64 linux gnu so 7f1d0eb5c000 7f1d0ed5c000 p 0001a000 08 24 1453532 home whu apps anaconda3 lib python3 6 lib dynload ssl cpython 36m x86 64 linux gnu so 7f1d0ed5c000 7f1d0ed5d000 r p 0001a000 08 24 1453532 home whu apps anaconda3 lib python3 6 lib dynload ssl cpython 36m x86 64 linux gnu so 7f1d0ed5d000 7f1d0ed62000 rw p 0001b000 08 24 1453532 home whu apps anaconda3 lib python3 6 lib dynload ssl cpython 36m x86 64 linux gnu so 7f1d0ed62000 7f1d0ede2000 rw p 00000000 00 00 0 7f1d0ede2000 7f1d0edf3000 r xp 00000000 08 24 1453517 home whu apps anaconda3 lib python3 6 lib dynload json cpython 36m x86 64 linux gnu so 7f1d0edf3000 7f1d0eff3000 p 00011000 08 24 1453517 home whu apps anaconda3 lib python3 6 lib dynload json cpython 36m x86 64 linux gnu so 7f1d0eff3000 7f1d0eff4000 r p 00011000 08 24 1453517 home whu apps anaconda3 lib python3 6 lib dynload json cpython 36m x86 64 linux gnu so 7f1d0eff4000 7f1d0eff5000 rw p 00012000 08 24 1453517 home whu apps anaconda3 lib python3 6 lib dynload json cpython 36m x86 64 linux gnu so 7f1d0eff5000 7f1d0f3f5000 rw p 00000000 00 00 0 7f1d0f3f5000 7f1d0f403000 r xp 00000000 08 24 1453516 home whu apps anaconda3 lib python3 6 lib dynload array cpython 36m x86 64 linux gnu so 7f1d0f403000 7f1d0f602000 p 0000e000 08 24 1453516 home whu apps anaconda3 lib python3 6 lib dynload array cpython 36m x86 64 linux gnu so 7f1d0f602000 7f1d0f603000 r p 0000d000 08 24 1453516 home whu apps anaconda3 lib python3 6 lib dynload array cpython 36m x86 64 linux gnu so 7f1d0f603000 7f1d0f606000 rw p 0000e000 08 24 1453516 home whu apps anaconda3 lib python3 6 lib dynload array cpython 36m x86 64 linux gnu so 7f1d0f606000 7f1d0f646000 rw p 00000000 00 00 0 7f1d0f646000 7f1d0f65c000 r xp 00000000 08 24 1453527 home whu apps anaconda3 lib python3 6 lib dynload socket cpython 36m x86 64 linux gnu so 7f1d0f65c000 7f1d0f85c000 p 00016000 08 24 1453527 home whu apps anaconda3 lib python3 6 lib dynload socket cpython 36m x86 64 linux gnu so 7f1d0f85c000 7f1d0f85d000 r p 00016000 08 24 1453527 home whu apps anaconda3 lib python3 6 lib dynload socket cpython 36m x86 64 linux gnu so 7f1d0f85d000 7f1d0f862000 rw p 00017000 08 24 1453527 home whu apps anaconda3 lib python3 6 lib dynload socket cpython 36m x86 64 linux gnu so 7f1d0f862000 7f1d0f8a2000 rw p 00000000 00 00 0 7f1d0f8a2000 7f1d0f8a9000 r xp 00000000 08 24 1453486 home whu apps anaconda3 lib python3 6 lib dynload select cpython 36m x86 64 linux gnu so 7f1d0f8a9000 7f1d0faa8000 p 00007000 08 24 1453486 home whu apps anaconda3 lib python3 6 lib dynload select cpython 36m x86 64 linux gnu so 7f1d0faa8000 7f1d0faa9000 r p 00006000 08 24 1453486 home whu apps anaconda3 lib python3 6 lib dynload select cpython 36m x86 64 linux gnu so 7f1d0faa9000 7f1d0faab000 rw p 00007000 08 24 1453486 home whu apps anaconda3 lib python3 6 lib dynload select cpython 36m x86 64 linux gnu so 7f1d0faab000 7f1d0faae000 r xp 00000000 08 24 1453424 home whu apps anaconda3 lib python3 6 lib dynload posixsubprocess cpython 36m x86 64 linux gnu so 7f1d0faae000 7f1d0fcad000 p 00003000 08 24 1453424 home whu apps anaconda3 lib python3 6 lib dynload posixsubprocess cpython 36m x86 64 linux gnu so 7f1d0fcad000 7f1d0fcae000 r p 00002000 08 24 1453424 home whu apps anaconda3 lib python3 6 lib dynload posixsubprocess cpython 36m x86 64 linux gnu so 7f1d0fcae000 7f1d0fcaf000 rw p 00003000 08 24 1453424 home whu apps anaconda3 lib python3 6 lib dynload posixsubprocess cpython 36m x86 64 linux gnu so 7f1d0fcaf000 7f1d0fd6f000 rw p 00000000 00 00 0 7f1d0fd6f000 7f1d0fd70000 r xp 00000000 08 24 1453348 home whu apps anaconda3 lib python3 6 lib dynload opcode cpython 36m x86 64 linux gnu so 7f1d0fd70000 7f1d0ff70000 p 00001000 08 24 1453348 home whu apps anaconda3 lib python3 6 lib dynload opcode cpython 36m x86 64 linux gnu so 7f1d0ff70000 7f1d0ff71000 r p 00001000 08 24 1453348 home whu apps anaconda3 lib python3 6 lib dynload opcode cpython 36m x86 64 linux gnu so 7f1d0ff71000 7f1d0ff72000 rw p 00002000 08 24 1453348 home whu apps anaconda3 lib python3 6 lib dynload opcode cpython 36m x86 64 linux gnu so 7f1d0ff72000 7f1d10032000 rw p 00000000 00 00 0 7f1d10032000 7f1d134dc000 r xp 00000000 08 24 537853 home whu apps anaconda3 lib python3 6 site packages torch lib libcusparse b2167406 so 9 1 7f1d134dc000 7f1d136dc000 p 034aa000 08 24 537853 home whu apps anaconda3 lib python3 6 site packages torch lib libcusparse b2167406 so 9 1 7f1d136dc000 7f1d136f6000 rw p 034aa000 08 24 537853 home whu apps anaconda3 lib python3 6 site packages torch lib libcusparse b2167406 so 9 1 7f1d136f6000 7f1d13706000 rw p 00000000 00 00 0 7f1d13706000 7f1d1370d000 rw p 034c4000 08 24 537853 home whu apps anaconda3 lib python3 6 site packages torch lib libcusparse b2167406 so 9 1 7f1d1370d000 7f1d15bb4000 r xp 00000000 08 24 537854 home whu apps anaconda3 lib python3 6 site packages torch lib libcurand 26c1d800 so 9 1 7f1d15bb4000 7f1d15db4000 p 024a7000 08 24 537854 home whu apps anaconda3 lib python3 6 site packages torch lib libcurand 26c1d800 so 9 1 7f1d15db4000 7f1d17185000 rw p 024a7000 08 24 537854 home whu apps anaconda3 lib python3 6 site packages torch lib libcurand 26c1d800 so 9 1 7f1d17185000 7f1d17690000 rw p 00000000 00 00 0 7f1d17690000 7f1d17691000 rw p 03879000 08 24 537854 home whu apps anaconda3 lib python3 6 site packages torch lib libcurand 26c1d800 so 9 1 7f1d17691000 7f1d1a9e2000 r xp 00000000 08 24 537852 home whu apps anaconda3 lib python3 6 site packages torch lib libcublas a49371b9 so 9 1 7f1d1a9e2000 7f1d1abe2000 p 03351000 08 24 537852 home whu apps anaconda3 lib python3 6 site packages torch lib libcublas a49371b9 so 9 1 7f1d1abe2000 7f1d1ac19000 rw p 03351000 08 24 537852 home whu apps anaconda3 lib python3 6 site packages torch lib libcublas a49371b9 so 9 1 7f1d1ac19000 7f1d1ac28000 rw p 00000000 00 00 0 7f1d1ac28000 7f1d1ac2c000 rw p 03389000 08 24 537852 home whu apps anaconda3 lib python3 6 site packages torch lib libcublas a49371b9 so 9 1 7f1d1ac2c000 7f1d1ac4e000 r xp 00000000 08 24 524466 home whu apps anaconda3 lib libgomp so 1 0 0 7f1d1ac4e000 7f1d1ae4d000 p 00022000 08 24 524466 home whu apps anaconda3 lib libgomp so 1 0 0 7f1d1ae4d000 7f1d1ae4e000 r p 00021000 08 24 524466 home whu apps anaconda3 lib libgomp so 1 0 0 7f1d1ae4e000 7f1d1ae4f000 rw p 00022000 08 24 524466 home whu apps anaconda3 lib libgomp so 1 0 0 7f1d1ae4f000 7f1d1cd61000 r xp 00000000 08 24 534126 home whu apps anaconda3 lib libmkl core so 7f1d1cd61000 7f1d1cf61000 p 01f12000 08 24 534126 home whu apps anaconda3 lib libmkl core so 7f1d1cf61000 7f1d1cf69000 r p 01f12000 08 24 534126 home whu apps anaconda3 lib libmkl core so 7f1d1cf69000 7f1d1cf8b000 rw p 01f1a000 08 24 534126 home whu apps anaconda3 lib libmkl core so 7f1d1cf8b000 7f1d1cfe2000 rw p 00000000 00 00 0 7f1d1cfe2000 7f1d1e486000 r xp 00000000 08 24 534124 home whu apps anaconda3 lib libmkl gnu thread so 7f1d1e486000 7f1d1e686000 p 014a4000 08 24 534124 home whu apps anaconda3 lib libmkl gnu thread so 7f1d1e686000 7f1d1e689000 r p 014a4000 08 24 534124 home whu apps anaconda3 lib libmkl gnu thread so 7f1d1e689000 7f1d1e6a0000 rw p 014a7000 08 24 534124 home whu apps anaconda3 lib libmkl gnu thread so 7f1d1e6a0000 7f1d1ef6d000 r xp 00000000 08 24 534113 home whu apps anaconda3 lib libmkl gf lp64 so 7f1d1ef6d000 7f1d1f16c000 p 008cd000 08 24 534113 home whu apps anaconda3 lib libmkl gf lp64 so 7f1d1f16c000 7f1d1f16e000 r p 008cc000 08 24 534113 home whu apps anaconda3 lib libmkl gf lp64 so 7f1d1f16e000 7f1d1f180000 rw p 008ce000 08 24 534113 home whu apps anaconda3 lib libmkl gf lp64 so 7f1d1f180000 7f1d1f186000 rw p 00000000 00 00 0 7f1d1f186000 7f1d1f2b0000 r xp 00000000 08 24 524582 home whu apps anaconda3 lib libstdc so 6 0 24 7f1d1f2b0000 7f1d1f4af000 p 0012a000 08 24 524582 home whu apps anaconda3 lib libstdc so 6 0 24 7f1d1f4af000 7f1d1f4b9000 r p 00129000 08 24 524582 home whu apps anaconda3 lib libstdc so 6 0 24 7f1d1f4b9000 7f1d1f4bd000 rw p 00133000 08 24 524582 home whu apps anaconda3 lib libstdc so 6 0 24 7f1d1f4bd000 7f1d1f4c0000 rw p 00000000 00 00 0 7f1d1f4c0000 7f1d1f4d1000 r xp 00000000 08 24 524456 home whu apps anaconda3 lib libgcc s so 1 7f1d1f4d1000 7f1d1f6d0000 p 00011000 08 24 524456 home whu apps anaconda3 lib libgcc s so 1 7f1d1f6d0000 7f1d1f6d1000 r p 00010000 08 24 524456 home whu apps anaconda3 lib libgcc s so 1 7f1d1f6d1000 7f1d1f6d2000 rw p 00011000 08 24 524456 home whu apps anaconda3 lib libgcc s so 1 7f1d1f6d2000 7f1d1fcfa000 r xp 00000000 08 24 537849 home whu apps anaconda3 lib python3 6 site packages torch lib libnccl so 1 7f1d1fcfa000 7f1d1fefa000 p 00628000 08 24 537849 home whu apps anaconda3 lib python3 6 site packages torch lib libnccl so 1 7f1d1fefa000 7f1d1fefb000 rw p 00628000 08 24 537849 home whu apps anaconda3 lib python3 6 site packages torch lib libnccl so 1 7f1d1fefb000 7f1d1fefc000 rw p 00634000 08 24 537849 home whu apps anaconda3 lib python3 6 site packages torch lib libnccl so 1 7f1d1fefc000 7f1d23730000 r xp 00000000 08 24 537855 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCUNN so 1 7f1d23730000 7f1d23930000 p 03834000 08 24 537855 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCUNN so 1 7f1d23930000 7f1d23946000 rw p 03834000 08 24 537855 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCUNN so 1 7f1d23946000 7f1d2398c000 rw p 00000000 00 00 0 7f1d2398c000 7f1d23c79000 rw p 03b86000 08 24 537855 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCUNN so 1 7f1d23c79000 7f1d23dc3000 r xp 00000000 08 24 537843 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCS so 1 7f1d23dc3000 7f1d23fc2000 p 0014a000 08 24 537843 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCS so 1 7f1d23fc2000 7f1d23fc9000 rw p 00149000 08 24 537843 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCS so 1 7f1d23fc9000 7f1d23fde000 rw p 00000000 00 00 0 7f1d23fde000 7f1d23ffb000 rw p 00194000 08 24 537843 home whu apps anaconda3 lib python3 6 site packages torch lib libTHCS so 1 7f1d23ffb000 7f1d2f78a000 r xp 00000000 08 24 537857 home whu apps anaconda3 lib python3 6 site packages torch lib libTHC so 1 7f1d2f78a000 7f1d2f989000 p 0b78f000 08 24 537857 home whu apps anaconda3 lib python3 6 site packages torch lib libTHC so 1 7f1d2f989000 7f1d2f9e1000 rw p 0b78e000 08 24 537857 home whu apps anaconda3 lib python3 6 site packages torch lib libTHC so 1 7f1d2f9e1000 7f1d2fa8b000 rw p 00000000 00 00 0 7f1d2fa8b000 7f1d30c58000 rw p 0c31e000 08 24 537857 home whu apps anaconda3 lib python3 6 site packages torch lib libTHC so 1 7f1d30c58000 7f1d3118e000 r xp 00000000 08 24 537850 home whu apps anaconda3 lib python3 6 site packages torch lib libATen so 1 7f1d3118e000 7f1d3138e000 p 00536000 08 24 537850 home whu apps anaconda3 lib python3 6 site packages torch lib libATen so 1 7f1d3138e000 7f1d313cb000 rw p 00536000 08 24 537850 home whu apps anaconda3 lib python3 6 site packages torch lib libATen so 1 7f1d313cb000 7f1d313df000 rw p 00000000 00 00 0 7f1d313df000 7f1d314ff000 rw p 0067d000 08 24 537850 home whu apps anaconda3 lib python3 6 site packages torch lib libATen so 1 7f1d314ff000 7f1d3163d000 r xp 00000000 08 24 537842 home whu apps anaconda3 lib python3 6 site packages torch lib libTHNN so 1 7f1d3163d000 7f1d3183d000 p 0013e000 08 24 537842 home whu apps anaconda3 lib python3 6 site packages torch lib libTHNN so 1 7f1d3183d000 7f1d3183e000 rw p 0013e000 08 24 537842 home whu apps anaconda3 lib python3 6 site packages torch lib libTHNN so 1 7f1d3183e000 7f1d31845000 rw p 0014f000 08 24 537842 home whu apps anaconda3 lib python3 6 site packages torch lib libTHNN so 1 7f1d31845000 7f1d31871000 r xp 00000000 08 24 537838 home whu apps anaconda3 lib python3 6 site packages torch lib libTHS so 1 7f1d31871000 7f1d31a71000 p 0002c000 08 24 537838 home whu apps anaconda3 lib python3 6 site packages torch lib libTHS so 1 7f1d31a71000 7f1d31a72000 rw p 0002c000 08 24 537838 home whu apps anaconda3 lib python3 6 site packages torch lib libTHS so 1 7f1d31a72000 7f1d31a77000 rw p 00035000 08 24 537838 home whu apps anaconda3 lib python3 6 site packages torch lib libTHS so 1 7f1d31a77000 7f1d31e63000 r xp 00000000 08 24 537846 home whu apps anaconda3 lib python3 6 site packages torch lib libTH so 1 7f1d31e63000 7f1d32062000 p 003ec000 08 24 537846 home whu apps anaconda3 lib python3 6 site packages torch lib libTH so 1 7f1d32062000 7f1d32065000 rw p 003eb000 08 24 537846 home whu apps anaconda3 lib python3 6 site packages torch lib libTH so 1 7f1d32065000 7f1d32079000 rw p 00415000 08 24 537846 home whu apps anaconda3 lib python3 6 site packages torch lib libTH so 1 7f1d32079000 7f1d42d6d000 r xp 00000000 08 24 537858 home whu apps anaconda3 lib python3 6 site packages torch lib libcudnn 7a90c013 so 7 7f1d42d6d000 7f1d42f6d000 p 10cf4000 08 24 537858 home whu apps anaconda3 lib python3 6 site packages torch lib libcudnn 7a90c013 so 7 7f1d42f6d000 7f1d42fc0000 rw p 10cf4000 08 24 537858 home whu apps anaconda3 lib python3 6 site packages torch lib libcudnn 7a90c013 so 7 7f1d42fc0000 7f1d4300a000 rw p 00000000 00 00 0 7f1d4300a000 7f1d4300d000 rw p 10d47000 08 24 537858 home whu apps anaconda3 lib python3 6 site packages torch lib libcudnn 7a90c013 so 7 7f1d4300d000 7f1d43015000 r xp 00000000 08 24 537811 home whu apps anaconda3 lib python3 6 site packages torch lib libnvToolsExt 3965bdd0 so 1 7f1d43015000 7f1d43215000 p 00008000 08 24 537811 home whu apps anaconda3 lib python3 6 site packages torch lib libnvToolsExt 3965bdd0 so 1 figs sh 3 9128 python simplify py img IN out OUT",
+    "created_at": "2018-02-17T18:42:40Z",
+    "closed_at": "2018-02-20T02:21:54Z",
+    "user": "sherkwast",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2018-02-20T02:21:54Z",
+        "body": "Out of memory error same as 1"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "T7 file error on Windows 10",
+    "state": "open",
+    "body": "I tried to run the simplify py file I ve already installed all the dependencies needed I downloaded Pytorch for Windows from here https github com peterjc123 pytorch scripts When I run the script the next error about the T7 file appears Traceback most recent call last File simplify py line 17 in module cache load lua opt model File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 608 in load lua return reader read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 595 in read return self read table File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 572 in read table v self read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 593 in read return self read object File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 546 in read object return reader registry cls name self version File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 243 in read nn class attributes reader read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 595 in read return self read table File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 571 in read table k self read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 595 in read return self read table File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 572 in read table v self read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 593 in read return self read object File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 546 in read object return reader registry cls name self version File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 318 in wrapper obj build fn reader version File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 318 in wrapper obj build fn reader version File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 243 in read nn class attributes reader read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 595 in read return self read table File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 523 in wrapper result fn self args kwargs File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 571 in read table k self read File C Users Lenovo AppData Local Programs Miniconda3 lib site packages torch utils serialization read lua file py line 598 in read corrupted format typeidx torch utils serialization read lua file T7ReaderException unknown type id 1064941863 The file may be corrupted I use Python 3 6 from Minianaconda 3 Any help is appreciated thanks",
+    "created_at": "2018-01-19T17:16:19Z",
+    "closed_at": null,
+    "user": "Alextorres325",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "tiwawan",
+        "created_at": "2018-01-28T18:18:52Z",
+        "body": "I m using Windows 10 and the same error was occurred One solution is to run simplify py via Bash on Ubuntu on Windows"
+      },
+      {
+        "user": "lxfly2000",
+        "created_at": "2018-01-30T13:59:05Z",
+        "body": "Change load lua opt model to load lua opt model long size 8 when you run it on Windows"
+      },
+      {
+        "user": "bobbens",
+        "created_at": "2018-02-20T02:25:35Z",
+        "body": "Try what other commenters say but to be honest I had no idea torch ran on non linux and as I do not use windows nor am familiar with it I am unable to provide any feedback on the issue I ll leave the issue open for visibility"
+      },
+      {
+        "user": "dmitriy-kisil",
+        "created_at": "2018-05-22T10:51:31Z",
+        "body": "It help me thanks lxfly2000"
+      },
+      {
+        "user": "noobgrow",
+        "created_at": "2018-12-26T15:55:54Z",
+        "body": "lxfly2000"
+      },
+      {
+        "user": "lcxxxiii",
+        "created_at": "2021-09-27T19:13:47Z",
+        "body": "thanks lxfly2000"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "GPU size error?",
+    "state": "open",
+    "body": "when I execute this command python simplify py the error as follows THCudaCheck FAIL file pytorch torch lib THC generic THCStorage cu line 58 error 2 out of memory My GPU is 1080TI 11G can you tell me how much computing resources are required for your model Thanks",
+    "created_at": "2017-12-18T10:11:27Z",
+    "closed_at": null,
+    "user": "ygren",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bobbens",
+        "created_at": "2017-12-18T22:41:04Z",
+        "body": "Dependent on input image resolution size but with 11G you should be able to handle fairly large images of at least 1024x1024 although likely quite a bit more Make sure you have latest pytorch cuda cudnn cudnn makes a big difference in my experience"
+      },
+      {
+        "user": "b4zz4",
+        "created_at": "2017-12-28T00:04:18Z",
+        "body": "The same problem with nvidia K1000 Processing fig06 danshi png THCudaCheck FAIL file pytorch torch lib THC generic THCStorage c line 82 error 2 out of memory figs sh l nea 3 22867 Violaci n de segmento python simplify py img IN out OUT image size is 170x224"
+      },
+      {
+        "user": "ygren",
+        "created_at": "2018-01-07T07:15:49Z",
+        "body": "bobbens Thanks I have run it on my MACBOOK PRO without CUDA and the python version is 3 6 maybe the reason is python version is 3 6 not 2 7 It s a very amazing job but the effect is still not ideal Do you have a plan to release your code of your network structure I want to do some work on your basis"
+      },
+      {
+        "user": "DifanLiu",
+        "created_at": "2018-01-11T20:27:04Z",
+        "body": "The same problem with nvidia K5200 THCudaCheck FAIL file opt conda conda bld pytorch 1503966894950 work torch lib THC generic THCStorage c line 79 error 2 out of memory What s your pytorch cuda cudnn version bobbens Could you please release your whole code of your project including the discriminator Thank you so much"
+      },
+      {
+        "user": "bobbens",
+        "created_at": "2018-02-20T02:24:03Z",
+        "body": "YgRen the network structure is actually included in the t7 file Most of my tests have been done using Cuda 9 1 Cudnn 7 5 and a GTX 1080 Using older cards will probably hit memory issues as apparently the torch7 code is much more memory intensive When I get some time I ll try converting to native pytorch which should be more efficient"
+      },
+      {
+        "user": "laoxihongshi",
+        "created_at": "2018-07-10T13:29:49Z",
+        "body": "i have using Cuda 9 1 Cudnn 7 5 and a GTX 1080 but when i run all the demo cmd i have the problem out of memory plz help me"
+      },
+      {
+        "user": "Gabrielnero000",
+        "created_at": "2018-11-02T12:07:14Z",
+        "body": "GTX 1050 Ti gives the same error RuntimeError CUDA error out of memory someone solve it"
+      }
+    ]
+  }
+]

@@ -1,0 +1,580 @@
+[
+  {
+    "number": 139,
+    "title": "Keras Version?",
+    "state": "closed",
+    "body": "Is there a reason keras is pinned to 2 4 1 Im starting to get install conflicts with this not pretty old version",
+    "created_at": "2024-04-23T21:50:11Z",
+    "closed_at": "2024-04-27T00:13:05Z",
+    "user": "gattia",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gattia",
+        "created_at": "2024-04-27T00:13:06Z",
+        "body": "closing duplicate of https github com ad12 DOSMA issues 106"
+      }
+    ]
+  },
+  {
+    "number": 138,
+    "title": "Streamlined Elastix integration",
+    "state": "open",
+    "body": "Looks like ITK now has a builtin pip installable version of elastix https discourse itk org t itkelastix 0 16 0 has been released 5736 It might be worth looking into incoporating It would 1 Simplify installation 2 Enable more flexible use of registration transformation",
+    "created_at": "2023-11-27T13:14:43Z",
+    "closed_at": null,
+    "user": "gattia",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 136,
+    "title": "Mapss T2 calculation requires mask[BUG]",
+    "state": "open",
+    "body": "Describe the bug A clear and concise description of what the bug is https github com ad12 DOSMA blob bd5efecbb944263c9a5d7853f154d9071c72ba62 dosma scan sequences mri mapss py L225 L232 The above section of code shows that the tissue class is required for the T2 generation to go through If the tissue class is not present then get mask will fail None type does not have the function However tissue class is meant to be optional",
+    "created_at": "2023-10-27T04:06:47Z",
+    "closed_at": null,
+    "user": "gattia",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 135,
+    "title": "make logging directory default to user owned directory",
+    "state": "open",
+    "body": "I want to include in dosma in a docker container All works fine but the container must be run as root because dosma wants to write to a logfile which is created in a system directory I would like to run the container as an unprivileged user so I don t run into ownership problems of the output files Could you consider changing the hard coded logfile path output dir in envs py to something more easily accessible Home folder or tmp",
+    "created_at": "2022-12-12T13:12:11Z",
+    "closed_at": null,
+    "user": "asch99",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 133,
+    "title": "Allow `group_by` and `sort_by` to take a list of tags",
+    "state": "open",
+    "body": "For some DICOM datasets I would like to order the slices based on multiple tags For example in a dataset with a TemporalPositionIdentifier present I would like to sort by ImagePositionPatient first and then using the position identifier The same applies to group by too Preferably it would be nice to add support for ascending descending sorts for each tag too python single tag dm read path sort by InstanceNumber multiple tags dm read path sort by ImagePositionPatient TemporalPositionIdentifier multiple tags order dm read path sort by tag ImagePositionPatient asc True tag TemporalPositionIdentifier asc False NB maybe we should consider to set the default sort by to ImagePositionPatient",
+    "created_at": "2022-09-08T16:33:54Z",
+    "closed_at": null,
+    "user": "sluijs",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2022-09-09T16:39:47Z",
+        "body": "DOSMA supports multi tag sorting group by https github com ad12 DOSMA blob bd5efecbb944263c9a5d7853f154d9071c72ba62 dosma core io dicom io py L83 L84 For arguments to sort by it may be easier to specify a sort key argument that allows the user to customize their sorting algorithm"
+      },
+      {
+        "user": "ad12",
+        "created_at": "2022-09-09T16:41:14Z",
+        "body": "Default for sort by is InstanceNumber because 1 it is the default value to sort by when writing dicoms and 2 it is scalar value that is easier to sort by It is unclear what sorting by position would mean in cases where all coordinates in the position are changing e g oblique scans"
+      },
+      {
+        "user": "sluijs",
+        "created_at": "2022-09-09T16:56:05Z",
+        "body": "DOSMA supports multi tag sorting group by Ha Maybe an option for a callback would be nice for users to define their own sorting algo Is that what you meant with sort key Default for sort by is InstanceNumber because 1 it is the default value to sort by when writing dicoms and 2 it is scalar value that is easier to sort by It is unclear what sorting by position would mean in cases where all coordinates in the position are changing e g oblique scans The problem with InstanceNumber is that doesn t have to correlate with slice position at all DICOM does not enforce that in the standard IIRC I ll look into other implementations but I m pretty sure most of them use ImagePositionPatient ImageOrientationPatient"
+      }
+    ]
+  },
+  {
+    "number": 132,
+    "title": "Change default setting for `group_by` in the DICOM reader",
+    "state": "open",
+    "body": "The group by argument of DicomReader currently defaults to EchoNumbers which is not commonly present in DICOM files Typically I would only load one DICOM study and not use grouping at all I would suggest to default to None and to disable grouping that scenario i e not returning a list of MedicalVolume but a single instance",
+    "created_at": "2022-09-08T16:20:19Z",
+    "closed_at": null,
+    "user": "sluijs",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "EAlexWaters",
+        "created_at": "2022-10-19T18:51:12Z",
+        "body": "May I suggest instead having the group by argument default to EchoTime This accomplishes Makes DOSMA not crash when you try to load DICOMS that don t implement EchoNumbers It s a mandatory tag so all MRI DICOM files should have it Handles the case where you only have one echo time and don t need grouping"
+      }
+    ]
+  },
+  {
+    "number": 127,
+    "title": "[BUG] dm.register - Elastix throws path error (searching for parameters file) ",
+    "state": "open",
+    "body": "Describe the bug When using dm register sometimes an error is thrown indicating that the transform file is not found FileNotFoundError No such file or directory dataNAS people jdemarre repeat 3T7T Repeatability results April 04 2022 repeat001 3T 9582 elastix reg 2 moving 0 TransformParameters 0 txt for output transform of a Registration interface If you look inside of the folder where the transform file should be you can find an elastix log file which includes the printout of what happened during the registration process In my case it turns out that there was an error in the registration process in particular the error was only being thrown when I passed a segmentation mask to help in the registration process and it was because the segmentation mask was too small Description itk ERROR RandomCoordinateSampler 0x4330850 Could not find enough image samples within reasonable time Probably the mask is too small Looking under the hood at interregister I noticed that dilate mask is called on all segmentation masks before they are passed to dm register https github com ad12 DOSMA blob 63dbc9e27c949f5dbfed08f44e26606452237492 dosma scan sequences mri cones py L88 L89 To fix this problem I re implemented the dilate mask function and called it on the mask and then passed this dilated ask to the registration tool https github com ad12 DOSMA blob 76d834ea993d7037bd701106514a419f831b560d dosma scan sequences scans py L267 The Fix To fix the problem I created the following version of the dilate mask function and used it on my segmentation mask before passing the segmentation mask on to dm register The main tweak is that it allows the user to specify if they want to receive a path in return or if they want to receive the MedicalVolume itself Im wondering if this or something like it could be implemented as a utility function and then have dilate mask call this utility function This way users can access this as necessary for registration An option could also be placed in dm register to dilate a mask before passing it on to the registration process maybe this should be a default python from dosma defaults import preferences import scipy ndimage as sni from dosma utils import env io utils from dosma core med volume import MedicalVolume from dosma core io import format io utils as fio utils def dilate mask mask path temp path str env temp dir dil rate float preferences mask dilation rate dil threshold float preferences mask dilation threshold return path bool True Dilate mask using gaussian blur and write to disk to use with Elastix Args mask path str MedicalVolume File path for mask or mask to use to use as focus points for registration Mask must be binary temp path str Directory path to store temporary data dil rate float optional Dilation rate sigma Defaults to preferences mask dilation rate dil threshold float optional Threshold to binarize dilated mask Must be between 0 1 Defaults to preferences mask dilation threshold return path bool optional Should a path be returned if not return the dilated mask itself Defaults to True Returns str File path of dilated mask Raises FileNotFoundError If mask path not valid file ValueError If dil threshold not in range 0 1 if dil threshold 0 or dil threshold 1 raise ValueError dil threshold must be in range 0 1 if isinstance mask path MedicalVolume mask mask path elif os path isfile mask path mask fio utils generic load mask path expected num volumes 1 else raise FileNotFoundError File not found format mask path dilated mask sni gaussian filter np asarray mask volume dtype np float32 sigma dil rate dil threshold dilated mask np asarray dilated mask dtype np int8 dilated mask volume MedicalVolume dilated mask affine mask affine if return path is False return dilated mask volume else fixed mask filepath os path join io utils mkdirs temp path dilated mask nii gz dilated mask volume save volume fixed mask filepath return fixed mask filepath Desktop please complete the following information OS Ubuntu 20 04 LTS Browser chrome Version 95 0 4638 69 Please also provide the output of the following code sys platform linux Python 3 8 5 default Sep 4 2020 07 30 14 GCC 7 3 0 numpy 1 19 2 dosma 0 1 1 dataNAS people aagatti miniconda envs dosma ai lib python3 8 site packages dosma h5py 2 10 0 nibabel 3 2 2 nipype 1 7 0 pandas 1 4 1 pydicom 2 2 2 scipy 1 5 2 skimage 0 19 2 tensorflow 2 2 0 keras 2 4 3 Additional context Add any other context about the problem here",
+    "created_at": "2022-04-05T05:20:37Z",
+    "closed_at": null,
+    "user": "gattia",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 119,
+    "title": "[BUG] Documentation",
+    "state": "closed",
+    "body": "Describe the bug Elastix link for downloading is wrong seems to have changed Documentation Installation Setup Registration 1 Download elastix that points to wrong URL Also Elastix 5 0 1 gives errors certain libraries not found when using clean install of Ubuntu Elastix 4 9 0 the same as is used in the Dosma qMRI Knee Workflow ipynb works out of the box on a clean ubuntu install Maybe it should be suggested to explicitly recommend that version 4 9 0",
+    "created_at": "2021-11-01T17:32:56Z",
+    "closed_at": "2021-12-01T17:43:10Z",
+    "user": "gattia",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-11-07T17:44:18Z",
+        "body": "sgtm could you submit a pull request with these changes Could you also add the error you were getting with 5 0 1 and the OS you were using 5 0 1 seems to work fine on linux but i have not tested on OSX Windows or OSX running on the new M1 chip"
+      },
+      {
+        "user": "gattia",
+        "created_at": "2021-11-11T15:40:01Z",
+        "body": "I ve made the changes and pull request My errors were on Ubuntu 18 04 which I think I saw after making this post was the version of Ubuntu used in the colab notebooks and is why those notebooks also used 4 9 0 In the next week or so I ll have an intel and M1 mac I can try try running on both and provide recommendations as appropriate"
+      }
+    ]
+  },
+  {
+    "number": 116,
+    "title": "[BUG] dosma.register() throws an error when moving_mask is passed to the function",
+    "state": "closed",
+    "body": "Describe the bug dosma register throws an error when moving mask is passed to the function either as a string or MedicalVolume To Reproduce import dosma as dm from dosma file constants as flc reg info reg vol dm register target moving flc ELASTIX RIGID INTERREGISTER PARAMS FILE out path return volumes True target mask target mask path moving masks moving mask path rtype tuple show pbar True Expected behavior The function is expected to correctly call Elastix using both fixed target and moving masks The bug is at line 406 of dosma register and has to do with the fact that we attempt to fill a non existing attribute of the object reg inputs Code with bug if use mask and moving mask is not None reg inputs target mask os path abspath moving mask Bug is fixed when naming the correct attribute Solution if use mask and moving mask is not None reg inputs moving mask os path abspath moving mask",
+    "created_at": "2021-09-08T02:37:33Z",
+    "closed_at": "2021-12-05T16:14:49Z",
+    "user": "barma7",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-09-09T20:18:28Z",
+        "body": "Thanks for the find Could you make a PR for this"
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "title": "Make Tensorflow imports lazy",
+    "state": "open",
+    "body": "Importing tensorflow can take a lot of time To solve this we can make the tensorflow imports lazy",
+    "created_at": "2021-08-08T16:02:12Z",
+    "closed_at": null,
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 111,
+    "title": "simple itk functions ? (resampling & registration) [FEATURE]",
+    "state": "open",
+    "body": "Is your feature request related to a problem Please describe No problems Just wanted bring up some thoughts or ideas Describe the solution you d like Thanks for contributing this library I quite like the overall library format I ve personally used simpleitk sitk quite a bit But most of the time I am just using it as a means of importing and exporting data and then do much of my processing in numpy and other python libraries From that standpoint this library seems like a great option to represent data in numpy format for interoperability with other libraries Anyways to see if I could transition to this library instead of sitk I went through my code base and looked at sitk functions that I most heavily relied on Based on that review there were two areas I was wondering about image IO and image resampling Resampling The main function that I don t currently see present in DOSMA but that I know I ve used heavily is an image resampling function Im thinking 1 resampling image to specified dimension parameters origin spacing volume size using different methods nearest neighbour linear bspline and 2 resampling within the space grid of another image really this should just be a special case or helper function related to 1 Are there any thoughts about incorporating an image resampling function other than those in Elastix which I think is itk under the hood And if so what sort of path you were thinking about Image IO For simplicity I ve always saved outputs using nrrd as it seems to be what was recommended adopted by the itk 3D slicer community that I learned started with The other format that I ve used a bit and is more obscure is par rec Philips scanners I ve used nibable to read par rec before and since dosma already uses nibabel to read nii Im guessing this could relatively easily be added Im just thinking about reading here I really dont see a need to save par rec files Would this be something you consider adding As for nrrd it looks like nibabel folks have been meaning to add it for a while but maybe haven t https github com nipy nibabel issues 356 Seems like pynrrd https pypi org project pynrrd could be a lightweight option that might be the backbone to whatever nibabel uses anyways Or sitk can also do this reading and writing but it is obviously a bigger library that you may not want to include as a dependency Those are the two things that I was mostly wondering about when reading through the documentation and examples Beyond this I think there are some functions in sitk that could be useful and tend to be fast because they are C based However Im thinking that the DOMA built in functions to convert a MedicalVolume to sitk image format and back would enable users to easily use sitk filters if they had a use case Thanks again for contributing Anthony Describe alternatives you ve considered A clear and concise description of any alternative solutions or features you ve considered Additional context Add any other context or screenshots about the feature request here",
+    "created_at": "2021-06-08T16:16:22Z",
+    "closed_at": null,
+    "user": "gattia",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-06-15T19:06:13Z",
+        "body": "Hi Anthony thank you for your interest in DOSMA and for these use cases I ve added some thoughts below 1 Resampling The plan is to have resampling supported natively with minimal dependency on other packages I m thinking they should only use numpy cupy ops to avoid any latency that can often be hidden when relying on other packages As you mentioned case 2 is an extension of 1 so these should be quite easy to add NN linear bspline are all good interpolation methods that should be supported in this op 2 Image IO Nrrd is definitely on the list of formats to support dosma should have support for it in the near future dosma also has planned support for the parrec format but requires a bit more nuanced design We will need to map the header fields in parrec nibabel ParRecHeader to the appropriate fields in pydicom headers which DOSMA uses as the base metadata handler Happy to accept a PR for this if you re interested"
+      },
+      {
+        "user": "gattia",
+        "created_at": "2021-06-22T23:40:04Z",
+        "body": "Arjun Thanks so much for the reply That sounds great for the resampling the nrrd support Really I think those are the main points Parrec is definitely more niche As I get some time I ll take a peak at mapping the parrec headers into the approriate pydicom ones Thanks"
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "title": "[BUG] TensorFlow 2.5.0 not supported",
+    "state": "open",
+    "body": "Describe the bug With tensorflow 2 5 0 we get an error message like the one below bash tests util py 18 in module from dosma cli import SUPPORTED SCAN TYPES parse args dosma cli py 36 in module from dosma models seg model import SegModel dosma models init py 1 in module from dosma models import oaiunet2d util dosma models oaiunet2d py 14 in module from keras models import Model opt hostedtoolcache Python 3 6 13 x64 lib python3 6 site packages keras init py 20 in module from import initializers opt hostedtoolcache Python 3 6 13 x64 lib python3 6 site packages keras initializers init py 124 in module populate deserializable objects opt hostedtoolcache Python 3 6 13 x64 lib python3 6 site packages keras initializers init py 49 in populate deserializable objects LOCAL GENERATED WITH V2 tf internal tf2 enabled E AttributeError module tensorflow compat v2 internal has no attribute tf2 To Reproduce python import dosma Expected behavior No error Stopgap solution Install tensorflow and Keras with pip install tensorflow 2 4 1 keras 2 4 3 Potential Fix As mentioned in this issue https github com tensorflow tensorflow issues 49172 issue 891395482 tensorflow 2 0 should import keras tools using import tensorflow keras instead of import keras All files where packages are imported from keras should first check the version for tensorflow and then rename keras In pseudo code this is python if tensorflow version 2 0 import tensorflow keras as keras from keras",
+    "created_at": "2021-05-14T01:41:50Z",
+    "closed_at": null,
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 73,
+    "title": "group_by checking in dicom_io.load() throws an error if EchoNumber is zero indexed",
+    "state": "closed",
+    "body": "For MESE acquired with SIEMENS EchoNumbers is 0 indexed In dicom io load the group by option throws an error when checking if the header entry exists in dicom line 269 if is not temp dicom get group by raise To solve the issue I suggest changing the conditional check with this if temp dicom get group by is None raise",
+    "created_at": "2021-03-19T00:57:37Z",
+    "closed_at": "2021-03-19T19:29:32Z",
+    "user": "barma7",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 57,
+    "title": "Do not enforce upper bound on pydicom version",
+    "state": "closed",
+    "body": "Per this discussion https github com pydicom pydicom issues 1266 pydicom enforces EchoTime as an IS type which is a derived from the int type because it is encoded as such in some dicoms By default this should be a float quantity but if the dicom metadata enforces its a IS type pydicom enforces that too This explicit type checking was introduced around pydicom 2 1 0 We currently have set the upper bound on the pydicom version to be 2 0 0 to avoid running into this issue with Cones which is a supported scan in DOSMA However this bad practice Solution The solution moving forward is still TBD The discussion above proposes some workaround of type checking with the downside that the field will no longer be DICOM compliant",
+    "created_at": "2020-12-01T20:33:37Z",
+    "closed_at": "2021-12-05T16:14:49Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 55,
+    "title": "Upgrade scan registration to use dosma.utils.registration.register()",
+    "state": "closed",
+    "body": "Upgrade scan intra inter registration to use dosma utils registration register We will add testing to verify consistency between current scan inter intra registering code and the implementation with the register function These tests are to be deleted once they have been verified and scan registration code is upgraded to function",
+    "created_at": "2020-11-30T07:42:28Z",
+    "closed_at": "2021-04-28T07:22:50Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 51,
+    "title": "Add fast way to interpret orientation from DICOMs without loading full volume",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe We may want to know the orientation of a scan without loading the full scan which can be computationally expensive Proposed Solution Load two slices and interpret the orientation from those slices",
+    "created_at": "2020-10-25T15:15:46Z",
+    "closed_at": "2021-03-05T07:53:34Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-03-05T07:53:34Z",
+        "body": "DicomReader now supports loading list of files Instead of specifying the dicom directory which would load all slices you can specify dicoms corresponding to the slices The code below assumes the first two files are consecutive slices in the volume python dicom dir path to dicom dir files os path join dicom dir x for x in os listdir dicom dir 2 mv DicomReader load files"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "Bit-precision of NiFTI scans result in different zero-mean, unit std. dev. volumes",
+    "state": "closed",
+    "body": "Describe the bug Zero mean normalization of 32 bit vs 64 bit data results in slightly different estimations of the mean and standard deviation However when both volumes are compared pre normalization using np all both volumes are the same see meth test h5 nifti same This slight difference in the image can affect network performance and change the expected segmentations As a placeholder we assert that the dice between the expected and produced segmentations for each tissue must be greater than 99 Note that for the following models in DOSMA no considerable difference in performance on the test example was seen OAIUnet2D IWOAIOAIUnet2D IWOAIOAIUnet2DNormalized To Reproduce See tests models test oaiunet2d py for more information Expected behavior Segmentation performance should be the same if the volumes are the same Screenshots If applicable add screenshots to help explain your problem Desktop please complete the following information OS MacOS Branch dev",
+    "created_at": "2020-07-09T18:41:15Z",
+    "closed_at": "2021-03-05T03:41:18Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-03-05T03:41:18Z",
+        "body": "This is expected for arrays of different dtype s"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "Activate dosma_env automatically if not the current environment",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe Activate the dosma env virtual environment automatically when using the dosma executable Describe the solution you d like This can be done by checking for the DEFAULT CONDA ENV environment variable which tracks the name of the active environment in the local terminal window Additional context Note for older versions of conda installed conda environments may be activated using source activate Need to find a method for determining when to use source activate vs conda activate",
+    "created_at": "2020-07-07T17:29:57Z",
+    "closed_at": "2020-12-04T08:43:44Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2020-12-04T08:43:44Z",
+        "body": "Checking for environment activation is out of scope of the project"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "Installation Requirement",
+    "state": "closed",
+    "body": "Xcode and subsequently gcc need to be installed in order for DOSMA s installation to occur properly Otherwise the libraries fail to install during the installation and must be installed one by one",
+    "created_at": "2020-07-03T04:42:02Z",
+    "closed_at": "2021-03-05T01:52:43Z",
+    "user": "ghost",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-03-05T01:52:43Z",
+        "body": "gcc installation has been added as dependency in documentation"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "Bilateral automatic segmentation bug. Segmentation works only for one of the knees",
+    "state": "closed",
+    "body": "When using automatic segmentation qdess segment with a bilateral knee acquisition If the volume contains both knees automatic segmentation works only on the first knee Note that no errors are displayed from terminal however the output mask has all zeros where the cartilage of the second knee is supposed to be which is not correct As workaround for the current bug is to separate the knees beforehand and to process the two volumes separately",
+    "created_at": "2020-06-23T23:20:36Z",
+    "closed_at": "2021-03-05T02:03:30Z",
+    "user": "barma7",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-03-05T02:03:30Z",
+        "body": "Thanks for the question Some segmentation methods normalize images using volumetric zero mean unit standard deviation normalization The normalization factors may not be accurate when computed over the field of view in bilateral scans due to larger extent of negative space i e no anatomy When using dosma from the command line knees will have to be separated prior to processing If using dosma as a library in a Python script you can load the volume and slice at the midpoint python mv DicomReader load path to bilateral dicoms mv1 mv mv shape 2 first knee mv2 mv mv shape 2 second knee Closing this issue for now but feel free to reopen"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "Option to store data in csv instead of xlsx format",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe xlsx enforces conformance Excel format but the csv format is more general Having an option for saving data in csv format would be useful",
+    "created_at": "2019-07-12T20:44:42Z",
+    "closed_at": "2021-04-28T19:00:11Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-04-28T19:00:11Z",
+        "body": "We default to returning a dataframe the user can determine how they want to save it using pandas"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "Windows OS support",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe DOSMA is not fully supported for the Windows OS Please add additional functionality to DOSMA to allow Windows OS usability Describe the solution you d like 1 DOSMA support for Windows OS or 2 Docker container containing OS file dependencies Describe alternatives you ve considered Virtual Machines are too bulky and are not seamlessly integrated with existing programs",
+    "created_at": "2019-07-12T18:05:00Z",
+    "closed_at": "2020-11-29T17:49:47Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2020-11-29T17:49:47Z",
+        "body": "DOSMA now offers native Windows support Earlier DOSMA could not guarantee Windows support because of the nibabel dependency However nibabel now offers native Windows installation using pip https nipy org nibabel installation html"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "Allow manual region division",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe In cases where automatic division of tissues into regions is not what we are looking for we want to have the support of manual region subdivision Here the segmentation can be manually subdivided into regions of interest deep superficial anterior lateral etc Describe the solution you d like Have support for manual region division where the user can upload a region subdivision with each region uniquely identifiable by integers",
+    "created_at": "2019-06-16T15:32:56Z",
+    "closed_at": "2021-04-28T18:59:38Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-04-28T18:59:36Z",
+        "body": "the dosma core quant vals QuantitativeValue object can be use to find these metrics"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Adding logging measures to pipeline",
+    "state": "closed",
+    "body": "Add logging functionality to the pipeline to track data scan types actions etc runtimes",
+    "created_at": "2019-05-01T17:49:28Z",
+    "closed_at": "2019-12-31T02:48:42Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 32,
+    "title": "Convert Left/Right orientation to Medial/Lateral for knee",
+    "state": "closed",
+    "body": "Current coordinate systems save information in terms of left and right However for knee analysis in particular determining if left corresponds to the medial or lateral condyle side",
+    "created_at": "2019-05-01T17:44:28Z",
+    "closed_at": "2021-04-28T07:23:33Z",
+    "user": "ad12",
+    "comments_count": 2,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2021-04-28T07:23:33Z",
+        "body": "this can be added as a module in the future but is out of scope at the moment feel free to reopen at a later time"
+      },
+      {
+        "user": "gattia",
+        "created_at": "2021-06-08T15:12:50Z",
+        "body": "This seems like a really good idea to me I know I ve had the same problem a fair amount If the leg right left were documented in the MedicalVolume then the Med Lat orientation could easily be identified"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Rename Dess to qDESS",
+    "state": "closed",
+    "body": "qdess is the name used to refer to the protocol that is implemented refactor name",
+    "created_at": "2019-02-18T19:13:36Z",
+    "closed_at": "2019-02-24T03:08:25Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "Update README for Dicom/NIfTI I/O",
+    "state": "closed",
+    "body": "update README detailing dicom NIfTI io support",
+    "created_at": "2019-02-18T18:37:32Z",
+    "closed_at": "2019-02-18T19:08:47Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Match bit-depth of existing dicom",
+    "state": "closed",
+    "body": "Write dicoms out as different 8 16 bit elements based on which format is most appropriate",
+    "created_at": "2019-02-18T18:03:07Z",
+    "closed_at": "2019-02-18T19:08:47Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Add Dicom/Nifti IO support",
+    "state": "closed",
+    "body": "Add support for reading and writing using NIfTi and Dicom formats",
+    "created_at": "2019-02-17T05:58:05Z",
+    "closed_at": "2019-02-18T19:08:46Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "Load state for cubequant not working",
+    "state": "closed",
+    "body": "Bug Cannot load interregistered files for cubequant Reproduce Run two lines separately 1 python m pipeline d DIR s DIR data cq fc interregister ts DIR data dess data echo1 nii gz tm DIR data fc fc nii gz 2 python m pipeline l DIR data cubequant cq fc t1 rho Line 2 results in error Either dicom path or load path must be specified",
+    "created_at": "2019-02-11T20:00:46Z",
+    "closed_at": "2019-02-11T23:39:56Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "femoral cartilage segmentation should use total volume whitening",
+    "state": "closed",
+    "body": "currently each volume is whitened before preprocessing but the whitening process is done in the through plane direction This is incorrect Fix whitening should be done by taking average std dev of all pixels in volume not just in through plane direction",
+    "created_at": "2019-01-17T03:16:57Z",
+    "closed_at": "2019-01-17T03:23:34Z",
+    "user": "ad12",
+    "comments_count": 1,
+    "labels": [
+      "bug",
+      "invalid"
+    ],
+    "comments": [
+      {
+        "user": "ad12",
+        "created_at": "2019-01-17T03:24:00Z",
+        "body": "Error in issue Implementation is already correct"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Quantitative value for femoral cartilage inaccurate",
+    "state": "closed",
+    "body": "Quantitative value for femoral cartilage analysis are not accurate",
+    "created_at": "2019-01-09T05:12:40Z",
+    "closed_at": "2019-01-19T00:36:05Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "Create preferences file",
+    "state": "closed",
+    "body": "Create a preferences file that can be controlled by the user",
+    "created_at": "2018-11-24T00:32:09Z",
+    "closed_at": "2019-07-19T15:30:38Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "Sort dicom files by creation time",
+    "state": "closed",
+    "body": "After anonymization many dicom files are not in the correct order or are not named appropriately As a result relying on the order of the dicom files is not sufficient for obtaining the files in the correct order To solve this sort by the time the dicom was created",
+    "created_at": "2018-11-15T04:00:40Z",
+    "closed_at": "2019-05-01T17:37:52Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "itk error: Too many samples map outside moving image buffer",
+    "state": "closed",
+    "body": "This error occurs when using a mask 1 Investigate if it is the automatic mask that is causing the problem try with manual mask 2 If it is automatic mask see what difference are and if they are attributable to network weights which are not well trained yet",
+    "created_at": "2018-09-25T07:44:26Z",
+    "closed_at": "2018-10-16T00:08:00Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "Update README",
+    "state": "closed",
+    "body": "Update README to reflect new structure for using pipeline",
+    "created_at": "2018-09-18T18:55:46Z",
+    "closed_at": "2019-05-01T17:38:02Z",
+    "user": "ad12",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

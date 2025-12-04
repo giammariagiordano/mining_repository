@@ -1,0 +1,150 @@
+[
+  {
+    "number": 7,
+    "title": "OpenVINO 2022.1 not supported",
+    "state": "closed",
+    "body": "OpenVINO 2022 1 seems not to be supported Would it be possible to re convert the files with the newest version RuntimeError The support of IR v5 has been removed from the product Please convert the original model using the Model Optimizer which comes with this version of the OpenVINO to generate supported IR version I tried to convert the model with the 2022 1 open model optimizer but it seems that it does not work I used the frozen model form the checkpoint path and after conversion the bin file is only 2 2MB v1 4 And the results are completely wrong it seems there are weights missing Could you give me a hint how to convert it for more recent OpenVINO versions",
+    "created_at": "2022-05-21T19:53:03Z",
+    "closed_at": "2022-05-22T00:44:40Z",
+    "user": "cansik",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2022-05-22T00:28:50Z",
+        "body": "I think you should first read the official OpenVINO tutorial https github com PINTO0309 PINTO model zoo tree main 007 mobilenetv2 poseestimation bash docker run it rm v pwd home user workdir ghcr io pinto0309 openvino2tensorflow latest pb to saved model pb file path frozen model pb inputs image 0 outputs Openpose concat stage7 0 mo framework tf saved model dir saved model from pb output dir openvino FP32 data type FP32 model name mobilenetv2 pose"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Broken download link for updated quantized model",
+    "state": "closed",
+    "body": "models train test tflite latest download sh link in this file seems to be broken Please share the link to download model checkpoints or frozen graph for the updated quantized models",
+    "created_at": "2022-02-11T05:23:44Z",
+    "closed_at": "2022-02-11T05:31:31Z",
+    "user": "KushalHM",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2022-02-11T05:31:31Z",
+        "body": "https github com PINTO0309 PINTO model zoo tree main 007 mobilenetv2 poseestimation"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Run not via openvino",
+    "state": "closed",
+    "body": "Hi Thank for your contribute I just want to run openpose with tf lite not using openvino could you give me a direction",
+    "created_at": "2021-02-24T08:28:56Z",
+    "closed_at": "2021-08-30T14:54:44Z",
+    "user": "tucachmo2202",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "FPS rate for Raspberry pi ",
+    "state": "closed",
+    "body": "I am running NCS2 Async Single Stick Boost Mode with one NCS on the raspberry pi but the frame rate of detection is 2FPS",
+    "created_at": "2020-03-10T15:02:00Z",
+    "closed_at": "2022-05-22T00:30:15Z",
+    "user": "Yaffa16",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "TFlite Models won't produce any pose, only random points everywhere",
+    "state": "closed",
+    "body": "The Openvino scripts and models are working pretty good but the tflite ones normal tflite and edge tpu are only producing random points as poses everyhere in the picture no matter if there are people visible or not I ll attach a Screenshot to show the problem tflite problem https user images githubusercontent com 1804137 67385376 51a0c880 f593 11e9 81f2 57c79ade3a8a PNG",
+    "created_at": "2019-10-23T10:48:42Z",
+    "closed_at": "2020-06-08T10:16:25Z",
+    "user": "JimWest",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ealuthwala",
+        "created_at": "2019-12-25T10:15:50Z",
+        "body": "did you figure it out"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2020-06-08T10:16:25Z",
+        "body": "Bug fixed Weight Quantization Integer Quantization Float16 Quantization 256x256 https github com PINTO0309 PINTO model zoo tree master 07 mobilenetv2 poseestimation dm100 224"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "-",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-06-03T01:41:16Z",
+    "closed_at": "2022-05-22T00:30:07Z",
+    "user": "lmy931",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": " Unsupported primitive of type: Interp name: base/layer_14/output/upsample with the CPU models. ",
+    "state": "closed",
+    "body": "Hi Great work Still I am getting an error with the CPU models on Windows with Openvino Can you help me with this please Thanks",
+    "created_at": "2019-05-09T12:25:47Z",
+    "closed_at": "2022-05-22T00:29:55Z",
+    "user": "rakidedigama",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "flerkenvn",
+        "created_at": "2019-05-14T09:56:56Z",
+        "body": "I got the same issue"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-05-14T10:12:31Z",
+        "body": "Please tell me everything below 1 what kind of model file was used 2 what kind of program was run 3 openvino version 1 0 or 1 0 1 or other"
+      },
+      {
+        "user": "flerkenvn",
+        "created_at": "2019-05-14T10:44:54Z",
+        "body": "Please tell me everything below 1 what kind of model file was used 2 what kind of program was run 3 openvino version 1 0 or 1 0 1 or other I used model file models train test openvino mobilenet v2 1 4 224 FP32 frozen model xml with command python3 openvino usbcamera cpu ncs2 sync py d CPU with OpenVino 2019 R1 133"
+      },
+      {
+        "user": "rakidedigama",
+        "created_at": "2019-05-14T10:49:01Z",
+        "body": "I used almost the same configurations However I was testing this with openvino windows Release 1 0 1 and it seems that the version does not support certain layers Shape inference for Interp layer works for almost all cases except for Caffe models with fixed width and height parameters for example semantic segmentation adas 0001 https software intel com en us articles OpenVINO RelNotes known issues 21 Here s a screenshot of the error image https user images githubusercontent com 26470435 57692447 717ca980 764f 11e9 8c13 413388f5c4b3 png"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-05-14T14:26:10Z",
+        "body": "You must use CPU extensions lib libcpu extension so Also OpenVINO for Windows seems to be unstable I strongly recommend the use of Ubuntu python if CPU args device if platform processor x86 64 plugin add cpu extension lib libcpu extension so if args boost False model xml models train test openvino mobilenet v2 1 4 224 FP32 frozen model xml else model xml models train test openvino mobilenet v2 0 5 224 FP32 frozen model xml elif GPU args device or MYRIAD args device if args boost False model xml models train test openvino mobilenet v2 1 4 224 FP16 frozen model xml else model xml models train test openvino mobilenet v2 0 5 224 FP16 frozen model xml else print Specify the target device to infer on CPU GPU MYRIAD is acceptable sys exit 0"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-05-14T14:40:54Z",
+        "body": "For Windows Please show below https github com PINTO0309 OpenVINO DeeplabV3 issues 1"
+      },
+      {
+        "user": "Ealuthwala",
+        "created_at": "2019-12-25T11:15:20Z",
+        "body": "I am getting the exact same error I tried removing the if platform processor x86 64 to make it use the extension but still no use image https user images githubusercontent com 30061526 71444205 7c053280 274a 11ea 8284 ae281ac3cf77 png now I am getting this error anyway I don t think I was supposed to do that so how can I fix this I am using windows 10 with the openvino 2019 1 133 tried using the tflite one too that just produce random dots"
+      },
+      {
+        "user": "Ealuthwala",
+        "created_at": "2019-12-25T11:36:54Z",
+        "body": "and the platform processor is Intel64 Family 6 Model 60 Stepping 3 GenuineIntel"
+      }
+    ]
+  }
+]

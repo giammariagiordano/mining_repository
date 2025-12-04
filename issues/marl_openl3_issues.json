@@ -1,0 +1,1916 @@
+[
+  {
+    "number": 99,
+    "title": "the model weight file url is wrong",
+    "state": "open",
+    "body": "when i down the model weights file it is not work And i check the url https github com marl openl3 raw models openl3 audio linear music v0 4 0 h5 gz it is wrong please give the rights file path thx",
+    "created_at": "2025-09-08T10:32:15Z",
+    "closed_at": null,
+    "user": "AnsenZhang007",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 98,
+    "title": "Cannot load file containing pickled data when allow_pickle=False",
+    "state": "closed",
+    "body": "Why do I this error openl3 Processing C Test audio wav 1 1 3 3 5s 1s step openl3 Saved C Test audio npz Error processing Cannot load file containing pickled data when allow pickle False On this line py with np load output file as data embeddings data embedding",
+    "created_at": "2025-01-07T17:49:44Z",
+    "closed_at": "2025-01-08T18:41:13Z",
+    "user": "AbsoluteSkid",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 97,
+    "title": "Feature Request: Integration with Ollama",
+    "state": "open",
+    "body": "I would love to generate image vector embedding using ollama ai could you consider implementing support in ollama https github com ollama ollama issues 7699",
+    "created_at": "2024-11-16T18:16:56Z",
+    "closed_at": null,
+    "user": "gwpl",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 96,
+    "title": "error when initializing the model",
+    "state": "open",
+    "body": "Hi I m just following the tutorial doing these import openl3 model openl3 models load audio embedding model input repr mel128 content type music embedding size 512 And an error pops out Traceback most recent call last File stdin line 1 in module File ext3 miniconda3 lib python3 11 site packages openl3 models py line 134 in load audio embedding model return load audio embedding model from path model path input repr embedding size frontend frontend File ext3 miniconda3 lib python3 11 site packages openl3 models py line 166 in load audio embedding model from path m AUDIO MODELS input repr include frontend frontend kapre File ext3 miniconda3 lib python3 11 site packages openl3 models py line 413 in construct mel128 audio network spec fix kapre spec get melspectrogram layer File ext3 miniconda3 lib python3 11 site packages openl3 models py line 44 in get spectrogram seq func a return decibel False kw File ext3 miniconda3 lib python3 11 site packages kapre composed py line 261 in get melspectrogram layer return Sequential layers name name File ext3 miniconda3 lib python3 11 site packages keras src models sequential py line 74 in init self maybe rebuild File ext3 miniconda3 lib python3 11 site packages keras src models sequential py line 139 in maybe rebuild self build input shape File ext3 miniconda3 lib python3 11 site packages keras src layers layer py line 222 in build wrapper original build method args kwargs File ext3 miniconda3 lib python3 11 site packages keras src models sequential py line 180 in build x layer x File ext3 miniconda3 lib python3 11 site packages keras src utils traceback utils py line 122 in error handler raise e with traceback filtered tb from None File ext3 miniconda3 lib python3 11 site packages optree ops py line 594 in tree map return treespec unflatten map func flat args RuntimeError Exception encountered when calling STFT call Could not automatically infer the output shape dtype of stft 3 of type STFT Either the STFT call method is incorrect or you need to implement the STFT compute output spec compute output shape method Error encountered Invalid dtype complex64 Arguments received by STFT call args KerasTensor shape None 1 48000 dtype float32 sparse None name keras tensor 7 kwargs class inspect empty Any idea what I did wrong here Thanks",
+    "created_at": "2024-04-11T00:06:15Z",
+    "closed_at": null,
+    "user": "sivannavis",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "vdng9338",
+        "created_at": "2024-04-25T17:00:50Z",
+        "body": "Same thing here I followed the instructions in README md to install OpenL3 on Ubuntu 22 04 within a fresh Conda environment then followed the first steps of the tutorial http openl3 readthedocs io en latest tutorial html and got this error Python 3 10 12 main Nov 20 2023 15 14 05 GCC 11 4 0 on linux Type help copyright credits or license for more information import openl3 2024 04 25 18 34 04 432317 I tensorflow core util port cc 113 oneDNN custom operations are on You may see slightly different numerical results due to floating point round off errors from different computation orders To turn them off set the environment variable TF ENABLE ONEDNN OPTS 0 2024 04 25 18 34 04 432638 I external local tsl tsl cuda cudart stub cc 32 Could not find cuda drivers on your machine GPU will not be used 2024 04 25 18 34 04 434472 I external local tsl tsl cuda cudart stub cc 32 Could not find cuda drivers on your machine GPU will not be used 2024 04 25 18 34 04 461994 I tensorflow core platform cpu feature guard cc 210 This TensorFlow binary is optimized to use available CPU instructions in performance critical operations To enable the following instructions AVX2 AVX512F AVX512 VNNI AVX512 BF16 FMA in other operations rebuild TensorFlow with the appropriate compiler flags 2024 04 25 18 34 04 867150 W tensorflow compiler tf2tensorrt utils py utils cc 38 TF TRT Warning Could not find TensorRT import soundfile as sf audio sr sf read audiofile wav emb ts openl3 get audio embedding audio sr Traceback most recent call last File stdin line 1 in module File home victor local lib python3 10 site packages openl3 core py line 262 in get audio embedding model load audio embedding model File home victor local lib python3 10 site packages openl3 models py line 134 in load audio embedding model return load audio embedding model from path model path input repr embedding size frontend frontend File home victor local lib python3 10 site packages openl3 models py line 166 in load audio embedding model from path m AUDIO MODELS input repr include frontend frontend kapre File home victor local lib python3 10 site packages openl3 models py line 518 in construct mel256 audio network spec fix kapre spec get melspectrogram layer File home victor local lib python3 10 site packages openl3 models py line 44 in get spectrogram seq func a return decibel False kw File home victor local lib python3 10 site packages kapre composed py line 261 in get melspectrogram layer return Sequential layers name name File home victor local lib python3 10 site packages keras src models sequential py line 74 in init self maybe rebuild File home victor local lib python3 10 site packages keras src models sequential py line 139 in maybe rebuild self build input shape File home victor local lib python3 10 site packages keras src layers layer py line 222 in build wrapper original build method args kwargs File home victor local lib python3 10 site packages keras src models sequential py line 180 in build x layer x File home victor local lib python3 10 site packages keras src utils traceback utils py line 122 in error handler raise e with traceback filtered tb from None File home victor local lib python3 10 site packages optree ops py line 594 in tree map return treespec unflatten map func flat args RuntimeError Exception encountered when calling STFT call Could not automatically infer the output shape dtype of stft of type STFT Either the STFT call method is incorrect or you need to implement the STFT compute output spec compute output shape method Error encountered Invalid dtype complex64 Arguments received by STFT call args KerasTensor shape None 1 48000 dtype float32 sparse None name keras tensor 1 kwargs class inspect empty Using Python 3 8 solved the issue for me Apparently OpenL3 currently only supports Python 3 6 through 3 8 according to https github com marl openl3 issues 94 issuecomment 1533478876"
+      }
+    ]
+  },
+  {
+    "number": 94,
+    "title": "Error installing openl3 on Win64 with Python 3.10",
+    "state": "open",
+    "body": "When installing openl3 with pip I get the following error wheel vendored packaging tokenizer ParserSyntaxError Expected end or semicolon after version specifier scikit image 0 14 3librosa 0 7 2",
+    "created_at": "2023-05-02T15:24:41Z",
+    "closed_at": null,
+    "user": "rjungbeck",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2023-05-03T17:59:14Z",
+        "body": "Currently only Python 3 6 3 7 and 3 8 are supported We ll have to do some updates at some point to deal with the new PyPI packaging conventions"
+      },
+      {
+        "user": "jonnor",
+        "created_at": "2023-05-05T08:39:33Z",
+        "body": "What are the known issues with Python 3 10 support I might be interested in trying to address them as we are transitioning from Python 3 8 to 3 10"
+      },
+      {
+        "user": "rjungbeck",
+        "created_at": "2023-05-05T09:44:29Z",
+        "body": "I am already stuck in installation So I can t tell you whats happening later"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2023-05-05T15:12:48Z",
+        "body": "Oh whoops also this specific issue is due to a typo in setup py The latest version should address this"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2023-05-05T15:13:46Z",
+        "body": "What are the known issues with Python 3 10 support I might be interested in trying to address them as we are transitioning from Python 3 8 to 3 10 The issue that I ve seen people facing seem to be a difference in how PyPI packaging metadata is defined I haven t caught up yet with whatever changes they may have made yet"
+      },
+      {
+        "user": "oykuthejedi",
+        "created_at": "2024-03-28T17:56:36Z",
+        "body": "I am using Python version 3 12 and encountered problems with the installation"
+      },
+      {
+        "user": "Braviadprogrammer",
+        "created_at": "2025-03-29T12:23:23Z",
+        "body": "I am using Python version 3 12 and encountered problems with the installation Collecting openl3 Using cached openl3 0 4 2 tar gz 29 kB Preparing metadata setup py error error subprocess exited with error python setup py egg info did not run successfully exit code 1 6 lines of output Traceback most recent call last File string line 2 in module File pip setuptools caller line 34 in module File C Users O AppData Local Temp pip install 7s3m jd7 openl3 bf932f29c03e484db36343350a1de00c setup py line 4 in module import imp ModuleNotFoundError No module named imp end of output note This error originates from a subprocess and is likely not a problem with pip error metadata generation failed Encountered error while generating package metadata See above for output note This is an issue with the package mentioned above not pip hint See above for details Didnt you want to continue the project again please brief us so that we can know what to do next"
+      }
+    ]
+  },
+  {
+    "number": 92,
+    "title": "Clarification on input representation",
+    "state": "open",
+    "body": "I was just reading through the source code on openl3 core py and noticed something in functions 1 librosa linear frontend and 2 librosa mel frontend It seems librosa power to db is being used on a magnitude not power spectrum Instead should it be using librosa amplitude to db",
+    "created_at": "2022-08-07T03:51:40Z",
+    "closed_at": null,
+    "user": "alisonbma",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 91,
+    "title": "Example of fine-tuning the audio sub-network.",
+    "state": "open",
+    "body": "I want to perform the fine tuning of the audio subnetwork to fit my audio classification problem To this aim I plan to use the construct linear audio network construct mel128 audio network and construct mel256 audio network functions to load the pre trained Keras model and then append one or more fully connected layers to perform the classification However I don t understand the Input shape of such models According to the models py the input shape is input shape 1 asr audio window dur where asr 48000 and audio window dur 1 what s asr and why it has that value Can you please provide an example of using the Keras model from the wav file I really appreciate any help you can provide",
+    "created_at": "2022-07-16T13:33:32Z",
+    "closed_at": null,
+    "user": "mattiacampana",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sreenivasaupadhyaya",
+        "created_at": "2023-02-14T08:20:22Z",
+        "body": "Hi mattiacampana Could you please tell me how you got the pre trained keras weights for the audio sub network or any code to read the model and load the pre trained weights Thanks you"
+      }
+    ]
+  },
+  {
+    "number": 90,
+    "title": "Extract activation from lower audio layers",
+    "state": "closed",
+    "body": "Hi I was wondering how I can extract activations from the lower audio layers I guess embeddings are the same as MaxPool 3 and if that s correct then MaxPool MaxPool 1 and MaxPool 2 corresponds to the first second and third max pooling layers in the Audio ConvNet as explained in Arandjelovic and Zisserman 2018 https arxiv org abs 1712 06651",
+    "created_at": "2022-06-15T14:15:12Z",
+    "closed_at": "2024-08-16T11:50:02Z",
+    "user": "seunggookim",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2022-07-01T20:52:53Z",
+        "body": "That sounds right You should be able to construct a new model stopping at the appropriate level and selectively load the model weights up to that layer from the existing ones If you wanted you could also swap out the output max pooling layer if you wanted to play around with further downsampling the embedding"
+      }
+    ]
+  },
+  {
+    "number": 89,
+    "title": "m1 macos installation problem",
+    "state": "open",
+    "body": "Hi I am using an m1 macbook and when I try to install openl3 I encounter the problem when the script tries to install h5py but I have installed h5py in my virtual environment The problem is as below building h5py defs extension creating build temp macosx 11 0 arm64 3 8 creating build temp macosx 11 0 arm64 3 8 private creating build temp macosx 11 0 arm64 3 8 private var creating build temp macosx 11 0 arm64 3 8 private var folders creating build temp macosx 11 0 arm64 3 8 private var folders rz creating build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn creating build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn T creating build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz creating build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 creating build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py clang Wno unused result Wsign compare Wunreachable code DNDEBUG fwrapv O2 Wall fPIC O2 isystem opt homebrew Caskroom miniforge base envs pytorch env include arch arm64 fPIC O2 isystem opt homebrew Caskroom miniforge base envs pytorch env include arch arm64 DH5 USE 16 API I h5py I private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 lzf I opt local include I usr local include I opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages numpy core include I opt homebrew Caskroom miniforge base envs pytorch env include python3 8 c private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c o build temp macosx 11 0 arm64 3 8 private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs o In file included from private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 731 In file included from h5py api compat h 26 In file included from opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages numpy core include numpy arrayobject h 4 In file included from opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages numpy core include numpy ndarrayobject h 12 In file included from opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages numpy core include numpy ndarraytypes h 1969 opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages numpy core include numpy npy 1 7 deprecated api h 17 2 warning Using deprecated NumPy API disable it with define NPY NO DEPRECATED API NPY 1 7 API VERSION W warnings warning Using deprecated NumPy API disable it with private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 16556 56 error too few arguments to function call expected 3 have 2 pyx t 1 H5Oget info pyx v loc id pyx v oinfo if unlikely PyErr Occurred PYX ERR 0 1509 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Opublic h 497 15 note H5Oget info3 declared here H5 DLL herr t H5Oget info3 hid t loc id H5O info2 t oinfo unsigned fields private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 16671 95 error too few arguments to function call expected 5 have 4 pyx t 1 H5Oget info by name pyx v loc id pyx v name pyx v oinfo pyx v lapl id if unlikely PyErr Occurred PYX ERR 0 1520 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Opublic h 557 15 note H5Oget info by name3 declared here H5 DLL herr t H5Oget info by name3 hid t loc id const char name H5O info2 t oinfo unsigned fields private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 16786 144 error too few arguments to function call expected 8 have 7 pyx t 1 H5Oget info by idx pyx v loc id pyx v group name pyx v idx type pyx v order pyx v n pyx v oinfo pyx v lapl id if unlikely PyErr Occurred PYX ERR 0 1531 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Opublic h 631 15 note H5Oget info by idx3 declared here H5 DLL herr t H5Oget info by idx3 hid t loc id const char group name H5 index t idx type private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 17821 100 error too few arguments to function call expected 6 have 5 pyx t 1 H5Ovisit pyx v obj id pyx v idx type pyx v order pyx v op pyx v op data if unlikely PyErr Occurred PYX ERR 0 1630 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Opublic h 1326 15 note H5Ovisit3 declared here H5 DLL herr t H5Ovisit3 hid t obj id H5 index t idx type H5 iter order t order H5O iterate2 t op private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 17936 143 error too few arguments to function call expected 8 have 7 pyx t 1 H5Ovisit by name pyx v loc id pyx v obj name pyx v idx type pyx v order pyx v op pyx v op data pyx v lapl id if unlikely PyErr Occurred PYX ERR 0 1641 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Opublic h 1492 15 note H5Ovisit by name3 declared here H5 DLL herr t H5Ovisit by name3 hid t loc id const char obj name H5 index t idx type private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 21846 13 warning assigning to void from const void discards qualifiers Wincompatible pointer types discards qualifiers pyx t 1 H5Pget driver info pyx v plist id if unlikely PyErr Occurred PYX ERR 0 2016 pyx L1 error private var folders rz zx876pv95 39jqfx9hwszfq00000gn T pip install uj6hq2xz h5py 235d3597fd094986b308a5244243c308 h5py defs c 34606 68 error too few arguments to function call expected 4 have 3 pyx t 1 H5Sencode pyx v obj id pyx v buf pyx v nalloc if unlikely PyErr Occurred PYX ERR 0 3303 pyx L1 error opt homebrew Caskroom miniforge base envs pytorch env include H5Spublic h 373 15 note H5Sencode2 declared here H5 DLL herr t H5Sencode2 hid t obj id void buf size t nalloc hid t fapl 2 warnings and 6 errors generated error command usr bin clang failed with exit code 1 end of output note This error originates from a subprocess and is likely not a problem with pip WARNING No metadata found in opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages Rolling back uninstall of h5py Moving to opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages h5py 3 6 0 dist info from opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages 5py 3 6 0 dist info Moving to opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages h5py from opt homebrew Caskroom miniforge base envs pytorch env lib python3 8 site packages 5py error legacy install failure Encountered error while trying to install package h5py note This is an issue with the package mentioned above not pip hint See above for output from the failure My python version 3 8 13 By the way I have tried to build from source but this problem of h5py still exists",
+    "created_at": "2022-05-14T09:58:33Z",
+    "closed_at": null,
+    "user": "yy945635407",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mopper97",
+        "created_at": "2022-05-23T09:28:30Z",
+        "body": "Same issue for me with python version 3 10 4"
+      },
+      {
+        "user": "mamodrzejewski",
+        "created_at": "2022-07-22T15:08:35Z",
+        "body": "Having the same error as of July 2022 with both Python 3 8 and 3 9 Help would be greatly appreciated"
+      },
+      {
+        "user": "JamesLloydPartington",
+        "created_at": "2022-09-25T11:07:48Z",
+        "body": "I am also having this issue I have tried Python 3 7 3 8 and 3 9"
+      },
+      {
+        "user": "shahanneda",
+        "created_at": "2023-04-29T00:25:07Z",
+        "body": "same issue here anyone figure this out"
+      }
+    ]
+  },
+  {
+    "number": 87,
+    "title": "Export OpenL3 as TF/TF-Lite model",
+    "state": "open",
+    "body": "How can I export the pretrained OpenL3 as TF TF Lite model I would like to include it in an Android application Thanks in advance",
+    "created_at": "2022-03-08T21:12:14Z",
+    "closed_at": null,
+    "user": "mattiacampana",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 85,
+    "title": "Breaks with librosa 0.9.x",
+    "state": "closed",
+    "body": "Since librosa 0 9 0 most APIs must be called with keyword arguments ref the changelog https librosa org doc 0 9 0 changelog html v0 9 0 Not using a keyword argument causes a TypeError This unfortunately breaks OpenL3 at the moment with newest librosa Traceback most recent call last File builds soundsensing core soundsensing core embedding embedding py line 80 in compute embeddings dfs list generator File builds soundsensing core soundsensing core embedding embedding py line 72 in compute embeddings generator emb compute for paths chunk path key File builds soundsensing core soundsensing core embedding embedding py line 60 in compute for paths emb list ts list openl3 get audio embedding audio list samplerate File usr local lib python3 8 site packages openl3 core py line 269 in get audio embedding x preprocess audio File usr local lib python3 8 site packages openl3 core py line 159 in preprocess audio x np stack librosa mel frontend xi 0 TARGET SR n mels 128 kw for xi in x None File usr local lib python3 8 site packages openl3 core py line 159 in listcomp x np stack librosa mel frontend xi 0 TARGET SR n mels 128 kw for xi in x None File usr local lib python3 8 site packages openl3 core py line 116 in librosa mel frontend S librosa feature melspectrogram TypeError melspectrogram takes 0 positional arguments but 2 positional arguments and 4 keyword only arguments were given",
+    "created_at": "2022-02-09T19:45:56Z",
+    "closed_at": "2022-04-13T16:31:41Z",
+    "user": "jonnor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 82,
+    "title": "Dependency conflict with Tensorflow 2.5.x",
+    "state": "closed",
+    "body": "When trying to use openl3 0 4 0 with tensorflow 2 5 0 pip install shows The conflict is caused by openl3 0 4 0 depends on h5py 3 0 0 and 2 7 0 tensorflow 2 5 0 depends on h5py 3 1 0 Not tested Tensorflow 2 6 0 but expect the same issue there Can the h5py dependency be relaxed to be 2 7 0",
+    "created_at": "2021-08-30T11:22:29Z",
+    "closed_at": "2023-05-03T18:08:09Z",
+    "user": "jonnor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 81,
+    "title": "Numerical errors in hop_len due to rounding",
+    "state": "open",
+    "body": "It appears there might be a bug in the audio framing If you round hop len then for a long audio file over time the rounding error will accumulate It seems that you should leave it as a float and round every time you use it For example if you want embeddings every 25ms and have 44100Hz audio then the sample hop length is 1102 5 In this example you will drift 25ms every 37 minutes of audio This is just an example because the sample rate is 48000 here",
+    "created_at": "2021-08-28T20:47:45Z",
+    "closed_at": null,
+    "user": "turian",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 80,
+    "title": "Add note to docs about embeddings changing after tensorflow 2 / kapre + librosa upgrade",
+    "state": "open",
+    "body": "magdalenafuentes made a good point that we should add a note to the openl3 docs that mention that the embeddings are different after 0 4 0 so that people aren t caught off guard And maybe we can include the plot that hohsiangwu made showing the performance comparison between the different frontends and tensorflow versions",
+    "created_at": "2021-08-16T14:17:05Z",
+    "closed_at": null,
+    "user": "beasteers",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 79,
+    "title": "Migrate from Travis CI to GitHub Actions",
+    "state": "open",
+    "body": "https docs github com en actions learn github actions migrating from travis ci to github actions",
+    "created_at": "2021-08-10T16:29:12Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 78,
+    "title": "Add Action for running US8K benchmark",
+    "state": "open",
+    "body": "So we can have a more flexible regression check for necessary changes that change the model output May be useful thanks jonnor https cml dev",
+    "created_at": "2021-08-10T16:11:39Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 77,
+    "title": "Make linear frontend consistent with mel",
+    "state": "open",
+    "body": "The linear frequency spectrogram frontend results in 197 frames instead of 199 which seems to be caused by In librosa linear frontend openl3 core py center False should be center True when calling librosa stft In construct linear audio network openl3 models py pad end True should be added to argument for fix kapre spec In construct linear audio network openl3 models py in the else block corresponding to if include frontend the input shape should account for centering In addition to fixing these we ll need to regenerate the regression data likely",
+    "created_at": "2021-08-10T15:18:06Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 76,
+    "title": "Coveralls not triggered on successful Travis build",
+    "state": "open",
+    "body": "",
+    "created_at": "2021-08-09T20:40:43Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 73,
+    "title": "skimage submodules not imported correctly, regression tests fail",
+    "state": "closed",
+    "body": "skimage uses lazy imports so we need to import each submodule explictly e g import skimage transform skimage transform rescale X s instead of import skimage skimage transform rescale X s",
+    "created_at": "2021-08-08T02:59:07Z",
+    "closed_at": "2021-08-09T22:33:53Z",
+    "user": "jtcramer",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-08T15:05:52Z",
+        "body": "It seems that after fixing it the regression tests start to fail https travis ci com github marl openl3 jobs 529797736 scream"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T16:21:31Z",
+        "body": "Fixing the call to skimage transform rescale https scikit image org docs dev api skimage transform html skimage transform rescale to account for the channel dimension which seems to be a newer change gets rid of the first error but the regression tests still fail"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T17:36:08Z",
+        "body": "I tried re pinning scikit image 0 15 0 again and the tests pass so something is definitely up related to the upgrade"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T17:49:40Z",
+        "body": "From Travis def test image regression capsys test correct execution on test image file regression tempdir tempfile mkdtemp run image DAISY PATH output dir tempdir verbose True check output file created image outfile os path join tempdir daisy npz assert os path isfile image outfile regression test image data reg np load REG DAISY PATH image data out np load image outfile assert sorted image data out files sorted image data reg files embedding assert np allclose image data out embedding image data reg embedding rtol 1e 05 atol 1e 05 equal nan False E assert False E where False function debugallclose at 0x7ff003280400 array 0 76532334 3 5707924 0 01784389 2 2216794 n 2 5874567 0 31345925 dtype float32 array 0 831712 3 2959087 0 15737686 2 1805274 n 2 6374753 0 03956061 dtype float32 rtol 1e 05 atol 1e 05 equal nan False E where function debugallclose at 0x7ff003280400 np allclose tests test regression py 97 AssertionError"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T19:49:11Z",
+        "body": "Thanks beasteers for pointing out that the default values for skimage transform rescale changed"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T20:21:56Z",
+        "body": "Choosing mode constant and anti aliasing False seems to fix things which is consistent with skimage 0 15 0"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:33:52Z",
+        "body": "Closed by 75"
+      }
+    ]
+  },
+  {
+    "number": 71,
+    "title": "API docs broken",
+    "state": "closed",
+    "body": "ReadTheDocs build passed but silently failed cold sweat WARNING autodoc failed to import module u core from module u openl3 the following exception was raised Traceback most recent call last File home docs checkouts readthedocs org user builds openl3 envs stable lib python2 7 site packages sphinx ext autodoc importer py line 154 in import module import modname File home docs checkouts readthedocs org user builds openl3 checkouts stable openl3 init py line 3 in module from core import File home docs checkouts readthedocs org user builds openl3 checkouts stable openl3 core py line 10 in module from models import load audio embedding model load image embedding model validate audio frontend File home docs checkouts readthedocs org user builds openl3 checkouts stable openl3 models py line 42 def get spectrogram a return decibel False kw SyntaxError invalid syntax It looks to be an issue of ReadTheDocs using Python 2 x instead of 3 x WARNING autodoc failed to import module core from module openl3 the following exception was raised No module named tensorflow keras tensorflow is not a package Also seems to be because it s not mocked in docs conf py",
+    "created_at": "2021-08-06T20:41:40Z",
+    "closed_at": "2021-08-09T22:34:11Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:34:11Z",
+        "body": "Closed by 72"
+      }
+    ]
+  },
+  {
+    "number": 70,
+    "title": "git clone pulls weight files as well by default",
+    "state": "open",
+    "body": "I wonder if it would make sense to move the model files to their own repo or if there s a way to not have them pull by default Basically this is a tad annoying haha Cloning into openl3 remote Enumerating objects 1460 done remote Counting objects 100 44 44 done remote Compressing objects 100 36 36 done Receiving objects 24 357 1460 444 15 MiB 2 55 MiB s",
+    "created_at": "2021-08-06T17:48:09Z",
+    "closed_at": null,
+    "user": "beasteers",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-06T18:09:49Z",
+        "body": "Yeah this is pretty annoying You can use branch branch name single branch when cloning to only clone master We can add it to the README for now Longer term I m not sure where the best place to move it is Hosting model files on GitHub is already kind of messy and frowned upon and is limited to 100MB though since the weight files aren t too big maybe it s fine moving it to another repo As far as other platforms hosting on Google Drive seems risky as far as access and ownership IIRC I ve seen Zenodo used for model releases maybe that could work Either way moving the models would break all of the previous versions so maybe we could do another symlink like hack to redirect to the new location idk what do you think"
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "title": "Add function to API for loading custom model weights",
+    "state": "closed",
+    "body": "This is motivated by the HEAR2021 challenge which prefers that model weights are loaded by filename downloaded to the evaluation machine rather than loaded internally using configurations This also allows for users to more safely load any custom weights if they want to for whatever reason",
+    "created_at": "2021-08-06T14:53:59Z",
+    "closed_at": "2021-08-10T15:01:30Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-10T15:01:30Z",
+        "body": "Closed by 74"
+      }
+    ]
+  },
+  {
+    "number": 67,
+    "title": "Expected new release",
+    "state": "closed",
+    "body": "Hello community I ve seen in the documentation and in some pre releases that you already have the new version supporting TF2 almost ready I wonder when it will be available Best regards and thank you very much for your work",
+    "created_at": "2021-07-26T10:02:05Z",
+    "closed_at": "2021-08-06T20:37:33Z",
+    "user": "JNaranjo-Alcazar",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-06T20:37:32Z",
+        "body": "Hello We had released the new version on PyPI but didn t update the tags and releases They should now be available in the releases tab"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "title": "error in the documentation of the image embedding sizes ?",
+    "state": "open",
+    "body": "Hi In the API documentation it is written that openl3 models load image embedding model accepts 6144 and 512 as embedding size It seems that it is not the same as openl3 models load audio embedding model and that in fact it accepts 8192 and 512 as sizes It does not seem specified in your paper shall I assume that the image audio models have been trained as pairs of embedding sizes 8192 6144 and 512 512 for the different configurations of input repr and content type Thanks",
+    "created_at": "2021-05-14T11:00:37Z",
+    "closed_at": null,
+    "user": "adrienchaton",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "adrienchaton",
+        "created_at": "2021-05-14T11:22:03Z",
+        "body": "while enumerating the configurations and checking all forward fine I am also observing an issue I didn t have so far just letting you know in case I can give you more details on the run if that is relevant if I use the same model image model audio and iteratively forward through 1000 pairs of image audio the compute time doesn t increase but if I switch the model configurations it seems that it grows big in as few as 12 steps at the end it takes several seconds to compute the embeddings vs 100ms at the start Screenshot 2021 05 14 at 13 23 23 https user images githubusercontent com 35500385 118264162 92369e80 b4b7 11eb 964e 0e14211f83b7 png"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-06T20:50:08Z",
+        "body": "Good catch We ll fix the documentation in the next release Regarding the slowdown my guess is that it could be an issue with memory if TensorFlow isn t properly garbage collecting the old models and corresponding computational graphs Perhaps you could try running tf keras backend clear session https www tensorflow org api docs python tf keras backend clear session at the end of the loop and see if that helps Let us know if that helps"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:37:51Z",
+        "body": "The documentation should be correct now addressed in 72 Feel free to let us know if the slowdown was resolved"
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "title": "urllib.error.URLError: <urlopen error [WinError 10060] ",
+    "state": "closed",
+    "body": "when i try to Downloading weight file openl3 audio linear music v0 2 0 h5 gz it appears it seems there are some wrong with the url you provide in your setup py code",
+    "created_at": "2021-04-30T05:37:33Z",
+    "closed_at": "2021-04-30T08:26:53Z",
+    "user": "a-flying-crow",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 58,
+    "title": "Pretrained fusion layers",
+    "state": "open",
+    "body": "Hi Thanks for providing OpenL3 as a package I would like to ask if one could access the pretrained fusion layers which would classify whether a pair of image audio embeddings are matched or not Otherwise I would train it myself on top of the pretrained fixed embedding extractors you provide But as a starting point I would take your classifier if possible Best",
+    "created_at": "2021-04-20T06:47:35Z",
+    "closed_at": null,
+    "user": "adrienchaton",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-04-20T20:45:02Z",
+        "body": "We don t provide the fusion layers as of now This could be something we could add in the future potentially but right now our focus is on adding support for TF 2 x and other usability improvements so it s hard to say whether when we d get to this"
+      },
+      {
+        "user": "adrienchaton",
+        "created_at": "2021-05-14T10:47:47Z",
+        "body": "thanks for your reply"
+      }
+    ]
+  },
+  {
+    "number": 57,
+    "title": "cant isntall openl3 in my ubuntu system",
+    "state": "open",
+    "body": "I can t install it no matter what method I use Such as pip conda or git the error was host connection refused",
+    "created_at": "2021-04-11T13:47:27Z",
+    "closed_at": null,
+    "user": "LongYin-Guo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-04-15T17:42:22Z",
+        "body": "It s hard to provide help without further details OS version python environment command you ran full error message etc From the little information provided I can only venture a guess if you happen to be located in China this could be a firewall issue Otherwise please provide more details so we can try and figure this out thanks"
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "title": "Bug in CLI centering?",
+    "state": "closed",
+    "body": "I am invoking openl3 on one second audio Centering is enabled openl3 1secondsounds content type music input repr mel256 audio embedding size 512 This should pad with 0 5 seconds of silence at the beginning which means I should have timestamps at 0 0 0 1 0 5 correct Instead I only have 1 512 embedding and timestamp only 0 0 Why",
+    "created_at": "2021-03-29T13:47:19Z",
+    "closed_at": "2021-03-29T13:54:06Z",
+    "user": "turian",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "turian",
+        "created_at": "2021-03-29T13:54:06Z",
+        "body": "Retracted because of user error The corpus README said 1 0 seconds but many files were shorter With padding to 1 0 second I get the expected result"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "Pytorch version",
+    "state": "open",
+    "body": "I too would like a Pytorch version as per https github com marl openl3 issues 35 Our audio models are in Pytorch and we have no idea how to efficiently convert them in GPU to tensorflow tensors to get openl3 output",
+    "created_at": "2021-03-10T05:03:05Z",
+    "closed_at": null,
+    "user": "turian",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 53,
+    "title": "path of openl3_audio_linear_music-v0_2_0.h5.gz not exists",
+    "state": "closed",
+    "body": "failed of downloading https github com marl openl3 raw models openl3 audio linear music v0 2 0 h5 gz the path is not exists",
+    "created_at": "2020-12-03T04:01:20Z",
+    "closed_at": "2020-12-14T01:01:07Z",
+    "user": "jammyWolf",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-12-14T01:01:07Z",
+        "body": "Please try downloading again the path definitely exists I just clicked on the link in your message and downloaded the model file successfully Thanks"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "Drop support for Python <=3.5 and add support for Python 3.7, and 3.8",
+    "state": "closed",
+    "body": "Python 3 5 has reached EOL as of October 2020 so we should drop support for it Since 3 6 is now the oldest version and 3 7 and 3 8 should be pretty robust by now we should also add explicit support for Python 3 7 and 3 8 We can probably avoid 3 9 since it was just released last month and may be somewhat unstable",
+    "created_at": "2020-11-10T09:44:19Z",
+    "closed_at": "2021-08-09T22:39:14Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:39:14Z",
+        "body": "Closed by 62"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "title": "Disable logging",
+    "state": "closed",
+    "body": "Is there any way to disable the logging messages 21 21 0s 1ms step I find no way to disable them",
+    "created_at": "2020-10-19T05:06:58Z",
+    "closed_at": "2020-10-19T05:11:15Z",
+    "user": "turian",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "turian",
+        "created_at": "2020-10-19T05:11:15Z",
+        "body": "verbose False"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "pip error when installing",
+    "state": "open",
+    "body": "I m getting an error during pip install urllib error URLError urlopen error Errno 8 nodename nor servname provided or not known I d appreciate the help console output openl3 venv hugoffg is at openl3 pip3 install openl3 Collecting openl3 Using cached openl3 0 3 1 tar gz 16 kB ERROR Command errored out with exit status 1 command Users hugoffg Documents notebooks openl3 venv bin python3 c import sys setuptools tokenize sys argv 0 private var folders vl n 1wx0vx41s979274z7hctnr0000gn T pip install bg57tw39 openl3 setup py file private var folders vl n 1wx0vx41s979274z7hctnr0000gn T pip install bg57tw39 openl3 setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec egg info egg base private var folders vl n 1wx0vx41s979274z7hctnr0000gn T pip pip egg info jle emrm cwd private var folders vl n 1wx0vx41s979274z7hctnr0000gn T pip install bg57tw39 openl3 Complete output 55 lines Downloading weight file openl3 audio linear music v0 2 0 h5 gz Traceback most recent call last File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 1317 in do open encode chunked req has header Transfer encoding File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 1252 in request self send request method url body headers encode chunked File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 1298 in send request self endheaders body encode chunked encode chunked File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 1247 in endheaders self send output message body encode chunked encode chunked File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 1026 in send output self send msg File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 966 in send self connect File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 1414 in connect super connect File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 http client py line 938 in connect self host self port self timeout self source address File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 socket py line 707 in create connection for res in getaddrinfo host port 0 SOCK STREAM File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 socket py line 748 in getaddrinfo for res in socket getaddrinfo host port family type proto flags socket gaierror Errno 8 nodename nor servname provided or not known During handling of the above exception another exception occurred Traceback most recent call last File string line 1 in module File private var folders vl n 1wx0vx41s979274z7hctnr0000gn T pip install bg57tw39 openl3 setup py line 35 in module urlretrieve base url compressed file compressed path File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 247 in urlretrieve with contextlib closing urlopen url data as fp File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 222 in urlopen return opener open url data timeout File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 531 in open response meth req response File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 641 in http response http request response code msg hdrs File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 563 in error result self call chain args File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 503 in call chain result func args File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 755 in http error 302 return self parent open new timeout req timeout File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 525 in open response self open req data File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 543 in open open req File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 503 in call chain result func args File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 1360 in https open context self context check hostname self check hostname File usr local Cellar python 3 7 5 Frameworks Python framework Versions 3 7 lib python3 7 urllib request py line 1319 in do open raise URLError err urllib error URLError urlopen error Errno 8 nodename nor servname provided or not known ERROR Command errored out with exit status 1 python setup py egg info Check the logs for full command output",
+    "created_at": "2020-07-24T18:58:06Z",
+    "closed_at": null,
+    "user": "hugofloresgarcia",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JunenuJ",
+        "created_at": "2020-09-07T05:12:40Z",
+        "body": "Do you solve this issue"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-09-09T01:04:49Z",
+        "body": "I just tested pip install openl3 on macOS 10 14 6 and it worked fine for me so the issue isn t with openl3 at least not on macOS Looking at the logs it appears there s some issue with downloading a model file I m not sure if this could be caused due to networking issues or some other problem Please try installing on a different network to confirm Also please report operating system version and python version otherwise it s very hard to provide help You may also want to try installing into a conda environment over a venv"
+      },
+      {
+        "user": "shanheqiu",
+        "created_at": "2020-11-04T09:32:00Z",
+        "body": "win10 python3 6 the same error can you help me Thanks"
+      },
+      {
+        "user": "mx597014232",
+        "created_at": "2021-03-11T01:52:37Z",
+        "body": "the same error problem https github com marl openl3 raws 404 can you open this website"
+      },
+      {
+        "user": "Frei-2",
+        "created_at": "2025-04-02T11:32:29Z",
+        "body": "the same error can anyone solve this problem"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "Replace resampy with pysox for audio resampling",
+    "state": "open",
+    "body": "Turns out resampy is SLOW We could speed openl3 quite a bit by swapping it out with pysox resample the audio into a tempfile and load the templfile for further processing python with tempfile TemporaryDirectory as tempdir filename48 os path join tempdir os path basename os path splitext file path 0 48 wav resample to 48000 Hz tfm sox Transformer tfm convert samplerate 48000 n channels 1 tfm build file path filename48 load the audio file sr 48000 audio srload librosa load filename48 sr None assert srload sr NOTE this example assumes wav input and would have to be adapted to support various formats in particular mp3",
+    "created_at": "2020-06-25T20:32:44Z",
+    "closed_at": null,
+    "user": "justinsalamon",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 46,
+    "title": "Refactor code and models to support TF 2.x and tf.keras",
+    "state": "closed",
+    "body": "At some point in the somewhat near future we should establish support for TF 2 x and tf keras The main reasons for this are To remain compatible with new releases of TF and Keras the official version of which is now tf keras and make use of bug fixes etc some regression issues As we have found 42 43 installing with newer versions of either package break installation and usage To address multiple vulnerabilities contained in tensorflow 1 15 2 To simplify the installation process since TF 2 x now includes support for both CPU and GPU we can now directly include tensorflow in the project dependencies as brought up in 39 A priori it seems like the main things to do are Updating the dependencies in setup py to include tensorflow Modifying the model definitions to be tf keras compatible Porting the model files to a format that can be loaded by tf keras with TF 2 x The main concern that comes to mind is the regression tests We have already seen that tensorflow 1 13 causes regression tests to fail I imagine that this will only worsen as we introduce not only a new major release to TF but also a divergence in Keras with tf keras justinsalamon what are your thoughts",
+    "created_at": "2020-03-03T22:10:10Z",
+    "closed_at": "2021-08-09T22:40:58Z",
+    "user": "jtcramer",
+    "comments_count": 16,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-03-03T23:04:35Z",
+        "body": "Generally I totally support this move My main concern as you ve identified is the move from keras to tf keras As an example I believe jongwook tried to migrate CREPE from Keras to tf keras and gave up on it because of incompatibilities and changes to the behavior of the model If we can make all of these changes while maintaining model performance and hence regression tests I think it s a no brainer If the tests fail then it d probably be worth re training the openl3 models against the new model implementation ensuring the resulting embeddings are equally competitive on at least one downstream e g US8K and then releasing that Thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-03-03T23:08:20Z",
+        "body": "p s we might be able to get away without re training the models if we can at least show that the weights we have right now coupled with the new implementation still produce comparable downstream results Then we d just have to update the regression data for the regression tests So I guess my proposed steps would be 1 Update to tf keras if regression tests pass we re done 2 If the regression tests fails evaluate the resulting embeddings on downstream tasks If they are equally competitive update the regression test using the new implementation 3 If the modified embeddings aren t competitive then we d have to re train against the new implementation"
+      },
+      {
+        "user": "jongwook",
+        "created_at": "2020-03-03T23:13:57Z",
+        "body": "As an example I believe jongwook tried to migrate CREPE from Keras to tf keras and gave up on it because of incompatibilities and changes to the behavior of the model This happened once when tf keras was in a very early stage in the development but CREPE is currently using tf keras https github com marl crepe blob master crepe core py L44 L46 without causing disaster AFAIK and yes I am responsible for not writing real regression tests there"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-03-03T23:19:49Z",
+        "body": "Ah cool thanks for the info jongwook So it sounds like we should be able to at least give it a try but yeah we gotta be solid on performance and regression"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-03-03T23:24:35Z",
+        "body": "justinsalamon That plan sounds good to me I ll see about looking into this in the near future"
+      },
+      {
+        "user": "thias42",
+        "created_at": "2020-03-19T16:45:52Z",
+        "body": "Hi first of all thank you for sharing the code and model I had a go at the TF2 support branch tf2 in my fork and it turns out that the regression tests fail after switching to tf keras So the new embeddings would need to be evaluated on any downstream tasks"
+      },
+      {
+        "user": "gmos",
+        "created_at": "2020-07-05T14:31:32Z",
+        "body": "Hi we are working with a sound recognizer currently based on vggish Our recognizer runs on an edge device and stretches the small CPU s to the limit Too much heat and too much power usage So we want to try out tensorflow lite perhaps in combination with a Coral co processor Unfortunately is only supported on TF2 For vggish there are now some TF2 ports available and we have an evaluation of the port on our roadmap But we also very much would like to evaluate openl3 for our application But not if this would lock us to TF1 x again The last post for this issue was almost 4 months ago What are your current plans goals regarding the TF2 port"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-07-06T19:38:04Z",
+        "body": "gmos we definitely plan to add TF 2 x support but since this is a side gig for all of us it is hard to provide concrete plans estimates We ll do our best to discuss in the near future and come up with an estimate which we ll post here Thanks"
+      },
+      {
+        "user": "fluffynukeit",
+        "created_at": "2021-01-13T21:52:57Z",
+        "body": "gmos When you say it s only supported on TF2 do you mean vggish tensorflow lite or the coral coprocessor I am considering using the coral coprocessor to run the openl3 model on TF 1 x Is that possible"
+      },
+      {
+        "user": "gmos",
+        "created_at": "2021-01-14T05:12:08Z",
+        "body": "Nope Last time when I looked at it Coral required TF Lite which only exists on TF2 From Daniel Austin notifications github com Sent Wednesday 13 January 2021 22 53 To marl openl3 openl3 noreply github com Cc Gijs Mos gijs mos matanga nl Mention mention noreply github com Subject Re marl openl3 Refactor code and models to support TF 2 x and tf keras 46 gmos https github com gmos When you say it s only supported on TF2 do you mean vggish tensorflow lite or the coral coprocessor I am considering using the coral coprocessor to run the openl3 model on TF 1 x Is that possible You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com marl openl3 issues 46 issuecomment 759761975 or unsubscribe https github com notifications unsubscribe auth AALUWEG3XJCRTPP4ZXDK6JTSZYI4RANCNFSM4LAUOORQ"
+      },
+      {
+        "user": "fluffynukeit",
+        "created_at": "2021-01-14T18:08:40Z",
+        "body": "Edit I have updated this post to reflect a correct method for compiling openl3 to tflite format and will continue to update it if I discover better ways to do it I was able to compile and run the openl3 model using tflite with tensorflow 1 x on google colab Here is the code to compile to tf lite with tensorflow version 1 x I could compile it and run it using the CPU only colab environment with no GPU accleration which I assume will also work but it not necessary I have also included an excerpt of the printout showing the openl3 step time and TFLite interpreter invocation time as well as the first 10 of 512 embedding values for each They agree well The key resource for me getting this to work was this Xilinx note about compiling a tensorflow 1 x model to pb format for use in their Vitis AI accelerator Once in pb format the TFLite compilation went smoothly unlike my many many other attempts It s tough to navigate the docs when trying to parse keras vs tensorflow tensorflow 1 vs 2 various keras and tensorflow save formats weights vs global variables which was particularly troublesome when used with batchnormalization layers etc https github com Xilinx Vitis AI Tutorials tree 536b147e2820ff8ec16b11a85eff0f0c87f0a7da python import tensorflow as tf import openl3 import keras This code does not require colab GPU backend to work CPU only is fine Steps modeled from resource below https github com Xilinx Vitis AI Tutorials tree 536b147e2820ff8ec16b11a85eff0f0c87f0a7da ctype env itype mel128 esize 512 I m only interested in 512 model so I don t change this bn f ol3 ctype itype dn f bn export keras backend clear session print Disabling learning phases and building model keras backend set learning phase 0 load weights architecture into new model loaded model openl3 models load audio embedding model content type ctype embedding size esize input repr itype print Keras model information print Input names loaded model inputs print Output names loaded model outputs print fetch the tensorflow session using the Keras backend tf session keras backend get session print Saving mkdir p dn write out tensorflow checkpoint meta graph NOTE the tf global variables is important to preserve correct behavior of batch normalization layers https stackoverflow com questions 45800871 tensorflow save restore batch norm saver tf compat v1 train Saver tf global variables save path saver save tf session f dn bn tf ckpt freeze graph input meta graph dn bn tf ckpt meta input checkpoint dn bn tf ckpt output graph dn bn pb output node names flatten 1 Reshape input binary true tflite convert output file dn bn tflite graph def file dn bn pb input arrays input 1 output arrays flatten 1 Reshape Here is the code to execute the openl3 and tflite models in colab also in CPU only session type I use a single 1 second audio file of 48000 samples exactly because I m interested in running as audio is collected I run each version 5 times with the same data to see the associated step times for each model python import numpy as np import tensorflow as tf import soundfile as sf import time import openl3 This code does not require colab GPU backend to work CPU only is fine ctype env itype mel128 esize 512 I m only interested in 512 model so I don t change this bn f ol3 ctype itype dn f bn export Note inputs data better be 48000 samples audio sr sf read 1second wav x audio reshape 1 1 48000 Check the openl3 output values first 10 of 512 model openl3 models load audio embedding model content type ctype embedding size esize input repr itype for i in range 5 output ol3 openl3 get audio embedding audio sr model model center False print f OL Model i output ol3 0 0 10 Test the first 10 values from TFLite interpreter file Load the TFLite model and allocate tensors interpreter tf lite Interpreter model path f dn bn tflite interpreter allocate tensors Get input and output tensors input details interpreter get input details output details interpreter get output details input shape input details 0 shape tflite input x astype float32 for i in range 5 t time time interpreter set tensor input details 0 index tflite input interpreter invoke The function get tensor returns a copy of the tensor data Use tensor in order to get a pointer to the tensor output data interpreter get tensor output details 0 index print f Time i time time t 1000 msec print f TFLite i output data 0 0 10 The resulting output of running both models is below Openl3 and tflite version agree on results and the TFlite version is indeed a little faster 1 1 1s 682ms step OL Model 0 1 3157089 1 2120367 2 8306766 2 2643678 2 492464 1 2830704 2 141046 1 5203106 1 1770811 3 5058348 1 1 0s 300ms step OL Model 1 1 3157089 1 2120367 2 8306766 2 2643678 2 492464 1 2830704 2 141046 1 5203106 1 1770811 3 5058348 1 1 0s 293ms step OL Model 2 1 3157089 1 2120367 2 8306766 2 2643678 2 492464 1 2830704 2 141046 1 5203106 1 1770811 3 5058348 1 1 0s 292ms step OL Model 3 1 3157089 1 2120367 2 8306766 2 2643678 2 492464 1 2830704 2 141046 1 5203106 1 1770811 3 5058348 1 1 0s 300ms step OL Model 4 1 3157089 1 2120367 2 8306766 2 2643678 2 492464 1 2830704 2 141046 1 5203106 1 1770811 3 5058348 Time 0 350 56400299072266 msec TFLite 0 1 3157148 1 2120365 2 830676 2 2643683 2 492464 1 2830614 2 1410458 1 5203104 1 1770768 3 5058343 Time 1 253 8745403289795 msec TFLite 1 1 3157148 1 2120365 2 830676 2 2643683 2 492464 1 2830614 2 1410458 1 5203104 1 1770768 3 5058343 Time 2 232 6219081878662 msec TFLite 2 1 3157148 1 2120365 2 830676 2 2643683 2 492464 1 2830614 2 1410458 1 5203104 1 1770768 3 5058343 Time 3 242 37751960754395 msec TFLite 3 1 3157148 1 2120365 2 830676 2 2643683 2 492464 1 2830614 2 1410458 1 5203104 1 1770768 3 5058343 Time 4 231 9028377532959 msec TFLite 4 1 3157148 1 2120365 2 830676 2 2643683 2 492464 1 2830614 2 1410458 1 5203104 1 1770768 3 5058343"
+      },
+      {
+        "user": "fluffynukeit",
+        "created_at": "2021-01-16T13:16:51Z",
+        "body": "I have edited my previous comment to include code that successfully compiles openl3 to TFLite in tensorflow 1 x on google colab TFlite model is faster and produces resulting audio embeddings that agree with vanilla openl3"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-01-26T17:48:55Z",
+        "body": "Thanks fluffynukeit We re hoping to port openl3 to TF 2 x it s just a question of when we re able to allocate the cycles to it"
+      },
+      {
+        "user": "fluffynukeit",
+        "created_at": "2021-01-27T00:36:54Z",
+        "body": "justinsalamon Thank you for providing openl3 It saved me so so much time I don t have proper ML hardware or ecosystem knowledge so having models that largely just work out of the box for audio classification is great I threw random forest at the embeddings as suggested in another issue here and was able to iterate on tuning it instead of messing with the NN models"
+      },
+      {
+        "user": "jonnor",
+        "created_at": "2021-07-17T14:45:41Z",
+        "body": "Since May this year and merge request 62 it looks like TF2 is supported So when 0 4 0 is released maybe this issue can be closed"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:40:57Z",
+        "body": "Closed by 62"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "Drop support for Python 2.x",
+    "state": "closed",
+    "body": "Since Python 2 x has reached EoL we should probably plan on dropping support for at some point as we develop further",
+    "created_at": "2020-03-03T21:51:41Z",
+    "closed_at": "2021-08-09T22:41:26Z",
+    "user": "jtcramer",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-03-03T23:01:22Z",
+        "body": "Agreed"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2021-08-09T22:41:26Z",
+        "body": "Closed by 62"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "Failed to construct network. Tried both Tensorflow 2.0.0 and 1.9.5,  Keras2.3.1 and 2.2.5",
+    "state": "closed",
+    "body": "openl3 models construct mel128 audio network WARNING tensorflow From home zhaos anaconda3 lib python3 7 site packages keras backend tensorflow backend py 66 The name tf get default graph is deprecated Please use tf compat v1 get default graph instead WARNING tensorflow From home zhaos anaconda3 lib python3 7 site packages keras backend tensorflow backend py 541 The name tf placeholder is deprecated Please use tf compat v1 placeholder instead WARNING tensorflow From home zhaos anaconda3 lib python3 7 site packages tensorflow core python ops resource variable ops py 1630 calling BaseResourceVariable init from tensorflow python ops resource variable ops with constraint is deprecated and will be removed in a future version Instructions for updating If using Keras pass constraint arguments to layers Traceback most recent call last File stdin line 1 in module File home zhaos anaconda3 lib python3 7 site packages openl3 models py line 265 in construct mel128 audio network y a Melspectrogram n dft n dft n hop n hop n mels n mels sr asr power melgram 1 0 htk True return decibel melgram True padding same x a File home zhaos anaconda3 lib python3 7 site packages tensorflow core python keras engine base layer py line 881 in call inputs outputs args kwargs File home zhaos anaconda3 lib python3 7 site packages tensorflow core python keras engine base layer py line 2043 in set connectivity metadata input tensors inputs output tensors outputs arguments arguments File home zhaos anaconda3 lib python3 7 site packages tensorflow core python keras engine base layer py line 2059 in add inbound node input tensors File home zhaos anaconda3 lib python3 7 site packages tensorflow core python util nest py line 536 in map structure structure 0 func x for x in entries File home zhaos anaconda3 lib python3 7 site packages tensorflow core python util nest py line 536 in listcomp structure 0 func x for x in entries File home zhaos anaconda3 lib python3 7 site packages tensorflow core python keras engine base layer py line 2058 in lambda inbound layers nest map structure lambda t t keras history layer AttributeError tuple object has no attribute layer",
+    "created_at": "2020-02-28T14:01:01Z",
+    "closed_at": "2020-03-03T21:44:26Z",
+    "user": "zhao-shuyang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-02-28T17:07:11Z",
+        "body": "The current version of openl3 does not support TF 2 x We re working towards an update for this In the meanwhile here s a version combination that is known to work TF 1 13 Keras 2 0 Kapre 0 1 4"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-03-03T21:44:26Z",
+        "body": "Resolved by 44"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "Explicitly require tensorflow < 2.0",
+    "state": "closed",
+    "body": "As brought up in 39 pip install openl3 force installs tensorflow 2 which is currently incompatible with the current package We ll need to ensure that keras 2 3 0 2 3 0 uses TF 2 0 and add a note to the README that TF 2 is not yet supported and make a v0 3 1 release We ll aim to move to TF 2 0 and thus tf keras in a future release at some point",
+    "created_at": "2020-02-27T19:45:47Z",
+    "closed_at": "2020-03-03T21:44:08Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2020-03-03T21:44:08Z",
+        "body": "Resolved by 44"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "[DOC] Tutorial could include a classification example",
+    "state": "open",
+    "body": "One of the common questions that I get is how should i build an audio classifier My canned response is openl3 sklearn RandomForest The tutorial in the docs is great for the first half but if it was expanded to show how to combine it with a classifier on some example dataset eg urbansed or something it would be much easier for novices to pick up and run with",
+    "created_at": "2020-02-14T18:35:58Z",
+    "closed_at": null,
+    "user": "bmcfee",
+    "comments_count": 4,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-02-14T19:44:42Z",
+        "body": "Great suggestion Feel like making a PR Otherwise we ll try to get to this cycles permitting"
+      },
+      {
+        "user": "bmcfee",
+        "created_at": "2020-02-14T19:48:39Z",
+        "body": "I m too slammed to commit to a PR right now It s not a pressing issue I just wanted to flag it to be done whenever s convenient"
+      },
+      {
+        "user": "pohpas",
+        "created_at": "2022-11-03T12:42:42Z",
+        "body": "bmcfee do you have by chance a minimal example on how you added a classifier"
+      },
+      {
+        "user": "bmcfee",
+        "created_at": "2022-11-03T15:34:36Z",
+        "body": "pohpas sorry I don t this is yet another github issue from the Before Times that I haven t circled back to yet Probably the simplest thing to do is adapt the openmic baseline notebook to use openl3 instead of vggish https github com cosmir openmic 2018 blob master examples modeling baseline ipynb"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "Unable to find models",
+    "state": "closed",
+    "body": "Hello thank you for this wonderful tool I am unable to find the h5 models when I call openl3 get audio embedding function The error is OSError Unable to open file unable to open file name content openl3 openl3 openl3 audio linear env h5 errno 2 error message No such file or directory flags 0 o flags 0 I checked the openl3 folder and there are indeed no model files there Can you please confirm if the model links are active Perhaps the models are not being downloaded due to a broken link Thank you",
+    "created_at": "2020-02-13T18:39:37Z",
+    "closed_at": "2020-02-15T06:29:27Z",
+    "user": "happypanda5",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "happypanda5",
+        "created_at": "2020-02-14T10:41:03Z",
+        "body": "hohsiangwu jtcramer justinsalamon lostanlen Can you please provide links to the model files in h5 format I can manually pasted them in the intended folder It could be an issue with the base link https github com marl openl3 raw models from where the models are supposed to be picked up For example https github com marl openl3 raw models openl3 audio linear env h5 returns a page not found Thank you"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-02-14T20:51:35Z",
+        "body": "I just installed openl3 intro a fresh conda environment python 3 6 via pip install openl3 and I was able to call emb ts openl3 get audio embedding audio sr without any errors How did you install the repo If you installed it from source rather than via pip note that the model files are stored on GH in a compressed format gz and need to be uncompressed before they can be used the pip installation takes care of this Without further information I d guess your problem is related to this issue Installing via pip should fix your problem If you need to install from source make sure to uncompress the model files manually The error you pasted is about not finding the model file on your file system not about not being able to download it from GH I m guessing you have the files locally as gz while the code is looking for the uncompressed h5 file If you try the two suggestions above and are still experiencing issues please describe your system OS python environment etc and the exact process you followed to install openl3 If the above suggestions fix your issue please let us know so we can close this issue out Thanks"
+      },
+      {
+        "user": "happypanda5",
+        "created_at": "2020-02-15T06:29:27Z",
+        "body": "Thank you pip install openl3 did the trick Previously I was cloning the repo and install it from there"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "tensorflow 2.1 doesn't require separate pip installes for gpu and cpu",
+    "state": "closed",
+    "body": "Thanks for this great package We love to use it You state Because Tensorflow comes in CPU only and GPU variants we leave it up to the user to install the version that best fits their usecase This is not the case anymore in 2 1 so you could if 2 1 is supported make tensorflow part of the standard requirements",
+    "created_at": "2020-01-28T15:43:04Z",
+    "closed_at": "2020-02-27T19:46:55Z",
+    "user": "faroit",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2020-02-05T20:40:12Z",
+        "body": "Thanks for your interest Currently the most recent version supports Tensorflow 1 0 versions We haven t explicitly looked at 2 0 and 2 1 versions yet but if or when we decide to drop support for 1 0 then we can explicitly add the requirement"
+      },
+      {
+        "user": "faroit",
+        "created_at": "2020-02-05T20:41:07Z",
+        "body": "jtcramer sure feel free to close this then"
+      },
+      {
+        "user": "happypanda5",
+        "created_at": "2020-02-13T15:35:57Z",
+        "body": "jtcramer and faroit I tried using it with tensorflow 2 1 on Colab and it gave me a compatibility error Note that pip install tensorflow installs tensorflow2 1 now maybe force it to be pip install tensorflow 1 14 0"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-02-15T02:18:39Z",
+        "body": "jtcramer we should update the instructions in the readme per"
+      },
+      {
+        "user": "happypanda5",
+        "created_at": "2020-02-22T12:08:49Z",
+        "body": "FYI justinsalamon jtcramer pip install openl3 is now force installing tf2 0 even though I had first pip install tensorflow 1 14 0 before pip install openl3 My previous openl3 installation based on pip install openl3 from 9 days ago still works fine"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-02-27T18:55:01Z",
+        "body": "Thanks happypanda5 for the heads up we ll look into this as soon as we can"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-02-27T19:41:31Z",
+        "body": "Per offline discussion with justinsalamon we ll plan on updating the dependencies to ensure that keras 2 3 0 2 3 0 uses TF 2 0 and add a note to the README that TF 2 is not yet supported and make a v0 3 1 release We ll aim to move to TF 2 0 and thus tf keras in a future release at some point"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-02-27T19:46:55Z",
+        "body": "Closing this issue follow 42 for more on the installation problems"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "memory continue growing when get_embedding",
+    "state": "closed",
+    "body": "It seems that the model creates a new Tensorflow Variable each time when processing a new audio Please clarify this image https user images githubusercontent com 8109984 72676239 f74bd100 3ac9 11ea 89ad a2ce2a59232b png",
+    "created_at": "2020-01-19T06:43:05Z",
+    "closed_at": "2020-01-19T08:11:13Z",
+    "user": "jiqiujia",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jiqiujia",
+        "created_at": "2020-01-19T08:12:19Z",
+        "body": "I know what s wrong now I shall load the model first or get embedding will load model every time"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Streaming / real-time usage?",
+    "state": "closed",
+    "body": "For many applications it is desirable to be able to classify a real time audio stream Assuming that a delay by 1 analysis window size 1 second is acceptable Is this use case something you aim to support with OpenL3 and maybe have tested If so it would be great to have an example or documentation for it Looking briefly at the API docs and source code it seems this could be possible by combining model load embedding model with get embeddings chunk sr model model where chunk is the just received 1 second of audio Any caveats Also any estimates on what the hardware requirements would be to reach real time performance",
+    "created_at": "2019-10-08T14:03:59Z",
+    "closed_at": "2020-01-05T23:43:17Z",
+    "user": "jonnor",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-01-05T23:43:17Z",
+        "body": "In principle this should be possible following the approach you described load the model to avoid having it re loaded all the time and pass it to get audio embeddings new API about to be merged into master with separate methods for audio and image embeddings Regarding H W it depends on the desired hop size you plan to use If you plan to use non overlapping windows i e just 1 prediction per second it should be totally doable I have a real time demo running a similarly sized CNN albeit in wait for it lasagne which runs happily on a macbook pro with CPU processing no GPU required With a GPU you ll be laughing Just have to get the multiprocessing right to separate audio buffering prediction and UI updates into separate processes Closing this out as this isn t actually an issue but feel free to re open if you encounter any specific problems"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "PyTorch models",
+    "state": "closed",
+    "body": "Any chance you have PyTorch model files saved in addition to the Keras models present in this repo",
+    "created_at": "2019-09-17T19:00:10Z",
+    "closed_at": "2019-10-15T12:33:37Z",
+    "user": "sainathadapa",
+    "comments_count": 14,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sainathadapa",
+        "created_at": "2019-10-07T16:33:54Z",
+        "body": "I m going to try porting the model to PyTorch Before I work on that can you tell me if you already have a PyTorch version of the model right now This is so that I do not waste effort in doing something that is already done"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-10-07T21:19:59Z",
+        "body": "Hi We haven t ported the model to PyTorch feel free to do so"
+      },
+      {
+        "user": "janaal1",
+        "created_at": "2019-10-15T11:57:11Z",
+        "body": "Where can the Pytorch models be found Thanks in advance"
+      },
+      {
+        "user": "sainathadapa",
+        "created_at": "2019-10-15T12:33:36Z",
+        "body": "Fortunately MMdnn https github com microsoft MMdnn worked perfectly for my needs You can also use that If you want to see the commands I used to port the model look here https github com sainathadapa urban sound tagging tree after challenge nbs openl3"
+      },
+      {
+        "user": "adrienchaton",
+        "created_at": "2021-04-15T08:52:53Z",
+        "body": "sainathadapa thank you for sharing your codes to convert openl3 to pytorch I see you took the mel128 embedding are the pytorch weights available anywhere please"
+      },
+      {
+        "user": "turian",
+        "created_at": "2021-04-15T10:32:36Z",
+        "body": "Hi adrienchaton we have been working on a pytorch port It was a little more fiddly than we expected but seems to be relatively stable now We are prepping it for more general release https github com turian torchopenl3 Please feel free to email me lastname gmail com I m a huge fan of your work and Philippe is on the committee for a NeuroIPS audio representation competition I am proposing I d love to talk more"
+      },
+      {
+        "user": "turian",
+        "created_at": "2021-04-15T10:34:27Z",
+        "body": "The main issue was the difference in Kapre 0 1 3 STFTs is in high frequencies This means that on the chirp audio our MAE was maybe 2e 3 versus tfopenl3 when using mels I d have to double check On FSD50K 100 random sounds it was far lower"
+      },
+      {
+        "user": "adrienchaton",
+        "created_at": "2021-04-15T10:53:19Z",
+        "body": "great thank you for sharing your port and your awesome research too right now it is for an art project I would use it so it is not needed to be perfectly reproduced I am following up by email"
+      },
+      {
+        "user": "turian",
+        "created_at": "2021-04-15T15:08:05Z",
+        "body": "adrienchaton great looking forward to talking And any issues questions snags etc file an issue on github"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-04-20T20:53:08Z",
+        "body": "this is awesome thanks for putting this together Heads up we re working on an update to openl3 that will include Support for TF 2 x using an updated version of kapre Support for using Librosa instead of Kapre as the audio front end turian if you think it makes sense it would be awesome to merge torchopenl3 into openl3 eventually such that a single library provides support for both TF and PyTorch backends"
+      },
+      {
+        "user": "turian",
+        "created_at": "2021-04-21T02:32:41Z",
+        "body": "justinsalamon thank you I wanted to reach out and make sure this is all copacetic before doing any public move Happy to integrate TBH getting MAE low with kapre old version was quite gnarly and we had to reimplement a lot of the Mel stuff ourselves We still get high error on high frequencies like chirp BTW my email inbox is open lastname gmail com I have talked with Zeyu who is on the committee for the accepted NeuroIPS 2021 competition I m organizing learning general purpose audio representations If possible I d love to confirm that your model and weights could potentially be included as pretraining for the dev kit Let me know if you d like to sync over email or chat on Zoom for 30 minutes"
+      },
+      {
+        "user": "turian",
+        "created_at": "2021-04-21T12:42:12Z",
+        "body": "justinsalamon my one request would be that if numpy librosa is used we make sure to find a compatible GPU spectrogram mel implementation Matching the kapre spectrograms was quite hellacious I d want to sanity check torchlibrosa etc I think this is of interest to people who are synthesizing audio on the GPU"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-04-22T21:14:24Z",
+        "body": "What we ve done is the following Update Kapre lets call it v2 and try to match the old version v1 as closely as possible Implement a librosa front end and try to match it as closely as possible to v1 as well Compare the embeddings Compare performance on downstream classification of the UrbanSound8K dataset As you might expect the embeddings don t match perfectly when we replace the audio front end However performance on the downstream classification task was the same or within the margin of error which we hope is good enough So the updated version of OpenL3 will let you choose between the Kapre and Librosa front end but they are not interchangeable Models trained on embeddings from a specific front end should continue to use the same front end for inference The same would apply if we incorporated a pytorch version it would be close but probably not interchangeable with the TF versions Yes I owe you an email Coming soon"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2021-04-22T21:22:44Z",
+        "body": "p s turian happy to find a time for a quick chat if that would be helpful"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "conda-forge packaging?",
+    "state": "open",
+    "body": "Shipping conda forge packages would be helpful for having a slightly smoother installation process with dependency on pysoundfile libsndfile I m happy to help get this set up if yall are interested",
+    "created_at": "2019-07-11T20:06:25Z",
+    "closed_at": null,
+    "user": "bmcfee",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-07-11T23:39:27Z",
+        "body": "sgtm"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-15T19:16:08Z",
+        "body": "If this is something we want for our v1 0 0 release then help would be much appreciated bmcfee I have no experience with this if you would be able to take the reigns on this it would be much appreciated"
+      },
+      {
+        "user": "bmcfee",
+        "created_at": "2019-07-15T19:43:03Z",
+        "body": "It s pretty easy to do if you already have a pip package in place and no additional build dependencies eg c extensions Since it s already on pypi we could easily jam this out on the version that already exists and then it will be in place for 1 0 0"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-15T21:19:13Z",
+        "body": "SGTM"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "API reference in documentation missing",
+    "state": "closed",
+    "body": "When going to https openl3 readthedocs io en latest api html I only see the headers Core functionality Models functionality with nothing under each header Expected would be a list of classes and functions and the associated documentation At least those APIs that are mentioned in the tutorial",
+    "created_at": "2019-07-08T22:36:42Z",
+    "closed_at": "2019-07-09T20:44:10Z",
+    "user": "jonnor",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-08T22:54:13Z",
+        "body": "Hi thanks for opening the issue We still have yet to address this but in the mean time you can view the stable build of the docs here https openl3 readthedocs io en stable api html"
+      },
+      {
+        "user": "jonnor",
+        "created_at": "2019-07-09T07:35:40Z",
+        "body": "Thanks that helps a lot As a minor thing it would be nice to state the length of the analysis window in the reference documentation I believe this is 1 second but I had to go to the paper to check this"
+      },
+      {
+        "user": "jonnor",
+        "created_at": "2019-07-09T07:42:22Z",
+        "body": "Btw I m presenting Audio Classification using Machine Learning at EuroPython in a couple of days and plan to include using OpenL3 audio embeddings there https ep2019 europython eu talks ZUomjjw audio classification with machine learning If by chance you are around or know others that are feel free to get in touch email on Github profile"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-09T20:44:10Z",
+        "body": "The API documentation should be fixed The issue was that we forgot to add sklearn decomposition into the mocked modules in the Sphinx configuration which was causing the API docs to not build albeit silently Thanks for the feedback on the docs we ll be sure to include that in our upcoming release Thanks for the heads up about your talk and thanks for using our library I don t believe anyone on our team will be at EuroPython but we ll let you know if that isn t the case Cheers"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Add batch processing mode",
+    "state": "closed",
+    "body": "Something else to consider is a batch processing mode i e making more efficient use of the GPU by predicting multiple files at once Probably the least messy option would be to separate some of the interior code of get audio embedding for the case of audio into their own functions and make a get audio embedding batch function that calls most of the same functions We would also have a process audio file batch function I thought about changing get audio embedding so that it can either take in a single audio array or a list of audio arrays and probably a list of corresponding sample rates While this might consolidate multiple usecases into one function it d probably get pretty messy so it s probably best we don t do this Regarding the visual frame embedding extraction we could ask the same question though there might be more nuance depending on if we allow for individual images to be processed or not I think we should In the case of videos though multiple frames are already being provided at once So it raises a question to me at least whether we allow for get vframe embedding as I m currently calling it should support both a single frame as well as multiple This also raises the question of whether we allow for frames of multiple sizes or not Thoughts",
+    "created_at": "2019-06-18T03:37:27Z",
+    "closed_at": "2020-01-23T19:39:31Z",
+    "user": "jtcramer",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-19T00:42:12Z",
+        "body": "Isn t the most elegant option to just have a single function that takes in a single sample OR a list of samples and then computes the embedding for everything Basically what you propose in the middle paragraph Not sure what the downsides to that are"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-19T01:12:16Z",
+        "body": "I was thinking the downsides would be all of the involved type introspection and type checking which maybe isn t so bad if we re very clear I just get kinda nervous in Python when implementing things where the types of the inputs can change how the function works particularly when dealing with iterable types I suppose though if we either allow for non np ndarray iterables or just specifically restrict it to lists then it might be fine I was thinking there would be less surprises if there were specific functions for single file and batch"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-19T01:49:45Z",
+        "body": "All valid points My concern on the other end is API creep paraphrasing on feature creep where the API gets a little crowded Any chance you can outline the current set of functions we envision for the API including audio vision but excluding batch processing so we see where we re at"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-19T03:05:11Z",
+        "body": "Sure I ll put that in 19"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-19T18:48:42Z",
+        "body": "I ve updated the proposed API changes in 19 Regarding batch processing if we wanted to not add too many functions then we could do this For get audio embedding batch mode would be used if audio is a non np ndarray iterable sr could be an iterable also of the same length as audio if there is variable sample rates There would have to be a check to make sure that if sr is iterable it matches audio in length and audio must also be a non np ndarray iterable We could also add a batch size argument to control how big the batches are and how much is loaded in memory at once For get vframe embedding a similar approach would be taken where image arr as a non np npdarray iterable would result in batch processing Similarly frame rate could be an iterable of the same length as image arr if all of the items of the batch are videos Again we could also add a batch size argument to control how big the batches are and how much is loaded in memory at once For process audio file process vframe file and process video file if filepath is a non six string type iterable then we can run in batch mode We would also add a batch mode here Though for batch mode we d have to do some extra stuff outside of the loop to make most efficient use of batching without loading all of the files in at once Thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-20T19:11:27Z",
+        "body": "Sounds reasonable I guess Is there strong motivation to support any non ndarray iterable as opposed to forcing it to be a native python list My thinking being that a stricter type requirement could help prevent confusion"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-20T19:42:11Z",
+        "body": "The main motivation is for allowing for users to provide generators But we can always just limit it to lists for now and see if there s a demand for that use case"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-20T20:23:44Z",
+        "body": "Maybe I d start with only supporting lists simpler API easier unit tests and we can decide to expand that if there s demand down the line"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-15T19:17:18Z",
+        "body": "FYI being addressed in 31"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-01-23T19:39:31Z",
+        "body": "Closed by 37"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "[Q] Audio chunk duration greater than 1 second",
+    "state": "closed",
+    "body": "Is there a provision to process audio chunks larger than 1 second say 5 second audio chunks I would imagine this will be fine Can I have your opinion",
+    "created_at": "2019-05-01T20:25:36Z",
+    "closed_at": "2019-05-02T01:54:48Z",
+    "user": "bbruhh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-02T01:54:48Z",
+        "body": "Each embedding frame is extracted from 1 second of audio If your audio file is longer multiple frames will be extracted using a 1 second sliding window with a 0 1 second hop size by default as per the tutorial https openl3 readthedocs io en latest tutorial html You can change the hop size if you want For a 5 second audio file this means you ll get back if you don t change any of the parameters an array with 46 embedding frames by default we zero pad beginning of the signal so that the first frame is centered on time 0 In addition to the embedding array the API also returns a timestamp array which stores the timestamp corresponding to each embedding frame"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Make an object-oriented interface for embedding models",
+    "state": "open",
+    "body": "An object interface for extracting embeddings would make it simpler to extract multiple embeddings and would allow for the embedding model to just be loaded once instead of every time the get embedding function is called At least to begin with the interface could just be something like m EmbeddingModel input repr mel256 content type music embedding size 6144 center True hop size 0 1 emb ts m get embedding audio sr verbose 1 m process file filepath output dir None suffix None Basically we d just put all of the functions from https github com marl openl3 blob master openl3 core py into a class",
+    "created_at": "2019-03-20T20:00:06Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 4,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-03-20T20:39:06Z",
+        "body": "Sounds reasonable Perhaps I d move the hop size and embedding size params into the get embedding function call as these are independent of the specific model file loaded"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-11T00:32:03Z",
+        "body": "Do we still want to do this now that you can pass a model to get embedding"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-11T02:29:58Z",
+        "body": "I think it might still be a decent idea but as of now there s no rush towards an OOP model The main benefit I suppose would be so that you don t have to pass around a model object But on the other hand it s not really that much bookkeeping And perhaps it would be best to err on the side of simplicity before overengineering an OOP API"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-13T07:13:44Z",
+        "body": "Yeah could still be handy let s keep things stable for now and we can revisit this question down the line if when we get more user feedback"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "About pre-trained model and paper",
+    "state": "closed",
+    "body": "Hello there I would like to have more details of pre trained model used by OpenL3 project 1 On which dataset the pre trained model is trained AudioSet or SoundNet Flickr dataset or another dataset And what is the number of examples used 2 Did you reproduce the results described in the original L 3 Net paper or the latest version AVE Net Object that sound ECCV18 Besides congrats to the authors for paper acceptance but it seems that the paper is not available yet could you provide some way to download this paper Thank you",
+    "created_at": "2019-03-15T06:25:37Z",
+    "closed_at": "2019-05-14T23:55:29Z",
+    "user": "bearsroom",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-03-18T00:44:36Z",
+        "body": "Hi the models were trained on two subsets of AudioSet one containing primarily music videos and the other containing primarily environmental sounds The linear models reproduce the results of the original L3 Net paper while the mel based models outperform the original linear models on downstream environmental sound classification tasks The complete details are provided in the paper We ll be making a pre print available in the coming weeks hold tight Cheers"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-14T23:55:29Z",
+        "body": "The paper is now linked on the repo s README"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "why I can't install openl3 now？",
+    "state": "closed",
+    "body": "whether use pip or git clone github repository When I use pip Then it will hang in this step image https user images githubusercontent com 19245461 54326881 0e689980 4643 11e9 9b9f 49a687091bed png When I git clone the repository so did the same",
+    "created_at": "2019-03-14T02:24:50Z",
+    "closed_at": "2019-03-14T04:04:14Z",
+    "user": "zsmj610",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2019-03-14T02:27:16Z",
+        "body": "Hello thanks for your interest The installation includes downloading model files which could take some time depending on your internet connection"
+      },
+      {
+        "user": "zsmj610",
+        "created_at": "2019-03-14T04:04:14Z",
+        "body": "Hello thanks for your interest The installation includes downloading model files which could take some time depending on your internet connection Thanks for reply"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Implement image embedding API",
+    "state": "closed",
+    "body": "Add the image embedding API to the library This should be fairly similar to the existing audio API I ll add a candidate interface once I ve given it more thought",
+    "created_at": "2018-12-21T18:37:44Z",
+    "closed_at": "2020-01-23T19:40:03Z",
+    "user": "jtcramer",
+    "comments_count": 26,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-14T23:57:06Z",
+        "body": "Perhaps it s time to revisit this post icassp"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-30T19:36:36Z",
+        "body": "Yes Here are my thoughts for how we could address this without significant change to the API Basically for all of the functions we d add a modality kwarg openl3 core get embedding audio sr modality audio input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose 1 openl3 core process file filepath output dir None suffix None modality audio input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose True openl3 models get embedding model input repr content type embedding size modality audio openl3 models get embedding model path input repr content type modality audio This makes it backwards compatible while allowing for the image embeddings to be extracted My fear is that adding image versions of functions would crowd the API and also make the naming convention inconsistent since the audio things wouldn t be named audio We d have to specify that things like hop size would be ignored And we d have to be clear about that input repr for the spectrogram still affects the image embedding Additionally we d have to support 8192 embedding size for images that s what s used in the original L3 paper We ll have to add checks in various places to make sure that embedding sizes 512 correspond to the correct modality i e 8192 image 6144 audio Thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-30T22:49:03Z",
+        "body": "I agree this would be the most backwards compatible option but I m not convinced it s better than breaking the current API in favor of transitioning to separate functions for audio image My concern with maintaining the current API is that it can create a lot of ambiguity as to which embedding is being extracted and having shared parameters but with different allowed values only makes things worse The reality is that many users don t read the docs and just explore the API via trial error and my intuition is that having separate get audio embedding and get image embedding functions etc will lead to an API that s easier to understand safer in terms of avoiding unexpected behavior and cleaner to e g document and unit test The major downside to this is that we break backwards compatibility but that s what version control is for We can just make a new release we can even bump to 1 0 0 if we want to strictly follow the rules of semantic versioning and there shouldn t be too much confusion Our user base is still relatively small so now s a good time to make breaking changes I m not too worried about the API being cluttered it s 8 function calls instead of 4 which is still tiny and if every pair of functions is distinguished by having audio or image in the filename I think it s pretty self explanatory unless we want to have built in support for processing video directly and returning both the audio and image embeddings from a video file This could be supported e g by a 3rd family of function calls for video e g get video embedding that takes in a video file and return both audio and image embeddings My inclination is to leave that outside the scope of OpenL3 at least for now Thoughts"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-31T20:04:57Z",
+        "body": "You raise a good point Maybe backwards compatibility isn t a very important consideration at this point Sure let s refactor under a new v1 0 0 release with the separate audio and video functions I guess with a new v1 0 0 release in mind we should consider any other possible API changes we might want to include Maybe we should include the more flexible pooling size interface in bensteers s PR I ve received a few questions about including the whole AVC model Though I m not super convinced if this something we should worry about right now Regarding video this would be a nice feature to have I think If we re going to have a 1 0 0 release I think this would be a good thing to include We can reuse some of the l3embedding code using skvideo for this"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T20:36:10Z",
+        "body": "OK sounds like we re in agreement about revamping the API for a 1 0 0 release I think we should spend a moment on nomenclature especially if we want to support audio video and joint audio visual processing For audio specific functions I think it s a no brainer and the audio suffix is a good option get audio embedding process audio file get audio embedding model should we consider renaming to load audio embedding model It becomes trickier for the visual frame embeddings we could use either image or video On the one hand I think video would be preferable because the literature shows that image embeddings trained on images don t generalize well to video frames On the other hand it peeves me that the vision community uses the term video to mean sequence of visual frames ignoring the fact that there s usually an audio track as well But maybe it s a lost battle So if we ignore my beef we could use audio and video If we want to make a point we could use audio and visual The final question is how to name methods that extract both from a video file If we use visual we could have audio visual and video the latter being for joint processing If on the other hand we use audio and video for audio and frames then we need a term for the joint processing for example audiovideo audiovisual or something along these lines Thoughts"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-31T21:04:34Z",
+        "body": "I m on board changing get audio embedding model to load audio embedding model I m more on board with using image since it s an image embedding not a visual sequence or video minus the the audio embedding And that allows us to reserve video for audio visual I guess I question that comes to mind is that do we only need a process video method For processing videos loaded in memory it may be sufficient to have the user just make a call to get audio embedding and get image embedding Thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T22:24:04Z",
+        "body": "I m on board changing get audio embedding model to load audio embedding model ok cool I think it ll be clearer and also cleaner to have only 1 method start with get especially once we have 3 copies of each method I m more on board with using image since it s an image embedding not a visual sequence or video minus the the audio embedding And that allows us to reserve video for audio visual So in principle I agree but there s a difference between an image embedding learned on images e g ImageNet and a video frame embedding learned from video frames The literature suggests these aren t the same and don t necessary generalize well from one to the other So the problem with using image is that it could imply that this is an image embedding when it s in fact a video frame embedding I m not sure what a good solution to this issue is I ll ask around here see if people have any thoughts I guess I question that comes to mind is that do we only need a process video method For processing videos loaded in memory it may be sufficient to have the user just make a call to get audio embedding and get image embedding For API consistency I d be in favor of implementing all 4 methods for video even if some of them just end up being wrappers around get audio and get image under the hood I think it s cleaner and more consistent that way and probably more streamlined for those interested in extracting both embeddings"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-31T22:27:05Z",
+        "body": "Okay one more question For processing videos do we want an option to have a different hop size for the audio than the hop size of the images effectively the framerate"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T22:43:32Z",
+        "body": "Hmm without actually asking people a priori my inclination is not to support different hop sizes for processing videos I e if you re processing a video you ll get time aligned audio video embeddings controlled via a single hop size parameter If you want separate hop size then it makes sense to require the user to use the separate get audio and get image or whatever we end up calling it"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T22:51:31Z",
+        "body": "Also if we re doing a major revision would it be a good moment to consider 22"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-05-31T22:58:04Z",
+        "body": "I think we can still forgo an OOP interface before getting more feedback from users"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T23:23:00Z",
+        "body": "I think we can still forgo an OOP interface before getting more feedback from users Sure sounds reasonable to me I ve asked around about naming People responded that get image embedding would be OK though they expressed preference for get visual frame embedding or get vframe embedding the term vframes is used in ffmpeg for video frames https ffmpeg org ffmpeg html Video Options"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-05-31T23:24:15Z",
+        "body": "Another comment was that we might want to avoid get video embedding altogether because the embedding is only spatial i e processes a single frame rather than bien spatio temporal processing a tensor of video frames which is what they d expect from a video embedding"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-03T18:17:16Z",
+        "body": "Something else to consider is a batch processing mode i e making more efficient use of the GPU by predicting multiple files at once I m putting together something like this for BirdVoxClassify so I can adapt it for openl3"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-11T04:16:44Z",
+        "body": "Something else to consider is a batch processing mode That seems like a different issue though right Worth including for a major revision but perhaps we should open a new issue for this"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-18T03:43:34Z",
+        "body": "Something else to consider is a batch processing mode That seems like a different issue though right Worth including for a major revision but perhaps we should open a new issue for this Deferred to 26"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-19T18:12:27Z",
+        "body": "Proposed updated API def get audio embedding audio sr model None input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose 1 Computes and returns L3 embedding for given audio data Parameters audio np ndarray shape N or N C 1D numpy array of audio data sr int Sampling rate if not 48kHz will audio will be resampled model keras models Model or None Loaded model object If a model is provided then input repr content type and embedding size will be ignored If None is provided the model will be loaded using the provided values of input repr content type and embedding size input repr linear mel128 or mel256 Spectrogram representation used for model Ignored if model is a valid Keras model content type music or env Type of content used to train embedding Ignored if model is a valid Keras model embedding size 6144 or 512 Embedding dimensionality Ignored if model is a valid Keras model center boolean If True pads beginning of signal so timestamps correspond to center of window hop size float Hop size in seconds verbose 0 or 1 Keras verbosity Returns embedding np ndarray shape T D Array of embeddings for each window timestamps np ndarray shape T Array of timestamps corresponding to each embedding in the output def process audio file filepath output dir None suffix None model None input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose True Computes and saves L3 embedding for given audio file Parameters filepath str Path to WAV file to be processed output dir str or None Path to directory for saving output files If None output files will be saved to the directory containing the input file suffix str or None String to be appended to the output filename i e base filename suffix npz If None then no suffix will be added i e base filename npz model keras models Model or None Loaded model object If a model is provided then input repr content type and embedding size will be ignored If None is provided the model will be loaded using the provided values of input repr content type and embedding size input repr linear mel128 or mel256 Spectrogram representation used for model Ignored if model is a valid Keras model content type music or env Type of content used to train embedding Ignored if model is a valid Keras model embedding size 6144 or 512 Embedding dimensionality Ignored if model is a valid Keras model center boolean If True pads beginning of signal so timestamps correspond to center of window hop size float Hop size in seconds verbose 0 or 1 Keras verbosity Returns def get vframe embedding image arr frame rate None model None input repr mel256 content type music embedding size 8192 verbose 1 Computes and returns L3 embedding for given video frame image data Parameters image arr np ndarray shape H W C or N H W C 3D or 4D numpy array of image data If the images are not 224x224 the images are resized so that the smallest size is 256 and then the center 224x224 patch is extracted from the images frame rate int or None Video frame rate if applicable which if provided results in a timestamp array being returned If None no timestamp array is returned model keras models Model or None Loaded model object If a model is provided then input repr content type and embedding size will be ignored If None is provided the model will be loaded using the provided values of input repr content type and embedding size input repr linear mel128 or mel256 Spectrogram representation used for to train audio part of audio visual correspondence model Ignored if model is a valid Keras model content type music or env Type of content used to train embedding Ignored if model is a valid Keras model embedding size 8192 or 512 Embedding dimensionality Ignored if model is a valid Keras model verbose 0 or 1 Keras verbosity Returns embedding np ndarray shape N D Array of embeddings for each frame timestamps np ndarray shape N Array of timestamps for each frame If frame rate is None this is not returned def process vframe file filepath output dir None suffix None model None input repr mel256 content type music embedding size 8192 verbose True Computes and saves L3 embedding for given image file Parameters filepath str Path to image file to be processed output dir str or None Path to directory for saving output files If None output files will be saved to the directory containing the input file suffix str or None String to be appended to the output filename i e base filename suffix npz If None then no suffix will be added i e base filename npz model keras models Model or None Loaded model object If a model is provided then input repr content type and embedding size will be ignored If None is provided the model will be loaded using the provided values of input repr content type and embedding size input repr linear mel128 or mel256 Spectrogram representation used for model Ignored if model is a valid Keras model content type music or env Type of content used to train embedding Ignored if model is a valid Keras model embedding size 8192 or 512 Embedding dimensionality Ignored if model is a valid Keras model center boolean If True pads beginning of signal so timestamps correspond to center of window hop size float Hop size in seconds verbose 0 or 1 Keras verbosity Returns def process video file filepath output dir None suffix None model None input repr mel256 content type music audio embedding size 6144 audio center True audio hop size 0 1 vframe embedding size 8192 verbose True Computes and saves L3 audio and video frame embeddings for given video file Parameters filepath str Path to WAV file to be processed output dir str or None Path to directory for saving output files If None output files will be saved to the directory containing the input file suffix str or None String to be appended to the output filename i e base filename modality suffix npz If None then no suffix will be added i e base filename modality npz model keras models Model or None Loaded model object If a model is provided then input repr content type and embedding size will be ignored If None is provided the model will be loaded using the provided values of input repr content type and embedding size input repr linear mel128 or mel256 Spectrogram representation used for audio model Ignored if model is a valid Keras model content type music or env Type of content used to train embedding Ignored if model is a valid Keras model audio embedding size 6144 or 512 Audio embedding dimensionality Ignored if model is a valid Keras model audio center boolean If True pads beginning of audio signal so timestamps correspond to center of window audio hop size float Hop size in seconds vframe embedding size 8192 or 512 Video frame embedding dimensionality Ignored if model is a valid Keras model verbose 0 or 1 Keras verbosity Returns Thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-20T18:44:29Z",
+        "body": "Generally I think this looks great A couple of comments 1 You propose get vframe embedding and process vframe file which I imagine is in order to be consistent with get audio embedding and process audio file On the one hand I think it makes sense to be consistent On the other hand what s a vfame file Basically it s just an image file Now I realize it was I who suggested the term vframe rather than image to distinguish between video frames and images But do you think process vframe file could be confusing The two alternatives would be to have diverging nomenclature get vframe embedding process image file or to revert back to image for both get image embedding process image file but that takes us back to the term image for vframes Maybe I m overthinking it and people will understand process vframe file without too much trouble though if we do stick to this nomenclature then I would try to be over explicit in the docstring a la Computes and saves L3 embedding for given image file in a standard image format such as JPG PNG etc 2 We have process video file but no get video embedding Do we not expect that to also be a useful function call"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-20T19:54:29Z",
+        "body": "1 You propose get vframe embedding and process vframe file which I imagine is in order to be consistent with get audio embedding and process audio file On the one hand I think it makes sense to be consistent On the other hand what s a vfame file Basically it s just an image file Now I realize it was I who suggested the term vframe rather than image to distinguish between video frames and images But do you think process vframe file could be confusing The two alternatives would be to have diverging nomenclature get vframe embedding process image file or to revert back to image for both get image embedding process image file but that takes us back to the term image for vframes Maybe I m overthinking it and people will understand process vframe file without too much trouble though if we do stick to this nomenclature then I would try to be over explicit in the docstring a la Computes and saves L3 embedding for given image file in a standard image format such as JPG PNG etc Yeah the issue of diverging nomenclature was why I opted for vframe for both However after reviewing the downstream evaluation on the image embeddings in the L3 paper I don t necessarily think that image is that much of an issue considering the downstream classification was done on ImageNet But if it would upset a lot of people for us to call it image then maybe diverging nomenclature wouldn t be so bad 2 We have process video file but no get video embedding Do we not expect that to also be a useful function call What would we expect get video embedding to return We don t have proper video embeddings If you mean just getting the embeddings for the audio and video frames in a loaded video I don t think having two separate function calls for the audio and video frames is a big deal"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-20T20:22:36Z",
+        "body": "Re 1 I m not a big fan of process vframe file because there s no such thing So I d either diverge or stick to image for both Which do you prefer Re 2 ok fair enough"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-20T20:52:18Z",
+        "body": "I d prefer image for both"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-20T21:42:06Z",
+        "body": "Regarding videos I ve been thinking about whether we should use opencv which is maybe overkill but is the most popular library for video processing However in order to load audio from the videos we ll probably need to use ffmpeg which is already used as a frontend for skvideo which we used in the l3embedding experiments Though this library isn t as widely used as opencv it would allow us to have fewer dependencies since we need ffmpeg anyway"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-06-20T21:51:31Z",
+        "body": "moviepy also looks like an option we can use for both loading video frames and audio without having to have users install ffmpeg"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2019-06-20T23:39:51Z",
+        "body": "I d prefer image for both OK let s do that then Regarding video loading I think the lighter we can keep the repo the better Whatever our dependencies are people will install them or rather pip will install them so I don t think it matters too much if the dependency is super popular what matters most is that it s 1 light and 2 well supported with expectation that it ll continue to be supported long term"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2019-07-15T19:16:57Z",
+        "body": "FYI being addressed in 29"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2020-01-23T19:40:03Z",
+        "body": "Closed by 37"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "What is missing for Image embedding?",
+    "state": "closed",
+    "body": "It seems like the rep includes a trained parameters for the image model Does the missing part is API implementation or the parameters are wrong Thanks",
+    "created_at": "2018-12-20T21:30:31Z",
+    "closed_at": "2019-01-06T07:50:50Z",
+    "user": "idansc",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2018-12-21T18:35:27Z",
+        "body": "It s just missing the API implementation For the first release we just focused on implementing the audio embedding API I ll make a proper issue so we can better track it"
+      },
+      {
+        "user": "idansc",
+        "created_at": "2019-01-06T07:50:50Z",
+        "body": "See 19"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Add support for Python 3.4",
+    "state": "closed",
+    "body": "We get the following build error in Travis when building for 3 4 Running setup py bdist wheel for llvmlite error Complete output from command home travis virtualenv python3 4 6 bin python u c import setuptools tokenize file tmp pip build 6ji57j2r llvmlite setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec bdist wheel d tmp tmptmrhzy74pip wheel python tag cp34 running bdist wheel home travis virtualenv python3 4 6 bin python tmp pip build 6ji57j2r llvmlite ffi build py LLVM version 5 0 0git 929163d Traceback most recent call last File tmp pip build 6ji57j2r llvmlite ffi build py line 167 in module main File tmp pip build 6ji57j2r llvmlite ffi build py line 157 in main main posix linux so File tmp pip build 6ji57j2r llvmlite ffi build py line 119 in main posix raise RuntimeError msg RuntimeError Building llvmlite requires LLVM 6 0 x Be sure to set LLVM CONFIG to the right executable path Read the documentation at http llvmlite pydata org for more information about building llvmlite error command home travis virtualenv python3 4 6 bin python failed with exit status 1 Failed building wheel for llvmlite Running setup py clean for llvmlite Successfully built kapre resampy librosa future numba audioread pycparser Failed to build llvmlite Installing collected packages scipy keras audioread scikit learn joblib decorator llvmlite numba resampy librosa future kapre pycparser cffi PySoundFile openl3 Running setup py install for llvmlite error Complete output from command home travis virtualenv python3 4 6 bin python u c import setuptools tokenize file tmp pip build 6ji57j2r llvmlite setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec install record tmp pip ocnebo16 record install record txt single version externally managed compile install headers home travis virtualenv python3 4 6 include site python3 4 llvmlite running install running build got version from file tmp pip build 6ji57j2r llvmlite llvmlite version py version 0 25 0 full 9af98a608a49278dbc4ce5dc743152f2341b6a87 running build ext home travis virtualenv python3 4 6 bin python tmp pip build 6ji57j2r llvmlite ffi build py LLVM version 5 0 0git 929163d Traceback most recent call last File tmp pip build 6ji57j2r llvmlite ffi build py line 167 in module main File tmp pip build 6ji57j2r llvmlite ffi build py line 157 in main main posix linux so File tmp pip build 6ji57j2r llvmlite ffi build py line 119 in main posix raise RuntimeError msg RuntimeError Building llvmlite requires LLVM 6 0 x Be sure to set LLVM CONFIG to the right executable path Read the documentation at http llvmlite pydata org for more information about building llvmlite error command home travis virtualenv python3 4 6 bin python failed with exit status 1 Command home travis virtualenv python3 4 6 bin python u c import setuptools tokenize file tmp pip build 6ji57j2r llvmlite setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec install record tmp pip ocnebo16 record install record txt single version externally managed compile install headers home travis virtualenv python3 4 6 include site python3 4 llvmlite failed with error code 1 in tmp pip build 6ji57j2r llvmlite The command pip install e tests failed and exited with 1 during Your build has been stopped Towards getting an MVP out we ll ignore 3 4 for now and revisit at some point in the future",
+    "created_at": "2018-11-08T18:27:26Z",
+    "closed_at": "2020-01-23T20:05:13Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2020-01-05T23:45:59Z",
+        "body": "Unless users come clamoring with requests for 3 4 support I d argue we can close this one out"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Output file format and naming convention",
+    "state": "closed",
+    "body": "I have some questions about how to deal with embedding outputs Should we include the timestamps If so do we save it in the same file What format should we use h5 Nice compression options but since these typically shouldn t be large it might be more annoying to deal with than other options npy npz Standard approach can easily load numpy arrays directly JAMS Using JAMs would help expand its use and would have a natural way to associate the timestamps with each embedding but storing all of the values as text might be cumbersome and make the files big especially if they are long Should we use the embedding type to name the embedding e g example audio openl3 6144emb linear music ext Or should we just keep it simple It might be good if the user is comparing different embeddings but it might be cumbersome if people just want to use a single type of embeddings Of course we could add an option for this but adding another option for something like this might be excessive",
+    "created_at": "2018-11-07T19:18:21Z",
+    "closed_at": "2018-11-08T23:25:23Z",
+    "user": "jtcramer",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-07T19:29:59Z",
+        "body": "My 2c By default the output can include 2 arrays one with timestamps and another with the embeddings We can add a no timestamps option if people want only the embedding as output I d probably go with npy for the default output format Later if we see there s demand we can add h5 output and jams output as options We could provide an optional suffix to allow the user to define their own desired suffix and by default set it to the empty string Thoughts"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-07T20:19:52Z",
+        "body": "I d say the options for those things might be nice but maybe those things should be lower priority for now Unless there are objections let s just have a single output with both arrays npy and no suffix for now"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-08T15:53:19Z",
+        "body": "I agree about initially only supporting npy output with both arrays I m less sure about not supporting the suffix I think that would be very useful for users at least for me and implementing it should be a breeze"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-08T16:09:38Z",
+        "body": "Okay then let s move forward with adding a suffix"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-08T17:03:41Z",
+        "body": "It s been added to the API and the tests have been updated to reflect that"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-13T00:11:10Z",
+        "body": "Just an update to document that we re instead using npz files for the outputs with embedding and timestamps keys for the respective values"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Handling silence",
+    "state": "closed",
+    "body": "There are a few different ways we could handle audio with true silence i e all zero samples We could throw an error but there could be reasons that people want to process silence We might want to raise a warning so the user is aware Or we could just do nothing which could also be reasonable What are your thoughts",
+    "created_at": "2018-11-07T18:54:37Z",
+    "closed_at": "2018-11-08T23:37:21Z",
+    "user": "jtcramer",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-07T19:43:33Z",
+        "body": "I don t think we need to do anything special We could raise a warning if the entire input signal is perfectly silent but otherwise I think we can just process as usual"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-07T20:18:16Z",
+        "body": "I m thinking about cases where the entire input signal is all zeros"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-08T15:50:25Z",
+        "body": "Yes I d raise a warning and process as usual"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Handling short audio",
+    "state": "closed",
+    "body": "I m thinking about how to handle these cases with short audio Empty audio array Proposed solution Throw an error We shouldn t try to process empty audio forms Audio array has less than one second of audio Proposed solution Pad audio to one second and process as usual Maybe warn the user What are your thoughts",
+    "created_at": "2018-11-07T17:39:10Z",
+    "closed_at": "2018-11-08T23:37:11Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-07T19:42:06Z",
+        "body": "Agreed but we should definitely raise a warning if we re padding the signal"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "CPU only support",
+    "state": "closed",
+    "body": "I imagine plenty of people will want to run this on machines without GPUs and as a result will need to use the CPU only version of tensorflow so I think we should aim to support CPU only installations of this package That being said what s the best way to handle this when people are installing via pip Rather than creating an entirely separate PyPI repo",
+    "created_at": "2018-11-01T20:09:43Z",
+    "closed_at": "2018-11-01T21:41:57Z",
+    "user": "jtcramer",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T20:20:42Z",
+        "body": "We definitely want to support CPU only However I think this is not an issue because we only need to specify keras as a dependency and let the user worry about installing TF which can be GPU or CPU So I think as long as we specify keras as a dependency we should be able to support GPU and CPU out of the box I don t think we can test GPU execution on travis in any case https github com travis ci travis ci issues 5911"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T21:41:57Z",
+        "body": "Good point I ll mark this issue as closed then"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Supporting multiple GPU models",
+    "state": "open",
+    "body": "Should supporting running the embedding models on multiple GPUs be prioritized Here are the pros cons as I see it not necessarily equally weighted in terms of importance Pros Allows users to take advantage of multiple GPUs for faster running time Cons Adds an extra parameter to most API calls though this can be optional Adds meat to the codebase though we already have it Can we test this on Travis All in all I think that if we believe that using multiple GPUs will be a common use case then we should include it But if it s something that will be rarely used if at all we shouldn t prioritize it at least for an MVP",
+    "created_at": "2018-11-01T20:04:50Z",
+    "closed_at": null,
+    "user": "jtcramer",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T20:06:53Z",
+        "body": "Another question that comes up if we support multi GPU support is what the default number of GPUs used is Should it be just 1 Or should it be the maximum number of GPUs available"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T20:17:01Z",
+        "body": "I think supporting multiple GPU s would be nice but also definitely not critical for the MVP If people have access to multiple GPUs they can always parallelize over the data to make use of all the GPUs without the need to explicitly support multi GPU inference Also would this require saving additional model files since keras multi GPU model files are stored differently on disk"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T21:43:52Z",
+        "body": "Fair enough let s not prioritize this for the MVP Supporting multiple GPUs wouldn t require saving additional model files we can make each model supported by multi GPU inference after loading it"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T22:34:09Z",
+        "body": "I imagine we could support it via an n gpu optional arg with a default value of 1"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Save separate embedding models for audio and video",
+    "state": "closed",
+    "body": "Currently we save the full L3 model but it would probably make more sense to separate the embeddings",
+    "created_at": "2018-11-01T04:35:57Z",
+    "closed_at": "2018-11-07T17:33:32Z",
+    "user": "jtcramer",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T16:06:18Z",
+        "body": "Why What are the benefits"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T16:22:34Z",
+        "body": "The benefits are we don t have to load the entire L3 model just to load the audio embeddings or image embeddings Additionally it simplifies the codebase because we don t have to have the code that builds the entire model just the subnetworks"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T17:26:08Z",
+        "body": "Being a little finicky here but what s the advantage of not having to load in the entire model Is there a significant reduction in RAM usage We already have the code to build the entire model so I don t see how that s a down side I tend to agree with the idea of separating out the audio video embedding models but I d like the justification to be clearly articulated here if possible"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T17:49:05Z",
+        "body": "The RAM usage should roughly half since we are only loading one of the subnetworks and skipping the fusion layers If we can avoid loading more RAM than is necessary I think it s worth doing Also if we are loading smaller model files then it should also take less time to load Regarding the code while we do have the code to construct load the full model it is more to maintain and more to test Plus I think a simpler leaner codebase is generally a good thing if we can help it"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T18:38:39Z",
+        "body": "Great thanks for elaborating Can you carve out the subnetworks for all 6 models audio and vision compress and push to this repo on a new models branch There should 12 files in total right"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T18:49:14Z",
+        "body": "Will do Yes there should be 12 files 3 linear mel128 mel256 2 music env 2 audio image"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Write high level docs",
+    "state": "closed",
+    "body": "Add intro descriptions and examples",
+    "created_at": "2018-10-31T18:25:03Z",
+    "closed_at": "2018-11-20T00:51:34Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T16:05:11Z",
+        "body": "Can base section on https scaper readthedocs io en latest"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Set up readthedocs support",
+    "state": "closed",
+    "body": "Set up Sphinx readthedocs account",
+    "created_at": "2018-10-31T18:24:16Z",
+    "closed_at": "2018-11-08T23:21:54Z",
+    "user": "jtcramer",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T16:02:43Z",
+        "body": "Getting started setup py add extras require docs numpydoc sphinx gallery see scaper or autopool as examples Follow these instructions to create initial structure http docs readthedocs io en latest getting started html Things to copy over change based on scaper s conf py imports import os import sys import six import sphinx rtd theme sys path insert 0 os path abspath sys path insert 0 os path abspath extensions extensions sphinx ext autodoc sphinx ext autosummary sphinx ext coverage sphinx ext viewcode numpydoc mock dependencies Mock the dependencies if six PY3 from unittest mock import MagicMock else from mock import Mock as MagicMock class Mock MagicMock classmethod def getattr cls name return MagicMock MOCK MODULES sox jams scipy numpy pandas sys modules update mod name Mock for mod name in MOCK MODULES version import imp scaper version imp load source scaper version scaper version py version scaper version short version The full version including alpha beta rc tags release scaper version version theme html theme sphinx rtd theme html theme path sphinx rtd theme get html theme path Link to github issues and pull requests from sphinx documentation source https github com sloria sphinx issues Installation and Configuration pip install sphinx issues Add sphinx issues to extensions in your conf py If your project is on GitHub add the issues github path config variable Otherwise use issues uri and issues pr uri docs conf py extensions sphinx issues Github repo issues github path sloria marshmallow equivalent to issues uri https github com sloria marshmallow issues issue issues pr uri https github com sloria marshmallow pull pr Usage Use the issue and pr roles in your docs like so See issue issue 42 See issues issue 12 13 See PR pr 58 Use the user role in your docs to link to user profiles Github by default but can be configured via the issues user uri config variable Thanks to user bitprophet for the idea You can also use explicit names if you want to use a different name than the github user name This change is due to user Andreas Mueller amueller"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-08T23:21:54Z",
+        "body": "This has been set up https openl3 readthedocs io en latest index html"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Set up Travis and Coveralls",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-10-31T18:23:18Z",
+    "closed_at": "2018-11-08T23:35:44Z",
+    "user": "jtcramer",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T15:58:34Z",
+        "body": "We can base our travis setup script on the scaper one https github com justinsalamon scaper blob master travis yml The scaper script is extra complicated because of non python dependencies so our script will probably be simpler The CREPE script is dramatically simpler but missing some things we need e g coveralls so we ll probably end up somewhere between the two https github com marl crepe blob master travis yml"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T16:00:19Z",
+        "body": "We ll also need setup cfg to automate the unit tests https github com justinsalamon scaper blob master setup cfg"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Implement API",
+    "state": "closed",
+    "body": "Implement all of the functions for API make sure to add descriptive docstrings that conform with the Numpy docstring format",
+    "created_at": "2018-10-31T18:16:50Z",
+    "closed_at": "2018-11-20T00:51:13Z",
+    "user": "jtcramer",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-07T16:58:39Z",
+        "body": "openl3 audio core get embedding jtcramer x Tests x Implementation x Docstrings process file jtcramer x Tests x Implementation x Docstrings get output path jtcramer x Tests x Implementation x Docstrings openl3 audio models get embedding model x Tests x Implementation x Docstrings get embedding model path x Tests x Implementation x Docstrings construct linear audio network x Tests x Implementation x Docstrings construct mel128 audio network x Tests x Implementation x Docstrings construct mel256 audio network x Tests x Implementation x Docstrings openl3 audio cli main x Tests x Implementation x Docstrings"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Upload models",
+    "state": "closed",
+    "body": "Create a new branch and upload compressed models to it Make sure we come up with a reasonable naming convention based on API",
+    "created_at": "2018-10-31T18:16:11Z",
+    "closed_at": "2018-11-01T23:08:05Z",
+    "user": "jtcramer",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T15:46:21Z",
+        "body": "let s discuss the naming convention for the models To kick things off how about openl3 input data h5 bz2 Which would give openl3 linear music h5 bz2 openl3 linear env h5 bz2 openl3 mel128 music h5 bz2 openl3 mel128 env h5 bz2 openl3 mel256 music h5 bz2 openl3 mel256 env h5 bz2"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T16:26:22Z",
+        "body": "That sounds good to me"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T18:00:52Z",
+        "body": "Given that we also may want to include the image embedding models we could either put the models in separate folders e g audio image add audio or image to the filename e g openl3 audio linear music h5 bz2 or both I d argue for at least adding it to the filename just so the model names are unambiguous Doing both may be redundant but maybe having separate subdirectories would be clear"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T18:40:09Z",
+        "body": "I agree we should add it to the filename so that filenames are perfectly unambiguous Since there are just 12 files in total I m not sure there s need to save them to separate folders"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T18:47:56Z",
+        "body": "Let s just put it in one folder then Adding audio and image to the filenames should be sufficient"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T23:08:05Z",
+        "body": "It has been done"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Write setup script",
+    "state": "closed",
+    "body": "Write installation setup script",
+    "created_at": "2018-10-31T18:15:39Z",
+    "closed_at": "2018-11-20T00:51:23Z",
+    "user": "jtcramer",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T15:42:50Z",
+        "body": "cf https github com marl crepe blob master setup py"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-08T23:36:13Z",
+        "body": "This is done for now but once we get into pushing PyPI we might need to change this"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-09T16:30:01Z",
+        "body": "I can make this pypi ready if that sounds good"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-09T16:30:46Z",
+        "body": "unless it already is haven t checked"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-09T16:32:00Z",
+        "body": "That sounds good I can t say that it s necessarily PyPI ready but it s at least based off of the Scaper and Crepe setup scripts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-09T16:33:18Z",
+        "body": "OK great those are both pypi ready so we might be fine out of the box but I can check once the package is ready for upload"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Write unit tests",
+    "state": "closed",
+    "body": "Write unit tests with assumed API structure to ensure correct behavior Additionally stub out functions",
+    "created_at": "2018-10-31T18:14:41Z",
+    "closed_at": "2018-11-08T23:36:58Z",
+    "user": "jtcramer",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T15:42:25Z",
+        "body": "Goal 100 coverage"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-08T23:36:58Z",
+        "body": "I m going to close this issue since it s redundant with the implementing API issue"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Design API",
+    "state": "closed",
+    "body": "Determine the structure of the API and function signatures",
+    "created_at": "2018-10-31T18:13:11Z",
+    "closed_at": "2018-11-08T23:36:27Z",
+    "user": "jtcramer",
+    "comments_count": 16,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T04:55:55Z",
+        "body": "To start the discussion for the API design here s some initial thoughts I ll just be focusing on the key things for now openl3 audio core py build and load model input repr content type embedding type get embedding audio sr input repr mel256 content type music embedding size large center True hop size 0 1 verbose 1 process file filepath output None input repr mel256 content type music embedding size large center True hop size 0 1 verbose True get output path filepath suffix output dir openl3 audio models py load embedding input repr content type embedding size get embedding path input repr content type embedding size construct linear audio network construct mel128 audio network construct mel256 audio network input repr linear mel128 or mel256 content type music or env embedding size large or small I started keeping fairly close to crepe s API Let me know your thoughts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T15:54:15Z",
+        "body": "I m not sure we need to separate different aspects of the model into separate parameters i e input repr content type and embedding type the latter also is way too ambiguous Since we only have 6 models I d consider defining a fixed set of 6 strings to represent each e g based the ones proposed in 4 Each model string identifies it uniquely and the user need only specify one string to define exactly which model to use e g openl3 mel128 music For the embedding size I m not a fan of big and small because those are ambiguous and I would favor being explicit about the dimensions e g 6144 which could the default and 512 We can check in the function if the provided value is supported and throw an error if not This gives us the flexibility to support other potentially any valid output dimensionalities in the future thoughts"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T16:20:42Z",
+        "body": "That s a fair point Erring towards simplicity seems like a good idea I think I meant embedding size instead of embedding type But that brings up a question of how we want to deal with different pool sizes in terms of how the models are loaded Since different pool sizes would result in separate models then we could either load them separately Alternatively we could also implement the pooling in numpy so we just have to load one model But maybe we can shelf this discussion since it doesn t affect the API Regarding the embedding size I like user friendly strings but it does engineer us into a corner regarding naming conventions which as you mentioned are ambiguous subjective Overall I m fine with making it explicit"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T17:23:46Z",
+        "body": "I d argue big and small aren t user friendly how big is big how small is small but that s secondary to the lack of flexibility it imposes which is the main reason for preferring an explicit embedding size argument The point about how to do the pooling is an important one it seems highly inefficient to require a separate pre trained model per pooling size given that the rest of the model is the same and the pooling can be implemented in numpy I think I like that option better that way there will only ever be 6 model files and pooling is maximally flexible and will be easy to support different embedding sizes in the future Unless there s a good reason not to I d go with numpy pooling then"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T17:55:50Z",
+        "body": "Yeah I agree that big and small aren t user friendly I was more just talking about descriptive names if it makes sense I was taking inspiration from the model names in crepe https github com marl crepe blob master crepe core py L12 But yes it does impose constraints on adding embedding sizes since we d have to come up with a naming convention that both is clear and is amenable to adding an arbitrary number of embedding sizes Okay great let s go with numpy pooling The additional benefit would be that it could be possible to compute embeddings of different sizes without having to do multiple forward passes through the network"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-01T19:45:48Z",
+        "body": "Okay great let s go with numpy pooling The additional benefit would be that it could be possible to compute embeddings of different sizes without having to do multiple forward passes through the network"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-01T23:45:31Z",
+        "body": "Updated API openl3 audio core py build and load model input repr content type embedding size get embedding audio sr input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose 1 process file filepath output None input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose True get output path filepath suffix output dir openl3 audio models py load embedding input repr content type embedding size get embedding path input repr content type embedding size construct linear audio network construct mel128 audio network construct mel256 audio network input repr linear mel128 or mel256 content type music or env embedding size 6144 or 512 Any thoughts or should we proceed with this"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-03T15:59:45Z",
+        "body": "What s the purpose of having both core build and load model and models load embedding Also we should define the outputs of each function as part of the API definition"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-03T22:12:33Z",
+        "body": "Ah you re right we don t need both A more detailed outline openl3 audio core py get embedding audio sr input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose 1 Computes and returns L3 embedding for given audio data Inputs audio np ndarray audio array sr int sampling rate if not 48000 will be resampled input repr linear mel128 or mel256 spectrogram representation used for model content type music or env type of content used to train embedding embedding size 6144 or 512 embedding dimensionality center bool if True pads beginning of signal so timestamps corresponds to center of window hop size float hop size in seconds verbose 1 or 0 Keras verbosity Outputs embedding np array timestamps np array process file filepath output filepath None input repr mel256 content type music embedding size 6144 center True hop size 0 1 verbose True Computes and saves L3 embedding for given audio file Inputs filepath str path to audio file output filepath str or None path of output embedding if None saves in same directory using the same file basename input repr linear mel128 or mel256 spectrogram representation used for model content type music or env type of content used to train embedding embedding size 6144 or 512 embedding dimensionality center bool if True pads beginning of signal so timestamps corresponds to center of window hop size float hop size in seconds verbose bool If True Keras will be verbose get output path filepath suffix output dir Get output path using the given output directory the basename of the given file and appending the given suffix Inputs filepath str path to audio file suffix str string to append to filename including extension output str path to directory where file will be saved Outputs output path str path to output file openl3 audio models py get embedding model input repr content type embedding size Returns a model with the given characteristics Loads the model if the model has not been loaded yet Inputs input repr linear mel128 or mel256 spectrogram representation used for model content type music or env type of content used to train embedding embedding size 6144 or 512 embedding dimensionality Outputs model keras models Model model object get embedding model path input repr content type embedding size Returns the local path to the model weights file for the model with the given characteristics Inputs input repr linear mel128 or mel256 spectrogram representation used for model content type music or env type of content used to train embedding embedding size 6144 or 512 embedding dimensionality Outputs model path str path to embedding model weights construct linear audio network Returns an uninitialized model object for a network with a linear spectrogram input With 257 frequency bins Outputs model keras models Model model object construct mel128 audio network Returns an uninitialized model object for a network with a Mel spectrogram input with 128 frequency bins Outputs model keras models Model model object construct mel256 audio network Returns an uninitialized model object for a network with a Mel spectrogram input with 256 frequency bins Outputs model keras models Model model object"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-03T22:14:45Z",
+        "body": "Should we have a function in the library for processing a directory or is that unnecessary We will want that behavior for the CLI for which I ll propose shortly so we could just include it in the API But maybe it s something that would be better just being left to users to implement for their own scripts"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-03T22:25:38Z",
+        "body": "Proposed CLI usage Positional Args input str path or paths to files to process or path to a directory of files to process but not recursively Optional Args output o str directory to save output files should we create the directory if it doesn t already exist input repr i linear mel128 or mel256 Model input representation Default mel256 content type c music or env Content type used to train model Default music embedding size s 6144 or 512 Default 6144 no centering n Do not pad signal timestamps correspond to beginning of each analysis window hop size h Hop size in seconds for processing audio files quiet q Suppress all non error printouts"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-04T00:05:20Z",
+        "body": "Should we have a function in the library for processing a directory or is that unnecessary We will want that behavior for the CLI for which I ll propose shortly so we could just include it in the API But maybe it s something that would be better just being left to users to implement for their own scripts I don t think we need such a function for the python API people can easily implement themselves only for the CLI"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-04T00:06:15Z",
+        "body": "The proposed API and CLI look good to me"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-04T01:13:05Z",
+        "body": "Two points I want to address which maybe are not as important Should we create output directories for the user if they don t exist I usually prefer to create directories for users out of convenience but I m not sure if there s a general consensus for whether this should be done I guess out of simplicity we should just let the user worry about it but I want to get your opinion Should we allow users to recursively process audio files This could be convenient but opens up a can of worms regarding how we handle the different use cases e g when recursively processing files but saving to a given output directory should we replicate the directory structure of the audio directory or should we put all of the files in one directory and if so what is the naming convention It s not super unreasonable but might add some potentially unnecessary complexity Should we allow for a text file of paths for the input Regarding the latter two points I lean towards not supporting that just because it makes things very slightly more complicated If people end up really wanting it it s something we can add in later"
+      },
+      {
+        "user": "justinsalamon",
+        "created_at": "2018-11-04T01:19:23Z",
+        "body": "Should we create output directories for the user if they don t exist I usually prefer to create directories for users out of convenience but I m not sure if there s a general consensus for whether this should be done I guess out of simplicity we should just let the user worry about it but I want to get your opinion I think it s reasonable for us to create the immediate parent directory and assume the rest of the path exists That is if the user specifies an output folder as a b c we can assume a b exists and throw an error if it does not and create c if it doesn t exist Thoughts Should we allow users to recursively process audio files This could be convenient but opens up a can of worms regarding how we handle the different use cases e g when recursively processing files but saving to a given output directory should we replicate the directory structure of the audio directory or should we put all of the files in one directory and if so what is the naming convention It s not super unreasonable but might add some potentially unnecessary complexity I don t think we need to support recursive processing The CLI is provided for basic use only Anything fancy should be done via the python API and the user can handle recursion themselves Should we allow for a text file of paths for the input I m assuming this is for the CLI Again I don t think it s necessary for the CLI I think we need to support processing a single audio file or all audio files in a folder anything beyond that people should code up themselves using the python API Regarding the latter two points I lean towards not supporting that just because it makes things very slightly more complicated If people end up really wanting it it s something we can add in later Agreed"
+      },
+      {
+        "user": "jtcramer",
+        "created_at": "2018-11-04T01:26:40Z",
+        "body": "I think it s reasonable for us to create the immediate parent directory and assume the rest of the path exists That is if the user specifies an output folder as a b c we can assume a b exists and throw an error if it does not and create c if it doesn t exist Thoughts I think that sounds reasonable It might be convenient to create all subdirectories I usually do but I suppose it s not too much to ask the user to do it and forces them to make sure that whatever parent directories for their project are set up before running the script In short making the user take care of it may prevent a few cases where a user might shoot themselves in the foot e g misspelling one of the directories without taking away the convenience of making a new subdirectory for the embeddings"
+      }
+    ]
+  }
+]

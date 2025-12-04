@@ -1,0 +1,82 @@
+[
+  {
+    "number": 6,
+    "title": "run the code",
+    "state": "open",
+    "body": "can you please tell me step by step process to run the code",
+    "created_at": "2021-03-21T20:05:44Z",
+    "closed_at": null,
+    "user": "Ahm-ed1822",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "Does not output anything",
+    "state": "open",
+    "body": "I trained in 2 classes I just commented out the others and got great results http snpy in GIVaNx However after drawing the envelope or a tree nothing prints out The only modification I made on the camera app is to remove the before contour on line 83 and line 115 Is there a key to press to force it to output what is predicted",
+    "created_at": "2019-09-17T01:29:55Z",
+    "closed_at": null,
+    "user": "hantzfevry",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "camera take photo",
+    "state": "open",
+    "body": "if i want make camera to take photo to play this how I fix it",
+    "created_at": "2019-06-24T10:49:55Z",
+    "closed_at": null,
+    "user": "paulchou0309",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "phet2309",
+        "created_at": "2020-10-21T12:55:49Z",
+        "body": "Connect Camera with pc or if you want to use mobile camera then you should use ip webcam and usb connection with mobile and pc can also be used"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Training too slow and not using full GPU, whats the training time ?",
+    "state": "open",
+    "body": "Using default parameters and all 300 categories I feel its training quite slow even though I am using a AWS EC2 P2 xLarge instance with Nvidia K80 GPU Its using only 360MB of the GPU and I feel as if its stuck on that usage its not using more or less from that number checked via nvidia smi command I tried calculating the time between each iteration and its 5 7 seconds and calculating the total iterations with that time and 20 epochs its results in more than 150 days MobaXterm XVT7ysE4H5 https user images githubusercontent com 3790163 58509487 46986680 81b4 11e9 90c8 26fcc35f2047 png MobaXterm QtHda7g7pV https user images githubusercontent com 3790163 58509488 46986680 81b4 11e9 90e5 0e87623e4c7e png",
+    "created_at": "2019-05-28T20:22:23Z",
+    "closed_at": null,
+    "user": "shubhank008",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "vietnh1009",
+        "created_at": "2019-07-23T23:38:10Z",
+        "body": "From your screenshot I would say that you didnt use gpu Would you try to print some message after the line if torch cuda is available"
+      },
+      {
+        "user": "shubhank008",
+        "created_at": "2019-07-24T06:36:59Z",
+        "body": "From your screenshot I would say that you didnt use gpu Would you try to print some message after the line if torch cuda is available I do was using GPU the 2nd image is showing that as the python process was running on GPU its just that it was using only 300 400MB GPU instead of full 12GB thus the issue I had now deleted my project since there was no reply I thought this is a dead repo"
+      },
+      {
+        "user": "vietnh1009",
+        "created_at": "2019-07-24T07:03:17Z",
+        "body": "Sorry for that I was quite busy over the last months About the problem of GPU If you want to use more GPU you need to either increase the batch size or complexity of your model Your gpu has 12 gb does not mean that any model run on your machine will utilize all the resource Bests"
+      },
+      {
+        "user": "vietnh1009",
+        "created_at": "2019-07-24T10:36:53Z",
+        "body": "Btw if you want to train a model with 300 categories increasing model s breadth and deepness is indispensable"
+      },
+      {
+        "user": "shubhank008",
+        "created_at": "2019-07-24T12:28:41Z",
+        "body": "Btw if you want to train a model with 300 categories increasing model s breadth and deepness is indispensable New to all these terms can you provide me the parameters to use for whole data set I would love to try this repo out again to see if it works for whole data set and how accurate Also the way I wanted to try it was for saved image files like I can just load a saved png jpg file of a drawing feed it to the network and get the result Somehow all the repos I have come across either use webcam approach javascript or recording storing drawing coordinates and none had a approach to use saved image files whether hand drawings or even quick draw dataset as saved image files I tried to pre process the images to feed in network but the result is not the same"
+      }
+    ]
+  }
+]

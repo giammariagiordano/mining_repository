@@ -1,0 +1,38 @@
+[
+  {
+    "number": 2,
+    "title": "Fail to run setup.py in SPTM folder at the step installing ViZDoom.",
+    "state": "open",
+    "body": "I faced this problem multiple times reinstalling my operating system is useless The terminal gave error information as subprocess CalledProcessError Command make j 15 returned non zero exit status 2 Command home fzh anaconda2 envs sptm bin python u c import setuptools tokenize file tmp pip build nF1IP4 vizdoom setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec install record tmp pip 6yOgem record install record txt single version externally managed compile failed with error code 1 in tmp pip build nF1IP4 vizdoom My device runs ubuntu18 04 with RTX3060 and I installed CUDA11 5 CUDNN8 2 4 However I noticed that SPTM s anaconda2 enviornment equips CUDA much earlier that my RTX3060 does not support RTX3060 only supports CUDA later than 11 0 according to official document Under the base environment I cannot install ViZDoom via pip but can build it from souce code However under the anaconda2 enviornment sptm given by setup sh in SPTM folder I can neither build ViZDoom from source code nor install it via pip or pip3 I would be appreciate if you can solve this problem for me T T",
+    "created_at": "2021-11-18T10:27:02Z",
+    "closed_at": null,
+    "user": "BUPT-zeld151",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "BUPT-zeld151",
+        "created_at": "2021-11-18T10:28:44Z",
+        "body": "If you need complete error report from terminal I can paste it later It s a little bit long so I paste the last conclusion only"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "while running your demo, an error occurred",
+    "state": "closed",
+    "body": "File data 1 codes SPTM src test navigator py line 24 in setup video nonstop True File common util py line 142 in init framerate FPS File common video writer py line 37 in init self proc sp Popen command stdin sp PIPE File home yty anaconda2 lib python2 7 subprocess py line 394 in init errread errwrite File home yty anaconda2 lib python2 7 subprocess py line 1047 in execute child raise child exception OSError Errno 2 No such file or directory",
+    "created_at": "2019-09-14T05:45:16Z",
+    "closed_at": "2019-09-14T19:50:24Z",
+    "user": "Kyridiculous2",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nsavinov",
+        "created_at": "2019-09-14T19:50:24Z",
+        "body": "Maybe try to print command variable in this line to debug https github com nsavinov SPTM blob 4d984cf1e84153e65fe1bf3e9121580eddc075cb src common video writer py L37 You could try to execute this command and see if it works Alternatively turn off video writing and try to run without it Please feel free to reopen if the above does not help"
+      }
+    ]
+  }
+]

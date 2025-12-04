@@ -1,0 +1,344 @@
+[
+  {
+    "number": 30,
+    "title": "Please construct your `Model` instance in graph mode or call `Model.predict` with eager mode enabled.",
+    "state": "open",
+    "body": "Traceback most recent call last File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2088 in call return self wsgi app environ start response File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2073 in wsgi app response self handle exception e File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2070 in wsgi app response self full dispatch request File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1515 in full dispatch request rv self handle user exception e File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1513 in full dispatch request rv self dispatch request File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1499 in dispatch request return self ensure sync self view functions rule endpoint req view args File C Users mm Downloads image to image search server py line 77 in search query gencap get caption uploaded img path File C Users mm Downloads image to image search capgen py line 55 in get caption feat self get image feature file File C Users mm Downloads image to image search capgen py line 38 in get image feature feats np transpose self visual model predict self convert img to vector img path File C Users mm AppData Roaming Python Python39 site packages tensorflow python keras engine training py line 1671 in predict version utils disallow legacy graph Model predict File C Users mm AppData Roaming Python Python39 site packages tensorflow python keras utils version utils py line 130 in disallow legacy graph raise ValueError error msg ValueError Calling Model predict in graph mode is not supported when the Model instance was constructed with eager mode enabled Please construct your Model instance in graph mode or call Model predict with eager mode enabled",
+    "created_at": "2021-06-23T02:39:43Z",
+    "closed_at": null,
+    "user": "momame",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "    ValueError: Calling `Model.predict` in graph mode is not supported when the `Model` instance was constructed with eager mode enabled. Please construct your `Model` instance in graph mode or call `Model.predict` with eager mode enabled.",
+    "state": "open",
+    "body": "Traceback most recent call last File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2088 in call return self wsgi app environ start response File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2073 in wsgi app response self handle exception e File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 2070 in wsgi app response self full dispatch request File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1515 in full dispatch request rv self handle user exception e File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1513 in full dispatch request rv self dispatch request File C Users mm AppData Local Programs Python Python39 Lib site packages flask app py line 1499 in dispatch request return self ensure sync self view functions rule endpoint req view args File C Users mm Downloads image to image search server py line 77 in search query gencap get caption uploaded img path File C Users mm Downloads image to image search capgen py line 55 in get caption feat self get image feature file File C Users mm Downloads image to image search capgen py line 38 in get image feature feats np transpose self visual model predict self convert img to vector img path File C Users mm AppData Roaming Python Python39 site packages tensorflow python keras engine training py line 1671 in predict version utils disallow legacy graph Model predict File C Users mm AppData Roaming Python Python39 site packages tensorflow python keras utils version utils py line 130 in disallow legacy graph raise ValueError error msg ValueError Calling Model predict in graph mode is not supported when the Model instance was constructed with eager mode enabled Please construct your Model instance in graph mode or call Model predict with eager mode enabled",
+    "created_at": "2021-06-23T02:38:25Z",
+    "closed_at": null,
+    "user": "momame",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "capgen error in /static/uploads/ when running the index database",
+    "state": "open",
+    "body": "static uploads python index database py Traceback most recent call last File index database py line 3 in module from capgen import CaptionGenerator ModuleNotFoundError No module named capgen",
+    "created_at": "2021-02-24T08:00:01Z",
+    "closed_at": null,
+    "user": "LinuxBeaver",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JH95-ai",
+        "created_at": "2021-09-03T02:10:00Z",
+        "body": "LinuxBeaver maybe this folder don t have this file check your path"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "TypeError: ('Keyword argument not understood:', 'input')",
+    "state": "open",
+    "body": "Traceback most recent call last File server py line 12 in module gencap CaptionGenerator File Users bira www python lab Image to Image Search bootstrap capgen py line 24 in init self visual model Model input model input output model layers 21 output File usr local lib python3 8 site packages tensorflow python training tracking base py line 457 in method wrapper result method self args kwargs File usr local lib python3 8 site packages tensorflow python keras engine training py line 261 in init generic utils validate kwargs kwargs trainable dtype dynamic File usr local lib python3 8 site packages tensorflow python keras utils generic utils py line 778 in validate kwargs raise TypeError error message kwarg TypeError Keyword argument not understood input",
+    "created_at": "2021-01-07T04:32:25Z",
+    "closed_at": null,
+    "user": "bthiban",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "ERROR: repository docker.io/image_search not found: does not exist or no pull access",
+    "state": "closed",
+    "body": "ERROR repository docker io image search not found does not exist or no pull access",
+    "created_at": "2021-01-06T06:56:37Z",
+    "closed_at": "2021-01-07T02:13:30Z",
+    "user": "ar414-com",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ar414-com",
+        "created_at": "2021-01-06T07:04:55Z",
+        "body": "solved modify docker compose yaml website image need to fill in manually after executing docker install sh check docker ps a REPOSITORY TAG bash docker images REPOSITORY TAG IMAGE ID CREATED SIZE image to image search version2 7a10bc3d08cb 12 minutes ago 1 54 GB website image image to image search version2 version 2 services elasticsearch image docker elastic co elasticsearch elasticsearch 6 6 0 container name elasticsearch ports 9200 9200 9300 9300 environment ES JAVA OPTS Xms256m Xmx256m network bind host 0 0 0 0 network host 0 0 0 0 discovery type single node website image image to image search version2 volumes keras root keras ports 5000 5000 depends on elasticsearch working dir image search command python3 server py"
+      },
+      {
+        "user": "ar414-com",
+        "created_at": "2021-01-06T10:05:23Z",
+        "body": "Maybe docker image has not been maintained bash website 1 GET http localhost 9200 desearch search status N A request 0 001s website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages urllib3 connection py line 159 in new conn website 1 self dns host self port self timeout extra kw website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 80 in create connection website 1 raise err website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 70 in create connection website 1 sock connect sa website 1 ConnectionRefusedError Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 172 in perform request website 1 response self pool urlopen method url body retries Retry False headers request headers kw website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 638 in urlopen website 1 stacktrace sys exc info 2 website 1 File usr local lib python3 5 dist packages urllib3 util retry py line 344 in increment website 1 raise six reraise type error error stacktrace website 1 File usr local lib python3 5 dist packages urllib3 packages six py line 686 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 600 in urlopen website 1 chunked chunked website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 354 in make request website 1 conn request method url httplib request kw website 1 File usr lib python3 5 http client py line 1151 in request website 1 self send request method url body headers website 1 File usr lib python3 5 http client py line 1196 in send request website 1 self endheaders body website 1 File usr lib python3 5 http client py line 1147 in endheaders website 1 self send output message body website 1 File usr lib python3 5 http client py line 950 in send output website 1 self send msg website 1 File usr lib python3 5 http client py line 893 in send website 1 self connect website 1 File usr local lib python3 5 dist packages urllib3 connection py line 181 in connect website 1 conn self new conn website 1 File usr local lib python3 5 dist packages urllib3 connection py line 168 in new conn website 1 self Failed to establish a new connection s e website 1 urllib3 exceptions NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abcc0 Failed to establish a new connection Errno 111 Connection refused website 1 GET http localhost 9200 desearch search status N A request 0 001s website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages urllib3 connection py line 159 in new conn website 1 self dns host self port self timeout extra kw website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 80 in create connection website 1 raise err website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 70 in create connection website 1 sock connect sa website 1 ConnectionRefusedError Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 172 in perform request website 1 response self pool urlopen method url body retries Retry False headers request headers kw website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 638 in urlopen website 1 stacktrace sys exc info 2 website 1 File usr local lib python3 5 dist packages urllib3 util retry py line 344 in increment website 1 raise six reraise type error error stacktrace website 1 File usr local lib python3 5 dist packages urllib3 packages six py line 686 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 600 in urlopen website 1 chunked chunked website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 354 in make request website 1 conn request method url httplib request kw website 1 File usr lib python3 5 http client py line 1151 in request website 1 self send request method url body headers website 1 File usr lib python3 5 http client py line 1196 in send request website 1 self endheaders body website 1 File usr lib python3 5 http client py line 1147 in endheaders website 1 self send output message body website 1 File usr lib python3 5 http client py line 950 in send output website 1 self send msg website 1 File usr lib python3 5 http client py line 893 in send website 1 self connect website 1 File usr local lib python3 5 dist packages urllib3 connection py line 181 in connect website 1 conn self new conn website 1 File usr local lib python3 5 dist packages urllib3 connection py line 168 in new conn website 1 self Failed to establish a new connection s e website 1 urllib3 exceptions NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abb38 Failed to establish a new connection Errno 111 Connection refused website 1 GET http localhost 9200 desearch search status N A request 0 001s website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages urllib3 connection py line 159 in new conn website 1 self dns host self port self timeout extra kw website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 80 in create connection website 1 raise err website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 70 in create connection website 1 sock connect sa website 1 ConnectionRefusedError Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 172 in perform request website 1 response self pool urlopen method url body retries Retry False headers request headers kw website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 638 in urlopen website 1 stacktrace sys exc info 2 website 1 File usr local lib python3 5 dist packages urllib3 util retry py line 344 in increment website 1 raise six reraise type error error stacktrace website 1 File usr local lib python3 5 dist packages urllib3 packages six py line 686 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 600 in urlopen website 1 chunked chunked website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 354 in make request website 1 conn request method url httplib request kw website 1 File usr lib python3 5 http client py line 1151 in request website 1 self send request method url body headers website 1 File usr lib python3 5 http client py line 1196 in send request website 1 self endheaders body website 1 File usr lib python3 5 http client py line 1147 in endheaders website 1 self send output message body website 1 File usr lib python3 5 http client py line 950 in send output website 1 self send msg website 1 File usr lib python3 5 http client py line 893 in send website 1 self connect website 1 File usr local lib python3 5 dist packages urllib3 connection py line 181 in connect website 1 conn self new conn website 1 File usr local lib python3 5 dist packages urllib3 connection py line 168 in new conn website 1 self Failed to establish a new connection s e website 1 urllib3 exceptions NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abdd8 Failed to establish a new connection Errno 111 Connection refused website 1 GET http localhost 9200 desearch search status N A request 0 001s website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages urllib3 connection py line 159 in new conn website 1 self dns host self port self timeout extra kw website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 80 in create connection website 1 raise err website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 70 in create connection website 1 sock connect sa website 1 ConnectionRefusedError Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 172 in perform request website 1 response self pool urlopen method url body retries Retry False headers request headers kw website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 638 in urlopen website 1 stacktrace sys exc info 2 website 1 File usr local lib python3 5 dist packages urllib3 util retry py line 344 in increment website 1 raise six reraise type error error stacktrace website 1 File usr local lib python3 5 dist packages urllib3 packages six py line 686 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 600 in urlopen website 1 chunked chunked website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 354 in make request website 1 conn request method url httplib request kw website 1 File usr lib python3 5 http client py line 1151 in request website 1 self send request method url body headers website 1 File usr lib python3 5 http client py line 1196 in send request website 1 self endheaders body website 1 File usr lib python3 5 http client py line 1147 in endheaders website 1 self send output message body website 1 File usr lib python3 5 http client py line 950 in send output website 1 self send msg website 1 File usr lib python3 5 http client py line 893 in send website 1 self connect website 1 File usr local lib python3 5 dist packages urllib3 connection py line 181 in connect website 1 conn self new conn website 1 File usr local lib python3 5 dist packages urllib3 connection py line 168 in new conn website 1 self Failed to establish a new connection s e website 1 urllib3 exceptions NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abeb8 Failed to establish a new connection Errno 111 Connection refused website 1 2021 01 06 10 07 07 697 ERROR in app Exception on search POST website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages urllib3 connection py line 159 in new conn website 1 self dns host self port self timeout extra kw website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 80 in create connection website 1 raise err website 1 File usr local lib python3 5 dist packages urllib3 util connection py line 70 in create connection website 1 sock connect sa website 1 ConnectionRefusedError Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 172 in perform request website 1 response self pool urlopen method url body retries Retry False headers request headers kw website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 638 in urlopen website 1 stacktrace sys exc info 2 website 1 File usr local lib python3 5 dist packages urllib3 util retry py line 344 in increment website 1 raise six reraise type error error stacktrace website 1 File usr local lib python3 5 dist packages urllib3 packages six py line 686 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 600 in urlopen website 1 chunked chunked website 1 File usr local lib python3 5 dist packages urllib3 connectionpool py line 354 in make request website 1 conn request method url httplib request kw website 1 File usr lib python3 5 http client py line 1151 in request website 1 self send request method url body headers website 1 File usr lib python3 5 http client py line 1196 in send request website 1 self endheaders body website 1 File usr lib python3 5 http client py line 1147 in endheaders website 1 self send output message body website 1 File usr lib python3 5 http client py line 950 in send output website 1 self send msg website 1 File usr lib python3 5 http client py line 893 in send website 1 self connect website 1 File usr local lib python3 5 dist packages urllib3 connection py line 181 in connect website 1 conn self new conn website 1 File usr local lib python3 5 dist packages urllib3 connection py line 168 in new conn website 1 self Failed to establish a new connection s e website 1 urllib3 exceptions NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abeb8 Failed to establish a new connection Errno 111 Connection refused website 1 website 1 During handling of the above exception another exception occurred website 1 website 1 Traceback most recent call last website 1 File usr local lib python3 5 dist packages flask app py line 2311 in wsgi app website 1 response self full dispatch request website 1 File usr local lib python3 5 dist packages flask app py line 1834 in full dispatch request website 1 rv self handle user exception e website 1 File usr local lib python3 5 dist packages flask app py line 1737 in handle user exception website 1 reraise exc type exc value tb website 1 File usr local lib python3 5 dist packages flask compat py line 36 in reraise website 1 raise value website 1 File usr local lib python3 5 dist packages flask app py line 1832 in full dispatch request website 1 rv self dispatch request website 1 File usr local lib python3 5 dist packages flask app py line 1818 in dispatch request website 1 return self view functions rule endpoint req view args website 1 File server py line 78 in search website 1 answers description search query website 1 File server py line 25 in description search website 1 match description query website 1 File usr local lib python3 5 dist packages elasticsearch client utils py line 76 in wrapped website 1 return func args params params kwargs website 1 File usr local lib python3 5 dist packages elasticsearch client init py line 660 in search website 1 doc type search params params body body website 1 File usr local lib python3 5 dist packages elasticsearch transport py line 318 in perform request website 1 status headers response data connection perform request method url params body headers headers ignore ignore timeout timeout website 1 File usr local lib python3 5 dist packages elasticsearch connection http urllib3 py line 181 in perform request website 1 raise ConnectionError N A str e e website 1 elasticsearch exceptions ConnectionError ConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abeb8 Failed to establish a new connection Errno 111 Connection r efused caused by NewConnectionError urllib3 connection HTTPConnection object at 0x7f56d81abeb8 Failed to establish a new connection Errno 111 Connection refused website 1 113 110 179 187 06 Jan 2021 10 07 07 POST search HTTP 1 1 500"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Bad Captions!",
+    "state": "open",
+    "body": "Is there any quick way to improve caption quality I tried many images and I think it needs improvements Can you cite any research article used or referred while making this",
+    "created_at": "2020-02-03T17:45:52Z",
+    "closed_at": null,
+    "user": "topShotZexN",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Unable to Search Images",
+    "state": "closed",
+    "body": "Whenever I am trying to search image following error occurs E0130 17 26 31 418057 123145353228288 app py 1780 Exception on search POST Traceback most recent call last File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask app py line 2311 in wsgi app response self full dispatch request File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask app py line 1834 in full dispatch request rv self handle user exception e File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask app py line 1737 in handle user exception reraise exc type exc value tb File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask compat py line 36 in reraise raise value File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask app py line 1832 in full dispatch request rv self dispatch request File Library Frameworks Python framework Versions 3 6 lib python3 6 site packages flask app py line 1818 in dispatch request return self view functions rule endpoint req view args File server py line 78 in search answers description search query File server py line 28 in description search hitCount results hits total value TypeError int object is not subscriptable I0130 17 26 31 419389 123145353228288 internal py 122 127 0 0 1 30 Jan 2020 17 26 31 POST search HTTP 1 1 500",
+    "created_at": "2020-01-30T11:59:34Z",
+    "closed_at": "2021-01-19T17:44:37Z",
+    "user": "vguleria1108",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2020-02-06T17:27:55Z",
+        "body": "Can you mention the version number of elastic search you are using if it s latest I ll upgrade the code to match the latest version"
+      },
+      {
+        "user": "ar414-com",
+        "created_at": "2021-01-17T11:32:38Z",
+        "body": "The same error message elasticsearch 6 6 0"
+      },
+      {
+        "user": "ar414-com",
+        "created_at": "2021-01-17T11:50:12Z",
+        "body": "edit server py it s working hitCount results hits total value hitCount results hits total"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Re-tranning model",
+    "state": "open",
+    "body": "I was wondering if I can re train flickr8k cnn lstm v1 p model",
+    "created_at": "2019-09-21T22:33:55Z",
+    "closed_at": null,
+    "user": "0vulns",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-09-22T14:15:43Z",
+        "body": "Yes that s definitely in my plans Make an interface where the user can submit an image and the caption and the model gets re trained accordingly That will increase the usability of this by miles The model retraining is totally possible"
+      },
+      {
+        "user": "Skyquek",
+        "created_at": "2020-02-11T05:56:09Z",
+        "body": "What is the method to retrain the model Where to get the training script"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "TypeError: '>' not supported between instances of 'dict' and 'int'",
+    "state": "closed",
+    "body": "I am facing an error in search builtins TypeError TypeError not supported between instances of dict and int TypeError not supported between instances of dict and int The debugger caught an exception in your WSGI application You can now look at the traceback which led to the error To switch between the interactive traceback and the plaintext one you can click on the Traceback headline From the text traceback you can also create a paste of it For code execution mouse over the frame you want to debug and click on the console icon on the right side You can execute arbitrary Python code in the stack frames and there are some extra helpers available for introspection dump shows all variables in the frame dump obj dumps all that s known about the object",
+    "created_at": "2019-07-07T18:22:06Z",
+    "closed_at": "2019-09-18T16:41:28Z",
+    "user": "AhtashamImtiyaz",
+    "comments_count": 1,
+    "labels": [
+      "bug",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-09-18T16:41:28Z",
+        "body": "This issue is resolved in the recent merge"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "parsing the dataset.json",
+    "state": "closed",
+    "body": "In server py or index py doc id i imgurl data images i filename description data images i sentences 0 raw this line is not executing after creating the dataset json when executed this file it is showing keyerror filename any help would be appreciated",
+    "created_at": "2019-04-20T06:13:22Z",
+    "closed_at": "2019-05-31T18:21:51Z",
+    "user": "Ashwin1234",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-05-31T18:21:26Z",
+        "body": "Kindly check the new release where the reliance of dataset json has been completely eliminated"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+    "state": "closed",
+    "body": "Sir i am very thankful to you you help me in resolving issue but sir still whole issue is not resolved while running custom index py i am getting following error please sir help me Traceback most recent call last File custom index py line 25 in data json load f File usr lib python3 6 json init py line 299 in load parse constant parse constant object pairs hook object pairs hook kw File usr lib python3 6 json init py line 354 in loads return default decoder decode s File usr lib python3 6 json decoder py line 339 in decode obj end self raw decode s idx w s 0 end File usr lib python3 6 json decoder py line 357 in raw decode raise JSONDecodeError Expecting value s err value from None json decoder JSONDecodeError Expecting value line 1 column 1 char 0",
+    "created_at": "2019-04-11T07:57:11Z",
+    "closed_at": "2019-05-31T18:21:43Z",
+    "user": "anshul12112",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-05-31T18:21:43Z",
+        "body": "Kindly check the new release where the reliance of dataset json has been completely eliminated"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index')",
+    "state": "closed",
+    "body": "F np row stack x image feat for x in batch GET http localhost 9200 desearch search status 404 request 0 118s 2019 04 11 00 45 39 134 ERROR in app Exception on POST Traceback most recent call last File home anshul local lib python3 6 site packages flask app py line 2292 in wsgi app response self full dispatch request File home anshul local lib python3 6 site packages flask app py line 1815 in full dispatch request rv self handle user exception e File home anshul local lib python3 6 site packages flask app py line 1718 in handle user exception reraise exc type exc value tb File home anshul local lib python3 6 site packages flask compat py line 35 in reraise raise value File home anshul local lib python3 6 site packages flask app py line 1813 in full dispatch request rv self dispatch request File home anshul local lib python3 6 site packages flask app py line 1799 in dispatch request return self view functions rule endpoint req view args File server py line 61 in index answers description search query File server py line 31 in description search match description query File home anshul local lib python3 6 site packages elasticsearch client utils py line 76 in wrapped return func args params params kwargs File home anshul local lib python3 6 site packages elasticsearch client init py line 660 in search doc type search params params body body File home anshul local lib python3 6 site packages elasticsearch transport py line 318 in perform request status headers response data connection perform request method url params body headers headers ignore ignore timeout timeout File home anshul local lib python3 6 site packages elasticsearch connection http urllib3 py line 186 in perform request self raise error response status raw data File home anshul local lib python3 6 site packages elasticsearch connection base py line 125 in raise error raise HTTP EXCEPTIONS get status code TransportError status code error message additional info elasticsearch exceptions NotFoundError NotFoundError 404 index not found exception no such index 127 0 0 1 11 Apr 2019 00 45 39 POST HTTP 1 1 500",
+    "created_at": "2019-04-10T19:22:43Z",
+    "closed_at": "2019-05-31T18:22:23Z",
+    "user": "anshul12112",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-05-31T18:22:23Z",
+        "body": "Start the elastic search service followed by python index database py as per the new release Kindly check the new release where the reliance of dataset json has been completely eliminated"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "After uploading a image i am getting following error",
+    "state": "closed",
+    "body": "F np row stack x image feat for x in batch GET http localhost 9200 desearch search status 404 request 0 118s 2019 04 11 00 45 39 134 ERROR in app Exception on POST Traceback most recent call last File home anshul local lib python3 6 site packages flask app py line 2292 in wsgi app response self full dispatch request File home anshul local lib python3 6 site packages flask app py line 1815 in full dispatch request rv self handle user exception e File home anshul local lib python3 6 site packages flask app py line 1718 in handle user exception reraise exc type exc value tb File home anshul local lib python3 6 site packages flask compat py line 35 in reraise raise value File home anshul local lib python3 6 site packages flask app py line 1813 in full dispatch request rv self dispatch request File home anshul local lib python3 6 site packages flask app py line 1799 in dispatch request return self view functions rule endpoint req view args File server py line 61 in index answers description search query File server py line 31 in description search match description query File home anshul local lib python3 6 site packages elasticsearch client utils py line 76 in wrapped return func args params params kwargs File home anshul local lib python3 6 site packages elasticsearch client init py line 660 in search doc type search params params body body File home anshul local lib python3 6 site packages elasticsearch transport py line 318 in perform request status headers response data connection perform request method url params body headers headers ignore ignore timeout timeout File home anshul local lib python3 6 site packages elasticsearch connection http urllib3 py line 186 in perform request self raise error response status raw data File home anshul local lib python3 6 site packages elasticsearch connection base py line 125 in raise error raise HTTP EXCEPTIONS get status code TransportError status code error message additional info elasticsearch exceptions NotFoundError NotFoundError 404 index not found exception no such index 127 0 0 1 11 Apr 2019 00 45 39 POST HTTP 1 1 500",
+    "created_at": "2019-04-10T13:02:04Z",
+    "closed_at": "2019-04-11T04:13:31Z",
+    "user": "anshul12112",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "anshul12112",
+        "created_at": "2019-04-10T13:16:29Z",
+        "body": "help me in resolving this issue"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-04-11T03:32:17Z",
+        "body": "Can you explain your issue in detail From what it looks like the index has not been properly set up in the elastic search service Did you run index py before launching server py Ideally these steps should have been followed 1 Launch Elastic search service in localhost 9200 2 Run index py which parses dataset json to index them in the elastic search service 3 Run server py to launch the webapp This https www youtube com watch v xNUL2IHl4tQ video covers the steps to execute before launching the webapp"
+      },
+      {
+        "user": "anshul12112",
+        "created_at": "2019-04-11T03:40:10Z",
+        "body": "sir Thank you so much for replying i really need your help while running index py i got following error anshul anshul superuser Image to Image search python3 6 index py Traceback most recent call last File index py line 8 in module data json load f File usr lib python3 6 json init py line 299 in load parse constant parse constant object pairs hook object pairs hook kw File usr lib python3 6 json init py line 354 in loads return default decoder decode s File usr lib python3 6 json decoder py line 339 in decode obj end self raw decode s idx w s 0 end File usr lib python3 6 json decoder py line 355 in raw decode obj end self scan once s idx json decoder JSONDecodeError Expecting property name enclosed in double quotes line 1 column 2 char 1 i am very grateful to you if you resolve this issue"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-04-11T03:44:25Z",
+        "body": "I am glad to be of a help It looks like dataset json custom dataset json is not properly encoded This is why the index wasn t properly set up and you were getting Error 404 in server py"
+      },
+      {
+        "user": "anshul12112",
+        "created_at": "2019-04-11T03:46:13Z",
+        "body": "I am glad to be of a help It looks like dataset json custom dataset json is not properly encoded This is why the index wasn t properly set up and you were getting Error 404 in server py i am new to elastic search i do not know exactly what to do sir can you tell me step by step procedure"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-04-11T03:55:11Z",
+        "body": "Elastic search is the search engine which we are using here Before we start searching we should have something to search That information is encoded in dataset json So your dataset json should contain the information about the image path and the corresponding description encoded in proper way Once the dataset json is properly encoded index py can help elastic search know the same information"
+      },
+      {
+        "user": "anshul12112",
+        "created_at": "2019-04-11T04:02:08Z",
+        "body": "Sir i already set up elastic search it is working on localhost 9200 you told that dataset json is not properly encoded so what to do with JSON file how this issue will resolve Screenshot from 2019 04 11 09 30 34 https user images githubusercontent com 44797619 55929916 950d9800 5c3c 11e9 8f7a af3198c220b8 png"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-04-11T04:13:31Z",
+        "body": "There is no problem with Elastic search service The problem is with the dataset json custom dataset json Run this code after substituting the part inside glob glob with the path to the folder where you have the images which you wish to search against python3 import json import glob image database glob glob static img your path here gets all the image path from the desired folder dataset list for image in image database image show print Enter the description description input img data img data imgurl image img data description description dataset list append img data dataset json dataset json images dataset list json dump dataset json open custom dataset json wb This will create an custom dataset json and then you can run custom index py Let me know if this step works Meanwhile I will work on making an webapp where one can upload bunch of images choose to have custom caption or automatic caption view the images present in the index etc in my free time That should make the whole dataset json not so important to run the application"
+      },
+      {
+        "user": "anshul12112",
+        "created_at": "2019-04-11T07:41:00Z",
+        "body": "Sir i am very thankful to you you help me in resolving issue but sir still whole issue is not resolved while running custom index py i am getting following error please sir help me Traceback most recent call last File custom index py line 25 in module data json load f File usr lib python3 6 json init py line 299 in load parse constant parse constant object pairs hook object pairs hook kw File usr lib python3 6 json init py line 354 in loads return default decoder decode s File usr lib python3 6 json decoder py line 339 in decode obj end self raw decode s idx w s 0 end File usr lib python3 6 json decoder py line 357 in raw decode raise JSONDecodeError Expecting value s err value from None json decoder JSONDecodeError Expecting value line 1 column 1 char 0"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Dataset.json",
+    "state": "closed",
+    "body": "Should i have to enter the description for all the images one by one in the loop as given in the code or is there any other method for creating this file",
+    "created_at": "2019-04-07T16:59:24Z",
+    "closed_at": "2019-05-31T18:22:44Z",
+    "user": "Ashwin1234",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-04-10T07:06:20Z",
+        "body": "In the case where you don t have the captions to the image you must enter them one by one in the loop as given in the code In case you have the caption then it must be transformed to this format python img data imgurl image img data description description dataset list append img data dataset json dataset json images dataset list so that custom index can parse this dictionary and uploads it to the elastic search service"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-05-31T18:22:44Z",
+        "body": "Kindly check the new release where the reliance of dataset json has been completely eliminated"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Problem with dataset.json",
+    "state": "closed",
+    "body": "Could you please tell me where should I take dataset json from What is this file I can t find out it nowhere",
+    "created_at": "2019-02-03T13:21:55Z",
+    "closed_at": "2019-03-30T14:47:19Z",
+    "user": "DaryaMarkova",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-02-04T13:38:31Z",
+        "body": "the dataset json is a part of Flickr 8K data which has the information about the images present in Flickr 8K dataset Here https github com sethuiyer Image to Image search blob master index py L9 I am loading the dataset json extracting the image paths and the corresponding description of the images If you are using Flickr 8K data as your database you can find the dataset json here https forms illinois edu sec 1713398 If you are using a custom database just make sure to change the lines 12 14 of index py with custom image path and their descriptions"
+      },
+      {
+        "user": "chinmaydas96",
+        "created_at": "2019-02-09T17:15:23Z",
+        "body": "Can you upload a link directly to dataset json or can tell how to create dataset json for custom dataset the given link for data with lable I Will very much appreciate it if you upload it Thanks"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-02-12T13:14:50Z",
+        "body": "I am not allowed to post the direct link to dataset json as it is against the licensing requirements of Flickr 8K dataset The dataset json of Flickr8k dataset basically has the information about labels Here https github com sethuiyer Image to Image search blob master index py L9 I am opening that file and extracting the image path and the caption and adding that to a list of dictionary called actions For custom data you have to add the custom image path and their descriptions in the actions as per the format described in the index py file I will soon add the code for custom indexing as well as code to train your own image captioner"
+      },
+      {
+        "user": "Ashwin1234",
+        "created_at": "2019-03-24T06:47:52Z",
+        "body": "Can you please tell me how to prepare the dataset json file as u have mentioned in the repository"
+      },
+      {
+        "user": "sethuiyer",
+        "created_at": "2019-03-30T14:47:19Z",
+        "body": "Hi everyone I have updated the code to work in Python 3 and added a sample dataset json in the place where it should be and also added a FAQ section which discusses about the dataset json Cheers"
+      },
+      {
+        "user": "Ashwin1234",
+        "created_at": "2019-04-08T13:02:55Z",
+        "body": "Should i have to enter the description for all the images one by one in the loop as given in the code or is there any other method for creating the dataset json file On Sat Mar 30 2019 at 8 17 PM Sethu Iyer notifications github com wrote Closed 1 https github com sethuiyer Image to Image search issues 1 You are receiving this because you commented Reply to this email directly view it on GitHub https github com sethuiyer Image to Image search issues 1 event 2241068486 or mute the thread https github com notifications unsubscribe auth AONydHTU1u79Y6D2eet9TB9hYv 76z02ks5vb3j4gaJpZM4agGrV"
+      }
+    ]
+  }
+]

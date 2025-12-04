@@ -1,0 +1,176 @@
+[
+  {
+    "number": 11,
+    "title": "Could you please provide the code for train and neuron selection ?",
+    "state": "open",
+    "body": "we are replicating you results but the trigger generation part always return high loss trigger pattern Could you please provide the code for train and neuron selection this is my implementation part of selecting neuron in torch if isinstance net getattr layer name torch nn modules Linear weight is n m connect level torch abs net getattr layer name weight sum 1 if is a matrix then all rows is summed elif isinstance net getattr layer name torch nn modules Conv2d weight is c out c in h w connect level torch abs net getattr layer name weight sum 1 2 3",
+    "created_at": "2022-02-25T14:31:36Z",
+    "closed_at": null,
+    "user": "CHR-ray",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ain-soph",
+        "created_at": "2022-03-03T17:55:25Z",
+        "body": "I think it s in this file https github com PurduePAML TrojanNN blob master code get neuron idx from weight py"
+      },
+      {
+        "user": "ain-soph",
+        "created_at": "2022-03-04T03:30:54Z",
+        "body": "Here s my understanding to fix your implementation Hope it s correct 1 you shall calculate the weight of the next layer rather than the selected layer 2 You are summing the wrong dimension For the next layer you shall sum over out channels or out features so that you get the tensor with same length as number of neurons from previous layer output"
+      },
+      {
+        "user": "JohnnyQAQ",
+        "created_at": "2022-04-02T12:46:23Z",
+        "body": "Here s my understanding to fix your implementation Hope it s correct 1 you shall calculate the weight of the preceding layer rather than the selected layer 2 You are summing the wrong dimension For the preceding layer you shall sum over out channels out features so that you get the tensor with same length as number of neurons from previous layer output Hello I would like to ask since it is to check the parameters of the previous layer But what is written in the code is To select neuron in fc6 we check the weight in layer fc7 shouldn t fc7 be the next layer of fc6"
+      },
+      {
+        "user": "ain-soph",
+        "created_at": "2022-04-02T17:21:08Z",
+        "body": "JohnnyQAQ Thanks for correcting my typo Not preceding layer but the next layer To select fc6 neurons we need to calculate fc7 weights"
+      },
+      {
+        "user": "JohnnyQAQ",
+        "created_at": "2022-04-03T02:13:21Z",
+        "body": "JohnnyQAQ Thanks for correcting my typo Not preceding layer but the next layer To select fc6 neurons we need to calculate fc7 weights Thank you very much for your answer What confuses me is that in the Internal Neuron Selection part in the TrojanNN paper is indeed using the preceding layer but I checked the code of TrojanNN and TrojanZoo and found that the implementation of this part both seems to search for the parameter W of the next layer I m wondering if there is something wrong with my understanding could you please explain this part Is there something wrong with my understanding of the preceding layer in the paper"
+      },
+      {
+        "user": "ain-soph",
+        "created_at": "2022-04-03T02:40:33Z",
+        "body": "JohnnyQAQ I m the author of TrojanZoo and its TrojanNN implementation is following the code of this repo I consulted the original author Yingqi Liu and I believe it is correct to use the next layer Although I also doubt whether this neuron activation story makes sense The actual running doesn t show a crazy activation gap like it is in paper Here is my personal explanation about neuron activation They want to select the neurons which are well connected to next layer and later optimize their trigger to maximize those activations Therefore it should measure the weights matrix of next layer and use mean sum to remove the out features dimension so that we get a vector whose length equals to number of neurons output dimension of previous layer"
+      },
+      {
+        "user": "JohnnyQAQ",
+        "created_at": "2022-04-03T03:06:35Z",
+        "body": "ain soph Thank you very much for your explanation"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Error: check #seqs and tree: perhaps too many '('?.",
+    "state": "open",
+    "body": "need help",
+    "created_at": "2021-07-21T06:24:58Z",
+    "closed_at": null,
+    "user": "zhouxiaofang122",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 9,
+    "title": "Request of Trojaned VGG models (wm_trojanNN, square_trojanNN) in another format or how to convert them",
+    "state": "open",
+    "body": "Hi Thank you for sharing the Face Recognition Trojaned models I work with Tensorflow or Keras so I am trying to transform them into one of those There is no Caffe Keras translation and the repositories for converting Caffe to Tensorflow are 4 years old Is it possible to share the VGG wm and square models in Tensorflow or Keras or how to acquire the corresponding Keras or Tensorflow models Thank you",
+    "created_at": "2021-06-01T17:36:12Z",
+    "closed_at": null,
+    "user": "pkiourti",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Bilabb",
+        "created_at": "2021-08-26T14:27:31Z",
+        "body": "Hi pkiourti I was just curious if you ever found any workaround with this I also Need to implement these in TF TIA"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "ground truth labels for VGGFace and Age",
+    "state": "open",
+    "body": "Thanks for the great work Is there a way to extract the ground truth labels for the training data images I am specifically interested in the VGGFace and Age recognition datasets",
+    "created_at": "2020-05-05T21:06:10Z",
+    "closed_at": null,
+    "user": "MohammadSamragh",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "Unable to generate square trigger using act_max.tvd.center_part.py",
+    "state": "closed",
+    "body": "Hi Great work Found this repository quite replicate able However I am unable to recreate the square trigger models face fc6 1 81 694 1 1 0081 jpg with act max tvd center part py Perhaps a clue is that I am getting a too small abs mean print out consistently through almost all iterations of creating trigger My setup settings py used by act max tvd center part py python caffe root path to caffe model path path to vgg face caffe VGG FACE caffemodel add force backward true in the prototxt file otherwise the caffe does not do backward computation and gradient is 0 model definition path to vgg face caffe VGG FACE deploy prototxt gpu False Calling with same parameters as the square trigger you provided models face fc6 1 81 694 1 1 0081 jpg bash python act max tvd center part py 81 triggerimage fc6 0 1 1 1 694 iter 633 unit 2230 13 83 obj 81 2 69 gradient 0 0 too small abs mean iter 634 unit 2230 13 83 obj 81 2 69 gradient 0 0 too small abs mean iter 635 unit 2230 13 83 obj 81 2 69 gradient 0 0 too small abs mean iter 636 unit 2230 13 83 obj 81 2 69 gradient 0 0 too small abs mean iter 637 unit 2230 13 83 obj 81 2 69 Outcome delme 0082 https user images githubusercontent com 51196813 75412627 0726c280 595e 11ea 872b 737ac608cfdf jpg Expected fc6 1 81 694 1 1 0081 https user images githubusercontent com 51196813 75412680 30475300 595e 11ea 992b 975dd5218408 jpg",
+    "created_at": "2020-02-27T04:07:36Z",
+    "closed_at": "2020-02-27T08:15:30Z",
+    "user": "davidlee321",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "davidlee321",
+        "created_at": "2020-02-27T08:15:30Z",
+        "body": "SOLVED add force backward true in the prototxt file"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "No such file or directory: 'trec_5500_trim.label'",
+    "state": "closed",
+    "body": "Hi I m trying out the attitude section and encountered this error Would be glad if you could assist bash python process data py GoogleNews vectors negative300 bin loading data Traceback most recent call last File process data py line 130 in module revs vocab build data cv data folder cv 10 clean string True File process data py line 15 in build data cv with open pos file rb as f IOError Errno 2 No such file or directory trec 5500 trim label",
+    "created_at": "2020-02-24T10:07:48Z",
+    "closed_at": "2020-02-24T10:29:00Z",
+    "user": "davidlee321",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "davidlee321",
+        "created_at": "2020-02-24T10:29:00Z",
+        "body": "SOLVED Run the process data py from https github com yoonkim CNN sentence not from this repository"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "reverse engineer training data",
+    "state": "open",
+    "body": "To reverse engineer training data you can set the layer to be fc8 in gen ad py and comment code to mask gradient in act max tvd center part py It does not work to reverse engineer training data Which code exactly should I comment to reverse engineer training data",
+    "created_at": "2019-06-06T21:59:12Z",
+    "closed_at": null,
+    "user": "dio4ev",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "Question about trigger generation",
+    "state": "open",
+    "body": "Hi This is a great work and thanks for sharing code In act max tvd center part py I think octaves hyperparams are used for denoise purpose But I don t quite understand it Could you please explain a little bit about it Do I need to change these params when layers or neurons changes Looking forward to your reply Thanks",
+    "created_at": "2019-05-02T02:53:49Z",
+    "closed_at": null,
+    "user": "Karen0103",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Karen0103",
+        "created_at": "2019-05-04T01:27:54Z",
+        "body": "Hi naiyeleo shiqingma Another question is about neuron selection The following code shows picking neuron that has the largest value of the sum of absolute weights connecting this neuron to the preceding layer But the result neuron for layer fc6 is 2163 not 81 as mentioned in the paper I am new to Caffe Is there anything wrong here Did I understand it correctly The original VGG model I used is http www robots ox ac uk vgg software vgg face as listed in README Screen Shot 2019 05 03 at 9 24 55 PM https user images githubusercontent com 16543224 57172139 201c2100 6dea 11e9 8e01 e1d6094e0b6d png Screen Shot 2019 05 03 at 9 24 45 PM https user images githubusercontent com 16543224 57172155 58bbfa80 6dea 11e9 8855 e52cddfb3724 png"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Image Reverse Gradient always 0",
+    "state": "closed",
+    "body": "Dear Author Thanks for sharing us your code I have tried your code on the Face Recognition DNN model However I cannot get the reversed image as the gradient is always 0 I have set the image reverse layer to fc8 and filter shape to 0 I also started at the average image Do you know what might be the possible cause Thanks",
+    "created_at": "2019-01-24T05:56:22Z",
+    "closed_at": "2019-01-24T20:57:14Z",
+    "user": "ChengFu0118",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "naiyeleo",
+        "created_at": "2019-01-24T20:55:32Z",
+        "body": "As talked about in http caffe berkeleyvision org tutorial interfaces html We need to add set force backward true in the network prototxt Otherwise caffe does not do the backward computation and the gradient is 0 Thanks"
+      }
+    ]
+  }
+]

@@ -1,0 +1,836 @@
+[
+  {
+    "number": 36,
+    "title": "ValueError: num_samples=0 when creating DataLoader during training",
+    "state": "open",
+    "body": "Issue Description I m encountering a ValueError when trying to train AttentionGAN The error occurs during dataset creation specifically when initializing the DataLoader Error Message Traceback most recent call last File opt data private AttentionGAN train py line 29 in module dataset create dataset opt create a dataset given opt dataset mode and other options File opt data private AttentionGAN data init py line 57 in create dataset data loader CustomDatasetDataLoader opt File opt data private AttentionGAN data init py line 75 in init self dataloader torch utils data DataLoader File opt data private anaconda3 envs py310 lib python3 10 site packages torch utils data dataloader py line 351 in init sampler RandomSampler dataset generator generator type ignore arg type File opt data private anaconda3 envs py310 lib python3 10 site packages torch utils data sampler py line 144 in init raise ValueError f num samples should be a positive integer value but got num samples self num samples ValueError num samples should be a positive integer value but got num samples 0 Environment Python version 3 10 PyTorch version 2 4 1 Operating System Ubuntu 20 04 Dataset Setup Training dataset structure follows the standard format dataset train Input Var train Output Var actin All folders contain images tif File permissions have been verified 755 Training Command bash python3 train py dataroot datasets cell datasets 3T3 10X train name 3T3 10X actin attentiongan model attention gan dataset mode unaligned pool size 50 no dropout norm instance lambda A 10 lambda B 10 lambda identity 0 5 load size 286 crop size 256 batch size 1 niter 300 niter decay 300 gpu ids 0 display id 0 display freq 100 print freq 100 What I ve Tried 1 Verified dataset structure and file existence 2 Checked and corrected file permissions using chmod R 755 3 Confirmed that all dataset folders contain image files 4 Verified that the dataset path is accessible and readable Additional Information The dataset appears to be properly structured and accessible but the DataLoader is reporting 0 samples This suggests that the dataset loading mechanism is not recognizing the files despite them being present and accessible Request Could you please provide guidance on 1 How to debug why the dataset length is 0 2 Are there specific file format requirements that might cause files to be ignored 3 Any additional dataset validation steps I should perform Thank you for your help",
+    "created_at": "2025-05-26T14:39:44Z",
+    "closed_at": null,
+    "user": "yichuan-huang",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 35,
+    "title": "Poor Performance in Facial Attribute Editing",
+    "state": "closed",
+    "body": "Thank you for your excellent work I trained the model using the code from AttentionGAN v1 multi on my own dataset However the results obtained during testing are poor with significant distortions appearing on the faces Additionally I noticed discrepancies between the code and the paper I m not quite sure where the attention mechanism is incorporated as it seems to bear little difference from the structure of StarGAN",
+    "created_at": "2024-03-26T03:43:34Z",
+    "closed_at": "2024-05-14T01:57:53Z",
+    "user": "yyyyoite",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 34,
+    "title": "Does this repo has the source code for the Scheme 2 in the paper?",
+    "state": "open",
+    "body": "",
+    "created_at": "2023-10-28T06:06:50Z",
+    "closed_at": null,
+    "user": "Kathir71",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 32,
+    "title": "cant download pretrained model under AttentionGAN-v1-multi/stargan_rafd",
+    "state": "open",
+    "body": "i am having trouble downloading the pretrained model that is trained on the rafd dataset It creates the checkpoint folder but does not download the model I tried to follow the link that was described in the file but access is forbidden Is there a way for me to get access or download this file thank you in advance",
+    "created_at": "2022-11-07T07:22:14Z",
+    "closed_at": null,
+    "user": "KayolanSenp",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 31,
+    "title": "Does SchemeⅡ performance better than SchemeⅠ in facial expression transfer? ",
+    "state": "open",
+    "body": "Does Scheme performance better than Scheme in facial expression transfer I see that you have shown the effect comparison between Scheme 1 and Scheme 2 in your paper In the figure it seems that Scheme will perform better in facial expression transfer But in the paper there is no quantitative analysis of facial expression between the two schemes Have you ever made some comparison I want to know more about whether Scheme can edit facial expressions better than Scheme Thanks a lot Ha0Tang image https user images githubusercontent com 85344642 199441209 d5912595 cc0c 420a b251 c2e85eeb041f png",
+    "created_at": "2022-11-02T08:48:23Z",
+    "closed_at": null,
+    "user": "laoliu97",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 30,
+    "title": "Attention_mask(calls My in paper) is not used as input of discriminator",
+    "state": "open",
+    "body": "Hello I m very interested in your work After reading the v1 paper and code I found that there is no attention mask My and composite images calls Gy in paper are put into D together but only the composite images Gy Gy Ry My x 1 My were put into D Have you deleted this part of the code The following figure is the relevant formula in the paper but it is not shows in the code image https user images githubusercontent com 85344642 199170237 4497d9c4 18d5 4eb5 8553 4a1529ccbbff png",
+    "created_at": "2022-11-01T06:12:46Z",
+    "closed_at": null,
+    "user": "laoliu97",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "laoliu97",
+        "created_at": "2022-11-01T06:14:59Z",
+        "body": "I found that the code only had D B and D A But there is no D YA and D YB in it"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Question: Code structure",
+    "state": "open",
+    "body": "Hi I have a question about the code structure I really like the structure of this code base i e the way options are handled the directory module structure etc I have seen this structure across multiple projects in different pytorch experiments now and simply wanted to learn if there is some sort of template or example code base you were using",
+    "created_at": "2022-01-28T20:53:00Z",
+    "closed_at": null,
+    "user": "gogobd",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 28,
+    "title": "attention loss",
+    "state": "open",
+    "body": "AGGAN attention loss attention loss",
+    "created_at": "2021-11-26T16:08:43Z",
+    "closed_at": null,
+    "user": "woaiwojia4816294",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 27,
+    "title": "Gradient Penalty not Used in WGANGP",
+    "state": "open",
+    "body": "I noticed the calculation of wgangp here https github com Ha0Tang AttentionGAN blob 68a478a944bb45d288d67f99fe110ddf087fd84d models networks py L274 did not use the gradient penalty https github com Ha0Tang AttentionGAN blob 68a478a944bb45d288d67f99fe110ddf087fd84d models networks py L282 Is it just a code stub",
+    "created_at": "2021-11-25T00:35:47Z",
+    "closed_at": null,
+    "user": "ghost",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 26,
+    "title": "About Reg Loss in AttentionGAN-v1",
+    "state": "open",
+    "body": "I just use AttentionGAN V1 combined with my GAN model and my reg loss decrease to about 0 165 and then stay still looking the attention mask variable I found that after iterations and epochs all voxels stay about 0 26 with not any attention i need can t detect any domain gap after training and then stop update each voxel s probability from 0 to 1 but the result did better for non attention situation could you guide me how to fix this or its really normal to this situation In my opinion I think though GAN maybe stable after epochs but attention from generator may still catch the difference between domains and highlight the main different part Ha0Tang please and Thanks alot best wishes",
+    "created_at": "2021-11-06T19:08:57Z",
+    "closed_at": null,
+    "user": "DISAPPEARED13",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "Training from A to B Resulting in B to A effects",
+    "state": "closed",
+    "body": "When I check the webpage in checkpoints directory the fake B is almost the same as real A while fake A has an effect of changing to real B style I m using my own dataset Is there any special requirement for the datasets for example only translating from simpler images to images with more patterns and details is okay",
+    "created_at": "2021-10-05T00:11:32Z",
+    "closed_at": "2021-10-11T17:42:09Z",
+    "user": "ghost",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ghost",
+        "created_at": "2021-10-05T10:09:47Z",
+        "body": "epoch 1 iters 100 time 0 721 data 0 781 D A 0 227 G A 0 420 cycle A 0 000 idt A 0 000 D B 0 111 G B 0 614 cycle B 0 000 idt B 0 000 cycle A idt A cycle B and idt B are all 0 from the beginning when I used learning rate 0 002 I checked the output when I ran with default learning rate 0 0002 these values decayed to 0 too but more slowly"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2021-10-11T17:41:45Z",
+        "body": "I m closing the issue After I reduced the lambda values of cycle and identity the training kept going well without decaying to 0 The result looks okay"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Visdom Webpage Shows Blank Blue Screen",
+    "state": "open",
+    "body": "I started the Visdom api on a cloud server and tried to access it by mapping its port to localhost When I open localhost 8097 it s just a blank blue screen I can unselect select environment main but nothing is different Other buttons in the page header doesn t produce any difference either The output on the backend INFO tornado access 200 GET static js layout bin packer js v bd0a340e63783f93e70652b477fea0efcb7550c7aa9ddae85e51a6e1a3ca94230cf7661f2fc067a612a3467662cd0ae4af99ef1134afe7768fe02ffa678f1e0a 127 0 0 1 0 65ms INFO tornado access 200 GET static js plotly plotly min js v ef030b67128316f45e2163d4cc17dc10ab2e3ab883504716915d9b347576fed4149a8663d9e2e9910385ee705bb70546f16ad2979ad337cedcaa74bb65e961cd 127 0 0 1 9 99ms INFO tornado access 200 GET static js mathjax MathJax js v b4e6afe70d4e8efb1227378f46db76b903c5c01a07b75559714abc97c9e6e76f382c4284f45489050af2ccc0731f16393f4cd174da847292c8455605360bb58f 127 0 0 1 0 78ms INFO tornado access 200 GET static fonts glyphicons halflings regular woff2 127 0 0 1 0 93ms INFO tornado access 101 GET socket 127 0 0 1 0 45ms INFO root Opened new socket from ip 127 0 0 1 INFO tornado access 200 POST env main 127 0 0 1 0 54ms INFO tornado access 200 POST env main 127 0 0 1 0 49ms INFO tornado access 200 GET favicon png 127 0 0 1 13 93ms INFO tornado access 200 GET extensions MathMenu js V 2 7 1 127 0 0 1 13 82ms INFO tornado access 200 GET extensions MathZoom js V 2 7 1 127 0 0 1 13 57ms INFO tornado access 200 POST env main 127 0 0 1 0 79ms INFO tornado access 200 POST env main 127 0 0 1 1 34ms INFO tornado access 101 GET socket 127 0 0 1 0 56ms INFO root Opened new socket from ip 127 0 0 1 INFO tornado access 200 POST env main 127 0 0 1 0 57ms",
+    "created_at": "2021-10-02T04:38:10Z",
+    "closed_at": null,
+    "user": "ghost",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "Checkpoints Missing After Successful Training",
+    "state": "closed",
+    "body": "I used the repo to work on horse2zebra dataset as a test However after finishing 60 epochs although the logs see below said multiple pt files were saved to chackpoints nothing is actually shown there saving the model at the end of epoch 60 iters 80160 End of epoch 60 60 Time Taken 444 sec I used exactly the same command line in scripts train attentiongan sh basically copied it to Colab I briefly checked the code and believe the checkpoints should have been saved to the default path because I didn t specify the flags just like in scripts train attentiongan sh Did anyone encountered the same problem",
+    "created_at": "2021-09-29T10:48:44Z",
+    "closed_at": "2021-10-04T21:47:44Z",
+    "user": "ghost",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-09-29T13:21:16Z",
+        "body": "please refer to this line https github com Ha0Tang AttentionGAN blob 68a478a944bb45d288d67f99fe110ddf087fd84d options train options py L24"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2021-10-04T21:47:44Z",
+        "body": "It was probably a problem of syncing in Colab I was able to find the checkpoints in its linux command line but not in the left tree veiw"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Using higher resolution input image",
+    "state": "open",
+    "body": "Hello I have just started taking a look at your paper and the repo but it seems like the input size of the image is limited to smaller image 256 x 256 like CycleGAN Would the model be able to take higher resolution e g 1080p as an input and still display similar performance If so what changes needs to be made",
+    "created_at": "2021-09-20T07:21:14Z",
+    "closed_at": null,
+    "user": "chophilip21",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "Fails to generate taget images for custom datasets",
+    "state": "open",
+    "body": "I trained with default parameters on a custom dataset When testing it fails to generate the target images",
+    "created_at": "2021-07-16T08:06:40Z",
+    "closed_at": null,
+    "user": "ManuBN786",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-08-11T20:26:18Z",
+        "body": "Can you provide more details"
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2022-07-04T07:16:55Z",
+        "body": "when I use facdes datasets to train the model I can get the translated images the translated images are same with the input images"
+      },
+      {
+        "user": "oopsboy",
+        "created_at": "2022-08-17T04:36:07Z",
+        "body": "I have also encountered this problem How did you solve it"
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2022-08-17T04:36:27Z",
+        "body": "I have received your email Thank you for your letter"
+      },
+      {
+        "user": "tantantetetao",
+        "created_at": "2024-03-12T18:53:02Z",
+        "body": "I have received your email Thank you for your letter Could you please tell me how to solve this Thanks"
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2024-03-12T18:53:35Z",
+        "body": "I have received your email Thank you for your letter"
+      },
+      {
+        "user": "BeyzanurZeybek",
+        "created_at": "2024-03-19T07:49:57Z",
+        "body": "I have received your email Thank you for your letter I m encountering with same problem too could you please tell me how to solve this"
+      },
+      {
+        "user": "sun11711",
+        "created_at": "2024-05-10T07:55:01Z",
+        "body": "when I use self made datasets to train the model I can get the translated images the translated images are same with the input images"
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2024-05-10T07:56:37Z",
+        "body": "I have received your email Thank you for your letter"
+      },
+      {
+        "user": "beniz",
+        "created_at": "2024-05-10T07:59:32Z",
+        "body": "when I use self made datasets to train the model I can get the translated images the translated images are same with the input images try https github com jolibrain joliGEN it has more advanced networks etc"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "when using the pre training selfie2anime model ，torch.Size is not matched",
+    "state": "open",
+    "body": "I encountered the following problems when using the selfie2anime pre training model RuntimeError Error s in loading state dict for ResnetGenerator our size mismatch for deconv3 content weight copying a param with shape torch Size 30 64 7 7 from checkpoint the shape in current model is torch Size 27 64 7 7 size mismatch for deconv3 content bias copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 Has anyone ever had this problem Thank you",
+    "created_at": "2021-07-04T07:17:10Z",
+    "closed_at": null,
+    "user": "Xccdd",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "CODE WILL NOT WORK FOR GRAYSCALE IMAGES ",
+    "state": "open",
+    "body": "CODE WILL NOT WORK FOR GRAYSCALE IMAGES BECAUSE THE HARD CODED PART OF RESENTGENERATOR NETWORK LINES 438 TO 517 in models network py assumes only RGB images and produce RGB outputs which will produce RuntimeError",
+    "created_at": "2021-04-23T01:00:58Z",
+    "closed_at": null,
+    "user": "aziabari",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lhan597549264",
+        "created_at": "2022-06-13T15:31:06Z",
+        "body": "buddy I got the same question"
+      },
+      {
+        "user": "dcarrion87",
+        "created_at": "2023-10-22T09:55:02Z",
+        "body": "Same issue here Trying to code around it at the moment"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "你好，我用你的模型，测试结果不如你",
+    "state": "open",
+    "body": "image https user images githubusercontent com 8411769 113105545 4b0c8b00 9234 11eb 98a2 f8cb9d35a003 png image https user images githubusercontent com 8411769 113105611 59f33d80 9234 11eb 85f5 d8b5a7970a1c png",
+    "created_at": "2021-03-31T07:18:49Z",
+    "closed_at": null,
+    "user": "ersanliqiao",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PeterTF656",
+        "created_at": "2021-04-07T04:44:40Z",
+        "body": ""
+      },
+      {
+        "user": "ersanliqiao",
+        "created_at": "2021-04-07T06:34:05Z",
+        "body": "T4"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-04-07T07:52:42Z",
+        "body": "can you share more details"
+      },
+      {
+        "user": "Xccdd",
+        "created_at": "2021-07-01T08:18:11Z",
+        "body": "Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2021-10-04T21:49:09Z",
+        "body": ""
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2022-07-12T11:43:31Z",
+        "body": "Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27"
+      },
+      {
+        "user": "laoliu97",
+        "created_at": "2022-11-01T05:58:25Z",
+        "body": "Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 attention mask D v1 v1 multi D 3 G hd201708010401 ersanliqiao DIMPLY Xccdd Ha0Tang"
+      },
+      {
+        "user": "hd201708010401",
+        "created_at": "2022-11-01T05:58:45Z",
+        "body": "I have received your email Thank you for your letter"
+      },
+      {
+        "user": "laoliu97",
+        "created_at": "2022-11-01T06:16:33Z",
+        "body": "Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 attention mask D v1 v1 multi D 3 G"
+      },
+      {
+        "user": "laoliu97",
+        "created_at": "2022-11-01T06:16:43Z",
+        "body": "Tensor copying a param with shape torch Size 30 from checkpoint the shape in current model is torch Size 27 attention mask D v1 v1 multi D 3 G"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Does the repo contain the implemention of Framework of the proposed attention-guided generation scheme I",
+    "state": "closed",
+    "body": "Does the repo contain the implemention of Framework of the proposed attention guided generation scheme I",
+    "created_at": "2021-03-26T05:02:17Z",
+    "closed_at": "2021-04-07T07:12:49Z",
+    "user": "ganyibo",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-04-07T07:12:45Z",
+        "body": "Yes"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-04-07T07:13:25Z",
+        "body": "https github com Ha0Tang AttentionGAN tree master AttentionGAN v1"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-04-07T07:14:02Z",
+        "body": "https github com Ha0Tang AttentionGAN tree master AttentionGAN v1 multi"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Attention loss not find",
+    "state": "open",
+    "body": "Hello I m very interested in your work I noticed that the attention loss and mask loss mentioned in your paper are not implemented in the code Is it because the addition of these two loss functions will lead to poor image effect",
+    "created_at": "2021-03-16T08:12:53Z",
+    "closed_at": null,
+    "user": "Nightfury12366",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "export pretrained weights to onnx",
+    "state": "closed",
+    "body": "can the pretrained weights be exported to onnx specifically selfie2anime",
+    "created_at": "2020-08-10T05:21:51Z",
+    "closed_at": "2020-08-12T22:01:39Z",
+    "user": "ghost",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-08-10T07:24:21Z",
+        "body": "I think it is possible but I have not tried it"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2020-08-10T14:50:33Z",
+        "body": "Ha0Tang do you have a script for that"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-08-10T14:53:51Z",
+        "body": "No you may need to search it online"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Permission to post a simplified version?",
+    "state": "closed",
+    "body": "I hope you are doing well since our last conversation I have been tinkering around with your work a little experimenting with different datasets I have also made a simplified version of your work in jupyter notebook and I wanted to know if I am allowed to post it over at my github and if so would you like any specific additions to the notebook other than the citation Thanks and regards",
+    "created_at": "2020-07-18T16:09:40Z",
+    "closed_at": "2020-07-19T14:41:39Z",
+    "user": "stqc",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-07-18T16:21:12Z",
+        "body": "Sure I am glad you are doing so You can post it on your GitHub as long as you add citations to my papers and repository"
+      },
+      {
+        "user": "stqc",
+        "created_at": "2020-07-18T16:25:41Z",
+        "body": "Thank you I will most likely post it tomorrow just logged off my computer could you if possible just go through it and suggest if any changes are to be made I am really new to deep learning as a whole"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-07-18T16:27:58Z",
+        "body": "No problem let me know On Sat Jul 18 2020 at 18 25 stqc notifications github com wrote Thank you I will most likely post it tomorrow just logged off my computer could you if possible just go through it and suggest if any changes are to be made I am really new to deep learning as a whole You are receiving this because you commented Reply to this email directly view it on GitHub https github com Ha0Tang AttentionGAN issues 13 issuecomment 660506481 or unsubscribe https github com notifications unsubscribe auth AFPVIRPLC5KZ6XSJMN3DY3LR4HEJDANCNFSM4PACOBCA Hao TANG University of Trento Italy http disi unitn it hao tang"
+      },
+      {
+        "user": "stqc",
+        "created_at": "2020-07-18T17:00:35Z",
+        "body": "Would it be alright I contacted via email or other source"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-07-19T14:41:28Z",
+        "body": "Yes sure"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Confusion about Attention Mask、Foreground Attention Mask、Background Attention Mask",
+    "state": "closed",
+    "body": "Hi HaoTang Thanks for you great work I have a puzzle about your paper In AttentionGAN Unpaired Image to Image Translation using Attention Guided Generative Adversarial Networks the attention mask mentioned in fig 23 corresponds to the foreground attention mask or background attention mask in Fig 3",
+    "created_at": "2020-06-20T05:55:34Z",
+    "closed_at": "2020-06-20T09:22:39Z",
+    "user": "chenwwayne",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-20T08:02:50Z",
+        "body": "Thank you for your interest in our work Those are background attention masks We observed that background attention mask are more visually obvious than foreground attention masks so in order to visualize the attention better we used the background attention mask But the sum of background and foreground attention masks is 1 so foreground attention masks can be obtained by 1 background attention mask Also note that we only generate one background attention mask while multiple foreground attention masks so there is no need to choose which foreground attention masks to display"
+      },
+      {
+        "user": "chenwwayne",
+        "created_at": "2020-06-20T09:19:08Z",
+        "body": "Thank you for your interest in our work Those are background attention masks We observed that background attention mask are more visually obvious than foreground attention masks so in order to visualize the attention better we used the background attention mask But the sum of background and foreground attention masks is 1 so foreground attention masks can be obtained by 1 background attention mask Also note that we only generate one background attention mask while multiple foreground attention masks so there is no need to choose which foreground attention masks to display Thank you very much Your answer perfectly solved my confusion"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Model loss discriminator loss drops to 0 ",
+    "state": "closed",
+    "body": "Firstly can I just say this that your paper is well written and really simple to understand Taking references from your code I recreated the implementation in a jupyter notebook but I have come to notice that no matter what dataset I try tried monet2photo iPhone2dslr selfie2anime and horse2zebra after a few epochs when it seems like the model is starting to generate desired results the discriminator loss drops to 0 all of a sudden and the image produced is from the same domain rather than the previously outputted I was using the default settings for every dataset if needed I ll upload the notebook too Thanks",
+    "created_at": "2020-06-16T20:30:04Z",
+    "closed_at": "2020-06-16T22:34:40Z",
+    "user": "stqc",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-16T20:49:52Z",
+        "body": "Thanks for your interest in our work How many epochs did you train to the discriminator loss to 0 Have you run our code successfully before Can you share the loss log and the generated images"
+      },
+      {
+        "user": "stqc",
+        "created_at": "2020-06-16T21:10:59Z",
+        "body": "Ha0Tang I unfortunately don t have the entire loss log but on the selfie2anime dataset it was after epoch 9 the loss dropped to 0 I have attached the output images thanks Screenshot from 2020 06 17 02 36 12 https user images githubusercontent com 42732801 84828297 7a566080 b043 11ea 8c52 8646c4fc3a7e png Output at epoch 9 0009 3400 progress A https user images githubusercontent com 42732801 84828379 98bc5c00 b043 11ea 8cba ede805c0767c png 0009 3400 progress B https user images githubusercontent com 42732801 84828384 99ed8900 b043 11ea 969b 1262d0f2c802 png output at epoch 10 0010 3400 progress A https user images githubusercontent com 42732801 84828446 b2f63a00 b043 11ea 9ca6 68fe63352552 png 0010 3400 progress B https user images githubusercontent com 42732801 84828449 b4276700 b043 11ea 889f 4573ea16bae6 png"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-16T21:19:06Z",
+        "body": "What loss pix A and loss pix B stand for"
+      },
+      {
+        "user": "stqc",
+        "created_at": "2020-06-16T21:30:03Z",
+        "body": "Ha0Tang GAN loss fake B mask B temp B netG A2B real A recovered A netG B2A fake B pred fake B netD B fake B loss cycle ABA criterion cycle recovered A real A loss GAN A2B criterion GAN pred fake B target real loss pix A criterion identity fake B real A fake A mask A temp A netG B2A real B recovered B netG A2B fake A pred fake A netD A fake A loss cycle BAB criterion cycle recovered B real B loss GAN B2A criterion GAN pred fake A target real loss pix B criterion identity fake A real B This was taken from the train py that was uploaded by you I have used the exact code just in a jupyter notebook"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-16T21:55:11Z",
+        "body": "I got it You are using the v1 code which can only handle face translation I strongly suggest you use the v2 code here https github com Ha0Tang AttentionGAN blob master models attention gan model py since it can handle all the tasks The corresponding paper is here https 128 84 21 199 abs 1911 11897"
+      },
+      {
+        "user": "stqc",
+        "created_at": "2020-06-16T22:13:49Z",
+        "body": "Ha0Tang thank you Can i use the same logic from train py I ll post an update tomorrow"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-16T22:17:17Z",
+        "body": "Yes you can"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-06-16T22:34:36Z",
+        "body": "I will close this issue if you have any further questions please open another one"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "pretrained model",
+    "state": "closed",
+    "body": "Thanks for your great work But I can not download your pretrained model could you please upload it to baidu cloud or Google cloud Or email it to me pytyeah 163 com Thanks a lot",
+    "created_at": "2020-05-27T03:01:56Z",
+    "closed_at": "2020-06-11T05:11:01Z",
+    "user": "pytyeah",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-05-27T08:42:13Z",
+        "body": "Have you tried this script https github com Ha0Tang AttentionGAN generating images using pretrained model I think it should work Please let me know if you have any further questions"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "where is attention guided discriminator in code?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-03-27T10:32:01Z",
+    "closed_at": "2021-02-09T15:04:37Z",
+    "user": "GANGREEK",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2021-02-09T15:04:34Z",
+        "body": "duplicate issues https github com Ha0Tang AttentionGAN issues 1 issuecomment 535037564"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Identical images generated by scheme I in Fig 5 of Extended paper",
+    "state": "open",
+    "body": "Hi I m not very clear that why the scheme I can only generate identical images on the horse to zebra translation task Is it because the same attention network from x to y and from y to x Or is it because the nework only produces one content mask Does scheme I only work in facial expression transfer task I m confused because cycle gan can work in all thess situations",
+    "created_at": "2020-03-26T04:38:48Z",
+    "closed_at": null,
+    "user": "SunYangtian",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "stillstream",
+        "created_at": "2020-09-21T01:39:29Z",
+        "body": "I have the same confusion Do you solve it SunYangtian"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Does the attention-guided discriminator take the attention masks as input?",
+    "state": "closed",
+    "body": "Does the attention guided discriminator take the attention masks as input as the paper mentioned neither NLayerDiscriminator or PixelDiscriminator do If so where is the corresponding code Thanks",
+    "created_at": "2019-12-30T11:50:56Z",
+    "closed_at": "2020-02-17T15:50:53Z",
+    "user": "JuiChang",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-30T22:09:47Z",
+        "body": "Thanks for reporting this to me I will investigate this issue and get back to you as soon as possible"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2020-02-16T22:35:02Z",
+        "body": "Attention guided discriminator only used in the generation scheme I where the input domain and the output domain have lots of similarities For the code of the generation scheme I please refer to here https github com Ha0Tang AttentionGAN tree master AttentionGAN v1 Moreover the updated paper https 128 84 21 199 abs 1911 11897 and the discussion https github com Ha0Tang AttentionGAN issues 1 will help too"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "training question",
+    "state": "closed",
+    "body": "Hi I try to use selfie2anime https drive google com file d 1xOWj1UVgp6NKMT3HbPhBbtq2A4EDkghF view usp sharing dataset but I can t get any progress like this now epoch is 46 images 2019 12 15 11 35 06 https user images githubusercontent com 1152893 70857366 2ea9e980 1f30 11ea 91a0 9ea25c136416 png How can I make the situation better thank you",
+    "created_at": "2019-12-15T02:51:12Z",
+    "closed_at": "2019-12-20T01:47:32Z",
+    "user": "kidach1",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-15T03:00:45Z",
+        "body": "Thanks for reporting this to me I will investigate this issue and get back to you as soon as possible On Sun Dec 15 2019 at 02 51 Daiki Taniguchi notifications github com wrote HI I try to use selfie2anime https drive google com file d 1xOWj1UVgp6NKMT3HbPhBbtq2A4EDkghF view usp sharing dataset but I can t get progress at all like this now epoch is 46 image images 2019 12 15 11 35 06 https user images githubusercontent com 1152893 70857366 2ea9e980 1f30 11ea 91a0 9ea25c136416 png How can I make the situation better thank you You are receiving this because you are subscribed to this thread Reply to this email directly view it on GitHub https github com Ha0Tang AttentionGAN issues 6 email source notifications email token AFPVIRPJABVNZX6RSDPCSFLQYWLSDA5CNFSM4J255PJKYY3PNVWWK3TUL52HS4DFUVEXG43VMWVGG33NNVSW45C7NFSM4IAREQEQ or unsubscribe https github com notifications unsubscribe auth AFPVIRPIMFS7GOCIRA753GLQYWLSDANCNFSM4J255PJA Hao TANG University of Trento Italy http disi unitn it hao tang"
+      },
+      {
+        "user": "kidach1",
+        "created_at": "2019-12-15T04:12:21Z",
+        "body": "It seems like the network becomes unable to generate attention mask properly a10 b a10 b images 2019 12 15 13 10 47 https user images githubusercontent com 1152893 70857988 543cf000 1f3c 11ea 8b4f 8540d8620d31 png fake B fake B images 2019 12 15 13 09 56 https user images githubusercontent com 1152893 70857982 37082180 1f3c 11ea 9c17 2a003feef8d3 png"
+      },
+      {
+        "user": "kidach1",
+        "created_at": "2019-12-15T04:36:42Z",
+        "body": "I forgot to give you training details I should probably note that the batch size value set to 1 for memory restriction py36 D workspace ML GAN AttentionGAN master python train py dataroot datasets selfie2anime name selfie2anime attentiongan model attention gan dataset mode unaligned pool size 50 no dropout norm instance lambda A 10 lambda B 10 lambda identity 0 5 load size 286 crop size 256 batch size 1 niter 60 niter decay 0 gpu ids 0 display id 0 display freq 100 print freq 100 Options batch size 1 beta1 0 5 checkpoints dir checkpoints continue train False crop size 256 dataroot datasets selfie2anime default None dataset mode unaligned direction AtoB display env main display freq 100 default 400 display id 0 default 1 display ncols 10 display port 8097 display server http localhost display winsize 256 epoch latest epoch count 1 gan mode lsgan gpu ids 0 init gain 0 02 init type normal input nc 3 isTrain True default None lambda A 10 0 lambda B 10 0 lambda identity 0 5 load iter 0 default 0 load size 286 lr 0 0002 lr decay iters 50 lr policy linear max dataset size inf model attention gan default cycle gan n layers D 3 name selfie2anime attentiongan default experiment name ndf 64 netD basic netG resnet 9blocks ngf 64 niter 60 default 100 niter decay 0 default 100 no dropout True no flip False no html False norm instance num threads 4 output nc 3 phase train pool size 50 preprocess resize and crop print freq 100 saveDisk False save by iter False save epoch freq 5 save latest freq 5000 serial batches False suffix update html freq 1000 verbose False End dataset UnalignedDataset was created The number of training images 3400 initialize network with normal initialize network with normal initialize network with normal initialize network with normal model AttentionGANModel was created Networks initialized Network G A Total number of parameters 11 823 M Network G B Total number of parameters 11 823 M Network D A Total number of parameters 2 765 M Network D B Total number of parameters 2 765 M"
+      },
+      {
+        "user": "kidach1",
+        "created_at": "2019-12-15T08:11:06Z",
+        "body": "Ha0Tang According to your paper I try to adjust tv loss but there is no implementation about it https github com Ha0Tang AttentionGAN blob master models attention gan model py L186 Why did you avoid to apply tv loss and pixel loss"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-20T01:47:29Z",
+        "body": "Everything including pretrained models results and train test instructions have been updated in this repo If you have further questions please re open the issue"
+      },
+      {
+        "user": "kidach1",
+        "created_at": "2019-12-23T07:32:23Z",
+        "body": "Ha0Tang Thank you for your correspondeces I have two questions 1 Your new code https github com Ha0Tang AttentionGAN blob master AttentionGAN geo networks py L512 seems to be ignoring background attention So this code can only use for all parts translation like style transfer isn t it 2 Why did you avoid to apply tv loss and pixel loss again"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-23T17:50:00Z",
+        "body": "1 I think it can be used in all image translation situations however it is more suitable for all parts translation like style transfer as you said 2 I found that the model can achieve good results without using tv and pixel losses"
+      },
+      {
+        "user": "kidach1",
+        "created_at": "2019-12-24T07:42:17Z",
+        "body": "thank you"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "How many epochs do you set up in your article?",
+    "state": "closed",
+    "body": "Thank you for sharing You have proposed an inspiring method on unpaired image translation there is a little question how many epochs do you set up in your article Cause I download your pre trained horse2zebra model which has trained 60 epochs but the results are not so well as your articles BTW maybe there is a spelling mistake in your markdown home page this is Ecaluation Code maybe indicate evaluation code Thx again",
+    "created_at": "2019-12-03T02:15:45Z",
+    "closed_at": "2019-12-04T21:35:54Z",
+    "user": "peachis",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Johnson-yue",
+        "created_at": "2019-12-03T09:11:20Z",
+        "body": "It default train configuration is 200 epoch but it too long for training so I dont retrain"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-03T09:17:14Z",
+        "body": "I find that our model is easy to converge so there is usually no need to train 200 epochs I will provide more training details this week"
+      },
+      {
+        "user": "peachis",
+        "created_at": "2019-12-03T12:50:46Z",
+        "body": "Waiting for your improvements"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-04T18:30:49Z",
+        "body": "Hi we observe that our model can converge around 60 epochs on most datasets so we adopt niter 60 niter decay 0 Moreover to speed up training we set batch size 4 however we observe that smaller batch size usually get better performance These training details and more results e g zebra2horse orange2apple and multi domain image translation are updated in this repo"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-04T21:35:49Z",
+        "body": "The pre trained models also have been updated Now I am closing this issue If you have any questions please open a new one"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "experimental on RaFD dataset like Fig. 8",
+    "state": "closed",
+    "body": "Hi thank you for your sharing you paper so clear and have many detail about experimental this is very important I want to reimplement Fig 8 preformance but in your code I do not find any conditional D or G Would you supply about Fig 8 code or some detailed architcuture Thank your",
+    "created_at": "2019-11-28T09:42:43Z",
+    "closed_at": "2019-12-03T05:37:43Z",
+    "user": "Johnson-yue",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-11-29T16:02:00Z",
+        "body": "For Fig 8 we adopt the framework of StarGAN the proposed AttentionGAN v1"
+      },
+      {
+        "user": "Johnson-yue",
+        "created_at": "2019-12-01T09:25:38Z",
+        "body": "This part code can be find in this repo"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-02T11:30:17Z",
+        "body": "Sorry the code is not released in this repo so far I will upload it later as you required"
+      },
+      {
+        "user": "Johnson-yue",
+        "created_at": "2019-12-03T05:37:43Z",
+        "body": "Thank you very much"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-12-04T16:53:59Z",
+        "body": "Johnson yue please refer to https github com Ha0Tang AttentionGAN tree master AttentionGAN v1 multi"
+      },
+      {
+        "user": "Johnson-yue",
+        "created_at": "2019-12-05T01:51:55Z",
+        "body": "Ha0Tang you are so Nice and very good about ReadMe thank you"
+      },
+      {
+        "user": "sparshgarg23",
+        "created_at": "2022-05-06T13:21:04Z",
+        "body": "Ha0Tang Thanks for releasing the code I was looking at the solver and model It s quite similar to the one in StarGAn Could you let me know in which script attention gan is being used"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "attention-guided discriminator",
+    "state": "closed",
+    "body": "did you use the attention guided discriminator you mentioned in your paper I can t find it in your code",
+    "created_at": "2019-11-05T04:36:56Z",
+    "closed_at": "2019-11-18T10:56:24Z",
+    "user": "zhang-lingyun",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-11-09T18:07:04Z",
+        "body": "Please refer to here https github com Ha0Tang AttentionGAN issues 1 issuecomment 535037564"
+      },
+      {
+        "user": "zhang-lingyun",
+        "created_at": "2019-11-18T09:40:03Z",
+        "body": "Thanks I get it Anthor question have you test your model to other datasets like the horese2zebra in cycleGAN I did that using your default setting and get very bad results Can you give me some suggestions Thank you in advance"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-11-18T10:56:03Z",
+        "body": "I tried in the extension journal paper The paper and its code will be available about this week please stay tuned with us Thanks"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Attention-Guided Adversarial Loss.",
+    "state": "closed",
+    "body": "you mention that We propose the attention guided adversarial loss for training the attentionguide discriminators But in the code seems that you didn t apply that",
+    "created_at": "2019-10-22T02:47:38Z",
+    "closed_at": "2019-10-23T11:12:38Z",
+    "user": "xuxiaochun025",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-10-22T15:24:21Z",
+        "body": "Hi please refer to this answer https github com Ha0Tang AttentionGAN issues 1 issuecomment 535037564"
+      },
+      {
+        "user": "xuxiaochun025",
+        "created_at": "2019-10-23T02:00:05Z",
+        "body": "Thank you"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "About the code",
+    "state": "closed",
+    "body": "Hi The dicriminator of AttentionGAN in your implementation is not the case in your paper There is no mask A or mask B as input to discriminator It is different from your paper where claimed where DY A aims to distinguish between the generated image pairs My GX Y x and the real image pairs My y Can you explain this",
+    "created_at": "2019-08-04T02:47:55Z",
+    "closed_at": "2019-09-25T14:44:23Z",
+    "user": "DLwbm123",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "yXiangXiong",
+        "created_at": "2019-09-21T12:00:23Z",
+        "body": "Hi The dicriminator of AttentionGAN in your implementation is not the case in your paper There is no mask A or mask B as input to discriminator It is different from your paper where claimed where DY A aims to distinguish between the generated image pairs My GX Y x and the real image pairs My y Can you explain this hi have you finished the code of the dicriminator I want to use My Gx y x and My y to be the input of disciminator is this wrong"
+      },
+      {
+        "user": "Ha0Tang",
+        "created_at": "2019-09-25T14:00:42Z",
+        "body": "DLwbm123 yXiangXiong Hi you can create another discriminator with the generated image and the learned attention mask as input"
+      },
+      {
+        "user": "yXiangXiong",
+        "created_at": "2019-09-25T14:33:09Z",
+        "body": "Hi thank you I will do some experiment about that"
+      }
+    ]
+  }
+]

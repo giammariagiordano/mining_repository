@@ -1,0 +1,133 @@
+[
+  {
+    "number": 6,
+    "title": "Can you provide the data to be prepared? I'm really hard to find.",
+    "state": "open",
+    "body": "Hi Great work thank you so much for sharing the code Can you provide the data in here https github com lvapeab ABiViRNet tree master data engine It s really hard for me to find the data As follows Images video video id num image jpg num image jpg Annotations test list txt train list txt val list txt captions id en Features test name feat csv train name feat csv val name feat csv I am a beginner looking forward to your reply Thank you very much for your help",
+    "created_at": "2019-10-22T13:54:07Z",
+    "closed_at": null,
+    "user": "q-rong",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 5,
+    "title": "Where from to download the data and generate features to be used in the code?",
+    "state": "open",
+    "body": "I have already downloaded the MSVD dataset from http www cs utexas edu users ml clamp videoDescription but its format is nowhere similar to the one to be inputted in the subsample features",
+    "created_at": "2018-11-28T17:03:05Z",
+    "closed_at": null,
+    "user": "Arka95",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "For Single video as an input",
+    "state": "closed",
+    "body": "hi After training how we have to give input as single video and generate output where we can store result",
+    "created_at": "2018-04-10T06:48:15Z",
+    "closed_at": "2019-05-14T14:43:11Z",
+    "user": "vinaysworld",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lvapeab",
+        "created_at": "2018-04-10T07:29:12Z",
+        "body": "Hi you should modify these lines https github com lvapeab ABiViRNet blob master config py L186 L189 in config py and run main py Then you ll sample and evaluate on the sets specified in the EVAL ON SETS parameter"
+      },
+      {
+        "user": "vinaysworld",
+        "created_at": "2018-04-10T16:02:23Z",
+        "body": "but what modification should done can you give me demo of any video"
+      },
+      {
+        "user": "lvapeab",
+        "created_at": "2019-05-14T14:43:11Z",
+        "body": "This is addressed with the caption py from interactive keras captioning https github com lvapeab interactive keras captioning decoding I m closing this"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "wish to make some changes: different output & no pre-determined images features",
+    "state": "closed",
+    "body": "Hey Great work thank you so much for sharing the code I have a huge dataset of videos with a grade between 0 to 1 for each video This main thing is that there aren t annotated features on the frames I wish to alter your code in a way that i can predict the grade of a given video i think that a single grade can be treated as two classes of good bad or something such as this what do you think can you focus me and aiming me on how to implement it using your code thanks a lot in advance",
+    "created_at": "2018-03-11T16:12:07Z",
+    "closed_at": "2019-09-18T16:21:02Z",
+    "user": "ron-weiner",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lvapeab",
+        "created_at": "2018-03-12T09:02:36Z",
+        "body": "Hi ron weiner thanks for your interest in the project You definitely can use it for your problem Instead a sequence predictor you need a binary classifier Therefore you can remove the decoder RNN and substitute it by a classifier e g Dense layers We have some projects that use this approach Please take a look at sentence selectioNN https github com lvapeab sentence selectioNN This project classifies text into in domain or out of domain as yours a binary classification problem It computes a representation of the text using RNNs or CNNs and applies Dense layers afterwards VIBIKNet https github com MarcBS VIBIKNet This tackles the visual question answering problem It encodes an image and a question merges them and predicts the answer as a classification problem Cheers PS Those repositories may contain deprecated code w r t the current version of Keras but I think you can take the main flavour of the changes required for your problem"
+      },
+      {
+        "user": "ron-weiner",
+        "created_at": "2018-03-13T13:20:26Z",
+        "body": "Thanks for the quick reply I want to rewrite it for python 3 it will we more handy for the future Can you focus me on what i should dismiss if i don t want to use any features on the frames Do you think that this project is the up to date in that field do you have know additional projects in that level which might be good to start with Thank you Cheers"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "running error about main.py",
+    "state": "closed",
+    "body": "Dear Author It occurred a problem KeyError references in code gts extra vars split references in file evaluation py when I ran main py After a long time for training the programme stooped here I would like to know why this problem occurred and how can I fix it On the other hand how could I skip training stage directly run evaluation stage Because every time I modify the code I need to run main py and waiting for training although the training is correct I am new to this area and looking forward to your apply Thank you",
+    "created_at": "2017-12-12T09:56:00Z",
+    "closed_at": "2018-02-27T13:04:10Z",
+    "user": "Airotong",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lvapeab",
+        "created_at": "2018-02-27T13:04:10Z",
+        "body": "Solved by e mail There was a minor problem in the captions id en file I m closing this"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "About generate_descriptions_lists.py",
+    "state": "closed",
+    "body": "Dear Author Because I don t know the exactly format of the caption id en used in the generate description lists py script I can only speculate about the outputs format of train descriptions txt and train descriptions counts npy Here is the speculative results train description txt each row is all the descritption of a video like a dog is running a dog is walking a dog in the ground a cat is eating a cat is drinking train descriptions counts npy each row is the description number of a video like 3 2 Is the speculative results right Could you please upload some description example of files used in your code such as caption id en train list txt train descriptions txt train descriptions counts npy and so on Looking forward for your reply Thank you",
+    "created_at": "2017-10-09T08:11:18Z",
+    "closed_at": "2017-12-12T10:23:16Z",
+    "user": "Hsiao-hsu-Li",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lvapeab",
+        "created_at": "2017-10-09T09:05:19Z",
+        "body": "Hello caption id en contains the captions from each video with the following format video id number of caption caption The is an arbitrary separator that can be changed in generate descriptions lists py I provide an insight of my file mv89psg6zh4 33 46 0 A bird in a sink keeps getting under the running water from a faucet mv89psg6zh4 33 46 1 A bird is bathing in a sink mv89psg6zh4 33 46 2 A bird is splashing around under a running faucet mv89psg6zh4 33 46 3 A bird is bathing in a sink mv89psg6zh4 33 46 28 A bird is drinking out of the sink ZbzDGXEwtGc 6 15 0 a plane flying in the sky ZbzDGXEwtGc 6 15 1 A commercial plane flying ZbzDGXEwtGc 6 15 2 A jet is flying The list txt files contain each a list of the video id belonging to each split The default splits of the MSVD task contain 1200 100 and 670 samples for the train val and test splits respectively Therefore the list txt files should have these numbers of lines each Each line relating to a video id E g 4wsuPCjDBc 5 15 DRy7rBg0IQ 31 37 0lh UWF9ZP4 79 82 Vn0Xv0fb1z4 18 30 train descriptions counts npy contains what you said I take your suggestion and I ll try to upload some sample files in a few days Cheers"
+      },
+      {
+        "user": "Hsiao-hsu-Li",
+        "created_at": "2017-10-09T09:25:30Z",
+        "body": "Thank you for your reply I have another question about the subsample frames features py In line 52 to 57 in this script Get chosen frames for p in pick pos of write feats p oc write str count pick n if count pick n frames per video subsample print different count videos print num count pick This means every time we write a frame feat of a video to file we will write the total number of the video to the file once Should line 54 57 be outdented so that only after we write all frame feats of a video to file we will write the total number of the video to the count file"
+      },
+      {
+        "user": "lvapeab",
+        "created_at": "2017-10-10T07:56:17Z",
+        "body": "Hello This is the format required by generate features lists py https github com lvapeab ABiViRNet blob master data engine generate features lists py This script generates the features in the final format required by the system and makes what you said Cheers"
+      },
+      {
+        "user": "Hsiao-hsu-Li",
+        "created_at": "2017-10-10T09:51:23Z",
+        "body": "In generate features lists py https github com lvapeab ABiViRNet blob master data engine generate features lists py only after a video was processed entirely the total frame number of a video will be stored in train feat counts txt But in subsample frames features py https github com lvapeab ABiViRNet blob master data engine subsample frames features py each time we write a feat of one frame of a video the total frame number of a video will be stored in the out features counts text Therefore I want to know whether in the feature csv file each row is a feature vector of one frame of a video"
+      },
+      {
+        "user": "lvapeab",
+        "created_at": "2017-10-10T10:24:09Z",
+        "body": "The subsample frames features py can be seen as a preprocessing stage for alleviating some computational overhead of the following steps Therefore both scripts recieve a csv file with each row representing one frame of a video The subsample frames features py will convert a csv file with features from every frame from each video to another csv with a fixed number of frames per video For instance I show you my data from the MSVD training set It contains 1 200 videos I extracted features with ImageNet for each frame Therefore I have a large csv with one feature per frame bash wc l train ImageNet features csv 317881 train ImageNet features csv If we subsample the features to 26 frames per video subsample frames features py will output a csv with 31 200 rows each of them also representinga frame of each video 26 1 200 31 200 bash wc l train ImageNet csv 31200 train ImageNet csv Both csvs can be processed by the generate features lists py but to do it with the one with all frames is excessively costly In a nutshell the preprocessing pipeline is full frames features csv subsample frames features py subsampled frames features csv generate features lists py"
+      }
+    ]
+  }
+]

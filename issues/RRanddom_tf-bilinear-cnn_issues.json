@@ -1,0 +1,38 @@
+[
+  {
+    "number": 3,
+    "title": "Can I get the standford_cars model?",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-08-22T08:09:11Z",
+    "closed_at": null,
+    "user": "monoloxo",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Issues compiling code",
+    "state": "open",
+    "body": "When Building the Dataset what do you mean by Change the dataset path in data aircraft data py I m not sure and at the moment I m getting the error ModuleNotFoundError No module named data from line 10 when attempting to run aircraft data py Also what do I do with the downloaded VGG model",
+    "created_at": "2019-04-02T19:23:58Z",
+    "closed_at": null,
+    "user": "zizi96",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "No module named “easydict”",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-09-19T08:38:16Z",
+    "closed_at": "2018-09-20T07:47:01Z",
+    "user": "emiha",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

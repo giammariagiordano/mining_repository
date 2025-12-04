@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "title": "Fail to get morphed generated image at the end",
+    "state": "open",
+    "body": "I have installed packages from the jupyter notebook and I have converted notebook into python file ran through from my local machine The downloaded dataset from https www kaggle com greg115 celebrities 100k url into my machine but I used only 1000 images to trained and generated photos Does this face generator support to trained only 100K images from the dataset Or What needs to do run this face generator to get the final samples of training I got the blank sample image after the 5 epoch iteration Kindly refer to the output generated file is attached samples 5 https user images githubusercontent com 34787470 76729709 cdd4bc00 677f 11ea 8200 90316ca2a5ec png samples 5 4 https user images githubusercontent com 34787470 76729715 d0371600 677f 11ea 9cbb 9059abe54e53 png samples 5 3 https user images githubusercontent com 34787470 76729716 d0cfac80 677f 11ea 9abd 010a5616e35f png samples 5 2 https user images githubusercontent com 34787470 76729718 d0cfac80 677f 11ea 8ca8 9deef333d125 png samples 5 1 https user images githubusercontent com 34787470 76729722 d1684300 677f 11ea 87f7 0f72cd37c1d0 png samples 5 0 https user images githubusercontent com 34787470 76729723 d200d980 677f 11ea 875d 4c1e2554b903 png losses 5 https user images githubusercontent com 34787470 76729726 d2997000 677f 11ea 903a c1174abf497f png gsurma",
+    "created_at": "2020-03-16T07:14:17Z",
+    "closed_at": null,
+    "user": "veilupt",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "number": 2,
+    "title": "Understanding fcn.py",
+    "state": "open",
+    "body": "Thanks for creating the repo Can you please explain lines 60 64 of fcn py score pool4 score pool4 5 5 score2 size 2 5 5 score2 size 3 score16 self score16 score2 score pool4 x score16 27 27 x size 2 27 27 x size 3",
+    "created_at": "2021-07-26T22:12:06Z",
+    "closed_at": null,
+    "user": "mailvijayasingh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "linbo0518",
+        "created_at": "2021-07-27T05:41:47Z",
+        "body": "It means crop The feature map of score pool4 is larger than score2 s out Here is the architecture of FCN https ethereon github io netscope preset fcn 8s pascal The crop pool4 is doing the same things I hope it helps you"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "How to train/test this project on a specific dataset?",
+    "state": "open",
+    "body": "Many thanks for your sharing of this project However I didn t find any scripts related to training or testing So could you notify how to train or test on a dataset with your existing codes Many thanks",
+    "created_at": "2021-06-02T13:55:31Z",
+    "closed_at": null,
+    "user": "AlpacaLLaMa643",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "linbo0518",
+        "created_at": "2021-06-05T02:29:55Z",
+        "body": "You can train the BLSeg model just as the PyTorch model train zip https github com linbo0518 BLSeg files 6601909 train zip I can share with you some scripts for training and testing"
+      },
+      {
+        "user": "AlpacaLLaMa643",
+        "created_at": "2021-06-05T10:15:13Z",
+        "body": "Many thanks for your sharing I will try"
+      }
+    ]
+  }
+]

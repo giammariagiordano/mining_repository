@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "title": "A very, very strange result on MobileNet",
+    "state": "open",
+    "body": "I have recently used your code to evaluate mobilenet My results show that GPU s performance is not as good as CPU s Here are my environments mxnet 1 7 0 Ununtu 20 1 CUDA 10 2 Nvidia GTX 1070 Ti Here my CPU results start mobilenet1 0 speed benchmark mxnet 0 time 5 468854904174805 mxnet 1 time 5 232152938842773 mxnet 2 time 5 269920825958252 mxnet 3 time 5 603036880493164 mxnet 4 time 5 499334335327148 mxnet 5 time 5 205817222595215 mxnet 6 time 5 577330589294434 mxnet 7 time 5 659034252166748 mxnet 8 time 5 7265305519104 mxnet 9 time 6 112978458404541 mxnet mobilenet1 0 5 205774307250977 5 535458087921143 6 112930774688721 Here my GPU results start mobilenet1 0 speed benchmark mxnet 0 time 40 76141119003296 mxnet 1 time 40 58210611343384 mxnet 2 time 41 749138832092285 mxnet 3 time 40 48752307891846 mxnet 4 time 40 23917198181152 mxnet 5 time 40 33033847808838 mxnet 6 time 40 38513660430908 mxnet 7 time 40 24947166442871 mxnet 8 time 40 08643388748169 mxnet 9 time 39 98572111129761 mxnet mobilenet1 0 39 98570203781128 40 48562288284302 41 74911975860596",
+    "created_at": "2021-11-09T09:27:08Z",
+    "closed_at": null,
+    "user": "ZinuoCai",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

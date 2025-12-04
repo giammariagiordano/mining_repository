@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "title": "Create proper shuffle operation while reading multiple files",
+    "state": "open",
+    "body": "We need to support shuffle while reading data batches from multiple files For that data generator should consume list of files and be able to read chunks from all of them randomly",
+    "created_at": "2018-11-09T12:32:49Z",
+    "closed_at": null,
+    "user": "vkuznet",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

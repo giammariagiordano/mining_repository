@@ -1,0 +1,829 @@
+[
+  {
+    "number": 53,
+    "title": "安装最新的0.5以上的版本，均安装失败；",
+    "state": "open",
+    "body": "Requirement already satisfied numpy in home miniconda3 envs app lib python3 12 site packages from xmnlp 0 5 3 1 26 4 INFO pip is looking at multiple versions of xmnlp to determine which version is compatible with other requirements This could take a while DEPRECATION Loading egg at home miniconda3 envs app lib python3 12 site packages dlib 19 24 99 py3 12 linux x86 64 egg is deprecated pip 25 1 will enforce this behaviour change A possible replacement is to use pip for package installation Discussion can be found at https github com pypa pip issues 12330 ERROR Could not find a version that satisfies the requirement onnxruntime 1 9 0 from xmnlp from versions 1 17 0 1 17 1 1 17 3 1 18 0 1 18 1 1 19 0 1 19 2 1 20 0 1 20 1 ERROR No matching distribution found for onnxruntime 1 9 0",
+    "created_at": "2024-11-28T08:05:13Z",
+    "closed_at": null,
+    "user": "xuelikanmeihua",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 52,
+    "title": "运行出错【FileNotFoundError】",
+    "state": "open",
+    "body": "FileNotFoundError Errno 2 No such file or directory D cnn bilstm xmnlp onnx models v5 xmnlp models lexical trans npy",
+    "created_at": "2023-10-12T13:30:04Z",
+    "closed_at": null,
+    "user": "wwwwjj000227",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2023-10-13T07:59:45Z",
+        "body": "wwwwjj000227"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "title": "中文分词支持粗分和细分吗",
+    "state": "open",
+    "body": "",
+    "created_at": "2023-04-13T13:56:35Z",
+    "closed_at": null,
+    "user": "Spider4U",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 50,
+    "title": "文本纠错AssertionError",
+    "state": "open",
+    "body": "checker py 50 assert len mask id 1 AssertionError",
+    "created_at": "2023-01-06T04:16:12Z",
+    "closed_at": null,
+    "user": "wannian1997",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "wannian1997",
+        "created_at": "2023-01-06T04:21:45Z",
+        "body": "assert len mask id 1 8 0 8247228860855103 0 08479063957929611 0 006882567889988422 0 0036284865345805883 0 0036059825215488672"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2023-01-06T05:45:23Z",
+        "body": ""
+      },
+      {
+        "user": "wannian1997",
+        "created_at": "2023-01-06T10:14:26Z",
+        "body": "import xmnlp modelPath r E deepLearning xmnlp onnx models xmnlp set model modelPath text print xmnlp checker text Lazy load checker Traceback most recent call last File E deepLearning Bert Chinese Text Classification Pytorch toolTest py line 6 in module print xmnlp checker text File D Programs Anaconda envs py36 lib site packages xmnlp checker init py line 40 in spellcheck load checker File D Programs Anaconda envs py36 lib site packages xmnlp checker init py line 29 in load checker os path join config MODEL DIR checker File D Programs Anaconda envs py36 lib site packages xmnlp checker checker py line 50 in init assert len mask id 1 AssertionError 1"
+      },
+      {
+        "user": "jiluojiluo",
+        "created_at": "2023-05-26T16:31:32Z",
+        "body": "import xmnlp text File stdin line 1 text IndentationError unexpected indent text print xmnlp checker text Lazy Load Loading model start to build dictionary done Traceback most recent call last File stdin line 1 in module File C Users l00660157 Anaconda3 envs labelme Lib site packages xmnlp init py line 135 in checker return checker check text level level File C Users l00660157 Anaconda3 envs labelme Lib site packages xmnlp checker init py line 48 in check return model best match doc File C Users l00660157 Anaconda3 envs labelme Lib site packages xmnlp checker checker py line 110 in best match return self word checker word 0 TypeError NoneType object is not subscriptable"
+      },
+      {
+        "user": "jiluojiluo",
+        "created_at": "2023-05-26T16:32:03Z",
+        "body": "TypeError NoneType object is not subscriptable"
+      }
+    ]
+  },
+  {
+    "number": 49,
+    "title": "请问方便提供一下tensorflow版本的模型文件（模型结构+权重）吗（pb or h5）",
+    "state": "closed",
+    "body": "",
+    "created_at": "2022-12-13T09:43:13Z",
+    "closed_at": "2022-12-15T07:37:41Z",
+    "user": "Lishjie",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 48,
+    "title": "大佬，模型训练代码会有可能开源吗？",
+    "state": "open",
+    "body": "",
+    "created_at": "2022-12-07T09:43:13Z",
+    "closed_at": null,
+    "user": "SenLeeLee",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 47,
+    "title": "安装不成功报错是为啥啊",
+    "state": "open",
+    "body": "ERROR Could not find a version that satisfies the requirement scikit learn from xmnlp from versions none ERROR No matching distribution found for scikit learn",
+    "created_at": "2022-11-14T12:29:23Z",
+    "closed_at": null,
+    "user": "Gillian1998457",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-11-15T03:08:49Z",
+        "body": "python 1 pip python m pip install U pip 2 scikit learn python m pip install U scikit learn python m pip install U sklearn 3 xmnlp python m pip install xmnlp"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "田哥到此一游",
+    "state": "closed",
+    "body": "",
+    "created_at": "2022-09-02T03:15:29Z",
+    "closed_at": "2022-09-02T03:15:57Z",
+    "user": "Rogerszzz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 43,
+    "title": "关于部首提取",
+    "state": "closed",
+    "body": "",
+    "created_at": "2022-05-19T02:27:07Z",
+    "closed_at": "2022-05-21T10:03:15Z",
+    "user": "lujiayou123",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-05-19T02:42:18Z",
+        "body": "lujiayou123"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "0.5.1版本使用keyword报错。",
+    "state": "closed",
+    "body": "module xmnlp has no attribute tag parallel",
+    "created_at": "2022-05-16T07:00:24Z",
+    "closed_at": "2022-05-21T10:03:56Z",
+    "user": "SunYongchao",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-05-21T10:03:55Z",
+        "body": "SunYongchao bug 0 5 2 PR https github com SeanLee97 xmnlp pull 44"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "AttributeError: module 'xmnlp' has no attribute 'set_model'",
+    "state": "closed",
+    "body": "xmnlp set model path to xmnlp models AttributeError module xmnlp has no attribute set model",
+    "created_at": "2022-04-17T13:17:38Z",
+    "closed_at": "2022-04-23T12:07:51Z",
+    "user": "xyz-hcy",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-04-18T01:47:12Z",
+        "body": "hi xyz hcy xmnlp Python 3 7 3 default Oct 31 2020 00 05 10 Clang 12 0 0 clang 1200 0 32 21 on darwin Type help copyright credits or license for more information import xmnlp xmnlp version 0 5 1 xmnlp set model Users seanlee Workspace xmnlp xmnlp xmnlp onnx models"
+      },
+      {
+        "user": "xyz-hcy",
+        "created_at": "2022-04-18T06:31:21Z",
+        "body": "Python 3 7 4 default Aug 13 2019 20 35 49 GCC 7 3 0 Anaconda Inc on linux Type help copyright credits or license for more information import xmnlp dir xmnlp builtins cached doc file loader name package spec np xmnlp"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-04-18T07:34:51Z",
+        "body": "xmnlp"
+      },
+      {
+        "user": "xyz-hcy",
+        "created_at": "2022-04-18T08:27:53Z",
+        "body": "Linux python dir xmnlp wenet root ubuntu 522 python Python 3 6 15 packaged by conda forge default Dec 3 2021 18 49 41 GCC 9 4 0 on linux Type help copyright credits or license for more information import xmnlp dir xmnlp List Optional Tokenization Tuple author builtins cached doc file loader name package path spec version checker pinyin radical sentiment base model checker config deep seg deep tag fast seg fast tag fast tokenizer keyphrase keyword lexical load stopword module ner pinyin radical seg sentiment set model set stopword summary tag tokenizer utils exit python wenet root ubuntu 522 python xmnlp py builtins cached doc file loader name package spec np xmnlp"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-04-19T00:56:48Z",
+        "body": "xyz hcy xmnlp py xmnlp demo py import import"
+      },
+      {
+        "user": "xyz-hcy",
+        "created_at": "2022-04-20T11:51:34Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "请问xmnlp-onnx-models-v5.zip   v0.5.1 百度网盘提取码有误吗，不能提取",
+    "state": "closed",
+    "body": "",
+    "created_at": "2022-03-30T05:55:28Z",
+    "closed_at": "2022-05-21T10:04:51Z",
+    "user": "yida88",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-03-30T11:46:00Z",
+        "body": "yida88 hello l9id"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-05-21T10:04:51Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "Original error was: PyCapsule_Import could not import module \"datetime\"",
+    "state": "closed",
+    "body": "win7 UserWarning Unsupported Windows version 7 ONNX Runtime supports Windows 10 and above only warnings warn Unsupported Windows version s ONNX Runtime supports Windows 10 and above only Lazy load checker win10 init py 22 module from import multiarray multiarray py 12 module from import overrides overrides py 7 module from numpy core multiarray umath import ImportError PyCapsule Import could not import module datetime xmnlp py 1 module import xmnlp init py 15 module from xmnlp import config init py 6 module from xmnlp utils import load stopword init py 12 module import numpy as np init py 140 module from import core init py 48 module raise ImportError msg ImportError IMPORTANT PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE Importing the numpy C extensions failed This error can happen for many reasons often due to issues with your setup or how NumPy was installed We have compiled some common reasons and troubleshooting tips at https numpy org devdocs user troubleshooting importerror html Please note and check the following The Python version is Python3 7 from D LLD python3 python exe The NumPy version is 1 19 5 and make sure that they are the versions you expect Please carefully study the documentation linked above for further help Original error was PyCapsule Import could not import module datetime",
+    "created_at": "2022-01-15T10:20:51Z",
+    "closed_at": "2022-05-21T10:07:02Z",
+    "user": "atpwolf",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-05-21T10:07:02Z",
+        "body": "onnxruntime xmnlp onnxruntime windows work onnxruntime windows"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "有没有开源模型训练代码的打算？",
+    "state": "open",
+    "body": "RT",
+    "created_at": "2021-12-02T07:58:46Z",
+    "closed_at": null,
+    "user": "lonycc",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 31,
+    "title": "新版本在linux上使用报错",
+    "state": "closed",
+    "body": "Traceback most recent call last File normal keywords py line 49 in module keywords list xmnlp seg text File home ubuser anaconda3 envs gpu lib python3 8 site packages xmnlp lexical init py line 53 in seg load lexical File home ubuser anaconda3 envs gpu lib python3 8 site packages xmnlp lexical init py line 46 in load lexical lexical LexicalDecoder File home ubuser anaconda3 envs gpu lib python3 8 site packages xmnlp lexical lexical model py line 45 in init self lexical model LexicalModel os path join model dir lexical onnx File home ubuser anaconda3 envs gpu lib python3 8 site packages xmnlp base model py line 11 in init self sess ort InferenceSession model path providers CPUExecutionProvider File home ubuser anaconda3 envs gpu lib python3 8 site packages onnxruntime capi session py line 158 in init self load model providers or File home ubuser anaconda3 envs gpu lib python3 8 site packages onnxruntime capi session py line 177 in load model self sess load model providers onnxruntime capi onnxruntime pybind11 state InvalidGraph ONNXRuntimeError 10 INVALID GRAPH This is an invalid model Error in Node Embedding Token NotEqual No Op registered for Equal with domain version of 13",
+    "created_at": "2021-11-15T06:29:31Z",
+    "closed_at": "2021-11-24T03:24:42Z",
+    "user": "ZXTFINAL",
+    "comments_count": 3,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-11-15T13:39:24Z",
+        "body": "linux mac python38 gpu"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-11-16T06:44:04Z",
+        "body": "hi linux onnxruntime bash pip list grep onnxruntime onnxruntime 1 9 0"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-11-24T03:24:42Z",
+        "body": "reopen"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "代码勘误",
+    "state": "closed",
+    "body": "base model py onnxruntime coding utf 8 from abc import ABCMeta abstractmethod import onnxruntime as ort class BaseModel metaclass ABCMeta def init self model path str self sess ort InferenceSession model path providors CPUExecutionProvider abstractmethod def predict self raise NotImplementedError providers providors",
+    "created_at": "2021-11-15T06:18:40Z",
+    "closed_at": "2021-11-15T13:33:19Z",
+    "user": "ZXTFINAL",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-11-15T13:33:09Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "checker用的什么模型？",
+    "state": "closed",
+    "body": "",
+    "created_at": "2021-08-02T03:36:29Z",
+    "closed_at": "2021-08-04T02:20:31Z",
+    "user": "bitallin",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-08-02T14:16:10Z",
+        "body": "1 1 2 2 MASK MASK Stay tuned"
+      },
+      {
+        "user": "bitallin",
+        "created_at": "2021-08-03T06:35:35Z",
+        "body": "1 1 2 2 MASK MASK Stay tuned 1 NLP 2 MASK MLM"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "xmnlp.seg(text)效果不是很好",
+    "state": "closed",
+    "body": "text 7 1 12 B xmnlp seg text 7 1 12 B",
+    "created_at": "2021-07-01T10:45:01Z",
+    "closed_at": "2022-02-20T10:27:04Z",
+    "user": "onexuan",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-07-01T11:03:54Z",
+        "body": ""
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2022-02-20T10:27:04Z",
+        "body": "onexuan xmnlp v0 5 0 xmnlp seg text xmnlp fast seg text xmnlp deep seg text In 6 doc 7 1 12 B In 7 print xmnlp seg doc Lazy load lexical 7 1 12 B In 8 print xmnlp fast seg doc 7 1 12 B In 9 print xmnlp deep seg doc 7 1 12 B In 12 timeit xmnlp fast seg doc 385 s 2 36 s per loop mean std dev of 7 runs 1000 loops each In 13 timeit xmnlp seg doc 19 5 ms 435 s per loop mean std dev of 7 runs 10 loops each In 14 timeit xmnlp deep seg doc 20 2 ms 2 28 ms per loop mean std dev of 7 runs 10 loops each https github com SeanLee97 xmnlp usage userdict"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "开发文档",
+    "state": "open",
+    "body": "",
+    "created_at": "2021-06-02T10:07:48Z",
+    "closed_at": null,
+    "user": "cxyazy",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-06-02T11:12:51Z",
+        "body": ""
+      },
+      {
+        "user": "cxyazy",
+        "created_at": "2021-06-02T11:14:18Z",
+        "body": "nbsp nbsp SeanLee97 xmnlp gt nbsp 2021 6 2 7 13 gt gt nbsp Re SeanLee97 xmnlp 26 You are receiving this because you authored the thread Reply to this email directly view it on GitHub or unsubscribe"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "错词纠错 模型怎样训练",
+    "state": "open",
+    "body": "",
+    "created_at": "2021-05-20T10:04:04Z",
+    "closed_at": null,
+    "user": "prozyworld",
+    "comments_count": 3,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-05-21T01:21:10Z",
+        "body": "notebook stay tuned"
+      },
+      {
+        "user": "linduchina",
+        "created_at": "2021-08-05T08:23:56Z",
+        "body": "notebook prozyworld"
+      },
+      {
+        "user": "laiqirong",
+        "created_at": "2021-11-01T09:16:40Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "请问拼音和汉字，是以什么形式引入神经网络模型的呢？",
+    "state": "closed",
+    "body": "guo2",
+    "created_at": "2020-06-30T09:20:55Z",
+    "closed_at": "2020-07-01T06:14:11Z",
+    "user": "dongrixinyu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2020-07-01T06:14:08Z",
+        "body": "embedding"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "python 3.7 NameError: name 'unicode' is not defined",
+    "state": "closed",
+    "body": "This line https github com SeanLee97 xmnlp blob master xmnlp checker init py L44 causes NameError in python3 7",
+    "created_at": "2019-10-10T07:16:02Z",
+    "closed_at": "2019-11-23T02:52:46Z",
+    "user": "SeanLee97",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2019-11-23T02:52:46Z",
+        "body": "fixed in v0 2 3"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "请问怎么引用呢？",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-09-25T02:52:59Z",
+    "closed_at": "2019-09-25T05:28:01Z",
+    "user": "bright1993ff66",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2019-09-25T03:27:56Z",
+        "body": "misc xmnlp title A Lightweight Chinese Natural Language Processing Toolkit author Xianming Li year 2019 publisher GitHub howpublished url https github com SeanLee97 xmnlp"
+      },
+      {
+        "user": "bright1993ff66",
+        "created_at": "2019-09-25T05:25:29Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "关于特殊名词",
+    "state": "closed",
+    "body": "02 04 5G",
+    "created_at": "2019-04-28T06:29:22Z",
+    "closed_at": "2021-02-20T05:41:23Z",
+    "user": "dwbaron",
+    "comments_count": 5,
+    "labels": [
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2019-04-28T06:54:11Z",
+        "body": "Thanks for your suggestions we will fix the problem that can not detect proper noun formed by digital and English alphabet"
+      },
+      {
+        "user": "dwbaron",
+        "created_at": "2019-04-28T09:52:03Z",
+        "body": "I tried to combined trie which perform the exactly match and hmm seg to fix such problem temporarily"
+      },
+      {
+        "user": "dwbaron",
+        "created_at": "2019-04-28T09:56:19Z",
+        "body": "it seems that u first use zh char to split the sentence use eng char seems better"
+      },
+      {
+        "user": "dwbaron",
+        "created_at": "2019-05-05T12:12:08Z",
+        "body": "image https user images githubusercontent com 23231223 57193800 e544f500 6f71 11e9 9016 296d33cc73d1 png I try to figure out this en char problems follow my above solution"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2019-05-05T14:00:12Z",
+        "body": "Thanks for your suggestions I will fix the problem when I free If you are willing to give contributions to this repo you can create a PR Look forward to your contributions"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "如果userdict不給予詞頻？會否像jieba一樣，無法在segmentation中產生對應的字？",
+    "state": "closed",
+    "body": "userdict txt seg textrank jieba pos jieba e g v verb ns place",
+    "created_at": "2019-02-07T06:49:57Z",
+    "closed_at": "2021-02-20T05:42:48Z",
+    "user": "marcusau",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "拼音效果差了点",
+    "state": "closed",
+    "body": "Uploading Screenshot from 2018 10 24 11 17 13 png",
+    "created_at": "2018-10-24T03:17:51Z",
+    "closed_at": "2018-10-24T03:18:20Z",
+    "user": "yuppx",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "java版的包哪里可以下载到？",
+    "state": "closed",
+    "body": "java 1 4 xmnlp maven",
+    "created_at": "2018-10-18T08:05:01Z",
+    "closed_at": "2018-10-18T11:20:40Z",
+    "user": "LBJ-Software",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-10-18T08:11:01Z",
+        "body": "LBJ Software github repo java repo xmnlp java"
+      },
+      {
+        "user": "LBJ-Software",
+        "created_at": "2018-10-18T11:21:43Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "0.1.8版本纠错效果",
+    "state": "closed",
+    "body": "0 1 8 0 1 7 0 1 7 609381308 qq com",
+    "created_at": "2018-10-18T00:13:09Z",
+    "closed_at": "2021-02-20T05:42:23Z",
+    "user": "sololex",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2021-02-20T05:42:23Z",
+        "body": "v0 3 0"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "训练拼音应该文件应该是什么格式的",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-09-04T06:08:52Z",
+    "closed_at": "2018-09-04T06:26:40Z",
+    "user": "gdtydm",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gdtydm",
+        "created_at": "2018-09-04T06:26:30Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "关于checker.py的一个疑问",
+    "state": "closed",
+    "body": "def calc proba self gram x self bi tuple gram y self uni gram 0 return float x 1 y len self uni keys 2 smoothing y len self uni keys 2 y len self uni keys",
+    "created_at": "2018-07-29T12:55:11Z",
+    "closed_at": "2018-09-17T08:37:35Z",
+    "user": "Danielshara",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:37:27Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases 0 1 7 checker 0 1 8 checker symspell"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "训练的纠错模型不生效",
+    "state": "closed",
+    "body": "examples corpus checker txt models checker pickle 3 xmnlp checker checker pickle 3 examples checker py error correct",
+    "created_at": "2018-07-27T03:15:52Z",
+    "closed_at": "2018-09-17T08:38:35Z",
+    "user": "zero654655902",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "zero654655902",
+        "created_at": "2018-07-27T06:14:55Z",
+        "body": "threhold corpus checker txt checker pickle"
+      },
+      {
+        "user": "rexchoi1983",
+        "created_at": "2018-08-27T08:19:50Z",
+        "body": "corpus checker 199801 txt checker txt 2014 1998"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:38:21Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases 0 1 7 checker 0 1 8 checker symspell"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "分词及userdict的格式",
+    "state": "closed",
+    "body": "j examples userdict 5 nw 5 nw 5",
+    "created_at": "2018-07-21T10:02:26Z",
+    "closed_at": "2018-09-17T08:38:54Z",
+    "user": "liutianfang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-07-21T13:40:38Z",
+        "body": "liutianfang"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "python3 userdict.txt 加载错误",
+    "state": "closed",
+    "body": "win10 python3 6 examples UnicodeDecodeError gbk codec can t decode byte 0xaa in position 35 illegal multibyte sequence dag py line 159 with open fname r encoding utf 8 as f",
+    "created_at": "2018-07-21T09:57:35Z",
+    "closed_at": "2018-09-17T08:41:48Z",
+    "user": "liutianfang",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-07-21T13:41:29Z",
+        "body": "liutianfang windows windows"
+      },
+      {
+        "user": "Sniper970119",
+        "created_at": "2018-08-04T14:38:16Z",
+        "body": "mode encoding"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:41:45Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases tag v0 1 8 windows"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "文本纠错",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-07-19T02:30:18Z",
+    "closed_at": "2018-09-17T08:42:43Z",
+    "user": "cloudfool",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-07-21T08:30:42Z",
+        "body": ""
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:42:40Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases tag v0 1 8 0 1 7 checker 0 1 8 checker symspell"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "纠错字典表",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-06-05T02:58:26Z",
+    "closed_at": "2018-09-17T08:43:11Z",
+    "user": "Garrybest",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-06-05T11:04:24Z",
+        "body": ""
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:43:09Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases tag v0 1 8 0 1 7 checker 0 1 8 checker symspell"
+      },
+      {
+        "user": "MrRace",
+        "created_at": "2019-03-04T06:20:20Z",
+        "body": "userdict txt"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "情感分析",
+    "state": "closed",
+    "body": "QQ",
+    "created_at": "2018-04-18T07:01:56Z",
+    "closed_at": "2018-09-17T08:44:09Z",
+    "user": "carrotshub",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-04-18T12:50:43Z",
+        "body": "1 2 probability 1 probability nbayes py https github com SeanLee97 xmnlp blob master xmnlp utils clf nbayes py L94 3"
+      },
+      {
+        "user": "carrotshub",
+        "created_at": "2018-04-19T02:32:16Z",
+        "body": "NB TF IDF"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:44:07Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases tag v0 1 8 0 1 7 checker 0 1 8 checker symspell"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "缩短纠错时间",
+    "state": "closed",
+    "body": "200ms",
+    "created_at": "2018-04-17T03:42:32Z",
+    "closed_at": "2018-09-17T08:44:30Z",
+    "user": "1394125422",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-04-17T11:33:56Z",
+        "body": "pr"
+      },
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-09-17T08:44:27Z",
+        "body": "0 1 8 https github com SeanLee97 xmnlp releases tag v0 1 8 0 1 7 checker 0 1 8 checker symspell"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "网盘分享的训练语料已失效",
+    "state": "closed",
+    "body": "bi gram",
+    "created_at": "2018-04-03T03:12:17Z",
+    "closed_at": "2018-04-03T14:00:16Z",
+    "user": "yaleimeng",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "SeanLee97",
+        "created_at": "2018-04-03T11:09:51Z",
+        "body": "1 https pan baidu com s 1UtkaKfNn R47569VAIeL A 2 bi gram"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "python2 模型加载慢问题",
+    "state": "closed",
+    "body": "python2 7 cPickle python3 python3",
+    "created_at": "2018-02-14T01:59:26Z",
+    "closed_at": "2018-04-04T11:58:01Z",
+    "user": "SeanLee97",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

@@ -1,0 +1,692 @@
+[
+  {
+    "number": 117,
+    "title": "Holoclean error on one dataset",
+    "state": "open",
+    "body": "Hello everyone I am getting this error when running Holoclean on a dataset below is a copy of the console log What is the error and how to fix it please 03 34 40 DEBUG Starting to execute query SELECT t1 tid FROM eudract as t1 WHERE EXISTS SELECT t2 tid FROM eudract as t2 WHERE t1 eudract number t2 eudract number AND t1 double blind t2 double blind with id 18 03 34 40 DEBUG Time to execute query with id 18 0 00 secs 03 34 40 DEBUG Time to execute 19 queries 0 04 secs 03 34 40 DEBUG DONE with Error Detector ViolationDetector in 0 05 secs Traceback most recent call last File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core frame py line 3424 in ensure valid index value Series value File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core series py line 264 in init data SingleBlockManager data index fastpath True File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core internals managers py line 1481 in init block make block block placement slice 0 len axis ndim 1 File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core internals blocks py line 3095 in make block return klass values ndim ndim placement placement File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core internals blocks py line 2631 in init placement placement File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core internals blocks py line 87 in init mgr format val len self values mgr len self mgr locs ValueError Wrong number of items passed 2 placement implies 0 During handling of the above exception another exception occurred Traceback most recent call last File eudract py line 37 in module hc detect errors detectors File home dalig Documents BPC HoloClean holoclean holoclean py line 308 in detect errors status detect time self detect engine detect errors detect list File home dalig Documents BPC HoloClean holoclean detect detect py line 36 in detect errors errors df cid errors df apply lambda x self ds get cell id x tid x attribute axis 1 File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core frame py line 3370 in setitem self set item key value File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core frame py line 3444 in set item self ensure valid index value File home dalig Documents BPC HoloClean holoclean hc36 lib python3 7 site packages pandas core frame py line 3426 in ensure valid index raise ValueError Cannot set a frame with no defined index ValueError Cannot set a frame with no defined index and a value that cannot be converted to a Series",
+    "created_at": "2024-06-22T01:43:48Z",
+    "closed_at": null,
+    "user": "DaliGaoudi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 113,
+    "title": "Datasets and Constraint files",
+    "state": "open",
+    "body": "Hello Would it be possible to obtain the Physicians and Foods datasets mentioned in the paper as well as the denial constraints used for these datasets and the flight dataset Thank you Niki",
+    "created_at": "2023-05-15T18:16:29Z",
+    "closed_at": null,
+    "user": "nikimonjazeb",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 112,
+    "title": "Boolean value TypeError in start_example.sh script",
+    "state": "open",
+    "body": "After setting up a docker container and conda virtual environment 3 6 with the packages as versioned in requirements txt I ve been attempting to run the start example sh script though am running into the attached error when the script tries to execute this query SELECT t1 tid FROM hospital as t1 WHERE t1 Sex female AND t1 Relationship husband Changing versions did also not resolve the issue but executing the query directly against the postgres backend in the docker container did not result in an error Any insights on the issue or how to resolve img width 1036 alt image src https user images githubusercontent com 37985050 218603955 5d2d643c 4e70 4a40 ac6f 2cfdbb8d12b9 png",
+    "created_at": "2023-02-14T00:15:09Z",
+    "closed_at": null,
+    "user": "pgasawa",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 108,
+    "title": "Compatibility",
+    "state": "open",
+    "body": "It s not compatible with windows will you do a compatibility",
+    "created_at": "2020-08-12T15:15:35Z",
+    "closed_at": null,
+    "user": "Skdante",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 106,
+    "title": "Is there any example code for flight dataset?",
+    "state": "open",
+    "body": "I have read the paper of holoclean and I want to run an example in the flight dataset as my baseline I found that the flight dataset is something different from the hospital dataset Besides I lack the constrain rule of that experiment",
+    "created_at": "2020-07-04T14:01:20Z",
+    "closed_at": null,
+    "user": "rocknamx8",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Aaditya-Bhatia",
+        "created_at": "2022-06-06T00:20:53Z",
+        "body": "Facing the same issue How to run this without the constrain txt file As paper mentions detection is automatic so this should run on cases where user given constrains are not provided"
+      }
+    ]
+  },
+  {
+    "number": 105,
+    "title": "Table cell_distr is either empty or does not exist",
+    "state": "closed",
+    "body": "While running the example I keep running into two alternating errors After holoclean is done training the repair model I run into the error ERROR generating aux table cell distr Traceback most recent call last File home amit Documents holoclean project randomDB sim py line 55 in module hc repair errors featurizers File holoclean master holoclean py line 327 in repair errors status infer time self repair engine infer repairs File holoclean master repair repair py line 49 in infer repairs self ds generate aux table AuxTables cell distr distr df store True index attrs vid File holoclean master dataset dataset py line 150 in generate aux table self aux table aux table store to db self engine engine File holoclean master dataset table py line 75 in store to db self df to sql self name db conn if exists if exists index index index label index label File home amit anaconda3 envs hc36 lib python3 6 site packages pandas core generic py line 2663 in to sql method method File home amit anaconda3 envs hc36 lib python3 6 site packages pandas io sql py line 521 in to sql method method File home amit anaconda3 envs hc36 lib python3 6 site packages pandas io sql py line 1316 in to sql table create File home amit anaconda3 envs hc36 lib python3 6 site packages pandas io sql py line 648 in create self pd sql drop table self name self schema File home amit anaconda3 envs hc36 lib python3 6 site packages pandas io sql py line 1363 in drop table self meta reflect only table name schema schema File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy sql schema py line 4159 in reflect Table name self reflect opts File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy sql schema py line 469 in new metadata remove table name schema File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy util langhelpers py line 67 in exit compat reraise exc type exc value exc tb File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy util compat py line 277 in reraise raise value File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy sql schema py line 464 in new table init name metadata args kw File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy sql schema py line 552 in init metadata autoload with include columns extend on extend on File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy sql schema py line 574 in autoload extend on extend on File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy engine base py line 1596 in run callable return callable self args kwargs File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy engine default py line 415 in reflecttable table include columns exclude columns opts File home amit anaconda3 envs hc36 lib python3 6 site packages sqlalchemy engine reflection py line 639 in reflecttable raise exc NoSuchTableError table name sqlalchemy exc NoSuchTableError cell distr One solution I tried is to drop holo create holo Directly after training the repair model this leads to ERROR generating aux table cell distr Traceback most recent call last File home amit Documents holoclean project randomDB sim py line 55 in module hc repair errors featurizers File holoclean master holoclean py line 327 in repair errors status infer time self repair engine infer repairs File holoclean master repair repair py line 49 in infer repairs self ds generate aux table AuxTables cell distr distr df store True index attrs vid File holoclean master dataset dataset py line 152 in generate aux table self aux table aux table create df index index attrs File holoclean master dataset table py line 90 in create df index self df set index attr list inplace True File home amit anaconda3 envs hc36 lib python3 6 site packages pandas core frame py line 4303 in set index raise KeyError f None of missing are in the columns KeyError None of vid are in the columns placing a print statement inside create df index it is clear that self df is empty so it is difficult to say exactly what is happening",
+    "created_at": "2020-06-24T19:39:03Z",
+    "closed_at": "2020-06-26T00:19:14Z",
+    "user": "arotem3",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "arotem3",
+        "created_at": "2020-06-26T00:19:14Z",
+        "body": "It seems that this issue occurs when holoclean eagerly claims 100 accuracy while repairing The is clean member of FeaturizedDataset ends up empty which leads to the construction of an empty table in the holo database The solution it seems is performing some parameter tuning From my debugging it appears that this happens when there are a lot of errors in the data but holoclean only detects a small fraction of them"
+      }
+    ]
+  },
+  {
+    "number": 104,
+    "title": "Factor graph models",
+    "state": "open",
+    "body": "Hi This code base contains a linear model for the repair task while the paper mentions Factor graph model Does the linear model achieve the same performance as the factor model If not do you plan to release the code for the factor model as well Thanks Suresh",
+    "created_at": "2020-06-01T12:27:04Z",
+    "closed_at": null,
+    "user": "suiyengar",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "LanLi2017",
+        "created_at": "2020-10-20T16:39:03Z",
+        "body": "same question here"
+      }
+    ]
+  },
+  {
+    "number": 103,
+    "title": "How to incorporate external knowledge ",
+    "state": "open",
+    "body": "Hi this might be a stupid question but during a project that I am working on I used Holoclean for some data repair task I found that however there s no documentation on how external knowledge like the example in the paper can be incorporated Could you advise please",
+    "created_at": "2019-12-02T22:52:48Z",
+    "closed_at": null,
+    "user": "GoFroggyRun",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "feedthebeat90",
+        "created_at": "2019-12-03T18:54:45Z",
+        "body": "I came here for the same How can we load external data checks I ve noticed there is an example script called holoclean repair example df py There I noticed that the error loader is defined as error loader ErrorsLoaderDetector db engine hc ds engine schema name hospital table name dk cells I am not sure if this is related to schema constraints or external checks but in case it does how is this supposed to be implemented I get an error whenever I try to run this second example script"
+      }
+    ]
+  },
+  {
+    "number": 102,
+    "title": "pos_values df in memory",
+    "state": "open",
+    "body": "Hi pos values are used in get infer dataframes method in repair py and it takes values using SQL query and not from DF Since the size of pos values is large we can get rid of memory used by DF as DF is not at all used but kept in memory I can add patch and send pull request if is fine with you",
+    "created_at": "2019-10-22T05:03:56Z",
+    "closed_at": null,
+    "user": "fatangare",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 100,
+    "title": "Documents for defining constraints",
+    "state": "closed",
+    "body": "Hi Is there any document explaining how to define different constraints in data table constraints txt file Regards Sandeep",
+    "created_at": "2019-10-15T13:41:04Z",
+    "closed_at": "2019-10-17T13:11:34Z",
+    "user": "fatangare",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2019-10-15T15:17:21Z",
+        "body": "Hi Sandeep the work in this paper discusses the details of denial constraints including their language http www vldb org pvldb vol6 p1498 papotti pdf"
+      },
+      {
+        "user": "fatangare",
+        "created_at": "2019-10-17T13:11:34Z",
+        "body": "Thanks closing ticket"
+      }
+    ]
+  },
+  {
+    "number": 96,
+    "title": "unable to process large data set of Food inspections.",
+    "state": "closed",
+    "body": "Hi I am facing few issues in executing holoclean over Chicago Food inspections dataset as described in paper However it turned out to be a machine with 32GB RAM 100 GB SSD is unable to process noticing memory leaks Also query results 1 large data in pandas dataframe 14 12 20 ERROR generating aux table pos values Traceback most recent call last File home ubuntu hc36 lib python3 6 site packages sqlalchemy engine base py line 1236 in execute context cursor statement parameters context File home ubuntu hc36 lib python3 6 site packages sqlalchemy engine default py line 536 in do execute cursor execute statement parameters psycopg2 DatabaseError out of memory for query result 2 Since above data frame was not used in subsequent operations i moved forwarded by simply bypassing it for this code block however after 4 hours of execution i am now facing an issue where log just shows killed 21 09 36 DEBUG Time to execute query 0 00 secs 21 09 36 DEBUG featurizing training data 21 09 43 DEBUG Time to execute query 4 46 secs Killed It seems tensor cat is blowing memory here As shown below running a sample for hospital and performing memory analysis with little data It turned out the tensors footprint is 228 MB which grows further when combining all tensors to 1 4GB This is not scaling well if we need to process of larger dataset of 2 4GB in a day Any suggestions image https user images githubusercontent com 3977272 64341699 8a4a0a00 d006 11e9 8706 025c755c70cf png 3 Also we noticed archived version was compatible with spark is there any specific reason to move away from spark Since we are planning to use spark to manage huge datasets with holoclean Any suggestions",
+    "created_at": "2019-09-02T04:12:09Z",
+    "closed_at": "2019-09-21T11:39:42Z",
+    "user": "nuarc",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nuarc",
+        "created_at": "2019-09-19T08:33:04Z",
+        "body": "richardwu laferrieren Ihabilyas thodrek zaqthss can you pls help on above pls"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2019-09-21T11:39:42Z",
+        "body": "nuarc the current code is designed to work on a large memory machine and preferably a large memory GPU A 32GB machine might not be adequate"
+      },
+      {
+        "user": "nuarc",
+        "created_at": "2019-09-24T09:34:37Z",
+        "body": "thodrek thanks for responding to my query I have actually tried executing it over 732 GB machine 1 With single thread batch size 1 process halts after 4 hours on tensors generation as shown in screenshot above 2 With multiple processors and batch size of 50 it didnt complete even 3 days"
+      }
+    ]
+  },
+  {
+    "number": 95,
+    "title": "Example that does not use postgres",
+    "state": "closed",
+    "body": "Hi Would it be possible for someone to write a simple example that uses HoloClean with a basic csv parquet file or sqlite database instead of postgres A HoloClean example without the postgres dependency and even better than initially just uses pytorch cpu would make HoloClean feel accessible to a much larger user group",
+    "created_at": "2019-08-08T01:56:26Z",
+    "closed_at": "2019-09-21T11:39:57Z",
+    "user": "m1sta",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2019-08-08T12:25:35Z",
+        "body": "Hello and thank you for your interest HoloClean accepts CSV files as input But we rely on a DBMS postgres in this case to store and query the data and perform various analytics that cannot be done on plain CSV or parquet files which only store data I would suggest using a docker for postgres if you are not familiar with its setup Hopefully this makes it easier for you to try HoloClean out"
+      }
+    ]
+  },
+  {
+    "number": 91,
+    "title": "Confused active attributes returned if not running detect_errors before generate domain",
+    "state": "closed",
+    "body": "If hc setup domain runs without hc detect errors detectors in advance the active attributes as well as the dk cells for domain generation will be read from the postgres database AuxTables dk cells name directly which may cause the error of no field of name XXX We should explicitly show that when using holoclean for a dataset we must either run the detect errors or load the dk cells from a specific relation",
+    "created_at": "2019-06-23T00:28:39Z",
+    "closed_at": "2019-09-21T11:40:08Z",
+    "user": "zaqthss",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2019-06-24T15:48:39Z",
+        "body": "An alternative is to try to read active attributes and fall back to all attributes in the dataset if no dk cells table is available"
+      }
+    ]
+  },
+  {
+    "number": 87,
+    "title": "Training and Inferring in different datasets",
+    "state": "closed",
+    "body": "Hi As part of the testing I have been doing with HoloClean I was trying to figure out the next use case Train on a subset of the dataset and then infer correct wrong cells on the complete dataset Loading the new dataset between fit repair model and infer repairs would not work as intended because the compilation step requires the initial observed cells Are these assumptions correct Thanks a lot",
+    "created_at": "2019-06-11T22:42:57Z",
+    "closed_at": "2019-09-21T11:40:25Z",
+    "user": "ariel-ms",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 86,
+    "title": "branch: best branch for testing purposes ",
+    "state": "closed",
+    "body": "Hi I just wanted to ask which branch should I use for testing HoloClean on some datasets Currently I am using master however I see that hcq embedding 3 is several commits ahead of master Which branch would you suggest me to use",
+    "created_at": "2019-05-31T04:03:09Z",
+    "closed_at": "2019-05-31T17:20:38Z",
+    "user": "ariel-ms",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "thodrek",
+        "created_at": "2019-05-31T04:17:32Z",
+        "body": "Hi Ariel I just realized that I told you to use dev while everything from dev had been merged to master Sorry for this Branch hcq embedding 3 is under active development so I wouldn t recommend using it without consulting with us first For now master is your best bet We can guide you to develop the extensions you may need in terms of featurizers etc Happy to jump on a call Thanks Theo"
+      },
+      {
+        "user": "ariel-ms",
+        "created_at": "2019-05-31T17:20:38Z",
+        "body": "Hi Theo I will proceed to use master branch Thanks for your help and disposition for guidance"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2019-05-31T17:23:36Z",
+        "body": "Happy to help Please do not hesitate to ping me email or a phone call works as well to figure out the best way forward Thanks Theo"
+      }
+    ]
+  },
+  {
+    "number": 80,
+    "title": "doubt about featurizer tensor size",
+    "state": "open",
+    "body": "Hi According to the code the tensor created is tensor 0 init idx attr idx 1 0 Can you please elaborate on why its not tensor 0 attr idx init idx 1 0 axis 1 and 2 swapped file repair featurize initattfeat py 12 https github com HoloClean holoclean blob bf0287bf14d3a798c405908b5354ca7e06b5e56c repair featurize initattfeat py L12 From what I understand if each row in the tensor should be for an attribute it should be the axis 1 not 2 The axis 2 should be for valid value for the attribute the row corresponds to Hope that makes sense If my thinking is wrong could you please help me out here",
+    "created_at": "2019-02-22T18:19:57Z",
+    "closed_at": null,
+    "user": "pmnerfed",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "fatangare",
+        "created_at": "2019-10-17T13:15:45Z",
+        "body": "I believe it is because all featurized tensors are concatenated in later stage If you have diff dimensions for initattfeat feature tensors can t be concatenated"
+      }
+    ]
+  },
+  {
+    "number": 79,
+    "title": "Correlation for categorical columns",
+    "state": "closed",
+    "body": "Hi It was trying holoclean on some geographical dataset which has columns like state code state name and zip code I wrote rule if two records have same state code then state name should be same But it was not at all correcting any records Then i saw the correlation between state code and state name which was less than the default threshold used for holoclean 0 1 thus no repair was made To find correlation between categorical columns holoclean does label encoding first for these columns and then checks for correlation but I believe label encoding is not a good measure to calculate correlation between two categorical columns We can say that state code and state name are correlated columns but label encoding is not efficient to tell that I tried using statistical test like chi square and it gave me a good correlation between the state code and state name thus errors were corrected I have two questions to ask 1 Was there a specific reason of using label encoding to find correlation between two categorical columns 2 Since repairs are done only on columns which are mentioned in rules then how holoclean is better than a rule based approach We can simply write code to correct errors for two columns which says if two state code are same then state names should be same considering concept of minimality",
+    "created_at": "2019-02-22T06:25:48Z",
+    "closed_at": "2019-09-21T11:41:46Z",
+    "user": "deepakrajwani",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "richardwu",
+        "created_at": "2019-04-23T23:33:27Z",
+        "body": "Hi deepakrajwani sorry for the late reply but hopefully this addresses your questions 1 We realized that the current implementation of correlation is incorrect since we are dealing with categorical values We ve implemented a correct correlation for categorical values using a normalized conditional entropy measure in the dev branch https github com HoloClean holoclean blob 6db22a6d991e1eb89fa609dff581fd92ca660cc9 domain domain py L62 L107 2 Repairs are done on cells that are detected with errors Error detection in the current state only marks cells as potentially erroneous if they violate rules denial constraints and values that are NULL empty A rule based approach using minimality may work in the simple case where we have an FD but it is unclear how minimality would work with more complicated constraints with inequalities Holoclean tries to address this in general with denial constraints and instead of explicit minimality repairing it learns the best repair based on the statistical properties of the data I would recommend you use more developed dev branch for now"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "title": "implement single tuple constraints",
+    "state": "closed",
+    "body": "Related to 44",
+    "created_at": "2019-02-04T15:12:34Z",
+    "closed_at": "2019-02-04T18:31:52Z",
+    "user": "minafarid",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2019-02-04T18:31:52Z",
+        "body": "Fixed"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "[ci] run unit tests in travis",
+    "state": "closed",
+    "body": "Currently we only run the test example",
+    "created_at": "2019-01-25T15:06:11Z",
+    "closed_at": "2019-01-27T21:24:39Z",
+    "user": "minafarid",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2019-01-27T21:24:39Z",
+        "body": "Done"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "Using HoloClean for creating labels on tabular numerical datasets",
+    "state": "closed",
+    "body": "thodrek Following up on this issue from snorkel https github com HazyResearch snorkel issues 803 I was wondering if there are any examples on how I can use HoloClean to create labels for tabular numerical datasets with the help of labelling functions Any guidance would be really appreciated",
+    "created_at": "2019-01-12T14:53:48Z",
+    "closed_at": "2019-09-21T11:41:33Z",
+    "user": "asstergi",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "asstergi",
+        "created_at": "2019-02-05T11:20:01Z",
+        "body": "thodrek could you please provide any guidance on the above question"
+      },
+      {
+        "user": "jondoering",
+        "created_at": "2019-03-31T20:24:07Z",
+        "body": "Any update on that Would be really interested too"
+      },
+      {
+        "user": "DataDoctorNG",
+        "created_at": "2019-07-04T19:51:45Z",
+        "body": "thodrek Any update on using HoloClean for tabular data with examples I have a project I would like to do with HoloClean and would be greatly interested in some examples on how to use it"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2019-07-05T08:18:12Z",
+        "body": "We are preparing a release that handles mixed categorical and numerical It s in dev currently and soon to be pushed in master"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2019-09-21T11:41:33Z",
+        "body": "The latest version on master handles both continuous and discrete values"
+      },
+      {
+        "user": "asstergi",
+        "created_at": "2019-09-24T09:16:47Z",
+        "body": "thodrek Thank you for the reply One more question though How should we approach a data labeling problem If my understanding is correct the initial value of a sample s label is kind of a prior in a loose sense to its final value after error correction Is that correct If so how should I initially set the values of the labels Could I just set them to the same value and let HoloClean sort this out utilizing the constraints"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "translation of simple DCs with a constant to SQL queries not working",
+    "state": "closed",
+    "body": "Hi when I implement simple DCs that compare the given attribute to a constant HoloClean does not generate a syntactically correct SQL query from that DC I reproduced this behaviour on the iris dataset https gist github com curran a08a1080b88344b0c8a7 as I can t share my data The data The iris dataset and one single semantically nonsensical but syntactically ok denial constraint that looks like the following t1 EQ t1 sepal length 6 9 The error Error detection according to the DC works fine the constraint detects 4 cells which is expected from the data However during the call of repair errors the following error occurs ProgrammingError syntax error at or near AND LINE 1 t2 tid AND t2 attribute sepal length AND AND t2 rv Which fails to be executed due to the AND AND Some digging makes me think that the error occurs during setting up the featurizers more specifically when the tensor for the dcfeaturizer is created l 17 in repair featurize featurize py Any ideas on why that might happen perhaps a faulty template for the SQL queries",
+    "created_at": "2019-01-04T13:14:42Z",
+    "closed_at": "2019-09-21T11:41:59Z",
+    "user": "pmaetzig",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 42,
+    "title": "clean up debugging information",
+    "state": "closed",
+    "body": "We need to clean up the debugging information that are scattered across the code Examples https github com HoloClean holoclean blame dev repair featurize featurize py L20 https github com HoloClean holoclean blame dev repair learn learn py L174 This causes some crashes with smaller datasets",
+    "created_at": "2018-12-06T20:11:40Z",
+    "closed_at": "2019-01-18T23:26:38Z",
+    "user": "minafarid",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ScarletGuo",
+        "created_at": "2018-12-06T20:37:13Z",
+        "body": "sorry my bad I did not notice this is committed to dev"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2019-01-18T23:26:33Z",
+        "body": "I ve removed this with 43 and also added a debug mode flag in self env debug mode for all future debug paths"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "Repairs are no longer being found as the size of a dataset is increased",
+    "state": "closed",
+    "body": "Hi I am trying to clean a few dirty rows with respect to 2 denial constraints t1 EQ t1 Sex Female EQ t1 Relationship Husband t1 EQ t1 Sex Male EQ t1 Relationship Wife When I use a small sample of my data 20 rows I get the following correct repairs 11 u relationship Husband u Husband 11 u sex Female u Male 4 u relationship Husband u Husband 4 u sex Female u Male When I add some more rows for example 1100 the values no longer change 4 u relationship Husband u Husband 4 u sex Female u Female 11 u relationship Husband u Husband 11 u sex Female u Female 652 u relationship Husband u Husband 652 u sex Female u Female 689 u relationship Wife u Wife 689 u sex Male u Male 504 u relationship Husband u Husband 504 u sex Female u Female 26 u relationship Husband u Husband 26 u sex Female u Female 1084 u relationship Husband u Husband 1084 u sex Female u Female 703 u relationship Wife u Wife 703 u sex Male u Male The same happens when I run on the full dataset 48842 rows The data is the same e g the version with 20 rows just contains the first 20 rows from the full set My script is based on the example in tests and I use default settings I tried some tweaking but this did not solve the issue Noisy cells are detected correctly and the generated possible domains contain multiple values I do not understand why this happens which problem or restriction prevents the repairs from happening on the larger versions of the dataset Code and data can be found in my fork https github com j r77 holoclean",
+    "created_at": "2018-12-04T13:35:17Z",
+    "closed_at": "2019-09-21T11:42:13Z",
+    "user": "j-r77",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "thodrek",
+        "created_at": "2018-12-05T13:30:50Z",
+        "body": "Hi I would recommend using the HC version in Dev as we have fixed many issues there Can you please let us if the error persists with the dev version If so we would be happy to investigate"
+      },
+      {
+        "user": "j-r77",
+        "created_at": "2018-12-06T15:00:03Z",
+        "body": "Hello I have just tried it in the latest dev version but the issue persists Values are repaired in the 20 tuple dataset but the same values no longer change as a larger portion of the data is considered and the new errors in the larger datasets are not repaired either"
+      },
+      {
+        "user": "minafarid",
+        "created_at": "2018-12-07T23:49:15Z",
+        "body": "Hi j r77 I am currently working on reproducing and debugging this issue and will get back to you"
+      },
+      {
+        "user": "fgeerts",
+        "created_at": "2018-12-14T19:51:01Z",
+        "body": "Hi minafarid Just wondering whether you managed to reproduce and debug the issue already Thanks"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2018-12-17T17:46:35Z",
+        "body": "Hi fgeerts we are actively working on this issue It is a bit more intricate than what it seems This issue comes up because the only attributes that are strongly correlated in the Adult dataset are relationship and sex i e the ones present in your constraints see attached image img width 432 alt screen shot 2018 12 17 at 11 42 45 am src https user images githubusercontent com 1043311 50105040 3174e000 01f1 11e9 86a1 29b782a0d948 png We are actively working on this issue and we will be getting back to you ASAP"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2019-01-18T23:24:18Z",
+        "body": "Hi j r77 We did some digging around and it seems that the issue lies in the use of InitAttFeaturizer Because of how we currently do weak supervision our InitAttFeaturizer feature weights actually blows up and will assign to much emphasis on the initial values which causes no repairs to occur If you pass in the keyword argument learnable False you should be able to see better results We ve recently tweaked how we do weak supervision in 43 such that InitAttFeaturizer behaves as intended That being said with this specific dataset as thodrek pointed out since there are so few correlated attributes weak supervision fails to assign confident weak labels and results in the prior behaviour In this case Holoclean actually prefers not to repair any cell as demonstrated because it is unconfident that any repairs are correct due to the lack of correlations Hope that helps"
+      },
+      {
+        "user": "fgeerts",
+        "created_at": "2019-01-19T15:40:46Z",
+        "body": "Hi Richard Thanks for looking further into this We ll take a closer look at this InitAttFeaturizer Of course it makes sense not to repair if no strong signals are present Thanks again Floris On 19 Jan 2019 at 00 24 Richard Wu notifications github com wrote Hi j r77 https github com j r77 We did some digging around and it seems that the issue lies in the use of InitAttFeaturizer Because of how we currently do weak supervision our InitAttFeaturizer feature weights actually blows up and will assign to much emphasis on the initial values which causes no repairs to occur If you pass in the keyword argument learnable False you should be able to see better results We ve recently tweaked how we do weak supervision in 43 https github com HoloClean holoclean pull 43 such that InitAttFeaturizer behaves as intended That being said with this specific dataset as thodrek https github com thodrek pointed out since there are so few correlated attributes weak supervision fails to assign confident weak labels and results in the prior behaviour In this case Holoclean actually prefers not to repair any cell as demonstrated because it is unconfident that any repairs are correct due to the lack of correlations Hope that helps You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com HoloClean holoclean issues 41 issuecomment 455719530 or mute the thread https github com notifications unsubscribe auth ADDwGezah7T s oW0aEUWR3I8sv dsfXks5vEleigaJpZM4ZAqiV"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "Extend domain generation",
+    "state": "closed",
+    "body": "Extend generation of weakly labeled data",
+    "created_at": "2018-11-22T22:24:47Z",
+    "closed_at": "2019-01-18T23:24:41Z",
+    "user": "thodrek",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "richardwu",
+        "created_at": "2019-01-18T23:24:41Z",
+        "body": "Closing since 43 was merged"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Investigate missing values from self.single_stats",
+    "state": "closed",
+    "body": "It was discovered in https github com HoloClean holoclean pull 23 discussion r235134476 that some values were missing from self single stats even though the values are derived in the same attribute column An example of a missing value KeyError u surgeryxpatientsxneedingxhairxremovedxfromxthexsurgicalxareaxbeforexsurgery xwhoxhadxhairxremovedxusingxaxsaferxmethodx electricxclippersxorxhairxremovalxcreamx xef xbf xbdcxnotxaxrazor This is most likely due to an encoding issue when storing data into Postgres and subsequently retrieving it without decoding it properly",
+    "created_at": "2018-11-20T19:34:38Z",
+    "closed_at": "2019-01-18T23:24:56Z",
+    "user": "richardwu",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "thodrek",
+        "created_at": "2018-11-26T15:57:21Z",
+        "body": "Is this fixed"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2018-11-26T16:04:30Z",
+        "body": "Yes this is feel free to close it On Mon Nov 26 2018 10 57 AM thodrek notifications github com wrote Is this fixed You are receiving this because you authored the thread Reply to this email directly view it on GitHub https github com HoloClean holoclean issues 26 issuecomment 441690945 or mute the thread https github com notifications unsubscribe auth AKEu8g4Zf M1dhMP 0HbFmeZqpfp8YlYks5uzA9igaJpZM4Yrye9"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Re-factor use of exception handlers",
+    "state": "closed",
+    "body": "There are two unfortunate use patterns of exception handlers in the codebase atm 1 silencing exceptions with status messages Example https github com HoloClean holoclean pull 18 commits 01a3ff005184c9d2f9c036075484fea3fa97b68d diff 3ec67dd483b0c890fa7fbc6499254b4dL138 and fix https github com HoloClean holoclean pull 18 commits 01a3ff005184c9d2f9c036075484fea3fa97b68d diff 3ec67dd483b0c890fa7fbc6499254b4dR174 We catch an exception then only return the error message in the status variable This is bad since it silences programming errors like OutOfRangeError s that should be propagated Note the fix consists of two components 1 Using logging error to add additional context information 2 Re raise not raise another exception via raise with no arguments This keeps the stack trace intact for debugging logs 2 catching exceptions and raising a wrapped exception Example https github com HoloClean holoclean pull 18 commits 01a3ff005184c9d2f9c036075484fea3fa97b68d diff 3ec67dd483b0c890fa7fbc6499254b4dL138 and fix https github com HoloClean holoclean pull 18 commits 01a3ff005184c9d2f9c036075484fea3fa97b68d diff 3ec67dd483b0c890fa7fbc6499254b4dR160 Similar to 1 above we should be using logging error and raise with no arguments to add context and re raise the exception",
+    "created_at": "2018-11-15T21:11:07Z",
+    "closed_at": "2018-11-20T20:08:09Z",
+    "user": "richardwu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "Replace print statements with logging.X statements",
+    "state": "closed",
+    "body": "We ve littered print statements everywhere it is a low hanging fruit to change everything to use logging info logging error logging warn etc",
+    "created_at": "2018-11-15T18:32:11Z",
+    "closed_at": "2018-11-20T21:24:24Z",
+    "user": "richardwu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 17,
+    "title": "PostgreSQL < 9.4 not supported",
+    "state": "closed",
+    "body": "Running holoclean with a postgreSQL version 9 4 generates the following error ERROR setting up domain For table pos values psycopg2 ProgrammingError syntax error at or near WITH ORDINALITY LINE 1 y regexp replace domain gi WITH ORDIN This occurs in domain py function store domains ll 57 66 The table pos values is not created during the store domains call which breaks the code Cause of the problem is that the with ordinality was introduced to postgres first in version 9 4 I can only work with 9 2 at the moment though My quick workaround uses the following query instead of the one in l 64 domain py in order to create pos values based on this stackoverflow answer https stackoverflow com a 8767450 query select row number over partition by vid cid tid as val id from select vid cid tid attribute rv val from select unnest string to array r egexp replace domain gi as rv val from s as placeholder 1 as placeholder 2 as placeholder 3 AuxTables cell domain name the SQL part in better readable formatting select row number over partition by vid cid tid as val id from select vid cid tid attribute rv val from select unnest string to array regexp replace domain gi as rv val from s as placeholder 2 as placeholder 3",
+    "created_at": "2018-11-15T12:54:08Z",
+    "closed_at": "2019-02-12T08:29:47Z",
+    "user": "pmaetzig",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2018-11-16T21:59:48Z",
+        "body": "Hi pmaetzig thank you very much for your interest in holoclean and for digging deep into this issue and coming up with a solution We are currently relying on the features in newer versions of postgresql because they provide necessary optimizations especially in joins I understand that you might be limited to a particular version of postgresql If it is possible for you to use dockers I suggest starting a postgres docker instance with the latest postgres version 11 as follows bash docker run name pghc e POSTGRES DB holo e POSTGRES USER holocleanuser e POSTGRES PASSWORD abcd1234 p 5432 5432 d postgres 11 and you can use docker start pghc and docker stop pghc to start stop the container You can find details about this image here https hub docker com postgres and feel free to ask about any details"
+      },
+      {
+        "user": "pmaetzig",
+        "created_at": "2018-11-19T08:43:16Z",
+        "body": "Thanks I was just sharing it in case someone runs into a similar problem and as you said if someone else is restricted to some older version of postgres One thing that would be helpful is referencing the optimal postgres version in the readme I will try using the docker solution thanks"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2018-11-20T15:40:08Z",
+        "body": "pmaetzig Please let us know of your experience with docker More than happy to help in case of any issues"
+      },
+      {
+        "user": "pmaetzig",
+        "created_at": "2019-01-04T13:18:01Z",
+        "body": "Hi sorry for the late update docker is not an option with my current setup The most viable solution would be to get an upgrade of postgresql working When I tried on another machine with an updated version of postgres this issue did not occur any more What else could be affected by using an older postgresql version potentially"
+      },
+      {
+        "user": "pmaetzig",
+        "created_at": "2019-02-12T08:29:47Z",
+        "body": "I ve managed to upgrade to postgresql 9 4 this fixes the issue as expected I don t know of any other bugs that occur because of an older postgres version but this issue can be closed in my opinion"
+      },
+      {
+        "user": "minafarid",
+        "created_at": "2019-02-13T20:57:20Z",
+        "body": "Thank you Paul for your feedback One other alternative instead of dockers is to install a local copy of postgresql form its sources This would be just like any local program"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Inconsistency in Dirty and Clean Data Normalization",
+    "state": "closed",
+    "body": "when loading dirty data string is lowered https github com HoloClean holoclean blob 90668091f1c3baa5a8d19a5874194e8fcec13f6d dataset table py L34 when loading clean data value is only striped but string does not get lowered https github com HoloClean holoclean blob 90668091f1c3baa5a8d19a5874194e8fcec13f6d evaluate eval py L42",
+    "created_at": "2018-11-14T15:02:57Z",
+    "closed_at": "2018-11-22T22:22:04Z",
+    "user": "ScarletGuo",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ScarletGuo",
+        "created_at": "2018-11-14T15:06:25Z",
+        "body": "there had a customized function for lowering"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2018-11-15T17:20:06Z",
+        "body": "I fixed this in 18 for loading https github com HoloClean holoclean pull 18 files diff c25c4677d626699f60b8cf3ab8235f4dR51 and evaluation https github com HoloClean holoclean pull 18 files diff ecc358c3548da3832a30fd12f7f00b04R51"
+      },
+      {
+        "user": "minafarid",
+        "created_at": "2018-11-15T19:01:40Z",
+        "body": "The fix makes them follow the same normalization process but it is better to refactor this method out"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2018-11-20T15:40:41Z",
+        "body": "Is this fixed if so please close"
+      },
+      {
+        "user": "minafarid",
+        "created_at": "2018-11-20T19:35:49Z",
+        "body": "Not yet a PR in progress is fixing this 18"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Error Creating Index due to Bad Chars",
+    "state": "closed",
+    "body": "Error LINE 1 ATE INDEX census 0126 ON census 01 migration code change in SQL CREATE INDEX census 0126 ON census 01 migration code change in msa Background on this error at http sqlalche me e f405 For table census 01 ERROR while creating index for table census 01 on attributes migration code change in msa tmp solution added to my local holoclean dataset table 36 bad chars re compile a zA Z0 9 renamed cols bad chars sub col strip replace for col in columns",
+    "created_at": "2018-11-14T02:00:23Z",
+    "closed_at": "2018-11-23T01:33:07Z",
+    "user": "ScarletGuo",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ScarletGuo",
+        "created_at": "2018-11-14T05:43:44Z",
+        "body": "However the tmp solution above can result in inconsistency of attribute names when it comes to evaluation Similar changes might be needed for eval py when loading clean data"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2018-11-15T17:34:24Z",
+        "body": "The error arises because we don t quote columns attributes in our queries since Postgres s lexer attempts to resolve these unquoted tokens while also downcasing the attribute see https stackoverflow com questions 20878932 are postgresql column names case sensitive I fixed how we treat attributes as columns in 18 by retaining their original format from the raw datasets This should no longer be an issue I tested this by replacing the attribute HospitalName with Hospital Name in the hospital dataset hospital csv ProviderNumber Hospital Name Address1 Address2 Address3 City State ZipCode CountyName PhoneNumber HospitalType HospitalOwner EmergencyService Condition MeasureCode MeasureName Score Sample Stateavg 10018 callahan eye foundation hospital 1720 university blvd birmingham al 35233 jefferson 2053258100 acute care hospitals voluntary non profit private yes surgical infection prevention scip card 2 surgery patients who were taking heart drugs caxxed beta bxockers before coming to the hospitax who were kept on the beta bxockers during the period just before and after their surgery al scip card 2 hospital clean csv tid attribute correct val 0 ProviderNumber 10018 0 Hospital Name callahan eye foundation hospital 0 Address1 1720 university blvd hospital constraints att txt t1 t2 EQ t1 Condition t2 Condition EQ t1 MeasureName t2 MeasureName IQ t1 HospitalType t2 HospitalType t1 t2 EQ t1 Hospital Name t2 Hospital Name IQ t1 ZipCode t2 ZipCode t1 t2 EQ t1 Sample t2 Sample IQ t1 Score t2 Score and the test ran perfectly Precision 0 96 Recall 0 69 Repairing Recall 0 80 F1 0 80 Repairing F1 0 88 Detected Errors 435 Total Errors 509 Correct Repairs 350 Total Repairs 365 Total Repairs Grdth present 365"
+      },
+      {
+        "user": "thodrek",
+        "created_at": "2018-11-22T22:22:27Z",
+        "body": "richardwu is this fixed if so please close"
+      },
+      {
+        "user": "richardwu",
+        "created_at": "2018-11-22T23:18:33Z",
+        "body": "Yes this is fixed I can t seem to close this issue I believe only the author and or maintainers can"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "dataset: use COPY FROM to load initial CSV file into PostgreSQL",
+    "state": "closed",
+    "body": "We currently load the entire CSV file into memory pandas https github com HoloClean holoclean blob 90668091f1c3baa5a8d19a5874194e8fcec13f6d dataset table py L29 We treat every column as a varchar 255 str anyways so there is no schema inferencing done ATM This is unscalable for very large datasets We should instead use the extremely fast COPY FROM statement http www postgresqltutorial com import csv file into posgresql table",
+    "created_at": "2018-11-13T23:37:28Z",
+    "closed_at": "2019-09-21T11:42:29Z",
+    "user": "richardwu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "minafarid",
+        "created_at": "2018-11-15T19:02:20Z",
+        "body": "From a previous PR 18 comment psycopg2 has a copy interface described here http initd org psycopg docs cursor html cursor copy from The code can be as follows adopted from https www dataquest io blog loading data into postgres import psycopg2 conn psycopg2 connect host localhost dbname postgres user postgres cur conn cursor with open user accounts csv r as f Notice that we don t need the csv module next f Skip the header row cur copy from f users sep conn commit"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "index name can be as same as the table name ",
+    "state": "closed",
+    "body": "e g dataname adult 1 self index count 1 https github com HoloClean holoclean blob dea7dbd23f4babd6e80109c2e35e662d91def38e dataset table py L71",
+    "created_at": "2018-11-13T15:16:57Z",
+    "closed_at": "2018-11-13T22:36:15Z",
+    "user": "ScarletGuo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ScarletGuo",
+        "created_at": "2018-11-13T22:36:12Z",
+        "body": "it will not be the same if dataname input for hc load data always equals to input dataset s name"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "PyTorch multiprocessing pool causes OSError Too Many Files Open on Linux",
+    "state": "closed",
+    "body": "Currently using torch multiprocessing in InitAttFeaturizer fails on linux and not on macOS The reported error is OSError Too Many Files Open Similar issues have been reported on PyTorch github repo https github com pytorch pytorch issues 11201 with a suggested solution https github com pytorch pytorch issues 11899 Documentation for sharing strategies https pytorch org docs master multiprocessing html highlight sharing 20strategy sharing strategies From the documentation file descriptor is the default strategy except for macOS and OS X where it s not supported",
+    "created_at": "2018-11-10T20:03:49Z",
+    "closed_at": "2018-11-10T21:41:14Z",
+    "user": "minafarid",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  }
+]

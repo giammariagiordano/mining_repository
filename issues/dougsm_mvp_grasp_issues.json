@@ -1,0 +1,747 @@
+[
+  {
+    "number": 47,
+    "title": "Compatibility of the model with Pytorch ",
+    "state": "open",
+    "body": "I m using the ggcnn repository https github com dougsm ggcnn and successfully trained the model on the Cornell dataset However I want to implement the model on the Franka Emika for a pick and place application using Pytorch but this repository is using only Tensorflow Would it be possible to implement the model in this repository using Pytorch",
+    "created_at": "2024-04-29T10:41:26Z",
+    "closed_at": null,
+    "user": "HaithamRYaghi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 39,
+    "title": "Could you also share your simulation files?",
+    "state": "closed",
+    "body": "Hello it is really nice work and extremely inspired my work I want to reproduce this research but unfortunately I do not have a panda robot So can you also share your files used in simulation That will exactly help me a lot",
+    "created_at": "2022-01-20T10:55:42Z",
+    "closed_at": "2022-01-29T10:17:34Z",
+    "user": "jianchaoci",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2022-01-29T10:17:34Z",
+        "body": "Hi I m afraid I don t really have any simulation for this"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "ImportError: No module named franka_control.msg",
+    "state": "closed",
+    "body": "Hi dougsm Thanks for your work when i try to run rosrun mvp grasping panda mvp grasp py i got some errors as follows mvp grasp franka control wrappers src franka control wrappers panda commander py line 8 in module from franka control msg import ErrorRecoveryActionGoal ImportError No module named franka control msg Could you please give me some suggestions to solve this problem",
+    "created_at": "2021-11-17T15:35:40Z",
+    "closed_at": "2021-11-18T03:18:21Z",
+    "user": "fkendlessly",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "fkendlessly",
+        "created_at": "2021-11-18T03:18:21Z",
+        "body": "it s now all under franka msgs msg since 0 5 0"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "what Python version should I use ?",
+    "state": "open",
+    "body": "I encountered so many blocks when trying to build the enviroment to run the project such as tf tf2 couldn t be imported and cv bridge couldn t be found even if i ve installed them The ggcnn is based on python 3 6 but the default is Python 2 7 in ROS built under Ubuntu melodic and kinetic So which version of python you used",
+    "created_at": "2021-06-13T10:06:29Z",
+    "closed_at": null,
+    "user": "Penguuuuin",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 30,
+    "title": "Some questions about mvp_grasp.yaml file",
+    "state": "open",
+    "body": "hi dougsm could you mind telling me the meaning of parameter bounds including x1 x2 y1 y2 in mvp grasp yaml file Because I need to modify this file for the reason that my workspace setting is not the same as yours Hope for your reply",
+    "created_at": "2021-04-12T08:17:39Z",
+    "closed_at": null,
+    "user": "jackhuu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 27,
+    "title": "How to get the camera pose in robot frame",
+    "state": "closed",
+    "body": "when the camera is mounted on the wrist how to get the camera frame relative to the robot arm",
+    "created_at": "2020-11-26T14:05:15Z",
+    "closed_at": "2021-02-01T02:31:26Z",
+    "user": "alisonjpp",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-12-29T13:04:41Z",
+        "body": "The best way is to have a calibration set up with a checkerboard in a known position and use an existing library such as http wiki ros org camera calibration to perform the calibration Alternatively you can model it in CAD and measure the distances This is less accurate but probably good enough"
+      },
+      {
+        "user": "alisonjpp",
+        "created_at": "2021-02-01T02:31:38Z",
+        "body": "Thanks"
+      },
+      {
+        "user": "caijunhao",
+        "created_at": "2021-04-27T14:26:48Z",
+        "body": "Hi dougsm Have you ever measure the ideal transformation between the RGB camera of the D435 and the end effector of Franka in CAD"
+      },
+      {
+        "user": "bibbygoodwin",
+        "created_at": "2021-05-27T23:06:52Z",
+        "body": "caijunhao did you arrive at a good estimate for that transformation Thanks"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "no CUDA-capable device is detected, kernel driver does not appear to be running on this host (roy-Alienware): /proc/driver/nvidia/version does not exist",
+    "state": "open",
+    "body": "when I ran roslaunch mvp grasping grasp entropy service launch the errors occurred as follows ROS MASTER URI http localhost 11311 process grasp entropy node 1 started with pid 6072 WARNING tensorflow From home robot panda ws src mvp grasp master ggcnn src ggcnn ggcnn py 9 The name tf keras backend set session is deprecated Please use tf compat v1 keras backend set session instead WARNING tensorflow From home robot panda ws src mvp grasp master ggcnn src ggcnn ggcnn py 14 The name tf Session is deprecated Please use tf compat v1 Session instead 2020 09 22 21 31 20 376343 I tensorflow stream executor platform default dso loader cc 42 Successfully opened dynamic library libcuda so 1 2020 09 22 21 31 20 401235 E tensorflow stream executor cuda cuda driver cc 318 failed call to cuInit CUDA ERROR NO DEVICE no CUDA capable device is detected 2020 09 22 21 31 20 401413 I tensorflow stream executor cuda cuda diagnostics cc 156 kernel driver does not appear to be running on this host roy Alienware proc driver nvidia version does not exist 2020 09 22 21 31 20 402241 I tensorflow core platform cpu feature guard cc 142 Your CPU supports instructions that this TensorFlow binary was not compiled to use AVX2 FMA 2020 09 22 21 31 20 419186 I tensorflow core platform profile utils cpu utils cc 94 CPU Frequency 2400000000 Hz 2020 09 22 21 31 20 421161 I tensorflow compiler xla service service cc 168 XLA service 0x56188f2fa270 executing computations on platform Host Devices 2020 09 22 21 31 20 421217 I tensorflow compiler xla service service cc 175 StreamExecutor device 0 undefined undefined 2020 09 22 21 31 20 796216 W tensorflow compiler jit mark for compilation pass cc 1412 One time warning Not using XLA CPU for cluster because envvar TF XLA FLAGS tf xla cpu global jit was not set If you want XLA CPU either set that envvar or use experimental jit scope to enable XLA CPU To confirm that XLA is active pass vmodule xla compilation cache 1 as a proper command line flag not via TF XLA FLAGS or set the envvar XLA FLAGS xla hlo profile I tried to install Nvidia driver 450 server ubuntu drivers devices sys devices pci0000 00 0000 00 01 0 0000 01 00 0 modalias pci v000010DEd00001F91sv00001028sd00000963bc03sc00i00 vendor NVIDIA Corporation driver nvidia driver 435 distro non free driver nvidia driver 450 server distro non free recommended driver nvidia driver 418 server distro non free driver nvidia driver 440 server distro non free driver nvidia driver 450 distro non free driver xserver xorg video nouveau distro free builtin sys devices pci0000 00 0000 00 1d 7 0000 3f 00 0 modalias pci v00008086d000024FDsv00008086sd00008050bc02sc80i00 vendor Intel Corporation model Wireless 8265 8275 manual install True driver backport iwlwifi dkms distro free But error display driver does not support 4 16 18 rt12 My PC system is Ubuntu 18 04 4 16 18 rt12 Ros Melodic Python 3 6 My robot is Franka panda and the camera is Realsense D435",
+    "created_at": "2020-09-23T13:43:58Z",
+    "closed_at": null,
+    "user": "JhuaDuan",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 22,
+    "title": "Erros occur when putting the MFC application and kinova controlling application together",
+    "state": "open",
+    "body": "Before I put the MFC application and kinova controlling application together I have generated the kinova controlling application sucessfully and it can control the robot sucessfully In the VS MFC appliction I cited the generated kinova controlling application Then many errors occur Most of them are error 3254 and error 2838 20200915111330 https user images githubusercontent com 69491379 93164007 1ed36600 f74b 11ea 97f6 c2f4b4cf9d07 png my environment VS 2017 conan cmake my expection I don t know how errors occur and how to debug",
+    "created_at": "2020-09-15T04:02:55Z",
+    "closed_at": null,
+    "user": "207900368",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "Kinova",
+    "state": "closed",
+    "body": "Just as a note I have got this working for Kinovas I will work to tidy it up and push up thanks Guy",
+    "created_at": "2020-08-27T08:01:36Z",
+    "closed_at": "2020-12-29T13:05:49Z",
+    "user": "phuicy",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Assets01",
+        "created_at": "2020-09-01T14:06:05Z",
+        "body": "looking forward to it"
+      },
+      {
+        "user": "Assets01",
+        "created_at": "2020-09-07T06:28:09Z",
+        "body": "Just as a note I have got this working for Kinovas I will work to tidy it up and push up thanks Guy Hi I aslo tried to reproduce this work with a kinova robot but encountered many problems so I am looking forward to your modifications"
+      },
+      {
+        "user": "mkt1412",
+        "created_at": "2022-01-10T12:39:28Z",
+        "body": "Hi is the implementation for KINOVA available now Really look forward to that"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "size and scale of the adversarial object from DexNet?",
+    "state": "closed",
+    "body": "Hello I wonder the size and scale of the adversarial used in the grasping for example the figure bellow shows one object I downloaded from DexNet is this size in mm same with what you used in your work or you rescaled it https user images githubusercontent com 56440761 90487238 c53c4380 e16c 11ea 836f 4f3368620293 PNG",
+    "created_at": "2020-08-18T08:07:28Z",
+    "closed_at": "2020-08-19T12:07:22Z",
+    "user": "Assets01",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-08-19T00:18:49Z",
+        "body": "I don t have the actual object with me so can t check but those numbers seem about right I don t recall rescaling them in any way"
+      },
+      {
+        "user": "Assets01",
+        "created_at": "2020-08-19T12:07:22Z",
+        "body": "I don t have the actual object with me so can t check but those numbers seem about right I don t recall rescaling them in any way Thank you for your reply I will try the original size"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "non square boding area",
+    "state": "open",
+    "body": "A numpy error operand could not be broadcast together with shapes I noticed in grasp entropy node py file the operation of numpy array are working only if bounding box mvp grasp yaml is square otherwise the dimension of some of the arrays are swap The error first occur in line 231 but if you change the shape of d from prev view to the current dimension then the same issue comes up in other part of the code Could you test whether you can define non square boding area",
+    "created_at": "2020-08-11T10:11:40Z",
+    "closed_at": null,
+    "user": "seivazi",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "phuicy",
+        "created_at": "2020-08-19T11:57:24Z",
+        "body": "I can confirm this is reproducible One option is to change grid world to be based on bins rather than resolution"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-08-21T10:00:32Z",
+        "body": "I also now remember it dougsm once mentioned about it in a another issue phuicy what do you mean based on the bins"
+      },
+      {
+        "user": "phuicy",
+        "created_at": "2020-08-23T15:53:06Z",
+        "body": "So at the moment a grid is made based on some fixed resolution in x and y Instead a resolution in x and y could be independently determined by a fixed number of bins number of sections in the grid This would allow for a rectangular grid"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "How to apply the model in ggcnn repository to this repository ",
+    "state": "closed",
+    "body": "I noticed that you use torch keras in ggcnn repository but tensorflow keras in this Can the model trained in ggcnn repository be applied in this repository If I want to train a model with ggcnn repository how do I apply it in here Since I saw the model in this repository trained for 29 epochs is it necessary to continue training thank you",
+    "created_at": "2020-03-17T15:12:26Z",
+    "closed_at": "2020-04-09T06:43:00Z",
+    "user": "honghongzhenbang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-20T01:17:42Z",
+        "body": "G day honghongzhenbang Sorry I ve been meaning to fix that for a while There is the code there to run using the torch version of the network https github com dougsm mvp grasp blob master ggcnn src ggcnn ggcnn torch py For the time being you ll just need to change the import from https github com dougsm mvp grasp blob c301ba2f4b0c0fb0c92b61a34f2821e56c693163 ggcnn ros nodes ggcnn service py L15 to from ggcnn ggcnn torch import predict process depth image"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "`Weights sum to zero, can't be normalized` in grasp entropy node's update callback",
+    "state": "open",
+    "body": "Numpy returns this error Error processing request Weights sum to zero can t be normalized Traceback most recent call last File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 625 in handle request response convert return to response self handler request self response class File home ap mvp ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 172 in update service handler q am neigh avg np average q am neigh weights neighbour weights axis 0 File home ap local lib python2 7 site packages numpy lib function base py line 422 in average Weights sum to zero can t be normalized ZeroDivisionError Weights sum to zero can t be normalized What would be the ideal solution I temporarily went with surrounding the call with a try except try q am neigh avg np average q am neigh weights neighbour weights axis 0 except ZeroDivisionError q am neigh avg 0 0 but I m not 100 positive there is absolutely no grasp if the neighborhood doesn t have a non null sum and I suppose you do know it leads to two more warnings which I can think about tomorrow home ap mvp ws src mvp grasp mvp grasping ros nodes grasp entropy node py 263 RuntimeWarning invalid value encountered in sqrt ret velocity cmd linear z 1 np sqrt 1 diff 0 2 diff 1 2 home ap mvp ws src mvp grasp dougsm helpers src dougsm helpers gridshow py 25 RuntimeWarning invalid value encountered in divide img img img min img max img min",
+    "created_at": "2020-02-24T17:17:18Z",
+    "closed_at": null,
+    "user": "aPonza",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-02T04:11:39Z",
+        "body": "As you say I think this is a symptom of a larger problem This is only possible if there s not a single value stored anywhere in the histogram as it implies that the maximum value is 0 This shouldn t be possible if the histogram has been updated with a grasp estimate"
+      },
+      {
+        "user": "HanwenCao",
+        "created_at": "2021-01-24T12:49:33Z",
+        "body": "aPonza Hi I was wondering if you have figured it out I am facing the same error q am neigh avg np average q am neigh weights neighbour weights axis 0 ZeroDivisionError Weights sum to zero can t be normalized"
+      },
+      {
+        "user": "fkendlessly",
+        "created_at": "2021-11-21T14:03:55Z",
+        "body": "HI HanwenCao I encountered the same problem as you Did you solve it"
+      },
+      {
+        "user": "HanwenCao",
+        "created_at": "2021-11-21T15:53:02Z",
+        "body": "fkendlessly Sorry man I do not have a perfect solution One thing you could probably try is to bypass it I think you can do grasping without that But forgive me that is all I can remember since it has been a long time"
+      },
+      {
+        "user": "fkendlessly",
+        "created_at": "2021-11-23T07:16:25Z",
+        "body": "Thank you i will try to solve it"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "How to set bounds in mvp_grasp.yaml?",
+    "state": "closed",
+    "body": "Hi I m confused about bounds in mvp grasp yaml I try to change them but either I get out of bounds error or some dimension miss match error I use this pose self active group get current pose to find my desire pose and save it as self active group remember joint values grip ready this pose If I keep your setting for bounds the robot moves but very far from my grip ready location Have you hard cord the searching position somewhere in the code In panda base grasping controller py why do you have two initial position self pc goto named pose grip ready velocity 0 25 start pose list self pregrasp pose start pose 0 np random randn 0 05 start pose 1 np random randn 0 05 self pc goto pose start pose velocity 0 25 The way understood the bounds is set around grip ready position I can make this two working but out of bounds error seems to come from update grid Any suggestion",
+    "created_at": "2020-02-14T19:32:50Z",
+    "closed_at": "2020-02-21T07:33:28Z",
+    "user": "seivazi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-17T04:35:13Z",
+        "body": "The histogram bounds in mvp grasp yaml are defined in world coordinates in the robot base frame In my case I believe the workspace was to the right of the robot negative y direction so if you are working in front of the robot positive x direction then you will need to adjust them accordingly It is also expecting the area to be a square if that helps"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "tf variable does not exist e.g. sin_out/BiasAdd/_39",
+    "state": "open",
+    "body": "Running roslaunch mvp grasping grasp entropy service launch throw a tf error ERROR 1581599830 446864 Error processing request 2 root error s found 0 Failed precondition Error while reading resource variable pos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost pos out bias N10tensorflow3VarE does not exist node pos out BiasAdd ReadVariableOp sin out BiasAdd 39 1 Failed precondition Error while reading resource variable pos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost pos out bias N10tensorflow3VarE does not exist node pos out BiasAdd ReadVariableOp 0 successful operations 0 derived errors ignored Traceback most recent call last n File opt ros melodic lib python2 7 dist packages rospy impl tcpros service py line 629 in handle request n response convert return to response self handler request self response class n File home seivazi catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 128 in update service handler n points angle width img predict depth crop process depth False depth nan mask depth nan mask n File home seivazi catkin ws src mvp grasp ggcnn src ggcnn ggcnn py line 87 in predict n pred out model predict depth reshape 1 300 300 1 n File home seivazi local lib python2 7 site packages tensorflow python keras engine training py line 1078 in predict n callbacks callbacks n File home seivazi local lib python2 7 site packages tensorflow python keras engine training arrays py line 363 in model iteration n batch outs f ins batch n File home seivazi local lib python2 7 site packages tensorflow python keras backend py line 3292 in call n run metadata self run metadata n File home seivazi local lib python2 7 site packages tensorflow python client session py line 1458 in call n run metadata ptr n FailedPreconditionError 2 root error s found n 0 Failed precondition Error while reading resource variable pos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost pos out bias N10tensorflow3VarE does not exist n t node pos out BiasAdd ReadVariableOp n t sin out BiasAdd 39 n 1 Failed precondition Error while reading resource variable pos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost pos out bias N10tensorflow3VarE does not exist n t node pos out BiasAdd ReadVariableOp n0 successful operations n0 derived errors ignored n I printed the tf variables and for some reason node pos out BiasAdd ReadVariableOp sin out BiasAdd 39 is missing See below tf Variable conv2d 1 kernel 0 shape 9 9 1 32 dtype float32 tf Variable conv2d 1 bias 0 shape 32 dtype float32 tf Variable conv2d 2 kernel 0 shape 5 5 32 16 dtype float32 tf Variable conv2d 2 bias 0 shape 16 dtype float32 tf Variable conv2d 3 kernel 0 shape 3 3 16 8 dtype float32 tf Variable conv2d 3 bias 0 shape 8 dtype float32 tf Variable conv2d transpose 1 kernel 0 shape 3 3 8 8 dtype float32 tf Variable conv2d transpose 1 bias 0 shape 8 dtype float32 tf Variable conv2d transpose 2 kernel 0 shape 5 5 16 8 dtype float32 tf Variable conv2d transpose 2 bias 0 shape 16 dtype float32 tf Variable conv2d transpose 3 kernel 0 shape 9 9 32 16 dtype float32 tf Variable conv2d transpose 3 bias 0 shape 32 dtype float32 tf Variable pos out kernel 0 shape 2 2 32 1 dtype float32 tf Variable pos out bias 0 shape 1 dtype float32 tf Variable cos out kernel 0 shape 2 2 32 1 dtype float32 tf Variable cos out bias 0 shape 1 dtype float32 tf Variable sin out kernel 0 shape 2 2 32 1 dtype float32 tf Variable sin out bias 0 shape 1 dtype float32 tf Variable width out kernel 0 shape 2 2 32 1 dtype float32 tf Variable width out bias 0 shape 1 dtype float32 tf Variable RMSprop iter 0 shape dtype int64 tf Variable RMSprop decay 0 shape dtype float32 tf Variable RMSprop learning rate 0 shape dtype float32 tf Variable RMSprop momentum 0 shape dtype float32 tf Variable RMSprop rho 0 shape dtype float32 tf Variable RMSprop conv2d 1 kernel rms 0 shape 9 9 1 32 dtype float32 tf Variable RMSprop conv2d 1 bias rms 0 shape 32 dtype float32 tf Variable RMSprop conv2d 2 kernel rms 0 shape 5 5 32 16 dtype float32 tf Variable RMSprop conv2d 2 bias rms 0 shape 16 dtype float32 tf Variable RMSprop conv2d 3 kernel rms 0 shape 3 3 16 8 dtype float32 tf Variable RMSprop conv2d 3 bias rms 0 shape 8 dtype float32 tf Variable RMSprop conv2d transpose 1 kernel rms 0 shape 3 3 8 8 dtype float32 tf Variable RMSprop conv2d transpose 1 bias rms 0 shape 8 dtype float32 tf Variable RMSprop conv2d transpose 2 kernel rms 0 shape 5 5 16 8 dtype float32 tf Variable RMSprop conv2d transpose 2 bias rms 0 shape 16 dtype float32 tf Variable RMSprop conv2d transpose 3 kernel rms 0 shape 9 9 32 16 dtype float32 tf Variable RMSprop conv2d transpose 3 bias rms 0 shape 32 dtype float32 tf Variable RMSprop pos out kernel rms 0 shape 2 2 32 1 dtype float32 tf Variable RMSprop pos out bias rms 0 shape 1 dtype float32 tf Variable RMSprop cos out kernel rms 0 shape 2 2 32 1 dtype float32 tf Variable RMSprop cos out bias rms 0 shape 1 dtype float32 tf Variable RMSprop sin out kernel rms 0 shape 2 2 32 1 dtype float32 tf Variable RMSprop sin out bias rms 0 shape 1 dtype float32 tf Variable RMSprop width out kernel rms 0 shape 2 2 32 1 dtype float32 tf Variable RMSprop width out bias rms 0 shape 1 dtype float32",
+    "created_at": "2020-02-13T13:28:51Z",
+    "closed_at": null,
+    "user": "seivazi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-19T01:54:32Z",
+        "body": "Hello I just spent a little bit of time getting the ggcnn package up and running to test this out Just to make sure we re on the same codebase I have pushed a couple of small changes which fix the session bugs you mentioned in another thread I have also pushed an updated realsense wrist launch file that works with the newest realsense2 camera package annoying they seem to have a bunch of things but it works now The code in the ggcnn package i e both ggcnn predict rt py and ggcnn service launch as it is right now runs for me on Ubuntu 18 04 Ros Melodic Python 2 7 tensorflow gpu 1 14 cuda 10 1 and CuDNN 7 6 5"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "AttributeError: 'Pose' object has no attribute 'pose'",
+    "state": "closed",
+    "body": "In the panda base grasping controller py self best grasp position z max self best grasp pose position z 0 01 0 026 AttributeError Pose object has no attribute pose Shouldn t be without pose like this self best grasp position z max self best grasp position z 0 01 0 026 I get similar error for self pc set gripper self best grasp width wait False because there is no width Am I missing something",
+    "created_at": "2020-02-12T14:15:32Z",
+    "closed_at": "2020-02-13T11:34:13Z",
+    "user": "seivazi",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-12T21:53:41Z",
+        "body": "Can you tell me which scripts you are running I assume that it s expecting best grasp to be a Grasp type message which does have all of those attributes"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-13T11:34:10Z",
+        "body": "Thank you The error is not any more valid since I fixed velo control loop"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "raise NotImplementedError() ---> velo_ok = self.__velo_control_loop()",
+    "state": "closed",
+    "body": "Hi dougsm When I run rosrun mvp grasping panda mvp grasp py I get following error File catkin ws src mvp grasp mvp grasping ros nodes panda mvp grasp py line 62 in module agc go File catkin ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 327 in go velo ok self velo control loop File catkin ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 256 in velo control loop raise NotImplementedError NotImplementedError At the same time backend throw a long error ERROR 1581502337 956858 Error processing request 2 root error s found 0 Failed precondition Error while reading resource variable width out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost width out bias N10tensorflow3VarE does not exist node width out BiasAdd ReadVariableOp sin out BiasAdd 39 1 Failed precondition Error while reading resource variable width out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost width out bias N10tensorflow3VarE does not exist node width out BiasAdd ReadVariableOp 0 successful operations 0 derived errors ignored Traceback most recent call last n File opt ros melodic lib python2 7 dist packages rospy impl tcpros service py line 629 in handle request n response convert return to response self handler request self response class n File home seivazi catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 128 in update service handler n points angle width img predict depth crop process depth False depth nan mask depth nan mask n File home seivazi catkin ws src mvp grasp ggcnn src ggcnn ggcnn py line 67 in predict n pred out model predict depth reshape 1 300 300 1 n File home seivazi local lib python2 7 site packages tensorflow python keras engine training py line 1078 in predict n callbacks callbacks n File home seivazi local lib python2 7 site packages tensorflow python keras engine training arrays py line 363 in model iteration n batch outs f ins batch n File home seivazi local lib python2 7 site packages tensorflow python keras backend py line 3292 in call n run metadata self run metadata n File home seivazi local lib python2 7 site packages tensorflow python client session py line 1458 in call n run metadata ptr n FailedPreconditionError 2 root error s found n 0 Failed precondition Error while reading resource variable width out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost width out bias N10tensorflow3VarE does not exist n t node width out BiasAdd ReadVariableOp n t sin out BiasAdd 39 n 1 Failed precondition Error while reading resource variable width out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost width out bias N10tensorflow3VarE does not exist n t node width out BiasAdd ReadVariableOp n0 successful operations n0 derived errors ignored n",
+    "created_at": "2020-02-12T10:16:32Z",
+    "closed_at": "2020-02-13T11:32:46Z",
+    "user": "seivazi",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-12T20:54:28Z",
+        "body": "I guess I found out where the error comes from https stackoverflow com questions 14898197 override private method in python I will test it tomorrow"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-12T21:49:07Z",
+        "body": "Hmm yeah I think I probably goofed up some code refactoring here Just change all of the double underscore to single underscore and you ll be good"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "No such file or directory: '~/0205_152707_.txt'",
+    "state": "closed",
+    "body": "Running rosrun mvp grasping panda mvp grasp py throw an error catkin ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 33 in write line with open self out file a as f IOError Errno 2 No such file or directory 0205 152707 txt I fixed it by giving a fixed file name but you may change it differently",
+    "created_at": "2020-02-05T14:34:55Z",
+    "closed_at": "2020-02-12T10:10:44Z",
+    "user": "seivazi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-10T10:08:54Z",
+        "body": "Sorry I didn t share I have this diff git a mvp grasping src mvp grasping panda base grasping controller py b mvp grasping src mvp grasping panda base grasping controller py index 0aa091e b017a23 100644 a mvp grasping src mvp grasping panda base grasping controller py b mvp grasping src mvp grasping panda base grasping controller py 28 6 28 10 class Logger def init self output desc run output dir dt datetime datetime now strftime m d H M S self out file os path join output dir s s txt dt output desc dirname os path dirname self out file if not os path exists dirname os makedirs dirname def write line self l with open self out file a as f"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "communication_constraints_violation",
+    "state": "closed",
+    "body": "Hi After setting up two ROS machine PC1 master with realtime kernel roscore roslaunch mvp grasping robot bringup launch Listening to move group monitored planning scene PC2 client roslaunch mvp grasping wrist realsense launch Following error appear in PC1 ERROR 1580222432 680721801 libfranka Move command aborted motion aborted by reflex communication constraints violation control command success rate 0 52 Any suggestion",
+    "created_at": "2020-01-28T14:49:26Z",
+    "closed_at": "2020-01-29T12:07:54Z",
+    "user": "seivazi",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-28T21:44:24Z",
+        "body": "This error communication constraints violation control command success rate 0 52 Happens when the network connection between the RT kernel machine and the panda is not able to transmit the control signal at 1khz as required by the panda Normally it requires a dedicated 1Gbps network connection Are you sharing network bandwidth with ROS and especially streaming camera images Depending on your networking equipment it can saturate and fail I would recommend having one network connection for ROS internet etc and a separate dedicated network link to the panda I believe this is also what is recommended by Franka This is the setup that we use and it works reliably Relevant Franka FAQ is here which has a lot of other troubleshooting tips for this error https frankaemika github io docs troubleshooting html motion stopped due to discontinuities or communication constraints violation"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-29T12:07:41Z",
+        "body": "You are right Once I follow your instruction The error went a way"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Where is `grip_ready` pose defined?",
+    "state": "open",
+    "body": "After fixing another minor issue in the panda mvp grasp py file regarding logging I m facing this error rosrun mvp grasping panda mvp grasp py INFO moveit python wrappers 1579259656982902166 core RobotModel buildModel 93 Loading robot model panda INFO moveit python wrappers 1579259656982902166 core RobotModel buildModel 93 Loading robot model panda INFO moveit python wrappers 1579259656982902166 planning interface MoveGroupInterface MoveGroupInterfaceImpl MoveGroupInterfaceImpl 178 Ready to take commands for planning group panda arm hand No weight Success 1 0 0 Name of this experiment asdasd Press Enter to Start ERROR moveit python wrappers 1579259656982902166 planning interface MoveGroupInterface setNamedTarget 1690 The requested named target grip ready does not exist Traceback most recent call last File home ap mvp ws src mvp grasp mvp grasping ros nodes panda mvp grasp py line 62 in module agc go File home ap mvp ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 307 in go self pc goto named pose grip ready velocity 0 25 File home ap mvp ws src mvp grasp franka control wrappers src franka control wrappers panda commander py line 146 in goto named pose self active group set named target pose name File opt ros kinetic lib python2 7 dist packages moveit commander move group py line 326 in set named target raise MoveItCommanderException Unable to set target s Is the target within bounds name moveit commander exception MoveItCommanderException Unable to set target grip ready Is the target within bounds My best guess is you having this pose defined somewhere else on your system possibly via the MoveIt Setup Assistant The same is probably true of the drop box pose Maybe we could set them inside PandaCommander instead of there so they re available here as well for configuration",
+    "created_at": "2020-01-17T14:49:27Z",
+    "closed_at": null,
+    "user": "aPonza",
+    "comments_count": 37,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-19T23:16:00Z",
+        "body": "Hey aPonza I ve just had a look but unfortunately I can t find the original joint values for those two named poses As you say I guess they were probably both part of the moveit config in franka ros so didn t get saved grip ready was simply a pose roughly above the picking bin and drop box was above the destination bin Since these are both setup specific there s no harm in just choosing two poses that work for you"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-20T14:09:39Z",
+        "body": "Hey aPonza It would be great If you could push your changes any time soon"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-01-21T13:38:39Z",
+        "body": "I m temporarily working on another thing for a couple weeks I was editing franka control wrappers src franka control wrappers panda commander py like this diff git a franka control wrappers src franka control wrappers panda commander py b franka control wrappers src franka control wrappers panda commander py index 6abe106 3e606ee 100644 a franka control wrappers src franka control wrappers panda commander py b franka control wrappers src franka control wrappers panda commander py 22 6 22 17 class PandaCommander object self set group group name self reset publisher rospy Publisher franka control error recovery goal ErrorRecoveryActionGoal queue size 1 set named poses def set named poses self Set poses used in the application via their name translation then rotation x y z x y z w self active group remember joint values self grip ready list to pose self active group remember joint values self drop box list to pose def print debug info self if self active group Eevntually I d like to make it configurable via a yaml but as a temp fix this should work if you input the two poses"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-21T20:46:06Z",
+        "body": "aPonza thank you for sharing this I will continue with it for at least one more week Are you running whole system in one PC If yes did you mange to get real time kernel working with NVIDIA driver dougsm suggested to use two PCs One for robot control and other for GG CNN camera and scale The problem is that I don t know how to do it Do I need to build two catkin works pace Do you have any suggestion"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-22T03:50:46Z",
+        "body": "seivazi ROS has all of the functionality built in to run on separate networked machines It s as simple as building the nodes on the machine on which they will be run and then setting the IP address of the master machine via the ROS MASTER URI environment variable See http wiki ros org ROS Tutorials MultipleMachines aPonza thanks that s a great way of doing it"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-24T11:44:27Z",
+        "body": "Hi dougsm and aPonza do you remember how did you managed to get Franka working with ROS I follow their instructions both installing via apt and build from source I see aPonza had encounter many errors while installing franka ros Here is not place to discuss Franka issues but I thought maybe you have some hint for me Edit I get the franka working by updating the firmware of the robot and also try an older version of panda move it config file"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-27T23:41:56Z",
+        "body": "Hi seivazi Sorry for the slow reply and glad you got it working As far as I know there should be no reason to use the older versions of the code We roboticvisionorg have a custom installer and set of control wrappers for the panda which makes life a lot easier You can find them here https roboticvisionorg github io Add our repositories https roboticvisionorg github io panda setup ROS Panda Real time kernel setup https roboticvisionorg github io rv manipulation driver Docs for our custom controllers You can also ask any questions in our repo https github com RoboticVisionOrg rv manipulation driver"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-28T09:07:05Z",
+        "body": "Thank you for the links"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-30T22:01:35Z",
+        "body": "Hi aPonza I tried your solution for Unable to set target grip ready error I gives me some error related to number of argument for self active group remember joint values self grip ready list to pose Do we need self there I just wanna make sure maybe you did some other changes too dougsm do you have other suggestion were to hard code grip ready and dopbox"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-01-31T09:41:30Z",
+        "body": "Hey just got a moment to continue here you re right in that self is needed and in fact this is what I currently have diff git a franka control wrappers src franka control wrappers panda commander py b franka control wrappers src franka control wrappers panda commander py index 6abe106 7bd74ab 100644 a franka control wrappers src franka control wrappers panda commander py b franka control wrappers src franka control wrappers panda commander py 22 6 22 20 class PandaCommander object self set group group name self reset publisher rospy Publisher franka control error recovery goal ErrorRecoveryActionGoal queue size 1 self set named poses def set named poses self Set poses used in the application via their name this pose self active group get current pose print this pose translation then rotation x y z x y z w self active group remember joint values self grip ready this pose 0 8680978268436771 0 6478007817770287 0 35404076143321106 2 1504153873157840 0 2511609577867720 1 5078568387561373 0 34946772768514023 self active group remember joint values self drop box this pose 0 8263036876751351 1 0896425800490797 0 82033907273777810 0 8825330551727532 0 7649754029929701 1 7213938517864830 2 28231075602280060 def print debug info self if self active group I m also facing the number of arguments error so I tried to add this get current pose to check what should work but here the error is Traceback most recent call last File home ap mvp ws src mvp grasp mvp grasping ros nodes panda mvp grasp py line 61 in module agc MVPGraspController File home ap mvp ws src mvp grasp mvp grasping ros nodes panda mvp grasp py line 17 in init super MVPGraspController self init File home ap mvp ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 174 in init self pc PandaCommander group name panda arm hand File home ap mvp ws src mvp grasp franka control wrappers src franka control wrappers panda commander py line 26 in init self set named poses File home ap mvp ws src mvp grasp franka control wrappers src franka control wrappers panda commander py line 32 in set named poses this pose self active group get current pose File opt ros kinetic lib python2 7 dist packages moveit commander move group py line 114 in get current pose raise MoveItCommanderException There is no end effector to get the pose of moveit commander exception MoveItCommanderException There is no end effector to get the pose of Let me see what I can find"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-05T16:42:25Z",
+        "body": "I noticed few things to pass number of argument error we need to use self active group remember joint values grip ready pose So there is no need to use self this pose self active group get current pose doesn t work because of panda I believe Because eef link self active group get end effector link doesn t return anything I could pass it by writing something like this this pose self active group get current pose end effector link panda link8 pose But now I m confused because get current pose return a pose but in self active group remember joint values we talk about join instead of pose So I thought to use something like this this pose self active group get current joint values self active group remember joint values grip ready this pose self active group remember joint values drop box this pose It throw following error catkin ws src mvp grasp franka control wrappers src franka control wrappers panda commander py line 165 in goto named pose self active group set named target pose name File opt ros melodic lib python2 7 dist packages moveit commander move group py line 326 in set named target raise MoveItCommanderException Unable to set target s Is the target within bounds name moveit commander exception MoveItCommanderException Unable to set target grip ready Is the target within bounds Any Idea aPonza dougsm"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-07T14:50:35Z",
+        "body": "I can see where my error was I wasn t including the two joint values for the fingers Anyways it s weird because it goes to ready but not to grip ready and then again after going to ready I get a similar error to the previous one about the end effector so maybe that part still has to be fixed before anything works dougsm did you have other edits on panda moveit config or have you ever faced these end effector issues"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-09T22:53:27Z",
+        "body": "The only changes that I would have made to the panda moveit config would be to add the named poses to the srdf and nothing else Regarding the other issues I have to admit that I m unsure However do keep in mind that the franka ros and panda moveit config code have undergone fairly major changes in the last 12 months If you re having problems with the moveit interface it might be better to ask over on their repo Also see my above post with the ACRV panda control wrappers which may simplify things for you by abstracting some of the franka libraries"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-10T14:47:32Z",
+        "body": "I checked panda moveit config and I only see trajopt changes and a couple extra default poses but nothing that would bother a missing end effector Similarly for franka ros I can see tens of commits regarding dual arm usage the services being moved but nothing which should affect the end effector Are you referring to something in particular I tried rebuilding with an updated franka ros using both libfranka 0 7 0 and master and panda moveit config master but nothing seemed to change EDIT also drivers are for melodic and I m on kinetic"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-12T10:00:35Z",
+        "body": "aPonza I fixed the end effector error The error has something to do with group name which by defult is None in the panda commander py Here what I did def init self group name panda arm hand self robot moveit commander RobotCommander self scene moveit commander PlanningSceneInterface self groups self active group None self set group panda arm I don t understand why only this combination works Now I get raise NotImplementedError velo ok self velo control loop error"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-13T09:38:31Z",
+        "body": "Mmm you might actually want to change this line https github com dougsm mvp grasp blob 48330d45a135a5cf1bb058909ed1323be200069f mvp grasping src mvp grasping panda base grasping controller py L170 to say panda arm instead of the other two edits you made It does do more than before but since method go is not implemented in MVPGraspController it goes to call BaseGraspController s go which uses its own velo control loop instead of MVPGraspController s Some methods need to be overridden you can temporarily copy MVPGraspController s body in BaseGraspController s method This leads to tensorflow issues which is what I suspected would happen installing tensorflow instead of tensorflow gpu Not sure this one is solvable ERROR ap grasping velo invoke callback 753 bad callback bound method MVPGraspController update callback of main MVPGraspController object at 0x7f5b41563550 Traceback most recent call last File opt ros kinetic lib python2 7 dist packages rospy topics py line 750 in invoke callback cb msg File home ap mvp ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 226 in update callback res self entropy srv File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 435 in call return self call args kwds File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 515 in call responses transport receive once File opt ros kinetic lib python2 7 dist packages rospy impl tcpros base py line 727 in receive once p read messages b msg queue sock File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 353 in read messages self read ok byte b sock File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 336 in read ok byte raise ServiceException service s responded with an error s self resolved name str ServiceException service grasp entropy node update grid responded with an error error processing request Error while reading resource variable conv2d transpose 3 bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost conv2d transpose 3 bias N10tensorflow3VarE does not exist node conv2d transpose 3 BiasAdd ReadVariableOp similar errors follow EDIT At the same time the grasp entropy service node returns errors like ERROR grasp entropy node error handler 574 Error processing request Error while reading resource variable conv2d transpose 2 bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost conv2d transpose 2 bias N10tensorflow3VarE does not exist node conv2d transpose 2 BiasAdd ReadVariableOp Traceback most recent call last n File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 625 in handle request n response convert return to response self handler request self response class n File home ap mvp ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 128 in update service handler n points angle width img predict depth crop process depth False depth nan mask depth nan mask n File home ap mvp ws src mvp grasp ggcnn src ggcnn ggcnn py line 67 in predict n pred out model predict depth reshape 1 300 300 1 n File home ap local lib python2 7 site packages tensorflow python keras engine training py line 1078 in predict n callbacks callbacks n File home ap local lib python2 7 site packages tensorflow python keras engine training arrays py line 363 in model iteration n batch outs f ins batch n File home ap local lib python2 7 site packages tensorflow python keras backend py line 3292 in call n run metadata self run metadata n File home ap local lib python2 7 site packages tensorflow python client session py line 1458 in call n run metadata ptr n FailedPreconditionError Error while reading resource variable conv2d transpose 2 bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost conv2d transpose 2 bias N10tensorflow3VarE does not exist n t node conv2d transpose 2 BiasAdd ReadVariableOp n ERROR grasp entropy node error handler 574 Error processing request Error while reading resource variable width out kernel from Container localhost This could mean that the variable was uninitialized Not found Resource localhost width out kernel N10tensorflow3VarE does not exist similar errors follow Reading the error more thoroughly it seems more of a CNN initialization issue not necessarily a tensorflow one"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-13T11:37:58Z",
+        "body": "I m in the same stage with following error the grasp entropy service node returns errors like ERROR 1581593428 562427 Error processing request 2 root error s found 0 Failed precondition Error while reading resource variable cos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost cos out bias N10tensorflow3VarE does not exist node cos out BiasAdd ReadVariableOp sin out BiasAdd 39 1 Failed precondition Error while reading resource variable cos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost cos out bias N10tensorflow3VarE does not exist node cos out BiasAdd ReadVariableOp 0 successful operations 0 derived errors ignored Traceback most recent call last n File opt ros melodic lib python2 7 dist packages rospy impl tcpros service py line 629 in handle request n response convert return to response self handler request self response class n File home seivazi catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 128 in update service handler n points angle width img predict depth crop process depth False depth nan mask depth nan mask n File home seivazi catkin ws src mvp grasp ggcnn src ggcnn ggcnn py line 67 in predict n pred out model predict depth reshape 1 300 300 1 n File home seivazi local lib python2 7 site packages tensorflow python keras engine training py line 1078 in predict n callbacks callbacks n File home seivazi local lib python2 7 site packages tensorflow python keras engine training arrays py line 363 in model iteration n batch outs f ins batch n File home seivazi local lib python2 7 site packages tensorflow python keras backend py line 3292 in call n run metadata self run metadata n File home seivazi local lib python2 7 site packages tensorflow python client session py line 1458 in call n run metadata ptr n FailedPreconditionError 2 root error s found n 0 Failed precondition Error while reading resource variable cos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost cos out bias N10tensorflow3VarE does not exist n t node cos out BiasAdd ReadVariableOp n t sin out BiasAdd 39 n 1 Failed precondition Error while reading resource variable cos out bias from Container localhost This could mean that the variable was uninitialized Not found Resource localhost cos out bias N10tensorflow3VarE does not exist n t node cos out BiasAdd ReadVariableOp n0 successful operations n0 derived errors ignored n aPonza you are right initially I thought it is tensorflow issue and try to follow https github com tensorflow tensorflow issues 28287 but that is not the problem It seems there is a missing variable dougsm any suggestion"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-13T14:02:37Z",
+        "body": "git diff ggcnn src ggcnn ggcnn py diff git a ggcnn src ggcnn ggcnn py b ggcnn src ggcnn ggcnn py index 396e627 8a49dc5 100644 a ggcnn src ggcnn ggcnn py b ggcnn src ggcnn ggcnn py 8 10 8 17 import tensorflow as tf from tensorflow keras models import load model from dougsm helpers timeit import TimeIt from tensorflow python keras backend import set session session tf keras backend get session init tf global variables initializer session run init graph tf get default graph set session session MODEL FILE models epoch 29 model hdf5 model load model path join path dirname file MODEL FILE graph tf get default graph TimeIt print output False For debugging timing 58 12 65 16 def process depth image depth crop size out size 300 return mask False crop def predict depth process depth True crop size 300 out size 300 depth nan mask None filters 2 0 1 0 1 0 global sess global graph if process depth depth depth nan mask process depth image depth crop size out size True Inference depth np clip depth depth mean 1 1 with graph as default set session session pred out model predict depth reshape 1 300 300 1 points out pred out 0 squeeze as per this https github com tensorflow tensorflow issues 28287 issuecomment 495005162 which then leads to this ERROR ap grasping velo invoke callback 753 bad callback bound method MVPGraspController update callback of main MVPGraspController object at 0x7fd5dfc2fb10 Traceback most recent call last File opt ros kinetic lib python2 7 dist packages rospy topics py line 750 in invoke callback cb msg File home ap mvp ws src mvp grasp mvp grasping src mvp grasping panda base grasping controller py line 226 in update callback res self entropy srv File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 435 in call return self call args kwds File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 515 in call responses transport receive once File opt ros kinetic lib python2 7 dist packages rospy impl tcpros base py line 727 in receive once p read messages b msg queue sock File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 353 in read messages self read ok byte b sock File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 336 in read ok byte raise ServiceException service s responded with an error s self resolved name str ServiceException service grasp entropy node update grid responded with an error error processing request Weights sum to zero can t be normalized Please note I m not used to tensorflow the code can be improved UPDATE gdb gave me more insight this is the cause of the update grid error my linebreaks for clarity ERROR grasp entropy node error handler 574 Error processing request Weights sum to zero can t be normalized Traceback most recent call last File opt ros kinetic lib python2 7 dist packages rospy impl tcpros service py line 625 in handle request response convert return to response self handler request self response class File home ap mvp ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 172 in update service handler q am neigh avg np average q am neigh weights neighbour weights axis 0 File home ap local lib python2 7 site packages numpy lib function base py line 422 in average Weights sum to zero can t be normalized ZeroDivisionError Weights sum to zero can t be normalized as well as home ap mvp ws src mvp grasp mvp grasping ros nodes grasp entropy node py 231 RuntimeWarning divide by zero encountered in true divide d from prev view np clip 1 np sqrt self xv x 2 self yv y 2 0 cam p z z 2 self dist from prev view scale 0 1 1 kl"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-13T16:49:43Z",
+        "body": "Ok actually it seems to almost work I did not have any pickable under the camera but adding one started moving the robot and the eef went some centimeters off of it Now it s likely just a matter of publishing the correct transform from the flange to the camera which is bound to be wrong since we re using panda arm instead of panda arm hand I m guessing the division by zero errors are due to not having anything pickable they could be handled more gracefully I ll try tomorrow"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-13T19:42:10Z",
+        "body": "Looking forward to test your solution tomorrow I also noticed about offset of transformation I couldn t figure out where should I changed it"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-14T08:53:32Z",
+        "body": "Hi aPonza I tried your changes to session but still get the same error as before Error processing request 2 root error s found Could you check once again what was your last changes I can see for example a problem with global sess which is unused Could you tell me which version of tensorflow and cuda are you using I use tf 14 and Cuda 10 an wonder whether that is the problem"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-14T09:45:02Z",
+        "body": "I don t have a gpu on my workbench at the moment hence This leads to tensorflow issues which is what I suspected would happen installing tensorflow instead of tensorflow gpu from here https github com dougsm mvp grasp issues 8 issuecomment 585636694 The global sess is a mistake use global session instead might be useless since it s probably in the same thread as where the global variable is declared and overall is a copy paste job at best I m on tensorflow 1 14 0 no CUDA here since the GPU is elsewhere at the moment I have other changes on mvp grasping ros nodes panda mvp grasp py and mvp grasping src mvp grasping panda base grasping controller py but I thought they were mostly cosmetic it s what I did instead of copying MVPController s body into the base controller I ll send a PR with everything as soon as I can get the transform right on the final bit before the grasp setting it up so that whoever uses panda arm hand gets it right still Can you maybe post the 2 errors you get see if I had them and didn t realize"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-14T09:55:40Z",
+        "body": "Thank you for your point The problem could be tensorflow gpu I m now trying to play with different version of tf The 2 Error is as below ERROR 1581673861 842248 Error processing request 2 root error s found 0 Unknown Failed to get convolution algorithm This is probably because cuDNN failed to initialize so try looking to see if a warning log message was printed above node conv2d 1 Conv2D 1 Unknown Failed to get convolution algorithm This is probably because cuDNN failed to initialize so try looking to see if a warning log message was printed above node conv2d 1 Conv2D sin out BiasAdd 351 0 successful operations 0 derived errors ignored Traceback most recent call last n File opt ros melodic lib python2 7 dist packages rospy impl tcpros service py line 629 in handle request n response convert return to response self handler request self response class n File home seivazi catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 128 in update service handler n points angle width img predict depth crop process depth False depth nan mask depth nan mask n File home seivazi catkin ws src mvp grasp ggcnn src ggcnn ggcnn py line 100 in predict n pred out model predict depth reshape 1 300 300 1 n File home seivazi local lib python2 7 site packages tensorflow core python keras engine training py line 908 in predict n use multiprocessing use multiprocessing n File home seivazi local lib python2 7 site packages tensorflow core python keras engine training arrays py line 723 in predict n callbacks callbacks n File home seivazi local lib python2 7 site packages tensorflow core python keras engine training arrays py line 394 in model iteration n batch outs f ins batch n File home seivazi local lib python2 7 site packages tensorflow core python keras backend py line 3476 in call n run metadata self run metadata n File home seivazi local lib python2 7 site packages tensorflow core python client session py line 1472 in call n run metadata ptr n UnknownError 2 root error s found n 0 Unknown Failed to get convolution algorithm This is probably because cuDNN failed to initialize so try looking to see if a warning log message was printed above n t node conv2d 1 Conv2D n 1 Unknown Failed to get convolution algorithm This is probably because cuDNN failed to initialize so try looking to see if a warning log message was printed above n t node conv2d 1 Conv2D n t sin out BiasAdd 351 n0 successful operations n0 derived errors ignored n"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-14T10:30:00Z",
+        "body": "aPonza with tensorflow cpu I don t get the error as above anymore but then I get a similar error as yours with ZeroDivisionError but for me is like below even with object located under camera view I noticed where my error comes but don t know how to fixed it It is from mvp grasp yml and histogram bounds I don t know why changing x y cause dimension miss match seivazi catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 231 in update service handler n d from prev view np clip 1 np sqrt self xv x 2 self yv y 2 0 cam p z z 2 self dist from prev view scale 0 1 1 kl n ValueError operands could not be broadcast together with shapes 72 68 68 72 72 68 n P S I fixed the ZeroDivisionError by changing the dist from prev view scale in mvp grasp yml file But I don t understand what is this distance dougsm"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-17T04:44:36Z",
+        "body": "The distance from previous view was an extra loss for the next best view calculation which favoured viewpoints which were different from the current viewpoint hence the x y z distance calculation though we didn t end up using this in order to simplify the controller You can comment out that line if you want and set d from prev view to zero or as I assume you ve done set the config value to a non zero number"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-17T14:10:53Z",
+        "body": "with tensorflow cpu I don t get the error as above anymore You might have an incompatible cuDNN maybe"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-17T16:39:20Z",
+        "body": "Thank you aPonza do you have any idea which version of cuDNN should I use dougsm"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-02-19T01:58:15Z",
+        "body": "seivazi aPonza I have replied in the other issue which was about tensorflow versions I have also pushed some small updates that fix things that you were discussing Are the moveit related issues here fixed Now that I have some time I am updating the mvp grasping package to work with our in house panda controllers https roboticvisionorg github io which should help abstract away a lot of the issues that you have been having and will definitely then be working with the newest libfranka and moveit configs"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-02-19T08:32:15Z",
+        "body": "Cheers I should probably push a PR with the changes before you start then"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-02-19T11:17:38Z",
+        "body": "aPonza it will be great if you could push your changes any time soon I have a problem with franka movement commands at panda base grasping controller py when I try to use self pc goto named pose grip ready velocity 0 25 or any other goto pose method from panda commander to bring the robot in top of the picking and dropping box franka shakes a lot and stop Somehow it works for one iteration and then such behaviour appear I tried different poses but no chance yet Here are my steps in panda base grasping controller py 1 self pc goto named pose grip ready velocity 0 25 works fine 2 Execute the Grasp grasp ret self execute best grasp works fine 3 Here when I wanna come back to any position for example with self pc goto named pose grip ready velocity 0 25 robot start to shake so much and fail to move any more I wonder if it has something to do with the fact that after Execute the Grasp we need to clear memory or something"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Franka Emika installation",
+    "state": "closed",
+    "body": "I m confused about installing Franka Emika Do i need to Set up the real time kernel I m following their instruction https frankaemika github io docs installation linux html for franka ros but having some error and wonder about real time kernel because It seems NVIDIA binary drivers are not supported on PREEMPT RT kernels",
+    "created_at": "2020-01-16T16:25:12Z",
+    "closed_at": "2020-01-16T23:16:24Z",
+    "user": "seivazi",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-16T23:16:24Z",
+        "body": "Yes as far as I know you will require the real time kernel for the franka emika I don t know about the compatibility with the NVIDIA drivers but if it helps I usually run the GGCNN inference realsense camera scales etc on a separate PC with a dedicated computer with the RT kernel for controlling the robot"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-17T11:16:17Z",
+        "body": "Thank dougsm for the advise with the second computer I will do the same Do I need to change something in your ROS wrapper in order to get connected to the second machine which connected to robot Should franka control wrappers moved to that machine P s Sorry for so many questions You have done a great work Hopefully these discussions make it easier for beginners like me to start and contribute"
+      },
+      {
+        "user": "mkt1412",
+        "created_at": "2022-01-17T09:27:15Z",
+        "body": "Thank dougsm for the advise with the second computer I will do the same Do I need to change something in your ROS wrapper in order to get connected to the second machine which connected to robot Should franka control wrappers moved to that machine P s Sorry for so many questions You have done a great work Hopefully these discussions make it easier for beginners like me to start and contribute Hi I m facing the same problem Have you solved it Thanks"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2022-05-04T10:35:22Z",
+        "body": "It is possible to split the project to multiple PCs However for simplicity you might just clone the whole repo in both PC and just run relevant services in your target PC"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "serialization error: model file missing",
+    "state": "closed",
+    "body": "Hi Doug You have epoch 29 model hdf5 file here but I found also epoch 24 iou 0 82 morezoom file Which one should we use Using epoch 29 throw following error anaconda3 envs mvp2 lib python2 7 site packages torch serialization py line 532 in load magic number pickle module load f cPickle UnpicklingError invalid load key H",
+    "created_at": "2020-01-13T11:27:13Z",
+    "closed_at": "2020-02-12T10:11:10Z",
+    "user": "seivazi",
+    "comments_count": 14,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-13T23:41:48Z",
+        "body": "epoch 29 model hdf5 is the correct file Which version of tensorflow are you using Sounds like it could be a version issue The model was probably created with an older version of TF"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-14T12:40:43Z",
+        "body": "I m using Tensorflow 1 11 and tf keras version 2 1 6 tf What I found so far You have two version of ggcnn ggcnn py calling to epoch 29 model hdf5 cause following error local lib python2 7 site packages tensorflow python keras engine saving py line 251 in load model training config weighted metrics KeyError weighted metrics Error seems to be related of Tensorflow and tf keras version Which version did you use for saving the model I found https stackoverflow com questions 52753846 error in load a model saved by callbakcs modelcheckpoint in keras solution but not sure ggcnn torch py I guess we should not use epoch 29 model here and that cause previous error anaconda3 envs mvp2 lib python2 7 site packages torch serialization py line 532 in load magic number pickle module load f cPickle UnpicklingError invalid load key H Do you have a separate model for torch version"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-01-16T11:40:42Z",
+        "body": "The model was probably created with an older version of TF With HDFView I can see epoch 29 model hdf5 was created with keras 2 0 8 which seems to be included in tensorflow 1 4 0 I changed the version in requirements and installed 1 4 verified and indeed tensorflow keras version is 2 0 8 tf but the error persists so H is still an invalid key"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-16T16:01:20Z",
+        "body": "Thank you for checking on this Is epoch 29 model hdf5 suppose to work for both ggcnn py and ggcnn torch py"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-01-16T16:51:53Z",
+        "body": "AFAIK hdf5 models are compatible with pytorch if that s what you mean but I definitely don t understand the error message and why both torch and keras are used in the same project"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-16T23:12:50Z",
+        "body": "Hello The hdf5 model supplied is for the tensorflow keras implementation This version i e the version in ggcnn py is what should be running and is what is being imported by the ROS node The ggcnn torch py file is for compatibility with the updated ggcnn repository https github com dougsm ggcnn which has been ported to pytorch but I have not supplied a model for this pytorch by default uses pickled save files not hdf5 Judging by your issues it looks like the problem is that you are trying to import a keras model using pytorch ggcnn torch py I guess we should not use epoch 29 model here and that cause previous error anaconda3 envs mvp2 lib python2 7 site packages torch serialization py line 532 in load magic number pickle module load f cPickle UnpicklingError invalid load key H The hdf5 model can be imported using tensorflow 1 15 0 as per the requirements txt file and possibly other versions depending on compatibility Python 2 7 17 default Nov 27 2019 11 02 25 GCC 7 4 0 on linux2 Type help copyright credits or license for more information import tensorflow tensorflow version 1 15 0 tensorflow keras version 2 2 4 tf from tensorflow keras models import load model load model models epoch 29 model hdf5 lots of output from tensorflow tensorflow python keras engine training Model object at 0x7fd1942e6810"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-01-17T09:02:27Z",
+        "body": "the problem is that you are trying to import a keras model using pytorch Yup that s what s happening From the README Start the Multi View Picking backend roslaunch mvp grasping grasp entropy service launch This launches grasp entropy node py https github com dougsm mvp grasp blob 48330d45a135a5cf1bb058909ed1323be200069f mvp grasping launch grasp entropy service launch L4 which uses the torch implementation https github com dougsm mvp grasp blob 48330d45a135a5cf1bb058909ed1323be200069f mvp grasping ros nodes grasp entropy node py L17 Removing torch from said line I had to update back to tensorflow 1 14 0 1 15 0 doesn t exist according to my pip and I usually am very wary of upgrading pip but that might be the solution to that and now it all seems to work I ll add the microfix to the hotfix branch in PR 6"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-17T11:17:48Z",
+        "body": "Thank aPonza I will try it on Monday"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-19T22:49:32Z",
+        "body": "aPonza ah of course that s my bad I was looking in the two ggcnn nodes didn t remember that it was used elsewhere Thanks for the fix"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-03-12T13:28:35Z",
+        "body": "Hi dougsm Which dataset did you use to train your model is it based on JACQUARD DATASET"
+      },
+      {
+        "user": "aPonza",
+        "created_at": "2020-03-12T14:05:03Z",
+        "body": "You can read section 4 B in his paper https arxiv org pdf 1804 05172 pdf which is referred to in his other paper https arxiv org pdf 1809 08564 pdf as the used CNN"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-03-12T14:22:41Z",
+        "body": "Thank you aPonza for the hint It seems to be Dexnet ACRV and YCB but what confused me is the https github com dougsm ggcnn tree master utils data with the python file for Cornell and Jacquard dataset"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-03-12T23:24:42Z",
+        "body": "The model was originally trained on Cornell dataset as per Closing the loop for robotic grasping https arxiv org pdf 1804 05172 pdf The Jacquard dataset came out after this paper was published We added the Jacquard daset in the extended version of the paper https journals sagepub com doi full 10 1177 0278364919859066"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-03-16T07:48:55Z",
+        "body": "For comparison do you have trained model for each dataset separately E g a hdf5 file that is trained only with Cornell dataset"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "problem with roslaunch mvp_grasping grasp_entropy_service.launch",
+    "state": "closed",
+    "body": "Hi When I run roslaunch mvp grasping grasp entropy service launch I get following error Any idea Do i need to run any other commands before this Or do I need to be connected to the robot for running the back end Traceback most recent call last File catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py line 13 in module import dougsm helpers tf helpers as tfh File catkin ws src mvp grasp dougsm helpers src dougsm helpers tf helpers py line 12 in module listener tf2 ros TransformListener tfBuffer File opt ros melodic lib python2 7 dist packages tf2 ros transform listener py line 54 in init self last update rospy Time now File opt ros melodic lib python2 7 dist packages rospy rostime py line 155 in now return get rostime File opt ros melodic lib python2 7 dist packages rospy rostime py line 190 in get rostime raise rospy exceptions ROSInitException time is not initialized Have you called init node rospy exceptions ROSInitException time is not initialized Have you called init node Exception AttributeError TransformListener instance has no attribute tf sub in bound method TransformListener del of tf2 ros transform listener TransformListener instance at 0x7f404be0b870 ignored grasp entropy node 1 process has died pid 23736 exit code 1 cmd catkin ws src mvp grasp mvp grasping ros nodes grasp entropy node py name grasp entropy node log",
+    "created_at": "2020-01-10T15:06:28Z",
+    "closed_at": "2020-01-13T01:23:35Z",
+    "user": "seivazi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-13T01:23:35Z",
+        "body": "G day seivazi That s weird looks like something has changed in tf that requires the init node call first I ve pushed a small work around see the above commit"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "unused args [infra2_width,...",
+    "state": "closed",
+    "body": "Hi I m trying to replicate your experiment When running roslaunch mvp grasping wrist realsense launch I got unused args infra2 width error which seems to be fixed by commenting those argument from wrist realsense lunch file Please correct me if I m wrong Now roslaunch mvp grasping wrist realsense launch seems to run services but at the end I get following 09 01 15 27 46 757 WARNING 140586694735616 ds5 timestamp cpp 76 UVC metadata payloads not available Please refer to the installation chapter for details Waiting for service camera realsense2 camera manager set parameters 09 01 15 28 38 078 WARNING 140586550888192 types cpp 49 Out of frame resources 09 01 15 28 38 078 ERROR 140586550888192 synthetic stream cpp 47 Exception was thrown during user processing callback Do you get similar message in your side The camera D435 seems to be working with realsense viewer P s I m new to ROS so any extra instruction will be more than welcome Meanwhile I will proceed with running other parts Cheers",
+    "created_at": "2020-01-09T14:40:21Z",
+    "closed_at": "2020-01-20T09:18:39Z",
+    "user": "seivazi",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-09T22:59:48Z",
+        "body": "It looks like intel changed the parameters in the Realsense launch file between different versions you are completely correct to simply comment out those parameters Are you able to submit a pull request with the fixed launch file I don t get those warnings but I do get some other warnings At the end of the day I think as long as the data is coming through then it s fine"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-10T14:33:32Z",
+        "body": "I will submit a pull request once I mange to run whole system"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-29T12:13:50Z",
+        "body": "There is another problem with wrist realsense lunch file it is missing arg name tf prefix default arg camera which causes error in tf"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "missing hidapi in requirements",
+    "state": "closed",
+    "body": "I got missing hidapi error which can be fixed by sudo apt get install libhidapi dev",
+    "created_at": "2020-01-08T11:47:45Z",
+    "closed_at": "2020-01-13T01:24:40Z",
+    "user": "seivazi",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-08T23:07:34Z",
+        "body": "Hi seivazi Thanks for pointing this out I ve updated the readme and added a little more installation information to the scales interface package The scales interface package is only required if you happen to have compatible scales so I ve made it ignored by default"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-09T16:36:29Z",
+        "body": "Thank you for fast reply Now I get following error COULDNT CONNECT TO SCALES I checked the VID and PID and both are the same as yours I also change the serial number in scales launch with the one behind my scale At least for me I can not get Serial number in ubuntu Is it same for you Do I need to enable something in ubuntu for Hidapi to be able to read the scale or open USB There seems to be two implementations for Hidapi now I wonder about sudo apt get install libhidapi dev Here is full error INFO 1578586778 042945732 Serial number received 1061935027101 046a 0011 null 1532 0510 null 0922 8003 null 04d9 a086 null 062a 4102 null WARN 1578586778 043661421 COULDNT CONNECT TO SCALES scales 2 process has finished cleanly"
+      },
+      {
+        "user": "dougsm",
+        "created_at": "2020-01-09T22:55:28Z",
+        "body": "That s a difficult one to debug I m not 100 sure but there are a few things you can try 1 The device should appear as dev hidraw where is a number that you ll need to figure out You should be able to sudo cat dev hidraw and have nonsense data printed to the screen 2 Depending on the ubuntu version you may require udev rules Try adding SUBSYSTEM usb ACTION add MODE 0664 GROUP plugdev to a file etc udev rules d 50 usbdevice rules 3 Double check serial number reported by the scales using lsusb v Hope one of those helps"
+      },
+      {
+        "user": "seivazi",
+        "created_at": "2020-01-10T14:32:36Z",
+        "body": "Thank you for the help I try everything but I can t get serial number of DYMO lsusb v only gives me 3 for serial number However I maned to pass the error by replacing NULL instead of serial number in hid open It seems working now"
+      }
+    ]
+  }
+]

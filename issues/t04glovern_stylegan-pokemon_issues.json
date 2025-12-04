@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "title": "train.py setting  get wrong Dimensions of inputs should match: shape[0] = [4,512,8,8] vs. shape[1] = [16,1,4,4]",
+    "state": "open",
+    "body": "Traceback most recent call last File C Users User conda envs stylegan pokemon lib site packages tensorflow python client session py line 1356 in do call return fn args File C Users User conda envs stylegan pokemon lib site packages tensorflow python client session py line 1341 in run fn options feed dict fetch list target list run metadata File C Users User conda envs stylegan pokemon lib site packages tensorflow python client session py line 1429 in call tf sessionrun run metadata tensorflow python framework errors impl InvalidArgumentError 2 root error s found 0 Invalid argument ConcatOp Dimensions of inputs should match shape 0 4 512 8 8 vs shape 1 16 1 4 4 node GPU0 D loss D 4x4 MinibatchStddev concat TrainD ApplyGrads0 UpdateWeights cond pred id 1845 1 Invalid argument ConcatOp Dimensions of inputs should match shape 0 4 512 8 8 vs shape 1 16 1 4 4 node GPU0 D loss D 4x4 MinibatchStddev concat 0 successful operations 0 derived errors ignored I find out that in train py can t run with resolution 512 it will show wrong as top And it can run by changing to resolution 256 Maybe we miss some layer I still don t figure out why It will be grateful if someone can help me on this question",
+    "created_at": "2020-01-06T17:45:53Z",
+    "closed_at": null,
+    "user": "jacky22043",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

@@ -1,0 +1,757 @@
+[
+  {
+    "number": 37,
+    "title": "Grad-CAM for timeseries custom architecture",
+    "state": "open",
+    "body": "Hello I would like to use grad CAM to add explainability to my model train on multiple multivariate timeseries The idea would be to have something like this image https user images githubusercontent com 72007646 171171627 41cccc9e 1a2d 436a 8726 36e4602710af png found a couple of paper that do it Explainable Deep Neural Networks for Multivariate Time Series Predictions https www ijcai org proceedings 2019 0932 pdf XCM An Explainable Convolutional Neural Network for Multivariate Time Series Classification https arxiv org pdf 2009 04796 pdf but they dont explain how just that they use grad CAM keras https github com jacobgil keras grad cam I have tried to adapt grad CAM to my own model and adapt it for timeseries using this issue from grad cam github https github com jacobgil keras grad cam issues 23 but I am really strugelling to adapt it to my own network Do you have piece of code even for image cam so I could use grad CAM on my own network Thanks in advance",
+    "created_at": "2022-05-31T12:25:19Z",
+    "closed_at": null,
+    "user": "IKetchup",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 36,
+    "title": "Requesting help with GradCam on Segmentation ",
+    "state": "open",
+    "body": "jacobgil Thank you for this repository I am trying to implement this in my keras trained segmentation model FCN8 VGG19 I have referenced the Segmentation Notebook from your gradcam repo for pytroch where you have created a wrapper as pytorch model was returning a dictionary rather than a tensor However with Keras I loaded my model pre processed and fed the input image and ran model predict I get a tensor which is basically of the shape of input image and has values depending on the category in my case 0 and 1 I m having issues proceeding from here This repo does top 1 decode predictions predictions 0 0 print Predicted class print s s with probability 2f top 1 1 top 1 0 top 1 2 predicted class np argmax predictions cam heatmap grad cam model preprocessed input predicted class block5 conv3 So it s basically picking up a category and calculating gradients What should I do in my case Kindly help me out Thank you",
+    "created_at": "2022-05-12T11:37:43Z",
+    "closed_at": null,
+    "user": "varungupta31",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 35,
+    "title": "question: why replace keras.activations.relu to tf.nn.relu",
+    "state": "open",
+    "body": "fitst thank for share the code learn a lot but i has a question can you explain why repace keras activations relu thank you def modify backprop model name g tf get default graph with g gradient override map Relu name get layers that have an activation layer dict layer for layer in model layers 1 if hasattr layer activation replace relu activation for layer in layer dict if layer activation keras activations relu layer activation tf nn relu re instanciate a new model new model VGG16 weights imagenet return new model",
+    "created_at": "2021-04-01T10:00:40Z",
+    "closed_at": null,
+    "user": "lujingqiao",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 34,
+    "title": "环境配置",
+    "state": "open",
+    "body": "tf",
+    "created_at": "2021-01-26T07:06:38Z",
+    "closed_at": null,
+    "user": "mochaojie",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 33,
+    "title": "GradCam calculation",
+    "state": "open",
+    "body": "Originally use the probability value of yc as the category to obtain the partial derivative of Aij in the feature layer Why do you use loss to obtain the partial derivative of Aij in your code",
+    "created_at": "2020-10-09T09:57:09Z",
+    "closed_at": null,
+    "user": "kkangshen",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 32,
+    "title": "Apply GradCam to Cnn+LSTM",
+    "state": "open",
+    "body": "Hi all I am working with a feature extractor Inception V3 VGG16 whatever plus an LSTM for sequences classification let s say 3 sec each one There s any way to use GradCam in order to obtain areas activation on the input sequences Right now I just classify one sequence without single frame classification is still possible apply GradCam to this network I didn t find any example code about it but just for GradCam applied to single feature extractor Thanks in advance for the help Gabriele",
+    "created_at": "2020-01-13T08:57:28Z",
+    "closed_at": null,
+    "user": "gabarlacchi",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "monjurulkarim",
+        "created_at": "2021-06-17T19:52:38Z",
+        "body": "barloccia Did you find any solution"
+      },
+      {
+        "user": "gabarlacchi",
+        "created_at": "2021-06-18T07:57:42Z",
+        "body": "Hi I used the standard way by applying grad cam to each frame within the sequence Since the CNN LSTM network internally predict the class for each frame you can then apply grad cam to them In my case this represents the area within every image in which the network focused at prediction time I applied the implementation of grad cam tensorflow 2 https github com ismailuddin gradcam tensorflow 2 Hope this helps Best"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "You must feed a value for placeholder tensor 'input_1_1' with dtype float and shape [?,299,299,3]",
+    "state": "open",
+    "body": "output grads val gradient function image I get this error c api TF GetCode self status status tensorflow python framework errors impl InvalidArgumentError You must feed a value for placeholder tensor input 1 1 with dtype float and shape 299 299 3 node input 1 1 I am running this on a different custom model",
+    "created_at": "2019-09-28T00:04:49Z",
+    "closed_at": null,
+    "user": "pjspillai",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JCCVW",
+        "created_at": "2020-11-09T15:28:07Z",
+        "body": "Hello has this problem been solved I have the same problem"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Running with cifar10 datset",
+    "state": "closed",
+    "body": "I am using this code with pretrained weight from the following link for cifar10 dataset https github com geifmany cifar vgg blob master cifar10vgg py model cifar10vgg creates a vgg model Then I added gradcam py code from the forked version https github com PowerOfCreation keras grad cam blob master grad cam py I pass this model as input model to grad cam method I keep getting error saying cifar10vgg object has no attribute input and output in the following lines x Lambda target layer output shape target category loss output shape input model output model Model inputs input model input outputs x Can you please help",
+    "created_at": "2019-08-08T23:16:35Z",
+    "closed_at": "2019-08-13T05:30:35Z",
+    "user": "seemantasaha",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "How can i use it with fully convolutional network??",
+    "state": "open",
+    "body": "I want to output grad cam of U net architecture which does t has sigmoid layer at the end and no fully connected and softmax layer",
+    "created_at": "2019-08-06T08:18:03Z",
+    "closed_at": null,
+    "user": "rameezrehman83",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 28,
+    "title": "I feel using the gradient of last conv layer rule is more reasonable",
+    "state": "open",
+    "body": "Hi I notice your algorithm is using last conv gradient times the last conv output and go through a relu function to calculate the heatmap I don t understand why you do this but after a quick scan of the paper I feel using the gradient of last conv layer rule is more reasonable I changed last conv layer model get layer conv pw 13 to last conv layer model get layer conv pw 13 relu and remove heatmap np maximum heatmap 0 But doing this the output is more accurate to me",
+    "created_at": "2019-05-27T15:38:14Z",
+    "closed_at": null,
+    "user": "Fanshia",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 26,
+    "title": "high accuracy model with weak heatmap",
+    "state": "open",
+    "body": "Hi I have trained a model which has several convolution and batch normalization layers and 2 classifier layers This model trained with 5000 medical images categorized to 2 classes Know I have high accuracy and ROC but my heatmap doesn t show the right area of each class in images I used grad cam Anybody knows what is the problem Thanks in advanced",
+    "created_at": "2018-11-22T05:26:11Z",
+    "closed_at": null,
+    "user": "hamedbehzadi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "zero mean intensity of gradient for some cases",
+    "state": "open",
+    "body": "I am using Keras with tensorflow backend and I have fine tuned the last Conv layer and FC layer of my network based on VGG weights Now I am using grad CAM technique to visualize which parts of my image triggered the prediction and I get all zeros for mean intensity of the gradient over a specific feature map channel I have 4 classes for my test sample these are the prediction preds sample model predict x output array 1 0 0 0 dtype float32 This is the sample image entry in the prediction vector image 0 model output 0 last conv layer model get layer conv2d 13 grads K gradients toilet w last conv layer output 0 grads shape output TensorShape Dimension None Dimension 512 Dimension 14 Dimension 14 Since I am using theano image ordering when I calculate the mean of grads my axis is 0 2 3 from keras import backend as K K set image dim ordering th pooled grads K mean grads axis 0 2 3 pooled grads shape output TensorShape Dimension 512 iterate K function model input pooled grads last conv layer output 0 pooled grads value conv layer output value iterate x pooled grads value shape conv layer output value shape output 512 512 14 14 pooled grads value is all zero Reference https github com fchollet deep learning with python notebooks blob master 5 4 visualizing what convnets learn ipynb I tested the algorithm with more images and found out it works for some of the images Then I noticed that I have a dropout layer after my last conv layer I did more research https github com jacobgil keras grad cam issues 2 and modified the code as last conv layer model get layer conv2d 13 grads K gradients sample output last conv layer output 0 normalization trick we normalize the gradient grads normalize grad grads pooled grads K mean grads axis 0 2 3 iterate K function model input K learning phase pooled grads last conv layer output 0 pooled grads value conv layer output value iterate x 0 But Still for some of the images all pooled grads are zeros",
+    "created_at": "2018-11-01T18:17:10Z",
+    "closed_at": null,
+    "user": "HRKpython",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "hequn",
+        "created_at": "2018-11-09T07:29:12Z",
+        "body": "I got the same problem and haven t solved it yet 3"
+      },
+      {
+        "user": "hequn",
+        "created_at": "2018-11-19T06:31:19Z",
+        "body": "I did solve my error for the case that i did not choose the right layer output as the target"
+      },
+      {
+        "user": "janphhe",
+        "created_at": "2018-12-06T13:14:28Z",
+        "body": "What layer did you take Or what is the correct layer"
+      },
+      {
+        "user": "hequn",
+        "created_at": "2018-12-10T04:21:49Z",
+        "body": "janphhe In my project I used Xception The target layer will be the global avg pooling layer we should get a vector which seemed to be flattened The grad visualization was made on it"
+      },
+      {
+        "user": "surfaniac",
+        "created_at": "2019-07-31T23:17:40Z",
+        "body": "Somebody has a solution for this I get the same issue with a VGG19 network I appreciate every help Thanks a lot"
+      },
+      {
+        "user": "Ada-Nick",
+        "created_at": "2020-03-30T13:50:49Z",
+        "body": "I m having the same problem i m sure I have selected the correct conv layer as it works for some images and not others I m not using a pre trained model EDIT Change to using Leaky relu activations to prevent the vanishing gradient problem has solved it for me all though this probably isn t easy with pre trained networks"
+      },
+      {
+        "user": "andreimargeloiu",
+        "created_at": "2020-04-24T10:16:50Z",
+        "body": "Ada Nick can you please give more details about your solution intuition"
+      },
+      {
+        "user": "Ada-Nick",
+        "created_at": "2020-04-24T10:28:25Z",
+        "body": "margiki Leaky relu allows the gradient of negative values to be non zero preventing pooled grads from being a null matrix"
+      },
+      {
+        "user": "andreimargeloiu",
+        "created_at": "2020-04-24T18:00:31Z",
+        "body": "In my case using LeakyReLU didn t solve the issue I delved deeper and found that the gradients computed by GradCAM were actually negative Then GradCAM applies a ReLU and the result was an empty map"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "3D images",
+    "state": "open",
+    "body": "Is it good for 3D convolutional Neural Network I mean the input shape is like this nb ex nx ny nz nb channel Many thanks",
+    "created_at": "2018-08-29T19:29:28Z",
+    "closed_at": null,
+    "user": "xuzhang5788",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "pantheon5100",
+        "created_at": "2019-03-01T16:51:10Z",
+        "body": "I also want a 3D convolutional Neural Network version Many thanks"
+      },
+      {
+        "user": "emily19941102",
+        "created_at": "2019-04-23T06:39:47Z",
+        "body": "I am the same to you do you have it thanks pantheon5100 xuzhang5788 jacobgil"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Grad-Cam for custom defined architecture ",
+    "state": "open",
+    "body": "jacobgil twuilliam Hi thanks for the wonderful code i had few queries 1 Can we use this source code for any other architecture besides vg16 resnet customized architecture 2 If we have to use this code then what are the modficiations to be made in the code Thnaks in advance",
+    "created_at": "2018-08-28T04:38:59Z",
+    "closed_at": null,
+    "user": "abhigoku10",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jenskrauth",
+        "created_at": "2019-06-28T09:28:35Z",
+        "body": "Hey first of all load your own Model instead of VGG 2 Apply your own Preprocessing depending on Model 3 In modify backprop re instanciate your own Model 4 in gradcam resize the heatmap to you input size 5 In compile saliency function exchange your layer of interest At last take care of deprocessing Have fun"
+      },
+      {
+        "user": "navraj432",
+        "created_at": "2020-04-27T03:32:49Z",
+        "body": "jenskrauth abhigoku10 i tried to implement Grad CAM for my own model i couldn t i got errors do you have any code so that i can take it as a reference"
+      },
+      {
+        "user": "924175302",
+        "created_at": "2020-06-28T08:54:11Z",
+        "body": "navraj432 abhigoku10 Do you understand how the process is going Grad Cam for custom defined architecture"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "AttributeError: Layer vgg16 has multiple inbound nodes, hence the notion of \"layer input\" is ill-defined. Use `get_input_at(node_index)` instead.",
+    "state": "open",
+    "body": "when I run the code the following question appeared AttributeError Layer vgg16 has multiple inbound nodes hence the notion of layer input is ill defined Use get input at node index instead i change it as gradient function K function model layers 0 get input at 1 conv output grads but it also does not work i do not understand what the function want any help will be appreciated",
+    "created_at": "2018-07-06T10:51:41Z",
+    "closed_at": null,
+    "user": "gaody9527",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kobotschick",
+        "created_at": "2018-07-13T09:27:49Z",
+        "body": "My solution was not to define the model as sequential but to add the target layer directly x Lambda target layer output shape target category loss output shape input model output model Model inputs input model input outputs x The grad cam function looks like this now def grad cam input model image category index layer name nb classes 1000 target layer lambda x target category loss x category index nb classes x Lambda target layer output shape target category loss output shape input model output model Model inputs input model input outputs x model summary loss K sum model output conv output l for l in model layers if l name is layer name 0 output grads normalize compute gradients loss conv output 0 gradient function K function model input conv output grads output grads val gradient function image output grads val output 0 grads val 0 weights np mean grads val axis 0 1 cam np ones output shape 0 2 dtype np float32 for i w in enumerate weights cam w output i cam cv2 resize cam 224 224 cam np maximum cam 0 heatmap cam np max cam Return to BGR 0 255 from the preprocessed image image image 0 image np min image image np minimum image 255 cam cv2 applyColorMap np uint8 255 heatmap cv2 COLORMAP JET cam np float32 cam np float32 image cam 255 cam np max cam return np uint8 cam heatmap"
+      },
+      {
+        "user": "gaody9527",
+        "created_at": "2018-07-15T09:38:17Z",
+        "body": "kobotschick Thanks you for your proposals I have dealed with the problem to follow the https github com vense keras grad cam blob master grad cam py url"
+      },
+      {
+        "user": "jurgyy",
+        "created_at": "2019-02-05T10:25:12Z",
+        "body": "kobotschick One problem I had with your solution was a message that a list doesn t have an attributed called dtype The solution was to change gradient function K function model input conv output grads to gradient function K function model input conv output grads"
+      },
+      {
+        "user": "jayanthsrinivas",
+        "created_at": "2019-02-26T08:10:43Z",
+        "body": "kobotschick Where is Model function defined"
+      },
+      {
+        "user": "somdipdey",
+        "created_at": "2019-03-03T17:43:23Z",
+        "body": "full grad cam function along with import as follows from keras models import Model def grad cam input model image category index layer name nb classes 1000 target layer lambda x target category loss x category index nb classes x Lambda target layer output shape target category loss output shape input model output model Model inputs input model input outputs x model summary loss K sum model output conv output l for l in model layers if l name is layer name 0 output grads normalize compute gradients loss conv output 0 gradient function K function model input conv output grads output grads val gradient function image output grads val output 0 grads val 0 weights np mean grads val axis 0 1 cam np ones output shape 0 2 dtype np float32 for i w in enumerate weights cam w output i cam cv2 resize cam 224 224 cam np maximum cam 0 heatmap cam np max cam Return to BGR 0 255 from the preprocessed image image image 0 image np min image image np minimum image 255 cam cv2 applyColorMap np uint8 255 heatmap cv2 COLORMAP JET cam np float32 cam np float32 image cam 255 cam np max cam return np uint8 cam heatmap"
+      },
+      {
+        "user": "PowerOfCreation",
+        "created_at": "2019-04-08T13:57:11Z",
+        "body": "For everyone who is facing the same issue I forked this repository and fixed all errors I was facing https github com jacobgil keras grad cam pull 27 https github com PowerOfCreation keras grad cam"
+      },
+      {
+        "user": "jple",
+        "created_at": "2019-05-17T12:34:40Z",
+        "body": "The following change works for me gradient function K function model layers 0 get input at 1 conv output grads instead of gradient function K function model layers 0 get input at 0 conv output grads"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "It does not match exactly. Why?",
+    "state": "open",
+    "body": "Hi jacobgil As a result of classifying with Resnet Accuarcy is over 99 If you hit map the object area with gradCAM with that model file it does not match exactly Why It seems to be a problem of GradCAM rather than Resnet classification learning The objects to be hit mapped are not as local or blob like dogs or cats but close to a long straight line In this case GradCAM seems to miss the object area Have you experienced this For a well trainedd Resnet34 model how do you optimize GradCAM Thanks in advance from bemoregt",
+    "created_at": "2018-06-20T01:22:28Z",
+    "closed_at": null,
+    "user": "bemoregt",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "saliency is NaN for VGG16 like model with BatchNorm",
+    "state": "closed",
+    "body": "saliency saliency fn preprocessed input 0 this gives me NaN for valid inputs Below is my modified VGG16 network with BatchNorm def VGG16 input shape 224 224 3 classes 10 input img Input shape input shape Block 1 x Conv2D 64 3 3 activation relu padding same input shape input shape name block1 conv1 kernel initializer glorot normal input img x Conv2D 64 3 3 activation relu padding same name block1 conv2 kernel initializer glorot normal x x MaxPooling2D 2 2 strides 2 2 name block1 pool x x BatchNormalization x Block 2 x Conv2D 128 3 3 activation relu padding same name block2 conv1 kernel initializer glorot normal x x Conv2D 128 3 3 activation relu padding same name block2 conv2 kernel initializer glorot normal x x MaxPooling2D 2 2 strides 2 2 name block2 pool x x BatchNormalization x Block 3 x Conv2D 256 3 3 activation relu padding same name block3 conv1 kernel initializer glorot normal x x Conv2D 256 3 3 activation relu padding same name block3 conv2 kernel initializer glorot normal x x Conv2D 256 3 3 activation relu padding same name block3 conv3 kernel initializer glorot normal x x MaxPooling2D 2 2 strides 2 2 name block3 pool x x BatchNormalization x Block 4 x Conv2D 512 3 3 activation relu padding same name block4 conv1 kernel initializer glorot normal x x Conv2D 512 3 3 activation relu padding same name block4 conv2 kernel initializer glorot normal x x Conv2D 512 3 3 activation relu padding same name block4 conv3 kernel initializer glorot normal x x MaxPooling2D 2 2 strides 2 2 name block4 pool x x BatchNormalization x Block 5 x Conv2D 512 3 3 activation relu padding same name block5 conv1 kernel initializer glorot normal x x Conv2D 512 3 3 activation relu padding same name block5 conv2 kernel initializer glorot normal x x Conv2D 512 3 3 activation relu padding same name block5 conv3 kernel initializer glorot normal x x MaxPooling2D 2 2 strides 2 2 name block5 pool x Classification block x Flatten name flatten x x Dense 256 activation relu name fc1 kernel initializer glorot normal x model add Dropout 0 5 x Dense 128 activation relu name fc2 kernel initializer glorot normal x model add Dropout 0 5 x Dense classes activation softmax name predictions kernel initializer glorot normal x model Model input img x model summary model Model inputs x name vgg16 return model",
+    "created_at": "2018-05-03T21:38:42Z",
+    "closed_at": "2018-05-05T17:41:50Z",
+    "user": "sverneka",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sverneka",
+        "created_at": "2018-05-05T17:41:47Z",
+        "body": "There was an issue with the model itself probably some weights were NaN The issue is now resolved"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": " 'Node' object has no attribute 'output_masks'",
+    "state": "open",
+    "body": "I ve tried loading my own model A fine tuned version of VGG16 using load model but I get this error AttributeError Traceback most recent call last ipython input 58 46dc131ab5e2 in module 146 147 predicted class np argmax predictions 148 cam heatmap grad cam model preprocessed input predicted class block5 conv3 149 cv2 imwrite gradcam jpg cam 150 ipython input 58 46dc131ab5e2 in grad cam input model image category index layer name 102 103 x input model layers 1 output 104 x Lambda target layer output shape target category loss output shape x 105 model keras models Model input model layers 0 input x 106 usr local lib python3 6 dist packages keras engine topology py in call self inputs kwargs 604 605 Handle mask propagation 606 previous mask collect previous mask inputs 607 user kwargs copy copy kwargs 608 if not is all none previous mask usr local lib python3 6 dist packages keras engine topology py in collect previous mask input tensors 2832 inbound layer node index tensor index x keras history 2833 node inbound layer inbound nodes node index 2834 mask node output masks tensor index 2835 masks append mask 2836 else AttributeError Node object has no attribute output masks",
+    "created_at": "2018-04-16T13:21:03Z",
+    "closed_at": null,
+    "user": "Matty0512",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "stabgan",
+        "created_at": "2018-07-24T07:40:42Z",
+        "body": "I am also having a problem in this error You found any solution"
+      },
+      {
+        "user": "kuabhish",
+        "created_at": "2018-08-17T20:47:34Z",
+        "body": "Me too"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "ValueError: Tried to convert 'x' to a tensor and failed. Error: None values not supported.",
+    "state": "open",
+    "body": "I am getting the following error when I am trying to run your code on one of the example images Is this due to some missing package Thanks Predicted class boxer n02108089 with probability 0 42 Traceback most recent call last File usr local lib python3 5 dist packages tensorflow python framework op def library py line 510 in apply op helper preferred dtype default dtype File usr local lib python3 5 dist packages tensorflow python framework ops py line 1040 in internal convert to tensor ret conversion func value dtype dtype name name as ref as ref File usr local lib python3 5 dist packages tensorflow python framework constant op py line 235 in constant tensor conversion function return constant v dtype dtype name name File usr local lib python3 5 dist packages tensorflow python framework constant op py line 214 in constant value dtype dtype shape shape verify shape verify shape File usr local lib python3 5 dist packages tensorflow python framework tensor util py line 421 in make tensor proto raise ValueError None values not supported ValueError None values not supported During handling of the above exception another exception occurred Traceback most recent call last File usr local lib python3 5 dist packages tensorflow python framework op def library py line 524 in apply op helper values as ref input arg is ref dtype name File usr local lib python3 5 dist packages tensorflow python framework ops py line 1040 in internal convert to tensor ret conversion func value dtype dtype name name as ref as ref File usr local lib python3 5 dist packages tensorflow python framework constant op py line 235 in constant tensor conversion function return constant v dtype dtype name name File usr local lib python3 5 dist packages tensorflow python framework constant op py line 214 in constant value dtype dtype shape shape verify shape verify shape File usr local lib python3 5 dist packages tensorflow python framework tensor util py line 421 in make tensor proto raise ValueError None values not supported ValueError None values not supported During handling of the above exception another exception occurred Traceback most recent call last File grad cam py line 135 in module cam heatmap grad cam model preprocessed input predicted class block5 conv3 File grad cam py line 99 in grad cam grads normalize K gradients loss conv output 0 File grad cam py line 22 in normalize return x K sqrt K mean K square x 1e 5 File usr local lib python3 5 dist packages keras backend tensorflow backend py line 1435 in square return tf square x File usr local lib python3 5 dist packages tensorflow python ops math ops py line 470 in square return gen math ops square x name name File usr local lib python3 5 dist packages tensorflow python ops gen math ops py line 7813 in square Square x x name name File usr local lib python3 5 dist packages tensorflow python framework op def library py line 528 in apply op helper input name err ValueError Tried to convert x to a tensor and failed Error None values not supported",
+    "created_at": "2018-04-15T19:41:21Z",
+    "closed_at": null,
+    "user": "hrishikeshv",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shsshs",
+        "created_at": "2018-04-22T19:11:35Z",
+        "body": "experiencing the same issue Found this as well https github com tensorflow tensorflow issues 783"
+      },
+      {
+        "user": "avnishbm",
+        "created_at": "2018-06-12T18:32:03Z",
+        "body": "I am also getting the same error can this issue be fixed"
+      },
+      {
+        "user": "osimeoni",
+        "created_at": "2018-06-18T13:28:19Z",
+        "body": "I made it work following piece of code from https github com tensorflow tensorflow issues 783 url def compute gradients tensor var list grads tf gradients tensor var list return grad if grad is not None else tf zeros like var for var grad in zip var list grads and transforming from grads normalize K gradients loss conv output 0 to grads normalize compute gradients loss conv output 0"
+      },
+      {
+        "user": "ccivit",
+        "created_at": "2018-07-21T23:47:14Z",
+        "body": "osimeoni s answer worked out for me"
+      },
+      {
+        "user": "wugoukanle",
+        "created_at": "2018-09-13T09:23:55Z",
+        "body": "I get another error when i use def compute gradients tensor var list def compute gradients tensor var list grads tf gradients tensor var list nbsp return grad if grad is not None else tf zeros like var for var grad in zip var list grads the error is zip argument 1 must support iteration"
+      },
+      {
+        "user": "wugoukanle",
+        "created_at": "2018-09-20T06:34:25Z",
+        "body": "I finally find out where is key problem K gradient return None because it counter an op that can t gradient I doubt that the Sequential have used to encapsulate vgg16 that is a Model type here is code in grad cam funciton after alter nb classes 1000 target layer lambda x target category loss x category index nb classes last Lambda target layer output shape target category loss output shape input model output model Model inputs input model input outputs last loss K sum model layers 1 output loss model layers 1 output conv output l for l in model layers if l name is layer name 0 output grads normalize K gradients loss conv output 0 grads normalize compute gradients loss conv output 0 gradient function K function model inputs 0 conv output grads"
+      },
+      {
+        "user": "PowerOfCreation",
+        "created_at": "2019-04-08T13:57:45Z",
+        "body": "For everyone who is facing the same issue I forked this repository and fixed all errors I was facing https github com jacobgil keras grad cam pull 27 https github com PowerOfCreation keras grad cam"
+      },
+      {
+        "user": "jht0664",
+        "created_at": "2019-07-16T20:18:25Z",
+        "body": "PowerOfCreation Thanks it really helps It works"
+      },
+      {
+        "user": "mrshinest",
+        "created_at": "2021-04-23T10:05:10Z",
+        "body": "For anyone who still experience this error with tensorflow 2 x The default argument at tf gradients unconnected gradients none causes this error Set it to zero could solve your problem"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Regarding the gradient",
+    "state": "open",
+    "body": "Hi thanks for such a great blogpost love it I m trying to understand the paper s approach deeper with your code implementation As far as I know the paper suggests getting the gradient of the Softmax input w r t the target conv layer In your code I think it s referring to the output of the softmax layer loss K sum model layers 1 output I was wondering if this should be corrected as loss K sum model layers 1 output op inputs 0 and get the gradient with K gradient function Please correct me if I ve misunderstood the concept or your approach Thank you",
+    "created_at": "2018-01-11T08:24:39Z",
+    "closed_at": null,
+    "user": "junkwhinger",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "Code crashes for new version of TF and Keras",
+    "state": "open",
+    "body": "Hi I just updated Keras 2 1 0 and TF 1 4 0 and the your code is no longer working It seems that the function K gradients is now returning None Any idea how to fix it without downgrading to older versions Full error report python Traceback most recent call last File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework op def library py line 510 in apply op helper preferred dtype default dtype File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework ops py line 926 in internal convert to tensor ret conversion func value dtype dtype name name as ref as ref File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework constant op py line 229 in constant tensor conversion function return constant v dtype dtype name name File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework constant op py line 208 in constant value dtype dtype shape shape verify shape verify shape File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework tensor util py line 371 in make tensor proto raise ValueError None values not supported ValueError None values not supported During handling of the above exception another exception occurred Traceback most recent call last File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework op def library py line 524 in apply op helper values as ref input arg is ref dtype name File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework ops py line 926 in internal convert to tensor ret conversion func value dtype dtype name name as ref as ref File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework constant op py line 229 in constant tensor conversion function return constant v dtype dtype name name File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework constant op py line 208 in constant value dtype dtype shape shape verify shape verify shape File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework tensor util py line 371 in make tensor proto raise ValueError None values not supported ValueError None values not supported During handling of the above exception another exception occurred Traceback most recent call last File grad cam or py line 138 in module cam heatmap grad cam model preprocessed input predicted class block5 conv3 File grad cam or py line 100 in grad cam grads normalize K gradients loss conv output 0 File grad cam or py line 22 in normalize return x K sqrt K mean K square x 1e 5 File Users mviana anaconda3 lib python3 5 site packages keras backend tensorflow backend py line 1412 in square return tf square x File Users mviana anaconda3 lib python3 5 site packages tensorflow python ops math ops py line 449 in square return gen math ops square x name name File Users mviana anaconda3 lib python3 5 site packages tensorflow python ops gen math ops py line 4567 in square Square x x name name File Users mviana anaconda3 lib python3 5 site packages tensorflow python framework op def library py line 528 in apply op helper input name err ValueError Tried to convert x to a tensor and failed Error None values not supported",
+    "created_at": "2017-11-14T13:01:08Z",
+    "closed_at": null,
+    "user": "vianamp",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xieenze",
+        "created_at": "2017-12-05T13:03:01Z",
+        "body": "i have the same problem"
+      },
+      {
+        "user": "vianamp",
+        "created_at": "2017-12-05T13:30:14Z",
+        "body": "Hi xieenze Apparently it has not been fixed Please check 8478"
+      },
+      {
+        "user": "back-kh",
+        "created_at": "2017-12-13T11:06:20Z",
+        "body": "Hello any solution of this problem"
+      },
+      {
+        "user": "chavdim",
+        "created_at": "2018-01-08T23:30:34Z",
+        "body": "downgrading keras worked for me pip3 install keras 2 0 9 force reinstall can make it work again"
+      },
+      {
+        "user": "vense",
+        "created_at": "2018-01-24T10:07:28Z",
+        "body": "chavdim Thanks for your comment But it is not a perfect solution So I modified code little https github com vense keras grad cam blob master grad cam py This code is tested by keras version 2 1 3"
+      },
+      {
+        "user": "Mateus224",
+        "created_at": "2019-06-19T17:30:30Z",
+        "body": "vense i tried your code too but i get np float32 cam np float32 image ValueError operands could not be broadcast together with shapes 224 224 3 3 224 224 why they have different shapes I this because of Tenorflow My version is 1 13 1"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Loss function",
+    "state": "open",
+    "body": "Hi Good job putting this together I was wondering whether loss K sum should be replaced with K max once we are interested on the output for the class with highest output value only What do you think",
+    "created_at": "2017-10-31T15:46:54Z",
+    "closed_at": null,
+    "user": "vianamp",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2017-11-03T10:49:31Z",
+        "body": "Notice that the last layer type is target category loss K sum here is the same as K max only a single class is activated"
+      },
+      {
+        "user": "vianamp",
+        "created_at": "2017-11-03T12:43:49Z",
+        "body": "Absolutely Thanks"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Can I \"load_model\"?",
+    "state": "open",
+    "body": "Thank you for your great code I m trying to use it for other keras classifier models However I got an error shown below with other models than VGG16 as it is How can I load model and weights Is it possible to use load model IndexError list index out of range",
+    "created_at": "2017-09-07T08:53:13Z",
+    "closed_at": null,
+    "user": "Yamadate",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Duanxuxxx",
+        "created_at": "2019-06-23T11:03:17Z",
+        "body": "Same issue on the Pytorch version grads val self extractor get gradients 1 cpu data numpy IndexError list index out of range"
+      },
+      {
+        "user": "leanderme",
+        "created_at": "2020-03-01T15:54:48Z",
+        "body": "Probably too late but change l name is layer name to l name layer name python conv output l for l in model layers if l name layer name 0 output"
+      },
+      {
+        "user": "ttppss",
+        "created_at": "2021-03-20T01:06:26Z",
+        "body": "Same issue on the Pytorch version grads val self extractor get gradients 1 cpu data numpy IndexError list index out of range Hi Have you found the solution Thanks"
+      },
+      {
+        "user": "wjlhahaha",
+        "created_at": "2024-09-11T04:41:34Z",
+        "body": "l name layer name l name layer name python conv output l for l in model layers if l name layer name 0 output conv output l for l in model layers if l name layer name 0 output IndexError list index out of range"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Initialization of cam array",
+    "state": "open",
+    "body": "Why are you initializing the cam array with ones",
+    "created_at": "2017-07-05T08:29:36Z",
+    "closed_at": null,
+    "user": "lukasbrunke",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "value error when running grad-cam",
+    "state": "open",
+    "body": "Hi and thanks for this I was wondering if you could give me a hint on why I receive the following error every time that I use the grad cam Here is a traceback of the error Traceback most recent call last File main py line 180 in module conv2d 2 File Users user grad cam py line 163 in run gradcam layer name File Users user grad cam py line 106 in grad cam model add input model File Users user anaconda2 lib python2 7 site packages keras models py line 441 in add pre existing inbound connections ValueError A layer added to a Sequential model must not already be connected somewhere else Model received layer sequential 1 which has 4 pre existing inbound connections Here is my model def cnn model img rows 28 img cols 28 channels 1 nb filters 64 nb classes 10 param img rows number of row in the image param img cols number of columns in the image param channels number of color channels e g 1 for MNIST param nb filters number of convolutional filters per layer param nb classes the number of output classes return Define the layers successively if K image dim ordering th data shape channels img rows img cols else data shape img rows img cols channels model Sequential Dropout 0 2 input shape data shape Convolution2D nb filters 8 8 subsample 2 2 border mode same activation relu Convolution2D nb filters 2 6 6 subsample 2 2 border mode valid activation relu Convolution2D nb filters 2 5 5 subsample 1 1 border mode valid activation relu Dropout 0 5 Flatten Dense nb classes activation softmax model compile optimizer adam loss categorical crossentropy metrics accuracy return model",
+    "created_at": "2017-05-17T14:53:41Z",
+    "closed_at": null,
+    "user": "kirk86",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ashiqimran",
+        "created_at": "2019-08-01T21:04:12Z",
+        "body": "I also got the same error Did you solve it"
+      },
+      {
+        "user": "kirk86",
+        "created_at": "2019-08-02T08:23:43Z",
+        "body": "I also got the same error Did you solve it TBH I don t remember what I did but I would suggest using updated versions of keras and python 3 6 at least Then I would create a simple model only with convolutional and dense layers Avoid any dropout and batchnorm The other thing that I remember is that grad cam operates only on tensors so make sure that your input to grad cam is the output of a conv layer from your model such that the output of that layer is a 3D or 4D tensor I hope these might help"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Can this be problem Specific?",
+    "state": "open",
+    "body": "Does this implementation only work with ImageNet like images or can it be tuned to your specific problem",
+    "created_at": "2017-02-26T06:43:40Z",
+    "closed_at": null,
+    "user": "pGit1",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2017-06-01T16:41:05Z",
+        "body": "It can be tuned to your specific problem As long as you can specify a target cost function you can use this I used this for visualizing the PilotNet network that outputs angles This network is used for regression and not classification https jacobgil github io deeplearning vehicle steering angle visualizations"
+      },
+      {
+        "user": "pardha-fission",
+        "created_at": "2017-12-08T09:15:51Z",
+        "body": "InvalidArgumentError Traceback most recent call last home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in do call self fn args 1326 try 1327 return fn args 1328 except errors OpError as e home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in run fn session feed dict fetch list target list options run metadata 1305 feed dict fetch list target list 1306 status run metadata 1307 home pardha anaconda3 envs for tensorflow lib python3 6 contextlib py in exit self type value traceback 88 try 89 next self gen 90 except StopIteration home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python framework errors impl py in raise exception on not ok status 465 compat as text pywrap tensorflow TF Message status 466 pywrap tensorflow TF GetCode status 467 finally InvalidArgumentError You must feed a value for placeholder tensor batch normalization 1 keras learning phase with dtype bool Node batch normalization 1 keras learning phase Placeholder dtype DT BOOL shape unknown device job localhost replica 0 task 0 cpu 0 During handling of the above exception another exception occurred InvalidArgumentError Traceback most recent call last ipython input 21 90a6c769b809 in module 1 for i layer name in enumerate l name for l in my model layers 2 cam heatmap grad cam my model preprocessed img predicted class layer name 3 cam cv2 cvtColor cam cv2 COLOR BGR2RGB 4 plt figure i 5 plt title str layer name ipython input 20 f6b7d1f126eb in grad cam input model image category index layer name 14 gradient function K function model layers 0 input conv output grads 15 print hellooooooooo gradient function 16 output grads val gradient function image 17 output grads val output 0 grads val 0 18 home pardha anaconda3 envs for tensorflow lib python3 6 site packages keras backend tensorflow backend py in call self inputs 2266 updated session run self outputs self updates op 2267 feed dict feed dict 2268 self session kwargs 2269 return updated len self outputs 2270 home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in run self fetches feed dict options run metadata 893 try 894 result self run None fetches feed dict options ptr 895 run metadata ptr 896 if run metadata 897 proto data tf session TF GetBuffer run metadata ptr home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in run self handle fetches feed dict options run metadata 1122 if final fetches or final targets or handle and feed dict tensor 1123 results self do run handle final targets final fetches 1124 feed dict tensor options run metadata 1125 else 1126 results home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in do run self handle target list fetch list feed dict options run metadata 1319 if handle is None 1320 return self do call run fn self session feeds fetches targets 1321 options run metadata 1322 else 1323 return self do call prun fn self session handle feeds fetches home pardha anaconda3 envs for tensorflow lib python3 6 site packages tensorflow python client session py in do call self fn args 1338 except KeyError 1339 pass 1340 raise type e node def op message 1341 1342 def extend graph self InvalidArgumentError You must feed a value for placeholder tensor batch normalization 1 keras learning phase with dtype bool Node batch normalization 1 keras learning phase Placeholder dtype DT BOOL shape unknown device job localhost replica 0 task 0 cpu 0"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Averaging weights in gram-cam.py",
+    "state": "closed",
+    "body": "Line 47 weights np mean grads val axis 0 1 Hi Jacob Why do you do average before multiplying weights to conv outputs so that per conv filter only multiply to a single averaged weight If I understand the paper correctly it would be more accurate we directly do element wise multiplication between weights of every pixel of every conv filter output to the filter output then average over number of filters to get gradients activation map Am I understanding it wrong My code https github com jinchenglee CarND Behavioral Cloning blob master cam py looks sth like this width height original img shape img rgb cv2 cvtColor original img cv2 COLOR BGR2RGB img normalize color img rgb None img img reshape 1 66 200 3 conv outputs grads val angle gradients function img conv outputs grads val conv outputs 0 grads val 0 Evaluate the angle to determine the weights class weights grad cam loss grads val angle function to convert steering angle to weigts Create the class activation map cam np zeros dtype np float32 shape conv outputs shape Element wise muliplication cam class weights conv outputs cam np mean cam axis 2 Average between all filters cam np max cam cam cv2 resize cam height width heatmap cv2 applyColorMap np uint8 255 cam cv2 COLORMAP JET",
+    "created_at": "2017-02-16T07:13:55Z",
+    "closed_at": "2017-06-01T16:41:17Z",
+    "user": "jinchenglee",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2017-02-17T17:56:55Z",
+        "body": "Hi jinchenglee nice project I think that if you look at equation 3 in page 4 in the paper the gradients with respect to each conv layer are spatially averaged for each feature map i Is there a chance you were confusing w c k in equation 1 that is used in case of regular CAM Here is another way to verify that the result is like in the paper They state that in case of a model that has global average pooling a dense layer the output of grad cam and that of the older CAM algorithm is identical when creating visualizations for the last conv layer Grad CAM is designed to have this property In case of the older CAM visualization the weight w i at index i in the final dense layer corresponding to some class C is used to multiply A i the conv layer output before the global average pooling Now lets look at grad cam when using this same architecture The gradient of the loss L with respect to A i in the feature map is w i since the loss is a sum over w i A i The spatial average of the gradients for all the pixels is also w i since the gradient is identical for every pixel Therefore grad cam and cam have the same result in this case"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Run on GPU?",
+    "state": "closed",
+    "body": "Thank you for this immensely awesome demo I think this technique opens many doors It took me a lot of fiddling to get reasonable output since my network architecture is quite a bit different All is good now However I noticed that things are running on the CPU In keras my other scripts are working on the GPU with the tensorflow backend Would you happen to know offhand how to ensure the K function and K gradients calls in here run on the GPU Im digging into the keras source to understand that they are just frontends for tensorflow functions but I get a bit lost here Thanks",
+    "created_at": "2017-02-01T18:16:04Z",
+    "closed_at": "2017-02-10T18:06:42Z",
+    "user": "cjmielke",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2017-02-03T17:35:23Z",
+        "body": "Hi In case of tensorflow K gradients uses tf gradients If you are using the tensorflow backend compiled with CUDA support it should run on the GPU How are you checking if it runs on CPU GPU When running the exact code in this repository does it still run on the CPU"
+      },
+      {
+        "user": "cjmielke",
+        "created_at": "2017-02-10T18:06:22Z",
+        "body": "I think I figured my issue out My slowness was primarily brought about by looping over many images Speeding it up was just a matter of hoisting the function declaration out of the loop On my end its still CPU bound but that s alright in my case Thanks Great work I m digging into the literature to see if the other half of the grad cam algorithm can be implemented with Keras"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Really hope you realize the guided back propagation",
+    "state": "closed",
+    "body": "I want to realize it but I failed So really hope you realize the guided back propagation thank you",
+    "created_at": "2016-12-10T13:59:40Z",
+    "closed_at": "2016-12-21T12:36:05Z",
+    "user": "jf003320018",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Implementing grad-cam in models that use dropout",
+    "state": "closed",
+    "body": "Hey I m attempting to implement grad cam into my project which uses a different architecture than VGG16 The model which has just two convolutional blocks see here under MiniVGGNet https github com thiippal tankbuster blob master tankbuster cnn nets py uses dropout to combat overfitting Note that this model still uses Theano I m moving to TensorFlow now Now if I ve understood correctly Keras must be told whether to operate in training include dropout or testing exclude dropout mode as Francois Chollet describes here https github com fchollet keras issues 2417 I ve therefore included K learning phase which has been set to zero that is testing mode into the gradient function in grad cam gradient function K function model layers 0 input K learning phase conv output grads output grads val gradient function image K learning phase This however returns the following error Traceback most recent call last File grad cam debug py line 90 in module cam grad cam model preprocessed input predicted class maxpooling2d 2 File grad cam debug py line 58 in grad cam output grads val gradient function image K learning phase File Users tuomo virtualenvs keras tf lib python2 7 site packages keras backend tensorflow backend py line 1040 in call updated session run self outputs self updates op feed dict feed dict File Users tuomo virtualenvs keras tf lib python2 7 site packages tensorflow python client session py line 717 in run run metadata ptr File Users tuomo virtualenvs keras tf lib python2 7 site packages tensorflow python client session py line 872 in run e args 0 TypeError Cannot interpret feed dict key as Tensor Can not convert a int into a Tensor Any idea what might be the issue here",
+    "created_at": "2016-11-19T11:21:11Z",
+    "closed_at": "2016-11-22T07:48:45Z",
+    "user": "thiippal",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-19T11:35:25Z",
+        "body": "When calling gradient function the actual learning phase should be a scalar Please try changing the line output grads val gradient function image K learning phase To output grads val gradient function image 0 Does that work"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-19T13:06:07Z",
+        "body": "Hi output grads val gradient function image 0 returns the same error message Traceback most recent call last File grad cam debug py line 90 in module cam grad cam model preprocessed input predicted class maxpooling2d 2 File grad cam debug py line 58 in grad cam output grads val gradient function image 0 File Users tuomo virtualenvs keras tf lib python2 7 site packages keras backend tensorflow backend py line 1040 in call updated session run self outputs self updates op feed dict feed dict File Users tuomo virtualenvs keras tf lib python2 7 site packages tensorflow python client session py line 717 in run run metadata ptr File Users tuomo virtualenvs keras tf lib python2 7 site packages tensorflow python client session py line 872 in run e args 0 TypeError Cannot interpret feed dict key as Tensor Can not convert a int into a Tensor I guess the full code would be more helpful here I commit it to my repo thanks for the suggestion by the way tomorrow"
+      },
+      {
+        "user": "jf003320018",
+        "created_at": "2016-11-20T02:39:55Z",
+        "body": "thiippal You should check your code carefully I have run this code and it works well"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-20T19:11:09Z",
+        "body": "jf003320018 Which code are you referring to jacobgil I ve added the full code for grad cam on this branch https github com thiippal tankbuster blob cam grad cam py"
+      },
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-20T22:02:31Z",
+        "body": "I took a look at the branch above only ran with dummy weights since there were no tensorflow format weights The problem seems to be the K set learning phase 0 line Drop that line and it should be ok Also in the branch you shared there are a few dimension problems it seems that MiniVGGNet was called with wrong parameters 150 150 3 3 instead of 3 150 150 3 Also replace instances of 224 with 150"
+      },
+      {
+        "user": "jf003320018",
+        "created_at": "2016-11-21T01:27:43Z",
+        "body": "Traditionally dropout do not used for convolutional and pooling layers So it is not needed to use K set learning phase in the code"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-21T14:15:24Z",
+        "body": "Hi jacobgil unfortunately the cam branch was behind a few commits so the TensorFlow weights were missing I also did not get far enough to resize the images from the canonical ImageNet size but thanks for pointing that out Removing K set learning phase 0 helped and the script now works with my model and weights The output however is quite interesting most images produce a class activation map with red colour only such as the one below cam red https cloud githubusercontent com assets 12389814 20485646 35d8cd68 b005 11e6 9c91 030df57df049 png Another image in turn seems to be working well as passing different values to the category index variable produces different kinds of activation maps cam working https cloud githubusercontent com assets 12389814 20485659 44ace784 b005 11e6 931b c7b974136cc9 png My up to date code may be found here https github com thiippal tankbuster blob master grad cam py thanks for your support patience"
+      },
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-21T16:08:31Z",
+        "body": "Hi thiippal The issue seems to be the preprocessing of the image Looks like your model was trained on pixels in the range 0 1 but the images fed were in the range 0 255 Change load image to something like this and multiply by 255 when used for visualizing def load image path original keras preprocessing image load img path target size 150 150 Load image and resize to 150x150 array img to array original dim ordering tf Convert image to numpy array normalized array astype float 255 0 Normalize the array into range 0 1 reshaped np expand dims normalized axis 0 Reshape for input for CNN return reshaped An example output i m getting looks like this cam https cloud githubusercontent com assets 5342073 20490056 53442950 b015 11e6 81b6 052c7811933d png Btw what are the 3 categories in the output"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-22T07:06:59Z",
+        "body": "Hi Jacob thanks should have figured that out I faced solved the same issue when originally using your CAM implementation Now the script returns completely well perhaps always not so sensible results The three classes correspond to T 72 tanks BMP APCs and other i e street and countryside scenes without none of the aforementioned classes I think this issue can be closed now Hope this will help someone else implementing Grad CAM thanks for your support"
+      },
+      {
+        "user": "absentm",
+        "created_at": "2017-01-07T10:44:18Z",
+        "body": "Thanks a lot jacobgil you answer When calling gradient function the actual learning phase should be a scalar Please try changing the line output grads val gradient function image K learning phase To output grads val gradient function image 0 Does that work is ok and helped me in my code iterate K function input img K learning phase loss grads loss value grads value iterate input img data 1"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Problem with \"target_category_loss\" function",
+    "state": "closed",
+    "body": "Running the script raises the following error File grad cam py line 35 in lambda target layer lambda x target category loss x category index nb classes File grad cam py line 13 in target category loss return tf mul x K one hot category index nb classes File theano backend py line 726 in one hot input shape tuple indices shape i for i in range indices ndim AttributeError list object has no attribute ndim Any ideas how to fix this",
+    "created_at": "2016-11-14T13:10:56Z",
+    "closed_at": "2016-11-17T08:05:11Z",
+    "user": "thiippal",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-14T15:45:35Z",
+        "body": "Currently only the tensorflow backend is supported so the immediate thing would be to switch the keras backend to tensorflow I ll take a look later to try get it working with theano too"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-15T09:49:40Z",
+        "body": "D oh obviously My bad I switched to TensorFlow backend and now get the following error message File grad cam py line 72 in module cam grad cam model preprocessed input predicted class block5 pool File grad cam py line 41 in grad cam grads normalize K gradients loss conv output 0 TypeError Expected binary or unicode string got keras layers pooling MaxPooling2D object at 0x119beaf10"
+      },
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-15T16:37:03Z",
+        "body": "Can you please check your tensorflow and keras versions That can be done by import tensorflow as tf print tf version import keras print keras version Perhaps tensorflow should be upgraded Also please make sure the code in grad cam py was not modified"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-16T08:14:02Z",
+        "body": "Sure tensorflow is at 0 11 0 and Keras at 1 1 1 Haven t dabbled with the code either"
+      },
+      {
+        "user": "jf003320018",
+        "created_at": "2016-11-16T10:28:10Z",
+        "body": "thiippal I think you can use the debug mode to check the code line by line and then tell him the code in which line is not correct I use theano instead of tensorflow but I carefully read the code and it seems that there are no errors"
+      },
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-17T04:26:29Z",
+        "body": "I wasn t able to reproduce the error with these tensorflow and keras versions Are you sure that both the dimension ordering and backend are tensorflow like this image dim ordering tf epsilon 1e 07 floatx float32 backend tensorflow"
+      },
+      {
+        "user": "thiippal",
+        "created_at": "2016-11-17T06:59:59Z",
+        "body": "I checked my Keras configuration file the backend and image dimensions are both set for tensorflow Anyhow I created a fresh virtual environment with Keras and TensorFlow and cloned the repository again and now it works I don t recall making any changes to the code but it is likely that I might have tinkered with it My apologies for the unnecessary work on your behalf I really appreciate your Keras implementations of all these new techniques"
+      },
+      {
+        "user": "jacobgil",
+        "created_at": "2016-11-17T08:05:11Z",
+        "body": "Thank you If you have thoughts on how to improve this or experimentations worth doing please suggest"
+      }
+    ]
+  }
+]

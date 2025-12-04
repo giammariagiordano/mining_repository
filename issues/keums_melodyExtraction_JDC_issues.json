@@ -1,0 +1,32 @@
+[
+  {
+    "number": 3,
+    "title": "abouttraining details",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-07-28T10:01:44Z",
+    "closed_at": null,
+    "user": "TheagaoMIR",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TheagaoMIR",
+        "created_at": "2020-07-28T10:07:41Z",
+        "body": "Hi I trained my model on the same datasets with you But the experimental results always have either low VR or high VFA If you can public your training code which will be very helpful"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "[freeze_graph] tensorflow.python.framework.errors_impl.InvalidArgumentError: NodeDef expected inputs '' do not match 1 inputs specified; Op<name=Const; signature= -> output:dtype; attr=value:tensor; attr=dtype:type>; NodeDef: bidirectional_1/while/add/y = Const[dtype=DT_INT32, value=Tensor<type: int32 shape: [] values: 1>](bidirectional_1/while/Switch:1)",
+    "state": "open",
+    "body": "When I try to freeze TF graph that uses tf keras layers I get the following exception Traceback most recent call last File home ssd1 work test melodyExtraction JDC python36 lib python3 6 site packages tensorflow python framework importer py line 418 in import graph def graph c graph serialized options pylint disable protected access tensorflow python framework errors impl InvalidArgumentError NodeDef expected inputs do not match 1 inputs specified Op name Const signature output dtype attr value tensor attr dtype type NodeDef bidirectional 1 while add y Const dtype DT INT32 value Tensor type int32 shape values 1 bidirectional 1 while Switch 1 During handling of the above exception another exception occurred Traceback most recent call last File keras to frozen py line 111 in module infer out filename input data File keras to frozen py line 86 in infer graph tf import graph def graph def name File home ssd1 work test melodyExtraction JDC python36 lib python3 6 site packages tensorflow python util deprecation py line 454 in new func return func args kwargs File home ssd1 work test melodyExtraction JDC python36 lib python3 6 site packages tensorflow python framework importer py line 422 in import graph def raise ValueError str e ValueError NodeDef expected inputs do not match 1 inputs specified Op name Const signature output dtype attr value tensor attr dtype type NodeDef bidirectional 1 while add y Const dtype DT INT32 value Tensor type int32 shape values 1 bidirectional 1 while Switch 1 how to resove this problem",
+    "created_at": "2019-12-26T09:51:52Z",
+    "closed_at": null,
+    "user": "mdztravelling",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

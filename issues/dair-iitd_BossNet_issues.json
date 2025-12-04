@@ -1,0 +1,14 @@
+[
+  {
+    "number": 2,
+    "title": "Train issue ",
+    "state": "closed",
+    "body": "when I run python main py task id 1 train an issue occurs Predict Validation Traceback most recent call last File main py line 270 in module chatbot train if args train else chatbot test File main py line 110 in train val accuracies self batch predict Data val n val File main py line 244 in batch predict pbar tqdm enumerate batches total len batches TypeError int object is not iterable any advice for this problem",
+    "created_at": "2019-06-03T13:51:58Z",
+    "closed_at": "2019-06-03T13:54:21Z",
+    "user": "caijie12138",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

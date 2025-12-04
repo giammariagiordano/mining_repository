@@ -1,0 +1,901 @@
+[
+  {
+    "number": 36,
+    "title": "The running result was not found",
+    "state": "open",
+    "body": "Hi Simon There is no error in the code running how can the running result not be found it is in the folder weights in the file",
+    "created_at": "2022-06-28T01:49:54Z",
+    "closed_at": null,
+    "user": "427smx",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 35,
+    "title": "ModuleNotFoundError: No module named'Scorer'",
+    "state": "open",
+    "body": "Hi Simon I have a question for you I always have such problems when I run code ModuleNotFoundError No module named Scorer If you have the time can you answer this question I would appreciate it if you write back soon",
+    "created_at": "2022-06-28T01:33:15Z",
+    "closed_at": null,
+    "user": "427smx",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 32,
+    "title": "Regarding result",
+    "state": "open",
+    "body": "Hi Simon I have doubt that how you have calculated the values of accuracy and confusion matrix using certain channel like eeg eeg eog and eeg emg as your model predict all the three channel collectively",
+    "created_at": "2022-05-08T07:23:53Z",
+    "closed_at": null,
+    "user": "gsamyak30",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-05-08T09:50:21Z",
+        "body": "Thanks for letting me know that you have doubts The next step would now be to let me know what your doubts are and specify them and have evidence for them I mean what exactly am I supposed to do with the information that you have doubts"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Confusion Matrix",
+    "state": "closed",
+    "body": "Hi Simon For Plotting a confusion matrix we require a square matrix but like how can we make a square matrix from the dataset as the data are in the csv format and they are very long entries data so do you apply any code for making matrix or you have just done mannualy or you have done in excel",
+    "created_at": "2022-03-29T05:58:06Z",
+    "closed_at": "2022-03-29T07:31:05Z",
+    "user": "gsamyak30",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-29T07:30:59Z",
+        "body": "Please stop writing issues in this repository that are not related to the project itself You can find out how to create a confusion matrix by googleing what a confusion matrix is and how you can create it If you understand the theory behind it it will be easy to create Sorry for this frank answer but I this is not the place to ask for things like this"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Confusion Matrix",
+    "state": "closed",
+    "body": "Hi Simon Like how can we create a confusion matrix from our dataset",
+    "created_at": "2022-03-29T05:41:33Z",
+    "closed_at": "2022-03-29T07:31:59Z",
+    "user": "gsamyak30",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-29T07:31:59Z",
+        "body": "https www stackvidhya com plot confusion matrix in python and why"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-29T07:32:48Z",
+        "body": "just google what a confusion matrix is take the predictions of your dataset and contrast them with the ground thruth of your dataset"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Confusion Matrix",
+    "state": "closed",
+    "body": "screenshot https user images githubusercontent com 98097477 159694221 61749407 dfbb 4794 a056 9436c6c3b47d PNG Can you please explain the parameters passed to this function for obtaining the confusion matrix for this model",
+    "created_at": "2022-03-23T12:01:25Z",
+    "closed_at": "2022-03-29T07:31:09Z",
+    "user": "madhhir",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-23T15:50:03Z",
+        "body": "raw fname filename where the png will be saved conf mat the confusion matrix itself i e a square matrix obtained by https scikit learn org stable modules generated sklearn metrics confusion matrix html target names a list of strings with the names corresponding to the specific prediction label However I recommend to simply use any other confusion matrix plotting function instead of mine for example https scikit learn org stable auto examples model selection plot confusion matrix html or https stackoverflow com questions 35572000 how can i plot a confusion matrix"
+      },
+      {
+        "user": "gsamyak30",
+        "created_at": "2022-03-29T05:48:43Z",
+        "body": "Hi Simon For Plotting a confusion matrix we require a square matrix but like how can we make a square matrix from the dataset as the data are in the csv format and they are very long entries data so do you apply any code for making matrix or you have just done mannualy"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Accuracy and Confusion Matrix",
+    "state": "open",
+    "body": "How can we get the accuracy and confusion matrix of this model",
+    "created_at": "2022-03-16T17:08:33Z",
+    "closed_at": null,
+    "user": "madhhir",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-16T19:02:04Z",
+        "body": "both are reported in my thesis https github com skjerns AutoSleepScorer blob master figures thesis pdf raw true"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-16T19:05:24Z",
+        "body": "or do you mean how to calculate accuracy and confusion matrix in general"
+      },
+      {
+        "user": "gsamyak30",
+        "created_at": "2022-03-17T03:02:17Z",
+        "body": "How can we plot the confusion matrix and get accuracy from the code Like what kind of parameters we have to pass in code to get the above confusion matrix and accuracy"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-17T08:11:52Z",
+        "body": "It s not implemented like that There is no function to do that available in this repository"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Float edf",
+    "state": "open",
+    "body": "Hi Simon I am just getting a error TypeError float object does not support item assignment when I am taking the dataset of ST7022JM Hypnogram edf or any other hypnogram edf from physionet in sleep telemetry while converting into csv file format How do I resolve it",
+    "created_at": "2022-03-14T14:46:53Z",
+    "closed_at": null,
+    "user": "gsamyak30",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-14T17:29:14Z",
+        "body": "EDF is an odd format for storing hypnograms no idea why physionet decided to do that you need to convert the hypnogram from EDF to CSV try this function taken from here https github com skjerns AutoSleepScorerDev blob master edfx database py Python import csv from pyedflib import highlevel def convert hypnograms hypnogram edf file This function is quite a hack to read the edf hypnogram as a byte array I found no working reader for the hypnogram edfs hypnogram annot highlevel read edf header hypnogram edf file annotations for bstart blength bstage in annot length int blength decode stage bstage decode if movement in stage lower stage M stage str stage 1 length 30 hypnogram extend stage csv file hypnogram edf file replace Hypnogram 5 0 PSG csv with open csv file w as f writer csv writer f lineterminator r writer writerows hypnogram"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "comparision",
+    "state": "closed",
+    "body": "Hi Simon Just want to ask can I get the hypnogram image which contain both human and cnn lstm as you have paste image in your introduction part just because as I am getting only edf file image",
+    "created_at": "2022-03-08T13:38:27Z",
+    "closed_at": "2022-03-14T17:25:34Z",
+    "user": "gsamyak30",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-08T14:31:19Z",
+        "body": "I simply plot the hypnogram 1 in red and overlay the second one in blue For this of course you need to have both hypnograms available have a look at https github com skjerns sleep utils blob master sleep utils plotting py there you find a function plot hypnogram which should serve your purpose"
+      },
+      {
+        "user": "gsamyak30",
+        "created_at": "2022-03-08T17:40:12Z",
+        "body": "Hi Simon Just a basic question if a edf file is in float then how we can convert into csv file"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-08T19:02:55Z",
+        "body": "sorry this has nothing to do with this project this is a general python question better to be asked to an appropriate place like stackoverflow or your supervisor"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Path Error",
+    "state": "closed",
+    "body": "Hi Simon I m getting this error main py line 50 in module if os path isdir path TypeError isdir path should be string bytes or os PathLike not NoneType Could you please help in identifying the reason why the path is inaccessible",
+    "created_at": "2022-03-07T13:47:54Z",
+    "closed_at": "2022-03-14T17:25:48Z",
+    "user": "madhhir",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-07T14:44:45Z",
+        "body": "what did you use as an input argument the path to the PSG EDF file should be supplied using the first argument if you don t supply it you will get this error"
+      },
+      {
+        "user": "madhhir",
+        "created_at": "2022-03-07T15:11:47Z",
+        "body": "what did you use as an input argument the path to the PSG EDF file should be supplied using the first argument if you don t supply it you will get this error https www physionet org content sleep edfx 1 0 0 sleep cassette SC4001E0 PSG edf This path has been taken as per the code"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-07T15:20:36Z",
+        "body": "yes you need a local file path no URL"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Error",
+    "state": "closed",
+    "body": "ok But I have installed the new version than where I should run the code with the old version of keras tensorflow and h5py How could I install the older version One more that the dropbox link that you have shared if I just click on that link it shows the files are deleted Does it affect the code Secondly how will I get the hypnogram so either it will be downloaded or show directly after the successfull execution of code",
+    "created_at": "2022-03-06T12:42:26Z",
+    "closed_at": "2022-03-14T17:25:53Z",
+    "user": "gsamyak30",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-06T17:23:19Z",
+        "body": "you can install it via pip install keras x x x just google this please I cannot give basic Python support here This is a develop version for people with programming pthon knowledge no end user application"
+      },
+      {
+        "user": "gsamyak30",
+        "created_at": "2022-03-06T19:10:32Z",
+        "body": "Thank You Simon"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "ValueError",
+    "state": "open",
+    "body": "Hi Simon I am just getting an error Value Error Found unexpected instance while processing input tensors for keras functional model Expecting KerasTensor which is from tf keras Input or output from keras layer call Got 0 How to resolve it",
+    "created_at": "2022-03-06T04:48:46Z",
+    "closed_at": null,
+    "user": "gsamyak30",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-06T10:11:14Z",
+        "body": "Have you installed the correct versions keras 2 0 6 tensorflow 1 3 0 h5py 2 7 0"
+      },
+      {
+        "user": "gsamyak30",
+        "created_at": "2022-03-06T12:07:22Z",
+        "body": "ok But I have installed the new version than where I should run the code with the old version of keras tensorflow and h5py One more that the dropbox link that you have shared if I just click on that link it shows the files are deleted Does it affect the code Secondly how will I get the hypnogram so either it will be downloaded or show directly after the successfull execution of code"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2022-03-06T17:21:18Z",
+        "body": "the links were broken I fixed them now try reinstalling it will output a hypnogram yes"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Questions about Scorer()&kerncloud",
+    "state": "closed",
+    "body": "Hello skjerns I m Guo a student in China and I m trying to reproduce this code but I m having some problems When I run the function Scorer I need to download the model weights from the website http cloud skjerns de index php s X3iTwBrRy5qzEtg download cnn hdf5 but the kerncloud website says The document could not be found on the server This share may have been deleted or expired Did you change to another site My email is 2211849 s hlju edu cn",
+    "created_at": "2022-01-05T10:06:54Z",
+    "closed_at": "2022-01-05T18:29:55Z",
+    "user": "komdec",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2022-01-05T18:29:52Z",
+        "body": "Ah yes I changed my cloud setup I updated the links try reinstalling"
+      },
+      {
+        "user": "komdec",
+        "created_at": "2022-01-06T03:48:22Z",
+        "body": "Thank you very much I have run it successfully"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Is it possible, to use only emg signal?",
+    "state": "open",
+    "body": "",
+    "created_at": "2021-10-07T22:46:22Z",
+    "closed_at": null,
+    "user": "zenbooster",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "ValueError: The number of FixedLocator locations (6), usually from a call to set_ticks, does not match the number of ticklabels (5).",
+    "state": "closed",
+    "body": "From README create a SleepData object from sleepscorer import Scorer SleepData file SleepData sample psg edf start 2880000 stop 5400000 channels EEG EEG Fpz Cz EMG EMG submental EOG EOG horizontal preload False Create and run Scorer scorer Scorer file hypnograms True demo True scorer run this will only work if you have matplotlib set up tools show sample hypnogram sample psg groundtruth csv start 960 stop 1800 Predicting 100 4 4 00 11 00 00 2 91s it Still rolling I should fix that Predictions saved to sample psg edf csv assuming 0 W 1 S1 2 S2 3 SWS 4 REM Traceback most recent call last File start py line 8 in module scorer run File C Users Igoncharov Anaconda3 envs env36 lib site packages sleepscorer sleepscorer py line 103 in run tools plot hypnogram preds title Predictions for format os path basename filename File C Users Igoncharov Anaconda3 envs env36 lib site packages sleepscorer tools py line 302 in plot hypnogram plt yticks 0 1 2 3 4 5 W REM S1 S2 SWS File C Users Igoncharov Anaconda3 envs env36 lib site packages matplotlib pyplot py line 1719 in yticks labels ax set yticklabels labels kwargs File C Users Igoncharov Anaconda3 envs env36 lib site packages matplotlib axes base py line 63 in wrapper return get method self args kwargs File C Users Igoncharov Anaconda3 envs env36 lib site packages matplotlib cbook deprecation py line 451 in wrapper return func args kwargs File C Users Igoncharov Anaconda3 envs env36 lib site packages matplotlib axis py line 1796 in set ticklabels return self set ticklabels labels minor minor kwargs File C Users Igoncharov Anaconda3 envs env36 lib site packages matplotlib axis py line 1718 in set ticklabels The number of FixedLocator locations ValueError The number of FixedLocator locations 6 usually from a call to set ticks does not match the number of ticklabels 5",
+    "created_at": "2021-10-07T09:15:16Z",
+    "closed_at": "2021-10-07T09:53:28Z",
+    "user": "zenbooster",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2021-10-07T09:53:28Z",
+        "body": "your matplotlib version is too new try pip install matplotlib 2 2 5 which was the one used when the project was developed"
+      },
+      {
+        "user": "zenbooster",
+        "created_at": "2021-10-07T22:44:17Z",
+        "body": "Yes I downgraded the version now it works Thanks"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "ERROR: No matching distribution found for tensorflow==1.3.0",
+    "state": "open",
+    "body": "pip install git https github com skjerns AutoSleepScorer Collecting git https github com skjerns AutoSleepScorer Cloning https github com skjerns AutoSleepScorer to c users igoncharov appdata local temp pip req build opres k Running command git clone q https github com skjerns AutoSleepScorer C Users Igoncharov AppData Local Temp pip req build opres k Resolved https github com skjerns AutoSleepScorer to commit 5fa890a81c3ccbc0cab4ebcf87f4acf67311608a Collecting keras 2 0 6 Using cached Keras 2 0 6 tar gz 228 kB ERROR Could not find a version that satisfies the requirement tensorflow 1 3 0 from sleepscorer from versions 2 5 0rc0 2 5 0rc1 2 5 0rc2 2 5 0rc3 2 5 0 2 5 1 2 6 0rc0 2 6 0rc1 2 6 0rc2 2 6 0 ERROR No matching distribution found for tensorflow 1 3 0",
+    "created_at": "2021-10-01T13:16:27Z",
+    "closed_at": null,
+    "user": "zenbooster",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2021-10-01T16:33:17Z",
+        "body": "This repository is almost 5 years old back then Python 3 6 was the newest tensorflow 1 3 0 is only available for 3 6 13 afaik If you use anaconda just create a new virtual env and install python 3 6 into it then all should work fine"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "About Hypnograms",
+    "state": "open",
+    "body": "Hi Simon I m Jim a student of China I m learning your code Can you share the hypnograms files of your thesis because of edfx database has been updated so I can t run the edfx database py correctly My e mail address is jimhe1993 163 com Thanks a lot",
+    "created_at": "2019-02-21T01:36:57Z",
+    "closed_at": null,
+    "user": "JimHe1993",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2019-02-21T09:45:17Z",
+        "body": "I think you just need to replace the URL in the code with the new URL https physionet org physiobank database sleep edfx sleep cassette Unfortunately I currently don t have the time to update anything related to the project but feel free to implement the changes and create a PullRequest"
+      },
+      {
+        "user": "JimHe1993",
+        "created_at": "2019-02-21T10:14:05Z",
+        "body": "I used the newest URL address but convert hypnograms method doesn t work I got null hypnogram csv I started to learn sleep stage classification recently so don t understood the EDF format file well I want to run your example model firstly then learn everything deepy so I bug the hypnogram files If I disturbed you my apologize"
+      },
+      {
+        "user": "JimHe1993",
+        "created_at": "2019-02-21T10:17:56Z",
+        "body": "If it s ok please pack the hypnogram files and send to my e mail address Thanks"
+      },
+      {
+        "user": "lhaippp",
+        "created_at": "2019-02-21T14:22:37Z",
+        "body": "Thanks for your job it s really excellent I created a PullRequest to update the database and hope it helps"
+      },
+      {
+        "user": "JimHe1993",
+        "created_at": "2019-02-21T16:01:15Z",
+        "body": "Thanks I knew the datasets and I already downloaded the raw file My problem is I can t covert the raw hypnogram edf files to hypnogram csv as target labels which can train a model So I really wanted those hynograms groundtruth csv files If you have could you please share with me On 2 21 2019 22 22 Li Haipeng notifications github com wrote Thanks for your job it s really excellent I created a PullRequest to update the database and hope it helps You are receiving this because you authored the thread Reply to this email directly view it on GitHub or mute the thread"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2019-02-21T17:18:03Z",
+        "body": "Ah Now I understand you need the ground truth converted to csv try this script https github com skjerns AutoSleepScorerDev blob master edfx database py the convert hypnograms should do the trick"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2019-02-22T10:14:31Z",
+        "body": "Have a look at https github com skjerns AutoSleepScorerDev tree master edfx There s all the hypnograms and an updated version of the conversion script https github com skjerns AutoSleepScorerDev blob master edfx README MD"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Runtime error",
+    "state": "closed",
+    "body": "hello I run the run sample py but it occurs a error like thess File C Users bc Desktop AutoSleepScorerDev master keras utils py line 689 in cv train data data j for j in train idx File C Users bc Desktop AutoSleepScorerDev master keras utils py line 689 in listcomp train data data j for j in train idx IndexError index 46139 is out of bounds for axis 0 with size 45242 the error occured when the model build the cv dataset the train index is out of bound",
+    "created_at": "2018-12-17T13:02:10Z",
+    "closed_at": "2018-12-19T10:02:27Z",
+    "user": "17bcwu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-12-19T10:22:51Z",
+        "body": "Mhh this is strange I ll see if I can look into this but before Christmas I will likely not have time"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "About how much memory is needed ",
+    "state": "closed",
+    "body": "Hello author To run AutoSleepScorerDev How much memory do i need My memory is 16G Every time there is a memory overflow",
+    "created_at": "2018-12-17T08:27:48Z",
+    "closed_at": "2018-12-17T12:40:34Z",
+    "user": "17bcwu",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-12-17T11:11:32Z",
+        "body": "16GB is plenty Are you running on the GPU How much GPU memory do you have At which point do you experience the memory overflow"
+      },
+      {
+        "user": "17bcwu",
+        "created_at": "2018-12-17T11:29:15Z",
+        "body": "Thank you My computer is 16G but it s CPU Would it work if it s 8G and GPU"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-12-17T12:40:34Z",
+        "body": "I m closing this Feel free to reopen once you can provide more details on your problem such as the questions I asked I m not a fortune teller so I don t even know if this is a GPU or RAM problem or if it appears during loading of data during classification or whatsoever 1 step Please copy a full traceback of the problem 2 step answer the questions above"
+      },
+      {
+        "user": "17bcwu",
+        "created_at": "2018-12-19T09:58:03Z",
+        "body": "I m sorry my English is not very good I didn t express it well Your project is excellent I sincerely apologize to you for making you angry I m trying to sort out the problems clearly and Then I ll ask you for advice"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-12-19T10:21:28Z",
+        "body": "No problem I m happy to help if you can supply me with the traceback of the error This means the message that python prints once it s having a problem I ve tested it and the memory intensive process is likely the creation of the sleepdata pkl from the sleep edfx database You can run the script on the CPU machine and then copy the sleepdata pkl that is created in the same folder as the script to the folder of the GPU machine Then the script will not recreate the database but use the existing sleepdata pkl which will need approximately 2 7GB of RAM to load"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "If facing GPU memory problems...",
+    "state": "open",
+    "body": "when training different models with short kernels deep architectures for example you may want to give a try to https colab research google com up to 11 3GB of GPU RAM currently available on my session",
+    "created_at": "2018-11-16T12:52:46Z",
+    "closed_at": null,
+    "user": "PaulMuadDib",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-11-17T13:12:53Z",
+        "body": "Thanks Good one"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "About cnn.hdf5 address failure ",
+    "state": "open",
+    "body": "hi There are some problems with your open source project The address https www dropbox com s 87jcp2zdqx833dd cnn hdf5 Dl 1 can not be found can you give me some help",
+    "created_at": "2018-11-03T09:02:33Z",
+    "closed_at": null,
+    "user": "17bcwu",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "17bcwu",
+        "created_at": "2018-11-03T09:29:16Z",
+        "body": "Sorry to disturb you again this address https www dropbox com s bx5ulz7ps3pyjbk rnn hdf5 dl 1 can not be found too I can t run your open source project smoothly Because of these two questions Please give me some help Thank you"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-11-03T18:22:52Z",
+        "body": "I havnt found a proper host yet replace them with this https www dropbox com s t6n9x9pvt5tlvj8 rnn hdf5 dl 0 https www dropbox com s otm6t0u2tmbj7sd cnn hdf5 dl 0"
+      },
+      {
+        "user": "17bcwu",
+        "created_at": "2018-11-04T03:23:18Z",
+        "body": "Thanks very much"
+      },
+      {
+        "user": "LXElvira",
+        "created_at": "2019-12-06T08:42:34Z",
+        "body": "hi it seems as if the address https www dropbox com s t6n9x9pvt5tlvj8 rnn hdf5 dl 0 https www dropbox com s otm6t0u2tmbj7sd cnn hdf5 dl 0 could not be found again could you give me some help skjerns Thank you very much"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2019-12-06T12:46:52Z",
+        "body": "please excuse that I don t have any other hosting solution yet"
+      },
+      {
+        "user": "LXElvira",
+        "created_at": "2019-12-07T14:16:33Z",
+        "body": "I tried but it still didn t work Anyway thank you very much for your quick answer"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2019-12-07T17:35:28Z",
+        "body": "sorry my bad i guess I was half asleep D D https www dropbox com s otm6t0u2tmbj7sd cnn hdf5 dl 0 https www dropbox com s t6n9x9pvt5tlvj8 rnn hdf5 dl 0 there you go"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "What is the purpose of the line np.stack([eeg])",
+    "state": "closed",
+    "body": "Hi Simon may I know what is the function of these lines I had dissect to understand its purpose but turn out no where Appreciate if you can shed some light Especially the need of the pool apply and RawArray here I had read the documentation but still unable to relate why you used it here xx np stack eeg I am able to run even w o stack vv mne create info 1 self sfreq eeg res eeg pool apply async mne io RawArray xx vv first samp 0 verbose 0 resample args 100",
+    "created_at": "2018-10-10T05:16:24Z",
+    "closed_at": "2018-10-15T13:56:43Z",
+    "user": "balandongiv",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-15T08:06:51Z",
+        "body": "1 Python is generally not good with using multiple cores Therefore I use a multiprocessing pool for parallel data processing speeding things up In this example I run the resampling in parallel which makes it almost 3x faster 2 mne io RawArray https martinos org mne dev generated mne io RawArray html needs a 2D input channels x samples We have a 1D data series one ExG channel np stack array1d converts a 1D array to a 2D array Not sure why I don t use np reshape data 1 1 but I assume there was a reason probably something with views and copies"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Training on another sleep database",
+    "state": "open",
+    "body": "Hi Simon I am starting to train the CNN RNN on other sleep databases and the 1st one is the SHHS database but I have a doubt about the way to set the channels that are used channels and I did this sleep available channels SaO2 H R EEG sec ECG EMG EOG L EOG R EEG THOR RES ABDO RES POSITION LIGHT NEW AIR OX stat channels EEG EEG sec EEG EMG EMG EOG EOG L EOG R set channels that are used EEG sec C3 A2 EEG C4 A1 Is it the correct way to retain the two available EEG channels EEG sec and EEG I ask because the script training is running so it has recognized infered the EEG channel s but it missed the EOG channels Jeff",
+    "created_at": "2018-10-03T13:56:24Z",
+    "closed_at": null,
+    "user": "PaulMuadDib",
+    "comments_count": 26,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-03T14:15:15Z",
+        "body": "I do not know the details of this dataset but in principle you can use whichever channels and channel combinations you want I would not be surprised if it would also work with ECG however be aware of the different sample frequency that needs to be interpolated"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-03T14:32:38Z",
+        "body": "Thanks Simon I was just wondering if the square brackets a list where syntaxically the correct way to retain several available channels like EEG sec and EEG which presumably are extracted from a edf file header"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-04T18:05:36Z",
+        "body": "I thought the scorer could be used with the two available EEG channels of the PSG plus EOG EMG but data is shaped with a last dim of 3 in the SleepLoader hence my question Resampling it to 100 Hz Would it be possible to put the other available EEG channel in the EMG field in the channel definition for instance in this way channels EEG EEG SEC EMG EEG EOG EOG L in the SHHS EEG SEC and EEG are C3 A2 and C4 A1"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-04T20:17:51Z",
+        "body": "I don t quite understand what you mean The network can be trained with any number of channels and any configuration of channels but you will need to adapt the script a bit to adjust the input layer of the network Once a network is trained the channels are fixed and you can t input any other channels or combinations The already trained weights provided by this repository do necessarily require the existence of EEG EMG and EOG"
+      },
+      {
+        "user": "balandongiv",
+        "created_at": "2018-10-08T08:17:55Z",
+        "body": "If you would allow me to rephrase Paul question Say we have different data set with the following setting EEG channels C3 A2 and C4 1A These two channel were refered as EEG sec and EEG respectively in the SHHS https sleepdata org datasets shhs pages 11 montage and sampling rate information shhs2 md dataset EMG channel EMG SUBMENTAL EOG channel EOG HORIZONTAL How to set the variable channels as in run sample my best guess will channels EEG EEG sec EEG EMG EMG SUBMENTAL EOG EOG HORIZONTAL Update However by doing so the program failed at def check channels self header"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-08T15:19:16Z",
+        "body": "Sorry for bringing confusion here I am indeed reusing the script run sample py where one EEG channel among the two available one EMG and one EOG channels are used My first question was indeed to know whether it is possible to use both EEG channels only modifying the channels definition and I asked if the following for 5 channels was the correct way to do this channels EEG EEG sec EEG EMG EMG EOG EOG L EOG R But doing this will not enable to recruit use the two EEG channels and the two EOG channels it is only useful in the case where the name of a channel changes from one edf file to another And in the SHHS database this happens to be the case the channel EEG SEC is also named EEG2 depending on the files in the SHHS1 repository In this case channels EEG EEG sec EEG2 EMG EMG EOG EOG L did the job selecting either EEG SEC or EEG2 depending on the edf file Recruiting more channels than the 3 used maybe requires to modify varied scripts models py SleepLoader py etc"
+      },
+      {
+        "user": "balandongiv",
+        "created_at": "2018-10-08T16:10:19Z",
+        "body": "Pcode1 The modification should work and been tested In run sample change channels to channels EEG EEG SEC EEG EMG EMG EOG EOG L Under def check channels change the following if isinstance ch pick tuple s1 bool set x upper for x in s x for x in self channels ch intersection set channels if s1 is False raise ValueError ERROR Channel for not found in navailable channels format self channels ch ch filename channels for i in ch pick picks append channels index i upper else Newly add picks append channels index ch pick upper"
+      },
+      {
+        "user": "balandongiv",
+        "created_at": "2018-10-08T16:11:27Z",
+        "body": "SImon may I know the following for loop is for what Im unable to modify the following because I do not know under what circumstances it will triger the for loop This syntax under def check channels if type ch pick is list found False for c in ch pick if c in channels found True ch pick c break if found False raise ValueError ERROR Channel for not found in navailable channels format self channels ch ch filename"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-08T18:09:33Z",
+        "body": "I think this for loop is precisely the one which picks up EEG SEC or EEG2 when the EEG dict item is declared as a list of strings like in channels EEG EEG sec EEG2 from the available channels from header depending on the SHHS edf files"
+      },
+      {
+        "user": "balandongiv",
+        "created_at": "2018-10-09T02:58:21Z",
+        "body": "Yes you are right The for loop was for class list But with my proposed workaround we can omit this for loop since we declared multiple EEG channels as a set"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-09T16:32:08Z",
+        "body": "Or if you want to retain the possibility to select EEG SEC OR EEG2 AND EEG like with channels EEG EEG SEC EEG2 EEG EMG EMG EOG EOG L useful for the SHHS database since you will find either EEG SEC or EEG2 for the same C3 A2 channel in the edf files maybe something like the following no tested there might be some other modifications to implement def check channels ext self header channels c upper for c in header ch names filename os path basename header filenames 0 labels picks for ch in self channels ch pick if not self channels ch continue ch to pick self channels ch if type ch to pick is tuple if there are several channels to pick up for chs in ch to pick if type chs is list for c in chs if c in channels ch pick append c break elif type chs is str if chs in channels ch pick append chs else raise TypeError ERROR The channel type in the channels to select should be a list ch1 ch2 to select ch1 or ch2 or a string format ch ch to pick if not len ch pick len ch to pick print WARNING Some channels of in are missing format self channels ch ch elif type ch to pick is list if there is one channel to pick between several ones for chs in ch to pick if chs in channels ch pick c break else if there only one channel to pick up if ch to pick upper in channels ch pick ch to pick if len ch pick 0 raise ValueError ERROR None of the channels for are found in navailable channels format self channels ch ch filename channels picks append channels index ch pick upper labels append ch"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-09T16:54:18Z",
+        "body": "Btw the best model for the 50 males between 38 and 58 yrs drawn from the 200 cases of SHH1 only reaches fold 6 val acc f1 0 80947 0 73136 test acc f1 0 76639 0 68004 using both EEG channels EEG SEC and EEG no EMG and EOG L EOG R using only a slim model models cnn3adam filter morel2 slim since the 4 Go of VRAM my of GTX980M GPU are not sufficients on this database although it ran smoothly for the EDFx database with these parameters kernel length 100 output filters 500 model add Conv1D kernel size kernel length filters output filters strides 10 model layers 0 set weights np array kernel reshape kernel shape bias initialize input layer weights with a dict of atoms wavelets waveforms model add Conv1D kernel size 10 filters 300 strides 2 model add Conv1D kernel size 5 filters 200 strides 1 model add Dense 1200 activation relu kernel initializer he normal name fc1 model add Dense 1200 activation relu kernel initializer he normal name fc2"
+      },
+      {
+        "user": "balandongiv",
+        "created_at": "2018-10-10T05:14:36Z",
+        "body": "Seem not the best performance you have there Are you using the pre trained parameter"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-11T06:32:00Z",
+        "body": "Congratulations on getting it work Regarding the accuracy There are a multitude of things that can be held responsible here Using a different architecture different data set not using all channels Additionally I found that each dataset has it s own hyperparameters that achieve optimal performance Changing the learning rate stronger weaker regularization using a different initialization etc Sometimes it turns out that just the random seed was at fault for not reaching a high performance It s a gamble If the scoring within the dataset is consistent inter rater reliability it will certainly be possible to approximate this inter rater score Unfortunately neural networks are still notoriously difficult to debug"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-12T11:37:31Z",
+        "body": "Please be aware that as far as I remember correct me if I m wrong this data set cuts off all EEG data at 120uV which is a large part of slow oscillations and arousals etc For this reason I also did not use it for my study"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-13T17:43:56Z",
+        "body": "I was not aware that the dynamical range of the EEG channels was limited to 120 V Last week I used Spinky to see whether it could produce useful features for AutoSleepScorer to input in its rnn part along with the last cnn layer signals and did not see clipping in the EEG channels But clipping should be easily detectable when we load the data I will check this"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-13T17:55:04Z",
+        "body": "Using a balanced training or not made a difference would it make sense to you the more I select similar individuals gender age bmi rem etc in this database the harder it is to train on the selected cohort to produce good scoring stats I was really expecting the opposite"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-15T07:55:24Z",
+        "body": "The higher your variance in training data the higher your generalization will be If you select only very similar individiuals both for testing and training you should get high accuracies Be aware that each scorer has a large bias read this recent study https www ncbi nlm nih gov pmc articles PMC5786839 With a bit of bad luck the scorer of the data set you re using has a more extreme bias and generalization will not work very well as we re basically learning to copy his scoring style"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-10-27T11:44:03Z",
+        "body": "Yes Simon thank you for this reference the quality of the human scoring on which the automatic scorer is training maybe a main driver for this but difficult to assess for the varied sleep databases edfs shhs mass etc commonly used for machine learning Not being an expert in sleep research I confess that in a first approximation I would tend to look in the publications or in simulation how easily a given learning structure trains reaches good training testing accuracies on the varied sleep databases but maybe this is more complex than that"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-27T12:33:13Z",
+        "body": "The biggest problem in my opinion is that there is no Gold standard and that current sleep staging is just a sub optimal practice kept alive since the 60s Probability scores calculated from several raters is the closest we can get to a gold standard but that s extremely expensive"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-11-16T12:47:50Z",
+        "body": "The EDFx sleep database is the one scored with the largest number 4 of them of human experts"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-11-17T13:12:20Z",
+        "body": "No see here for details https physionet org pn4 sleep edfx If you find a database with 4 scorers per record let me know"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-11-20T19:12:42Z",
+        "body": "I misunderstood the table 1 p 15 of your thesis I just got a very strange result on the same SHHS data with a spiking neural network based on bindsnet trained with STDP on the spectrograms rapidly reaching a 100 accuracy 99 f1 value on 250x30s batches and a very nice confusion matrix on the last 2500x30s I need to recheck these results and see how they transfer on the test signals but image https user images githubusercontent com 4218461 48796707 962b4080 ed00 11e8 8c9e f445b204b73b png"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-11-21T11:49:33Z",
+        "body": "100 accuracy is certainly overfitting With sleep data if you get past 90 accuracy on your training set you can be sure that you were overfitting Also numbers on the training set are meaningless A neural network of sufficient size will always be able to reach 100 accuracy on the training set simply by memorizing the input This is why you need to report on the validation or even test set What s your reasoning for using bindsnet Interesting approach Nice to see you are working with this keep on going"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-11-21T12:37:25Z",
+        "body": "Even if the same accuracy f1 value is obtained on testing data the remaining 30 4000 30s frames of the dataset 14 000 30sec frames Overfitting also popped into my mind but these accuracies were reached very early at 5 6000 frames in the training 10 000 30sec frames the SNN hasn t learnt anything from nearly half of the training dataset and was basically already during the training phase in a predictive mode not learning anything The 50 individuals drawn from the SHHS are very similar age BMI no to mild apnea With the AutoSleepScorer with 2D convs and a larger sequence 12 for the RNN on the two EEG EOG I have never exceeded 86 of accuracy 76 of F1 value so reaching above 99 rounded to 100 in less than 1 hour of CPU looked very suspicious to me also knowing the nature of the dataset itself This SNN is very simple it is based on Diehl Cook 2015 implementation on Bindsnet and has been used on the MNIST database originally there are 3 neurons populations an input coding population which encodes each time frequency bin of the spectrogram of the sum of EEG channels into a Poissonian spike train an excitatory neurons population 1000 and an inhibitory population 1000 which are interacting mutually connected Only the connections between the input coding population 100x100 and the excitatory population 1000 are learnt through STDP I am going to go through this spiking code to see what I may be missing here to test it on a more general population to slim it to see how performance evolves and to see if I can get interpretable stuff from its weights how it discriminates the spectrograms parts"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-11-21T13:56:42Z",
+        "body": "If this is on hold out data I assume there is some error in your setup Reaching 100 especially with sleep data is close to impossible due to the limit of the low the inter and intra rater reliability I d look at everything above 90 with high suspicion You will not reach higher than that on AASM sleep staged data staged by humans"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Keras not multi-processing safe ?",
+    "state": "open",
+    "body": "Hi there I have successfully run the sleep scorer training part AutoSleepScorerDev and generated new cnn rnn weights they are slightly larger than the weights proposed for direct download 386 662 ko for the cnn weights I have generated 386 652 ko for the one proposed named cnn hdf5 18 368 ko for the rnn weights I have generated vs 14 212 ko for the rnn hdf5 for AutoSleepScorer only not the training part the keras prediction mode induces multiple runtime errors seemingly due to multiprocessing I tried to disable it within the code in SleepLoader py tools py etc not redibitory it runs till the end output a predicted hypnogram but not along with the groundtruth one like this RuntimeError An attempt has been made to start a new process before the current process has finished its bootstrapping phase This probably means that you are not using fork to start your child processes and you have forgotten to use the proper idiom in the main module if name main freeze support The freeze support line can be omitted if the program is not going to be frozen to produce an executable I use Python 3 6 6 tensorflow 1 10 0 tensorflow gpu 1 10 0 Keras 2 2 2 did you experiment such runtime errors Take care Jean Fran ois Baure PS Thanks so much skjerns your code is very interesting",
+    "created_at": "2018-09-11T16:33:33Z",
+    "closed_at": null,
+    "user": "PaulMuadDib",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-09-14T15:52:03Z",
+        "body": "I m impressed you were able to get the training going different weights size This can have various reasons The keras and tensorflow versions you are using are muchnewer than the one I used Some protocol specifications might have changed especially with all the API shuffling in tensorflow Furthermore it is quite possible that I experimented more with different settings after the creation of the weights and maybe they ended up in the repository The best way to check for errors is to print the summary of the model and check with the specifications that are given in the thesis of the project If they are the same then it s some specification that changed multiprocessing Which OS are you using Multiprocessing is notorious for not working well between different OSs However as far as I remember I am not using any multiprocessing myself mainly due to incompatibility of multiprocessing and tensorflow gpu I assume that this is a keras issue or a more general problem Have you enclosed all statements in a if name main clause This is most often the problem when having issues with multiprocessing especially on Windows See here for more https stackoverflow com questions 18204782 runtimeerror on windows trying python multiprocessing"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-09-14T16:49:11Z",
+        "body": "I discovered the power of a GPU thanks to you Simon after a first run on my i7 CPU of nearly 2 days it s 15 times faster 16 Go of RAM is barely sufficient You are right I am on Windows 10 and I will add this week end I do that on my free time a if name main guard in the main module to see if it prevent this uncontrolled recursive subprocesses creation Thanks for your lights"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "How to run the model with only eeg data in edf file?",
+    "state": "open",
+    "body": "Hi It s really a good project not flattering it s really fantastic In your thesis you compared the accuracy of different input channel selection such as eeg eeg emg eeg eog and all But the coed itself requires all channels I wonder how can I run the AutoSleepScorer with only eeg channel Sincerely Liu",
+    "created_at": "2018-08-09T15:48:26Z",
+    "closed_at": null,
+    "user": "yiboliu94",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-09-09T09:50:36Z",
+        "body": "Hi Liu Did you try like this create a SleepData object with EEG only here Fpz Cz from sleepscorer import Scorer SleepData file SleepData yourEEGfile edf start xxx stop yyy channels EEG EEG Fpz Cz preload False Create and run Scorer scorer Scorer file hypnograms True demo True scorer run tools show sample hypnogram sample psg groundtruth csv start 960 stop 1800"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-09-12T17:46:29Z",
+        "body": "Thanks The preliminary pre trained weights that I supplied need all three channels to work correctly For usage of only one channel EEG you would need to re train a network It is not possible to leave one channel empty as the neural network expects all three channels being present This decision was made as all channels turned out to give the highest accuracy PaulMuadDib With the example you provided it will try to infere the EMG EOG channel automatically from the edfx file if I remember correctly A single channel mode is not yet implemented also as the weights provided require three input channels"
+      },
+      {
+        "user": "PaulMuadDib",
+        "created_at": "2018-09-14T16:20:21Z",
+        "body": "skjerns do you think that such a network could learn valuable representations of the EEG signals while training with different subsets of electrodes injecting null or a low variance white noise null information signals in the unused inputs Or we must fully rethink the network architecture principles to enable it to train on different sleep databases with different electrode montages"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-09-14T16:27:09Z",
+        "body": "It is possible to just remove the channels not used However it is necessary to re train the network Although training one network to be able to use a variable subset of electrodes will be possible I d say it is easier to train separate networks for different channel combinations"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Precision",
+    "state": "closed",
+    "body": "I have found both your code and your masters thesis to be incredibly helpful in doing so Very recently I was testing your scorer and datasets with a precision marker and received 55 precision rather than 80 It is very possible that I made a mistake so if you have a module function that computes the accuracy that will be great Thank you so much",
+    "created_at": "2018-01-23T00:44:39Z",
+    "closed_at": "2018-02-12T08:26:50Z",
+    "user": "RAllon",
+    "comments_count": 16,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-01-23T08:19:36Z",
+        "body": "First of all thanks That is indeed a strange behaviour 1 Which dataset were you using Which electrodes as EEG and ref 2 Which model were you using the pre trained one Please note that I m not reporting precision but F1 and accuracy"
+      },
+      {
+        "user": "RAllon",
+        "created_at": "2018-01-23T21:44:38Z",
+        "body": "To make the predictions using the EDF files I used the code file SleepData filename channels EEG EEG Fpz Cz EMG EMG submental EOG EOG horizontal preload False scorer Scorer file hypnograms True demo True scorer run To find the precision I used x np zeros 39 4 x i precision recall fscore support real short pred short average macro warn for precision I downloaded the files from the link below https github com skjerns AutoSleepScorerDev blob master edfx database py"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-01-24T08:33:59Z",
+        "body": "I ll look into it Please supply me with the full script you are using including definition of real short and pred short It should be noted that the weights supplied at the moment are of training on the CCSHS50 not the EDFx The values supplied in the README are from training and testing within one dataset also see my thesis https github com skjerns AutoSleepScorer blob master figures thesis pdf raw true I adapted the README to make that clear When opening this repo I still had plans to continue development but had not time ressources so far Still 55 seems too low for the transfer"
+      },
+      {
+        "user": "RAllon",
+        "created_at": "2018-01-25T03:25:27Z",
+        "body": "First run from sleepscorer import tools import glob import numpy as np from sleepscorer import Scorer SleepData edffiles glob glob Users razallon Dropbox Sleep Lab SKJ Data Edf and pred edf filesarr np column stack edffiles for i in range len edffiles print edffiles i filename edffiles i file SleepData filename channels EEG EEG Fpz Cz EMG EMG submental EOG EOG horizontal preload False scorer Scorer file hypnograms True demo True scorer run Next run from sleepscorer import tools from sleepscorer import Scorer SleepData from sklearn metrics import precision recall fscore support import glob import numpy as np x np zeros 39 4 csvfiles glob glob Users razallon Dropbox Sleep Lab SKJ Data Hyp Groundtruth csv edffiles glob glob Users razallon Dropbox Sleep Lab SKJ Data Edf and pred edf filesarr np column stack edffiles csvfiles for i in range len csvfiles open csvfiles i filename edffiles i import matplotlib pyplot as plt edf for k in filename edf append k csv c s v edf extend csv csvfilename join edf import csv csv delimiter t h 0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 W 0 S1 1 S2 2 S3 3 S4 4 SWS 3 REM 5 R 5 A 6 M 8 9 with open csvfilename as csvfile csvreader csv reader csvfile delimiter csv delimiter predicted for k in csvreader if len k 0 predicted append h k 0 predicted np array predicted dtype np int32 reshape 1 1 predicted predicted 4 3 predicted predicted 5 4 realcsv csvfiles i with open realcsv as csvfile csvreader2 csv reader csvfile delimiter csv delimiter real for k in csvreader2 if len k 0 real append h k 0 real np array real dtype np int32 reshape 1 1 real real 4 3 real real 5 4 m min real size predicted size real short real 0 m pred short predicted 0 m x i precision recall fscore support real short pred short average macro warn for precision print x print x i 4"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-01-28T13:19:56Z",
+        "body": "I had a bit of trouble understanding what you did in your code especially where you got the ground truth from I created a script that does what you want you can see it here transfer performance edfx py https gist github com skjerns 459c9c296ffbd87cff9545ab295dc83c Mean transfer accuracy 72 2 Mean transfer F1 score 59 1 These scores are quite close to the ones reported in my thesis https github com skjerns AutoSleepScorer blob master figures thesis pdf raw true Acc 73 F1 61 The models in the thesis and the repo are slightly different therefore the slight difference in performance Please regard 3 4 Transfer performance for details Few notes 1 The model weights provided were trained on the CCSHS therefore you need to look at the Transfer Performance The CCSHS features adolescents while the EDFx features adults from 20 80 years old I think it s already quite something to reach 72 accuracy in this case 2 The model given in the repo was just a random model from a cross validation fold 60 of the data while the transfer experiment used a model trained on 80 of the data afaik explaining the slight difference 3 S4 and S3 are concatenated to SWS while all non sleep stages are changed to wake This is also done while model training 4 The EDFx features excessive pre and post sleep recording which should be truncated If this isn t done it skews performance I also see that the model link is now down again unfortunately I have no means of hosting such a large file easily I hope to have more time continuing the project later Hope I could shed some light on your concerns"
+      },
+      {
+        "user": "RAllon",
+        "created_at": "2018-02-02T01:27:47Z",
+        "body": "Thank you so much for the code I recently ran it and made a few syntax changes such as indentations I have copied it below import glob import csv import numpy as np from sklearn metrics import f1 score from sleepscorer import Scorer SleepData edfx dir Users razallon Dropbox Sleep Lab SKJ Data RealHypno edf print Converting hypnograms files glob glob edfx dir hyp for file in files hypnogram with open file mode rb as f raw hypno x for x in str f read split Sleep stage 1 for h in raw hypno stage h 0 repeat int h split 0 12 30 no idea if this also works on linux hypnogram extend stage repeat with open file 4 txt w as f writer csv writer f lineterminator r writer writerows hypnogram edffiles glob glob edfx dir filesarr np column stack edffiles files for i in range len edffiles print edffiles i filename edffiles i file SleepData filename channels EEG EEG Fpz Cz EMG EMG submental EOG EOG horizontal preload False files append file scorer Scorer files hypnograms False demo True scorer run truth glob glob edfx dir txt pred glob glob edfx dir csv conv dict 1 1 2 2 3 3 4 3 W 0 S1 1 S2 2 S3 3 S4 3 SWS 3 REM 4 R 4 A 0 M 0 0 accs f1s for i in range len truth with open truth i r as file y true file read split n 1 y true np array conv dict x for x in y true for i in range len pred with open pred i r as file y pred file read split n 1 y pred np array int x for x in y pred zero np where y true 0 0 idx start zero 0 60 idx stop zero 1 60 y pred y pred idx start idx stop y true y true idx start idx stop accs append np mean y true y pred f1s append f1 score y true y pred average macro print Prediction scores from a model trained on CCSHS50 print Mean transfer accuracy 1f format np mean accs 100 print Mean transfer f1 score 1f format np mean f1s 100 I have also copied the results below 0 16496465043205027 0 29850746268656714 0 34956794972505889 0 41162608012568735 0 33150039277297721 0 29772191673212883 0 32757266300078552 0 26787117046347209 0 35113904163393561 0 27336999214454044 0 25216025137470544 0 24194815396700706 0 30007855459544386 0 29536527886881381 0 26315789473684209 0 29850746268656714 0 26551453260015712 0 34564021995286726 0 30557737627651216 0 29143754909662217 0 37941869599371564 0 29379418695993714 0 30871956009426549 0 24666142969363708 0 26158680282796543 0 30164964650432052 0 28515318146111546 0 38491751767478399 0 29300864100549884 0 31578947368421051 0 2584446190102121 0 28279654359780049 0 26865671641791045 0 23880597014925373 0 24194815396700706 0 30322073841319719 0 31421838177533384 0 24744697564807541 0 29222309505106048 Is there something that I am doing wrong Are we using different datasets I recieved the datasets from the code below download edfx database and prepare it if name main datadir edfx prepare dataset if it does not exist if not os path isfile os path join datadir sleepdata pkl edfx database download edfx datadir edfx database convert hypnograms datadir channels EEG EEG FPZ CZ EMG EMG SUBMENTAL EOG EOG HORIZONTAL set channels that are used references RefEEG False RefEMG False RefEOG False we do not set a reference because the data is already referenced sleep sleeploader SleepDataset datadir use float16 is you have problems with memory or a small hard disk Should be around 2 6 GB for float32 sleep load channels channels references references verbose 0 dtype np float32 edfx database truncate eeg sleep if the pickle file already exist just load that one else sleep sleeploader SleepDataset datadir sleep load object load the prepared files Should be around 2 6 GB for float32 load data data target groups sleep get all data groups True data zscore data 1 data tools normalize data target target 4 3 Set S4 to S3 target target 5 4 Set REM to now empty class 4 target keras utils to categorical target I was also wondering if you had a code that could convert XML files into CSV files Thank you so much"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-02-02T09:10:52Z",
+        "body": "Please read how to format code on github Readme https guides github com features mastering markdown I have done the formatting for you for now but I m not sure if the missing indents are by Github or by your code I recently ran it and made a few syntax changes such as indentations Why did you make syntax changes The code should be runable as it is with only exchanging the EDFx path As the code is formatted right now there are some missing indents here for file in files hypnogram with open file mode rb as f raw hypno x for x in str f read split Sleep stage 1 for h in raw hypno stage h 0 repeat int h split 0 12 30 no idea if this also works on linux hypnogram extend stage repeat with open file 4 txt w as f writer csv writer f lineterminator r writer writerows hypnogram With these lines you create only one hypnogram file Could you check that Also What Tensorflow Keras version are you using"
+      },
+      {
+        "user": "RAllon",
+        "created_at": "2018-02-12T02:48:02Z",
+        "body": "Thank you so much for the clarification I ran the code again and got the following results Mean transfer accuracy 29 4 Mean transfer f1 score 14 6 I am starting to think that we are using different datasets Can you clarify which dataset you are using I am using your edfx database download edfx code to download the data"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-02-12T08:26:50Z",
+        "body": "This is quite impossible There is only one edfx dataset The code I provided works with the dataset from physionet https physionet org pn4 sleep edfx It is highly unlikely that it will provide different results on different machines Either your model file is compromised or wrong or your database is I m closing this issue as the error does not seem to lie on my side"
+      },
+      {
+        "user": "gadallon1",
+        "created_at": "2018-02-12T16:32:16Z",
+        "body": "I am trying to run the code above and I am getting the following numbers Mean transfer accuracy 31 7 Mean transfer f1 score 21 5 I am getting the following error message Using TensorFlow backend Users gadallon anaconda3 lib python3 6 importlib bootstrap py 219 RuntimeWarning compiletime version 3 5 of module tensorflow python framework fast tensor util does not match runtime version 3 6 return f args kwds Do you think it might be impacting the results sorry if this is something obvious"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-02-12T17:05:13Z",
+        "body": "could you tell me how big your model files are weights cnn hdf5 As I see the link is down again so it might be possible that you are downloading an empty file"
+      },
+      {
+        "user": "gadallon1",
+        "created_at": "2018-02-12T19:04:47Z",
+        "body": "It s 395MB"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-02-13T12:50:17Z",
+        "body": "Should be 377MB I rerun the code on a different machine including redownloading the edfx files and I still get the same results I do not know what you are doing differently Please reinstall the package with pip uninstall sleepscorer pip install git https github com skjerns AutoSleepScorer Dedownload the weights You can also download them manually from here cnn https www dropbox com s otm6t0u2tmbj7sd cnn hdf5 dl 1 rnn https www dropbox com s t6n9x9pvt5tlvj8 rnn hdf5 dl 1"
+      },
+      {
+        "user": "gadallon1",
+        "created_at": "2018-02-22T03:40:06Z",
+        "body": "sorry for the delay I did actually have the right file It s 395 on the disk but 377 before the download I did everything from scratch and got the same accuracy I put everything on a new PC I usually use mac and got even a lower accuracy 29 I am suspecting I am doing something wrong Any chance we can skype at one point to see what s going on"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-02-22T10:17:01Z",
+        "body": "This absolutely puzzles me Especially how you are possible to get even different results on a new machine We can skype this weekend if you wish my username is the same as here"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-03-15T18:29:50Z",
+        "body": "follow up seems to be a problem with the file reading at the end of the script The predictions are created fine"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Consumer devices for recording requisite EDF file",
+    "state": "open",
+    "body": "Hi there great project I m personally looking into whether any consumer electronics can create the EDF files that you would use in the algorithm I have a Muse headband device and they seem to have all the requisite sensors but I m not sure if access to raw data is available for anything but EEG Any ideas on this front thanks",
+    "created_at": "2018-01-22T01:15:32Z",
+    "closed_at": null,
+    "user": "mayeaux",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2018-01-22T08:44:11Z",
+        "body": "mayeaux theoretically no problem technically currently not possible The data here is trained on different systems using different electrode positions In theory it would be no problem to retrain data on Muse but therefore you would need annotated data Tweaking the network in a way to generalize to other input systems could also work but would be a timely endeveour In practice I barely have time to develop the project further at all unfortunately it s stagnating at the moment"
+      },
+      {
+        "user": "mayeaux",
+        "created_at": "2018-01-22T18:06:13Z",
+        "body": "Yeah that s interesting and thanks for the prompt response I m actually looking to do a little proof on whether yoga meditation can mimic deep sleep brainwave patterns which I have some preliminary data with using the Zeo headband Zeo has a really great algorithm for detecting sleep stages which I m guessing now based on your answer is created directly per the electrodes it has available and shows me as being in deep sleep often during yoga so my goldmine would be a general purpose open source algorithm for converting EEG data to a hypnogram which as far as I can tell you re the closest to having created But don t worry I understand where you re coming from if you re too busy I have lots of projects that are great but get paused because I have to move onto other things I think I will just continue to use my Zeo in the meantime but since their company is now out of business and they don t have access to raw data would be great if I could somehow pivot to using the Muse headband I ll continue to think on it"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-01-23T08:37:26Z",
+        "body": "Ah the good old Zeo Although it is a great device I would not base any assumptions on its output on non sleep recordings Algorithms are often very fragile and even slight differences in input can confuse the classifier For your interest I would recommend looking into the current research literature There are indeed similarities between certain sleep stages and meditation but the commonalities are not clear yer Often an increased theta activation can be found while meditation 1 http online liebertpub com doi abs 10 1089 acm 2009 0113 which is to some extend also found in REM but also wake in general On the other side an increase in dorsolateral prefrontal activation has been reported after meditation practice 2 https www ncbi nlm nih gov pubmed 26720411 This form of activation is not very common during sleep except while lucid dreaming 3 https academic oup com sleep article 32 9 1191 2454513 Others do also find increase in gamma and decrease in delta 4 https link springer com article 10 1007 s10339 009 0352 1 which is exactly the opposite of what is happening during deep sleep PS Why do you not have access to the RAW data You just have to flash the decrypted firmware on it and then you can access the data RAW Additionally you can also modify a USB cable that fits into the slot at the back of the ZEO and access data live via USB"
+      },
+      {
+        "user": "mayeaux",
+        "created_at": "2018-01-24T00:53:30Z",
+        "body": "Thanks for pointing me towards this literature and I ll check it out With my experience with using Zeo I only found that I would get deep sleep registered when I was doing restorative yoga very relaxed positions holding for longer periods as opposed to meditation People often report higher energy levels after practicing yoga or typically meditation as well and essentially I d like to ascertain whether there s some kind of physiological correlate between yoga meditation and sleep perhaps certain yoga practices can elicit a physiological state closer to deep sleep if it s slow restorative yoga while other practices can elicit something more akin to light sleep or REM Also there s a lot of literature to show that a yoga practice improves sleep across a variety of dimensions sleep onset latency sleep duration decreased time to fall asleep during awakenings so I think a strong medical case could be made for developing a yoga practice if it could be reasonably suggested that not only does yoga improve sleep outcomes after the practice but that during the practice the body undergoes something physiologically similar to sleep as well Anyways those are my thoughts at the moment I m continuing to read some literature and think about my available options in the meantime thanks for the informative responses"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2018-10-15T14:00:19Z",
+        "body": "Just to add up on that I don t think there are high similarities between deep sleep and Yoga As said before it s just an algorithm and it will misclassify your Yoga EEG to SWS mainly because it has never seen Yoga EEG before That yoga is good for sleep does not automatically mean that the activity during Yoga is similar to sleep activity You would need to look at the RAW waves or the spectogram to look into more detail about that"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Cannot open 'cnn.hdf5'  'rnn.hdf5'",
+    "state": "closed",
+    "body": "I am trying to run the example code you posted in README md But when loading the model hdf5 file it shows an error File h5py h5f pyx line 78 in h5py h5f open OSError Unable to open file file signature not found It seems like the model files are corrupted when I try to run h5debug cnn hdf5 HDF5 DIAG Error detected in HDF5 1 8 16 thread 139994803136256 000 src H5F c line 604 in H5Fopen unable to open file major File accessibilty minor Unable to open file 001 src H5Fint c line 1087 in H5F open unable to read superblock major File accessibilty minor Read failed 002 src H5Fsuper c line 277 in H5F super read file signature not found major File accessibilty minor Not an HDF5 file cannot open file Could you check the model files again FYI I am running your code in Ubuntu 16 04 with python3",
+    "created_at": "2017-12-07T00:12:40Z",
+    "closed_at": "2018-01-26T11:21:58Z",
+    "user": "cjpark87",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2017-12-08T08:49:13Z",
+        "body": "I fixed the links should work now Re clone to get the new links"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "How to train the model",
+    "state": "open",
+    "body": "Hi if I download the dataset how can I to train the model",
+    "created_at": "2017-10-14T23:59:07Z",
+    "closed_at": null,
+    "user": "shqing",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "skjerns",
+        "created_at": "2017-10-15T14:37:32Z",
+        "body": "Code to train the model is stored at https github com skjerns AutoSleepScorerDev Emphasis on stored as I had no time yet to clean up the repository to make is usable but it s on my list I ll let you know if that changes Until then you can find a pre trained model integrated"
+      },
+      {
+        "user": "skjerns",
+        "created_at": "2017-10-23T12:40:10Z",
+        "body": "shqing I created a small script run sample py that should help you to get started https github com skjerns AutoSleepScorerDev blob master run sample py just clone the https github com skjerns AutoSleepScorerDev repo Hope it works edit just checked it I think I changed some settings so that results deviate from the final results I ll look into it later"
+      }
+    ]
+  }
+]

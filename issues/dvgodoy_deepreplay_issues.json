@@ -1,0 +1,283 @@
+[
+  {
+    "number": 29,
+    "title": "KeyError: 'samples'",
+    "state": "closed",
+    "body": "getting KeyError samples error when trying the sample code KeyError Traceback most recent call last c Users modelling py in module 19 m compile loss binary crossentropy optimizer SGD lr 0 05 metrics acc 20 21 m fit xx yy epochs 150 batch size 16 callbacks replaydata Documents Programs Anaconda3 envs base lib site packages keras utils traceback utils py in error handler args kwargs 65 except Exception as e pylint disable broad except 66 filtered tb process traceback frames e traceback 67 raise e with traceback filtered tb from None 68 finally 69 del filtered tb Documents Programs Anaconda3 envs base lib site packages deepreplay callbacks py in on train begin self logs 84 85 self group self handler create group self group name 86 self group attrs samples self params samples 87 self group attrs batch size self params batch size 88 self group attrs n batches self params samples self params batch size 1 KeyError samples Using coda deepreplay version is 0 1 2a2 keras version is 2 4 0",
+    "created_at": "2022-01-31T11:18:29Z",
+    "closed_at": "2022-05-08T13:42:14Z",
+    "user": "MaryamGolchin",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Amir-Reza-Sadri",
+        "created_at": "2022-02-02T18:27:43Z",
+        "body": "same error here"
+      },
+      {
+        "user": "lucianovilasboas",
+        "created_at": "2022-04-26T16:24:22Z",
+        "body": "Same error here too Running on Colab Any answer"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2022-04-28T18:38:59Z",
+        "body": "Hi The error arises from the default versions used by Colab nowadays which are unfortunately not compatible with the code I wrote for DeepReplay years ago If is still possible to run the examples though if you downgrade the versions of some packages Paste the lines below into a new cell run it and restart the kernel and you should be able to run the examples pip install keras 2 2 0 pip install tensorflow 1 15 5 pip install keras applications 1 0 7 Hope it helps Best Daniel"
+      },
+      {
+        "user": "lucianovilasboas",
+        "created_at": "2022-04-28T19:06:27Z",
+        "body": "Thanks that fixed it Luciano"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "ValueError: Unable to create group (name already exists) problem",
+    "state": "open",
+    "body": "Hi recently I faced a problem when I used this package as its Traceback is following python ValueError Traceback most recent call last ipython input 43 c3b5d8180301 in module 1 model fit X y epochs 50 batch size 16 callbacks replay 2 frames usr local lib python3 7 dist packages keras utils traceback utils py in error handler args kwargs 65 except Exception as e pylint disable broad except 66 filtered tb process traceback frames e traceback 67 raise e with traceback filtered tb from None 68 finally 69 del filtered tb usr local lib python3 7 dist packages deepreplay callbacks py in on train begin self logs 83 self n epochs self params epochs 84 85 self group self handler create group self group name 86 self group attrs samples self params samples 87 self group attrs batch size self params batch size usr local lib python3 7 dist packages h5py hl group py in create group self name track order 63 name lcpl self e name lcpl True 64 gcpl Group gcpl crt order if track order else None 65 gid h5g create self id name lcpl lcpl gcpl gcpl 66 return Group gid 67 h5py objects pyx in h5py objects with phil wrapper h5py objects pyx in h5py objects with phil wrapper h5py h5g pyx in h5py h5g create ValueError Unable to create group name already exists I shared the google colab notebook https colab research google com drive 1nPWj8zF6M8jIhTYgVuT4wXy6GRCmSmLv usp sharing which I could run on Aug 2 2019 but now it threw out this KeyError samples in 2021 Please check the notebook and feel free to run it for quick debugging Following is the configuration and package versions in google colab matplotlib 3 2 2 matplotlib inline 0 1 3 matplotlib venn 0 11 6 numpy 1 19 5 pandas 1 1 5 pandas datareader 0 9 0 pandas gbq 0 13 3 pandas profiling 1 4 1 scikit learn 1 0 1 scipy 1 4 1 seaborn 0 11 2 sklearn pandas 1 8 0 3 7 12 Python 3 7 12 This is the full code python from keras models import Sequential from keras layers import Dense from keras optimizers import SGD from tensorflow keras optimizers import SGD from keras initializers import glorot normal normal model Sequential model add Dense input dim 2 units 2 activation sigmoid kernel initializer glorot normal seed 42 name hidden model add Dense units 1 activation sigmoid kernel initializer normal seed 42 name output model compile loss binary crossentropy optimizer SGD learning rate 0 05 metrics acc from deepreplay callbacks import ReplayData from deepreplay datasets parabola import load data from deepreplay replay import Replay X y load data replay ReplayData X y filename hyperparms in action h5 group name part1 model fit X y epochs 50 batch size 16 callbacks replay I found the similar open issues here https github com igormq asr study issues 5 here https githubmemory com repo igormq asr study issues 6 related to saving model via hdf5 file I tried based on some suggestions 12195 https github com keras team keras issues 12195 issuecomment 840962580 and here https github com tensorflow tensorflow issues 26811 issuecomment 568724236 to save the model with tf instead of h5 in replay filename which was unsuccessful There is lots of post in this regard in SoF https www google com search q ValueError Unable to create group name already exists site stackoverflow com rlz 1C1GCEA enDE923DE923 sxsrf AOaemvKE4wCUvSo4TPareI jPST osLWg 1638800977380 sa X ved 2ahUKEwjNuvSwsc 0AhWiSvEDHYI DK0QrQIoBHoECAgQBQ biw 2133 bih 1013 dpr 0 9 Any helps will be highly appreciated",
+    "created_at": "2021-12-06T15:18:02Z",
+    "closed_at": null,
+    "user": "clevilll",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2021-12-07T16:39:45Z",
+        "body": "Hi If you run the code multiple times it raises this error because it doesn t overwrite the data inside a given group contained in the H5 file So you have two options delete the h5 file and run it again change the group name every time you run the same code replay ReplayData X y filename hyperparms in action h5 group name part1 001 Hopefully this will solve your issue Best Daniel"
+      },
+      {
+        "user": "clevilll",
+        "created_at": "2021-12-08T13:05:14Z",
+        "body": "Hi If you run the code multiple times it raises this error because it doesn t overwrite the data inside a given group contained in the H5 file So you have two options delete the h5 file and run it again change the group name every time you run the same code replay ReplayData X y filename hyperparms in action h5 group name part1 001 Hopefully this will solve your issue Best Daniel Thanks for reply I picked the 2nd option and replace following scripts to dynamically change the name when I run the cell python import datetime as dt dtime dt time now dt datetime now zeit now strftime Y m d H M S print f Last update of notebook zeit X y load data replay ReplayData X y filename hyperparms in action h5 group name part1 replay ReplayData X y filename hyperparms in action h5 group name f part1 zeit but still those errors mentioned in the issue remain and couldn t figure out what s wrong when I run them in Google colab notebook https colab research google com drive 1nPWj8zF6M8jIhTYgVuT4wXy6GRCmSmLv usp sharing"
+      },
+      {
+        "user": "clevilll",
+        "created_at": "2021-12-18T21:55:26Z",
+        "body": "dvgodoy is there any update from your side"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2022-04-28T18:42:17Z",
+        "body": "Hi The error you got Key Error samples is the same one from issue 29 please follow the instructions I wrote there to downgrade some of the packages then restart the kernel and you should be able to run it Hope it helps Best Daniel"
+      },
+      {
+        "user": "clevilll",
+        "created_at": "2022-08-31T14:26:21Z",
+        "body": "Hi still can t solve it after downgrading Please see the Google colab notebook https colab research google com drive 1nPWj8zF6M8jIhTYgVuT4wXy6GRCmSmLv usp sharing ValueError Traceback most recent call last ipython input 11 13c5c2ef98eb https localhost 8080 in module 17 name output 18 Compile the model 19 model compile loss binary crossentropy optimizer SGD learning rate 0 05 metrics acc 20 21 from deepreplay callbacks import ReplayData 1 frames usr local lib python3 7 dist packages keras engine training py https localhost 8080 in compile self optimizer loss metrics loss weights sample weight mode weighted metrics target tensors kwargs 92 optimizer loss metrics or sample weight mode 93 94 self optimizer optimizers get optimizer 95 self loss loss or 96 self metrics metrics or usr local lib python3 7 dist packages keras optimizers py https localhost 8080 in get identifier 766 else 767 raise ValueError Could not interpret optimizer identifier 768 str identifier ValueError Could not interpret optimizer identifier tensorflow python keras optimizer v2 gradient descent SGD object at 0x7fb0ce9413d0"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Package versions?",
+    "state": "closed",
+    "body": "Can you tell me what package versions of tensorflow and keras I should be using in order to run this code Specifically the example I ve been trying to recreate is from your post here https towardsdatascience com hyper parameters in action part ii weight initializers 35aee1a28404 I see the requirements txt says tensorflow 1 5 0 but that doesn t appear to be a distribution available through pip",
+    "created_at": "2020-07-21T20:33:58Z",
+    "closed_at": "2022-04-28T18:43:07Z",
+    "user": "nfitch3",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2020-07-22T18:40:20Z",
+        "body": "Hi I ve developed this 2 years ago it was supposed to work with TF 1 X and Keras 2 2 0 It surely DOES NOT work with TF 2 X and Keras versions compatible with it because it was radically changed You could try with TF 1 15 but I can t guarantee it will work I haven t tried using that version Hope it helps"
+      },
+      {
+        "user": "nfitch3",
+        "created_at": "2020-07-22T19:12:16Z",
+        "body": "dvgodoy thanks for your reply and the deepreplay package I will try your suggestion but I believe I may have tried TF 1 15 already but will double check it Do you happen to remember what versions of keras tensorflow that you used specifically in some of your examples Also are you continuing development for this package or have you found better alternatives since developing it Thanks again for your code"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2020-07-31T17:50:57Z",
+        "body": "Hi I believe it as TF 1 8 and Keras 2 2 3 Unfortunately I am likely not continuing development TF 2 broke most of my code it would require a lot time and effort to rewrite it"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Custom Activation function",
+    "state": "open",
+    "body": "Hey I am having this custom activation function which is not listed in the replay ACTIVATIONS nor in the keras package Although I am able to Train the Keras model with custom activation function How do I generate the plot for custom activation function in deepreplay on running the below cell replay Replay replay filename spambase dataset h5 group name group name fs replay build feature space ax fs layer name hidden scale fixed False ph replay build probability histogram ax ph neg ax ph pos lh replay build loss histogram ax lh lm replay build loss and metric ax lm acc I get the following error ValueError Traceback most recent call last ipython input 31 f06018e9e1b6 in module 1 2 replay Replay replay filename spambase dataset h5 group name group name 3 4 fs replay build feature space ax fs layer name hidden scale fixed False 5 ph replay build probability histogram ax ph neg ax ph pos 15 frames usr local lib python3 6 dist packages keras utils generic utils py in deserialize keras object identifier module objects custom objects printable module name 165 if fn is None 166 raise ValueError Unknown printable module name 167 function name 168 return fn 169 else ValueError Unknown activation function swish",
+    "created_at": "2019-12-02T08:33:35Z",
+    "closed_at": null,
+    "user": "zszazi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "How can catch the animation for much deep network like ResNet using Deepreplay?",
+    "state": "closed",
+    "body": "Hey How could assign this method on ResNet I tried but it throws out the following error python model summary conv2d 36 Conv2D None 1 1 512 2359808 activation 32 0 0 add 16 Add None 1 1 512 0 add 15 0 0 conv2d 36 0 0 batch normalization 33 BatchNo None 1 1 512 2048 add 16 0 0 activation 33 Activation None 1 1 512 0 batch normalization 33 0 0 average pooling2d 1 AveragePoo None 1 1 512 0 activation 33 0 0 flatten 1 Flatten None 512 0 average pooling2d 1 0 0 dense 1 Dense None 10 5130 flatten 1 0 0 from keras callbacks import TensorBoard tensorboard TensorBoard log dir logs ResNet34 histogram freq 1 write graph True write images True define model model fit X train Y train batch size batch size epochs nb epoch validation data X test Y test shuffle True callbacks lr reducer early stopper csv logger tensorboard replaydata filename hyperparms in action h5 group name part2 replaydata ReplayData X train Y train filename filename group name group name model model fig ax plt subplots 1 1 figsize 5 5 fs replay build feature space ax layer name dense 1 AssertionError Only layers with 2 dimensional outputs are supported fs replay build decision boundary ax fs NameError name ax fs is not defined fs plot epoch 60 savefig feature space epoch60 png dpi 120 fs animate save feature space animation mp4 dpi 120 fps 5 How can I fix that",
+    "created_at": "2019-07-15T18:38:58Z",
+    "closed_at": "2022-04-28T18:42:47Z",
+    "user": "clevilll",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-07-25T12:11:23Z",
+        "body": "Hi clevilll The assertion error is expected deepreplay can only plot in 2 dimensions so the layer must have only two units You were using layer dense 1 which has 10 units which is not allowed You can check item 2 on FAQ for more information on that Regarding the other error the code does not have an ax fs variable just ax so that s why you re getting that NameError Hope this helps"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Question: does this work with TF Keras?",
+    "state": "open",
+    "body": "I m assuming that it doesn t work with tf keras yet or there are different bugs Is that correct or did I just do something stupid I ask this question because when I tried it with a simple model from a example I got some odd errors PS Thank you your article was really great and I really like the visualizations they are very helpful Random question are all the things you pointed out the same in Convolution layers as in your Dense examples or do the visuals differ PSS One thing I have trouble with is figuring out is which shapes differences are problems and which are just harmless variations If you had a cheat sheet explaining which things to look out for in each of the 4 graphs that would be great Note This is not an bug error report I just thought I should provide more details With the simple model I got odd errors like this AttributeError Traceback most recent call last ipython input 16 d1a685d6c63e in module 1 replaydata ReplayData x test y test filename filename group name some group model model 2 3 Now we feed the data to the actual Replay object so we can build the visualizations 4 replay Replay replay filename filename group name some group 5 4 frames usr local lib python3 6 dist packages h5py hl base py in e self name lcpl 130 else 131 try 132 name name encode ascii 133 coding h5t CSET ASCII 134 except UnicodeEncodeError AttributeError MeanMetricWrapper object has no attribute encode Then I changed the tf keras to just Keras and it worked except the OOM exception on the GPU ran in Google Colab Here is the whole Workbook https gist github com Raukk 2b03bd8447433b83f862c7e7c437ec46 https gist github com Raukk 2b03bd8447433b83f862c7e7c437ec46 The model code using tf keras is pasted below if you want to look into it model tf keras models Sequential model add tf keras layers BatchNormalization input shape x train shape 1 model add tf keras layers Conv2D 64 5 5 padding same activation elu model add tf keras layers MaxPooling2D pool size 2 2 strides 2 2 model add tf keras layers Dropout 0 25 model add tf keras layers BatchNormalization input shape x train shape 1 model add tf keras layers Conv2D 128 5 5 padding same activation elu model add tf keras layers MaxPooling2D pool size 2 2 model add tf keras layers Dropout 0 25 model add tf keras layers BatchNormalization input shape x train shape 1 model add tf keras layers Conv2D 256 5 5 padding same activation elu model add tf keras layers MaxPooling2D pool size 2 2 strides 2 2 model add tf keras layers Dropout 0 25 model add tf keras layers Flatten model add tf keras layers Dense 256 model add tf keras layers Activation elu model add tf keras layers Dropout 0 5 model add tf keras layers Dense 10 model add tf keras layers Activation softmax model summary",
+    "created_at": "2019-05-12T20:48:13Z",
+    "closed_at": null,
+    "user": "Raukk",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-19T14:09:19Z",
+        "body": "Hi Raukk Thanks for your report I haven t tested it with TF Keras but from the error you pointed out with MeanMetricWrapper I am assuming it is an old bug one which I have just fixed and released on v0 1 2a1 Could you please update DeepReplay and try again if it solves this problem I don t think the plots make so much sense for CNNs the idea was to demonstrate boundaries for binary classification problems But if you use CNNs even if you are trying to distinguish between cats and dogs for instance there is not a boundary that separates the samples from each other Well there actually is but it lives in the highly dimensional space of the total number of pixels of each image You may try to add a second to last layer with 2 hidden units and plug DeepReplay to it as I suggest in one of the examples but I wouldn t expect much of this"
+      },
+      {
+        "user": "Raukk",
+        "created_at": "2019-05-19T18:12:58Z",
+        "body": "I tried it again with that version The MeanMetricWrapper error is only if I use the TF Keras version It s Running in a Google Colab notebook using Python 3 Successfully installed deepreplay 0 1 2a1 I pasted my code at the bottom if that helps Here s another try at linking the code in colab https colab research google com gist Raukk 98c0935dabd12e83bd0ef6cdc427c197 notebook ipynb Quick clarification With the CNNs I was only trying to use the Initializer Visualizations as you did in your Part II Article https towardsdatascience com hyper parameters in action part ii weight initializers 35aee1a28404 The graph that shows Z Values Weights Activations and Gradients From my understanding that CNNs internal mechanics are essentially a tiny Dense Network that is feed each window and then all the outputs get combined I was assuming that the Weights and Activations and such were initialized similarly and could be displayed similarly It s probably just a misunderstanding on my part pip install deepreplay import tensorflow as tf import numpy as np from deepreplay callbacks import ReplayData from deepreplay datasets ball import load data from deepreplay plot import compose plots from deepreplay replay import Replay from matplotlib import pyplot as plt import os seed 13 get training data x train y train x test y test tf keras datasets fashion mnist load data add single lenght dimension x train np expand dims x train 1 x test np expand dims x test 1 adjust to between 0 0 and 1 0 x train x train 255 0 x test x test 255 0 build a quick simple model model tf keras models Sequential model add tf keras layers Flatten input shape x train shape 1 model add tf keras layers Dense 64 model add tf keras layers Dense 10 model add tf keras layers Activation softmax model summary model compile loss sparse categorical crossentropy optimizer adam metrics accuracy Code I copied i 7 Since we only need initial weights we don t even need to train the model We still use the ReplayData callback but we can pass the model as argument instead replaydata ReplayData x test y test filename filename i group name group name i model model Now we feed the data to the actual Replay object so we can build the visualizations replay Replay replay filename filename i group name group name i Using subplot2grid to assemble a complex figure fig plt figure figsize 12 6 ax zvalues plt subplot2grid 2 2 0 0 ax weights plt subplot2grid 2 2 0 1 ax activations plt subplot2grid 2 2 1 0 ax gradients plt subplot2grid 2 2 1 1 wv replay build weights ax weights gv replay build gradients ax gradients Z values zv replay build outputs ax zvalues before activation True exclude outputs True include inputs False Activations av replay build outputs ax activations exclude outputs True include inputs False Finally we use compose plots to update all visualizations at once fig compose plots zv wv av gv epoch 0 title Activation sigmoid Initializer Normal sigma 0 01 usr local lib python3 6 dist packages deepreplay callbacks py in on train begin self logs 109 metric name metric 110 if callable metric 111 metric name metric name 112 self group create dataset metric name shape self n epochs dtype f 113 AttributeError MeanMetricWrapper object has no attribute name"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-21T20:13:51Z",
+        "body": "Raukk thanks for the info I think you discovered a bug in the violin plots whenever activation functions are added as an element in the sequential model by itself as opposed to a parameter in the actual layer I am still investigating and figuring out how to fix it I will let you know when it s done There are also some minor adjustments to make it work with TF keras but this shouldn t be a problem"
+      },
+      {
+        "user": "Raukk",
+        "created_at": "2019-05-22T20:32:34Z",
+        "body": "Glad I could help Identify this I generally set the Activation as a parameter as well but I grabbed a Google Example to start from and they did it that way so I left it I ll let you know if I see anything else as I experiment"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Linear or non-linear",
+    "state": "closed",
+    "body": "Sorry there s a problem that has troubled me for a long time Why is the boundary of the transformed feature space linear And why is the boundary of the original feature space nonlinear Is it your code that forces the boundaries of the transformed feature space to become linear boundaries Thank you so much",
+    "created_at": "2019-05-03T08:21:25Z",
+    "closed_at": "2019-05-11T14:44:01Z",
+    "user": "lubu-Alex",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-03T20:50:26Z",
+        "body": "Hi To fully understand the reason behind this behavior I suggest you read my post that gave birth to this package https towardsdatascience com hyper parameters in action a524bf5bf1c In short it is not the code but the activation function that is responsible for this pattern You see a linear boundary at the end because the output has a linear activation that operates on a transformed space deformed by a sigmoid tanh relu If we convert this straight line to the original not deformed space it will be non linear"
+      },
+      {
+        "user": "lubu-Alex",
+        "created_at": "2019-05-04T03:29:16Z",
+        "body": "Believe it or not I read your article half a year ago and felt that the visualization was fantastic Then I used your code to reproduce it myself Just yesterday I saw your article again I read it several times and then I kept thinking why is the decision boundary a straight line model Sequential model add Dense input dim 2 units 2 activation sigmoid kernel initializer glorot normal seed 42 name hidden model add Dense units 1 activation sigmoid kernel initializer normal seed 42 name output In your code the output is not a linear activation but a sigmoid activation If the output layer has a sigmoid activation the decision boundary cannot be a straight line the actual role of the non linearity is to twist and turn the feature space so much so that the boundary turns out to be LINEAR Why non linearity can transform the boundary to be linear Is it a coincidence Thank you very much for your answer"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-04T17:48:40Z",
+        "body": "You re absolutely right the final activation is a sigmoid indeed But the purpose of it is only to squash the z value which would be the linear activation into a 0 1 interval to make it a probability Now let s consider the z value itself it is a linear combination of the outputs of the two neurons in the previous layer right So the z value of the output neuron is something like a1 w1 a2 w2 where a1 and a2 are the values coming from the two neurons in the previous layer and w1 and w2 are the weights Also remember that a sigmoid 0 0 5 meaning for a z value of zero the sigmoid gives a probability of 50 Then if we want to plot the boundary we are saying for probability bigger than 0 5 we say it is positive class for a probability smaller than 0 5 it is negative class Well this is exactly the same as saying that if the z value is greater than 0 it is positive class if z value is less than zero it is a negative class But what is the z value here It is a1 w1 a2 w2 right So we are saying a1 w1 a2 w2 0 positive class a1 w1 a2 w2 0 negative class So the boundary is given by a1 w1 a2 w2 0 right This is a straight line That s why the decision boundary is linear the sigmoid is just converting it into probabilities at the output BUT What the sigmoid or tanh or relu does in other layers has a different effect as you can see from my animations its non linearity is twisting the points from its original positions to some other location in the grid At some point all the points will be nicely placed in a way that that straight line will split them nicely You could also think of it as having a straight line somewhere in the grid as if we knew it before hand that the linear boundary is there and then we play with the other weights in the network in such a way that eventually the twisting effect of the activations will place the points separated by the boundary It is hard to explain all this in text but I hope it helps"
+      },
+      {
+        "user": "lubu-Alex",
+        "created_at": "2019-05-05T01:48:36Z",
+        "body": "Thank you so much Now I understand By the way your blog is great You can add this explanation to it"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "AttributeError: 'function' object has no attribute 'encode'",
+    "state": "closed",
+    "body": "I ran into this error while trying to fit my model and i havent been able to fix it AttributeError function object has no attribute encode",
+    "created_at": "2019-04-23T15:36:30Z",
+    "closed_at": "2019-07-25T12:12:10Z",
+    "user": "mariamjumoke",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-04-25T19:02:16Z",
+        "body": "Hi I guess you are using a custom loss function right I am aware of this error but haven t fixed it yet If this is not the case please provide more details about your usage Thanks"
+      },
+      {
+        "user": "mariamjumoke",
+        "created_at": "2019-04-25T19:03:51Z",
+        "body": "No I used categorical cross entropy"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-04-25T19:23:44Z",
+        "body": "Ok so it is probably something I am not aware of Could you please copy the full stack trace of the error as well as your code for model creation and training"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-19T14:10:35Z",
+        "body": "Hi mariamjumoke I ve just released a new version fixing a bug with custom metrics I ve asked you about a custom loss function but I should ve asked for a custom metric Anyway I hope this latest release fixes your issue"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "use fit_generator to load datasets",
+    "state": "closed",
+    "body": "How to use this library if I am using fit generator to load images My datasets are huge so this will be needed Thanks in advance",
+    "created_at": "2019-04-10T09:05:01Z",
+    "closed_at": "2019-05-19T12:36:44Z",
+    "user": "vivekpd15",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-04-25T19:04:12Z",
+        "body": "Hi Unfortunately the package does not support this kind of usage You can still create a ReplayData object using the subset of data you want to visualize and it will be included in the resulting H5 file But you cannot use a generator for this Hope this helps"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Custom metrics",
+    "state": "closed",
+    "body": "Thank you for the job done it s really impressive I have encountered a problem when working with custom metrics Indeed custom metrics are passed to the model as functions not strings which does not work with self group create dataset metric shape self n epochs dtype f Here is the error I get when running File C Users AppData Local Continuum anaconda3 lib site packages deepreplay callbacks py line 62 in init self on train begin File C Users AppData Local Continuum anaconda3 lib site packages deepreplay callbacks py line 109 in on train begin self group create dataset metric shape self n epochs dtype f File C Users AppData Roaming Python Python36 site packages h5py hl group py line 119 in create dataset self name dset File C Users AppData Roaming Python Python36 site packages h5py hl group py line 284 in setitem name lcpl self e name lcpl True File C Users AppData Roaming Python Python36 site packages h5py hl base py line 132 in e name name encode ascii AttributeError function object has no attribute encode",
+    "created_at": "2018-12-13T08:39:13Z",
+    "closed_at": "2022-04-28T18:42:31Z",
+    "user": "BWallyn",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dvgodoy",
+        "created_at": "2018-12-14T19:22:31Z",
+        "body": "Thanks And thank you for reporting the issue I was indeed assuming a string for the name of the metric and used it to create a group inside the H5 file I will fix this by testing the metric passed as argument and if it is a function take its name to create the corresponding group"
+      },
+      {
+        "user": "dvgodoy",
+        "created_at": "2019-05-19T14:11:29Z",
+        "body": "Hi BWallyn It has been a looong while but I ve finally released a version that fixes the problem of custom metrics"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "hidden_input_1:0 is both fed and fetched.",
+    "state": "closed",
+    "body": "Bug report Run code from Part II Weight Initializers got this error InvalidArgumentError Traceback most recent call last ipython input 5 12bc6e8cd13c in module 1 zv replay build outputs ax zvalues before activation True 2 exclude outputs True include inputs False miniconda3 envs rlgym lib python3 6 site packages deepreplay replay py in build outputs self ax before activation layer names include inputs exclude outputs epoch start epoch end 468 inputs self learning phase self inputs weights 469 if before activation 470 outputs append self get zvalues inputs inputs 471 else 472 outputs append self get activations inputs inputs miniconda3 envs rlgym lib python3 6 site packages keras backend tensorflow backend py in call self inputs 2659 return self legacy call inputs 2660 2661 return self call inputs 2662 else 2663 if py any is tensor x for x in inputs miniconda3 envs rlgym lib python3 6 site packages keras backend tensorflow backend py in call self inputs 2628 feed symbols 2629 symbol vals 2630 session 2631 fetched self callable fn array vals 2632 return fetched len self outputs miniconda3 envs rlgym lib python3 6 site packages keras backend tensorflow backend py in make callable self feed arrays feed symbols symbol vals session 2580 callable opts target append self updates op name 2581 Create callable 2582 callable fn session make callable from options callable opts 2583 Cache parameters corresponding to the generated callable so that 2584 we can detect future mismatches and refresh the callable miniconda3 envs rlgym lib python3 6 site packages tensorflow python client session py in make callable from options self callable options 1478 1479 self extend graph 1480 return BaseSession Callable self callable options 1481 1482 miniconda3 envs rlgym lib python3 6 site packages tensorflow python client session py in init self session callable options 1439 else 1440 self handle tf session TF DeprecatedSessionMakeCallable 1441 session session options ptr status 1442 finally 1443 tf session TF DeleteBuffer options ptr miniconda3 envs rlgym lib python3 6 site packages tensorflow python framework errors impl py in exit self type arg value arg traceback arg 517 None None 518 compat as text c api TF Message self status status 519 c api TF GetCode self status status 520 Delete the underlying status object from memory otherwise it stays alive 521 as there is a reference to status from this from the traceback due to InvalidArgumentError hidden input 1 0 is both fed and fetched Enveriment keras 2 2 0 tensorflow 1 8 0",
+    "created_at": "2018-07-09T10:07:36Z",
+    "closed_at": "2018-07-10T10:26:24Z",
+    "user": "albb762",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

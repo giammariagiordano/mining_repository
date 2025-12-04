@@ -1,0 +1,177 @@
+[
+  {
+    "number": 54,
+    "title": "Timeout exceeded while awaiting headers",
+    "state": "closed",
+    "body": "Hello just a heads up that there seems to be a timeout error when requesting the docker image docker run it p 5000 5000 quay io codait max fast neural style transfer Unable to find image quay io codait max fast neural style transfer latest locally docker Error response from daemon Head https quay io v2 codait max fast neural style transfer manifests latest Get https quay io v2 auth scope repository 3Acodait 2Fmax fast neural style transfer 3Apull service quay io net http request canceled while waiting for connection Client Timeout exceeded while awaiting headers And same when building locally docker build t max fast neural style transfer Sending build context to Docker daemon 2 298MB Step 1 16 FROM quay io codait max base v1 1 3 Head https quay io v2 codait max base manifests v1 1 3 Get https quay io v2 auth scope repository 3Acodait 2Fmax base 3Apull service quay io net http request canceled while waiting for connection Client Timeout exceeded while awaiting headers",
+    "created_at": "2021-05-05T02:49:57Z",
+    "closed_at": "2021-05-05T02:53:55Z",
+    "user": "josephrocca",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "josephrocca",
+        "created_at": "2021-05-05T02:53:55Z",
+        "body": "Actually this looks like it might be a problem on my end Will re open if not Edit Yep worked fine after restarting my machine"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Deployment to Red Hat OpenShift fails due to permission error",
+    "state": "closed",
+    "body": "Traceback most recent call last File app py line 18 in module from api import ModelMetadataAPI ModelPredictAPI File workspace api init py line 18 in module from predict import ModelPredictAPI noqa File workspace api predict py line 23 in module model wrapper ModelWrapper File workspace core model py line 55 in init model torch load model path map location lambda storage loc storage cpu only for now File opt conda lib python3 6 site packages torch serialization py line 265 in load f open f rb PermissionError Errno 13 Permission denied assets mosaic pth",
+    "created_at": "2019-08-06T21:32:37Z",
+    "closed_at": "2019-08-13T17:55:53Z",
+    "user": "ptitzler",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "MLnick",
+        "created_at": "2019-08-13T17:55:52Z",
+        "body": "Closed by 37"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "GPU support",
+    "state": "closed",
+    "body": "Is there a way to config current code to run through GPU",
+    "created_at": "2019-07-06T18:27:44Z",
+    "closed_at": "2020-01-02T21:59:46Z",
+    "user": "ofirkris",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MLnick",
+        "created_at": "2019-07-09T07:39:21Z",
+        "body": "Currently it is not supported You would have to modify the Dockerfile to build off the correct CUDA base image see https hub docker com r nvidia cuda and update any Pytorch dependencies to support GPU You could then re build the image"
+      },
+      {
+        "user": "ofirkris",
+        "created_at": "2019-07-09T13:57:27Z",
+        "body": "Thanks"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "inconsistent link to COS directory for model files",
+    "state": "closed",
+    "body": "the README https github com IBM MAX Fast Neural Style Transfer blob master README md contains this link to the model files http max assets s3 api us geo objectstorage softlayer net pytorch neuralstyle neuralstyle tar gz this works however it is different than the link in the Dockerfile https github com IBM MAX Fast Neural Style Transfer blob master Dockerfile http max assets s3 api us geo objectstorage softlayer net fast neural style transfer 1 0 assets tar gz i would expect both of these to point to the same set of model files in addition both of the links should be pointing to the new US cross region s3 us cloud object storage appdomain cloud because the old one has been deprecated s3 api us geo objectstorage softlayer net",
+    "created_at": "2019-03-27T00:02:32Z",
+    "closed_at": "2019-03-27T00:19:18Z",
+    "user": "xwu0226",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2019-03-27T00:19:18Z",
+        "body": "duplicate of 24"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "inconsistent link to COS directory for model files",
+    "state": "closed",
+    "body": "the README https github com IBM MAX Fast Neural Style Transfer blob master README md contains this link to the model files http max assets s3 api us geo objectstorage softlayer net pytorch neuralstyle neuralstyle tar gz this works however it is different than the link in the Dockerfile https github com IBM MAX Fast Neural Style Transfer blob master Dockerfile http max assets s3 api us geo objectstorage softlayer net fast neural style transfer 1 0 assets tar gz i would expect both of these to point to the same set of model files in addition both of the links should be pointing to the new US cross region s3 us cloud object storage appdomain cloud because the old one has been deprecated s3 api us geo objectstorage softlayer net",
+    "created_at": "2019-03-26T23:54:39Z",
+    "closed_at": "2019-05-15T00:57:59Z",
+    "user": "vabarbosa",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "Remove open command from README",
+    "state": "closed",
+    "body": "README md contains this line curl F image assets bridge jpg XPOST http localhost 5000 model predict model udnie result jpg open result jpg however open is a command specific to OSX we should remove this or specify it only works on Mac",
+    "created_at": "2018-11-20T23:11:57Z",
+    "closed_at": "2019-01-22T12:56:31Z",
+    "user": "bdwyer2",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "Add ability to scale uploaded image",
+    "state": "open",
+    "body": "Based on a discussion with MLnick we should add a new scale param that can be used to scale down the uploaded image before running prediction This would fix the issue raised in 2 as well as allow users to control the returned image quality based on their available resources We should include a value that denotes not to use scaling such as 1 and find a good default value that will allow the model to work on a more common deployment usually 4 8GB We may even want to look at image size when determining weather to scale at all why scale small images This would entail Adding scaling functionality to wrapper before prediction Determine a good default value Add scale param to API",
+    "created_at": "2018-09-13T20:06:43Z",
+    "closed_at": null,
+    "user": "ajbozarth",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "Model only supports jpeg",
+    "state": "closed",
+    "body": "Currently the model only supports jpeg s and not png s but it s not made clear or documented We should either update it to support png or clearly document that it only supports jpeg e g IBM MAX Object Detector pull 10 added png support to Object Detector",
+    "created_at": "2018-09-06T21:14:01Z",
+    "closed_at": "2018-09-10T17:08:46Z",
+    "user": "ajbozarth",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ajbozarth",
+        "created_at": "2018-09-06T21:14:12Z",
+        "body": "MLnick FYI"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "pip install from requirements.txt",
+    "state": "closed",
+    "body": "Example PR https github com IBM MAX Review Text Generator pull 7",
+    "created_at": "2018-08-22T17:20:37Z",
+    "closed_at": "2019-01-22T12:56:12Z",
+    "user": "xwu0226",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2018-10-22T19:50:19Z",
+        "body": "Since this is downloading pytorch from a URL I don t think this is practical"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Add request param descriptions and update Swagger models help text",
+    "state": "closed",
+    "body": "Example in PR https github com IBM MAX Object Detector pull 20",
+    "created_at": "2018-08-20T15:55:32Z",
+    "closed_at": "2019-01-22T12:56:11Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Running the Container on Mac",
+    "state": "open",
+    "body": "There is an issue with this model running on Mac Docker does not dynamically manage RAM usage on Mac and varying image sizes as an affect on RAM consumption This causes the model to not be able to fetch the stylized image from Post request Images usually above 3MB require 20GB of RAM on the 2017 MacBook Pro I think the Note should be changed to inform that on Macs RAM allocation for the docker container should be variable to the image s size that you want to stylize",
+    "created_at": "2018-07-02T22:42:56Z",
+    "closed_at": null,
+    "user": "anoojpatel",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "number": 101,
+    "title": "Does this setup allow inference on GRU too?",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-09-06T06:14:42Z",
+    "closed_at": null,
+    "user": "asispatra",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 92,
+    "title": "Tenant and endpoint creation fails if [TENANT|ENDPOINT]_RESOURCES not set",
+    "state": "closed",
+    "body": "The default TENANT ENDPOINT RESOURCES settings in imm script creates invalid json which fails to create the tenant or endpoint resource https github com IntelAI inference model manager blob master scripts imm L127 https github com IntelAI inference model manager blob master scripts imm L129 Both have extra at the end Steps to reproduce unset ENDPOINT RESOURCES imm create e ep 1 resnet enter Please provide model version policy press enter for default Please provide tenant name default tenant Please provide serving name default tf serving title Unexpected error occurred Invalid JSON Could not parse JSON body Extra data line 1 column 171 char 170 Extra data is the extra bracket",
+    "created_at": "2019-04-02T09:36:56Z",
+    "closed_at": "2019-04-04T11:25:11Z",
+    "user": "poussa",
+    "comments_count": 1,
+    "labels": [
+      "P2"
+    ],
+    "comments": [
+      {
+        "user": "pawel-pieniazek",
+        "created_at": "2019-04-04T11:25:11Z",
+        "body": "As far as we checked above lines are ok We also couldn t reproduce this Feel free to reopen if problem occurs again"
+      }
+    ]
+  },
+  {
+    "number": 87,
+    "title": "Management API HTTP response is not JSON",
+    "state": "closed",
+    "body": "Make the management API a proper REST API That is input and output body is JSON Now the response contains some text and then json which makes in incorrect and very hard for the client to parse Here is an example of a current response json HTTP 2 200 server nginx 1 13 12 date Thu 28 Mar 2019 07 41 02 GMT content type application json charset UTF 8 content length 235 strict transport security max age 15724800 includeSubDomains Endpoints present in default tenant tenant name endpoint 1 url endpoint 1 default tenant imm net 443 status Available name endpoint 3 url endpoint 3 default tenant imm net 443 status Available It should be json HTTP 2 200 server nginx 1 13 12 date Thu 28 Mar 2019 07 41 02 GMT content type application json charset UTF 8 content length xxx strict transport security max age 15724800 includeSubDomains name endpoint 1 url endpoint 1 default tenant imm net 443 status Available name endpoint 3 url endpoint 3 default tenant imm net 443 status Available",
+    "created_at": "2019-03-28T07:52:23Z",
+    "closed_at": "2019-04-11T06:11:36Z",
+    "user": "poussa",
+    "comments_count": 2,
+    "labels": [
+      "P1"
+    ],
+    "comments": [
+      {
+        "user": "joannanosek",
+        "created_at": "2019-04-10T08:56:08Z",
+        "body": "Hi poussa all job in this field is done Please check and close this issue when you re happy with that changes"
+      },
+      {
+        "user": "poussa",
+        "created_at": "2019-04-11T06:11:35Z",
+        "body": "Looks good I ll close it now and file new issues if needed Thanks"
+      }
+    ]
+  },
+  {
+    "number": 85,
+    "title": "When endpoint creation fails, resources are not cleaned up properly",
+    "state": "closed",
+    "body": "When you try to create an endpoint and it fails e g due to invalid JSON in ENDPOINT RESOURCES the resources are not properly cleaned up The next endpoint creation fails with title An error occurred during endpoint creation Conflict Logs from mgt INFO management api authenticate authenticate Request path tenants default tenant endpoints method POST ERROR management api utils errors handling Unexpected error occurred Invalid JSON Could not parse JSON body Extra data line 1 column 169 char 168 Request Request POST https mgt imm net tenants default tenant endpoints Params tenant name default tenant ERROR management api utils errors handling Traceback most recent call last File usr lib python3 7 site packages falcon media json py line 15 in deserialize return json loads raw decode utf 8 File usr lib python3 7 json init py line 348 in loads return default decoder decode s File usr lib python3 7 json decoder py line 340 in decode raise JSONDecodeError Extra data s end json decoder JSONDecodeError Extra data line 1 column 169 char 168 During handling of the above exception another exception occurred Traceback most recent call last File usr lib python3 7 site packages falcon api py line 244 in call responder req resp params File usr lib python3 7 site packages falcon media validators jsonschema py line 45 in wrapper jsonschema validate req media schema format checker jsonschema FormatChecker File usr lib python3 7 site packages falcon request py line 965 in media self media handler deserialize raw File usr lib python3 7 site packages falcon media json py line 19 in deserialize Could not parse JSON body 0 format err falcon errors HTTPBadRequest Invalid JSON Could not parse JSON body Extra data line 1 column 169 char 168 INFO management api authenticate authenticate Checking token eyJhbGciOiJSUzI1NiIsImtpZCI6ImI2YTU0ZWQzMzdjYjY5N2M4YWFmMmZiMjFhMDYzYTExMjZlMWYwNDkifQ eyJpc3MiOiJodHRwczovL2RleC5pbW0ubmV0OjQ0My9kZXgiLCJzdWIiOiJDaU5qYmoxMWMyVnlMRzkxUFZCbGIzQnNaU3hrWXoxbGVHRnRjR3hsTEdSalBXOXlaeElFYkdSaGNBIiwiYXVkIjoiZXhhbXBsZS1hcHAiLCJleHAiOjE1NTM2ODg3NDcsImlhdCI6MTU1MzY4NTE0NywiYXRfaGFzaCI6IkpLdlhkdGkyZGtoV0ltV0hWcXRJQ3ciLCJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZ3JvdXBzIjpbImFkbWluIl19 wQ69oWwUFdrdrUnLH2z8yCDSQ62OisreWqmdqLEToFm70hSMQl8NPO Krmn549f7BJOata8Q60VupKuYmYgZOfRAiXVUSSpokp8cfcr5RBUrpiw rwdrk8aBKH5P l gq1JA74AnUb fvzWUvICaEUFL1nK9kooC8U1Q01hrAGo K1 wpRtSfZnvqzU0EnDV8xZr7wdmINmY0dpIv3tGWkxS3M2J5WxnM d8qw3 Spl QHXKwHbuqWHLNxpt6nlAcXW9Sv690JwY0 aWpAvRpbH6hgJpj5Hx3rJ L9tlzUSAVhj5yrS6SyqSy8ITx2lXUkXncW 6 oTnbaGiRiuOQ INFO management api authenticate authenticate Trying key number 0 INFO management api authenticate authenticate Decoded INFO management api authenticate authenticate Using service account token INFO management api authenticate authenticate Decoded token iss https dex imm net 443 dex sub CiNjbj11c2VyLG91PVBlb3BsZSxkYz1leGFtcGxlLGRjPW9yZxIEbGRhcA aud example app exp 1553688747 iat 1553685147 at hash JKvXdti2dkhWImWHVqtICw email user example com email verified True groups admin INFO management api authenticate authenticate Request path tenants default tenant endpoints method POST INFO botocore vendored requests packages urllib3 connectionpool Resetting dropped connection minio imm net INFO management api tenants tenants utils Tenant already exists True ERROR management api utils errors handling An error occurred during endpoint creation 409 Reason Conflict HTTP response headers HTTPHeaderDict Content Type application json Date Wed 27 Mar 2019 12 03 19 GMT Content Length 264 HTTP response body kind Status apiVersion v1 metadata status Failure message inference endpoints ai intel com endpoint 1 already exists reason AlreadyExists details name endpoint 1 group ai intel com kind inference endpoints code 409",
+    "created_at": "2019-03-27T12:14:07Z",
+    "closed_at": "2019-04-04T11:21:17Z",
+    "user": "poussa",
+    "comments_count": 2,
+    "labels": [
+      "P1"
+    ],
+    "comments": [
+      {
+        "user": "pawel-pieniazek",
+        "created_at": "2019-03-28T12:49:42Z",
+        "body": "We try to reproduce this problem but it works for us poussa are you sure that endpoint 1 was not created earlier on this platform We also checked in code that if JSON is wrong no resources are created So there is nothing to be cleaned"
+      },
+      {
+        "user": "pawel-pieniazek",
+        "created_at": "2019-04-04T11:21:17Z",
+        "body": "Closing because we could not reproduce it Feel free to reopen if it occurs again"
+      }
+    ]
+  },
+  {
+    "number": 84,
+    "title": "IMM_CONFIG_PATH env variable does not work",
+    "state": "closed",
+    "body": "When running the scripts imm the IMM CONFIG PATH env variable does not have any effect since it is always set to immconfig https github com IntelAI inference model manager blob master scripts imm utils sh L18",
+    "created_at": "2019-03-27T12:08:02Z",
+    "closed_at": "2019-03-28T12:52:40Z",
+    "user": "poussa",
+    "comments_count": 1,
+    "labels": [
+      "P2"
+    ],
+    "comments": [
+      {
+        "user": "pawel-pieniazek",
+        "created_at": "2019-03-28T12:52:40Z",
+        "body": "fixed"
+      }
+    ]
+  },
+  {
+    "number": 78,
+    "title": "Uninstall fails to delete resources if token not valid",
+    "state": "closed",
+    "body": "The uninstaller sh deletes the default tenant with the imm k rm t command which assumes your have a valid token If you don t the namespace and other resources are not cleaned up",
+    "created_at": "2019-03-26T07:21:44Z",
+    "closed_at": "2019-04-04T11:20:03Z",
+    "user": "poussa",
+    "comments_count": 1,
+    "labels": [
+      "P2"
+    ],
+    "comments": [
+      {
+        "user": "pawel-pieniazek",
+        "created_at": "2019-04-04T11:20:03Z",
+        "body": "fixed"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "Suggestions to improve installer",
+    "state": "open",
+    "body": "The scripts in installer could be enhanced fixed with the following x On Mac don t update brew every time the script is run x Add option to specify external S3 storage x Install ldap from helm subdir not from tests x Add option to uninstall able to start over x Add or document the option not to use kops case bare metal Add option to skip certificate generation or document to reuse existing certs x List t option in help x Make 3 min wait after ldap install optional or tunable x Make the validation at the end optional If helm minio is installed create also the persistent volume so minio becomes usable",
+    "created_at": "2019-03-18T09:12:09Z",
+    "closed_at": null,
+    "user": "poussa",
+    "comments_count": 9,
+    "labels": [
+      "P2"
+    ],
+    "comments": [
+      {
+        "user": "kbalka",
+        "created_at": "2019-03-18T17:44:28Z",
+        "body": "Hi there are updates on master branch which are resolving some of the issues checked Option to skip kops cluster creation s is documented in https github com IntelAI inference model manager blob master installer README md Maybe we should make it default"
+      },
+      {
+        "user": "poussa",
+        "created_at": "2019-03-18T18:11:35Z",
+        "body": "kbalka About kops vs no kops option Can we make it so if you give the k option it means use kops and if you don t it means no kops With s the k is not needed even though the doc says it is required option With single k option we can cleanly handle both cases and get rid of one option"
+      },
+      {
+        "user": "poussa",
+        "created_at": "2019-03-18T18:13:30Z",
+        "body": "Hmm 2nd thoughts The does not work since you may want to use k and s at the same time e g GCE case"
+      },
+      {
+        "user": "kbalka",
+        "created_at": "2019-03-19T10:55:02Z",
+        "body": "poussa I ve checked the code option s is disabling k k is required parameter if s is not present It think we can use k for cluster installation with kops and if k is not present it will expect cluster to be available before installation so we can get rid of s"
+      },
+      {
+        "user": "mareklevv",
+        "created_at": "2019-03-20T13:06:17Z",
+        "body": "poussa In PR 70 i solved two of your issues List t option in help Add option to skip minio install"
+      },
+      {
+        "user": "kbalka",
+        "created_at": "2019-03-21T12:41:50Z",
+        "body": "poussa Waiting after LDAP is updated wtih 72 now it checks for Ldap pod availability is this solution ok"
+      },
+      {
+        "user": "mareklevv",
+        "created_at": "2019-03-21T13:37:10Z",
+        "body": "poussa I prepared 2 pull requests which covered 3 of your proposed features I hope they will be merged soon 70 71 Also i have some questions about rest of proposed features Can you explain this Add option to provide external IP address Because now i can t see for why this should be implemented or i have wrong point of view About Add option to skip certificate generation Do you want to provide possibility to skip certificate generation and pass previously generated using envs There is another option where we can read content of directory with certificates and if we won t found expected certs we can generate them Do you want to allow users to skip generation of all external certs or you only want to pass certificate used to create tenant"
+      },
+      {
+        "user": "poussa",
+        "created_at": "2019-03-21T13:44:30Z",
+        "body": "1 external IP this maybe solved with proper LB usage I don t have none at the moment so I always patch the ingress service kubectl patch svc ingress nginx n ingress nginx p spec externalIPs 10 237 72 190 type LoadBalancer to get the install script progressing I looped at the MetalLB today bit I can t use it at the office since I don t have a pool of IP addresses 2 If we can read the existing certificates from a dir then we don t need the skip option btw what is that option"
+      },
+      {
+        "user": "mareklevv",
+        "created_at": "2019-03-21T14:08:33Z",
+        "body": "poussa 2 I mean we can achieve skipping certificates generation in 2 ways Using envs with paths to certificates Read directory with certificates e g installer certs but this will required to put certificates to this directory with appropriate names"
+      }
+    ]
+  }
+]

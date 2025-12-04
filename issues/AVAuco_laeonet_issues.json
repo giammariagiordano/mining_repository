@@ -1,0 +1,68 @@
+[
+  {
+    "number": 4,
+    "title": "Failure in example",
+    "state": "open",
+    "body": "Hello I retrofitted the example your provided for multiple videos I read in videos one after the other in a loop and pass them through the example script you ve given I keep getting this tensorflow python framework errors impl InvalidArgumentError Tensor rgbinput1 4 0 specified in either feed devices or fetch devices was not found in the Graph",
+    "created_at": "2020-10-16T14:47:09Z",
+    "closed_at": null,
+    "user": "RSKothari",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mjmarin",
+        "created_at": "2020-10-19T08:53:57Z",
+        "body": "Hi are you using the same combination of libraries i e same version described in the Wiki https github com AVAuco laeonet wiki https github com AVAuco laeonet wiki Thanks"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "What is gpu_rate in line 36, ln_demo_det_track_laeo.py",
+    "state": "open",
+    "body": "The notes say that we should change it What is this value",
+    "created_at": "2020-10-16T13:54:47Z",
+    "closed_at": null,
+    "user": "RSKothari",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mjmarin",
+        "created_at": "2020-10-19T08:55:20Z",
+        "body": "That parameter corresponds to the max percentage of GPU that you want to use for this process For example 0 8"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Training code is not available",
+    "state": "open",
+    "body": "hi We want to know when the training code is available Best",
+    "created_at": "2019-10-15T10:48:03Z",
+    "closed_at": null,
+    "user": "Hamiltonsjtu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "Running the code",
+    "state": "closed",
+    "body": "Hi mjmarin vkalogeiton I am working on a system that need to identify people looking at each other And your research is exactly what I need I tried to run your code but there seems to be some missing artifacts Could you please guide me on how can I be able to run this code Thanks Best Amir",
+    "created_at": "2019-07-06T14:22:10Z",
+    "closed_at": "2019-07-06T17:06:14Z",
+    "user": "taureanamir",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "taureanamir",
+        "created_at": "2019-07-06T17:06:14Z",
+        "body": "My bad I can run it now Sorry for the trouble"
+      }
+    ]
+  }
+]

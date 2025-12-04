@@ -1,0 +1,486 @@
+[
+  {
+    "number": 32,
+    "title": "Dataset",
+    "state": "closed",
+    "body": "Do you plan to publish the training dataset",
+    "created_at": "2024-07-11T14:51:08Z",
+    "closed_at": "2024-11-14T22:18:54Z",
+    "user": "thucth-qt",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 31,
+    "title": "PLease provide the dataset in private ",
+    "state": "closed",
+    "body": "",
+    "created_at": "2023-12-31T17:38:32Z",
+    "closed_at": "2024-01-01T03:40:22Z",
+    "user": "Deep-ghosty",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Deep-ghosty",
+        "created_at": "2024-01-01T16:41:39Z",
+        "body": "Clemkoa I need ur help in this project I working on similar so I need a suggestion Connect with me on my email if u can deepanshubisht664 gmail com"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Alternative dataset link",
+    "state": "closed",
+    "body": "I really wanted to use this project a few days ago but as the dataset isn t available I found another one and trained my model on it For those searching for something like this stop bothering the maintainer of this repo and head over to https github com SubGlitch1 DentalXrayAI",
+    "created_at": "2023-12-17T10:08:08Z",
+    "closed_at": "2023-12-17T10:43:39Z",
+    "user": "NoahOksuz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "Dataset link",
+    "state": "closed",
+    "body": "Hello could you share this dataset for study goal Thanks in advance DM s oleskevych gmail com",
+    "created_at": "2022-08-07T18:30:17Z",
+    "closed_at": "2023-11-28T02:49:53Z",
+    "user": "Sofia-Oles",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shashankshirke",
+        "created_at": "2022-11-23T23:56:37Z",
+        "body": "Hi Sofia Oles Did you manage to get the dataset that was used for this model training If yes I would like to get access to the dataset"
+      },
+      {
+        "user": "QiuDingQian",
+        "created_at": "2023-11-28T01:31:59Z",
+        "body": "Hello May I ask if you have obtained this dataset and would like to share it with me Thank you"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2023-11-28T02:49:53Z",
+        "body": "Hi all sorry but the dataset is not available to the public for privacy reasons I ve been trying to get approval for a while but I wouldn t hold my breath it looks pretty unlikely at this stage"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Access to trained model",
+    "state": "closed",
+    "body": "Is it possible to request for the frozen graphs for this",
+    "created_at": "2021-10-16T09:39:54Z",
+    "closed_at": "2021-10-21T23:15:13Z",
+    "user": "sarmientoj24",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2021-10-21T23:15:13Z",
+        "body": "Sorry for privacy reasons I can t share the trained model"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Weights of a trained Network?",
+    "state": "closed",
+    "body": "Hello can any one share weights of trained network on detecting teeth on X Ray Greetings Krekiehn",
+    "created_at": "2021-08-09T14:12:27Z",
+    "closed_at": "2021-08-09T23:33:12Z",
+    "user": "krekiehn",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2021-08-09T23:33:12Z",
+        "body": "Hi sorry but I can t share any model weights for privacy reasons"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Data still private or public available?",
+    "state": "closed",
+    "body": "Hello is the data already available Or do you know about any other public dataset on X Ray teeth Greetings Krekiehn",
+    "created_at": "2021-08-09T14:10:31Z",
+    "closed_at": "2021-08-09T23:32:45Z",
+    "user": "krekiehn",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2021-08-09T23:32:45Z",
+        "body": "Hi sorry but I can t share any data for privacy reasons I am not aware of public datasets for this"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Error url when Install iensorflow object detection",
+    "state": "closed",
+    "body": "Error url when Install iensorflow object detection https github com tensorflow models blob master research object detection g3doc installation md",
+    "created_at": "2021-07-24T04:20:01Z",
+    "closed_at": "2024-11-14T22:19:00Z",
+    "user": "khoaphp",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "dataset",
+    "state": "closed",
+    "body": "can you share your dataset",
+    "created_at": "2021-06-09T02:35:20Z",
+    "closed_at": "2021-06-09T02:36:35Z",
+    "user": "tuvovan",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2021-06-09T02:36:35Z",
+        "body": "As said in the readme I can t share the dataset for privacy reasons"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "datapreprocessing",
+    "state": "closed",
+    "body": "Hi firstly thank you for everything you share I have some dental x rays photes which tagged But cannot compile the data preprocessing py because you deleted the output eval data and train files because I don t know what format the images are in those files Can you tell me a little bit information about how you organized those files",
+    "created_at": "2021-05-18T14:44:55Z",
+    "closed_at": "2021-06-09T17:39:30Z",
+    "user": "goktugbacanli",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "goktugbacanli",
+        "created_at": "2021-05-18T15:26:41Z",
+        "body": "Actually I organized in data file such this include Annotions Image Sets JPEGImages pascal label map pbtxt so it is VOTT results image https user images githubusercontent com 53138627 118678705 e9b17300 b805 11eb 9586 dd00c46e6210 png but when compile data preprocessing get the reseults Training example 0 and Eval examples 0"
+      },
+      {
+        "user": "goktugbacanli",
+        "created_at": "2021-06-09T17:39:50Z",
+        "body": "solved"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Any chance to continue this work on other Cloud platforms ?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2021-02-27T08:13:22Z",
+    "closed_at": "2021-08-09T23:34:47Z",
+    "user": "AndrzejRPiotrowski",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "goodengineer",
+        "created_at": "2021-02-28T09:34:03Z",
+        "body": "Hi good question 1 Which platform MS Azure Amazon 2 What do you mean by continue please write in details which functionality interface which code to add"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2021-02-28T10:00:42Z",
+        "body": "Hi AndrzejRPiotrowski I only provided the scripts to run it automatically on GCP but the code training eval model is platform agnostic It should work on any platform it s only up to you to make it run on the platform you want This repo has been on hold for a little bit you can see there hasn t been any commit in a while I m also not sure all of the API of tensorflow models is still up to date The dataset for this repo is private so you don t have a good way to train the model by yourself While I generally encourage contributions I m not sure the changes you mentioned would be relevant for this repository"
+      },
+      {
+        "user": "AndrzejRPiotrowski",
+        "created_at": "2021-02-28T12:22:36Z",
+        "body": "Hi good question 1 Which platform MS Azure Amazon 2 What do you mean by continue please write in details which functionality interface which code to add Amazon I was thinking of having this as self diagnostic API For people who want to help build the model So i was hoping that some patients can send x ray as free of charge and help build this model To be specific simple CRUD app with x ray add to model trainning"
+      },
+      {
+        "user": "AndrzejRPiotrowski",
+        "created_at": "2021-02-28T12:23:35Z",
+        "body": "Hi AndrzejRPiotrowski I only provided the scripts to run it automatically on GCP but the code training eval model is platform agnostic It should work on any platform it s only up to you to make it run on the platform you want This repo has been on hold for a little bit you can see there hasn t been any commit in a while I m also not sure all of the API of tensorflow models is still up to date The dataset for this repo is private so you don t have a good way to train the model by yourself While I generally encourage contributions I m not sure the changes you mentioned would be relevant for this repository Thank You for the reply Most interesting topic is mode set how many x ray images how long it was working to get a good detection rate what was the best detection rate"
+      },
+      {
+        "user": "ab7z",
+        "created_at": "2021-02-28T12:26:48Z",
+        "body": "size of images labeled with rect angle or polygon"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2021-03-01T09:57:42Z",
+        "body": "Hi all You can find some answers to your questions here https clemkoa github io dental 2018 06 10 deep learning dental x ray html I welcome any contribution if you want to make this model work on other cloud platforms and if you want to build a webapp for image upload You can create yourself a dummy dataset by scrapping a few panoramic x ray pictures from google image"
+      },
+      {
+        "user": "AndrzejRPiotrowski",
+        "created_at": "2021-03-03T07:40:36Z",
+        "body": "clemkoa Great Thank You with this"
+      },
+      {
+        "user": "AndrzejRPiotrowski",
+        "created_at": "2021-04-16T08:57:09Z",
+        "body": "clemkoa Still waiting for my x rays due to i want to have at least 100 Will be in contact beause i am sure lot of people here will want to help Great project again My idea is to have easy access to people x ray using web app they have some sort of info about x ray i have more x rays to play with not in comercial way"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2021-08-09T23:34:47Z",
+        "body": "I am closing this issue because it s been inactive for a while Hope you manage to build your dataset good luck"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Dataset",
+    "state": "closed",
+    "body": "Very interesting work I d like to reproduce results but cannot find the dataset Can you point me in the right direction for the dataset",
+    "created_at": "2021-02-23T03:18:53Z",
+    "closed_at": "2021-02-23T03:19:41Z",
+    "user": "mynameisvinn",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "golden_label_map.pbtxt and train.record",
+    "state": "closed",
+    "body": "Hi Clement This is a great project and I m excited to run it I have followed your installation guide When I run the training command the following errors show up tensorflow python framework errors impl NotFoundError tooth detection data golden label map pbtxt No such file or directory or RuntimeError Did not find any input files matching the glob pattern tooth detection data train record How do I create those files Could you please give me a little hint to run it Thank you kindly",
+    "created_at": "2020-12-03T17:15:19Z",
+    "closed_at": "2020-12-03T23:41:05Z",
+    "user": "javkhlant",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2020-12-03T23:41:05Z",
+        "body": "Hi the two missing files are data files and I cannot share them for patient privacy reasons unfortunately I understand this is frustrastring because you won t be able to run the model without them but I am not allowed to share this sensitive data"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "set di dati",
+    "state": "closed",
+    "body": "have a probably date of access to dataSet",
+    "created_at": "2020-09-28T08:56:51Z",
+    "closed_at": "2020-10-12T23:06:23Z",
+    "user": "elle86a",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2020-10-12T23:06:23Z",
+        "body": "No sorry We couldn t get the approval from the hospital Release of dataset is indefinitely on hold"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "dataset",
+    "state": "closed",
+    "body": "I can t find the dataset link can you please share a link",
+    "created_at": "2020-09-16T09:52:37Z",
+    "closed_at": "2020-09-28T08:51:01Z",
+    "user": "imransalam",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "elle86a",
+        "created_at": "2020-09-28T08:46:18Z",
+        "body": "datasets are private at the moment"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2020-09-28T08:51:01Z",
+        "body": "elle86a is right dataset is still private Sorry but I can t share it"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "pipeline_config_path Issue",
+    "state": "closed",
+    "body": "Hi I have some question about pipeline config path pipeline config path path to tooth detection tooth detection models transfer faster rcnn resnet50 coco config There is no models transfer Is it Treatment folder",
+    "created_at": "2020-04-09T04:02:59Z",
+    "closed_at": "2020-06-07T06:15:00Z",
+    "user": "kprc369",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2020-06-07T06:15:00Z",
+        "body": "Hi apologies for the delay Yes it is either models treatment or models index depending on the task that you want getting tooth indices or showing all treatments I have updated the readme accordingly"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "dataset",
+    "state": "closed",
+    "body": "how to download dataset",
+    "created_at": "2020-01-03T08:06:39Z",
+    "closed_at": "2020-01-06T09:27:17Z",
+    "user": "m3r3lin",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2020-01-06T09:27:17Z",
+        "body": "Sorry but the dataset is not public yet"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "--model_dir=<path_to_tooth-detection>/tooth-detection/models/transfer/new_version  :  no \"transfer\" folder",
+    "state": "closed",
+    "body": "Hi Clement under the training section you say to call train py with arguments model dir path to tooth detection tooth detection models transfer new version but there is no folder models transfer new version Where do you get this folder from Thanks",
+    "created_at": "2019-08-22T21:01:13Z",
+    "closed_at": "2019-10-21T19:36:33Z",
+    "user": "cpoptic",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "hbiancot13",
+        "created_at": "2019-10-20T13:42:24Z",
+        "body": "Hi Cl ment I am also interested in the answer Thanks"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2019-10-21T19:36:33Z",
+        "body": "Yes because I haven t committed the trained model It s a folder where I save my models You can find more info on the tf object detection training here https github com tensorflow models blob master research object detection g3doc running locally md"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Where is the frozen graph?",
+    "state": "closed",
+    "body": "I went through every folder and file and I cannot find the trained model Is it not included",
+    "created_at": "2019-08-16T01:28:33Z",
+    "closed_at": "2019-08-18T13:42:16Z",
+    "user": "alohaguy808",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2019-08-18T13:42:16Z",
+        "body": "Hi sorry no the frozen graph is not included and won t be"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": " No module named 'object_detection'",
+    "state": "closed",
+    "body": "Traceback most recent call last File content models research object detection model main py line 25 in module from object detection import model hparams ModuleNotFoundError No module named object detection Can u give me the Solution for the above issue",
+    "created_at": "2019-08-07T17:04:43Z",
+    "closed_at": "2019-08-20T08:50:59Z",
+    "user": "pradeep1569",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2019-08-08T08:01:38Z",
+        "body": "Hi What command are you running"
+      },
+      {
+        "user": "pradeepvarma22",
+        "created_at": "2019-08-08T17:59:02Z",
+        "body": "GoogleCollab python path to tensorflow models research object detection model main py pipeline config path path to tooth detection tooth detection models transfer faster rcnn resnet50 coco config model dir path to tooth detection tooth detection models transfer new version num train steps 100000 alsologtostderr Are u using Linux to build This local host or server"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2019-08-09T08:37:54Z",
+        "body": "I m sorry i m not sure I understand The ModuleNotFoundError No module named object detection error is probably because you didn t export the python path as it is explained in the installation step"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2019-08-20T08:50:59Z",
+        "body": "Closing this issue due to inactivity"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "more details about installation and operation",
+    "state": "closed",
+    "body": "I don t konw which python in this project I hope to get some information about it and some more details about operation",
+    "created_at": "2019-04-10T09:24:50Z",
+    "closed_at": "2019-04-24T08:58:36Z",
+    "user": "CAOLINAN",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2019-04-10T10:21:36Z",
+        "body": "Hi Python version is 2 7 16 I plan on releasing a true installation script Right now things are still a work in progress but I will update the readme soon for installation steps The dataset is not public because of its medical nature we are working on releasing it as well"
+      },
+      {
+        "user": "CAOLINAN",
+        "created_at": "2019-04-11T08:31:29Z",
+        "body": "Thank you Hope to see it"
+      },
+      {
+        "user": "CAOLINAN",
+        "created_at": "2019-04-22T02:39:35Z",
+        "body": "Hi it has passed 11 days I think you may commit a pip script Just using pip freeze requirements txt command in your project root and will get a text named requirements And you can commit it It contains some dependency packages Thank you"
+      },
+      {
+        "user": "clemkoa",
+        "created_at": "2019-04-23T00:57:45Z",
+        "body": "Hi I updated the readme Be aware of a few things dataset is not public yet so I can t give instructions about it in the README everything is dependent on Tensorflow Object Detection API and Google Cloud SDK which adds steps to the installation I d like to switch do python 3 7 but i don t think the Object Detection API supports it"
+      },
+      {
+        "user": "CAOLINAN",
+        "created_at": "2019-04-23T01:07:02Z",
+        "body": "Thank you for updating You re right The Object Detection API doesn t support python3 But I found a solution Here is the URL https stackoverflow com questions 49311195 how to install coco pythonapi in python3 It said that you can use the python package 2to3 if you want to switch to python3 from python2 Hope it can help you"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Dataset",
+    "state": "closed",
+    "body": "Can you provide link to dataset",
+    "created_at": "2019-01-07T04:57:01Z",
+    "closed_at": "2019-01-08T08:35:47Z",
+    "user": "xyzdcgan",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Great Repo",
+    "state": "closed",
+    "body": "Hey Clement I read and loved your article on machine learning on x ray images I am also passionate about computer vision and dentistry a bunch of my family members are dentists and I am currently taking steps to make a business around it I was wondering if you had time to talk about potentially collaborating Let me know You can find my email on my GitHub profile",
+    "created_at": "2018-11-21T14:23:56Z",
+    "closed_at": "2018-12-03T22:29:06Z",
+    "user": "notnil",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clemkoa",
+        "created_at": "2018-12-03T22:29:03Z",
+        "body": "Hey Logan thanks for reaching out This is not the best place to have a talk about business feel free to reach out on my linkedin In the meantime I am closing this issue"
+      }
+    ]
+  }
+]

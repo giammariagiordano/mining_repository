@@ -1,0 +1,137 @@
+[
+  {
+    "number": 13,
+    "title": "where is the data preprocessing before training the models ?",
+    "state": "open",
+    "body": "",
+    "created_at": "2022-12-21T00:58:38Z",
+    "closed_at": null,
+    "user": "anwarghammam",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "which file to run first",
+    "state": "open",
+    "body": "what should be the sequence of the file to be run",
+    "created_at": "2021-02-05T14:47:14Z",
+    "closed_at": null,
+    "user": "rohit-raje-786",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "self-ms",
+        "created_at": "2023-11-13T10:31:18Z",
+        "body": "If your data is embedded and labels are available you can use the following repository https github com ms unlimit Transformer Based Machine Learning Framework"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Stemmer Choice",
+    "state": "closed",
+    "body": "The snowball stemmer also known as Porterv2 is commonly accepted as the superior choice when it comes to stemming Is there any reason you chose to use the Porter stemmer in your examples",
+    "created_at": "2020-07-30T17:10:25Z",
+    "closed_at": "2020-07-31T15:47:03Z",
+    "user": "AlexanderDavid",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2020-07-30T23:08:26Z",
+        "body": "Thank you for the question no reason for using Porter Stemmer just is an example but you can add it and send a pull request we are happy to accept other examples and make the repository stronger"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Classification metrics can't handle a mix of multiclass and continuous-multioutput targets",
+    "state": "closed",
+    "body": "Dear Kowsari Thanks for sharing this great text classification survey I am using this work as a reference for my master s degree in which I will perform classification of industrial safety alert texts When replicating code relating to neural networks I found a slight inconsistency in the following line of README md item Deep Learning Deep Neural Networks print metrics classification report y test predicted ValueError Classification metrics can t handle a mix of multiclass and continuous multioutput targets I evaluated the shapes of y test and predicted in this case predicted shape 7532 20 y test shape 7532 So I suggest the following change in the line above to print metrics classification report y test np argmax predicted axis 1 Regards Wander",
+    "created_at": "2019-10-26T15:45:24Z",
+    "closed_at": "2019-12-01T02:40:38Z",
+    "user": "wanderfernandesjunior",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2019-10-30T03:38:30Z",
+        "body": "Thank you for creating an issue I will fix it"
+      },
+      {
+        "user": "Hameedalii",
+        "created_at": "2019-12-22T14:30:13Z",
+        "body": "Great job man"
+      },
+      {
+        "user": "lucasfrr",
+        "created_at": "2020-06-01T17:32:46Z",
+        "body": "wanderfernandesjunior I got the same error using multilabel confusion matrix and I solved it using your suggestion Thanks"
+      },
+      {
+        "user": "shrupark",
+        "created_at": "2021-08-11T07:36:01Z",
+        "body": "I used your suggestion and it solved a problem I have been trying to fix for like half a week Thank you very much wanderfernandesjunior"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Typo in one of the code blocks",
+    "state": "closed",
+    "body": "In the code block after run RNN and see our result you have predicted Build Model RNN Text predict classes X test Glove I believe this should be predicted model RNN predict classes X test Glove",
+    "created_at": "2019-09-19T16:08:08Z",
+    "closed_at": "2019-10-02T23:52:36Z",
+    "user": "RabbitJackTrade",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2019-09-24T19:40:04Z",
+        "body": "Thank you I ll change it Best Kamran"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "There is a typo that shows that labels the CNN as an RNN in the CNN section",
+    "state": "closed",
+    "body": "I made a pull request showing the fix to the type You may manually fix it as well",
+    "created_at": "2019-07-11T22:12:10Z",
+    "closed_at": "2019-07-17T00:07:53Z",
+    "user": "mohandodda0",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2019-07-17T00:07:51Z",
+        "body": "Thank you for your efforts and time"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "There is a error about CBOW and skip-gram picture",
+    "state": "closed",
+    "body": "In the following picture there is a error https github com kk7nc Text Classification blob master docs pic CBOW png The left picture is CBOW and the right picture is skip gram according to the figure 1 in Distributed Representations of Words and Phrases and their Compositionality",
+    "created_at": "2019-04-21T14:22:38Z",
+    "closed_at": "2019-04-22T19:41:32Z",
+    "user": "yucc2018",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2019-04-22T19:41:22Z",
+        "body": "Thank you for your consideration It s fixed Best Kamran"
+      }
+    ]
+  }
+]

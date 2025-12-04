@@ -1,0 +1,226 @@
+[
+  {
+    "number": 11,
+    "title": "I would like to make realtime arrhythmia classification system",
+    "state": "open",
+    "body": "I use ad8232 as device for get ecg signal Here is my question 1 Is all leads of ecg can be fed into that model to do prediction 2 The author turned ecg signal into 2d image and augmented it this seems like he is talking about the former step of trainning phase but does my signal which fed into the model to do prediction will be also transformed in 2d and augmented 3 Does my signal has to be denoised because the article said signal don t have to be denoised if using 2d convolutional model to predict it 4 The data generate from ad8232 is from 0 to 1024 but its sample data is from 1 x 1 If my data is usually between 300 x 700 can I process my data like this x 500 1000 make it between 1 x 1 Is my method reasonable",
+    "created_at": "2022-04-20T14:12:58Z",
+    "closed_at": null,
+    "user": "Wilbur0912",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Is AD8232 works for this project",
+    "state": "closed",
+    "body": "",
+    "created_at": "2022-04-20T11:53:59Z",
+    "closed_at": "2022-04-20T12:48:37Z",
+    "user": "Wilbur0912",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 9,
+    "title": "ModuleNotFoundError: No module named 'util'",
+    "state": "open",
+    "body": "I can t run app py because I can t find the installation package util and base64 to pil is there any solution",
+    "created_at": "2022-04-18T13:05:44Z",
+    "closed_at": null,
+    "user": "Zbalabal",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "Didn,t have static file in this project",
+    "state": "open",
+    "body": "Sorry author recently i fork your project and run it up I have runned up it successfully but it don t have any JS and CSS to decorate it can author provide this templates static files Thank You",
+    "created_at": "2022-04-02T07:36:01Z",
+    "closed_at": null,
+    "user": "fan9704",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bzsgbq",
+        "created_at": "2022-04-11T08:54:46Z",
+        "body": "I solved this problem by referring to this project https github com physhik ecg mit bih"
+      },
+      {
+        "user": "fan9704",
+        "created_at": "2022-04-17T15:46:50Z",
+        "body": "Thanks bzsgbq I have fixed my problem by your reply"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Some errors in web-app ",
+    "state": "open",
+    "body": "As the person below said nothing happens when I select a csv file If you have the same problem or have solved it please tell me the solution",
+    "created_at": "2021-06-05T19:54:29Z",
+    "closed_at": null,
+    "user": "Daheess",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mrdand",
+        "created_at": "2022-01-08T10:34:37Z",
+        "body": "same with me anyone have the solution"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "AttributeError: 'list' object has no attribute 'items'",
+    "state": "open",
+    "body": "I followed the tutorial 1 clone ECG Arrhythmia classification master 2 clone keras flask deploy webapp master 3 replace the app py and index html 4 download the weights model ecgScratchEpoch2 hdf5 5 modify the path in app py model load model Users happysheep224 Documents python ECG PY ECG Arrhythmia classification master ecgScratchEpoch2 hdf5 csv pd read csv Users happysheep224 Documents python ECG PY ECG Arrhythmia classification master sample csv 6 run the script the terminal show like this ecg bogon keras flask deploy webapp master happysheep224 python app py Using TensorFlow backend Traceback most recent call last File app py line 31 in module model load model Users happysheep224 Documents python ECG PY ECG Arrhythmia classification master ecgScratchEpoch2 hdf5 File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras saving save py line 184 in load model return hdf5 format load model from hdf5 filepath custom objects compile File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras saving hdf5 format py line 178 in load model from hdf5 custom objects custom objects File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras saving model config py line 55 in model from config return deserialize config custom objects custom objects File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras layers serialization py line 109 in deserialize printable module name layer File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras utils generic utils py line 362 in deserialize keras object config module objects custom objects printable module name File Users happysheep224 opt anaconda3 envs ecg lib python3 7 site packages tensorflow python keras utils generic utils py line 325 in class and config for serialized keras object for key item in cls config items AttributeError list object has no attribute items",
+    "created_at": "2020-06-21T07:08:07Z",
+    "closed_at": null,
+    "user": "happysheep224",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "happysheep224",
+        "created_at": "2020-06-21T07:08:58Z",
+        "body": "ankur219"
+      },
+      {
+        "user": "bluecamel",
+        "created_at": "2020-07-10T06:58:58Z",
+        "body": "I got past this by downgrading keras to 2 3 1"
+      },
+      {
+        "user": "happysheep224",
+        "created_at": "2020-07-10T07:12:34Z",
+        "body": "I got past this by downgrading keras to 2 3 1 thank you"
+      },
+      {
+        "user": "bluecamel",
+        "created_at": "2020-07-10T07:31:50Z",
+        "body": "No worries"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Nothing happens after choosing .csv file to upload?",
+    "state": "open",
+    "body": "Anybody else run into this Not sure if this is still being maintained but I followed all the instructions mentioned After it takes a minute to load the page I choose the sample csv file then nothing happens There s supposed to be a predict button that shows up on the page no",
+    "created_at": "2019-10-10T05:25:06Z",
+    "closed_at": null,
+    "user": "windowshopr",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bluecamel",
+        "created_at": "2020-07-10T07:01:23Z",
+        "body": "I got past this by checking out de913c89ab630f7cfed5cda51f41f89761c1c8a8 of keras flask deploy webapp It looks like they ve since added some drag and drop functionality that dies if it doesn t find a certain element which isn t there in this project s index html"
+      },
+      {
+        "user": "Yeafun",
+        "created_at": "2020-07-24T10:15:55Z",
+        "body": "I got past this by checking out de913c89ab630f7cfed5cda51f41f89761c1c8a8 of keras flask deploy webapp It looks like they ve since added some drag and drop functionality that dies if it doesn t find a certain element which isn t there in this project s index html how to fix it"
+      },
+      {
+        "user": "bzsgbq",
+        "created_at": "2022-04-11T08:55:34Z",
+        "body": "I solved this problem by referring to this project https github com physhik ecg mit bih"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "validation or test accuracy",
+    "state": "open",
+    "body": "Anyone knows about the validation or test accuracy of this model I implement the paper using keras and use 10 images of each category as validation data it turns out the model performs outstanding on training data while the accuracy on validation data fluctuates wildly from 10 99 quite strange The paper only mentions on accuracy on all images this can be similar to training accuracy but the high training accuracy can be a result of overfit",
+    "created_at": "2019-03-12T10:18:12Z",
+    "closed_at": null,
+    "user": "DANNALI35",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "prodanovann",
+        "created_at": "2022-05-27T16:44:51Z",
+        "body": "Hi a bit late answer but for whoever might read this If you take 10 of the images you have the same patients in train and test and the performance estimation is not valid"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "the annotation files",
+    "state": "open",
+    "body": "i was wondering what is the type of the file passed to the beat annotations method in gettingData py file also what is the type of the file records passed to segmentation method Do i have to use wfdb library to convert atr files and hea files to txt files",
+    "created_at": "2019-02-27T12:15:28Z",
+    "closed_at": null,
+    "user": "ghadayoussef",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Error   File \"app.py\", line 47, in model_predict     ts = int(str(path)[index1:index2]) ValueError: invalid literal for int() with base 10: 'ds/sample'",
+    "state": "closed",
+    "body": "Hello Thank you for uploading and sharing this code I was wondering if you could double check if it is working for you I am using the sample csv file provided in your GH repo I get this error File app py line 47 in model predict ts int str path index1 index2 ValueError invalid literal for int with base 10 ds sample",
+    "created_at": "2018-09-19T21:06:26Z",
+    "closed_at": "2019-09-12T01:59:22Z",
+    "user": "robertavram-md",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "juniorcoder34",
+        "created_at": "2018-10-13T21:07:30Z",
+        "body": "I have encountered the same error"
+      },
+      {
+        "user": "jigar786",
+        "created_at": "2018-12-11T21:47:59Z",
+        "body": "Even same error i have encountered Any solutuions Please"
+      },
+      {
+        "user": "nikhil-elayath",
+        "created_at": "2019-01-21T17:09:31Z",
+        "body": "Same here Any solutions"
+      },
+      {
+        "user": "ankur219",
+        "created_at": "2019-02-04T11:29:56Z",
+        "body": "I have updated the repo Let me know if its working"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Training phase",
+    "state": "open",
+    "body": "Thank you for the code you published since I am very interested in reproducing these experiments I noticed that there is no training phase of the neural network from which the model is generated Can I have additional information on how you did this task",
+    "created_at": "2018-09-06T08:37:18Z",
+    "closed_at": null,
+    "user": "lorenzobrusco",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "carlosurena",
+        "created_at": "2019-03-06T18:03:26Z",
+        "body": "Did you ever figure this out I m also interested in training this myself"
+      },
+      {
+        "user": "Jay2201",
+        "created_at": "2024-03-02T09:16:30Z",
+        "body": "I also want to do custom training i am not able to find any link between the codes given can you tell me how did you train your model"
+      }
+    ]
+  }
+]

@@ -1,0 +1,684 @@
+[
+  {
+    "number": 26,
+    "title": "TensorFlow 1.x is not available now",
+    "state": "open",
+    "body": "The code needs to be upgraded to TensorFlow 2 x as TensorFlow 1 x is no longer available",
+    "created_at": "2021-09-15T06:54:03Z",
+    "closed_at": null,
+    "user": "ShaidaMuhammad",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "    parser.add_argument('--decode_dir', required=True, help=\"root of the decoded directory\"). ",
+    "state": "open",
+    "body": "In gen sample py file parser add argument decode dir required True help root of the decoded directory this line refers to the decoded directory with two child directories reference and decoded I don t understand how to create these directories effectively Please help me I run the gen sample py file and got this output python3 gen sample py data dir data decode dir decode dir vocab path data vocab vocab length 199869 positive samples 0 negative samples 0 file saved data discriminator train data npz",
+    "created_at": "2021-05-16T18:04:01Z",
+    "closed_at": null,
+    "user": "istiakahmad",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2021-05-17T06:44:37Z",
+        "body": "I m sorry that this repo released 3 years ago is confusing The decode dir reference denotes a dir for positive samples which can be ground truth summaries for the given documents the decode dir decoded denotes a dir for negative samples which can be randomly sampled summaries by negative sampling or decoded summaries by a coarse summarization model"
+      },
+      {
+        "user": "istiakahmad",
+        "created_at": "2021-05-17T10:50:18Z",
+        "body": "Thanks for the guidelines"
+      },
+      {
+        "user": "istiakahmad",
+        "created_at": "2021-07-27T23:21:44Z",
+        "body": "Sorry i can t generate positive and negative sample Could you please help me to 1 How can I generate positive and negative sample 2 What will the extension or format of positive and negative sample file"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Segmentation fault (core dumped) when importing Batcher in the main.py",
+    "state": "closed",
+    "body": "Hi developer when I try to run the command python main py mode train data path data finished files train bin vocab path data finished files vocab log root log pretrain dis data path data discriminator train data npz restore best model False I have encountered Segmentation fault core dumped occuring at from batcher import Batcher in the main py No other information is given So could you be kind to help me out I do appreciate it Bests Qiana",
+    "created_at": "2021-04-17T04:33:33Z",
+    "closed_at": "2021-05-05T05:50:10Z",
+    "user": "qiana0223",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "你好",
+    "state": "open",
+    "body": "pytorch",
+    "created_at": "2021-04-09T08:35:16Z",
+    "closed_at": null,
+    "user": "LeafCloud",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 22,
+    "title": "How to make a test on specific document ?",
+    "state": "closed",
+    "body": "Hi after follow the instruction on README file I want to make a summarize on a single test document How can I do that Thank you I m running on OS Ubuntu 20 04 Python 3 6 9 Tensorflow 1 4 1",
+    "created_at": "2020-10-14T23:50:27Z",
+    "closed_at": "2020-10-19T01:33:33Z",
+    "user": "greatMonster11",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2020-10-16T11:58:02Z",
+        "body": "Hi you can view a single test document as the test set and follow the instruction at https github com abisee cnn dailymail to get the same format as the CNN DailyiMail dataset Then you can use our code to run decoding"
+      },
+      {
+        "user": "greatMonster11",
+        "created_at": "2020-10-17T14:50:48Z",
+        "body": "Thanks iwangjian That would help me a lot"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "你好，我想问下，为什么我decode时，reference文件夹里面的.txt文件都是空的呢",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-04-16T08:42:08Z",
+    "closed_at": null,
+    "user": "lipanpanpanpan",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 20,
+    "title": "你们的都可以运行吗？",
+    "state": "closed",
+    "body": "python3 main py mode train data path data train bin vocab path data vocab log root log pretrain dis data path data discriminator train data npz restore best model False sys exit main argv File main py line 218 in main raise ValueError The mode flag must be one of pretrain train decode ValueError The mode flag must be one of pretrain train decode",
+    "created_at": "2020-04-16T08:27:03Z",
+    "closed_at": "2020-04-16T08:42:51Z",
+    "user": "lipanpanpanpan",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "rewards align error batch?",
+    "state": "open",
+    "body": "rewords calculate by 1st batch and then multiply 2nd batch",
+    "created_at": "2019-12-19T04:32:58Z",
+    "closed_at": null,
+    "user": "nlper27149",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "您好，我想问下discriminator.py文件中loss函数为什么是交叉熵呀，而不是min φ \u0006 EY ∼pdata [logDφ(Y )] ] EY ∼Gθ [log(1 1 Dφ(Y ))]",
+    "state": "open",
+    "body": "self scores tf nn xw plus b self h drop W b name scores 2 self ypred for auc tf nn softmax self scores 2 self predictions tf argmax self scores 1 name predictions 0 1 CalculateMean cross entropy loss with tf name scope loss losses tf nn softmax cross entropy with logits logits self scores labels self input y self loss tf reduce mean losses l2 reg lambda l2 loss",
+    "created_at": "2019-11-28T09:47:21Z",
+    "closed_at": null,
+    "user": "hanyegirl",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "FXiiX",
+        "created_at": "2021-12-06T06:02:20Z",
+        "body": "discriminator py loss Generator d g seqgan generator"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Is there a pretrained model for English currently?",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-10-30T19:52:05Z",
+    "closed_at": null,
+    "user": "shamoons",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "请问有生成discriminator_train_data.npz的代码吗",
+    "state": "open",
+    "body": "npz",
+    "created_at": "2019-10-23T11:14:19Z",
+    "closed_at": null,
+    "user": "chao276951044",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-10-23T14:31:25Z",
+        "body": "npz gen sample py"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "您好，我想问下代码的逻辑结构",
+    "state": "open",
+    "body": "lstm encoder decoder lstm cnn score train bin",
+    "created_at": "2019-10-11T09:13:13Z",
+    "closed_at": null,
+    "user": "hanyegirl",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-10-22T04:45:30Z",
+        "body": "1 2 train bin https github com abisee cnn dailymail"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-10-30T09:25:07Z",
+        "body": "mode train encoder decoder discriminator mode decoder encoder"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "用自己的数据训练怎么准备discriminator_train_data.npz?",
+    "state": "open",
+    "body": "discriminator train data npz",
+    "created_at": "2019-10-11T03:36:34Z",
+    "closed_at": null,
+    "user": "hxmhxm",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-10-22T04:52:36Z",
+        "body": "discriminator train data npz generator"
+      },
+      {
+        "user": "HunterYCG",
+        "created_at": "2019-12-06T03:02:12Z",
+        "body": "generator discriminator train data npz README md dropbox discriminator train data npz 18 4MB generator decode decode discriminator train data npz decode train bin train bin discriminator train data npz"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-12-06T07:31:33Z",
+        "body": "train bin discriminator train data npz decode"
+      },
+      {
+        "user": "HunterYCG",
+        "created_at": "2019-12-06T07:33:43Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Error in generator.py(line 320)",
+    "state": "closed",
+    "body": "Dear Wang I found your article very exciting so I decided to download your package I have successfully evaluated the decoder and after that I decided to begin a new training session After starting the training phase the first 100 stories were successfully read see I0905 11 05 25 497097 7352 attention decoder py 151 Adding attention decoder timestep 99 of 100 But I get the following error message see the annexed error message How can I proceed Thank you in advance for your advice Best Regards Istvan File k summarization gan summarization textsum gan generator py line 320 in add seq2seq loss with reward self D reward tf stack sample loss per step axis 1 roll mask File g Anaconda353 lib site packages tensorflow python ops math ops py line 884 in binary op wrapper return func x y name name File g Anaconda353 lib site packages tensorflow python ops math ops py line 1180 in mul dispatch return gen math ops mul x y name name File g Anaconda353 lib site packages tensorflow python ops gen math ops py line 6878 in mul Mul x x y y name name File g Anaconda353 lib site packages tensorflow python framework op def library py line 788 in apply op helper op def op def File g Anaconda353 lib site packages tensorflow python util deprecation py line 507 in new func return func args kwargs File g Anaconda353 lib site packages tensorflow python framework ops py line 3616 in create op op def op def File g Anaconda353 lib site packages tensorflow python framework ops py line 2027 in init control input ops File g Anaconda353 lib site packages tensorflow python framework ops py line 1867 in create c op raise ValueError str e ValueError Dimensions must be equal but are 32 and 100 for seq2seq loss mul 201 op Mul with input shapes 32 100 32 100 1",
+    "created_at": "2019-09-05T10:19:28Z",
+    "closed_at": "2019-10-11T18:37:16Z",
+    "user": "PeterIstvan",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "srirampattabiraman",
+        "created_at": "2019-10-10T07:12:52Z",
+        "body": "I have also got the same issue and it is related with dimension It worked fine for me after replacing the line 320 with below loss with reward self D reward tf squeeze tf stack sample loss per step axis 1 roll mask"
+      },
+      {
+        "user": "PeterIstvan",
+        "created_at": "2019-10-11T18:37:44Z",
+        "body": "Thank You It works"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "ValueError: Cannot feed value of shape (4, 100) for Tensor 'Placeholder:0', which has shape '(4, 1)'",
+    "state": "open",
+    "body": "I got an error File main py line 210 in module tf compat v1 app run File home eric local lib python3 6 site packages tensorflow python platform app py line 40 in run run main main argv argv flags parser parse flags tolerate undef File home eric local lib python3 6 site packages absl app py line 300 in run run main main args File home eric local lib python3 6 site packages absl app py line 251 in run main sys exit main argv File main py line 204 in main decoder decode File home eric Documents textrank summarization textsum gan decode py line 108 in decode best hyp beam search run beam search self sess self model self vocab batch File home eric Documents textrank summarization textsum gan beam search py line 104 in run beam search enc states dec in state model run encoder sess batch File home eric Documents textrank summarization textsum gan generator py line 510 in run encoder self global step feed dict run the encoder File home eric local lib python3 6 site packages tensorflow python client session py line 950 in run run metadata ptr File home eric local lib python3 6 site packages tensorflow python client session py line 1149 in run str subfeed t get shape ValueError Cannot feed value of shape 4 100 for Tensor Placeholder 0 which has shape 4 1 my tensorflow version is tensorflow 1 14 0 ubuntu 18 04 system",
+    "created_at": "2019-08-05T07:56:21Z",
+    "closed_at": null,
+    "user": "w5688414",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-08-05T08:35:48Z",
+        "body": "You may debug for your input data carefully as the shape is not matched"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "can I use this code to generate a summary from a new source text",
+    "state": "open",
+    "body": "i want to generate a summary and the source text is not in the text bin just an ordinary English text what can i do for this task thank you for your any help",
+    "created_at": "2019-07-08T07:38:31Z",
+    "closed_at": null,
+    "user": "hanyegirl",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-07-08T09:00:38Z",
+        "body": "The processing from text data to bin file is referenced by https github com abisee cnn dailymail you can refer to this code to process your own data"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-07-08T10:02:39Z",
+        "body": "The processing from text data to bin file is referenced by https github com abisee cnn dailymail you can refer to this code to process your own data then use this python3 main py mode decode data path data test bin vocab path data vocab log root log single pass True to generate the relative summary"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-07-08T12:09:22Z",
+        "body": "Yes but firstly you need to train a model using your own data following the instructions in README md and then use the trained model to generate the relative summary"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-07-08T12:19:47Z",
+        "body": "thank you your advice is very important to me"
+      },
+      {
+        "user": "HunterYCG",
+        "created_at": "2019-11-22T02:00:49Z",
+        "body": "May I ask after you use the new data set to train the model what is the test result At present I am also doing some related work so I would like to consult you"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-11-22T02:23:20Z",
+        "body": "If you use a new dataset to train the model the test input are texts or articles in your test set the test output are corresponding generated summaries"
+      },
+      {
+        "user": "HunterYCG",
+        "created_at": "2019-11-22T02:35:50Z",
+        "body": "Thank you very much for your reply"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Model saving for adversarial training",
+    "state": "closed",
+    "body": "Hi iwangjian Sorry for asking such stupid question but i cannot find where the model checkpoints are saved during the adversarial training Looking forward for your reply I just noticed the saving in the tf train Supervisor Please delete this issue",
+    "created_at": "2019-06-01T15:57:31Z",
+    "closed_at": "2019-06-01T16:44:15Z",
+    "user": "j40903272",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "time for pretraining step",
+    "state": "open",
+    "body": "It is mentioned in the repo that the pretraining step should run for some time please mention after how much time i should interrupt it Also i can t use the pretrained npz file as i m planning to train with my custom dataset",
+    "created_at": "2019-04-25T13:33:46Z",
+    "closed_at": null,
+    "user": "umangkeshri",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-25T14:36:02Z",
+        "body": "Actually it should be pretrain for several epochs e g 2 10 then you can interrupt it"
+      },
+      {
+        "user": "umangkeshri",
+        "created_at": "2019-04-26T05:56:40Z",
+        "body": "for initial pretraining https github com iwangjian textsum gan blob 7aaaed5b750c8571e67bbf3ae28918bc909379de main py L155 step the part of code executed is this https github com iwangjian textsum gan blob 7aaaed5b750c8571e67bbf3ae28918bc909379de trainer py L15 and number of epochs are not mentioned here"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-26T06:31:30Z",
+        "body": "Yes you could stop running manually when executing several epochs the epoch count is based on the data size and the batch size I will fix it later thanks"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Decoding problem: ValueError",
+    "state": "open",
+    "body": "I trained the model exactly as the steps of README only for 145 train steps And I interrupt the training process to have a decoding try I also typed the command exactly the same as the decode part from README However it shows the ValueError Loading checkpoint log train model ckpt 145 INFO tensorflow Restoring parameters from log train model ckpt 145 INFO tensorflow Wrote example 0 to file INFO tensorflow Wrote example 1 to file INFO tensorflow Wrote example 2 to file INFO tensorflow Wrote example 3 to file INFO tensorflow Wrote example 4 to file Traceback most recent call last File main py line 202 in module tf app run File home amax anaconda3 envs tf14 lib python3 6 site packages tensorflow python platform app py line 48 in run sys exit main sys argv 1 flags passthrough File main py line 196 in main decoder decode File home amax zhj textsum gan decode py line 108 in decode best hyp beam search run beam search self sess self model self vocab batch File home amax zhj textsum gan beam search py line 132 in run beam search prev coverage prev coverage File home amax zhj textsum gan generator py line 580 in decode onestep results sess run to return feed dict feed run the decoder step File home amax anaconda3 envs tf14 lib python3 6 site packages tensorflow python client session py line 889 in run run metadata ptr File home amax anaconda3 envs tf14 lib python3 6 site packages tensorflow python client session py line 1096 in run np val shape subfeed t name str subfeed t get shape ValueError Cannot feed value of shape 3 256 for Tensor seq2seq reduce final st Relu 0 which has shape 4 256 The error message made me confused Could you please help me with this problem please",
+    "created_at": "2019-04-20T14:38:13Z",
+    "closed_at": null,
+    "user": "ghost",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-22T01:44:03Z",
+        "body": "Does this error occur in your pretraining phase or full training phase"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2019-04-22T03:42:48Z",
+        "body": "I used the file discriminator train data npz that you provided in Dropbox directly and there was NO such error in the full training process I don not know what was going wrong Thanks a lot for your help"
+      },
+      {
+        "user": "w5688414",
+        "created_at": "2019-08-07T01:45:30Z",
+        "body": "I got the same error when I run decode thon client session py line 1096 in run np val shape subfeed t name str subfeed t get shape ValueError Cannot feed value of shape 3 256 for Tensor seq2seq reduce final st Relu 0 which has shape 4 256"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-08-07T02:33:14Z",
+        "body": "You could use discriminator train data npz provided in Dropbox to train the model I will carefully check the code and fix bugs later"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "请问下生成对抗网络用于文本生成迭代次数都很高吗",
+    "state": "open",
+    "body": "1 100",
+    "created_at": "2019-04-11T13:18:17Z",
+    "closed_at": null,
+    "user": "hanyegirl",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-11T13:42:40Z",
+        "body": "GAN"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-11T14:03:09Z",
+        "body": ""
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-11T14:04:04Z",
+        "body": ""
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-11T15:15:35Z",
+        "body": "Titan 1080 1080 Ti 4 5"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-25T09:25:40Z",
+        "body": "100"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-25T11:19:36Z",
+        "body": ""
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-25T11:35:09Z",
+        "body": ""
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-25T12:37:47Z",
+        "body": "discriminator max epochs 20"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-25T12:40:31Z",
+        "body": "discriminator max epochs 20"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "我打不开dropbox链接",
+    "state": "closed",
+    "body": "You can download the generated data discriminator train data npz for discriminator from dropbox Meanwhile you can follow the instructions below to prepare negative samples by yourself dropbox",
+    "created_at": "2019-04-08T08:56:50Z",
+    "closed_at": "2019-08-07T01:50:49Z",
+    "user": "hanyegirl",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-08T09:18:48Z",
+        "body": "https www dropbox com s i1otqkrsgup63pt discriminator train data npz dl 0"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-08T09:49:06Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Not getting expected results",
+    "state": "open",
+    "body": "I m trying to run the code on the CNN Dailymail dataset following the instructions in the readme but the loss doesn t seem to be decreasing and when I try to decode I get output like the following This is after over 1000000 training steps a peterson the in in in a to Do you have any idea where the problem could be",
+    "created_at": "2019-03-08T05:33:42Z",
+    "closed_at": null,
+    "user": "vflux",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "duzani",
+        "created_at": "2019-03-13T06:17:26Z",
+        "body": "I also tried to pretrain the generator model But even with 80000 train steps the loss doesn t seem to be decreasing and I got poor output I d like to ask iwangjian if you succeed to get the appropriate result like the one in the original paper with this code Thanks"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-03-31T14:38:11Z",
+        "body": "I ve fixed some bugs and updated the README thanks for your comments"
+      },
+      {
+        "user": "giriallada",
+        "created_at": "2019-04-21T04:55:13Z",
+        "body": "I m getting results like the the the the the the the the the the the he the the of the the the the to the the How do I achieve paper like results How many pretrain steps should I take"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-21T06:09:54Z",
+        "body": "You can directly use the provided discriminator train data npz to train the full model with pretrain The full training may be pretty slow"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-25T03:39:16Z",
+        "body": "8"
+      },
+      {
+        "user": "geekyspartan",
+        "created_at": "2020-07-28T08:56:24Z",
+        "body": "iwangjian Hey I am using the discriminator train data npz file and trained for around 650 iterations but still my output is like this b b new new b b new manchester b b b v b b b new b may b manchester manchester b new Commands that I am running python3 main py mode train data path data train bin vocab path data vocab log root log pretrain dis data path data discriminator train data npz restore best model False For testing python3 main py mode decode data path chunked test 001 bin vocab path data vocab log root log single pass True chunked data is generated using the same method that you have mentioned in your repo Thanks in advance"
+      },
+      {
+        "user": "geekyspartan",
+        "created_at": "2020-07-28T11:07:51Z",
+        "body": "Never mind I was doing a mistake If I am using discriminator train data npz then the train command will be this python3 main py mode pretrain data path data train bin vocab path data vocab log root log pretrain dis data path data discriminator train data npz restore best model False"
+      },
+      {
+        "user": "Ryze789",
+        "created_at": "2021-01-03T16:25:27Z",
+        "body": "iwangjian discriminator train data npz full train decode the the the the the the the the the"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "main.py",
+    "state": "closed",
+    "body": "I m getting the following error Traceback most recent call last File main py line 210 in module tf app run File home game of codes anaconda3 envs py3 lib python3 6 site packages tensorflow python platform app py line 125 in run sys exit main argv File main py line 192 in main generator batcher Batcher FLAGS data path vocab hps single pass FLAGS single pass File home game of codes Work Projects TS Experiments textsum gan batcher py line 250 in init self example queue queue Queue BATCH QUEUE MAX self hps batch size TypeError unsupported operand type s for int and Flag",
+    "created_at": "2019-03-05T18:25:42Z",
+    "closed_at": "2019-11-17T18:32:52Z",
+    "user": "PratikNalage",
+    "comments_count": 16,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-03-08T02:12:44Z",
+        "body": "Which version of tensorflow do you use You could mandatorily convert hps batch size into type int"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-03-28T09:29:24Z",
+        "body": "i meet the same trouble and then try to convert hps batch size into type int by using int self hps batch size but it emerges the follow error Traceback most recent call last File main py line 202 in module tf app run File usr local anaconda3 lib python3 6 site packages tensorflow python platform app py line 126 in run sys exit main argv File main py line 184 in main generator batcher Batcher FLAGS data path vocab hps single pass FLAGS single pass File home dhy gan for abstractive textsum gan master batcher py line 250 in init self example queue queue Queue BATCH QUEUE MAX int self hps batch size TypeError int argument must be a string a bytes like object or a number not Flag then i try to solve this problem but have no effect do you have any suggestions thanks for your help"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-04-02T02:00:21Z",
+        "body": "i solve this problem by change the tensorflow version into 1 40 wish it will help you"
+      },
+      {
+        "user": "giriallada",
+        "created_at": "2019-04-19T09:43:19Z",
+        "body": "I keep getting this error in the very first step Traceback most recent call last File main py line 202 in module tf app run File home giri anaconda3 lib python3 6 site packages tensorflow python platform app py line 48 in run sys exit main sys argv 1 flags passthrough File main py line 171 in main raise Exception Problem with flags s args Exception Problem with flags main py home giri Music sumdata finished files train bin"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-19T13:36:27Z",
+        "body": "It s because you need some more arguments when running the main py you can follow the examples in the README md"
+      },
+      {
+        "user": "giriallada",
+        "created_at": "2019-04-20T06:37:50Z",
+        "body": "I followed the exact same steps given in the README md still getting the same output"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-20T06:46:51Z",
+        "body": "Which step did you run Show me your complete running command"
+      },
+      {
+        "user": "giriallada",
+        "created_at": "2019-04-20T06:56:32Z",
+        "body": "the very first step giri giri HP Pavilion Notebook Music textsum gan master python3 main py mode pretrain data path home giri Music sumdata finished files train bin vocab path home giri Music sumdata finished files vocab log root log restore best model False home giri anaconda3 lib python3 6 site packages h5py init py 36 FutureWarning Conversion of the second argument of issubdtype from float to np floating is deprecated In future it will be treated as np float64 np dtype float type from conv import register converters as register converters Traceback most recent call last File main py line 202 in module tf app run File home giri anaconda3 lib python3 6 site packages tensorflow python platform app py line 48 in run sys exit main sys argv 1 flags passthrough File main py line 171 in main raise Exception Problem with flags s args Exception Problem with flags main py home giri Music sumdata finished files train bin"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-04-20T07:18:17Z",
+        "body": "In your arguments data path and vocab path you want to use the absolute path but with wrong format they should be data path home giri Music sumdata finished files train bin and vocab path home giri Music sumdata finished files vocab respectively"
+      },
+      {
+        "user": "Forlogen",
+        "created_at": "2019-09-01T11:59:32Z",
+        "body": "readme md python3 main py mode train data path my path vocab apth my path log root my path pretrain dis data path my path restore best model False ValueError The mode flag must be one of pretrain train decode"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-09-01T13:58:41Z",
+        "body": ""
+      },
+      {
+        "user": "HunterYCG",
+        "created_at": "2019-10-25T03:33:52Z",
+        "body": "To write the variables to the format like self hps batch size value"
+      },
+      {
+        "user": "XyzaBi",
+        "created_at": "2019-10-25T09:49:52Z",
+        "body": "i solve this problem by change the tensorflow version into 1 40 wish it will help you I also meet this problem but there is no 1 40 of Tensorflow are you sure"
+      },
+      {
+        "user": "XyzaBi",
+        "created_at": "2019-10-25T14:10:12Z",
+        "body": "I have solved this problem change main py line 79 into for key val in FLAGS flag values dict items for python 3 for key val in FLAGS flag values dict iteritems for python 2"
+      },
+      {
+        "user": "lipanpanpanpan",
+        "created_at": "2020-04-16T08:34:15Z",
+        "body": ""
+      },
+      {
+        "user": "DEEP2907",
+        "created_at": "2020-12-07T17:52:28Z",
+        "body": "type It s because you need some more arguments when running the main py you can follow the examples in the README md Which version of tensorflow do you use You could mandatorily convert hps batch size into type int how can we convert the batch size into type int"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Is there any code that compares it to other methods",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-02-26T08:26:55Z",
+    "closed_at": null,
+    "user": "hanyegirl",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-02-26T08:56:58Z",
+        "body": ""
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-02-27T01:13:06Z",
+        "body": "GAN"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-02-27T01:44:50Z",
+        "body": "GAN A deep reinforced model for abstractive summarization Fast Abstractive Summarization with Reinforce Selected Sentence Rewriting"
+      },
+      {
+        "user": "hanyegirl",
+        "created_at": "2019-02-27T01:47:16Z",
+        "body": "GAN A deep reinforced model for abstractive summarization Fast Abstractive Summarization with Reinforce Selected Sentence Rewriting"
+      },
+      {
+        "user": "FXiiX",
+        "created_at": "2021-12-01T01:30:04Z",
+        "body": "TS GAN with Policy Gradient for Text Summarization"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Training time and final results",
+    "state": "open",
+    "body": "Can you post the training time and the results obtained for this implementation",
+    "created_at": "2019-01-28T11:25:55Z",
+    "closed_at": null,
+    "user": "kailasmachineai",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iwangjian",
+        "created_at": "2019-02-26T08:53:01Z",
+        "body": "Thanks for your suggestion the results will be posted later"
+      },
+      {
+        "user": "hondorchen",
+        "created_at": "2019-11-25T06:19:07Z",
+        "body": "iwangjian paper"
+      },
+      {
+        "user": "iwangjian",
+        "created_at": "2019-11-25T07:24:55Z",
+        "body": "paper 8 epoch"
+      }
+    ]
+  }
+]

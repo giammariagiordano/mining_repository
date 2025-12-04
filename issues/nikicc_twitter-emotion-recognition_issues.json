@@ -1,0 +1,1278 @@
+[
+  {
+    "number": 37,
+    "title": "Environment Setup Error",
+    "state": "closed",
+    "body": "Hi I m new to making issues on Git so I apologize in advance for any lapses in etiquette in this post I m having a lot of trouble trying to set up the model for use in a university project I wanted to run the demo first so after cloning the repository and initializing an environment I run pip3 install r requirements txt When installing pandas the Getting requirements to build wheel stage exits with an error ModuleNotFoundError No module named numpy I was able to reproduce this error on a peer s device so it doesn t seem to be an issue with my Python environment but I m not entirely sure How might this issue be addressed Screen Shot 2024 04 01 at 11 48 48 PM https github com nikicc twitter emotion recognition assets 116770157 9fc5f709 9943 4e49 879c 29b3539da956",
+    "created_at": "2024-04-02T03:51:34Z",
+    "closed_at": "2024-04-03T19:06:36Z",
+    "user": "ccjustin",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2024-04-02T17:52:05Z",
+        "body": "It seems like numpy which is one of the requirements https github com nikicc twitter emotion recognition blob master requirements txt L3 is missing Can you check if numpy got installed or not"
+      },
+      {
+        "user": "ccjustin",
+        "created_at": "2024-04-03T07:12:36Z",
+        "body": "Hi I realized that I could switch the Python version to something that was more compatible with the dependencies outlined in the requirements txt Namely 3 7 17 All the packages now install correctly but I get one issue My code is as shown from emotion predictor import EmotionPredictor def predict text model EmotionPredictor classification ekman setting mc use unison model True predictions model predict probabilities text unison emotions print debugging unison emotions print predictions def main predict i m drinking strawberry lemonade if name main main This is just some dummy code to make sure the model works on my device However when running it I get this big ValueError about a shape needing to have rank 0 and I m not sure what that means Could you clarify this for me How might I address this issue Is it my usage of the model Thank you so much Screen Shot 2024 04 01 at 11 48 48 PM https github com nikicc twitter emotion recognition assets 116770157 6001710d 2bd3 417d b46f 22d42ed885e7"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2024-04-03T17:35:41Z",
+        "body": "However when running it I get this big ValueError about a shape needing to have rank 0 and I m not sure what that means Could you clarify this for me How might I address this issue Is it my usage of the model Can you paste the stack trace for this error The image that you pasted seems the same as before it s about numpy"
+      },
+      {
+        "user": "ccjustin",
+        "created_at": "2024-04-03T18:11:28Z",
+        "body": "Sorry I was working late last night and I pasted the wrong picture Here s a screencap of the stack trace unison py is running the code from the previous comment I was wondering if this had something to do with the tensorflow version I have installed After the requirements txt was installed succesfully I ran the program and initially got an error since tensorflow wasn t installed I installed a version I found to be compatible namely tensorflow v1 15 0 but I m not sure if that s what s compatible with the model Let me know if the text is too small Screen Shot 2024 04 03 at 2 09 24 PM https github com nikicc twitter emotion recognition assets 116770157 ff41676b c7e9 4789 ab41 c8f56db7791f"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2024-04-03T18:30:07Z",
+        "body": "I was wondering if this had something to do with the tensorflow version I have installed After the requirements txt was installed succesfully I ran the program and initially got an error since tensorflow wasn t installed I installed a version I found to be compatible namely tensorflow v1 15 0 but I m not sure if that s what s compatible with the model Oh this is the problem This code needs Theano not Tensorflow See how you can swap the Keras backend here https github com nikicc twitter emotion recognition blob master demo py L1 L2"
+      },
+      {
+        "user": "ccjustin",
+        "created_at": "2024-04-03T19:06:36Z",
+        "body": "I missed that thank you so much for your help and patience"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2024-04-03T19:08:13Z",
+        "body": "Glad we managed to fix it"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Binder fails to start",
+    "state": "open",
+    "body": "With error logs Waiting for build to start Picked Git content provider Cloning into tmp repo2docker4odte8kr HEAD is now at 7af2a0b Bump pyyaml from 5 1 to 5 4 24 Python version unspecified using current default Python version 3 10 This will change in the future Building conda environment for python 3 10 Using PythonBuildPack builder Step 1 50 FROM docker io library buildpack deps jammy 9336076452fd Step 2 50 ENV DEBIAN FRONTEND noninteractive Using cache d1ff7591f21e Step 3 50 RUN apt get qq update apt get qq install yes no install recommends locales dev null apt get qq purge apt get qq clean rm rf var lib apt lists Using cache aeae490ecabe Step 4 50 RUN echo en US UTF 8 UTF 8 etc locale gen locale gen Using cache c0914662da05 Step 5 50 ENV LC ALL en US UTF 8 LANG en US UTF 8 LANGUAGE en US UTF 8 Using cache a11237220a9f Step 6 50 ENV SHELL bin bash Using cache e645c5f56303 Step 7 50 ARG NB USER Using cache e53aff3ab4a3 Step 8 50 ARG NB UID Using cache 4e68be02d867 Step 9 50 ENV USER NB USER HOME home NB USER Using cache f5ca8162d797 Step 10 50 RUN groupadd gid NB UID NB USER useradd comment Default user create home gid NB UID no log init shell bin bash uid NB UID NB USER Using cache 41d8a66c2107 Step 11 50 RUN apt get qq update apt get qq install yes no install recommends gettext base less unzip dev null apt get qq purge apt get qq clean rm rf var lib apt lists Using cache fa888af135ac Step 12 50 EXPOSE 8888 Using cache 52a9553fc60c Step 13 50 ENV APP BASE srv Using cache 167136613824 Step 14 50 ENV CONDA DIR APP BASE conda Using cache 51c913cf1f8c Step 15 50 ENV NB PYTHON PREFIX CONDA DIR envs notebook Using cache 1d48fdbdebf7 Step 16 50 ENV NPM DIR APP BASE npm Using cache df609e219079 Step 17 50 ENV NPM CONFIG GLOBALCONFIG NPM DIR npmrc Using cache e0fdfa71524a Step 18 50 ENV NB ENVIRONMENT FILE tmp env environment lock Using cache 883a3e26a174 Step 19 50 ENV MAMBA ROOT PREFIX CONDA DIR Using cache 64e780b6bc49 Step 20 50 ENV MAMBA EXE CONDA DIR bin mamba Using cache 3ca7557747a7 Step 21 50 ENV CONDA PLATFORM linux 64 Using cache 2c87249fd8ec Step 22 50 ENV KERNEL PYTHON PREFIX NB PYTHON PREFIX Using cache 2a76bd4920df Step 23 50 ENV PATH NB PYTHON PREFIX bin CONDA DIR bin NPM DIR bin PATH Using cache 4f8eff94acaa Step 24 50 COPY chown 1000 1000 build script files 2fusr 2flib 2fpython3 2e10 2fsite 2dpackages 2frepo2docker 2fbuildpacks 2fconda 2factivate 2dconda 2esh 44e764 etc profile d activate conda sh Using cache 2cb7e8b49550 Step 25 50 COPY chown 1000 1000 build script files 2fusr 2flib 2fpython3 2e10 2fsite 2dpackages 2frepo2docker 2fbuildpacks 2fconda 2fenvironment 2epy 2d3 2e10 2dlinux 2d64 2elock 388e0b tmp env environment lock Using cache 4647fb9682a9 Step 26 50 COPY chown 1000 1000 build script files 2fusr 2flib 2fpython3 2e10 2fsite 2dpackages 2frepo2docker 2fbuildpacks 2fconda 2finstall 2dbase 2denv 2ebash e5509f tmp install base env bash Using cache 5c1f22211237 Step 27 50 RUN TIMEFORMAT time 3R bash c time tmp install base env bash rm rf tmp install base env bash tmp env Using cache e75e50715333 Step 28 50 RUN mkdir p NPM DIR chown R NB USER NB USER NPM DIR Using cache 906c5f16991a Step 29 50 USER root Using cache afb51a5095b5 Step 30 50 ARG REPO DIR HOME Using cache 05814ae0d08c Step 31 50 ENV REPO DIR REPO DIR Using cache c59680602fe8 Step 32 50 RUN if d REPO DIR then usr bin install o NB USER g NB USER d REPO DIR fi Using cache 6564eb671567 Step 33 50 WORKDIR REPO DIR Using cache 8ac13bf1d519 Step 34 50 RUN chown NB USER NB USER REPO DIR Using cache f685e90965a1 Step 35 50 ENV PATH HOME local bin REPO DIR local bin PATH Using cache 7b4171a07b72 Step 36 50 ENV CONDA DEFAULT ENV KERNEL PYTHON PREFIX Using cache 8507698d2dd4 Step 37 50 COPY chown 1000 1000 src requirements txt REPO DIR requirements txt e50988b4d98a Step 38 50 USER NB USER Running in ba9575eda0b5 Removing intermediate container ba9575eda0b5 54f1979258a4 Step 39 50 RUN KERNEL PYTHON PREFIX bin pip install no cache dir r requirements txt Running in 50156477c7f3 Collecting h5py 2 9 0 from r requirements txt line 1 Downloading h5py 2 9 0 tar gz 287 kB 287 9 287 9 kB 14 1 MB s eta 0 00 00 Preparing metadata setup py started Preparing metadata setup py finished with status done Collecting Keras 1 1 0 from r requirements txt line 2 Downloading Keras 1 1 0 tar gz 150 kB 150 5 150 5 kB 24 3 MB s eta 0 00 00 Preparing metadata setup py started Preparing metadata setup py finished with status done Collecting numpy 1 16 0 from r requirements txt line 3 Downloading numpy 1 16 0 zip 5 1 MB 5 1 5 1 MB 31 7 MB s eta 0 00 00 Preparing metadata setup py started Preparing metadata setup py finished with status done Collecting pandas 0 24 1 from r requirements txt line 4 Downloading pandas 0 24 1 tar gz 11 8 MB 11 8 11 8 MB 39 7 MB s eta 0 00 00 Preparing metadata setup py started Preparing metadata setup py finished with status error error subprocess exited with error python setup py egg info did not run successfully exit code 1 21 lines of output tmp pip install z2h0gjjc pandas 7e873731d172482c899c7d67931eade3 setup py 12 DeprecationWarning pkg resources is deprecated as an API See https setuptools pypa io en latest pkg resources html import pkg resources Traceback most recent call last File srv conda envs notebook lib python3 10 site packages pkg resources init py line 402 in get provider module sys modules moduleOrReq KeyError numpy During handling of the above exception another exception occurred Traceback most recent call last File string line 2 in module File pip setuptools caller line 34 in module File tmp pip install z2h0gjjc pandas 7e873731d172482c899c7d67931eade3 setup py line 732 in module ext modules maybe cythonize extensions compiler directives directives File tmp pip install z2h0gjjc pandas 7e873731d172482c899c7d67931eade3 setup py line 475 in maybe cythonize numpy incl pkg resources resource filename numpy core include File srv conda envs notebook lib python3 10 site packages pkg resources init py line 1213 in resource filename return get provider package or requirement get resource filename File srv conda envs notebook lib python3 10 site packages pkg resources init py line 404 in get provider import moduleOrReq ModuleNotFoundError No module named numpy end of output note This error originates from a subprocess and is likely not a problem with pip error metadata generation failed Encountered error while generating package metadata See above for output note This is an issue with the package mentioned above not pip hint See above for details Removing intermediate container 50156477c7f3 The command bin sh c KERNEL PYTHON PREFIX bin pip install no cache dir r requirements txt returned a non zero code 1",
+    "created_at": "2023-11-09T18:47:14Z",
+    "closed_at": null,
+    "user": "maciejskorski",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2023-11-10T08:59:03Z",
+        "body": "Hey maciejskorski It seem like numpy is missing Did you install all of the dependencies as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file Make sure that numpy 1 16 0 is installed"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "ValueError: Unrecognized keyword arguments: ['input_dtype']",
+    "state": "open",
+    "body": "I am getting an error while using below code from the python library Please can anyone help to resolve it model EmotionPredictor classification ekman setting mc model predict probabilities FJ FP Cleaned ValueError Traceback most recent call last AppData Local Temp ipykernel 1676 1528171436 py in module 1 model EmotionPredictor classification ekman setting mc 2 model predict probabilities FJ FP Cleaned Documents DSA Task AbhishekPoddar Code emotion predictor py in init self classification setting use unison model 28 self setting setting 29 self use unison model use unison model 30 self model self get model 31 self embeddings model self get embeddings model 32 self char to ind self get char mapping Documents DSA Task AbhishekPoddar Code emotion predictor py in get model self 40 self setting 41 42 return load model self loaded model filename 43 44 def get embeddings model self anaconda3 lib site packages keras utils traceback utils py in error handler args kwargs 68 To get the full stack trace call 69 tf debugging disable traceback filtering 70 raise e with traceback filtered tb from None 71 finally 72 del filtered tb anaconda3 lib site packages keras engine input layer py in init self input shape batch size dtype input tensor sparse name ragged type spec kwargs 150 input shape batch input shape 1 151 if kwargs 152 raise ValueError 153 f Unrecognized keyword arguments list kwargs keys 154 ValueError Unrecognized keyword arguments input dtype",
+    "created_at": "2023-04-14T07:15:25Z",
+    "closed_at": null,
+    "user": "RakeshPardeshi",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2023-04-14T08:51:28Z",
+        "body": "HI RakeshPardeshi Not sure but errors like this usually mean that some environment dependencies are incorrect Some things to check 1 Also can you double check that backend in Keras is set to Theano not TensorFlow See how we do it in demo py https github com nikicc twitter emotion recognition blob master demo py L1 L2 or check this tutorial https www tutorialspoint com keras keras backend configuration htm 2 Is the version of Theano is exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file 3 Make sure all the other dependencies are installed and match the versions exactly the versions specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file"
+      },
+      {
+        "user": "RakeshPardeshi",
+        "created_at": "2023-04-14T10:05:00Z",
+        "body": "Hi nikicc Thank you for your reply I tried to install the packages as per the version s specified However while installing h5py I am getting following error last few lines are copied creating build temp win amd64 cpython 39 Release Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 h5py C Program Files x86 Microsoft Visual Studio 2022 BuildTools VC Tools MSVC 14 35 32215 bin HostX86 x64 cl exe c nologo O2 W3 GL DNDEBUG MD DH5 USE 16 API D HDF5USEDLL DH5 BUILT AS DYNAMIC LIB I h5py IC Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 lzf IC Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 windows IC Users DELL anaconda3 lib site packages numpy core include IC Users DELL anaconda3 include IC Users DELL anaconda3 Include IC Program Files x86 Microsoft Visual Studio 2022 BuildTools VC Tools MSVC 14 35 32215 include IC Program Files x86 Microsoft Visual Studio 2022 BuildTools VC Tools MSVC 14 35 32215 ATLMFC include IC Program Files x86 Microsoft Visual Studio 2022 BuildTools VC Auxiliary VS include IC Program Files x86 Windows Kits 10 include 10 0 22000 0 ucrt IC Program Files x86 Windows Kits 10 include 10 0 22000 0 um IC Program Files x86 Windows Kits 10 include 10 0 22000 0 shared IC Program Files x86 Windows Kits 10 include 10 0 22000 0 winrt IC Program Files x86 Windows Kits 10 include 10 0 22000 0 cppwinrt IC Program Files x86 Windows Kits NETFXSDK 4 8 include um TcC Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 h5py defs c Fobuild temp win amd64 cpython 39 Release Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 h5py defs obj defs c C Users DELL anaconda3 lib site packages numpy core include numpy npy 1 7 deprecated api h 14 Warning Msg Using deprecated NumPy API disable it with define NPY NO DEPRECATED API NPY 1 7 API VERSION C Users DELL AppData Local Temp pip install 37o7nv9m h5py 0f53c4d0f2c943db9d15b7a23cb8aa15 h5py api compat h 27 fatal error C1083 Cannot open include file hdf5 h No such file or directory error command C Program Files x86 Microsoft Visual Studio 2022 BuildTools VC Tools MSVC 14 35 32215 bin HostX86 x64 cl exe failed with exit code 2 end of output note This error originates from a subprocess and is likely not a problem with pip error legacy install failure Encountered error while trying to install package h5py note This is an issue with the package mentioned above not pip hint See above for output from the failure"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2023-04-14T12:00:29Z",
+        "body": "I m not sure what is causing this issue"
+      },
+      {
+        "user": "SemouleSombre",
+        "created_at": "2023-04-21T14:11:06Z",
+        "body": "Hello I have the same issue I installed Python 3 at first then I used to install all the requirements with the last versions I didn t knew about that After that I installed tensorflow then I did pip install r requirement txt But the problem was here I couldn t return to the past and I have many errors and the final is here TypeError Error when deserializing class InputLayer using config batch input shape None 143 input dtype float32 name input 1 sparse False Exception encountered Unrecognized keyword arguments input dtype Do I need to uninstall python 3 and reinstall it without tensorflow and just unistall python will be feasible Thank you for your help"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2023-04-21T16:17:08Z",
+        "body": "I don t think you need to uninstall Python 3 If you only uninstall the dependencies and then reinstall the right versions back you should be good to go"
+      },
+      {
+        "user": "SemouleSombre",
+        "created_at": "2023-04-24T07:44:37Z",
+        "body": "I tryied to uninstall and reinstall But the numpy version seems to have problems to install Collecting pandas 0 24 1 from r requirements txt line 4 Using cached pandas 0 24 1 tar gz 11 8 MB Preparing metadata setup py error error subprocess exited with error python setup py egg info did not run successfully exit code 1 KeyError numpy ModuleNotFoundError No module named numpy end of output note This error originates from a subprocess and is likely not a problem with pip error metadata generation failed Encountered error while generating package metadata See above for output note This is an issue with the package mentioned above not pip hint See above for details But this one is installed without problem Collecting numpy 1 16 0 from r requirements txt line 3 Using cached numpy 1 16 0 zip 5 1 MB"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "installing requirements",
+    "state": "open",
+    "body": "Hi I am facing an error message when trying to run pip install r requirements txt Do you have any suggestions on how to solve this here are some fragments from the error message ERROR Command errored out with exit status 1 command Users nicolasseiler Desktop twitter emotion original twitter emotion recognition master venv name1 bin python3 u c import sys setuptools tokenize sys argv 0 private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy setup py file private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec install record private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip record oevf6cj7 install record txt single version externally managed compile install headers Users nicolasseiler Desktop twitter emotion original twitter emotion recognition master venv name1 include site python3 8 scipy cwd private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy Complete output 99 lines private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy setup py 114 DeprecationWarning the imp module is deprecated in favour of importlib see the module s documentation for alternative uses import imp ERROR Command errored out with exit status 1 Users nicolasseiler Desktop twitter emotion original twitter emotion recognition master venv name1 bin python3 u c import sys setuptools tokenize sys argv 0 private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy setup py file private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip install 0g5abaop scipy setup py f getattr tokenize open open file code f read replace r n n f close exec compile code file exec install record private var folders zc ntck5jd6xb4g03b2l5683km0000gn T pip record oevf6cj7 install record txt single version externally managed compile install headers Users nicolasseiler Desktop twitter emotion original twitter emotion recognition master venv name1 include site python3 8 scipy Check the logs for full command output would be great if you could help me out thank you and best regards Nico",
+    "created_at": "2022-09-23T17:10:33Z",
+    "closed_at": null,
+    "user": "nicoosynth",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2022-09-27T08:41:28Z",
+        "body": "Hi nicoosynth Not sure but the first thing I d check is if the version of Theano is exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file Also make sure all the other dependencies are installed and match the versions exactly"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Installation",
+    "state": "closed",
+    "body": "Hi I am trying to installl the package but am not sure how I tried pip install and pip install git but I get an error message Could you maybe help me out here Thank you and Best Britta",
+    "created_at": "2022-01-21T10:47:27Z",
+    "closed_at": "2022-01-21T13:32:04Z",
+    "user": "BrittaRude",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2022-01-21T13:32:04Z",
+        "body": "Hi BrittaRude Unfortunately this package is not on pip You would need to clone the repository into a local file system go into the root folder i e this folder https github com nikicc twitter emotion recognition run pip install r requirements txt to install all the dependencies run python demo py to run our example script Hope this helps let me know how it goes or if you have more questions"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "TypeError: Unknown parameter type: <class 'theano.tensor.var.TensorVariable'>",
+    "state": "open",
+    "body": "Using Theano backend TypeError Traceback most recent call last ipython input 6 8f2d52484ded in module 5 6 from ExternalLibs emotion predictor import EmotionPredictor 7 model EmotionPredictor classification ekman setting mc 20 frames content gdrive shortcut targets by id 1pkR0QqFxHduImxgwAN7Sx8ROr iPhgfd sw emotion predictor py in init self classification setting use unison model 28 self setting setting 29 self use unison model use unison model 30 self model self get model 31 self embeddings model self get embeddings model 32 self char to ind self get char mapping content gdrive shortcut targets by id 1pkR0QqFxHduImxgwAN7Sx8ROr iPhgfd sw emotion predictor py in get model self 40 self setting 41 42 return load model self loaded model filename 43 44 def get embeddings model self usr local lib python3 7 dist packages keras models py in load model filepath custom objects 126 raise ValueError No model found in config file 127 model config json loads model config decode utf 8 128 model model from config model config custom objects custom objects 129 130 set weights usr local lib python3 7 dist packages keras models py in model from config config custom objects 175 raise Exception model fom config expects a dictionary not a list 176 Maybe you meant to use Sequential from config config 177 return layer from config config custom objects custom objects 178 179 usr local lib python3 7 dist packages keras utils layer utils py in layer from config config custom objects 34 layer class get from module class name globals layer 35 instantiate False 36 return layer class from config config config 37 38 usr local lib python3 7 dist packages keras engine topology py in from config cls config custom objects 2373 2374 for layer data in config layers 2375 process layer layer data 2376 2377 name config get name usr local lib python3 7 dist packages keras engine topology py in process layer layer data 2368 if input tensors 2369 if len input tensors 1 2370 layer input tensors 0 2371 else 2372 layer input tensors usr local lib python3 7 dist packages keras engine topology py in call self x mask 512 if inbound layers 513 this will call layer build if necessary 514 self add inbound node inbound layers node indices tensor indices 515 input added True 516 usr local lib python3 7 dist packages keras engine topology py in add inbound node self inbound layers node indices tensor indices 570 creating the node automatically updates self inbound nodes 571 as well as outbound nodes on inbound layers 572 Node create node self inbound layers node indices tensor indices 573 574 def get output shape for self input shape usr local lib python3 7 dist packages keras engine topology py in create node cls outbound layer inbound layers node indices tensor indices 147 148 if len input tensors 1 149 output tensors to list outbound layer call input tensors 0 mask input masks 0 150 output masks to list outbound layer compute mask input tensors 0 input masks 0 151 TODO try to auto infer shape if exception is raised by get output shape for usr local lib python3 7 dist packages keras layers core py in call self x mask 88 if 0 self p 1 89 noise shape self get noise shape x 90 x K in train phase K dropout x self p noise shape x 91 return x 92 usr local lib python3 7 dist packages keras backend theano backend py in dropout x level noise shape seed 1014 1015 if noise shape is None 1016 random tensor rng binomial x shape p retain prob dtype x dtype 1017 else 1018 random tensor rng binomial noise shape p retain prob dtype x dtype usr local lib python3 7 dist packages theano sandbox rng mrg py in binomial self size n p ndim dtype nstreams kwargs 899 if n 1 900 p undefined grad as tensor variable p 901 x self uniform size size nstreams nstreams kwargs 902 return cast x p dtype 903 else usr local lib python3 7 dist packages theano sandbox rng mrg py in uniform self size low high ndim dtype nstreams kwargs 870 if nstreams is None 871 nstreams self n streams size 872 rstates self get substream rstates nstreams dtype 873 874 d usr local lib python3 7 dist packages theano configparser py in res args kwargs 115 def res args kwargs 116 with self 117 return f args kwargs 118 return res 119 usr local lib python3 7 dist packages theano sandbox rng mrg py in get substream rstates self n streams dtype inc rstate 777 If multMatVect dot modulo isn t compiled compile it 778 if multMatVect dot modulo is None 779 multMatVect rval 0 A1p72 M1 A2p72 M2 780 781 This way of calling the Theano fct is done to bypass Theano overhead usr local lib python3 7 dist packages theano sandbox rng mrg py in multMatVect v A m1 B m2 60 o DotModulo A sym s sym m sym A2 sym s2 sym m2 sym 61 multMatVect dot modulo function 62 A sym s sym m sym A2 sym s2 sym m2 sym o profile False 63 64 This way of calling the Theano fct is done to bypass Theano overhead usr local lib python3 7 dist packages theano compile function init py in function inputs outputs mode updates givens no default updates accept inplace name rebuild strict allow input downcast profile on unused input 348 on unused input on unused input 349 profile profile 350 output keys output keys 351 352 return fn usr local lib python3 7 dist packages theano compile function pfunc py in pfunc params outputs mode updates givens no default updates accept inplace name rebuild strict allow input downcast profile on unused input output keys 425 transform params into theano compile In objects 426 inputs 427 pfunc param to in p allow downcast allow input downcast for p in params 428 429 usr local lib python3 7 dist packages theano compile function pfunc py in listcomp 0 425 transform params into theano compile In objects 426 inputs 427 pfunc param to in p allow downcast allow input downcast for p in params 428 429 usr local lib python3 7 dist packages theano compile function pfunc py in pfunc param to in param strict allow downcast 541 elif isinstance param In 542 return param 543 raise TypeError f Unknown parameter type type param 544 545 TypeError Unknown parameter type class theano tensor var TensorVariable",
+    "created_at": "2021-12-11T02:23:20Z",
+    "closed_at": null,
+    "user": "wselina",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-12-13T11:09:05Z",
+        "body": "Hmm not sure The first thing I d check is if the version of Theano is exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file Also make sure all the other dependencies are installed and match the versions exactly"
+      },
+      {
+        "user": "wselina",
+        "created_at": "2021-12-13T22:27:35Z",
+        "body": "Hmm not sure The first thing I d check is if the version of Theano is exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file Also make sure all the other dependencies are installed and match the versions exactly Yes I installed everything exactly as stated in the requirements Also tried installing the dependencies without the specified versions but it didn t work"
+      },
+      {
+        "user": "mareloraby",
+        "created_at": "2022-04-21T01:07:52Z",
+        "body": "I ve got the same issue while working on google colab"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "tensorflow version",
+    "state": "closed",
+    "body": "Hi there Thank you for this great library I wonder what tensorflow is used in this version of the library I installed the newest one but it seemed to mess up with other required libraries Meanwhile is it a better idea to put tensorflow version into requirements txt",
+    "created_at": "2021-09-24T06:27:22Z",
+    "closed_at": "2021-09-24T09:50:58Z",
+    "user": "xfgavin",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-09-24T09:50:58Z",
+        "body": "Hi xfgavin I wonder what tensorflow is used in this version of the library I installed the newest one but it seemed to mess up with other required libraries No the code uses Theano backend not Tensorflow See requirements file https github com nikicc twitter emotion recognition blob master requirements txt L10 for exact versions and make sure you set the backed to Theano in Keras e g check the demo script https github com nikicc twitter emotion recognition blob master demo py L1 L2 for how we do it there Meanwhile is it a better idea to put tensorflow version into requirements txt Not sure we can do that as the models that are saved in the repo are in Theano format and I m not sure transforming them to Tensorflow is a trivial task"
+      },
+      {
+        "user": "xfgavin",
+        "created_at": "2021-09-25T00:59:10Z",
+        "body": "Thank you I was running the code on databricks not sure if it was because the environ code didn t work Any hints on how to use it on databricks"
+      },
+      {
+        "user": "xfgavin",
+        "created_at": "2021-09-25T02:18:10Z",
+        "body": "OK I made it working just need to place environ call before importing the model"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-09-27T10:02:24Z",
+        "body": "xfgavin happy to hear you could make it work"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "ValueError: ('Unrecognized keyword arguments:', dict_keys(['input_dtype']))",
+    "state": "open",
+    "body": "TypeError Traceback most recent call last ipython input 4 e29b2c6a0e65 in module 1 model EmotionPredictor classification ekman setting mc 20 frames content drive MyDrive emotion models twitter emotion recognition master 2 twitter emotion recognition emotion predictor py in init self classification setting use unison model 28 self setting setting 29 self use unison model use unison model 30 self model self get model 31 self embeddings model self get embeddings model 32 self char to ind self get char mapping content drive MyDrive emotion models twitter emotion recognition master 2 twitter emotion recognition emotion predictor py in get model self 40 self setting 41 42 return load model self loaded model filename 43 44 def get embeddings model self usr local lib python3 7 dist packages keras models py in load model filepath custom objects 126 raise ValueError No model found in config file 127 model config json loads model config decode utf 8 128 model model from config model config custom objects custom objects 129 130 set weights usr local lib python3 7 dist packages keras models py in model from config config custom objects 175 raise Exception model fom config expects a dictionary not a list 176 Maybe you meant to use Sequential from config config 177 return layer from config config custom objects custom objects 178 179 usr local lib python3 7 dist packages keras utils layer utils py in layer from config config custom objects 34 layer class get from module class name globals layer 35 instantiate False 36 return layer class from config config config 37 38 usr local lib python3 7 dist packages keras engine topology py in from config cls config custom objects 2373 2374 for layer data in config layers 2375 process layer layer data 2376 2377 name config get name usr local lib python3 7 dist packages keras engine topology py in process layer layer data 2368 if input tensors 2369 if len input tensors 1 2370 layer input tensors 0 2371 else 2372 layer input tensors usr local lib python3 7 dist packages keras engine topology py in call self x mask 512 if inbound layers 513 this will call layer build if necessary 514 self add inbound node inbound layers node indices tensor indices 515 input added True 516 usr local lib python3 7 dist packages keras engine topology py in add inbound node self inbound layers node indices tensor indices 570 creating the node automatically updates self inbound nodes 571 as well as outbound nodes on inbound layers 572 Node create node self inbound layers node indices tensor indices 573 574 def get output shape for self input shape usr local lib python3 7 dist packages keras engine topology py in create node cls outbound layer inbound layers node indices tensor indices 147 148 if len input tensors 1 149 output tensors to list outbound layer call input tensors 0 mask input masks 0 150 output masks to list outbound layer compute mask input tensors 0 input masks 0 151 TODO try to auto infer shape if exception is raised by get output shape for usr local lib python3 7 dist packages keras layers core py in call self x mask 88 if 0 self p 1 89 noise shape self get noise shape x 90 x K in train phase K dropout x self p noise shape x 91 return x 92 usr local lib python3 7 dist packages keras backend theano backend py in dropout x level noise shape seed 1014 1015 if noise shape is None 1016 random tensor rng binomial x shape p retain prob dtype x dtype 1017 else 1018 random tensor rng binomial noise shape p retain prob dtype x dtype usr local lib python3 7 dist packages theano sandbox rng mrg py in binomial self size n p ndim dtype nstreams kwargs 899 if n 1 900 p undefined grad as tensor variable p 901 x self uniform size size nstreams nstreams kwargs 902 return cast x p dtype 903 else usr local lib python3 7 dist packages theano sandbox rng mrg py in uniform self size low high ndim dtype nstreams kwargs 870 if nstreams is None 871 nstreams self n streams size 872 rstates self get substream rstates nstreams dtype 873 874 d usr local lib python3 7 dist packages theano configparser py in res args kwargs 115 def res args kwargs 116 with self 117 return f args kwargs 118 return res 119 usr local lib python3 7 dist packages theano sandbox rng mrg py in get substream rstates self n streams dtype inc rstate 777 If multMatVect dot modulo isn t compiled compile it 778 if multMatVect dot modulo is None 779 multMatVect rval 0 A1p72 M1 A2p72 M2 780 781 This way of calling the Theano fct is done to bypass Theano overhead usr local lib python3 7 dist packages theano sandbox rng mrg py in multMatVect v A m1 B m2 60 o DotModulo A sym s sym m sym A2 sym s2 sym m2 sym 61 multMatVect dot modulo function 62 A sym s sym m sym A2 sym s2 sym m2 sym o profile False 63 64 This way of calling the Theano fct is done to bypass Theano overhead usr local lib python3 7 dist packages theano compile function init py in function inputs outputs mode updates givens no default updates accept inplace name rebuild strict allow input downcast profile on unused input 348 on unused input on unused input 349 profile profile 350 output keys output keys 351 352 return fn usr local lib python3 7 dist packages theano compile function pfunc py in pfunc params outputs mode updates givens no default updates accept inplace name rebuild strict allow input downcast profile on unused input output keys 425 transform params into theano compile In objects 426 inputs 427 pfunc param to in p allow downcast allow input downcast for p in params 428 429 usr local lib python3 7 dist packages theano compile function pfunc py in listcomp 0 425 transform params into theano compile In objects 426 inputs 427 pfunc param to in p allow downcast allow input downcast for p in params 428 429 usr local lib python3 7 dist packages theano compile function pfunc py in pfunc param to in param strict allow downcast 541 elif isinstance param In 542 return param 543 raise TypeError f Unknown parameter type type param 544 545 TypeError Unknown parameter type class theano tensor var TensorVariable",
+    "created_at": "2021-06-11T09:07:19Z",
+    "closed_at": null,
+    "user": "inder9999",
+    "comments_count": 20,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-06-11T09:10:01Z",
+        "body": "Hmm not sure The first thing I d check is if the version of Theano is exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 file"
+      },
+      {
+        "user": "inder9999",
+        "created_at": "2021-06-11T09:14:06Z",
+        "body": "The version of Theano is the same as specified in requirements i e 1 0 4"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-06-11T09:20:42Z",
+        "body": "Also can you double check that backend in Keras is set to Theano not TensorFlow See how we do it in demo py https github com nikicc twitter emotion recognition blob master demo py L1 L2 or check this tutorial https www tutorialspoint com keras keras backend configuration htm"
+      },
+      {
+        "user": "inder9999",
+        "created_at": "2021-06-11T09:32:05Z",
+        "body": "Yes the backend is set to Theano as done in demo py"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-06-11T09:42:45Z",
+        "body": "inder9999 I m running out of ideas Did you try to google the error"
+      },
+      {
+        "user": "inder9999",
+        "created_at": "2021-06-11T09:46:53Z",
+        "body": "nikicc please check this https stackoverflow com questions 60791067 valueerror unrecognized keyword arguments dict keysragged while loa"
+      },
+      {
+        "user": "inder9999",
+        "created_at": "2021-06-13T07:43:45Z",
+        "body": "nikicc did you find any way"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-06-13T09:29:39Z",
+        "body": "inder9999 sorry no"
+      },
+      {
+        "user": "assemzh",
+        "created_at": "2021-06-23T03:09:47Z",
+        "body": "I am facing the same problem"
+      },
+      {
+        "user": "assemzh",
+        "created_at": "2021-06-23T06:53:21Z",
+        "body": "I resolved it by using python 3 7 with venv"
+      },
+      {
+        "user": "davideiov",
+        "created_at": "2021-11-30T16:18:28Z",
+        "body": "assemzh sorry how do you resolved this issue i have the same problem with python 3 8"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-11-30T16:44:22Z",
+        "body": "davideiov what I suggest you to check these first the versions of of all dependencies should be exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file double check that backend in Keras is set to Theano not TensorFlow See how we do it in demo py https github com nikicc twitter emotion recognition blob master demo py L1 L2 or check this tutorial https www tutorialspoint com keras keras backend configuration htm"
+      },
+      {
+        "user": "davideiov",
+        "created_at": "2021-11-30T17:29:17Z",
+        "body": "nikicc can u tell me pls the version of tensorflow used for model s training because it isn t in the requirements file"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-11-30T17:32:35Z",
+        "body": "can u tell me pls the version of tensorflow used for model s training davideiov the models do not work with Tensorflow this is why it s not in the requirements file but with Theano 1 0 4 Check how we set the backend in demo py https github com nikicc twitter emotion recognition blob master demo py L1 L2 or check this tutorial https www tutorialspoint com keras keras backend configuration htm"
+      },
+      {
+        "user": "enfeizhan",
+        "created_at": "2022-05-18T05:56:01Z",
+        "body": "Hey guys Thanks to assemzh s report I have discovered you need to start with a clean Python virtual environment with Python 3 7 and then install the dependencies with pip install r requirements txt Solves my problems Thanks nikicc for sharing Is it possible to upgrade the dependencies as many of them are quite outdated"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2022-05-18T19:24:44Z",
+        "body": "Solves my problems Happy to hear this Thanks nikicc for sharing Is it possible to upgrade the dependencies as many of them are quite outdated That would be quite a challenge I ll think about it but I don t promise anything"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2022-05-18T19:24:51Z",
+        "body": "Solves my problems Happy to hear this Thanks nikicc for sharing Is it possible to upgrade the dependencies as many of them are quite outdated That would be quite a challenge I ll think about it but I don t promise anything"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2022-05-18T19:24:53Z",
+        "body": "Solves my problems Happy to hear this Thanks nikicc for sharing Is it possible to upgrade the dependencies as many of them are quite outdated That would be quite a challenge I ll think about it but I don t promise anything"
+      },
+      {
+        "user": "ArkajyotiChakraborty",
+        "created_at": "2022-08-23T12:39:10Z",
+        "body": "Hey I tried installing the requirements but still it s not working Anyone can suggest anything i need urgent help"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2022-08-23T13:02:42Z",
+        "body": "ArkajyotiChakraborty a likely cause for this is the wrong version of dependencies or wrong Keras backend I d check these two the versions of of all dependencies should be exactly the same as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file double check that backend in Keras is set to Theano not TensorFlow See how we do it in demo py https github com nikicc twitter emotion recognition blob master demo py L1 L2 or check this tutorial https www tutorialspoint com keras keras backend configuration htm If it s not that I m not sure what is causing this"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "TypeError: Unknown parameter type: <class 'theano.tensor.var.TensorVariable'>",
+    "state": "closed",
+    "body": "Dear Niki I was running the prediction fine until this afternoon It starts returning me the following error after installing required environment and packages sudo apt get install y python3 venv sudo apt get install y python3 dev mkdir emotion cd emotion python3 m venv source bin activate git clone https github com nikicc twitter emotion recognition git cd twitter emotion recognition pip install upgrade pip pip install wheel pip install upgrade setuptools pip install h5py 2 9 0 pip install Keras 1 1 0 pip install numpy 1 16 0 pip install pandas 0 24 1 pip install python dateutil 2 8 0 pip install pytz 2018 9 pip install PyYAML 5 4 pip install scipy 1 2 1 pip install six 1 12 0 pip install Theano 1 0 4 import os os environ KERAS BACKEND theano os chdir content twitter emotion recognition import pandas as pd from emotion predictor import EmotionPredictor pd options display max colwidth 150 pd options display width 200 model EmotionPredictor classification plutchik setting mc use unison model True TypeError Traceback most recent call last ipython input 2 2997d46eebca in module 1 Predictor for Ekman s emotions in multiclass setting 2 model EmotionPredictor classification plutchik setting mc use unison model True 20 frames usr local lib python3 7 dist packages theano compile function pfunc py in pfunc param to in param strict allow downcast 541 elif isinstance param In 542 return param 543 raise TypeError f Unknown parameter type type param 544 545 TypeError Unknown parameter type class theano tensor var TensorVariable I am running the codes in Colab and cannot identify where the bug is Can you please help me with the issue",
+    "created_at": "2021-05-13T01:09:40Z",
+    "closed_at": "2021-05-17T08:19:39Z",
+    "user": "BingyiWu1990",
+    "comments_count": 12,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-13T11:08:23Z",
+        "body": "That s strange Are you sure Colab is picking up the right dependencies and the Theano as backend"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-13T11:10:00Z",
+        "body": "Maybe this helps https github com nikicc twitter emotion recognition issues 22 issuecomment 805943465"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-13T19:28:54Z",
+        "body": "An update on my side I then tried to locate the requirements it works but still returns similar incompatible errors import os os chdir content twitter emotion recognition python3 m pip install r requirements txt After install upgrade setuptools the following error is shown ERROR pip s dependency resolver does not currently take into account all the packages that are installed This behaviour is the source of the following dependency conflicts datascience 0 10 6 requires folium 0 2 1 but you have folium 0 8 3 which is incompatible Then after collecting all the packages the following errors are shown ERROR pip s dependency resolver does not currently take into account all the packages that are installed This behaviour is the source of the following dependency conflicts xarray 0 18 0 requires numpy 1 17 but you have numpy 1 16 0 which is incompatible xarray 0 18 0 requires pandas 1 0 but you have pandas 0 24 1 which is incompatible textgenrnn 1 4 1 requires keras 2 1 5 but you have keras 1 1 0 which is incompatible tensorflow 2 4 1 requires h5py 2 10 0 but you have h5py 2 9 0 which is incompatible tensorflow 2 4 1 requires numpy 1 19 2 but you have numpy 1 16 0 which is incompatible tensorflow 2 4 1 requires six 1 15 0 but you have six 1 12 0 which is incompatible pyarrow 3 0 0 requires numpy 1 16 6 but you have numpy 1 16 0 which is incompatible plotnine 0 6 0 requires pandas 0 25 0 but you have pandas 0 24 1 which is incompatible mizani 0 6 0 requires pandas 0 25 0 but you have pandas 0 24 1 which is incompatible kapre 0 1 3 1 requires keras 2 0 0 but you have keras 1 1 0 which is incompatible google colab 1 0 0 requires pandas 1 1 0 python version 3 0 but you have pandas 0 24 1 which is incompatible google colab 1 0 0 requires six 1 15 0 but you have six 1 12 0 which is incompatible google api python client 1 12 8 requires six 2dev 1 13 0 but you have six 1 12 0 which is incompatible google api core 1 26 3 requires six 1 13 0 but you have six 1 12 0 which is incompatible fbprophet 0 7 1 requires pandas 1 0 4 but you have pandas 0 24 1 which is incompatible fancyimpute 0 4 3 requires keras 2 0 0 but you have keras 1 1 0 which is incompatible datascience 0 10 6 requires folium 0 2 1 but you have folium 0 8 3 which is incompatible astropy 4 2 1 requires numpy 1 17 but you have numpy 1 16 0 which is incompatible albumentations 0 1 12 requires imgaug 0 2 7 0 2 5 but you have imgaug 0 2 9 which is incompatible"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-13T19:41:30Z",
+        "body": "Maybe this helps 22 comment https github com nikicc twitter emotion recognition issues 22 issuecomment 805943465 Thank you for your prompt reply Niki I deleted my previous reply and realized I also deleted my thanks lol Another small update on my end For the first error I mentioned above I include the reinstall the folium and eliminated that error pip install folium 0 2 1 But for other errors I don t know what I should do Can I install the newer versions of the packages as indicated in the error messages"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-14T10:51:57Z",
+        "body": "Hmmm Some things I noticed datascience 0 10 6 requires folium 0 2 1 but you have folium 0 8 3 which is incompatible I m not sure what datascience 0 10 6 dependency is or who requires it but I m pretty sure it is not required by twitter emotion recognition Similarly tensorflow 2 4 1 requires h5py 2 10 0 but you have h5py 2 9 0 which is incompatible tensorflow 2 4 1 requires numpy 1 19 2 but you have numpy 1 16 0 which is incompatible tensorflow 2 4 1 requires six 1 15 0 but you have six 1 12 0 which is incompatible tensorflow is not required by twitter emotion recognition Perhaps you first try locally on your computer with a new empty pip virtual environment and then figure it out on colab"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-14T16:05:48Z",
+        "body": "Hmmm Some things I noticed datascience 0 10 6 requires folium 0 2 1 but you have folium 0 8 3 which is incompatible I m not sure what datascience 0 10 6 dependency is or who requires it but I m pretty sure it is not required by twitter emotion recognition Similarly tensorflow 2 4 1 requires h5py 2 10 0 but you have h5py 2 9 0 which is incompatible tensorflow 2 4 1 requires numpy 1 19 2 but you have numpy 1 16 0 which is incompatible tensorflow 2 4 1 requires six 1 15 0 but you have six 1 12 0 which is incompatible tensorflow is not required by twitter emotion recognition Perhaps you first try locally on your computer with a new empty pip virtual environment and then figure it out on colab Can I use the same installation codes for my local environment in Jupyter Lab"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-14T16:14:01Z",
+        "body": "Can I use the same installation codes for my local environment in Jupyter Lab I don t see why not"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-14T22:59:01Z",
+        "body": "Can I use the same installation codes for my local environment in Jupyter Lab I don t see why not Hi Niki I think I might need more helps for installing the packages in my local environment I have been experimenting in Jupyter Lab under Windows 10 system However I keep receiving the following warnings and errors which I don t know what I did wrong Here are all the codes I am using py m pip install user virtualenv mkdir emotion cd emotion py m venv emotion emotion Scripts activate git clone https github com nikicc twitter emotion recognition git cd twitter emotion recognition py m pip install upgrade pip py m pip install wheel py m pip install upgrade setuptools py m pip install h5py 2 9 0 py m pip install Keras 1 1 0 py m pip install numpy 1 16 0 py m pip install pandas 0 24 1 py m pip install python dateutil 2 8 0 py m pip install pytz 2018 9 py m pip install PyYAML 5 1 py m pip install scipy 1 2 1 py m pip install six 1 12 0 py m pip install Theano 1 0 4 Here are the outputs I got after trying to install the required packages Collecting h5py 2 9 0 Using cached h5py 2 9 0 tar gz 287 kB Requirement already satisfied numpy 1 7 in c users bingy anaconda3 lib site packages from h5py 2 9 0 1 20 1 Requirement already satisfied six in c users bingy anaconda3 lib site packages from h5py 2 9 0 1 15 0 Building wheels for collected packages h5py Building wheel for h5py setup py started Building wheel for h5py setup py finished with status error Running setup py clean for h5py Failed to build h5py Installing collected packages h5py Attempting uninstall h5py Found existing installation h5py 2 10 0 Uninstalling h5py 2 10 0 Successfully uninstalled h5py 2 10 0 Running setup py install for h5py started Running setup py install for h5py finished with status error Rolling back uninstall of h5py Moving to c users bingy anaconda3 lib site packages h5py 2 10 0 dist info from C Users bingy anaconda3 Lib site packages 5py 2 10 0 dist info Moving to c users bingy anaconda3 lib site packages h5py from C Users bingy anaconda3 Lib site packages 5py ERROR Command errored out with exit status 1 command C Users bingy anaconda3 python exe u c import io os sys setuptools tokenize sys argv 0 C Users bingy AppData Local Temp pip install cf8xkhwg h5py 5401da9c3833464186b7a7b09b1e95a4 setup py file C Users bingy AppData Local Temp pip install cf8xkhwg h5py 5401da9c3833464186b7a7b09b1e95a4 setup py f getattr tokenize open open file if os path exists file else io StringIO from setuptools import setup setup code f read replace r n n f close exec compile code file exec bdist wheel d C Users bingy AppData Local Temp pip wheel 94ge6ie6 cwd C Users bingy AppData Local Temp pip install cf8xkhwg h5py 5401da9c3833464186b7a7b09b1e95a4 Complete output 1316 lines running bdist wheel running build running build py creating build creating build lib win amd64 3 8 creating build lib win amd64 3 8 h5py copying h5py h5py warnings py build lib win amd64 3 8 h5py copying h5py highlevel py build lib win amd64 3 8 h5py copying h5py ipy completer py build lib win amd64 3 8 h5py copying h5py version py build lib win amd64 3 8 h5py copying h5py init py build lib win amd64 3 8 h5py creating build lib win amd64 3 8 h5py hl copying h5py hl attrs py build lib win amd64 3 8 h5py hl copying h5py hl base py build lib win amd64 3 8 h5py hl copying h5py hl compat py build lib win amd64 3 8 h5py hl copying h5py hl dataset py build lib win amd64 3 8 h5py hl copying h5py hl datatype py build lib win amd64 3 8 h5py hl copying h5py hl dims py build lib win amd64 3 8 h5py hl copying h5py hl files py build lib win amd64 3 8 h5py hl copying h5py hl filters py build lib win amd64 3 8 h5py hl copying h5py hl group py build lib win amd64 3 8 h5py hl copying h5py hl selections py build lib win amd64 3 8 h5py hl copying h5py hl selections2 py build lib win amd64 3 8 h5py hl copying h5py hl vds py build lib win amd64 3 8 h5py hl copying h5py hl init py build lib win amd64 3 8 h5py hl creating build lib win amd64 3 8 h5py tests copying h5py tests common py build lib win amd64 3 8 h5py tests copying h5py tests init py build lib win amd64 3 8 h5py tests creating build lib win amd64 3 8 h5py tests old copying h5py tests old test attrs py build lib win amd64 3 8 h5py tests old copying h5py tests old test attrs data py build lib win amd64 3 8 h5py tests old copying h5py tests old test base py build lib win amd64 3 8 h5py tests old copying h5py tests old test dataset py build lib win amd64 3 8 h5py tests old copying h5py tests old test datatype py build lib win amd64 3 8 h5py tests old copying h5py tests old test dimension scales py build lib win amd64 3 8 h5py tests old copying h5py tests old test file py build lib win amd64 3 8 h5py tests old copying h5py tests old test file image py build lib win amd64 3 8 h5py tests old copying h5py tests old test group py build lib win amd64 3 8 h5py tests old copying h5py tests old test h5 py build lib win amd64 3 8 h5py tests old copying h5py tests old test h5d direct chunk write py build lib win amd64 3 8 h5py tests old copying h5py tests old test h5f py build lib win amd64 3 8 h5py tests old copying h5py tests old test h5p py build lib win amd64 3 8 h5py tests old copying h5py tests old test h5t py build lib win amd64 3 8 h5py tests old copying h5py tests old test objects py build lib win amd64 3 8 h5py tests old copying h5py tests old test selections py build lib win amd64 3 8 h5py tests old copying h5py tests old test slicing py build lib win amd64 3 8 h5py tests old copying h5py tests old init py build lib win amd64 3 8 h5py tests old creating build lib win amd64 3 8 h5py tests hl copying h5py tests hl test attribute create py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test dataset getitem py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test dataset swmr py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test datatype py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test deprecation py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test dims dimensionproxy py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test file py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test filters py build lib win amd64 3 8 h5py tests hl copying h5py tests hl test threads py build lib win amd64 3 8 h5py tests hl copying h5py tests hl init py build lib win amd64 3 8 h5py tests hl creating build lib win amd64 3 8 h5py tests hl test vds copying h5py tests hl test vds test highlevel vds py build lib win amd64 3 8 h5py tests hl test vds copying h5py tests hl test vds test lowlevel vds py build lib win amd64 3 8 h5py tests hl test vds copying h5py tests hl test vds test virtual source py build lib win amd64 3 8 h5py tests hl test vds copying h5py tests hl test vds init py build lib win amd64 3 8 h5py tests hl test vds running build ext Autodetection skipped Could not find module libhdf5 so or one of its dependencies Try using the full path with constructor syntax C Users bingy anaconda3 lib site packages Cython Compiler Main py 369 FutureWarning Cython directive language level not set using 2 for now Py2 This will change in a later release File C Users bingy AppData Local Temp pip install cf8xkhwg h5py 5401da9c3833464186b7a7b09b1e95a4 h5py conv pxd tree Parsing p module s pxd full module name warning h5py api types hdf5 pxd 408 2 H5D layout t redeclared warning h5py api types hdf5 pxd 415 2 H5D alloc time t redeclared warning h5py api types hdf5 pxd 422 2 H5D space status t redeclared warning h5py api types hdf5 pxd 428 2 H5D fill time t redeclared warning h5py api types hdf5 pxd 434 2 H5D fill value t redeclared warning h5py api types hdf5 pxd 446 7 H5F close degree t redeclared Sorry for the massive scripts I wonder where I did incorrectly I am not familiar with the anaconda It usually drives me crazy lol Thank you in advance"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-14T23:46:09Z",
+        "body": "I accidentally closed the issue Sorry about that Another update from me Then I tried to install packages without specifying the versions it seems to work for me now pip install Keras pip install numpy pip install pandas pip install python dateutil pip install pytz pip install PyYAML pip install scipy pip install six pip install Theano But I got the following warning Using Theano backend WARNING theano configdefaults g not available if using conda conda install m2w64 toolchain C Users bingy anaconda3 lib site packages theano configdefaults py 560 UserWarning DeprecationWarning there is no c compiler This is deprecated and with Theano 0 11 a c compiler will be mandatory warnings warn DeprecationWarning there is no c compiler WARNING theano configdefaults g not detected Theano will be unable to execute optimized C implementations for both CPU and GPU and will default to Python implementations Performance will be severely degraded To remove this warning set Theano flags cxx to an empty string WARNING theano tensor blas Using NumPy C API based implementation for BLAS functions Is that gonna be ok to use the model"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-16T13:35:48Z",
+        "body": "Installing collected packages h5py Attempting uninstall h5py Found existing installation h5py 2 10 0 Uninstalling h5py 2 10 0 Successfully uninstalled h5py 2 10 0 Running setup py install for h5py started Running setup py install for h5py finished with status error Rolling back uninstall of h5py Moving to c users bingy anaconda3 lib site packages h5py 2 10 0 dist info from C Users bingy anaconda3 Lib site packages 5py 2 10 0 dist info Moving to c users bingy anaconda3 lib site packages h5py from C Users bingy anaconda3 Lib site packages 5py ERROR Command errored out with exit status 1 Seems like there is some issue with installing h5py 2 10 0 Not sure what is wrong Maybe try with a different version of h5py Then I tried to install packages without specifying the versions it seems to work for me now Not sure that will work as there might be issues with the latest version of Keras You can try though but I wouldn t keep my hopes up Is that gonna be ok to use the model I m not sure it will I suggest you try to keep at least the Keras version the same as specified in the dependencies file WARNING theano configdefaults g not available if using conda conda install m2w64 toolchain Did you try conda install m2w64 toolchain"
+      },
+      {
+        "user": "BingyiWu1990",
+        "created_at": "2021-05-16T16:42:36Z",
+        "body": "Installing collected packages h5py Attempting uninstall h5py Found existing installation h5py 2 10 0 Uninstalling h5py 2 10 0 Successfully uninstalled h5py 2 10 0 Running setup py install for h5py started Running setup py install for h5py finished with status error Rolling back uninstall of h5py Moving to c users bingy anaconda3 lib site packages h5py 2 10 0 dist info from C Users bingy anaconda3 Lib site packages 5py 2 10 0 dist info Moving to c users bingy anaconda3 lib site packages h5py from C Users bingy anaconda3 Lib site packages 5py ERROR Command errored out with exit status 1 Seems like there is some issue with installing h5py 2 10 0 Not sure what is wrong Maybe try with a different version of h5py Then I tried to install packages without specifying the versions it seems to work for me now Not sure that will work as there might be issues with the latest version of Keras You can try though but I wouldn t keep my hopes up Is that gonna be ok to use the model I m not sure it will I suggest you try to keep at least the Keras version the same as specified in the dependencies file WARNING theano configdefaults g not available if using conda conda install m2w64 toolchain Did you try conda install m2w64 toolchain Hi Niki Thank you so much for your replies Not sure that will work as there might be issues with the latest version of Keras You can try though but I wouldn t keep my hopes up I think that I installed the required versions somehow even with a bunch of warnings and errors received That is why it is working when I installed them again without specifying versions It shows everything has been satisfied Did you try conda install m2w64 toolchain I installed m2w64 toolchain later and the warning is gone YEAH For speeding up the computation I installed theano gpuarray in conda It helps me process 200k within 6 hours Thank you again for developing such cool models Look forward to your future works"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-05-17T08:19:38Z",
+        "body": "BingyiWu1990 happy to hear it works"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Unable to open file Error",
+    "state": "closed",
+    "body": "Hi I ve been trying to implement your code However it gives me a file not found error The path of the file in the error seemed to be incorrect According to my understanding I changed the path of the file in below code in emotion predictor py to the correct path def get model self self loaded model filename mypath models h5 format unison if self use unison model else self classification self setting However it still gives the same error with the earlier path name error https user images githubusercontent com 52891049 112676767 46d21d80 8e82 11eb 991d 398451a94c3b PNG Please see the screenshot Any help would be much appreciated",
+    "created_at": "2021-03-26T18:31:52Z",
+    "closed_at": "2021-03-27T18:46:56Z",
+    "user": "Ashwinneogi",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-26T20:35:31Z",
+        "body": "I ve been trying to implement your code However it gives me a file not found error The path of the file in the error seemed to be incorrect Yes The code assumes you are running the scrip in the top level directory If you are then the model unison ekman mc h5 should work as a relative path to the model Please check the current working directory e g with os getcwd see more https www tutorialspoint com python os getcwd htm I changed the path of the file in below code in emotion predictor py to the correct path In theory that should work Not really sure why it doesn t Did you double check that the newly constructed path is OK Also keep in mind you ll also need to edit the allowed chars pkl path https github com nikicc twitter emotion recognition blob master emotion predictor py L52 if you re going down this road"
+      },
+      {
+        "user": "Ashwinneogi",
+        "created_at": "2021-03-26T22:24:19Z",
+        "body": "Hello Thanks for the prompt reply The script is indeed running in the top level directory Infact I have set the path manually as well as shown below import sys sys path append content twitter emotion recognition master Yes as what you told it should work as a relative path but it isn t and I am not sure why The other option of constructing a new path also gave me the same error However what is surprising is that when I choose to construct change the path on my own in the emotion predictor py The changed path should display in the error message For example In the emotion predictor py I changed the path to self loaded model filename content twitter emotion recognition master models h5 and I should expect this path to be displayed in the error message Please see the screenshot below error2 https user images githubusercontent com 52891049 112698428 1484e800 8ea3 11eb 9784 8f91d3441bfd PNG It looks like the name parameter is directed to somewhere else I am really not sure Thanks for you time"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-26T22:38:10Z",
+        "body": "Ashwinneogi it seems like the place where you execute the code on the left is not picking up the edits you are making in the file on the right Can you try running the emotion predictior py directly in the command line"
+      },
+      {
+        "user": "Ashwinneogi",
+        "created_at": "2021-03-27T04:34:04Z",
+        "body": "nikicc I ran the code directly and it seems to not have any problems error3 https user images githubusercontent com 52891049 112709950 f5a04900 8ed6 11eb 849b 4e3267d117e1 PNG"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-27T18:46:56Z",
+        "body": "Ashwinneogi happy to hear this Yes I assumed it s something with the way the code is run I m closing this issue as it does not seem to be an actual code issue"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "tensorflow version requirement ",
+    "state": "closed",
+    "body": "Hello I have run the demo py on google colab many times It produces the error as following The version used here is Keras 2 4 3 and tensorflow 2 4 1 Also when I change the version of Keras to 1 1 0 It always produces package incompatible issue like AttributeError module tensorflow has no attribute placeholder So I wonder if the keras to use is 1 1 0 then what is a good tensorflow version If I can use a higher version of keras how can solve the issue The error is here 2021 03 23 17 27 15 925728 I tensorflow stream executor platform default dso loader cc 49 Successfully opened dynamic library libcudart so 11 0 Traceback most recent call last File twitter emotion recognition demo py line 12 in module model EmotionPredictor classification ekman setting mc use unison model True File content twitter emotion recognition emotion predictor py line 30 in init self model self get model File content twitter emotion recognition emotion predictor py line 42 in get model return load model self loaded model filename File usr local lib python3 7 dist packages tensorflow python keras saving save py line 207 in load model compile File usr local lib python3 7 dist packages tensorflow python keras saving hdf5 format py line 184 in load model from hdf5 custom objects custom objects File usr local lib python3 7 dist packages tensorflow python keras saving model config py line 64 in model from config return deserialize config custom objects custom objects File usr local lib python3 7 dist packages tensorflow python keras layers serialization py line 177 in deserialize printable module name layer File usr local lib python3 7 dist packages tensorflow python keras utils generic utils py line 358 in deserialize keras object list custom objects items File usr local lib python3 7 dist packages tensorflow python keras engine training py line 2262 in from config config custom objects custom objects File usr local lib python3 7 dist packages tensorflow python keras engine functional py line 669 in from config config custom objects File usr local lib python3 7 dist packages tensorflow python keras engine functional py line 1275 in reconstruct from config process layer layer data File usr local lib python3 7 dist packages tensorflow python keras engine functional py line 1257 in process layer layer deserialize layer layer data custom objects custom objects File usr local lib python3 7 dist packages tensorflow python keras layers serialization py line 177 in deserialize printable module name layer File usr local lib python3 7 dist packages tensorflow python keras utils generic utils py line 360 in deserialize keras object return cls from config cls config File usr local lib python3 7 dist packages tensorflow python keras engine base layer py line 720 in from config return cls config File usr local lib python3 7 dist packages tensorflow python keras engine input layer py line 118 in init raise ValueError Unrecognized keyword arguments kwargs keys ValueError Unrecognized keyword arguments dict keys input dtype",
+    "created_at": "2021-03-23T17:32:57Z",
+    "closed_at": "2021-03-24T21:30:30Z",
+    "user": "HarrisonLL",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "slankas",
+        "created_at": "2021-03-24T15:33:00Z",
+        "body": "I ve experienced this same problem Tensorflow actually isn t required There s a slight difference between the Jupyter notebook and demo app Add these two lines to the top of demo py import os os environ KERAS BACKEND theano"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-24T15:39:44Z",
+        "body": "Yes as slankas suggested the code cannot work with tensorflow it requires Theano as the backend Regarding the versions check the requirements txt file https github com nikicc twitter emotion recognition blob master requirements txt if you use exactly those versions it should work"
+      },
+      {
+        "user": "slankas",
+        "created_at": "2021-03-24T15:53:26Z",
+        "body": "Here s the exact steps I used on pretty much a base Ubuntu 18 04 virtual machine sudo apt get install y python3 venv sudo apt get install y python3 dev mkdir emotion cd emotion python3 m venv source bin activate git clone https github com nikicc twitter emotion recognition git cd twitter emotion recognition pip install upgrade pip pip install wheel pip install upgrade setuptools pip install r requirements txt Edit demo py add the following lines at the top of the file The uncommented line should do this import os os environ KERAS BACKEND theano cat echo e import os nos environ KERAS BACKEND theano n n demo py new py python new py"
+      },
+      {
+        "user": "HarrisonLL",
+        "created_at": "2021-03-24T21:28:08Z",
+        "body": "Resolved the issue Thanks"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-24T21:30:30Z",
+        "body": "LidingLi happy to hear that"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "AttributeError: 'str' object has no attribute 'decode'",
+    "state": "closed",
+    "body": "nikicc Could you please help me with this When specifying the model model EmotionPredictor classification ekman setting mc use unison model True I retrieve this error AttributeError str object has no attribute decode Please find a screenshot of the issue Schermata 2021 03 11 alle 11 13 02 https user images githubusercontent com 60297728 110771416 c218ba00 825a 11eb 8430 cc32ad6fe4d1 png What do you think the issue might be Thank you",
+    "created_at": "2021-03-11T10:14:02Z",
+    "closed_at": "2021-03-11T19:17:38Z",
+    "user": "giulianoformisano",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-11T11:00:55Z",
+        "body": "giulianoformisano not really sure what this could be The first thing I would check is if all the dependencies are exactly at the versions as specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file"
+      },
+      {
+        "user": "giulianoformisano",
+        "created_at": "2021-03-11T11:07:30Z",
+        "body": "Thanks a lot for your input nikicc I checked and all the dependencies are at the versions specified in the requirements txt file However the issue persists Is there anything else that I could try Thank you"
+      },
+      {
+        "user": "giulianoformisano",
+        "created_at": "2021-03-11T19:17:35Z",
+        "body": "nikicc we have solved the issue thanks to niklasstoehr Installing h5py fixed the issue pip install h5py 2 10 0 force reinstall"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-11T20:00:28Z",
+        "body": "giulianoformisano happy that you fixed it and thanks for posting the fix here for others"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Stop words",
+    "state": "closed",
+    "body": "Hii I wanted to know if its better to remove stopwords before dumping the data into the models or is it better to use the whole sentence Please let me know",
+    "created_at": "2021-03-10T13:36:27Z",
+    "closed_at": "2021-03-10T14:31:13Z",
+    "user": "Akshar-code",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-10T14:31:13Z",
+        "body": "Akshar code no need for any preprocessing Just dump the whole thing in Our models work on characters hence we pass the whole tweet without any preprocessing as an input to the RNN"
+      },
+      {
+        "user": "Akshar-code",
+        "created_at": "2021-03-10T15:54:12Z",
+        "body": "i just removed the hashtags and mentions so i think it shouldnt be a problem Where can i have a look at the training data Atleast a peek"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-10T15:58:44Z",
+        "body": "Akshar code unfortunately I cannot disclose the training data Sorry for that For a peak check the paper link is in the readme there are a few examples there"
+      },
+      {
+        "user": "Akshar-code",
+        "created_at": "2021-03-10T16:23:03Z",
+        "body": "Hi I skimmed through your paper and it was great I was wondering how we can host this code on google collab im getting some errors doing the same"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-10T22:18:40Z",
+        "body": "Akshar code I m not that familiar with the goole collab but check the Binder link in the Readme md It should take you to a running Jupiter notebook"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Unrecognized keyword arguments error in defining the model",
+    "state": "closed",
+    "body": "Hi when I run the following script in jupyterlab the value error occurs I am wondering how to fix it Predictor for Ekman s emotions in multiclass setting model EmotionPredictor classification ekman setting mc ValueError Traceback most recent call last ipython input 26 8795b11f6c09 in module 1 Predictor for Ekman s emotions in multiclass setting 2 model EmotionPredictor classification ekman setting mc twitter emotion recognition emotion predictor py in init self classification setting use unison model 28 self setting setting 29 self use unison model use unison model 30 self model self get model 31 self embeddings model self get embeddings model 32 self char to ind self get char mapping twitter emotion recognition emotion predictor py in get model self 40 self setting 41 42 return load model self loaded model filename 43 44 def get embeddings model self opt anaconda3 lib python3 8 site packages tensorflow python keras saving save py in load model filepath custom objects compile options 204 if h5py is not None and 205 isinstance filepath h5py File or h5py is hdf5 filepath 206 return hdf5 format load model from hdf5 filepath custom objects 207 compile 208 opt anaconda3 lib python3 8 site packages tensorflow python keras saving hdf5 format py in load model from hdf5 filepath custom objects compile 181 raise ValueError No model found in config file 182 model config json utils decode model config decode utf 8 183 model model config lib model from config model config 184 custom objects custom objects 185 opt anaconda3 lib python3 8 site packages tensorflow python keras saving model config py in model from config config custom objects 62 Sequential from config config 63 from tensorflow python keras layers import deserialize pylint disable g import not at top 64 return deserialize config custom objects custom objects 65 66 opt anaconda3 lib python3 8 site packages tensorflow python keras layers serialization py in deserialize config custom objects 171 172 populate deserializable objects 173 return generic utils deserialize keras object 174 config 175 module objects LOCAL ALL OBJECTS opt anaconda3 lib python3 8 site packages tensorflow python keras utils generic utils py in deserialize keras object identifier module objects custom objects printable module name 352 353 if custom objects in arg spec args 354 return cls from config 355 cls config 356 custom objects dict opt anaconda3 lib python3 8 site packages tensorflow python keras engine training py in from config cls config custom objects 2259 be constructed for FunctionalModel 2260 from tensorflow python keras engine import functional pylint disable g import not at top 2261 return functional Functional from config 2262 config custom objects custom objects 2263 opt anaconda3 lib python3 8 site packages tensorflow python keras engine functional py in from config cls config custom objects 666 ValueError In case of improperly formatted config dict 667 668 input tensors output tensors created layers reconstruct from config 669 config custom objects 670 model cls inputs input tensors outputs output tensors opt anaconda3 lib python3 8 site packages tensorflow python keras engine functional py in reconstruct from config config custom objects created layers 1273 First we create all layers and enqueue nodes to be processed 1274 for layer data in config layers 1275 process layer layer data 1276 Then we process nodes in order of layer depth 1277 Nodes that cannot yet be processed if the inbound node opt anaconda3 lib python3 8 site packages tensorflow python keras engine functional py in process layer layer data 1255 from tensorflow python keras layers import deserialize as deserialize layer pylint disable g import not at top 1256 1257 layer deserialize layer layer data custom objects custom objects 1258 created layers layer name layer 1259 opt anaconda3 lib python3 8 site packages tensorflow python keras layers serialization py in deserialize config custom objects 171 172 populate deserializable objects 173 return generic utils deserialize keras object 174 config 175 module objects LOCAL ALL OBJECTS opt anaconda3 lib python3 8 site packages tensorflow python keras utils generic utils py in deserialize keras object identifier module objects custom objects printable module name 358 list custom objects items 359 with CustomObjectScope custom objects 360 return cls from config cls config 361 else 362 Then cls may be a function returning a class opt anaconda3 lib python3 8 site packages tensorflow python keras engine base layer py in from config cls config 718 A layer instance 719 720 return cls config 721 722 def compute output shape self input shape opt anaconda3 lib python3 8 site packages tensorflow python keras engine input layer py in init self input shape batch size dtype input tensor sparse name ragged kwargs 116 input shape batch input shape 1 117 if kwargs 118 raise ValueError Unrecognized keyword arguments kwargs keys 119 120 if sparse and ragged ValueError Unrecognized keyword arguments dict keys input dtype",
+    "created_at": "2021-03-02T14:29:58Z",
+    "closed_at": "2021-03-03T12:58:19Z",
+    "user": "jojo101793",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-03T10:35:50Z",
+        "body": "jojo101793 given this opt anaconda3 lib python3 8 site packages tensorflow python keras saving save py in load model filepath custom objects compile options I suspect you are might be using TensorFlow as a backend while these models work with Theano Check requirements txt https github com nikicc twitter emotion recognition blob master requirements txt L10 for exact versions of all dependencies and make sure to set Theano as a backend https stackoverflow com questions 42177658 how to switch backend with keras from tensorflow to theano"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Layers used in unison-ekman-mc.h5",
+    "state": "closed",
+    "body": "Hi may I know what are the exact settings used for the layers in the best performing character based model i e unison ekman mc h5 Is the following description correct 1 Input layer 2 Embedding layer character embedding dimensions 25 3 Dropout layer with rate 0 2 4 LSTM layer with 400 memory units single directional 5 LSTM layer with 400 memory units bidirectional 6 Merge layer 7 Dropout layer with 800 output nodes rate 0 5 8 Dense layer with 6 output nodes with softmax activation",
+    "created_at": "2021-03-02T11:24:09Z",
+    "closed_at": "2021-03-02T13:11:18Z",
+    "user": "khairiyah98",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-03-02T13:11:18Z",
+        "body": "khairiyah98 yes that is mostly correct Just to clarify more and make sure this is what you had in mind step 5 is not bidirectional but is only single directional going backwards So step 4 is 400 units LSTM going forward and step 5 is 400 LSTM units going backwards"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "What is the setting parameter while choosing model?",
+    "state": "closed",
+    "body": "Hi I wanted to wanted to know whats the difference between ml and mc in the setting parameter Screenshot 2021 02 22 at 11 09 42 AM https user images githubusercontent com 59618640 108667001 78ac3900 74fe 11eb 84bb 991b143ce854 png",
+    "created_at": "2021-02-22T05:39:57Z",
+    "closed_at": "2021-02-22T22:35:51Z",
+    "user": "Akshar-code",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-22T22:35:51Z",
+        "body": "Akshar code hi mc stands for multiclass while ml stands for multilabel Briefly in multiclass only one the most prevalent emotion is detected while in multilabel a classifier can detect multiple emotions in the same tweet For more details check this CrossValidated post https stats stackexchange com questions 11859 what is the difference between multiclass and multilabel problem I m closing this issue for now but feel free to post more questions or reopen if you have more questions about it"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Training script",
+    "state": "open",
+    "body": "Thank you so moch for these briliant models Can you please provide us with the code that you used in otder to train the models",
+    "created_at": "2021-02-11T18:54:07Z",
+    "closed_at": null,
+    "user": "Altimis",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-11T21:40:25Z",
+        "body": "Hi Altimis It s nice to hear they are useful About the code I don t really have that at hand and in a format I could easily share Sorry about that However you can see the architecture of the classifier in the models that are loaded To train them you can use any gradient based method I believe I used RMSProp"
+      },
+      {
+        "user": "Altimis",
+        "created_at": "2021-02-11T21:42:16Z",
+        "body": "Thank you nikicc I ll try to analyse the model s architecture How much data did you use tho"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-11T21:46:46Z",
+        "body": "Altimis training data had about 320 000 examples for Ekman 480 000 for Plutchik and 3 900 000 for POMS"
+      },
+      {
+        "user": "Altimis",
+        "created_at": "2021-02-11T21:48:25Z",
+        "body": "Oh okey the labeling must be hard unless there are some opensource datasets for this kind of tasks"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-11T21:53:31Z",
+        "body": "I didn t find any opensource datasets at least not of that size For labelling I used distant supervision i e we search for tweets containing hashtags used them as the target variable removed them from the tweet content and then train classifiers If you re interested more into detail check the paper there is a link at the bottom of the README md https github com nikicc twitter emotion recognition blob master README md file"
+      },
+      {
+        "user": "Altimis",
+        "created_at": "2021-02-11T21:55:30Z",
+        "body": "nikicc interesting idea I ll check your paper for sure Thank you again for your work"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Predicting emotions for unseen tweets",
+    "state": "open",
+    "body": "Hi can I know if we can use these to predict emotions for any tweets Or do we need to train them downstream",
+    "created_at": "2021-02-06T09:07:45Z",
+    "closed_at": null,
+    "user": "khairiyah98",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-06T09:44:34Z",
+        "body": "Hi can I know if we can use these to predict emotions for any tweets Yes the models are already trained and can be used directly Or do we need to train them downstream No need They are already trained"
+      },
+      {
+        "user": "khairiyah98",
+        "created_at": "2021-02-13T11:47:33Z",
+        "body": "Alright thank you May I know what are the preprocessing steps required for the tweet input into the model For e g Do I need to remove emoticons emojis"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-14T11:07:19Z",
+        "body": "khairiyah98 I don t think you need to do any preprocessing Feel free to leave the emoticons in"
+      },
+      {
+        "user": "Akshar-code",
+        "created_at": "2021-02-15T10:42:08Z",
+        "body": "Hii nikicc in your demo ipynb file i can see you fed the tweets are a tuple Screenshot 2021 02 15 at 4 10 30 PM https user images githubusercontent com 59618640 107936182 58352980 6fa8 11eb 8bf8 ec946d7bba91 png Im wondering how i can do this if i have a csv file with rows of tweets please help me Screenshot 2021 02 15 at 4 11 40 PM https user images githubusercontent com 59618640 107936305 7e5ac980 6fa8 11eb 9132 3681df881b22 png Also khairiyah98 have you made any progress with this aspect"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2021-02-15T13:46:57Z",
+        "body": "Hi Akshar code Hii nikicc in your demo ipynb file i can see you fed the tweets are a tuple It s actually a list not a tuple But tuple might also work not sure Im wondering how i can do this if i have a csv file with rows of tweets please help me So if you have a file with the structure as shown in the above image you just need to read it line by line into a list of strings Check this StackOverflow answers https stackoverflow com questions 3277503 how to read a file line by line into a list for code snippets that do exactly this"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Add setup.py file",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-11-23T09:31:48Z",
+    "closed_at": null,
+    "user": "nikicc",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "Package emotion_predictor is unavailable",
+    "state": "closed",
+    "body": "Colab says the package emotion predictor is unavailable for download load Could you help me here",
+    "created_at": "2020-09-19T06:32:06Z",
+    "closed_at": "2020-09-21T08:47:31Z",
+    "user": "AmanKabra",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2020-09-21T07:35:47Z",
+        "body": "AmanKabra emotion predictor is not on pypi hence I guess this is why Colab says it s unavailable You ll need to clone this repository manually but I m not sure how to do this in Colab"
+      },
+      {
+        "user": "AmanKabra",
+        "created_at": "2020-09-21T08:47:29Z",
+        "body": "Niki thanks a ton for the code I have cloned it to colab This is such a useful package that you might want to share it to pypi Thanks again"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2020-09-21T09:06:34Z",
+        "body": "AmanKabra you re welcome Yes will try to find the time to push it to pypi"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "running demo.py with error ValueError: Unknown layer: Merge",
+    "state": "closed",
+    "body": "I tried to run the demo py but meet the error ValueError Unknown layer Merge my current keras version is 2 3 1 0 How could I use this model in keras 2",
+    "created_at": "2020-05-06T04:27:31Z",
+    "closed_at": "2020-08-25T14:54:30Z",
+    "user": "liusong299",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2020-08-25T14:54:29Z",
+        "body": "liusong299 sorry I missed this The code was only tested with Keras 1 1 0 and I assume it does not work with 2 3 1 0 See the requirements file https github com nikicc twitter emotion recognition blob master requirements txt"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Name Error : h5py",
+    "state": "open",
+    "body": "Please help me solve the issue runfile C Users iiitmk Emotion recognition demo py wdir C Users iiitmk Emotion recognition Reloaded modules emotion predictor Traceback most recent call last File ipython input 80 b3b5b5b514e8 line 1 in module runfile C Users iiitmk Emotion recognition demo py wdir C Users iiitmk Emotion recognition File C Users iiitmk Anaconda3 lib site packages spyder kernels customize spydercustomize py line 786 in runfile execfile filename namespace File C Users iiitmk Anaconda3 lib site packages spyder kernels customize spydercustomize py line 110 in execfile exec compile f read filename exec namespace File C Users iiitmk Emotion recognition demo py line 12 in module model EmotionPredictor classification ekman setting ml use unison model True File C Users iiitmk Emotion recognition emotion predictor py line 31 in init self model self get model File C Users iiitmk Emotion recognition emotion predictor py line 43 in get model return load model self loaded model filename File C Users iiitmk Anaconda3 lib site packages keras engine saving py line 417 in load model File C Users iiitmk Anaconda3 lib site packages keras utils io utils py line 182 in init NameError name h5py is not defined",
+    "created_at": "2019-08-23T11:38:57Z",
+    "closed_at": null,
+    "user": "Sali4faizi",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2019-08-23T15:03:24Z",
+        "body": "Sali4faizi it seems that the h5py dependency is missing Try to install it with pip install h5py if that doesn t work please check this section of Keras documentation https keras io getting started faq how can i install hdf5 or h5py to save my models in keras"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-08-23T15:04:44Z",
+        "body": "Oh wait you are on Conda Then use this instead of pip conda install h5py"
+      },
+      {
+        "user": "Sali4faizi",
+        "created_at": "2019-08-26T04:27:06Z",
+        "body": "nikicc Thanks for your quick reply h5py is already installed but still showing this name error"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-08-26T08:29:08Z",
+        "body": "Sali4faizi so if you try to import it in a python shell it works Try do double check if importing it works as expected by opening a Python interpreter and type this py import h5py"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "ValueError: Unknown layer: Merge",
+    "state": "closed",
+    "body": "I am getting this error when I run demo py Using TensorFlow backend usr local lib python3 6 dist packages keras engine base layer py 1109 UserWarning Update your InputLayer call to the Keras 2 API InputLayer batch input shape None 143 name input 1 sparse False dtype float32 return cls config usr local lib python3 6 dist packages keras engine base layer py 1109 UserWarning The dropout argument is no longer support in Embedding You can apply a keras layers SpatialDropout1D layer right after the Embedding layer to get the same behavior return cls config usr local lib python3 6 dist packages keras engine base layer py 1109 UserWarning Update your Embedding call to the Keras 2 API Embedding output dim 25 input dtype int32 name embedding 1 mask zero False trainable True batch input shape None Non input dim 412 activity regularizer None input length None embeddings initializer uniform embeddings regularizer None embeddings constraint None return cls config usr local lib python3 6 dist packages keras engine base layer py 1109 UserWarning Update your Dropout call to the Keras 2 API Dropout name dropout 1 trainable True rate 0 2 return cls config usr local lib python3 6 dist packages keras layers recurrent py 2298 UserWarning The input dim and input length arguments in recurrent layers are deprecated Use input shape instead return cls config usr local lib python3 6 dist packages keras layers recurrent py 2298 UserWarning Update your LSTM call to the Keras 2 API LSTM name lstm 1 stateful False batch input shape None Non input dtype float32 trainable True activation tanh unroll False return sequences False go backwards False unit forget bias True input shape None 25 units 400 kernel initializer glorot uniform recurrent initializer orthogonal recurrent activation hard sigmoid kernel regularizer None bias regularizer None recurrent regularizer None dropout 0 0 recurrent dropout 0 0 implementation 0 return cls config usr local lib python3 6 dist packages keras layers recurrent py 2150 UserWarning implementation 0 has been deprecated and now defaults to implementation 1 Please update your layer call warnings warn implementation 0 has been deprecated usr local lib python3 6 dist packages keras layers recurrent py 2298 UserWarning Update your LSTM call to the Keras 2 API LSTM name lstm 2 stateful False batch input shape None Non input dtype float32 trainable True activation tanh unroll False return sequences False go backwards True unit forget bias True input shape None 25 units 400 kernel initializer glorot uniform recurrent initializer orthogonal recurrent activation hard sigmoid kernel regularizer None bias regularizer None recurrent regularizer None dropout 0 0 recurrent dropout 0 0 implementation 0 return cls config Traceback most recent call last File demo py line 12 in module model EmotionPredictor classification ekman setting mc use unison model True File home aso mas code twitter emotion recognition master emotion predictor py line 30 in init self model self get model File home aso mas code twitter emotion recognition master emotion predictor py line 42 in get model return load model self loaded model filename File usr local lib python3 6 dist packages keras engine saving py line 419 in load model model deserialize model f custom objects compile File usr local lib python3 6 dist packages keras engine saving py line 225 in deserialize model model model from config model config custom objects custom objects File usr local lib python3 6 dist packages keras engine saving py line 458 in model from config return deserialize config custom objects custom objects File usr local lib python3 6 dist packages keras layers init py line 55 in deserialize printable module name layer File usr local lib python3 6 dist packages keras utils generic utils py line 145 in deserialize keras object list custom objects items File usr local lib python3 6 dist packages keras engine network py line 1022 in from config process layer layer data File usr local lib python3 6 dist packages keras engine network py line 1008 in process layer custom objects custom objects File usr local lib python3 6 dist packages keras layers init py line 55 in deserialize printable module name layer File usr local lib python3 6 dist packages keras utils generic utils py line 138 in deserialize keras object class name ValueError Unknown layer Merge",
+    "created_at": "2019-05-31T01:49:14Z",
+    "closed_at": "2019-05-31T08:08:24Z",
+    "user": "t855001",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2019-05-31T08:06:58Z",
+        "body": "t855001 it seems that you re using the TensorFlow backend while the models in this repo were trained using Theano backend and hence do not work with TensorFlow Make sure to install the dependencies that are specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file Then also make sure you configure Keras to use the Theano backend and not TensorFlow see https stackoverflow com questions 42177658 how to switch backend with keras from tensorflow to theano I m closing this as I m pretty sure that it should work with the right version of the requirements and Theano backend If you still have issues feel free to reopen"
+      },
+      {
+        "user": "t855001",
+        "created_at": "2019-06-05T08:19:22Z",
+        "body": "nikicc Thank you for answering I changed backend to Theano But I am getting this error Users beta pyenv versions 3 6 1 lib python3 6 site packages h5py init py 36 FutureWarning Conversion of the second argument of issubdtype from float to np floating is deprecated In future it will be treated as np float64 np dtype float type from conv import register converters as register converters Using Theano backend Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine base layer py 1109 UserWarning Update your InputLayer call to the Keras 2 API InputLayer batch input shape None 143 name input 1 sparse False dtype float32 return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine base layer py 1109 UserWarning The dropout argument is no longer support in Embedding You can apply a keras layers SpatialDropout1D layer right after the Embedding layer to get the same behavior return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine base layer py 1109 UserWarning Update your Embedding call to the Keras 2 API Embedding output dim 25 input dtype int32 name embedding 1 mask zero False trainable True batch input shape None Non input dim 412 activity regularizer None input length None embeddings initializer uniform embeddings regularizer None embeddings constraint None return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine base layer py 1109 UserWarning Update your Dropout call to the Keras 2 API Dropout name dropout 1 trainable True rate 0 2 return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers recurrent py 2298 UserWarning The input dim and input length arguments in recurrent layers are deprecated Use input shape instead return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers recurrent py 2298 UserWarning Update your LSTM call to the Keras 2 API LSTM name lstm 1 stateful False batch input shape None Non input dtype float32 trainable True activation tanh unroll False return sequences False go backwards False unit forget bias True input shape None 25 units 400 kernel initializer glorot uniform recurrent initializer orthogonal recurrent activation hard sigmoid kernel regularizer None bias regularizer None recurrent regularizer None dropout 0 0 recurrent dropout 0 0 implementation 0 return cls config Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers recurrent py 2150 UserWarning implementation 0 has been deprecated and now defaults to implementation 1 Please update your layer call warnings warn implementation 0 has been deprecated Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers recurrent py 2298 UserWarning Update your LSTM call to the Keras 2 API LSTM name lstm 2 stateful False batch input shape None Non input dtype float32 trainable True activation tanh unroll False return sequences False go backwards True unit forget bias True input shape None 25 units 400 kernel initializer glorot uniform recurrent initializer orthogonal recurrent activation hard sigmoid kernel regularizer None bias regularizer None recurrent regularizer None dropout 0 0 recurrent dropout 0 0 implementation 0 return cls config Traceback most recent call last File demo py line 12 in module model EmotionPredictor classification ekman setting mc use unison model True File Applications mas code twitter emotion recognition master emotion predictor py line 30 in init self model self get model File Applications mas code twitter emotion recognition master emotion predictor py line 42 in get model return load model self loaded model filename File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine saving py line 419 in load model model deserialize model f custom objects compile File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine saving py line 225 in deserialize model model model from config model config custom objects custom objects File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine saving py line 458 in model from config return deserialize config custom objects custom objects File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers init py line 55 in deserialize printable module name layer File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras utils generic utils py line 145 in deserialize keras object list custom objects items File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine network py line 1022 in from config process layer layer data File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras engine network py line 1008 in process layer custom objects custom objects File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras layers init py line 55 in deserialize printable module name layer File Users beta pyenv versions 3 6 1 lib python3 6 site packages keras utils generic utils py line 138 in deserialize keras object class name ValueError Unknown layer Merge My environment Theano 1 0 4 Keras 2 2 4 pandas 0 21 1"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-06-05T15:30:00Z",
+        "body": "t855001 Keras should be at version keras 1 1 0 not 2 2 4 see requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file I suggest you uninstall Keras and install keras 1 1 0"
+      },
+      {
+        "user": "t855001",
+        "created_at": "2019-06-06T05:47:40Z",
+        "body": "Thank you I succeeded"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "about twitter dataset with label",
+    "state": "closed",
+    "body": "nikicc Can you provide the link for twitter dataset with emotion label for further research Thanks",
+    "created_at": "2019-04-11T03:00:08Z",
+    "closed_at": "2019-04-11T18:24:04Z",
+    "user": "TTTJJJWWW",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2019-04-11T18:24:04Z",
+        "body": "Hi TTTJJJWWW unfortunately I cannot share my data sets"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Incompatibility with new keras",
+    "state": "closed",
+    "body": "It seems like this package is no longer compatible with the new version of keras which is included with Tensorflow I am unable to run with Python 3 6 both on and off anaconda",
+    "created_at": "2019-01-11T05:25:28Z",
+    "closed_at": "2020-08-25T14:51:35Z",
+    "user": "sabidhasan",
+    "comments_count": 29,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2019-01-11T09:44:37Z",
+        "body": "sabidhasan I haven t tried it with the new version of Keras Can you try with the versions which are specified in the requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file"
+      },
+      {
+        "user": "lcarnevale",
+        "created_at": "2019-02-25T18:53:05Z",
+        "body": "The versions specified in the requirements txt require tensorflow installed Last version 1 12 0 raises this exception AttributeError module tensorflow has no attribute python What is the tensorflow version used for your project"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-02-26T09:06:49Z",
+        "body": "lcarnevale Theano was used for this project not Tensorflow Can you try with keras 1 1 0 theano 0 8 2 as I m not sure whether it works or not with other versions Also keep in mind that you might need to configure Keras to use the Theano backend and not the Tensorflow"
+      },
+      {
+        "user": "lcarnevale",
+        "created_at": "2019-02-27T14:53:04Z",
+        "body": "lcarnevale Theano was used for this project not Tensorflow Can you try with keras 1 1 0 theano 0 8 2 as I m not sure whether it works or not with other versions Also keep in mind that you might need to configure Keras to use the Theano backend and not the Tensorflow Because of a Numpy Theano incompatibility theano 0 8 2 raises the following exception AttributeError The following error happened while compiling the node DotModulo A s m A2 s2 m2 n module numpy core multiarray has no attribute get ndarray c version Your application is working for me with this configuration h5py 2 9 0 Keras 1 1 0 numpy 1 16 0 pandas 0 24 1 python dateutil 2 8 0 pytz 2018 9 PyYAML 3 13 scipy 1 2 1 six 1 12 0 Theano 1 0 4 Many thanks for your help"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-02-28T21:27:01Z",
+        "body": "Great to hear that And thanks for posting the env config that works for you it might be helpful to others On 27 Feb 2019 at 14 53 Lorenzo Carnevale notifications github com wrote lcarnevale Theano was used for this project not Tensorflow Can you try with keras 1 1 0 theano 0 8 2 as I m not sure whether it works or not with other versions Also keep in mind that you might need to configure Keras to use the Theano backend and not the Tensorflow Because of a Numpy Theano incompatibility theano 0 8 2 rises the following exception AttributeError The following error happened while compiling the node DotModulo A s m A2 s2 m2 n module numpy core multiarray has no attribute get ndarray c version Your application is working for me with this configuration h5py 2 9 0 Keras 1 1 0 numpy 1 16 0 pandas 0 24 1 python dateutil 2 8 0 pytz 2018 9 PyYAML 3 13 scipy 1 2 1 six 1 12 0 Theano 1 0 4 Many thanks for your help You are receiving this because you commented Reply to this email directly view it on GitHub or mute the thread"
+      },
+      {
+        "user": "grafixoner",
+        "created_at": "2019-03-02T01:22:12Z",
+        "body": "I can get it to run in 1 2 2 However I m wondering can you upgrade these to work or release the training code so we can get v2 keras models"
+      },
+      {
+        "user": "nebupulickal",
+        "created_at": "2019-03-03T17:49:29Z",
+        "body": "lcarnevale i am getting an error after installing the packages mentioned Using Theano backend Traceback most recent call last File demo py line 12 in module model EmotionPredictor classification ekman setting mc use unison model True File home pi Desktop twitter emotion recognition master emotion predictor py line 31 in init self model self get model File home pi Desktop twitter emotion recognition master emotion predictor py line 43 in get model return load model self loaded model filename File home pi virtualenvs emotionnew lib python3 5 site packages keras models py line 120 in load model import h5py File home pi virtualenvs emotionnew lib python3 5 site packages h5py init py line 26 in module from import errors ImportError libhdf5 serial so 100 cannot open shared object file No such file or directory"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-03-03T17:55:46Z",
+        "body": "grafixoner not sure I can tackle that any time soon sorry If you got it to work in 1 2 2 than you should be able to see all the trained weights which can probably be transfered into newest version somehow"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-03-03T17:56:24Z",
+        "body": "nebupulickal can you try with exactly the version that lcarnevale posted in above comment IIUC using that versions should work"
+      },
+      {
+        "user": "nebupulickal",
+        "created_at": "2019-03-03T18:09:12Z",
+        "body": "nikicc solved the issue Install the package libhdf5 100 sudo apt install libhdf5 100"
+      },
+      {
+        "user": "nebupulickal",
+        "created_at": "2019-03-03T18:09:23Z",
+        "body": "nikicc thanku"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-03-04T09:01:30Z",
+        "body": "nebupulickal happy to hear that"
+      },
+      {
+        "user": "alanj250",
+        "created_at": "2019-04-01T08:18:03Z",
+        "body": "When i executed the code demo py in ubuntu 18 0 4 its not running with theano It gives using tensorflow as backend and throwing error no module named tensorflow How is it possible to execute the code using theano in ubuntu 18 0 4 set the environment as given in this loop above"
+      },
+      {
+        "user": "alanj250",
+        "created_at": "2019-04-01T08:37:15Z",
+        "body": "Can anyone help me with the version of ubuntu the code is working Will this work in python 3"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-04-01T09:54:28Z",
+        "body": "alanj250 check this for how to set the backend Keras will use https stackoverflow com questions 42177658 how to switch backend with keras from tensorflow to theano Also it will work in python 3"
+      },
+      {
+        "user": "alanj250",
+        "created_at": "2019-04-01T11:48:55Z",
+        "body": "nikicc thank u It worked Is it possible to make it work with latest keras and tensorflow backend"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-04-01T12:14:18Z",
+        "body": "alanj250 probably possible but I think it s not trivial Let me know how it will go if you decide to try it"
+      },
+      {
+        "user": "sabidhasan",
+        "created_at": "2019-04-01T13:08:41Z",
+        "body": "If you want I can take a stab at porting it to the latest version of TF and I ll make a PR Abid On Mon Apr 1 2019 6 14 AM nikicc notifications github com wrote alanj250 https github com alanj250 probably possible but I think it s not trivial Let me know how it will go if you decide to try it You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com nikicc twitter emotion recognition issues 6 issuecomment 478554484 or mute the thread https github com notifications unsubscribe auth AXyz6g4GRynCI3v28vfj4Hblh9 hcKe0ks5vcfgbgaJpZM4Z60eC"
+      },
+      {
+        "user": "grafixoner",
+        "created_at": "2019-04-01T13:36:57Z",
+        "body": "That would be cool I was gonna tackle doing the same at some point Looking forward to the pull request"
+      },
+      {
+        "user": "alanj250",
+        "created_at": "2019-04-01T14:55:01Z",
+        "body": "sabidhasan waiting for that Thanku to all"
+      },
+      {
+        "user": "akarsh30",
+        "created_at": "2019-04-29T07:02:31Z",
+        "body": "Hi can anyone please tell me the sequence in which the files needed to be run ALso when i am running demo py this error is being raised Please help Screenshot 150 https user images githubusercontent com 41483461 56880539 d4304b80 6a7a 11e9 9f0c d340bdfc3e56 png Screenshot 151 https user images githubusercontent com 41483461 56880540 d4304b80 6a7a 11e9 8c64 b053516b9794 png"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-04-29T08:12:46Z",
+        "body": "akarsh30 are you sure you have the right version of the dependencies Check requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file"
+      },
+      {
+        "user": "willyjospel",
+        "created_at": "2019-04-29T08:31:07Z",
+        "body": "akarsh30 set everything correctly"
+      },
+      {
+        "user": "akarsh30",
+        "created_at": "2019-04-29T08:55:24Z",
+        "body": "akarsh30 are you sure you have the right version of the dependencies Check requirements txt https github com nikicc twitter emotion recognition blob master requirements txt file Yes I have keras 1 1 0 and Theano 0 8 2"
+      },
+      {
+        "user": "willyjospel",
+        "created_at": "2019-04-29T09:08:41Z",
+        "body": "you can mail willyjospel gmail com the error screenshot"
+      },
+      {
+        "user": "akarsh30",
+        "created_at": "2019-04-30T05:03:44Z",
+        "body": "I am getting this error How can I fix it Screenshot 154 https user images githubusercontent com 41483461 56941639 6ac04380 6b33 11e9 9710 c764b63dbe5c png"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-04-30T08:32:13Z",
+        "body": "akarsh30 not really sure but the fact that there is the name tensorflow in the exception message suggests that you might be using Tensorflow backend instead of Theano Check these and make sure you re running Keras with Theano backend and not Tensorflow https stackoverflow com questions 42177658 how to switch backend with keras from tensorflow to theano https keras io backend"
+      },
+      {
+        "user": "polsci",
+        "created_at": "2020-08-25T04:47:27Z",
+        "body": "Based on this thread and particularly lcarnevale s helpful comment https github com nikicc twitter emotion recognition issues 6 issuecomment 467891717 I ve got a working repo that will work with Binder with a notebook to run the code in demo py see https github com polsci twitter emotion recognition Have made a pull request https github com nikicc twitter emotion recognition pull 11"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2020-08-25T14:51:35Z",
+        "body": "Yes thanks to polsci the requirements txt was updated so hopefully there will be fewer issues with the dependencies Also the Binder link is now added in the README md file I think I can now close this issue but if issues still persist for someone feel free to re open"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "AttributeError: module 'tensorflow' has no attribute 'python'",
+    "state": "closed",
+    "body": "Whenever I try to execute the following statement model EmotionPredictor classification ekman setting mc I get the above mentioned error Please resolve image https user images githubusercontent com 18630586 37558293 8dec57f6 2a37 11e8 93b0 01dcf3fff374 png",
+    "created_at": "2018-03-17T17:33:27Z",
+    "closed_at": "2018-03-20T22:37:57Z",
+    "user": "SidShenoy",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "faizankhan29",
+        "created_at": "2018-03-20T13:11:44Z",
+        "body": "I am getting the same error please resolve"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-03-20T22:37:57Z",
+        "body": "Not sure what the error is but it looks like something related to tensorflow The code from this repo is meant to be run on Theano not tensoflow Check requirements txt file https github com nikicc twitter emotion recognition blob master requirements txt"
+      },
+      {
+        "user": "SidShenoy",
+        "created_at": "2018-03-29T16:58:09Z",
+        "body": "simply upgrade keras pip3 install upgrade keras this should do it"
+      },
+      {
+        "user": "basitanwer",
+        "created_at": "2018-05-30T15:09:19Z",
+        "body": "Upgraded keras Now I am getting the following error ValueError Tensor conversion requested dtype int32 for Tensor with dtype float32 Tensor embedding 1 random uniform 0 shape 412 25 dtype float32"
+      },
+      {
+        "user": "basitanwer",
+        "created_at": "2018-05-30T17:37:50Z",
+        "body": "Problem solved I just had to change the backend to theano For linux go to HOME keras keras json and change the backend value from tensorflow json image data format channels last epsilon 1e 07 floatx float32 backend tensorflow"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Trained RNN models",
+    "state": "closed",
+    "body": "How did you train the models Did you publish the paper yet Can you share some ideas",
+    "created_at": "2018-02-10T23:02:36Z",
+    "closed_at": "2018-02-22T21:18:39Z",
+    "user": "dharathakkar5",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-11T18:26:32Z",
+        "body": "dharathakkar5 the paper just got accepted today IIUC the preprint will be available on journal s website in few weeks As soon as it is I ll link it here"
+      },
+      {
+        "user": "dharathakkar5",
+        "created_at": "2018-02-11T18:32:43Z",
+        "body": "Thanks and Congratulations Looking forward to it"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-22T21:18:39Z",
+        "body": "dharathakkar5 here is the preprint of the paper http ieeexplore ieee org document 8295234"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "ValueError: Optimizer weight shape (6,) not compatible with provided weight shape (800, 6)",
+    "state": "open",
+    "body": "I get this error when i try to load an existing model",
+    "created_at": "2017-09-29T04:26:31Z",
+    "closed_at": null,
+    "user": "ShreyaKhare",
+    "comments_count": 39,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2017-09-29T07:50:37Z",
+        "body": "Can you please paste the whole stack trace Also are you on Keras version 1"
+      },
+      {
+        "user": "ShreyaKhare",
+        "created_at": "2017-10-03T05:43:34Z",
+        "body": "Can you specifiy tensorflow and keras version that was used for training"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2017-10-09T09:30:07Z",
+        "body": "We only used Theano no Tensorflow I think most experiments were run on Theano 0 8 2"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-26T10:07:07Z",
+        "body": "I have Keras installed Can I use Keras here to implement the codes"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-26T20:34:24Z",
+        "body": "Can I use Keras here to implement the codes HangsunKim not sure I understand the question You need keras 1 1 0 and pandas installed as stated in requirements txt https github com nikicc twitter emotion recognition blob master requirements txt After that you should be able to run the code Check the example of usage https github com nikicc twitter emotion recognition example usage"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-26T21:05:35Z",
+        "body": "nikicc Thanks for your reply I have the pandas and keras library installed I ve always done deep learning by importing keras as tensforflow as the backend I think then I ll be able to run the codes then I asked this question because you somewhere indicated that the codes are run on theano That was my concern"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-26T21:25:56Z",
+        "body": "I asked this question because you somewhere indicated that the codes are run on theano Yes the models were trained using Keras with Theano backend I m not sure if the models can be loaded and used with Tensorflow for not Let me know if this will work for you on Tensorflow"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-27T00:33:16Z",
+        "body": "nikicc I m trying to run the demo codes with Theano as backend I found a way to change the backend engine easily from Tensorflow to Theano But when I run the first line of codes I get this error ImportError No module named html Do you know what could be wrong and how I could fix this Thanks in advance"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-27T08:12:44Z",
+        "body": "I get this error ImportError No module named html Are you sure you re on Python 3 html is a standard Python s library https docs python org 3 library html parser html"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-27T21:28:56Z",
+        "body": "nikicc Oh I was using python 2 7 Okay so I tried on python 3 6 but now I get the error ModuleNotFoundError No module named theano Do I just do pip install theano in my command prompt"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-27T21:30:24Z",
+        "body": "Do I just do pip install theano in my command prompt To be sure use the same version of Theano that I did pip install theano 0 8 2 should do it"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-27T21:38:12Z",
+        "body": "nikicc Thanks I installed theano 0 8 2 but now I get the below error Are you familiar with this error collect2 exe error ld returned 1 exit status status 1 C Users Anaconda3 libs python36 lib error adding symbols File in wrong format"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-27T21:43:22Z",
+        "body": "HangsunKim no idea what that error is about sorry"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-27T21:59:30Z",
+        "body": "nikicc It s okay I m in Python 3 6 May I know which python version you are using Thanks"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-27T22:35:59Z",
+        "body": "I think I was on 3 6 as well"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-02-28T05:50:44Z",
+        "body": "I now get this error ValueError Tensor conversion requested dtype int32 for Tensor with dtype float32 Tensor embedding 1 random uniform 0 shape 412 25 dtype float32 I was wondering if you know this error I referred to https github com keras team keras issues 7460 However there s no clear solution to it"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-28T08:11:04Z",
+        "body": "Don t know Are you sure you are on keras 1 1 0"
+      },
+      {
+        "user": "SidShenoy",
+        "created_at": "2018-03-29T17:29:47Z",
+        "body": "Hey HangsunKim Finally solved this issue Follow these steps 1 Only install the packages mentioned in requirements txt with the exact same versions and no other package like tensorflow Uninstall tensorflow if already installed 2 Change the backend of keras from tensorflow to theano Instructions to do this have been mentioned on the keras website https keras io backend image https user images githubusercontent com 18630586 38103745 d8080878 33a4 11e8 8a0b efbeafaf8b36 png Cheers"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-03-29T20:14:02Z",
+        "body": "SidShenoy thanks for posting this"
+      },
+      {
+        "user": "jhaozz",
+        "created_at": "2018-04-12T14:41:20Z",
+        "body": "I couldn t install the version any problem it says could not find a version that satisfies the requirement emotion predictor from versions No matching distribution found for emotion predictor"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-14T17:18:24Z",
+        "body": "sir please give where i want to run the following code in jupiter notebook or anaconda prompt"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-14T17:21:33Z",
+        "body": "these codes from emotion predictor import EmotionPredictor model EmotionPredictor classification ekman setting mc tweets Watching the sopranos again from start to finish Finding out i have to go to the dentist tomorrow I want to go outside and chalk but I have no chalk I HATE PAPERS AH AH HATE My mom wasn t mad Do people have no Respect for themselves or you know others peoples homes"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-14T17:23:10Z",
+        "body": "screenshot 320 https user images githubusercontent com 30896136 52804856 4532aa80 30ab 11e9 8093 8e0dd1ea8068 png screenshot 321 https user images githubusercontent com 30896136 52804858 45cb4100 30ab 11e9 9f4d 5f995c262958 png"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-14T17:23:54Z",
+        "body": "i got those errors while running through jupitter notebook"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-02-17T12:48:37Z",
+        "body": "venkatshan707 seem like the issue is in the backend your Keras is trying to use According to the above screenshots your Keras wants to invoke a tensorflow backend while you will need to use theano backend to use the emotion predictiors from this repository More precisely you ll need theano 0 8 2 see the requirements file https github com nikicc twitter emotion recognition blob master requirements txt Check this page in the Keras documentation https keras io backend to figure out how to switch to theano backend"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-17T13:01:34Z",
+        "body": "Sir after setting a background from where we want to start our code execution I am just started to learn very beginner data science I am doing my final year project with your code I failed to execute your code Can you please send user manual of that code execution or please teach me how we want to execute our code in step by step manner using TeamViewer or anydesk please I tried my level best please help me sir On Sun 17 Feb 2019 6 18 PM nikicc notifications github com wrote venkatshan707 https github com venkatshan707 seem like the issue is in the backend your Keras is trying to use According to the above screenshots your Keras wants to invoke a tensorflow backend while you will need to use theano backend to use the emotion predictiors from this repository More precisely you ll need theano 0 8 2 see the requirements file https github com nikicc twitter emotion recognition blob master requirements txt Check this page in the Keras documentation https keras io backend to figure out how to switch to theano backend You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com nikicc twitter emotion recognition issues 3 issuecomment 464452975 or mute the thread https github com notifications unsubscribe auth AddwCAKf66gQo36Pnfa1XOOCIGFhg NBks5vOU mgaJpZM4PoL1R"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-02-17T14:20:17Z",
+        "body": "venkatshan707 if you set the backend up then you should be able to start the code either from Jupiter or python script What is the error you are seeing now after the backend has been set Sorry but I don t have any user manual I could share with you"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-18T09:41:19Z",
+        "body": "sir can you please help me with teamviewer"
+      },
+      {
+        "user": "venkatshan707",
+        "created_at": "2019-02-18T09:41:50Z",
+        "body": "just 10 mins"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2019-02-19T20:17:00Z",
+        "body": "venkatshan707 I think it s easier if we keep the communication here What is the error you are seeing now"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "How you making Trained RNN model?",
+    "state": "closed",
+    "body": "How you making Trained RNN model if possible upload code you using to make trained RNN model",
+    "created_at": "2017-09-28T18:53:57Z",
+    "closed_at": "2018-02-22T21:19:22Z",
+    "user": "vchouksey",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2017-09-28T19:57:50Z",
+        "body": "More details about the models will soon be released in a paper which I will link once it get published"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2018-02-22T21:19:22Z",
+        "body": "vchouksey the preprint of the paper is available http ieeexplore ieee org document 8295234"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "TypeError: __init__() got an unexpected keyword argument 'input_dtype'",
+    "state": "closed",
+    "body": "getting error while running command model EmotionPredictor classification ekman setting mc",
+    "created_at": "2017-09-21T22:04:51Z",
+    "closed_at": "2017-09-28T19:56:09Z",
+    "user": "vchouksey",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "nikicc",
+        "created_at": "2017-09-24T19:11:12Z",
+        "body": "Can you post the whole stack trace Which version of Keras are you using The code was only tested with keras 1 1 0 so other versions might cause issues"
+      },
+      {
+        "user": "vchouksey",
+        "created_at": "2017-09-28T07:48:08Z",
+        "body": "Keras 1 1 0 tensorflow 1 0 0 tensorflow tensorboard 0 1 6 Theano 0 10 0 Also your emotion predictor code line number self model layers 0 input eras does not able to read model first layers hence throw error as img width 1107 alt keras error src https user images githubusercontent com 6507341 30954869 12f3468a a432 11e7 9600 d00d4e65799f png self classification ekman self setting mc self use unison model True self model self get model self embeddings model self get embeddings model self char to ind self get char mapping self class values self get class values self max len self get max sequence length def get model self self loaded model filename models h5 format unison if self use unison model else self classification self setting return load model self loaded model filename def get embeddings model self last layer output K function self model layers 0 input K learning phase self model layers 3 output return lambda x last layer output x 0 0"
+      },
+      {
+        "user": "vchouksey",
+        "created_at": "2017-09-28T18:52:37Z",
+        "body": "Thanks Final got success"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2017-09-28T19:56:04Z",
+        "body": "vchouksey how did you solved it Just in case someone else stumbles upon the same issue"
+      },
+      {
+        "user": "VinodPathak",
+        "created_at": "2017-12-14T06:05:30Z",
+        "body": "Hi I am facing the same issue Can you tell how did you solve it I have tested on keras 1 1 0 tensorflow backend 1 2 1 tried in python2 and python3"
+      },
+      {
+        "user": "VinodPathak",
+        "created_at": "2017-12-14T06:34:23Z",
+        "body": "I solved the issue keras 1 1 0 theano 0 9 0 I am searching if this works with tensorflow backend"
+      },
+      {
+        "user": "nikicc",
+        "created_at": "2017-12-14T17:54:04Z",
+        "body": "VinodPathak I ve never tried it with Tensorflow Let me know how this goes if you try it out"
+      }
+    ]
+  }
+]

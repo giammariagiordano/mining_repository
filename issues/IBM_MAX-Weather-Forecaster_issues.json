@@ -1,0 +1,121 @@
+[
+  {
+    "number": 31,
+    "title": "Illegal Instruction (core dumped)",
+    "state": "closed",
+    "body": "I made everything I think I need to do but when doing sudo docker run it p 5000 5000 max weather forecaster I get Illegal instruction core dumped image https user images githubusercontent com 30571076 93728120 872ba880 fb8c 11ea 9b11 0ec37635a7e8 png Other techniques don t work neither Thanks for the help",
+    "created_at": "2020-09-21T02:01:09Z",
+    "closed_at": "2020-10-20T20:05:50Z",
+    "user": "TechEdd",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2020-09-21T19:27:33Z",
+        "body": "Hi TechEdd what kind of CPU are you using Can you please share the output of cat proc cpuinfo"
+      },
+      {
+        "user": "TechEdd",
+        "created_at": "2020-09-21T20:57:05Z",
+        "body": "Hi bdwyer2 Thanks for the answer I have an i7 920 CPU on a Virtual Machine Which means I have one core which is use for Ubuntu image https user images githubusercontent com 30571076 93820647 78480300 fc2b 11ea 8667 52adef593fb4 png"
+      },
+      {
+        "user": "xuhdev",
+        "created_at": "2020-09-21T21:13:38Z",
+        "body": "Your processor doesn t seem to support AVX Looks like this is related to a tensorflow issue https github com tensorflow tensorflow issues 19584 You might wanna try to replace the tensorflow line in requirements txt with a community build or a build by yourself"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "NOAA raw time series data is irregularly spaced",
+    "state": "closed",
+    "body": "It looks like the raw data samples hourly but also intermixes irregular samplings in between the hourly data The out of the box LSTM network is not well suited for irregularly spaced time series data so we should either remove non hourly sampled rows or retrain the models using an LSTM variant capable of handling this data such as Time LSTM https www ijcai org proceedings 2017 0504 pdf I can test out both options and see which yields better results",
+    "created_at": "2019-09-24T21:58:50Z",
+    "closed_at": "2020-09-21T02:03:45Z",
+    "user": "edwardleardi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 20,
+    "title": "Convert HOURLYPressureTendency variable to be categorical",
+    "state": "closed",
+    "body": "HOURLYPressureTendency is actually a categorical variable From the NOAA LCD documentation Press Tend Pressure tendency In general a 0 through 3 here indicates an increase in pressure over previous 3 hours and a 5 through 8 indicates a decrease over the previous 3 hours and 4 indicates no change during the previous 3 hours See ISD Documentation under Atmospheric Pressure Change for further details We can convert it to 9 dummy variables or bucket into 3 dummy variables using the buckets discussed above This will alter model inputs preprocessing postprocessing testing and model files",
+    "created_at": "2019-09-24T18:14:43Z",
+    "closed_at": "2020-09-21T02:03:38Z",
+    "user": "edwardleardi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "Compress multivariate model predictions within proper bounds",
+    "state": "closed",
+    "body": "Currently the multivariate model which forecasts all 12 weather features does not post process the predictions to ensure they are within allowable bounds For example HOURLYVISIBILITY predictions should be within 0 10 miles but some predictions are slightly above 10 or slightly negative Similar issues arise for the following variables HOURLYVISIBILITY HOURLYRelativeHumidity HOURLYWindSpeed HOURLYWindDirection HOURLYPrecip",
+    "created_at": "2019-09-24T18:00:29Z",
+    "closed_at": "2020-09-21T02:03:28Z",
+    "user": "edwardleardi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2019-09-24T18:13:13Z",
+        "body": "I added some basic post processing a few weeks ago but there is room for improvement https github com IBM MAX Weather Forecaster pull 17 files"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "OpenAPI spec: description is missing",
+    "state": "open",
+    "body": "An API for serving models",
+    "created_at": "2019-08-07T01:54:17Z",
+    "closed_at": null,
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Setup testing",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-09-20T17:33:19Z",
+    "closed_at": "2018-10-05T23:39:00Z",
+    "user": "bdwyer2",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "Improve API input format",
+    "state": "open",
+    "body": "Currently the model can only take in a numpy array of weather data in txt format with a specific hard coded shape specifically the number of data rows in the input array As a user I would like to be able to post a single data point in this case a data point would be a 12 hour timeframe of data and receive a single prediction to post data in a more user friendly format i e JSON For bulk requests we could add a bulk predict endpoint We could support CSV files rather than or in addition to numpy arrays in txt serialized format",
+    "created_at": "2018-09-17T11:07:20Z",
+    "closed_at": null,
+    "user": "MLnick",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "feihugis",
+        "created_at": "2018-10-30T18:23:23Z",
+        "body": "MLnick The input size for the three models is 1 24 12 for univariate model 2 24 12 for multivariate model 3 48 12 for multistep model where 12 is the number of input variables 24 48 is for the hour For the json input do you think the following structure will be ok input data entry 0 var0 values for 24 48 hours var1 values for 24 48 hours var2 values for 24 48 hours var3 values for 24 48 hours var4 values for 24 48 hours var5 values for 24 48 hours var6 values for 24 48 hours var7 values for 24 48 hours var8 values for 24 48 hours var9 values for 24 48 hours var10 values for 24 48 hours var11 values for 24 48 hours entry n var0 values for 24 48 hours var1 values for 24 48 hours var2 values for 24 48 hours var3 values for 24 48 hours var4 values for 24 48 hours var5 values for 24 48 hours var6 values for 24 48 hours var7 values for 24 48 hours var8 values for 24 48 hours var9 values for 24 48 hours var10 values for 24 48 hours var11 values for 24 48 hours"
+      },
+      {
+        "user": "diegoromeroacro",
+        "created_at": "2019-07-05T19:31:19Z",
+        "body": "Dear my question is more conceptual Sorry I need to be able to predict a climatic behavior for a certain point or polygon expressed from its latitude and longitude for the first case or as a ring for the second case How should I build the entrance What data should happen to you Is it necessary for me to send training data as well about the climatic behavior of the place or does this project use a trained model with NY data JFK can predict anywhere else THANK YOU"
+      }
+    ]
+  }
+]

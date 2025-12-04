@@ -1,0 +1,154 @@
+[
+  {
+    "number": 8,
+    "title": "How to save checkpoints?",
+    "state": "open",
+    "body": "I ve seen that the function train has an input checkpoint to load None I would like to know how to adapt the code so that after each epoch it saves its weights Because I ve calculated the total time of my training and it is around 48h so I want to save my weights periodically def train get batches data shape checkpoint to load None Sorry if it s a stupid question I m a starter",
+    "created_at": "2021-11-30T11:27:44Z",
+    "closed_at": null,
+    "user": "joandies",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "ValueError",
+    "state": "open",
+    "body": "Hello I m new on github I want to develop a DCGAN for image generation Someone can help me input images np asarray np asarray Image open file resize IMAGE SIZE IMAGE SIZE for file in glob INPUT DATA DIR print Input str input images shape np random shuffle input images sample images random sample list input images SAMPLES TO SHOW show samples sample images OUTPUT DIR inputs 0 with tf Graph as default train get batches input images input images shape I get this error ValueError Sample larger than population or is negative Thanks",
+    "created_at": "2020-09-12T12:53:30Z",
+    "closed_at": null,
+    "user": "Raijin003",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "Graph and samples are empty",
+    "state": "closed",
+    "body": "Even after 70 epochs the discriminator generator graph is empty and my samples are all completely gray Epoch 71 300 Duration 0 00000 D Loss nan G Loss nan",
+    "created_at": "2020-08-05T10:07:59Z",
+    "closed_at": "2020-08-27T10:21:18Z",
+    "user": "WaelShaikh",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kdazzle",
+        "created_at": "2021-09-20T02:43:17Z",
+        "body": "Hi WaelShaikh I m hitting this one too Do you remember what the issue might have been I know it was way long ago"
+      },
+      {
+        "user": "vikasnr",
+        "created_at": "2022-01-10T14:14:55Z",
+        "body": "kdazzle WaelShaikh Any update on this issue My outputs are greyed out from first iteration"
+      },
+      {
+        "user": "vikasnr",
+        "created_at": "2022-01-10T14:24:12Z",
+        "body": "Oops started showing rgbs after few epochs Looks like parameters we being set"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Issue with running notebook",
+    "state": "open",
+    "body": "When running the application with a good dataset I get the following errors ValueError Trying to share variable discriminator conv1 kernel but specified shape 5 5 3 64 and found shape 5 5 4 64 ValueError Traceback most recent call last ipython input 14 db5a32a0c488 in module 9 10 with tf Graph as default 11 train get batches input images input images shape ipython input 11 73fe85d9d0bc in train get batches data shape checkpoint to load 1 def train get batches data shape checkpoint to load None 2 input images input z lr G lr D model inputs data shape 1 NOISE SIZE 3 d loss g loss model loss input images input z data shape 3 4 d opt g opt model optimizers d loss g loss 5 ipython input 4 fdda2826a0ad in model loss input real input z output channel dim 8 9 d model real d logits real discriminator noisy input real reuse False 10 d model fake d logits fake discriminator g model reuse True 11 12 d loss real tf reduce mean tf nn sigmoid cross entropy with logits logits d logits real ipython input 3 5b9e48b97d85 in discriminator x reuse 9 padding SAME 10 kernel initializer tf truncated normal initializer stddev WEIGHT INIT STDDEV 11 name conv1 12 batch norm1 tf layers batch normalization conv1 13 training True WARNING Logging before flag parsing goes to stderr W0827 08 43 17 895732 14504 deprecation py 323 From ipython input 2 6a171d8d9e59 5 dense from tensorflow python layers core is deprecated and will be removed in a future version Instructions for updating Use keras layers dense instead W0827 08 43 17 899729 14504 deprecation py 506 From c users srudloff appdata local programs python python36 lib site packages tensorflow python ops init ops py 1251 calling VarianceScaling init from tensorflow python ops init ops with dtype is deprecated and will be removed in a future version Instructions for updating Call initializer instance with the dtype argument instead of passing it to the constructor W0827 08 43 18 230528 14504 deprecation py 323 From ipython input 2 6a171d8d9e59 16 conv2d transpose from tensorflow python layers convolutional is deprecated and will be removed in a future version Instructions for updating Use tf keras layers Conv2DTranspose instead W0827 08 43 18 795181 14504 deprecation py 323 From ipython input 2 6a171d8d9e59 20 batch normalization from tensorflow python layers normalization is deprecated and will be removed in a future version Instructions for updating Use keras layers BatchNormalization instead In particular tf control dependencies tf GraphKeys UPDATE OPS should not be used consult the tf keras layers batch normalization documentation W0827 08 43 19 111992 14504 deprecation py 323 From ipython input 3 5b9e48b97d85 11 conv2d from tensorflow python layers convolutional is deprecated and will be removed in a future version Instructions for updating Use tf keras layers Conv2D instead",
+    "created_at": "2019-08-27T12:47:10Z",
+    "closed_at": null,
+    "user": "sam2332",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "markhanslip",
+        "created_at": "2020-04-07T13:36:27Z",
+        "body": "I ve just run into the exact same issue As a side note I had to manually downgrade my TensorFlow from v2 to v1 using import tensorflow compat v1 as tf tf disable v2 behavior"
+      },
+      {
+        "user": "NaChuaN666",
+        "created_at": "2020-08-09T01:44:53Z",
+        "body": "How can I deal with this problem WARNING tensorflow From ipython input 2 6a171d8d9e59 5 dense from tensorflow python keras legacy tf layers core is deprecated and will be removed in a future version Instructions for updating Use keras layers Dense instead WARNING tensorflow From C Users Admin anaconda3 lib site packages tensorflow python keras legacy tf layers core py 187 Layer apply from tensorflow python keras engine base layer v1 is deprecated and will be removed in a future version Instructions for updating Please use layer call method instead WARNING tensorflow From ipython input 2 6a171d8d9e59 16 conv2d transpose from tensorflow python keras legacy tf layers convolutional is deprecated and will be removed in a future version Instructions for updating Use tf keras layers Conv2DTranspose instead WARNING tensorflow From ipython input 2 6a171d8d9e59 20 batch normalization from tensorflow python keras legacy tf layers normalization is deprecated and will be removed in a future version Instructions for updating Use keras layers BatchNormalization instead In particular tf control dependencies tf GraphKeys UPDATE OPS should not be used consult the tf keras layers BatchNormalization documentation WARNING tensorflow From ipython input 3 5b9e48b97d85 11 conv2d from tensorflow python keras legacy tf layers convolutional is deprecated and will be removed in a future version Instructions for updating Use tf keras layers Conv2D instead"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Saving and loading models?",
+    "state": "closed",
+    "body": "I noticed that the train method has a parameter checkpoint to load which is currently unused in the code I assume this would be part of a solution for saving and loading the current state of the model Would you be able to give any pointers on how to go about implementing something like this I would like to be able to run this code on a machine that is not running 24 7 so being able to save and resume the training would be a great feature",
+    "created_at": "2019-04-12T03:16:44Z",
+    "closed_at": "2019-04-13T23:42:44Z",
+    "user": "jpfender",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2019-04-12T03:36:02Z",
+        "body": "Yes check this out https github com gsurma face generator https github com gsurma face generator It s based on the image generator and is suited for saving loading models"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Same Hyperparameters different results?",
+    "state": "closed",
+    "body": "Hi thanks for sharing I m trying to replicate your results but I get different discriminator and generator losses using the same settings Hyperparameters IMAGE SIZE 200 NOISE SIZE 100 LR D 0 00004 LR G 0 0004 BATCH SIZE 64 EPOCHS 300 BETA1 0 5 WEIGHT INIT STDDEV 0 02 EPSILON 0 00005 SAMPLES TO SHOW 5 Does different hardware effect convergence I m using TensorFlow GPU RTX 2080 Ti Losses at epoch 43 300 losses 43 https user images githubusercontent com 30255150 55137969 73b1a400 5186 11e9 8e41 4ea5917ba2fe png Thanks in advance",
+    "created_at": "2019-03-28T07:23:45Z",
+    "closed_at": "2019-04-08T04:29:31Z",
+    "user": "artleague",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "artleague",
+        "created_at": "2019-04-08T04:29:31Z",
+        "body": "Solved corrected image size to 128"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Out of memory",
+    "state": "closed",
+    "body": "Hi thanks for your sharing I want to try some my own pictures but I get the error out of memory every time When I try it on my own PC with NVIDIA GTX950 GPU I got the out of memory in about 100 epochs When I try it on the PC with NVIDIA GTX1080Ti GPU I got the out of memory in about 700 epochs I have no idea why it happens Do you have any ideas Thank you very much",
+    "created_at": "2019-03-17T08:46:35Z",
+    "closed_at": "2019-03-25T01:07:20Z",
+    "user": "baizhenmao95",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2019-03-17T18:48:10Z",
+        "body": "Actually it s very simple you are running out of memory I would suggest two things 1 Reduce number of persistent allocations like images generated after every epoch Right now they are appended after every epoch so you can either generate them less often or just try to overwrite them instead of appending 2 Switch to an approach where you will storing image paths in RAM instead of images itself It might be slower but it will use significantly less memory You can check example there https github com gsurma face generator https github com gsurma face generator"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "\"ValueError: Sample larger than population or is negative\"",
+    "state": "closed",
+    "body": "Hello Really nice work I get a bug when trying to start Training your model ValueError Sample larger than population or is negative Please could you help Thanks in advance",
+    "created_at": "2019-02-13T11:31:37Z",
+    "closed_at": "2019-02-18T09:36:08Z",
+    "user": "ghost",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gsurma",
+        "created_at": "2019-02-13T16:36:33Z",
+        "body": "Hi My first guess is that len input images BATCH SIZE First of all you have to make sure that you have images in the INPUT DATA DIR Then you have to verify if they are properly passed to input images"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2019-02-13T17:06:31Z",
+        "body": "Ok thanks I ll have a look at it tomorrow I m importing the pictures from Google Drive I ll keep you up to date Mikel Arbiza Comunicaci n Creativa 670270854 tel 670270854 www mikelarbiza net http www mikelarbiza net El 13 feb 2019 a las 17 36 Greg notifications github com mailto notifications github com escribi Hi My first guess is that len input images BATCH SIZE First of all you have to make sure that you have images in the INPUT DATA DIR Then you have to verify if they are properly passed to input images You are receiving this because you authored the thread Reply to this email directly view it on GitHub https github com gsurma image generator issues 1 issuecomment 463270286 or mute the thread https github com notifications unsubscribe auth AruraJEzePx2KDMUZjyiQEEV yY6n1mBks5vND8RgaJpZM4a5M8v"
+      }
+    ]
+  }
+]

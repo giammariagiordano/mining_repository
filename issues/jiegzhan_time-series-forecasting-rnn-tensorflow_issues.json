@@ -1,0 +1,103 @@
+[
+  {
+    "number": 7,
+    "title": "predict for next 5 timesteps",
+    "state": "open",
+    "body": "what if I want to predict for next 5 timesteps",
+    "created_at": "2019-08-07T11:00:49Z",
+    "closed_at": null,
+    "user": "vik03",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "c1p81",
+        "created_at": "2020-01-10T20:24:57Z",
+        "body": "what if I want to predict for next 5 timesteps also for me it s interesting to have a window in future with predicted data 5 10 steps but i can t figure out how to modify the code"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "\"Predicted\" and \"Actual\" labels on the final chart are inversed",
+    "state": "open",
+    "body": "In train predict py there is a mix up with labels What should be Actual is shown as Predicted and vice versa python Plot graph predicted VS actual plt subplot 111 plt plot predicted raw label Actual plt plot y test raw label Predicted plt legend plt show",
+    "created_at": "2019-01-02T09:55:14Z",
+    "closed_at": null,
+    "user": "dmitryaleks",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "Multiple inputs",
+    "state": "open",
+    "body": "Hi I want to use your model for a time series that has 6 inputs and just 1 output can you help me I think i have to upload the file with 6 columns but i dont know how to read it and manage all this inputs Thank you",
+    "created_at": "2018-10-25T20:31:21Z",
+    "closed_at": null,
+    "user": "JuanCaBaqueroB",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "what is the parameter_file ?",
+    "state": "open",
+    "body": "what dose that file include",
+    "created_at": "2018-08-19T11:23:48Z",
+    "closed_at": null,
+    "user": "SaminSheyda",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "dmitryaleks",
+        "created_at": "2019-01-02T09:51:33Z",
+        "body": "You can see it right here https github com jiegzhan time series forecasting rnn tensorflow blob master training config json It contains model and training parameters"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Why did you use model.fit for training? ",
+    "state": "open",
+    "body": "To train a model in Tensorflow I checked other sources they use sessions in loop in order to train model with tf Session as sess init run for ep in range epochs sess run training op feed dict X x batches y y batches mse loss eval feed dict X x batches y y batches Why did you use model fit",
+    "created_at": "2018-03-22T08:23:36Z",
+    "closed_at": null,
+    "user": "hana9090",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TheEdoardo93",
+        "created_at": "2021-02-15T23:31:23Z",
+        "body": "To train a model in Tensorflow I checked other sources they use sessions in loop in order to train model with tf Session as sess init run for ep in range epochs sess run training op feed dict X x batches y y batches mse loss eval feed dict X x batches y y batches Why did you use model fit The code you wrote is TensorFlow 1 X which is overpassed by TensorFlow 2 X now we are at TensorFlow 2 4 The fit method is the simple way to train any Neural Network model implemented by using TensorFlow with Keras API"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Why you shuffle the sequence of training data?",
+    "state": "open",
+    "body": "In the pre processing before entering network model why you shuffle the sequence of training data Since the sequence is important in time series",
+    "created_at": "2018-03-22T08:17:59Z",
+    "closed_at": null,
+    "user": "hana9090",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JuanCaBaqueroB",
+        "created_at": "2018-10-25T13:53:00Z",
+        "body": "Did you find the answer"
+      },
+      {
+        "user": "dmitryaleks",
+        "created_at": "2019-01-02T09:49:52Z",
+        "body": "Train data is a normalized view of the raw data that has been split into windows Please see this logic Split data into windows raw for index in range len data adjusted window raw append data index index adjusted window Meaning that train data is also cut into windows E g for window size four you get 0 0 00289975 0 00517813 0 01367026 0 04971002 0 0 00810137 0 01080183 0 04694641 0 02928957 0 0 01875129 0 0546054 0 03709046 0 00535751 0 0 01493441 0 01937437 0 04702321 0 02583249 0 0 00450727 0 03257529 0 01106331 0 03605818 0 0 0281951 0 00658572 0 03169376 0 033546 Where first four elements of each sub array are inputs X and the last one is the actual value Y It is perfectly valid to shuffle those sub arrays as all that matters is that the sequence of elements is preserved within each individual sub array So shuffling is not an issue"
+      }
+    ]
+  }
+]

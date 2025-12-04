@@ -1,0 +1,258 @@
+[
+  {
+    "number": 49,
+    "title": "produce a heatmap highlighting word probability differences between AI and human texts to include as an image.",
+    "state": "open",
+    "body": "Human Written Text The morning sun peeked softly through the curtains filling the room with warmth I cherished those quiet moments sipping coffee and recalling memories from childhood AI Generated Text As the sun rises morning routines often include a comforting cup of coffee a ritual appreciated worldwide for its aroma and flavor Interpret the Visualization GLTR highlights words by color based on the predicted probability rank from a large language model Green Very high probability most predictable words by the AI Yellow Orange Medium probability Red Low probability more surprising unlikely words",
+    "created_at": "2025-07-16T21:13:24Z",
+    "closed_at": null,
+    "user": "CebelihleNcube",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 48,
+    "title": "how to detect chinese",
+    "state": "open",
+    "body": "Can this project be used to detect Chinese How can that be achieved",
+    "created_at": "2025-02-23T10:14:07Z",
+    "closed_at": null,
+    "user": "xiaohuaaibiancheng",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 47,
+    "title": "kel",
+    "state": "open",
+    "body": "a",
+    "created_at": "2024-10-01T06:16:35Z",
+    "closed_at": null,
+    "user": "Adreia67",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sperglord8008s",
+        "created_at": "2024-10-01T09:09:35Z",
+        "body": "what"
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "title": "Errors with new Python packages versions",
+    "state": "open",
+    "body": "Dear corresponding author s the requirements txt file contains unfixed versions of Python packages to install leading to several compatibility and behaviour errors Would it be possible to precise the exact version of the following installed packages in the demo version http gltr io transformers torch numpy connexion swagger ui flask PyYaml flask cors Thank you very much",
+    "created_at": "2024-09-25T14:43:07Z",
+    "closed_at": null,
+    "user": "alexcla99",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Vedantvijayhumbe",
+        "created_at": "2025-08-24T04:59:09Z",
+        "body": "if you are not able to run it due to packages being not upto date or need to be degraded then I recommend using virtual env of the python version that suites the codebase the most and then change the minimal configurations of requirements in requirements txt"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "tdh",
+    "state": "closed",
+    "body": "",
+    "created_at": "2024-05-20T16:08:34Z",
+    "closed_at": "2024-05-20T16:09:03Z",
+    "user": "andrezaparaizo",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 43,
+    "title": "ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it",
+    "state": "open",
+    "body": "When I am trying to run BERT server It s showing ConnectionRefusedError WinError 10061 No connection could be made because the target machine actively refused it",
+    "created_at": "2023-03-31T09:19:41Z",
+    "closed_at": null,
+    "user": "Saravananthedeveloper",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "demo at http://gltr.io/dist/index.html not working",
+    "state": "open",
+    "body": "The demo on this page does not analyze even very short sentences Can it be fixed image https user images githubusercontent com 8600477 133992484 75c15e3d 2413 4e05 92c1 b016359c7d5e png",
+    "created_at": "2021-09-20T11:07:38Z",
+    "closed_at": null,
+    "user": "vstarko",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "1Maxnet1",
+        "created_at": "2023-11-15T13:48:56Z",
+        "body": "The demo is still not working Can this be fixed Else I would propose to remove the link from the Readme md I can offer to do a PR for that"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "TypeError: Cannot read property 'map' of undefined when using the BERT model",
+    "state": "closed",
+    "body": "This the console output from chrome start js formatted 388 Uncaught in promise TypeError Cannot read property map of undefined at u wrangle start js formatted 388 at update start js formatted 290 at start js formatted 664 gpt2 works fine I verified that lm check probabilities works fine The issue must be from the TypeScript code which I m not familiar with",
+    "created_at": "2021-01-19T13:55:10Z",
+    "closed_at": "2021-01-20T14:59:16Z",
+    "user": "WissamAntoun",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "WissamAntoun",
+        "created_at": "2021-01-20T14:59:16Z",
+        "body": "the issue is that the request is always sending gpt 2 simple to the analyze function even if the model was BERT"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "ERROR: Model name 'bert-base-cased' was not found in model...",
+    "state": "open",
+    "body": "Attempting to run a test of the model receive the following error Model name bert base cased was not found in model name list bert base uncased bert large uncased bert base cased bert large cased bert base multilingual uncased bert base multilingual cased bert base chinese We assumed https s3 amazonaws com models huggingface co bert bert base cased tar gz was a path or url but couldn t find any file associated to this path or url Traceback most recent call last File C Users User Desktop test py line 344 in module main File C Users User Desktop test py line 320 in main lm BERTLM File C Users User Desktop test py line 193 in init self model to self device AttributeError NoneType object has no attribute to Have attempted to run on two different networks in case it was a network issue but appears it is not Code for reference api py import numpy as np import torch import time from pytorch pretrained bert import GPT2LMHeadModel GPT2Tokenizer BertTokenizer BertForMaskedLM class AbstractLanguageChecker Abstract Class that defines the Backend API of GLTR To extend the GLTR interface you need to inherit this and fill in the defined functions def init self In the subclass you need to load all necessary components for the other functions Typically this will comprise a tokenizer and a model self device torch device cuda if torch cuda is available else cpu def check probabilities self in text topk 40 Function that GLTR interacts with to check the probabilities of words Params in text str The text that you want to check topk int Your desired truncation of the head of the distribution Output payload dict The wrapper for results in this function described below Payload values bpe strings list of str Each individual token in the text real topk list of tuples ranking prob of each token pred topk list of list of tuple word prob for all topk raise NotImplementedError def postprocess self token clean up the tokens from any special chars and encode leading space by UTF 8 code u0120 linebreak with UTF 8 code 266 u010A param token str raw token text return str cleaned and re encoded token text raise NotImplementedError def top k logits logits k Filters logits to only the top k choices from https github com huggingface pytorch pretrained BERT blob master examples run gpt2 py if k 0 return logits values torch topk logits k min values values 1 return torch where logits min values torch ones like logits dtype logits dtype 1e10 logits class LM AbstractLanguageChecker def init self model name or path gpt2 super LM self init self enc GPT2Tokenizer from pretrained model name or path self model GPT2LMHeadModel from pretrained model name or path self model to self device self model eval self start token endoftext print Loaded GPT 2 model def check probabilities self in text topk 40 Process input start t torch full 1 1 self enc encoder self start token device self device dtype torch long context self enc encode in text context torch tensor context device self device dtype torch long unsqueeze 0 context torch cat start t context dim 1 Forward through the model logits self model context construct target and pred yhat torch softmax logits 0 1 dim 1 y context 0 1 Sort the predictions for each timestep sorted preds np argsort yhat data cpu numpy pos prob real topk pos list int np where sorted preds i y i item 0 0 for i in range y shape 0 real topk probs yhat np arange 0 y shape 0 1 y data cpu numpy tolist real topk probs list map lambda x round x 5 real topk probs real topk list zip real topk pos real topk probs str str bpe strings self enc decoder s item for s in context 0 bpe strings self postprocess s for s in bpe strings pos prob pos prob pred topk list zip self enc decoder p for p in sorted preds i topk list map lambda x round x 5 yhat i sorted preds i topk data cpu numpy tolist for i in range y shape 0 pred topk self postprocess t 0 t 1 for t in pred for pred in pred topk payload bpe strings bpe strings real topk real topk pred topk pred topk if torch cuda is available torch cuda empty cache return payload def sample unconditional self length 100 topk 5 temperature 1 0 Sample length words from the model Code strongly inspired by https github com huggingface pytorch pretrained BERT blob master examples run gpt2 py context torch full 1 1 self enc encoder self start token device self device dtype torch long prev context output context past None Forward through the model with torch no grad for i in range length logits past self model prev past past logits logits 1 temperature Filter predictions to topk and softmax probs torch softmax top k logits logits k topk dim 1 Sample prev torch multinomial probs num samples 1 Construct output output torch cat output prev dim 1 output text self enc decode output 0 tolist return output text def postprocess self token with space False with break False if token startswith with space True token token 1 print token elif token startswith token elif token startswith token with break True token if token startswith else token token if token startswith else token token if token startswith else token token if token startswith else token if with space token u0120 token if with break token u010A token return token class BERTLM AbstractLanguageChecker def init self model name or path bert base cased super BERTLM self init self device torch device cuda if torch cuda is available else cpu self tokenizer BertTokenizer from pretrained model name or path do lower case False self model BertForMaskedLM from pretrained model name or path self model to self device self model eval BERT specific symbols self mask tok self tokenizer convert tokens to ids MASK 0 self pad self tokenizer convert tokens to ids PAD 0 print Loaded BERT model def check probabilities self in text topk 40 max context 20 batch size 20 Same behavior as GPT 2 Extra param max context controls how many words should be fed in left and right Speeds up inference since BERT requires prediction word by word in text CLS in text SEP tokenized text self tokenizer tokenize in text Construct target y toks self tokenizer convert tokens to ids tokenized text Only use sentence A embedding here since we have non separable seq s segments ids 0 len y toks y torch tensor y toks to self device segments tensor torch tensor segments ids to self device TODO batching Create batches of x y input batches target batches for min ix in range 0 len y toks batch size max ix min min ix batch size len y toks 1 cur input batch cur target batch Construct each batch for running ix in range max ix min ix tokens tensor y clone mask index min ix running ix tokens tensor 0 mask index 1 self mask tok Reduce computational complexity by subsetting min index max 0 mask index max context max index min tokens tensor shape 1 1 mask index max context 1 tokens tensor tokens tensor min index max index Add padding needed padding max context 2 1 tokens tensor shape 1 if min index 0 and max index y shape 1 1 Only when input is shorter than max context left needed max context mask index right needed needed padding left needed p torch nn ConstantPad1d left needed right needed self pad tokens tensor p tokens tensor elif min index 0 p torch nn ConstantPad1d needed padding 0 self pad tokens tensor p tokens tensor elif max index y shape 1 1 p torch nn ConstantPad1d 0 needed padding self pad tokens tensor p tokens tensor cur input batch append tokens tensor cur target batch append y mask index 1 new segments segments tensor min index max index cur input batch torch cat cur input batch dim 0 cur target batch torch cat cur target batch dim 0 input batches append cur input batch target batches append cur target batch real topk pred topk with torch no grad for src tgt in zip input batches target batches Compute one batch of inputs By construction MASK is always the middle logits self model src torch zeros like src max context 1 yhat torch softmax logits dim 1 sorted preds np argsort yhat data cpu numpy TODO compare with batch of tgt pos prob real topk pos list int np where sorted preds i tgt i item 0 0 for i in range yhat shape 0 real topk probs yhat np arange 0 yhat shape 0 1 tgt data cpu numpy tolist real topk extend list zip real topk pos real topk probs pos prob pos prob pred topk extend list zip self tokenizer convert ids to tokens sorted preds i topk yhat i sorted preds i topk data cpu numpy tolist for i in range yhat shape 0 bpe strings self postprocess s for s in tokenized text pred topk self postprocess t 0 t 1 for t in pred for pred in pred topk payload bpe strings bpe strings real topk real topk pred topk pred topk return payload def postprocess self token with space True with break token SEP if token startswith with space False token token 2 if with space token u0120 token if with break token u010A token print token return token def main raw text Hello I am Jane Doe Tests for BERT lm BERTLM start time time payload lm check probabilities raw text topk 5 end time time print 2f Seconds for a run with BERT format end start print SAMPLE sample Tests for GPT 2 lm LM start time time payload lm check probabilities raw text topk 5 end time time print 2f Seconds for a check with GPT 2 format end start start time time sample lm sample unconditional end time time print 2f Seconds for a sample from GPT 2 format end start print SAMPLE sample if name main main",
+    "created_at": "2020-10-16T23:24:25Z",
+    "closed_at": null,
+    "user": "BenF99",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "Discriminator for evaluating fake text",
+    "state": "open",
+    "body": "Hello In your paper there was a section titled Empirical validation in which you compute AUC using multiple tests As I understand you trained a classifier using features generated from GLTR tool Coud you provide more details about the kind of classifier used how much training was done etc I am trying to replicate the results in the paper for my research Thank you",
+    "created_at": "2020-09-23T09:43:42Z",
+    "closed_at": null,
+    "user": "zainsarwar865",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "izhx",
+        "created_at": "2023-01-09T13:30:12Z",
+        "body": "Same questions here"
+      },
+      {
+        "user": "zainsarwar865",
+        "created_at": "2023-01-09T15:34:15Z",
+        "body": "Hey izhx they may not provide this but we reproduced their models in our paper You can find the code and paper here https github com jmpu DeepfakeTextDetection"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "API Not Working",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-09-17T20:24:32Z",
+    "closed_at": null,
+    "user": "BigSalmon2",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "This code is being plagiarised",
+    "state": "closed",
+    "body": "https github com llSourcell Watch Me Build an Education Startup Wanted to get the attention of the original authors on this It hurts to see the people who worked hard for this not being credited and some wannabe ml guru taking credit for this I did not have any other medium to report this sorry if this is not an appropriate place",
+    "created_at": "2020-06-03T19:24:17Z",
+    "closed_at": "2020-08-03T23:41:10Z",
+    "user": "vipulr8",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HendrikStrobelt",
+        "created_at": "2020-08-03T23:41:10Z",
+        "body": "Thank you for bringing this to our attention It s a shame to see such behavior"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Demo Website Not Working",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-05-21T19:27:40Z",
+    "closed_at": "2020-08-04T01:12:19Z",
+    "user": "BigSalmon2",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HendrikStrobelt",
+        "created_at": "2020-08-04T01:12:19Z",
+        "body": "thx I hope it is now a bit more stable after the update"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "KeyError when ’ style apostrophes (or quotations) are inputted as text. ",
+    "state": "closed",
+    "body": "Traceback File C Python38 lib site packages pytorch pretrained bert tokenization gpt2 py line 224 in genexpr token join self byte encoder ord b for b in token KeyError 8217 With quotations a KeyError 8220 is thrown When the text is changed by switching into it works fine but if not fixed it might cause mysterious errors especially when copy pasting text from another source",
+    "created_at": "2020-04-25T15:09:44Z",
+    "closed_at": "2020-08-04T01:10:04Z",
+    "user": "airmak",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "custom test",
+    "state": "closed",
+    "body": "Hii I am doing my final project and I need to run GLTR on my text dataset What should I do",
+    "created_at": "2019-12-22T02:05:20Z",
+    "closed_at": "2020-08-04T01:11:34Z",
+    "user": "Jiaxin-Wen",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HendrikStrobelt",
+        "created_at": "2020-08-04T01:11:34Z",
+        "body": "I assume that final project is over Sorry for the delays"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Demo at http://gltr.io/dist/index.html returns 500",
+    "state": "closed",
+    "body": "image https user images githubusercontent com 17134097 68372248 7e91d580 0166 11ea 9846 5d6c5d1972ba png Great work on the Repo Guys I was trying the demo but noticed that it did not work for me Maybe you could please look into it",
+    "created_at": "2019-11-07T08:28:23Z",
+    "closed_at": "2019-11-08T00:15:53Z",
+    "user": "CT83",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "CT83",
+        "created_at": "2019-11-08T00:15:53Z",
+        "body": "HendrikStrobelt fixed this Whoo"
+      },
+      {
+        "user": "thesofakillers",
+        "created_at": "2020-05-20T04:54:53Z",
+        "body": "Hi perhaps we need to reopen this issue I am getting the same exact error even on longer text"
+      }
+    ]
+  }
+]

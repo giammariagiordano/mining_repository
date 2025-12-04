@@ -1,0 +1,1673 @@
+[
+  {
+    "number": 55,
+    "title": "I appreciate your work!",
+    "state": "open",
+    "body": "But is there a Pytorch version",
+    "created_at": "2024-06-03T04:24:34Z",
+    "closed_at": null,
+    "user": "OSHMOS",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Mercury0315",
+        "created_at": "2025-01-10T02:43:18Z",
+        "body": "I want a Pytorch version too"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "title": "tensorflow 2",
+    "state": "open",
+    "body": "Hi I should run the code with tensorflow 2 Is there any way to remove arg spaces",
+    "created_at": "2022-08-02T13:38:28Z",
+    "closed_at": null,
+    "user": "zghn",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 53,
+    "title": "FileNotFoundError: [Errno 2] No such file or directory: 'tmp_result_0.pkl' and IndexError: list index out of range",
+    "state": "open",
+    "body": "I am facing 2 errors like here https github com mks0601 TF SimpleHumanPose issues 36 and here https github com mks0601 TF SimpleHumanPose issues 27 when I want to test the pre trained model https drive google com drive folders 1L FfRXuhbNJAO5vnuZ9iyzt2mMXB9YMY on name of input pose json https drive google com drive folders 1blrmQ2CRiCeJDjx7sFzLFOBtlALf2Uxa you provided I put the trained model under output model dump COCO images from 2017 Test images https cocodataset org download under data COCO images test2017 COCO annotation 2017 Testing Image info https cocodataset org download under data COCO annotations Also made the changes in data COCO dataset py regarding input pose path and main config py about testset and dataset as you explained at this issue https github com mks0601 PoseFix RELEASE issues 21 The tensorflow version is not stated in requirements txt therefore I tried with tf 1 9 1 10 and 1 11 Also tried both python test py gpu 0 1 test epoch 140 and python test py gpu 0 test epoch 140 Unfortunately I could not make it work Any suggestions",
+    "created_at": "2022-04-24T21:11:26Z",
+    "closed_at": null,
+    "user": "metehkaya",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2022-04-25T01:24:24Z",
+        "body": "Did you prepare bbox correctly"
+      },
+      {
+        "user": "metehkaya",
+        "created_at": "2022-04-25T10:10:56Z",
+        "body": "No I did not touch bbox attributes Btw I switched to another data https drive google com drive folders 10d8oSlCnWD n3CBARXFj7kDBOKXfSYmf you mentioned here https github com mks0601 PoseFix RELEASE issues 44 and which does not have bbox attribute Since the name contains 256x192 I also changed input shape at main config py but I faced the same errors"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2022-04-26T01:00:48Z",
+        "body": "Sorry it has been few years since I wrote this code so it is hard for me to get the reason quickly Please make sure at here https github com mks0601 PoseFix RELEASE blob 0b50ef9b49b2581aa1bb820bca0509de5a74eb42 main test py L182 whether you load the annot and input pose correctly"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "Missing modules in requirements",
+    "state": "open",
+    "body": "When I try running inference step I face with some errors It origins from the lack of modules listed in requirements It would be good to add matplotlib pycocotools and tensorflow",
+    "created_at": "2022-04-23T19:31:46Z",
+    "closed_at": null,
+    "user": "metehkaya",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 51,
+    "title": "Format of result.json",
+    "state": "open",
+    "body": "Thanks for the great work Just a little confusion here What is the format of the result json Is it supposed to be the same format of the name of input pose json I know name of input pose json should be the detection result from another model when running inference However is it right that when training for COCO the result json should be part of the annotation file person keypoints train2017 json except for the format difference",
+    "created_at": "2021-05-27T21:28:22Z",
+    "closed_at": null,
+    "user": "zlmlaker",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-05-27T22:40:10Z",
+        "body": "Please see here https github com mks0601 PoseFix RELEASE test which tells what result json is You can download result json at here https github com mks0601 PoseFix RELEASE results"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "the usage of the softmaxed heatmaps as the keypoint confidence scores",
+    "state": "closed",
+    "body": "Hello I would like to ask another 2 questions regarding your normalized softmax heatmaps Here ist the context for the two questions I am trying to output confidence scores from your model by extracting the peaks from your normalized softmax heatmap But it seems that this kind of integral heatmaps is not suitable for usage as a confidence score the peak values are very small just around 0 2 even the input image is a very simple case Here is one example the peak value from this heatmap is just 0 246 why the key point is very distinctive image https user images githubusercontent com 2276264 106157757 520b1480 6183 11eb 8cee 0b711f2d681f png Another example is that when I passed in a random image with a correct initial guess to the model the output heatmaps still look similar to the input initial guess as shown below This means that this kind of heat map cannot be used as a confidence score I am right image https user images githubusercontent com 2276264 106159603 46b8e880 6185 11eb 964a dcf74cb3899b png And here is the heatmap I used for visualization image https user images githubusercontent com 2276264 106157876 6fd87980 6183 11eb 8f92 c0c3290a86a6 png So my questions are Am I right that the integral heatmaps can not be used as confidence scores If it s not is there any way I can achieve confidence scores from an approach like PoseFix Thanks and I look forward to hearing from you soon Best Khanh",
+    "created_at": "2021-01-28T15:13:48Z",
+    "closed_at": "2021-02-25T23:03:14Z",
+    "user": "khanhha",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 49,
+    "title": "the reason behind the usage of render_onehot_heatmap for training target instead of  render_gaussian_heatmap",
+    "state": "open",
+    "body": "Hi I would like to ask about the difference between the two kinds of heatmaps in two repositories from you In the PoseFix repo I noticed that you used render one heatmap https github com mks0601 PoseFix RELEASE blob master main model py for generating the training target as shown below image https user images githubusercontent com 2276264 105155389 d4079780 5b0a 11eb 8cc6 78e8f371a2f9 png However in another repo from you TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose the gaussian heatmap function https github com mks0601 TF SimpleHumanPose blob master main model py is used for generating the training target instead as shown below image https user images githubusercontent com 2276264 105156257 dd453400 5b0b 11eb 9802 afda411b15af png Could you please help me clarify two things Is there are paper or description behind your render one hot heatmap function Is there any advantage of your render onehot heatmap over render gaussian heatmap that motivated you to use it in your PoseFix repo Thank you for your patience and I look forward to hearing from you soon",
+    "created_at": "2021-01-20T09:39:12Z",
+    "closed_at": null,
+    "user": "khanhha",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-20T14:59:27Z",
+        "body": "You can find answers of both questions in my PoseFix paper"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-20T15:29:13Z",
+        "body": "Sorry for wasting your time I should have read the paper more carefully Best"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-20T16:36:37Z",
+        "body": "No problem Let me know if you can t find them"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "input image normalization",
+    "state": "open",
+    "body": "Hello sorry for asking you too many questions I would like to know where the input images are actually normalized to ImageNet mean and standard deviation As far as I know the code just subtracts the input image by the pixel means np array 123 68 116 78 103 94 image https user images githubusercontent com 2276264 104747669 1585f480 5751 11eb 9632 b9131dc3508a png The input heatmaps are in the range of 0 255 0 image https user images githubusercontent com 2276264 104747743 29315b00 5751 11eb 8a82 0c8cddf1f06c png I can see two problems here the input value ranges are big 1 0 doe sit cause any gradient problem the input value range of input image and input heatmaps are not on the same scale Input images are subjected from the pixel means while the heatmap value ranges are in 0 255 Could you please describe a bit more about this kind of normalization Or Did I miss something from your code Thanks",
+    "created_at": "2021-01-15T15:48:14Z",
+    "closed_at": null,
+    "user": "khanhha",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-15T17:42:54Z",
+        "body": "the input value ranges are big 1 0 doe sit cause any gradient problem No Many works just use 0 255 pixel valued images as the input of their networks the input value range of input image and input heatmaps are not on the same scale Input images are subjected from the pixel means while the heatmap value ranges are in 0 255 The output scale does not have to be the same with that of the input"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-15T19:24:08Z",
+        "body": "Thanks for your answer The output scale does not have to be the same as that of the input Sorry for the misunderstanding I mean the scale value between two kinds of input input image and input keypoint heatmaps Image has a value range of 126 126 and input heatmap has a value of a range of 0 255 They are concatenated into a multi channel input before passing into convolution operations so I suppose that they should be normalized to the same scale Anyway your normalization technique produces accurate results so that means it works Maybe it s just a matter of training convergence Best"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-16T00:14:31Z",
+        "body": "Although they are concatenated their scales do not have to be in the same range The learnable weights will consider the scale difference I think you don t have to worry about that"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-16T07:32:07Z",
+        "body": "Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "inefficient heavy-CPU training",
+    "state": "closed",
+    "body": "Hello I would like to ask how much time did one epoch take when you trained the model and how much time for training 140 epochs the checkpoint you published I have managed to bring up the training and it looks like that the GPU is idle most of the time I guess it is due to the heavy CPU pose synthesis code as shown below image https user images githubusercontent com 2276264 104746225 482eed80 574f 11eb 9871 cac1c823ac52 png According to my estimation one COCO epoch is 9364 iterations It takes 6 minutes to finish 30 iterations This means 1 epoch will require 9364 30 6 1872 8 minutes 31 2133333333 hours That means it would take you around 150 days to finish 140 epochs right image https user images githubusercontent com 2276264 104746623 d4411500 574f 11eb 9847 d02354695219 png Thanks",
+    "created_at": "2021-01-15T15:32:57Z",
+    "closed_at": "2021-01-19T10:37:44Z",
+    "user": "khanhha",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-15T17:41:08Z",
+        "body": "Whicih ResNet type and input size are you using The running time of the log 13 00s r 0 02 tells you that GPU time is 13 00 second and cpu time is 0 02 second for each iteration Maybe reducing the input image size to 256 192 and changing ResNet type to ResNet 50 would be good for your GPU The error synthesize is very light and takes marginal computational cost"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-15T19:08:07Z",
+        "body": "Thanks for your quick response I use Resnet152 and the input size is 288x384 That s very strange because the GPU is idle most of the time and all of the CPUs are fully utilized 100 all of the time Can you tell me how long did one epoch take on your training machine"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-16T00:15:58Z",
+        "body": "I can t remember clearly I think Resnet 152 384x288 image took several days like two or three days Maybe the training time is reported in the paper"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-16T07:33:02Z",
+        "body": "Thank you very much I will do a thorough training on my machine to see what is the problem If there is anything new I will post it here"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-19T10:30:59Z",
+        "body": "hi the slow training problem is because TensorFlow 1 5 doesn t work Cuda11 0 on my machine and TensorFlow 1 5 silently switches to CPU Installing Cuda10 Cudnn 7 6 0 makes it work The training is now very fast 0 77 hours epoch on a machine of 4 GPUs Thanks a lot for your support The issue can be closed here"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-19T10:37:44Z",
+        "body": "Good for you"
+      },
+      {
+        "user": "zghn",
+        "created_at": "2022-08-02T12:35:07Z",
+        "body": "hi the slow training problem is because TensorFlow 1 5 doesn t work Cuda11 0 on my machine and TensorFlow 1 5 silently switches to CPU Installing Cuda10 Cudnn 7 6 0 makes it work The training is now very fast 0 77 hours epoch on a machine of 4 GPUs Thanks a lot for your support The issue can be closed here Hi I m trying to run the train py on GPU but I can t I ve installed CUDA 10 The output of nvcc version confirm it But the output of nvidia smi find CUDA 11 2 yet My Ubuntu version is 22 04 would you help me please What s the problem"
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "title": "Is there any plan to provide pre-trained weights available?",
+    "state": "closed",
+    "body": "I ve read the paper you wrote and found that this model agnostic post processing concept is really great and I think it would also work great with my pose estimation model too However since there is no pre trained weights that are trained end to end as suggested your paper I cannot validate my model with posefix right away Is there any plan to provide pre trained weights Thanks",
+    "created_at": "2021-01-05T02:54:58Z",
+    "closed_at": "2021-01-05T03:25:22Z",
+    "user": "daun-io",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-05T03:00:46Z",
+        "body": "Which pre trained weights do you want I cannot get your question There is pre trained PoseFix in the README"
+      },
+      {
+        "user": "daun-io",
+        "created_at": "2021-01-05T03:25:22Z",
+        "body": "Oh I ve read the README again and found the ResNet152 weights for posetrack2018 that I wanted to find Sorry for disturbing and thanks for the fast answer"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "converting model to ONNX for C++ inference with TensorRT",
+    "state": "closed",
+    "body": "Hello thanks for your awesome project I plan to convert your Tensorflow model to Onnx and then load the converted Onnx model using TensorRT in C for real time inference I wonder if it s possible to do that using this framework https github com onnx tensorflow onnx and your checkpoint Thanks",
+    "created_at": "2021-01-04T20:48:06Z",
+    "closed_at": "2021-01-05T12:56:11Z",
+    "user": "khanhha",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-05T01:29:42Z",
+        "body": "Sorry but I haven t used onnx"
+      },
+      {
+        "user": "khanhha",
+        "created_at": "2021-01-05T12:40:55Z",
+        "body": "Thanks for your response I was able to do that The inference in ONNX seems to produce correct results The issue can be closed here"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2021-01-05T12:56:11Z",
+        "body": "Good for you"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "Find data",
+    "state": "open",
+    "body": "Thank you for providing this function Where can I find name of input pose Json and result json Can you provide the download address",
+    "created_at": "2020-11-04T12:35:42Z",
+    "closed_at": null,
+    "user": "wangdong0556",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-11-04T12:46:34Z",
+        "body": "you can use any 2D pose estimation methods to obtain name of inptu pose json For example here https drive google com drive folders 10d8oSlCnWD n3CBARXFj7kDBOKXfSYmf usp sharing"
+      },
+      {
+        "user": "wangdong0556",
+        "created_at": "2020-11-04T13:01:25Z",
+        "body": "Thank you for your reply but I can t jump when I click here In addition I saw in TF Simplehumanpose that someone asked how to find human detection Json but it showed Closed this on 6 Feb 2019 name of input pose and name of inptu pose are the same Is result json 2D result of name of input pose Json"
+      },
+      {
+        "user": "metehkaya",
+        "created_at": "2022-04-23T19:27:38Z",
+        "body": "Can the file you provided here https drive google com drive folders 10d8oSlCnWD n3CBARXFj7kDBOKXfSYmf usp sharing be directly used during training or testing I guess it is just a part of MS COCO json file right Because according to video https youtu be h6s61a pqfM t 267 it seems that MS COCO compatible json file is actually larger"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2022-04-24T01:25:09Z",
+        "body": "That file is 2D pose estimation result of other 2D pose estimator not a part of MSCOCO dataset You can train and test on that file but the trained model will not be model agnostic refiner while the PoseFix is"
+      },
+      {
+        "user": "metehkaya",
+        "created_at": "2022-04-24T09:12:15Z",
+        "body": "I am aware that the data you provided is not a part of MSCOCO dataset Actually what I ask is that should that file follow MS COCO format completely I guess not because you don t make COCO name of inptu pose json at input pose load function like you did at COCO self test annot path at load annot function"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2022-04-24T09:36:22Z",
+        "body": "Sure The file format of that file follows 2D pose estimation output format used to evaluate it by COCO evaluation API The file format is completely different from COCO self test annot path"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "I can't use my GPU?",
+    "state": "open",
+    "body": "I run the pretrain model on tensorflow gpu1 8 0 The system print Generating testing graph on 1 GPUs two times But it needs several hours to finish the test process And I use nvidia smi to check my gpus and I find nothing running on them What s the problem Thanks for your reply",
+    "created_at": "2020-07-15T12:43:34Z",
+    "closed_at": null,
+    "user": "douyh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "douyh",
+        "created_at": "2020-07-15T12:44:12Z",
+        "body": "I test on COCO dataset"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "Combining all the three datasets",
+    "state": "open",
+    "body": "Hi mks0601 I would like to implement training on this repo but instead of a standalone dataset I wish to combine all the 3 datasets COCO MPII and PoseTrack I want to know whether that is possible My doubt is that COCO and PoseTrack have different keypoints Any ideas",
+    "created_at": "2020-07-08T09:32:15Z",
+    "closed_at": null,
+    "user": "Ashwin-Ramesh2607",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-08T10:39:50Z",
+        "body": "You can define some reference joint set maybe a union set of various joints sets and use this function https github com mks0601 3DMPPE POSENET RELEASE blob 15446c408f664702b348eb5a7f75250b28d14ed6 common utils pose utils py L86"
+      },
+      {
+        "user": "Ashwin-Ramesh2607",
+        "created_at": "2020-07-08T11:22:06Z",
+        "body": "mks0601 Thanks for that function So coco has 17 unique keypoints and PoseTrack has 15 unique keypoints 13 keypoints are common between the two The union set will therefore contain 19 keypoints So you re suggestion is to train a model with 19 keypoints am I correct"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-08T14:37:45Z",
+        "body": "Yes And you can make the loss of joints that are not intersection of the joint sets zero"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "Can we directly implement Posefix on Inference phase or should we have to do it from training itself?",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-07-07T07:21:09Z",
+    "closed_at": null,
+    "user": "athulvingt",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-07T08:12:39Z",
+        "body": "I cannot understand your question Could you specify it"
+      },
+      {
+        "user": "athulvingt",
+        "created_at": "2020-07-07T08:38:20Z",
+        "body": "what I understood is posefix is used to reduce the error in converting heatmaps to keypoints So is it possible to apply posefix on heatmap generated by any pose estimation model"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-07T09:10:44Z",
+        "body": "I think you didn t got the core contribution of PoseFix The main focus is to design model agnostic human pose refinement network"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "title": "About Fig.5 in your paper",
+    "state": "closed",
+    "body": "Hi mks0601 Is the fifth column Heatmap in Figure 5 from network output or softmax output Can you explain in detail how to draw Heatmap No relevant code was found on the project",
+    "created_at": "2020-07-03T14:06:48Z",
+    "closed_at": "2020-07-04T01:45:09Z",
+    "user": "Lixiuxiu2020",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-03T15:08:13Z",
+        "body": "I guess I got that by applying softmax on the network output"
+      },
+      {
+        "user": "Lixiuxiu2020",
+        "created_at": "2020-07-04T01:45:06Z",
+        "body": "Thank you"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "demo for a single image",
+    "state": "open",
+    "body": "could you provide a demo running on a single image",
+    "created_at": "2020-04-21T11:04:53Z",
+    "closed_at": null,
+    "user": "hosnasattar",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "snitchjinx",
+        "created_at": "2020-04-25T10:12:01Z",
+        "body": "Hello I wonder if it s feasible to test the pre trained COCO based posefix on a name of input pose json outside the COCO dataset Is the result in name of input pose json confined to image samples from COCO dataset Thanks"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-04-30T03:34:53Z",
+        "body": "Sorry for late reply hosnasattar For the single image input you only need to hack dataset py For example you can edit data COCO dataset py to load a single image and you can run the same command described in the README Could you try this trick snitchjinx Like the above answer you can hack dataset py The pre trained PoseFix model is not restricted to the images in the COCO dataset You can try any images with the initial pose"
+      },
+      {
+        "user": "hosnasattar",
+        "created_at": "2020-04-30T11:56:45Z",
+        "body": "mks0601 I can give it a try but I think it would be great in general if you could provide a demo for a single image"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-04-30T12:02:00Z",
+        "body": "Yeah I agree but I m busy doing other projects I ll try when I have time Thanks"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "Statistics on latency and throughput",
+    "state": "closed",
+    "body": "I would like to ask if there is any information on the model s latency and throughput on common GPUs and CPUs such as the Nvidia T4 Intel i7 CPU etc",
+    "created_at": "2020-03-21T06:54:46Z",
+    "closed_at": "2020-05-04T00:54:22Z",
+    "user": "pigubaoza",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-22T16:56:11Z",
+        "body": "Sorry I don t have NVIDIA T4 As I remember ResNet152 384x288 model is quite heavy that it runs slow maybe 5fps on GTX1080Ti If you use ResNet50 256x192 model then I think it would be quite fast maybe faster than 50fps on GTX1080Ti"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "title": "calculate miss_prob , jitter_prob and inv_prob on other dataset",
+    "state": "closed",
+    "body": "Thank you for your share I want to use your code on other dataset not keypoint of human I dont know how to Calculate the probility of miss inversion and jitter in detail Could you provide a little clue Thanks",
+    "created_at": "2020-03-11T05:00:49Z",
+    "closed_at": "2020-05-04T00:54:29Z",
+    "user": "965556810",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-17T02:24:56Z",
+        "body": "Hi I didn t define and calculate the error statistics but just borrowed them from Ronchi etal https arxiv org abs 1707 05388 Could you check this paper"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "About how to apply this work on my own data?",
+    "state": "closed",
+    "body": "First thanks for your work I want to apply your works on my own data please tell me how to do Thanks again",
+    "created_at": "2019-12-24T05:19:29Z",
+    "closed_at": "2020-03-17T02:20:47Z",
+    "user": "ZHyuwind",
+    "comments_count": 17,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-12-24T06:24:27Z",
+        "body": "You can see this code https github com mks0601 PoseFix RELEASE blob master data COCO dataset py Once you convert your dataset to MSCOCO format you can easily adapt that code to use your dataset"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-24T06:26:37Z",
+        "body": "Thank you very much I will try nbsp Original From Gyeongsik Moon notifications github com gt Date Tue Dec 24 2019 14 24 PM To mks0601 PoseFix RELEASE PoseFix RELEASE noreply github com gt Cc zy 1453012267 qq com gt Author author noreply github com gt Subject Re mks0601 PoseFix RELEASE About how to apply this work on my own data 36 You can see this code Once you convert your dataset to MSCOCO format you can easily adapt that code to use your dataset You are receiving this because you authored the thread Reply to this email directly view it on GitHub or unsubscribe"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-24T10:34:03Z",
+        "body": "Hello I also meet a problem that my own dataset how to get annotations or this file is not needed Thanks"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-12-24T11:24:23Z",
+        "body": "I cannot understand what you asked"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-24T11:40:33Z",
+        "body": "I cannot understand what you asked sorry maybe I need to understand how to transform dataset format again I feel so sorry about disturbing you Happy Christmas Eve"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-25T02:29:37Z",
+        "body": "Hello I want to ask a question that my own data also need annotations file like COCO s person keypoints val2017 json"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-12-25T03:37:15Z",
+        "body": "Right You should convert annotation of your own dataset to MSCOCO format"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-12-25T04:03:04Z",
+        "body": "Maybe these codes would be helpful https github com mks0601 TF SimpleHumanPose tree master tool These codes convert mpii or posetrack datasets to coco format"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-25T04:04:16Z",
+        "body": "Thanks a lot I will try"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-31T04:20:57Z",
+        "body": "Hello I used coco2017val dataset to get results from TF simple pose then take it as input pose json but also appear FileNotFoundError Errno 2 No such file or directory tmp result 0 pkl I don t know how to deal with it Please give me some advices thank you very much"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-12-31T08:09:23Z",
+        "body": "The tmp result 0 pkl is a just temporal file which is automatically generated during testing You should set proper dataset and testset in main config py and proper path in data COCO dataset py"
+      },
+      {
+        "user": "ZHyuwind",
+        "created_at": "2019-12-31T08:15:36Z",
+        "body": "The tmp result 0 pkl is a just temporal file which is automatically generated during testing You should set proper dataset and testset in main config py and proper path in data COCO dataset py Thank you my problem has solved"
+      },
+      {
+        "user": "lxy5513",
+        "created_at": "2020-05-06T01:44:35Z",
+        "body": "mks0601 Hi Could you please tell me how to generate test on trainset result json in my own dataset Could I produce it by TF SimpleHumanPose It is indispensable and what s it role"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-05-06T02:36:40Z",
+        "body": "Most of the images do not have all keypoint coordinate annotations because of truncations or severe occlusions I used test on trainset to fill the not annotated keypoint coordinates The format of the json file exactly follows MSCOCO format http cocodataset org format results You can use any human pose estimation method to get it"
+      },
+      {
+        "user": "lxy5513",
+        "created_at": "2020-05-06T02:54:04Z",
+        "body": "mks0601 Thanks your kind respond Do you mean that original coordinate annotations may not include all keypoints So the function of test on trainset is to mitigate the problem"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-05-06T04:26:30Z",
+        "body": "Yes For example the annotation file of COCO dataset contains keypoints like the below figure 2020 05 06 13 24 50 https user images githubusercontent com 13601723 81138485 303a8380 8f9d 11ea 9ff6 49aa0642a545 png Among x1 y1 v1 v1 provides the below information Each keypoint has a 0 indexed location x y and a visibility flag v defined as v 0 not labeled in which case x y 0 v 1 labeled but not visible and v 2 labeled and visible If v 0 the coordinates are not annotated which requires test on trainset"
+      },
+      {
+        "user": "lxy5513",
+        "created_at": "2020-05-06T04:38:14Z",
+        "body": "So kind of you thanks"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "ap",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-12-21T09:43:35Z",
+    "closed_at": "2020-03-17T02:26:27Z",
+    "user": "henbucuoshanghai",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "henbucuoshanghai",
+        "created_at": "2019-12-21T09:44:06Z",
+        "body": "where is the code to compute ap50 ap75 oks"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-17T02:26:27Z",
+        "body": "L152 of https github com mks0601 PoseFix RELEASE blob master data COCO dataset py"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "How much does the compute_iou bug affect the final AP?",
+    "state": "closed",
+    "body": "Can you tell me Thank you very much",
+    "created_at": "2019-11-05T06:04:18Z",
+    "closed_at": "2019-11-05T12:41:40Z",
+    "user": "hbin-ac",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-11-05T07:39:39Z",
+        "body": "I think it would effect very marginally The output of that function is used when synthesizing input pose of swap error in training stage Actually most of the pose error of other pose methods are jitter and miss swap error takes very small portion so I think that would not effect overall performance very much"
+      },
+      {
+        "user": "hbin-ac",
+        "created_at": "2019-11-05T12:41:40Z",
+        "body": "I have got it Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "input pose",
+    "state": "closed",
+    "body": "I have troubles understanding how exactly to prepare the input pose What is the difference in between the test on trainset path and input pose path line 33 and 34 in dataset py I would like to test with your provided keypoint results which I got from your result section but I m unsure on where to put them I tried both input pose test on trainset result json and input pose person keypoints test dev2017 Simple152 results json But unfortunatly I m getting the No such file or directory tmp results 0 pkl mistake which indicates that I didn t prepare the input pose as needed I tried all different testsets too train val test in config py In the end I would like to implement your code in combination with HRNet but just wanted to get it up and running with your provided results first Thanks in advance",
+    "created_at": "2019-10-21T14:45:43Z",
+    "closed_at": "2019-10-22T08:31:05Z",
+    "user": "carlottaruppert",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-10-21T15:43:43Z",
+        "body": "In the readme Train input pose test on trainset result json should be prepared before training This is test result on the training set with the groundtruth bbox and used when synthesizing input pose of not annotated keypoints in the training stage Testing result of TF SimpleHumanPose is used Test input pose name of input pose json is pose estimation result of any other method You have to rename the it and also input pose path of the data DATASET dataset py The input pose name of input pose json should be follow MS COCO format To test on the PoseTrack dataset run tool posetrack2coco output py before testing to convert PoseTrack output files to COCO format"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-10-21T15:44:40Z",
+        "body": "In the readme Troubleshoot 2 For those who suffer from FileNotFoundError Errno 2 No such file or directory tmp result 0 pkl in testing stage please prepare input pose properly The pkl files are generated and deleted automatically in testing stage so you don t have to prepare them Most of this error comes from inproper human detection file"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-10-21T15:44:51Z",
+        "body": "Hope this is helpful"
+      },
+      {
+        "user": "carlottaruppert",
+        "created_at": "2019-10-22T08:31:03Z",
+        "body": "Oh I m sorry I overread the test part somehow Thanks for making it clear"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": " Question about  'output/model_dump/MPII/*'",
+    "state": "closed",
+    "body": "thank u for you time how i can download the trained model files please",
+    "created_at": "2019-10-10T08:23:08Z",
+    "closed_at": "2019-10-10T22:51:24Z",
+    "user": "QuYJLeo",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-10-10T22:51:24Z",
+        "body": "You can download at README"
+      },
+      {
+        "user": "QuYJLeo",
+        "created_at": "2019-10-15T05:00:16Z",
+        "body": "oh thank u but README provide COCO and PoseTrack model not have MPII Did I need to train myself"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-10-15T07:31:16Z",
+        "body": "Oh I haven t trained models on MPII dataset Maybe you can try"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "kps_sigmas in data/MPII/dataset.py",
+    "state": "closed",
+    "body": "The kps sigmas of MPII is the same with COCO It seems not right Would you check it",
+    "created_at": "2019-10-01T14:39:38Z",
+    "closed_at": "2020-03-17T02:25:58Z",
+    "user": "bo-jia",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-17T02:25:54Z",
+        "body": "Sorry for late reply As MPII dataset does not have pre computed error statistics in https arxiv org abs 1707 05388 I just set the sigmas the same with those of COCO I think it would work well"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Algorithm error",
+    "state": "closed",
+    "body": "in lib tfflat base py iou algorithm will it has impact on the training process ymax np minimum dst roi 1 dst roi 3 src roi 0 src roi 3 ymax np minimum dst roi 1 dst roi 3 src roi 1 src roi 3 def compute iou self src roi dst roi IoU calculate with GTs xmin np maximum dst roi 0 src roi 0 ymin np maximum dst roi 1 src roi 1 xmax np minimum dst roi 0 dst roi 2 src roi 0 src roi 2 ymax np minimum dst roi 1 dst roi 3 src roi 0 src roi 3 interArea np maximum 0 xmax xmin np maximum 0 ymax ymin boxAArea dst roi 2 dst roi 3 boxBArea np tile src roi 2 src roi 3 len dst roi 1 sumArea boxAArea boxBArea iou interArea sumArea interArea 1e 5 return iou",
+    "created_at": "2019-09-27T09:41:04Z",
+    "closed_at": "2019-09-27T12:39:54Z",
+    "user": "HuangJunJie2017",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-27T11:08:19Z",
+        "body": "Oh thank you for finding out bug I think that should be changed to yours But I think that might effect overall performance marginally because this is only used to synthesize input pose when 1 there are many people in the input image 2 the joint is not annotated in the dataset Anyway great thanks"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "softmax_cross_entropy_with_logits",
+    "state": "closed",
+    "body": "1 why use this loss softmax loss with heatmaps 2 the x y of the keypoint use l1 loss the x y from the heatmaps",
+    "created_at": "2019-09-27T03:50:19Z",
+    "closed_at": "2020-03-17T02:28:04Z",
+    "user": "henbucuoshanghai",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-17T02:28:04Z",
+        "body": "1 My groundtruth one hot heatmap has a single blob in continuous space For example it has 0 0 5 0 5 1 not 0 0 1 0 Therefore I cannot use standard cross entropy loss function because it requires a single integer label for the groundtruth 2 x y is obtained from the heatmap using soft argmax operation"
+      },
+      {
+        "user": "Lixiuxiu2020",
+        "created_at": "2020-06-30T13:42:54Z",
+        "body": "Hi mks0601 thank you for sharing the code There is softmax cross entropy with logits in tensorflow but how to implement this function in pytorch"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-01T01:51:56Z",
+        "body": "You can simply google it https stackoverflow com questions 46218566 pytorch equivalence for softmax cross entropy with logits"
+      },
+      {
+        "user": "Lixiuxiu2020",
+        "created_at": "2020-07-02T02:40:30Z",
+        "body": "Thank you for the link I have a question that the input image is noly subtract mean 123 68 116 78 103 94 in your code Why not divide by the std 0 229 255 0 224 255 0 225 255 If I use img mean std to normalize the image in your code will it affect the effect of network training"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-07-02T05:07:16Z",
+        "body": "I don t think it would affect the final performance significantly"
+      },
+      {
+        "user": "Lixiuxiu2020",
+        "created_at": "2020-07-02T05:18:28Z",
+        "body": "Thank you"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "About Output shape",
+    "state": "closed",
+    "body": "Thank your implementation I have a question about input shape I looked into the code in main config py as below stride https user images githubusercontent com 16331519 65510668 1796c500 df08 11e9 9e94 85798ee29b37 PNG The question is why out shape is input shape 4 If I remembered correctly the input shape size width height will be 8 times smaller width 8 height 8 after feeding it to Resnet network It confused me a lot time Thank you",
+    "created_at": "2019-09-24T12:48:22Z",
+    "closed_at": "2020-03-17T02:21:27Z",
+    "user": "ghost",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-24T13:12:49Z",
+        "body": "The output of resnet is 32 32 I use three 2x deconvolutional layer to upsample it by 8 which becomes 4 4 For more information please read my paper"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "log of training",
+    "state": "closed",
+    "body": "Sincerely thanks for your contribution Would it is presumptuous of me to ask you to provide the log file of training process As my training with this repository didn t converge I used the following common and change nothing of the respository python train py gpu 0 7 here is part of the log train logs txt https github com mks0601 PoseFix RELEASE files 3629788 train logs txt",
+    "created_at": "2019-09-19T06:42:44Z",
+    "closed_at": "2020-03-17T02:21:43Z",
+    "user": "HuangJunJie2017",
+    "comments_count": 13,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T10:12:46Z",
+        "body": "This is very hard to see Please summarize your problem"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T10:18:36Z",
+        "body": "During the training process the train loss did t converge and the effectivity of the algorithm became worser and worser"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T10:22:26Z",
+        "body": "some time the loss become very large image https user images githubusercontent com 31001081 65235967 2e08df00 db0a 11e9 99e2 85a83a6d080b png and some time being negative image https user images githubusercontent com 31001081 65236081 66a8b880 db0a 11e9 9176 8351793a3e09 png"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T10:51:00Z",
+        "body": "Hmm I haven t met that problem Which dataset are you using"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T10:51:33Z",
+        "body": "COCO"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T10:53:35Z",
+        "body": "Your downloaded code is the most recent version"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T10:55:01Z",
+        "body": "Did you change dataset dataset PoseTrack COCO PoseTrack MPII testset val train test val there is no validation set for MPII to your desired settings COCO train"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T10:55:18Z",
+        "body": "I downloaded the code on the 8th of August I suppose it is the latest code"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T10:56:36Z",
+        "body": "dataset COCO COCO PoseTrack MPII testset val train test val there is no validation set for MPII I did t change the testset and suppose it is a params only for testing process"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T11:12:38Z",
+        "body": "Right It seems the number of iteration for one epoch is smaller than mine Do you use other version of COCO Anyway I haven t met this problem so I cannot give you clear answer Sorry I seems there is some issue with heatmap loss Could you debug yourself and let me know any progress Thank you One thing I want to check is your trained model gives bad performance because of this issue"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T12:04:58Z",
+        "body": "ok as i have modified the code as discussion in issue 8 to fixed the bug of InvalidArgumentError Could you please provide me with the change of loss during the training process"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-19T12:55:10Z",
+        "body": "Sorry I don t keep training log"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-19T12:57:56Z",
+        "body": "Never mind thanks for your patience"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "AssertionError",
+    "state": "closed",
+    "body": "The following error occurred when I was running train py file Please tell me how to solve it Thank you very much cannot read train2017 000000179322 jpg cannot read train2017 000000205086 jpg cannot read train2017 000000274079 jpg Process Worker 2 cannot read train2017 000000426975 jpg cannot read train2017 000000328791 jpg Process Worker 3 Process Worker 4 cannot read train2017 000000332096 jpg Process Worker 5 cannot read train2017 000000390718 jpg Process Worker 6 cannot read train2017 000000477774 jpg Process Worker 7 cannot read train2017 000000512793 jpg Process Worker 8 Process Worker 10 Process Worker 9 Traceback most recent call last Traceback most recent call last File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run Traceback most recent call last File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main gen batch py line 342 in generate batch assert 0 Traceback most recent call last AssertionError File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main gen batch py line 342 in generate batch assert 0 File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run File share8t work POSE ROOT Posefix main gen batch py line 342 in generate batch assert 0 File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main gen batch py line 342 in generate batch assert 0 AssertionError AssertionError AssertionError",
+    "created_at": "2019-09-09T08:13:03Z",
+    "closed_at": "2019-09-10T07:25:43Z",
+    "user": "zby-github",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-09T12:27:54Z",
+        "body": "please place image files in correct directory"
+      },
+      {
+        "user": "zby-github",
+        "created_at": "2019-09-10T00:43:09Z",
+        "body": "Thank you very much At 2019 09 09 20 27 55 Gyeongsik Moon notifications github com wrote please place image files in correct directory You are receiving this because you authored the thread Reply to this email directly view it on GitHub or mute the thread"
+      },
+      {
+        "user": "zby-github",
+        "created_at": "2019-09-10T01:11:39Z",
+        "body": "I still haven t solved the problem I don t know what the name of the file should be Process Worker 5 cannot read train2017 000000260145 jpg cannot read train2017 000000314904 jpg cannot read train2017 000000401061 jpg Process Worker 6 cannot read train2017 000000068812 jpg Process Worker 9 Process Worker 7 Process Worker 8 Process Worker 10 Traceback most recent call last Traceback most recent call last File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run Traceback most recent call last File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main gen batch py line 343 in generate batch assert 0 File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File opt conda lib python3 6 multiprocessing process py line 258 in bootstrap self run AssertionError File share8t work POSE ROOT Posefix main gen batch py line 343 in generate batch assert 0 File share8t work POSE ROOT Posefix main lib tfflat data provider py line 207 in run dp self map func dp File share8t work POSE ROOT Posefix main gen batch py line 343 in generate batch assert 0 AssertionError AssertionError 1 https user images githubusercontent com 52476622 64576404 f6cc5c80 d3aa 11e9 9076 bd278f76980d png 2 https user images githubusercontent com 52476622 64576413 fc29a700 d3aa 11e9 9522 c8dbeb36d9f4 png"
+      },
+      {
+        "user": "zby-github",
+        "created_at": "2019-09-10T07:25:38Z",
+        "body": "Problem solved thank you"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "getting start with the result.json",
+    "state": "closed",
+    "body": "First of all thanks for you generous sharing When I run the Test by the the tips you list I got the error that FileNotFoundError Errno 2 No such file or directory data PoseTrack input pose result json How can I get or prepare the result json file Looking forward to your replying",
+    "created_at": "2019-09-08T09:14:09Z",
+    "closed_at": "2019-09-09T02:14:19Z",
+    "user": "mc261670164",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "Getting test result for single image input",
+    "state": "closed",
+    "body": "Hi I was trying to run the model for single image for the testing how it works Initially it showed the tmp result pkl file not found error which I solved by removing the dependency of the code on temporary results I am having my input image in coco dataset format yet i am facing this error while running the code now I get the following error Is there a specific way to get rid of this error Screenshot from 2019 09 06 19 10 39 https user images githubusercontent com 12720159 64432439 23962080 d0da 11e9 9be7 c1e9905431ef png",
+    "created_at": "2019-09-06T13:42:25Z",
+    "closed_at": "2020-03-17T02:21:53Z",
+    "user": "ankitsharma07",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-06T14:29:24Z",
+        "body": "Please read README This issue has been raised by other users and solution is described in README tmp result pkl is just a temporary file automatically generated in testing stage You should not delete that code This error almost always happen when there is a bug in data loading part Please prepare your dataset into coco format EXACTLY"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "A question about the input results",
+    "state": "closed",
+    "body": "Whether the results of test on trainset and input pose need rescore and oks nms processing I trained the Pose Fix with res152 and default parameters but the metric was reduced by 0 1 I think it may be that the input pose results have been treated as above",
+    "created_at": "2019-09-04T09:22:34Z",
+    "closed_at": "2020-03-17T02:22:20Z",
+    "user": "HeathHose",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "HeathHose",
+        "created_at": "2019-09-04T09:29:44Z",
+        "body": "I used the HRNet code I added bbox and rescore box when I generated the test on trainset results rescore and oks nms the results when the input pose on test datasets"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-04T12:38:54Z",
+        "body": "I don t think removing rescoring and oks nms in test on trainset and input pose would hurt the accuracy of the PoseFix You can just use pre trained PoseFix which is provided in README Also for the test on trainset you can just download it in README Could you try again with provided files again"
+      },
+      {
+        "user": "HeathHose",
+        "created_at": "2019-09-05T14:57:06Z",
+        "body": "I don t think removing rescoring and oks nms in test on trainset and input pose would hurt the accuracy of the PoseFix You can just use pre trained PoseFix which is provided in README Also for the test on trainset you can just download it in README Could you try again with provided files again Thank you very much for your reply I have tested that oks nms has no hurt the accuracy of PoseFix and I will test your original results with your methods It may be that the results I have generated by other method are saturated and it is difficult for PoseFix to further improve it"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "How to continue fix from output of posefix?",
+    "state": "closed",
+    "body": "I continue fix form output of posefix but it has error of IndexError list index out of range in 286th in base py",
+    "created_at": "2019-08-28T08:36:53Z",
+    "closed_at": "2019-08-28T10:06:07Z",
+    "user": "gongzaizhou",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-28T10:06:35Z",
+        "body": "I solved it"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "No such file or directory: 'tmp_result_0.pkl'",
+    "state": "closed",
+    "body": "please prepare human detection result and input pose properly where the human detection result file should be placed",
+    "created_at": "2019-08-26T12:10:08Z",
+    "closed_at": "2019-08-26T12:51:58Z",
+    "user": "gongzaizhou",
+    "comments_count": 13,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:12:17Z",
+        "body": "The pkl files are generated and deleted automatically in testing stage so you don t have to prepare them why I need to prepare human detection result"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T12:12:37Z",
+        "body": "That is typo You don t have to prepare human detection result Only input pose is required"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:15:38Z",
+        "body": "That is typo You don t have to prepare human detection result Only input pose is required thanks for your rely"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:19:32Z",
+        "body": "my json file malformed or other reason"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:24:50Z",
+        "body": "MS COCO format for keypoint detection is image id int category id int keypoints x1 y1 v1 xk yk vk score float my json file need to add bbox key"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T12:25:39Z",
+        "body": "Please describe your problem in a more detailed way"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:28:33Z",
+        "body": "How do I solve No such file or directory tmp result 0 pkl I have rename input pose name of input pose json in dataset py"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T12:30:21Z",
+        "body": "Please check 34th line of data COCO dataset py There you should change input pose file name"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:35:34Z",
+        "body": "Please check 34th line of data COCO dataset py There you should change input pose file name I have change pose file name from person keypoints test dev2017 Simple152 results json to keypoints val2017 results 0 json in data COCO dataset py but still No such file or directory tmp result 0 pkl error"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T12:37:50Z",
+        "body": "I think you should change testset in config py to val or test Did you check"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T12:45:03Z",
+        "body": "Sorry it s my pot I forget to update changed from my ide thanks for your reply very much I solved this problem"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T12:47:54Z",
+        "body": "Good for you"
+      },
+      {
+        "user": "ankitsharma07",
+        "created_at": "2019-09-06T08:58:12Z",
+        "body": "I am trying to test this for a single image and according to that converted the image annotation into coco format When i provided the input pose for the same i am getting this error FileNotFoundError Errno 2 No such file or directory tmp result 0 pkl How do we test for single image"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Can you provide hrnet pre_trained models?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-08-26T10:21:41Z",
+    "closed_at": "2020-03-17T02:22:30Z",
+    "user": "gongzaizhou",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T11:29:26Z",
+        "body": "https github com leoxiaobin deep high resolution net pytorch"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T11:49:01Z",
+        "body": "https github com leoxiaobin deep high resolution net pytorch This is pytorch implementation would you like to share your tensorflow implementation"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T11:53:16Z",
+        "body": "I m not the author of HRNet so I don t know I used the pytorch implementation"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-27T06:21:11Z",
+        "body": "posefix HRNet is AP 76 7 this posefix trained in resnet 152 or hrnet"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-27T10:38:18Z",
+        "body": "resnet 152"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "How do you use the error statistics as prior information?",
+    "state": "closed",
+    "body": "There is a problem bothering me after reading your interesting work You said We use this error statistics as prior infromation to generate synthetic posese and use the synthesized poses to train our model in Abatract While you use the output heatmaps from other model as input to generate a better poses result but what is this to do with error statistics distribution Looking forward to you reply thanks",
+    "created_at": "2019-08-21T01:27:21Z",
+    "closed_at": "2020-03-17T02:22:43Z",
+    "user": "ustcjinggg",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-21T02:29:23Z",
+        "body": "If you read the paper fully you can find what the statistics means Could you read the introduction section"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Have you treid to fix the result from posefix?",
+    "state": "closed",
+    "body": "I wondered if posefix could continue fix the output from posefix",
+    "created_at": "2019-08-21T01:17:08Z",
+    "closed_at": "2020-03-17T02:22:52Z",
+    "user": "ustcjinggg",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-21T02:27:29Z",
+        "body": "Yes actually I tried this before paper submission Unfortunately the performance decreases when trying to refine the output of the PoseFix I think this is because the pose distribution of the PoseFix s output is different from other usual pose estimators"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "About the name_of_input_pose",
+    "state": "closed",
+    "body": "How can i get name of input pose json",
+    "created_at": "2019-08-14T08:44:36Z",
+    "closed_at": "2019-08-15T10:28:39Z",
+    "user": "lululalamm",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-14T11:30:37Z",
+        "body": "Let s say you are interested in COCO dataset You can run any previous pose estimation methods and use the test result as input pose The easiest way is to use the result of my other repo TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "speed of PoseFix",
+    "state": "closed",
+    "body": "thank you for that awesome release But can you tell me how to calculate speed per one image when testing",
+    "created_at": "2019-08-02T02:21:37Z",
+    "closed_at": "2019-08-06T12:06:50Z",
+    "user": "thancaocuong",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-06T04:11:41Z",
+        "body": "can you clarify what you want to know do you want to know how to measure seconds in python"
+      },
+      {
+        "user": "thancaocuong",
+        "created_at": "2019-08-06T06:51:12Z",
+        "body": "I want to calculate FPS when testing on COCO val2017 I ran your test script on COCO val2017 and got same AR and AP as SOTA But the total time was 7h27m54s I ran on single GTX 1080 TI I don t know why it took so long"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-06T11:59:36Z",
+        "body": "54th line of test py is start of each cropped image s testing You should start to measure second at line 55 and ends at line 128 The indentation level of line 55 and 128 should be the same I also feel that running time of PoseFix is slow I think that is because input is not RGB but RGB heatmap As heatmap is very large tensor 384x288xjoint num it will take time"
+      },
+      {
+        "user": "thancaocuong",
+        "created_at": "2019-08-06T12:06:46Z",
+        "body": "thank you so much I will try this"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "How to test on COCO test-set",
+    "state": "closed",
+    "body": "Glad you share the code of your intersting work May I ask how to test your result on COCO2017 test set cause I couldn t find keypoint annotations of COCO test set or deliver my result of test set in the http cocodataset org home I d appreciate if you could share the annotations or show me how to find it",
+    "created_at": "2019-07-23T03:00:04Z",
+    "closed_at": "2019-07-25T02:35:49Z",
+    "user": "ustcjinggg",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-23T15:21:03Z",
+        "body": "Hi COCO does not provide annotation for test set You have to use CodaLab following http cocodataset org guidelines"
+      },
+      {
+        "user": "ustcjinggg",
+        "created_at": "2019-07-25T02:35:49Z",
+        "body": "Thanks"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "something wrong with train",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-07-21T05:12:40Z",
+    "closed_at": "2019-07-25T01:01:24Z",
+    "user": "zhyujing",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "zhyujing",
+        "created_at": "2019-07-21T05:17:31Z",
+        "body": "Thank you for your great work I have some question shown below and I downloaded the json from the COCO official website but it seems to be wrong Could you please tell me the reason Thank you for your time Traceback most recent call last File home ZYJ PoseFix RELEASE master main train py line 30 in module trainer Trainer Model cfg File home ZYJ PoseFix RELEASE master main lib tfflat base py line 199 in init self data iter self itr per epoch self make data File home ZYJ PoseFix RELEASE master main lib tfflat base py line 228 in make data test on trainset json load f File opt anaconda3 lib python3 6 json init py line 299 in load parse constant parse constant object pairs hook object pairs hook kw File opt anaconda3 lib python3 6 json init py line 354 in loads return default decoder decode s File opt anaconda3 lib python3 6 json decoder py line 339 in decode obj end self raw decode s idx w s 0 end File opt anaconda3 lib python3 6 json decoder py line 357 in raw decode raise JSONDecodeError Expecting value s err value from None json decoder JSONDecodeError Expecting value line 1 column 15335425 char 15335424"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "This has an error",
+    "state": "closed",
+    "body": "Thank you very much for this work I have a question and hope to get some help when I run the code python test py gpu 0 1 test epoch 140 There is a erro Process Worker 1 Traceback most recent call last File opt conda envs tensorflow lib python3 6 multiprocessing process py line 258 in bootstrap self run File share8t work ZHR POSE ROOT main lib tfflat mp utils py line 34 in run msg self func self id self args self kwargs File test py line 202 in func range ranges gpu id ranges gpu id 1 IndexError list index out of range Traceback most recent call last File test py line 233 in module test int args test epoch File test py line 206 in test result MultiGPUFunc work File share8t work ZHR POSE ROOT main lib tfflat mp utils py line 82 in work id msg load pkl tmp result format self proc ids i File share8t work ZHR POSE ROOT main lib tfflat serialize py line 68 in load pkl with open pkl format name rb as f FileNotFoundError Errno 2 No such file or directory tmp result 0 pkl",
+    "created_at": "2019-07-16T03:51:07Z",
+    "closed_at": "2020-03-17T02:29:14Z",
+    "user": "2429581027",
+    "comments_count": 14,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-16T03:53:53Z",
+        "body": "How many GPU do you have"
+      },
+      {
+        "user": "2429581027",
+        "created_at": "2019-07-16T04:25:50Z",
+        "body": "Thank you very much for your reply I am sorry that I have not been able to respond to you in time I have four GPUs I don t know what went wrong I use two other methods to generate json files one of which puts input pose to run normally and the other one will get this error and I found another error Process Worker 2 Traceback most recent call last File opt conda envs tensorflow lib python3 6 multiprocessing process py line 258 in bootstrap self run File share8t work ZHR POSE ROOT main lib tfflat mp utils py line 34 in run msg self func self id self args self kwargs File test py line 202 in func range ranges gpu id ranges gpu id 1 IndexError list index out of range"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-16T11:32:02Z",
+        "body": "Do you use COCO dataset Can you print len ranges"
+      },
+      {
+        "user": "2429581027",
+        "created_at": "2019-07-17T03:27:30Z",
+        "body": "Yes I am using the json file generated by val2017 in AlphaPose And I don t know how to print len ranges thank you very much for your guidance Since I just came into contact with this subject my foundation is still very weak I feel that I need to learn a lot of relevant knowledge and change a lot of things in order to make my json can be used I have to express my gratitude to you again and we have learned a lot of valuable knowledge because of the excellent work of you and the people like you"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-24T09:05:50Z",
+        "body": "I have the same error i have 2 gpus but i run on one only the len ranges is 1 Any suggestions"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-24T12:51:08Z",
+        "body": "len ranges is ok Please prepare input pose correctly"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-24T12:54:34Z",
+        "body": "I used your Testing result on the COCO 2017 as an input pose should that be okay"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-24T12:55:53Z",
+        "body": "What do you mean by my testing result Also did you correctly set testset in config py"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-24T12:59:16Z",
+        "body": "i downloaded this results that you uploaded Testing result on the COCO 2017 training set of TF SimpleHumanPose kps In config py i set the testset val as i am using the val dataset only"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-24T13:00:21Z",
+        "body": "Please read README correctly What you downloaded is testing result on training set and what you need is testing result on val set"
+      },
+      {
+        "user": "gongzaizhou",
+        "created_at": "2019-08-26T10:10:55Z",
+        "body": "Can you provide person keypoints test dev2017 Simple152 results json"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-08-26T11:29:40Z",
+        "body": "I did t save the test result file"
+      },
+      {
+        "user": "QuYJLeo",
+        "created_at": "2019-09-11T09:35:30Z",
+        "body": "when I run the code python test py gpu 0 1 test epoch 140 I have an error like this C Anaconda3 python3 exe G PoseFix RELEASE master main test py gpu 0 test epoch 140 loading annotations into memory Done t 0 29s creating index index created Traceback most recent call last File G PoseFix RELEASE master main test py line 231 in module test int args test epoch File G PoseFix RELEASE master main test py line 204 in test result MultiGPUFunc work File G PoseFix RELEASE master lib tfflat mp utils py line 65 in work p start File C Anaconda3 lib multiprocessing process py line 112 in start self popen self Popen self File C Anaconda3 lib multiprocessing context py line 223 in Popen return default context get context Process Popen process obj File C Anaconda3 lib multiprocessing context py line 322 in Popen return Popen process obj File C Anaconda3 lib multiprocessing popen spawn win32 py line 89 in init reduction dump process obj to child File C Anaconda3 lib multiprocessing reduction py line 60 in dump ForkingPickler file protocol dump obj AttributeError Can t pickle local object test locals func Process finished with exit code 1 Can You Help Me Thank You"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2020-03-17T02:29:14Z",
+        "body": "Actually this code is only tested under multi GPU setting It seems you are using single GPU"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Some Question About the Train.py",
+    "state": "closed",
+    "body": "tensorflow python framework errors impl InvalidArgumentError indices 4 0 0 159 4 does not index into shape 16 96 72 17 node tower 0 ScatterNd During handling of the above exception another exception occurred",
+    "created_at": "2019-07-13T09:21:42Z",
+    "closed_at": "2020-03-17T02:23:21Z",
+    "user": "571502680",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-13T10:48:29Z",
+        "body": "Hi I committed a new version right before Can you check and run again"
+      },
+      {
+        "user": "571502680",
+        "created_at": "2019-07-16T02:41:50Z",
+        "body": "Yes i solved it how does it show the visualization of the result"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-16T02:43:43Z",
+        "body": "You can set vis True in test py"
+      },
+      {
+        "user": "HuangJunJie2017",
+        "created_at": "2019-09-18T08:19:01Z",
+        "body": "571502680 how did you solve the problem tensorflow python framework errors impl InvalidArgumentError indices 4 0 0 159 4 does not index into shape 16 96 72 17"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "About backbones",
+    "state": "closed",
+    "body": "Thanks to your brilliant works in PoseFix but I wonder if I change the backbone from resnet152 to stacked hourglass maybe 2 stacks will the performance get better Really appreciate your reply",
+    "created_at": "2019-07-11T07:32:05Z",
+    "closed_at": "2020-03-17T02:23:33Z",
+    "user": "pzn666",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-11T12:01:31Z",
+        "body": "Hi personally I think ResNet would be better than hourglass because recent 2d human pose estimation methods such as TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose achieve better accuracy than hourglass Why do you need to apply hourglass"
+      },
+      {
+        "user": "pzn666",
+        "created_at": "2019-07-14T07:41:22Z",
+        "body": "Hi the reason why I am trying to apply hourglass is our project already has a hourglass backbone for other purpose so I am thinking just using the synthetic part in the paper And also I m wondering can the idea of posefix applys on some regular 2d bbox detection for refinement or not Thx for ur reply"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-14T11:37:53Z",
+        "body": "I think you should try but as I said in my opinion I think ResNet would be better Also can you clarify which idea do you want to use If that is model agnostic refinement PoseFix assumes existing methods have similar error distribution as analyzed in Ronchi etal http openaccess thecvf com content ICCV 2017 papers Ronchi Benchmarking and Error ICCV 2017 paper pdf If you can categorize object detection error and analyze error of several methods which should have similar error distribution then model agnostic refinement can work If that is just synthetic error augmentation based on your defined bbox jittering that is just a data augmentation It should work especially can prevent overfitting but I wonder that could have a big meaning or contribution"
+      },
+      {
+        "user": "pzn666",
+        "created_at": "2019-07-14T14:44:13Z",
+        "body": "Thank you I will give it a try"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "AssertionError  : assert len(data_gt[i]) == len(data_out[i])",
+    "state": "closed",
+    "body": "Does the number of object detection in the test on train set might be different from the number of object detection in the ground truth",
+    "created_at": "2019-07-09T07:12:40Z",
+    "closed_at": "2019-07-11T12:02:34Z",
+    "user": "KevinJeon",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-09T12:09:09Z",
+        "body": "can you tell me where is that assertion"
+      },
+      {
+        "user": "KevinJeon",
+        "created_at": "2019-07-10T00:29:47Z",
+        "body": "thanks for your comment Its in lib tfflat base py line 307"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-10T01:28:35Z",
+        "body": "How do you train That block is to use testing result of any other pose estimation model on the training set That result is used when PoseFix try to synthesize not annotated joint in the training set For example in COCO dataset some joints are not annotated So I use other pose estimation method s result when synthesize of not annotated joint If you place result json in test on trainset like README there should be no problem"
+      },
+      {
+        "user": "KevinJeon",
+        "created_at": "2019-07-10T02:13:57Z",
+        "body": "I use my own dataset and I use the result json of hrnet model it emerges error like the length of gt is 7 and length of out is 6 And Actual Image has 7 objects but test result hrnet of image detect the 6 objects"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-10T12:43:54Z",
+        "body": "You should test your method using groundtruth bbox on the training set"
+      },
+      {
+        "user": "KevinJeon",
+        "created_at": "2019-07-11T00:28:15Z",
+        "body": "thks for your coment"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Run nms on Windows ",
+    "state": "closed",
+    "body": "The nms library is created to work on linux only so we have issues with cuda location etc Any version of it may work on windows 10",
+    "created_at": "2019-07-03T17:13:37Z",
+    "closed_at": "2020-03-17T02:23:46Z",
+    "user": "AnasArram",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-03T19:10:26Z",
+        "body": "Hi actually NMS is not important in the PoseFix if you can perform NMS for the initial pose estimation using any other pose estimator The NMS is only used in test py so you can just remove it"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-04T06:25:12Z",
+        "body": "Okay thanks for quick respond Can you please give a brief description on how to use other pose estimators like tf pose estimator in this PoseFix"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-04T11:12:37Z",
+        "body": "What do you mean by tf pose estimator There is no guideline for other pose estimator All you need is test result json file s of any methods Then just feed json file s to the PoseFix"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-17T09:38:20Z",
+        "body": "Thank you so much i got this error now File test py line 233 in module test int args test epoch File test py line 206 in test result MultiGPUFunc work File C Users ANAS Desktop PoseFix RELEASE master main lib tfflat mp utils py line 65 in work p start File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing process py line 112 in start self popen self Popen self File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing context py line 223 in Popen return default context get context Process Popen process obj File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing context py line 322 in Popen return Popen process obj File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing popen spawn win32 py line 65 in init reduction dump process obj to child File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing reduction py line 60 in dump ForkingPickler file protocol dump obj AttributeError Can t pickle local object test locals func tensorflow C Users ANAS Desktop PoseFix RELEASE master main Traceback most recent call last File string line 1 in module File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing spawn py line 105 in spawn main exitcode main fd File C Users ANAS AppData Local Continuum anaconda3 envs tensorflow lib multiprocessing spawn py line 115 in main self reduction pickle load from parent EOFError Ran out of input i just ran test py and used your coco results as an input pose"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-17T09:51:44Z",
+        "body": "It seems there exist some issue for window machine like this issue https github com matterport Mask RCNN issues 93 Could you turn off multi process by multi thread enable False in config py If available I suggest you to use linux machine"
+      },
+      {
+        "user": "AnasArram",
+        "created_at": "2019-07-17T10:05:45Z",
+        "body": "i just turned it off and ran again still have the same issue Will try to find another solution otherwise will run on linux machine"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "About training on COCO",
+    "state": "closed",
+    "body": "Hi Thanks for your work I tried to train on coco dataset and only changed dataset in default config but I encountered the error as follow 07 01 15 14 24 Initialize saver 07 01 15 14 27 Initialize all variables 07 01 15 14 39 Initialized model weights from root lsh2 PoseFix RELEASE main data imagenet weights resnet v1 152 ckpt 07 01 15 14 55 Start training 2019 07 01 15 15 19 420659 W tensorflow core framework op kernel cc 1273 OP REQUIRES failed at scatter nd op cc 119 Invalid argument indices 3 0 0 159 3 does not index into shape 16 96 72 17 Traceback most recent call last File opt conda lib python3 6 site packages tensorflow python client session py line 1334 in do call return fn args File opt conda lib python3 6 site packages tensorflow python client session py line 1319 in run fn options feed dict fetch list target list run metadata File opt conda lib python3 6 site packages tensorflow python client session py line 1407 in call tf sessionrun run metadata tensorflow python framework errors impl InvalidArgumentError indices 3 0 0 159 3 does not index into shape 16 96 72 17 node tower 0 ScatterNd ScatterNd T DT FLOAT Tindices DT INT32 device job localhost replica 0 task 0 device CPU 0 tower 0 Cast tower 0 concat 8 tower 0 ScatterNd shape During handling of the above exception another exception occurred Traceback most recent call last File root lsh2 PoseFix RELEASE main train py line 31 in module trainer train File root lsh2 PoseFix RELEASE main lib tfflat base py line 449 in train self graph ops 0 self lr self summary dict values feed dict feed dict File opt conda lib python3 6 site packages tensorflow python client session py line 929 in run run metadata ptr File opt conda lib python3 6 site packages tensorflow python client session py line 1152 in run feed dict tensor options run metadata File opt conda lib python3 6 site packages tensorflow python client session py line 1328 in do run run metadata File opt conda lib python3 6 site packages tensorflow python client session py line 1348 in do call raise type e node def op message tensorflow python framework errors impl InvalidArgumentError indices 3 0 0 159 3 does not index into shape 16 96 72 17 node tower 0 ScatterNd defined at root lsh2 PoseFix RELEASE main model py 108 ScatterNd T DT FLOAT Tindices DT INT32 device job localhost replica 0 task 0 device CPU 0 tower 0 Cast tower 0 concat 8 tower 0 ScatterNd shape Caused by op tower 0 ScatterNd defined at File root lsh2 PoseFix RELEASE main train py line 30 in module trainer Trainer Model cfg File root lsh2 PoseFix RELEASE main lib tfflat base py line 195 in init super Trainer self init net cfg data iter log name train logs txt File root lsh2 PoseFix RELEASE main lib tfflat base py line 125 in init self build graph File root lsh2 PoseFix RELEASE main lib tfflat base py line 142 in build graph self graph ops self make graph File root lsh2 PoseFix RELEASE main lib tfflat base py line 382 in make graph self net make network is train True File root lsh2 PoseFix RELEASE main model py line 156 in make network self render onehot heatmap target coord cfg output shape File root lsh2 PoseFix RELEASE main model py line 108 in render onehot heatmap heatmap tf scatter nd indices probs batch size output shape cfg num kps File opt conda lib python3 6 site packages tensorflow python ops gen array ops py line 7077 in scatter nd ScatterNd indices indices updates updates shape shape name name File opt conda lib python3 6 site packages tensorflow python framework op def library py line 787 in apply op helper op def op def File opt conda lib python3 6 site packages tensorflow python util deprecation py line 488 in new func return func args kwargs File opt conda lib python3 6 site packages tensorflow python framework ops py line 3274 in create op op def op def File opt conda lib python3 6 site packages tensorflow python framework ops py line 1770 in init self traceback tf stack extract stack InvalidArgumentError see above for traceback indices 3 0 0 159 3 does not index into shape 16 96 72 17 node tower 0 ScatterNd defined at root lsh2 PoseFix RELEASE main model py 108 ScatterNd T DT FLOAT Tindices DT INT32 device job localhost replica 0 task 0 device CPU 0 tower 0 Cast tower 0 concat 8 tower 0 ScatterNd shape Thanks for your time",
+    "created_at": "2019-07-01T07:18:41Z",
+    "closed_at": "2019-07-04T13:37:08Z",
+    "user": "BruceLeeeee",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "coordxyz",
+        "created_at": "2019-07-05T07:08:07Z",
+        "body": "I had same problem Did you solve the problem and how Thanks"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-05T12:41:51Z",
+        "body": "can you describe in a more detailed way what did you change from original code"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-05T12:42:36Z",
+        "body": "Did you train model on COCO and tried to test on other dataset"
+      },
+      {
+        "user": "BruceLeeeee",
+        "created_at": "2019-07-09T08:37:42Z",
+        "body": "bhyzhao mks0601 I only changed Config dataset to COCO I think tf scatter nd in render onehot headmap doesn t check indices for out of bounds induces the error If I clip the value of target coord it works"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-09T12:12:58Z",
+        "body": "which version of TF are you using according to my experience and doc https www tensorflow org api docs python tf scatter nd in case of GPU out of box indices are ignored"
+      },
+      {
+        "user": "BruceLeeeee",
+        "created_at": "2019-07-10T01:12:47Z",
+        "body": "I have tested on tensorfow 1 12 tensorflow 1 14 and tensorFlow gpu 1 14 and all have the same error According to the doc it should works but I don t know why"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-10T01:30:22Z",
+        "body": "I also used 1 12 when implementing PoseFix That is weird Can you tell me how did you clip the coordinates"
+      },
+      {
+        "user": "BruceLeeeee",
+        "created_at": "2019-07-11T12:10:56Z",
+        "body": "I am not sure if it is correct I think those out of bounds points are invalid so it would not affect loss right def render onehot heatmap self coord output shape batch size tf shape coord 0 x tf reshape coord 0 cfg input shape 1 output shape 1 1 y tf reshape coord 1 cfg input shape 0 output shape 0 1 x floor tf floor x y floor tf floor y x floor tf clip by value x floor 0 output shape 1 2 fix out of bounds x y floor tf clip by value y floor 0 output shape 0 2 fix out of bounds y indices batch tf expand dims tf to float tf reshape tf transpose tf tile tf expand dims tf range batch size 0 cfg num kps 1 1 0 1 1 indices batch tf concat indices batch indices batch indices batch indices batch axis 0 indices joint tf to float tf expand dims tf tile tf range cfg num kps batch size 1 indices joint tf concat indices joint indices joint indices joint indices joint axis 0 indices lt tf concat tf expand dims y floor 1 tf expand dims x floor 1 axis 1 indices lb tf concat tf expand dims y floor 1 1 tf expand dims x floor 1 axis 1 indices rt tf concat tf expand dims y floor 1 tf expand dims x floor 1 1 axis 1 indices rb tf concat tf expand dims y floor 1 1 tf expand dims x floor 1 1 axis 1 indices tf concat indices lt indices lb indices rt indices rb axis 0 indices tf cast tf concat indices batch indices indices joint axis 1 tf int32 prob lt 1 x x floor 1 y y floor prob lb 1 x x floor y y floor prob rt x x floor 1 y y floor prob rb x x floor y y floor probs tf concat prob lt prob lb prob rt prob rb axis 0 heatmap tf scatter nd indices probs batch size output shape cfg num kps normalizer tf reshape tf reduce sum heatmap axis 1 2 batch size 1 1 cfg num kps normalizer tf where tf equal normalizer 0 tf ones like normalizer normalizer heatmap heatmap normalizer return heatmap"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-07-12T00:14:27Z",
+        "body": "Yes they would not effect loss because there is also target valid"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "About the processing during test",
+    "state": "closed",
+    "body": "First thank you for sharing your great work In Section 7 3 in your paper there goes we used their released codes and pre trained models We tested them by ourselves without ensembling and testing time augmentation Did you mean using single input for all the related approaches PAFs 5 AE 20 Mask R CNN 11 CPN 7 and Simple 30 I m not clear Which procedure is yours in the paper 1 Only single input to the model 2 Multi input to the model probably with flip augmentation 3 Multi input and flip augmentation but without model ensemble Because for bottom up approaches they must use multi scale input images to cover the variant scales of poses And for other top down approaches they usually use flip augmentation to improve precision Looking forward to your help Thank you",
+    "created_at": "2019-05-16T11:50:23Z",
+    "closed_at": "2019-05-17T06:18:19Z",
+    "user": "hellojialee",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-05-17T02:37:47Z",
+        "body": "Sorry for not clear explanation I cannot remember exactly however I m sure that I did not use testing time multi scale augmentation and model ensemble Maybe I used testing time flip but flip improved performance not that much at most 1 mAP"
+      },
+      {
+        "user": "hellojialee",
+        "created_at": "2019-05-17T06:18:19Z",
+        "body": "Thank you for your answer"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "About the input_pose",
+    "state": "closed",
+    "body": "Thanks for your work and the patience I have encountered the error as follow Traceback most recent call last File train py line 30 in module trainer Trainer Model cfg File export home cyh PoseFix RELEASE main lib tfflat base py line 198 in init self data iter self itr per epoch self make data File export home cyh PoseFix RELEASE main lib tfflat base py line 226 in make data with open d test on trainset path r as f FileNotFoundError Errno 2 No such file or directory data COCO input pose test on trainset result json And I try to use the TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose to generate the test on trainset result json however I found that you don t provide the detections results on the train2017 Would you mind offering the detcetions on that or you could you please directly offer the test on trainset result json on train2017 Thanks for your time",
+    "created_at": "2019-04-04T06:38:56Z",
+    "closed_at": "2019-04-05T07:36:12Z",
+    "user": "YuhaoCheng",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-04-04T06:53:56Z",
+        "body": "You can download it in my README of PoseFix repo Please refer to Results section"
+      },
+      {
+        "user": "tianjiahao",
+        "created_at": "2019-04-04T06:58:59Z",
+        "body": "You have to set dataset backbone and input shape to those of the model in config py Pre trained PoseFix model COCO 2017 ResNet 152 384x288 model Testing result on the COCO 2017 training set of TF SimpleHumanPose kps just download the kps"
+      },
+      {
+        "user": "YuhaoCheng",
+        "created_at": "2019-04-05T07:36:12Z",
+        "body": "OK I got it Thanks for your time"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "About training on MPII datasets",
+    "state": "closed",
+    "body": "Hi thanks for your work However I can t find the mpii2coco py in tool and I m confused that how to get the input pose json Would you mind telling me how to get them Thanks for your time",
+    "created_at": "2019-04-03T09:19:33Z",
+    "closed_at": "2019-04-04T05:59:01Z",
+    "user": "YuhaoCheng",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-04-03T10:50:50Z",
+        "body": "Sorry You can see mpii2coco py and posetrack2coco py at TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose I updated my README Also you can use pose estimation results of any other methods as input pose json"
+      },
+      {
+        "user": "YuhaoCheng",
+        "created_at": "2019-04-04T03:39:27Z",
+        "body": "Thanks for apply I will check the TF SimpleHumanPose https github com mks0601 TF SimpleHumanPose Thanks for you time"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-04-04T05:59:01Z",
+        "body": "Perfect Ask me if have any questions"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "pre-train model? ",
+    "state": "closed",
+    "body": "Traceback most recent call last File test py line 220 in module test int args test epoch File test py line 192 in test result MultiGPUFunc work File home cv2018 Documents PoseFix main lib tfflat mp utils py line 82 in work id msg load pkl tmp result format self proc ids i File home cv2018 Documents PoseFix main lib tfflat serialize py line 68 in load pkl with open pkl format name rb as f FileNotFoundError Errno 2 No such file or directory tmp result 0 pkl where can I download this pkl and how to solve this problem thank you",
+    "created_at": "2019-03-27T09:04:39Z",
+    "closed_at": "2019-04-23T10:02:28Z",
+    "user": "tianjiahao",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-03-29T08:49:35Z",
+        "body": "That pkl file is temporal file in testing stage which is generated by each GPU Maybe you did some mistake about GPU numbering"
+      },
+      {
+        "user": "tianjiahao",
+        "created_at": "2019-03-30T02:31:24Z",
+        "body": "Thanks to your reply we only have one gpu 1080Ti to test so the problem arises in python test py gpu 0 test epoch 140"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-03-30T03:51:46Z",
+        "body": "Sorry I haven t test this code on single GPU environment I ll test and modify it"
+      },
+      {
+        "user": "wonju2lee",
+        "created_at": "2019-09-25T04:33:42Z",
+        "body": "I have the same problem could you please solve this issue or let me know the reason"
+      },
+      {
+        "user": "mks0601",
+        "created_at": "2019-09-25T05:19:39Z",
+        "body": "Most more than 90 of this error comes from wrong configuration Please check directories and testset in config py"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "About the speed of detection",
+    "state": "closed",
+    "body": "Hi thanks for your work Could you tell me about the speed of detection Thank you",
+    "created_at": "2019-03-18T03:25:55Z",
+    "closed_at": "2019-03-29T08:49:42Z",
+    "user": "ZhongXiaoFang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-03-19T12:31:09Z",
+        "body": "I haven t measured it but it would be similar with other pose estimation networks I think it would be about 10FPS"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Meaning and Value of 'input_pose_valid' and 'target_valid'?",
+    "state": "closed",
+    "body": "And is valid of some joints of an example or some examples of a batch",
+    "created_at": "2019-03-12T06:53:19Z",
+    "closed_at": "2019-03-13T06:01:14Z",
+    "user": "dragonbook",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-03-12T17:06:01Z",
+        "body": "As you can see they have number of joints dimension It represents whether each joint is annotated or can be used in training or not You can check this in COCO dataset homepage"
+      },
+      {
+        "user": "dragonbook",
+        "created_at": "2019-03-13T06:01:06Z",
+        "body": "Ok thank you"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "the model architecture",
+    "state": "closed",
+    "body": "Hi thanks for your work Can you provide model architecture picture or any other visible format Thanks a lot",
+    "created_at": "2019-03-12T03:39:56Z",
+    "closed_at": "2019-03-12T06:23:15Z",
+    "user": "murdockhou",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "mks0601",
+        "created_at": "2019-03-12T03:46:44Z",
+        "body": "Hi you can refer paper https arxiv org abs 1812 03595 for model architecture"
+      }
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "number": 5,
+    "title": "Segmentation fault while running openvino_deeplabv3_test.py ",
+    "state": "open",
+    "body": "Hi I could able to import openvino and IENetwork IEPlugin in my environment python3 5 and properly providing lr models but segmentation fault core dumped is occurred Could you please help us where is the issue Thank you",
+    "created_at": "2020-12-14T10:13:53Z",
+    "closed_at": null,
+    "user": "tvijay333",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "python mo_tf.py",
+    "state": "open",
+    "body": "ERROR Cannot pre process TensorFlow graph after reading from model file C Users xiaosong jiao Desktop deeplabv3 mnv2 pascal train aug frozen inference graph pb File is corrupt or has unsupported format Details Graph object has no attribute node For more information please refer to Model Optimizer FAQ INSTALL DIR deployment tools documentation docs MO FAQ html question 44",
+    "created_at": "2020-07-14T07:46:32Z",
+    "closed_at": null,
+    "user": "jiaoxiaosong",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "C++ demo",
+    "state": "open",
+    "body": "Required Your device RaspberryPi3 LaptopPC or other device name PC i3 8109 Required Your device s CPU architecture armv7l x86 64 or other architecture name x86 64 Required Your OS Raspbian Ubuntu1604 or other os name Ubuntu1604 Required Details of the work you did before the problem occurred br to integrate openvino deeplabv3 in my C project br br Required Error message br br br Required Overview of problems and questions br Nice work It would be perfect if you could give a c version of the demo Thanks br br",
+    "created_at": "2019-04-13T03:54:55Z",
+    "closed_at": null,
+    "user": "GallonDeng",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-04-13T08:55:56Z",
+        "body": "Thank you I added a task to TODO I do not know when it will be but I will do my best https github com PINTO0309 OpenVINO DeeplabV3 wiki TODO"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "ARM support",
+    "state": "open",
+    "body": "Hi Firstly great work Can I ask if ARM is still not supported even though OpenVINO has support for ARM now I see the line Caution It does not work on ARM architecture devices such as RaspberryPi TX2 in the README but then it s followed by a notice update Not sure if the notice implies that Deeplab supports ARM now Thanks",
+    "created_at": "2019-03-28T18:13:31Z",
+    "closed_at": null,
+    "user": "hoonkai",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-03-29T04:02:28Z",
+        "body": "Explain the meaning of my words OpenVINO officially supports armv7l ARM My test program does not support the combination of NCS2 ARM RaspberryPi TX2 Argmax and some other layers in the DeeplabV3 model do not support NCS2 You need a tricky implementation to get DeeplabV3 working properly"
+      },
+      {
+        "user": "hoonkai",
+        "created_at": "2019-03-29T17:39:26Z",
+        "body": "I see Any idea if your program works on a Celeron J1900 then I m still thinking about buying the NCS2 or not"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-03-30T00:03:03Z",
+        "body": "When using OpenVINO benchmark results are faster with inference speed using a Intel s CPU than using NCS2 You will have no major benefit in purchasing NCS2 LattePanda Alpha OpenVINO CPU Core m3 vs NCS1 vs NCS2 Performance comparison https ncsforum movidius com discussion 1329 lattepanda alpha openvino cpu core m3 vs ncs1 vs ncs2 performance comparison p1 Btw If you want to get the best performance I recommend buying Google Edge TPU Accelerator The following URL is my verification article I tested the operating speed of MobileNet SSD v2 using Google Edge TPU Accelerator with RaspberryPi3 USB2 0 and LaptopPC USB3 1 MS COCO https qiita com PINTO items dd6ba67643bdd3a0e595 https github com PINTO0309 TPU MobilenetSSD git"
+      },
+      {
+        "user": "hoonkai",
+        "created_at": "2019-03-30T05:26:46Z",
+        "body": "Thanks for the advice But isn t Intel Celeron unsupported According to https software intel com en us articles OpenVINO InferEngine the CPU target supports Intel Xeon with Intel AVX2 and AVX512 Intel Core Processors with Intel AVX2 Intel Atom Processors with Intel SSE Perhaps that s why Gemini91 s Celeron result is about 5x slower than NCS2"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-03-30T06:03:39Z",
+        "body": "It has been confirmed to work with Celeron However because it does not support the latest Intel architecture it seems that sufficient performance can not be achieved OpenVINO is designed to be optimized for Intel s Atom or higher CPU architecture https ncsforum movidius com discussion comment 4139 Comment 4139"
+      },
+      {
+        "user": "Aaronreb",
+        "created_at": "2019-12-09T09:46:14Z",
+        "body": "Does openvino works on raspberry pi without NCS"
+      },
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-12-09T13:05:31Z",
+        "body": "Aaronreb Yes"
+      },
+      {
+        "user": "hgscania",
+        "created_at": "2025-03-06T23:33:39Z",
+        "body": "alrtium footprint for lattepanda v1 github com hgscania"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": " Cannot load library 'lib\\libcpu_extension.so': 193 from cwd: D:\\freelance\\laincy\\model-exp-3\\OpenVINO-DeeplabV3",
+    "state": "closed",
+    "body": "Required Device LaptopPC Required device CPU architecture x86 64 Required OS windows Required I m running this command python openvino deeplabv3 test py d CPU pp D freelance laincy model exp 3 OpenVINO DeeplabV3 lib br br br Required Error message RuntimeError Cannot load library lib libcpu extension so 193 from cwd D freelance laincy model exp 3 OpenVINO DeeplabV3 br br br Required I put the plugin MKLDNNPlugin dll in lib folder and running the above command but it is unable to read CPU extension I tried with different paths as well Thanks br br br",
+    "created_at": "2019-03-25T10:58:15Z",
+    "closed_at": "2019-03-25T13:15:47Z",
+    "user": "Arham-Aalam",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-03-25T12:36:47Z",
+        "body": "Please try the following article The dll you should copy is not MKLDNNPlugin dll but cpu extension dll Or cpu extension dll https www bountysource com issues 59287029 intel inference engine cpu extension avx2 dll"
+      },
+      {
+        "user": "Arham-Aalam",
+        "created_at": "2019-03-25T13:15:14Z",
+        "body": "Thanks PINTO0309 It worked for me"
+      }
+    ]
+  }
+]

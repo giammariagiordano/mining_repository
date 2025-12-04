@@ -1,0 +1,205 @@
+[
+  {
+    "number": 18,
+    "title": "Hello, I hope you see my issue, and I would get your opinion. ",
+    "state": "open",
+    "body": "Hello I hope you see my issue and I would get your opinion I think that you were supposed to use TF IDF for DNN AND N GRAMS you just use CountVectorizer Why you use the function clean str only for loadData Tokenizer and function text cleaner only for loadData why your resn of differentiate thses cleaning data why you did not any validation your result you do not have y predic",
+    "created_at": "2024-05-18T23:53:02Z",
+    "closed_at": null,
+    "user": "TalaN1993",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 17,
+    "title": "Dataset problem",
+    "state": "open",
+    "body": "Hello I want to express my gratitude for providing both the paper and the dataset they have been immensely valuable to my research As I delved further into the dataset I came across an issue concerning the classification of the Depression area It appears that this area is categorized under both Medical and Psychology parent categories Could you please clarify whether this dual categorization is intentional I would greatly appreciate your insights on this matter Thank you once again for your assistance",
+    "created_at": "2023-08-08T15:45:54Z",
+    "closed_at": null,
+    "user": "FatosTorba",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "how it performs vs bert?",
+    "state": "open",
+    "body": "how it performs vs bert",
+    "created_at": "2023-07-03T22:46:35Z",
+    "closed_at": null,
+    "user": "Sandy4321",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "examples",
+    "state": "open",
+    "body": "Hello I ve read your publication about HDLTex and now I want to try it on my data Could you give me please examples of using HDLTex on WoS data And what should I do to get output data as text 1 name of its subject category text 2 name of its subject category and etc Thanks a lot for your answering",
+    "created_at": "2022-09-07T09:08:47Z",
+    "closed_at": null,
+    "user": "si-naja",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "dataset question",
+    "state": "open",
+    "body": "Is there a validation set for this paper",
+    "created_at": "2020-05-28T03:36:28Z",
+    "closed_at": null,
+    "user": "1429904852",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "dataset error？",
+    "state": "open",
+    "body": "This happens when I sort the mete data xls img width 654 alt 2019 12 19 09 58 04 src https user images githubusercontent com 20600259 71138372 42ae5d80 2246 11ea 8160 627e2ad7292a png img width 654 alt 2019 12 19 10 00 24 src https user images githubusercontent com 20600259 71138417 6671a380 2246 11ea 99c1 72e5b3089608 png Why do different area child label have the same Y2 Y child index And Y2 misses 8 when Y1 is 1 Could you explain it for me Thanks",
+    "created_at": "2019-12-19T02:04:09Z",
+    "closed_at": null,
+    "user": "lalalei21",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "Regarding multi label problem",
+    "state": "open",
+    "body": "Hello Does HDLTex support multi label problem as well I am trying to do Hierarchical multi label classification I read your paper and found it very thoughtful However I could not figure if HDLTex suports multilabel or not",
+    "created_at": "2019-06-17T04:25:21Z",
+    "closed_at": null,
+    "user": "spartian",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Data set label problem",
+    "state": "closed",
+    "body": "Thank you very much for your paper and data set However the labels in the data set are all numerical results I don t know if it is convenient to provide the relationship between the original label name and the index Looking forward to your reply",
+    "created_at": "2019-05-09T07:57:59Z",
+    "closed_at": "2019-05-11T01:28:08Z",
+    "user": "wenyu332",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2019-05-10T18:58:17Z",
+        "body": "Thanks for your question If you look at this web we explain everything belong to this dataset https data mendeley com datasets 9rw3vkcfy4 6 Best Kamran"
+      },
+      {
+        "user": "wenyu332",
+        "created_at": "2019-05-11T01:28:02Z",
+        "body": "Thanks for your reply I got it Thank you very much Your reply has helped me a lot Best Liu"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Error in model 0 try to re-generate an other model DNN  0",
+    "state": "closed",
+    "body": "Epoch 00001 val acc improved from inf to 0 76482 saving model to weights weights DNN 0 hdf5 Error in model 0 try to re generate another model DNN 0 keras optimizers Adagrad object at 0x7f3339451dd8 Train on 7769 samples validate on 3019 samples Epoch 1 120 Segmentation fault core dumped this appear when i start to run any examples any solution Mr Kamran",
+    "created_at": "2018-05-11T07:11:28Z",
+    "closed_at": "2018-05-11T08:18:15Z",
+    "user": "asifraza151",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2018-05-11T07:44:39Z",
+        "body": "I think you are running RMDL not HDLTex Am I right"
+      },
+      {
+        "user": "asifraza151",
+        "created_at": "2018-05-11T07:49:22Z",
+        "body": "yes bro"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-05-11T07:54:04Z",
+        "body": "So can you explain more your data is text or image input and also hardware do you use Are you using GPU or CPU And please continue conversation on RMDL page https github com kk7nc RMDL It could be useful for others"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-05-11T08:10:19Z",
+        "body": "I create issue https github com kk7nc RMDL issues 2"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-05-11T08:11:36Z",
+        "body": "and please explain more about your problem"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Evaluation  procedure used in HDLTex",
+    "state": "closed",
+    "body": "During the training of the HDLTex classification accuracy is printed after every epoch for Level 1 and Level2 But i think which is different from the evaluation procedure mentioned in the equation 21 of the paper and used for reporting the results in the paper Can you please explain the equation 21 in more detail",
+    "created_at": "2018-04-14T05:15:28Z",
+    "closed_at": "2018-05-11T08:00:14Z",
+    "user": "gourango01",
+    "comments_count": 9,
+    "labels": [],
+    "comments": [
+      {
+        "user": "kk7nc",
+        "created_at": "2018-04-16T05:34:13Z",
+        "body": "The evaluation of the HDLTex depends on the both levels as you can see in the Eq 21 e g if we have 2 labels L1 and L2 and in each level we have 2 classes in L1 and in L2 3 classes and and 4 classes which means we have datasets whit 7 classes so the accuracy is calculated with joint probability of L1 and L2"
+      },
+      {
+        "user": "chengdezhi",
+        "created_at": "2018-04-28T06:59:29Z",
+        "body": "I am also confused with the equation 21 Could you give more detailed description for the symbols in equation 21 like Acc n and so on Thanks"
+      },
+      {
+        "user": "chengdezhi",
+        "created_at": "2018-04-28T08:01:09Z",
+        "body": "Is baseline classification accuracy also computed the same as equation 21"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-04-28T09:35:17Z",
+        "body": "Thank you for your question Let me explain by a example if you have two level of labels L1 and L2 such as L1 Computer Science CS and Electrical Engineering EE two classes in L1 and in each classes in L1 include 2 classes such as L2 of CS Artificial Intelligence AI and Machine learning ML L2 of EE Signal Processing SP and Microelectronic Engineering ME Then we have 4 classes AI ML SP and ME so we generate three models one model in parent level and two models in children level as follows L1 CS vs EE L2 AI vs ML and SP vs ME Final accuracy is calculated as follows e g if you have 100 documents 60 belongs to CS 30 for AI and 30 for ML 40 belongs to EE 25 for SP and 15 for ME In L1 CS vs EE 94 out of 100 documents categorized in correct class e g 58 to CS and 42 to EE 94 ACC in L2 AI vs ML 49 out of 58 documents categorized in correct class ACC 84 4 in L2 SP vs ME 40 out of 42 documents categorized in correct class ACC 95 2 final accuracy 0 94 49 40 100 0 801 so the final accuracy is 83 66 But if we have 3 level of more we should with calculating ACC in parents then in children Level as follows ACC of child s levels such sum ACC of children number of children sum correct classes of all children levels N NOTE the final accuracy is joint probability of L1 and all L2s due all misclassified in L1 will be incurect in L2s e g if a document is CS ML 0 1 and misclassified L1 to EE the in L2 classified in ME 1 1 the second classes will be absolutely incorrect regardless of results EE ME or EE SP for your other question baseline classification accuracies are not computed as same as equation 21 because they don t have multi level models as hierarchy Please let me know if you have any other questions"
+      },
+      {
+        "user": "chengdezhi",
+        "created_at": "2018-04-28T10:26:42Z",
+        "body": "Thanks for your very clear explanations and examples It helps me a lot So your baseline classification methods employ just one model to distinguish classes in the last level like L2 AI vs ML and SP vs ME in your example above and the accuracy is computed as the same as general classification task without hierarchy I understand that correctly"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-04-30T02:53:16Z",
+        "body": "Yes baseline does not have mid level labels so they only employ just single level model such as AI ML SP va ME"
+      },
+      {
+        "user": "gourango01",
+        "created_at": "2018-04-30T14:35:09Z",
+        "body": "I have few questions about the training of HDLTex 1 Have you used same random seed i e 7 used in Data Helper py to split the available datasets WOS 5736 WOS 11967 WOS 46985 into train and test 2 How you have done the hyper parameter tunning"
+      },
+      {
+        "user": "kk7nc",
+        "created_at": "2018-05-01T19:25:42Z",
+        "body": "Have you used same random seed i e 7 used in Data Helper py to split the available datasets WOS 5736 WOS 11967 WOS 46985 into train and test yes but you can use other seeds about hyperparameter tuning we shows that HDLTex as Hierarchical Deep Learning models for text classification for Hierarchical datasets significantly improve accuracy and it does not depends on hyperparameters so if you use some hyperparameter tuning your results will be much better"
+      },
+      {
+        "user": "MarcosFP97",
+        "created_at": "2021-12-14T16:53:59Z",
+        "body": "Hi guys Anyone knows how many training epochs were used in the original study To obtain the same reported results Best Marcos"
+      }
+    ]
+  }
+]

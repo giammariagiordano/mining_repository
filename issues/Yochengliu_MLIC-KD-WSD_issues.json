@@ -1,0 +1,445 @@
+[
+  {
+    "number": 13,
+    "title": "example in python",
+    "state": "closed",
+    "body": "1st thank you for sharing your code I try to evaluate the code in python using PyCaffe Is there an example code for how to use wsddn or MLIC as evaluator in python i e just input an image and get labels I see that there s a need in proposals in wsddn deploy prototxt but I cannot find a way to produce them Thank you BTW I succeed in installing the code on Ubuntu18 04 Cuda10 cudnn5 1 opencv3 1 0",
+    "created_at": "2019-02-05T14:19:09Z",
+    "closed_at": "2019-02-17T11:35:22Z",
+    "user": "ShaihW",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ShaihW",
+        "created_at": "2019-02-06T14:38:32Z",
+        "body": "Also where can I find the weights for the layers after the VGG16 backbone"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2019-02-13T11:56:37Z",
+        "body": "1 Sorry there is no that example code but it seems easy to implement Below is the link that may be useful for you https stackoverflow com questions 32379878 cheat sheet for caffe pycaffe 2 We use EdgeBoxes algorithm to produce the proposals It is released at https github com pdollar edges or python version by thirdparty https github com dculibrk edge boxes with python 3 Great congratulations"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2019-02-13T12:05:47Z",
+        "body": "4 For training the weights after VGG16 backbone are initialized with Xavier algorithm 1 1 Glorot Xavier and Y Bengio 2010 Understanding the Difficulty of Training Deep Feedforward Neural Networks Journal of Machine Learning Research PP 9 2010 249 256"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "VOC07数据集检测map低",
+    "state": "closed",
+    "body": "VOC07 wsddn map 89 1 map label proposal info x min y min x max y max score proposal 500 edgebox 1e 5 loss",
+    "created_at": "2018-12-23T14:26:05Z",
+    "closed_at": "2019-01-14T13:19:09Z",
+    "user": "serena9525",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-24T07:06:40Z",
+        "body": "VOC07 test loss 1 2 test loss mAP WSDDN pascal wsddnVOCevaldet m https github com hbilen WSDDN blob master pascal wsddnVOCevaldet m"
+      },
+      {
+        "user": "serena9525",
+        "created_at": "2018-12-24T15:32:02Z",
+        "body": "wsddn 1e 5 10 epoch 1e 6 20 epoch test loss 1 5 wsddn"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-25T03:38:31Z",
+        "body": "5e 5 test loss 10 test loss test loss epoch"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Is NUS-WIDE image too small to use?",
+    "state": "closed",
+    "body": "The size of NUS WIDE images are almost 100 x 200 Are they suitable to resize to 672 or even 832 for training",
+    "created_at": "2018-12-13T08:16:57Z",
+    "closed_at": "2018-12-14T01:06:07Z",
+    "user": "ztwe",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-13T15:11:07Z",
+        "body": "Maybe but we didn t take this point into account You can take several controlled experiments by training WSDDN with different setting on scales and compare their classification MAPs to obtain a better setting on scales"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "How to initial the weights in the training of KD stage2?",
+    "state": "closed",
+    "body": "How to fill the arguments when call the command caffe MLIC build tools caffe train solver weights gpu 0 image https user images githubusercontent com 7899459 49705991 bd20c680 fc5d 11e8 9772 f22ad75aff29 png I try initializing the weights using the following argument Is that right weights kd stage1 modesl iter 400000 caffemodel pretrain VGG ILSVRC 16 layers caffemodel",
+    "created_at": "2018-12-10T01:27:36Z",
+    "closed_at": "2018-12-14T01:05:47Z",
+    "user": "ztwe",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-10T04:17:01Z",
+        "body": "weights WSDDN caffemodel layer names are modified kd stage1 modesl iter 400000 caffemodel Check last issue make sure the layer names of T WDet model have been modified"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-11T06:28:16Z",
+        "body": "The size of kd stage1 modesl iter 400000 caffemodel is almost the twice of WSDDN caffemodel because it contains both detection and classify network The detection network is exactly the same as WSDDN caffemodel including the same layer name If reloading WSDDN caffemodel first then the weight of detection network of kd stage1 modesl iter 400000 caffemodel will overwrite WSDDN caffemodel So the arguments should be shown as follwing which means reloading kd stage1 first weights kd stage1 modesl iter 400000 caffemodel WSDDN caffemodel layer names are modified"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-11T08:46:23Z",
+        "body": "The initial loss image https user images githubusercontent com 7899459 49788357 196e0e00 fd64 11e8 8369 26f4d9e6663d png The loss after 38000 iter with batchsize 3 image https user images githubusercontent com 7899459 49788416 47535280 fd64 11e8 8805 971848aa39d3 png"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-12T07:46:14Z",
+        "body": "Please check that the weight of T WDet in stage1 is frozen So actually the reloading result should be indifferent from the order of the arguments in weights"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-12T13:46:40Z",
+        "body": "Actually the pretrian model that training of stage2 needs is only stage1 model Is that right"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-13T15:05:32Z",
+        "body": "No please check that there are two classifiers fc wsd 8 c and fc wsd 8 d in T WDet in the prototxt of s2"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "KD stage1 train loss Nan",
+    "state": "closed",
+    "body": "pretrain model VGG ILSVRC 16 layers caffemodel solver net kd train stage1 prototxt test iter 800 test interval 2400 base lr 0 00001 momentum 0 9 type SGD weight decay 0 0005 lr policy inv gamma 0 00001 power 0 75 display 200 max iter 800000 snapshot 60000 snapshot prefix models solver mode GPU image https user images githubusercontent com 7899459 49682905 1e7a5580 faf7 11e8 8935 05feaab9b3eb png",
+    "created_at": "2018-12-08T07:14:49Z",
+    "closed_at": "2018-12-13T02:43:32Z",
+    "user": "ztwe",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-08T07:24:54Z",
+        "body": "If pretrain model changes to WSDDN both train loss and test loss drop quite quickly The test loss is about 0 07 after 10000 iter The train loss is about 0 00x and sometimes raises up 2 x Is that right if loading two pretrain models using weights modesl iter 100000 caffemodel VGG ILSVRC 16 layers caffemodel the loss is also Nan"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-10T03:56:54Z",
+        "body": "Because the names of caffe layers between the T WDet and S Cls are different in stage1 prototxt by using weights modesl iter 100000 caffemodel VGG ILSVRC 16 layers caffemodel the weight of T WDet is actually not initialized with modesl iter 100000 caffemodel You can check this by comparing WSDDN prototxt and stage1 prototxt This issue can be fixed by modifying the layer names in modesl iter 100000 caffemodel to be consistent with the ones in stage1 prototxt"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-10T10:09:50Z",
+        "body": "During transformation all source layers have been ignored Why image https user images githubusercontent com 7899459 49725450 a9e61900 fca6 11e8 823a 9d704dae8eab png"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-10T10:57:36Z",
+        "body": "I look into the net cpp const LayerParameter source layer param layer i const string source layer name source layer name int target layer id 0 while target layer id layer names size layer names target layer id source layer name target layer id if target layer id layer names size LOG INFO Ignoring source layer source layer name continue"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-10T14:32:29Z",
+        "body": "It seems that there is no conv2 3 In terms of early training shown in the screenshot it looks all right"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-11T01:59:04Z",
+        "body": "Yes conv2 3 is just used to check whether the transformation is really implemented what are the final stage1 loss and stage2 loss in your training"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-12T08:07:22Z",
+        "body": "The training loss of s1 is about 3800 no test loss we didn t test the model in s1 The loss sig and loss soft of s2 are both about 4"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-12T08:12:58Z",
+        "body": "To be specific the training loss in s2 is about 6 The test loss sig and loss soft of s2 are both about 4"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "WSD loss doesn't decrease",
+    "state": "closed",
+    "body": "solver net wsddn wsddn train prototxt test iter 800 test interval 2400 base lr 0 0001 momentum 0 9 type SGD weight decay 0 0005 lr policy inv gamma 0 00001 power 0 75 display 200 max iter 800000 snapshot 50000 snapshot prefix models solver mode GPU train batch size 3 When iteration comes to 30000 Loss varies between 20 and 50 Have you encounter the problem",
+    "created_at": "2018-12-06T13:33:54Z",
+    "closed_at": "2018-12-08T06:26:34Z",
+    "user": "ztwe",
+    "comments_count": 11,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-06T13:57:51Z",
+        "body": "No Did you finetune with ImageNet pretrained model If so you can try to decrease the learning rate We use base lr 0 00005 to train WSDDN"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-07T01:17:50Z",
+        "body": "Yes I finetune with the pretrian model The difference between 0 00005 and 0 0001 seems really tiny The scores of all 500 proposals are 1 Does batch size result in the problem I have tried moving your custom code to this multi gpu caffe project https github com sciencefans CaffeMex v2 But it still works in single GPU Now it comes to 90000 iteration which means the third epoch The minimum of loss is 12 The maximum is 70 But it still mainly varies between 20 and 50 WSDDN seems really hard to reproduce"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-07T01:56:54Z",
+        "body": "I think it may not be caused by the batch size If all the scores are 1 you can set score scale as 1 and score bias as 0 in prototxt Please make sure you have modified the prototxt according to your dataset classes 80 yours boxes number 500 yours and you have checked the datalist finetuning process carefully You can set a small lr rate as 1e 5 As a reference for you the initial loss for WSDDN in our experiments is always less than 10 and it converges quickly even with batch size 1 I also have no experience on multi gpu Caffe sorry to have no idea for this issue"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-07T02:39:10Z",
+        "body": "Please show your datalist with a screenshot solver and prototxt and tell me how you preprocess the images and how you acquire the bounding boxes I will try my best to find the issue"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-07T04:00:24Z",
+        "body": "It seems no issues Please set the score scale as 1 and score bias as 0 and try smaller lr rate like 1e 6 and 1e 7"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-07T04:35:43Z",
+        "body": "Search in the prototxt you will find them"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-07T11:13:40Z",
+        "body": "The training is blocked at iter 23000 for 2 hours It has been stopped by ctrl c What may cause this problem image file Or others"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-07T15:38:06Z",
+        "body": "Our best test loss is 3 98 We train WSDDN for 120 epochs If you didn t use the Caffe MLIC it may be caused by the Caffe you used Otherwise it may be caused by image file gpu or server You can training without shuffle data and check whether the bug would be reproduced stably at a fixed iteration If so you could locate the image file according to this iteration"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-08T02:59:51Z",
+        "body": "Now iteration comes to 110000 which means the 4th epoch and the loss of test varies between 5 5 and 6 Is that right If not how to decrease The reason of being blocked may be the insufficient of PC memory"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-08T03:31:40Z",
+        "body": "Sorry we can not judge whether your test loss is right because the setting you use is not consistent with ours We can only suggest you train for more epochs and possibly try other lr rate strategies like multi step"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-08T06:26:31Z",
+        "body": "Thx"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "train WSD error",
+    "state": "closed",
+    "body": "GPU has 16GB memory The error is shown as following image https user images githubusercontent com 7899459 49562628 52b71000 f957 11e8 9972 f420ceed0800 png",
+    "created_at": "2018-12-06T05:02:53Z",
+    "closed_at": "2018-12-06T09:23:29Z",
+    "user": "ztwe",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-06T06:46:53Z",
+        "body": "You can decrease the batch size in prototxt or decrease the image size by modifying the new height new width and the scale factors"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-06T06:51:19Z",
+        "body": "Actually I have try batch size 8 or 16 it showed the same error I will try smaller image size"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-06T07:19:22Z",
+        "body": "We use 16 GPUs to train and test Maybe small batch size is also ok as in the WSDDN paper they set batch size 1"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-06T08:08:58Z",
+        "body": "Caffe MLIC is the official Caffe in which our implementation of MLIC KD WSD is merged It may not well support multiple gpus You can refer to some multi gpu implementations of Caffe by searching caffe multigpu on github The links below may be useful https github com BVLC caffe blob master docs multigpu md"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-06T09:23:21Z",
+        "body": "I had tried gpu before It s useless Anyway thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Is the image inputed to Edgebox resize to 672?",
+    "state": "closed",
+    "body": "The question is shown as title When train T WDet model it upsamples to 736 832 and downsamples to 480 576 Is that right Another question is are train 672 mscoco edge box score txt in train stage1 prototxt and train 672 mscoco withebscore txt in wsddn train prototxt the same file",
+    "created_at": "2018-12-05T12:47:19Z",
+    "closed_at": "2018-12-06T05:00:58Z",
+    "user": "ztwe",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-05T14:33:27Z",
+        "body": "Q1 We input original image to EdgeBoxes for acquiring proposal info Then the proposal info is written into the datalist and the coordinates are dynamically and randomly resized according to the setting in Caffe prototxt This is implemented in Caffe source code In short anyway is ok but remember to unify the image size and the coordinates Q2 Yes"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-06T05:00:55Z",
+        "body": "Thx"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Is the score of edgebox necessary?",
+    "state": "closed",
+    "body": "It s not easy to get the score of edgebox using opencv",
+    "created_at": "2018-12-05T01:33:35Z",
+    "closed_at": "2018-12-05T08:19:44Z",
+    "user": "ztwe",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-12-05T01:49:40Z",
+        "body": "Yes it is necessary for datalist preparing If you can not get a score for a bounding box you can just set score 1 instead"
+      },
+      {
+        "user": "ztwe",
+        "created_at": "2018-12-05T08:19:42Z",
+        "body": "Thx"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "train fail",
+    "state": "closed",
+    "body": "root 8c6f4b497c8d github MLIC KD WSD caffe MLIC build tools caffe train solver wsddn wsddn train prototxt libprotobuf ERROR google protobuf text format cc 274 Error parsing text format caffe SolverParameter 1 5 Message type caffe SolverParameter has no field named name F1202 08 43 41 097613 30002 upgrade proto cpp 1095 Check failed ReadProtoFromTextFile param file param Failed to parse SolverParameter file wsddn wsddn train prototxt",
+    "created_at": "2018-12-02T08:44:26Z",
+    "closed_at": "2018-12-04T01:32:59Z",
+    "user": "ztwe",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ShaihW",
+        "created_at": "2019-02-07T07:53:50Z",
+        "body": "Hi ztwe How did you solve this issue"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "build fail",
+    "state": "closed",
+    "body": "Environment cuda9 0 cudnn7 1 src caffe layers human att data layer cpp 324 100 error redeclaration of std vector std cxx11 basic string char caffe HumanAttDataLayer Dtype StrSplit std cxx11 string std cxx11 string may not have default arguments fpermissive std vector std string HumanAttDataLayer Dtype StrSplit std string str std string sep Makefile 568 recipe for target build release src caffe layers human att data layer o failed make build release src caffe layers human att data layer o Error 1",
+    "created_at": "2018-12-02T07:36:30Z",
+    "closed_at": "2018-12-02T08:26:13Z",
+    "user": "ztwe",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "coco数据集的评价指标MAP",
+    "state": "closed",
+    "body": "coco map voc2012",
+    "created_at": "2018-11-05T14:24:17Z",
+    "closed_at": "2018-12-04T03:48:42Z",
+    "user": "wywywy01",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-11-17T14:33:29Z",
+        "body": "https github com zhufengx SRN multilabel tools"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": " error when I compile caffe",
+    "state": "closed",
+    "body": "Thanks for your code There is an error when I compiled caffe Here is the error information home imre zlin code caffe src caffe util interp cu 237 error identifier Half is undefined home imre zlin code caffe src caffe util interp cu 238 error Half is not a type name home imre zlin code caffe src caffe util interp cu 239 error Half is not a type name It seems that the Half below is not defined in interp cu How can I fix this problem void caffe gpu interp2 backward Half false const int channels Half data1 const int x1 const int y1 const int height1 const int width1 const int Height1 const int Width1 const Half data2 const int x2 const int y2 const int height2 const int width2 const int Height2 const int Width2 Indeed there is another error about Half File roi pooling layer cu includes a half hpp include caffe half half hpp which cause a not found error And I can t find this half hpp in caffe cloned from https github com BVLC caffe url I removed this line then it goes well",
+    "created_at": "2018-10-23T12:43:22Z",
+    "closed_at": "2018-12-04T03:49:09Z",
+    "user": "ZhangLin-PKU",
+    "comments_count": 12,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-10-23T13:21:11Z",
+        "body": "Sorry for the two compiling errors Error 1 we have update the mentioned files with new version Error2 just removing that line Thank you for your findings please have a try again and let us know if you succeed"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-10-23T14:39:24Z",
+        "body": "Thank you for your help These two errors have been fixed In interp cu there still have a not exist error in line 3 include caffe common cuh I removed it Is that right And this time error appears in data transformer cpp Here is the error info home imre zlin code caffe src caffe data transformer cpp In member function void caffe DataTransformer Dtype TransformDataLabel const cv Mat caffe Blob Dtype int int int Dtype home imre zlin code caffe src caffe data transformer cpp 27 44 error class caffe TransformationParameter has no member named random sized crop const bool is random sized crop param random sized crop home imre zlin code caffe src caffe data transformer cpp 46 51 error there are no arguments to Rand that depend on a template parameter so a declaration of Rand must be available fpermissive const bool do mirror param mirror Rand 2 home imre zlin code caffe src caffe data transformer cpp 46 51 note if you use fpermissive G will accept your code but allowing the use of an undeclared name is deprecated home imre zlin code caffe src caffe data transformer cpp 81 48 error there are no arguments to Rand that depend on a template parameter so a declaration of Rand must be available fpermissive h off Rand img height crop size 1 home imre zlin code caffe src caffe data transformer cpp 82 47 error there are no arguments to Rand that depend on a template parameter so a declaration of Rand must be available fpermissive w off Rand img width crop size 1 home imre zlin code caffe src caffe data transformer cpp In instantiation of void caffe DataTransformer Dtype TransformDataLabel const cv Mat caffe Blob Dtype int int int Dtype with Dtype float home imre zlin code caffe src caffe data transformer cpp 146 1 required from here home imre zlin code caffe src caffe data transformer cpp 37 3 error in argument to unary if is random sized crop home imre zlin code caffe src caffe data transformer cpp 46 49 error Rand was not declared in this scope const bool do mirror param mirror Rand 2 many errors about Rand How can I fix it By the way I replaced the origin data transformer cpp and data transformer hpp using the files you give"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-10-29T03:02:24Z",
+        "body": "Yochengliu Is there any solution"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-10-29T11:19:20Z",
+        "body": "Error1 We updated all the interp relative files in last issue please check them or just clone again Error2 We add the Rand functions in data transformer cpp hpp Note that do not directly replace the cpp files in official caffe with the given cpp files maybe you should add the given functions into the corresponding codes cpp hpp Please show us if you find errors again"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-10-29T12:30:36Z",
+        "body": "Thanks for your help again I add code of provided data transformer cpp hpp to original files and the problem is solved This time there are three not found errors data layers hpp 17 43 fatal error caffe internal thread array hpp No such file or directory data layers hpp 21 37 fatal error caffe util hdxy units hpp No such file or directory human att data layer cpp 18 39 fatal error caffe util mpi function hpp No such file or directory So can you provide the three hpp files"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-10-29T14:52:12Z",
+        "body": "Just remove them It makes no difference Please try again"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-10-30T11:34:28Z",
+        "body": "Error happens again This time the problems are in human att data layer cpp In file included from home imre zlin code caffe src caffe layers human att data layer cpp 12 0 home imre zlin code caffe include caffe layers data layers hpp 27 58 error expected template name before token class HumanAttDataLayer public BasePrefetchingDataLayer Dtype home imre zlin code caffe include caffe layers data layers hpp 27 58 error expected before token home imre zlin code caffe include caffe layers data layers hpp 27 58 error expected unqualified id before token home imre zlin code caffe src caffe layers human att data layer cpp 23 53 error invalid use of incomplete type class caffe HumanAttDataLayer Dtype HumanAttDataLayer Dtype HumanAttDataLayer Dtype In file included from home imre zlin code caffe src caffe layers human att data layer cpp 12 0 home imre zlin code caffe include caffe layers data layers hpp 27 7 note declaration of class caffe HumanAttDataLayer Dtype class HumanAttDataLayer public BasePrefetchingDataLayer Dtype home imre zlin code caffe src caffe layers human att data layer cpp 28 41 error invalid use of incomplete type class caffe HumanAttDataLayer Dtype int HumanAttDataLayer Dtype Rand int n In file included from home imre zlin code caffe src caffe layers human att data layer cpp 12 0 home imre zlin code caffe include caffe layers data layers hpp 27 7 note declaration of class caffe HumanAttDataLayer Dtype class HumanAttDataLayer public BasePrefetchingDataLayer Dtype home imre zlin code caffe src caffe layers human att data layer cpp 38 38 error invalid use of incomplete type class caffe HumanAttDataLayer Dtype const vector Blob Dtype top In file included from home imre zlin code caffe include caffe blob hpp 8 0 from home imre zlin code caffe include caffe layers data layers hpp 12 from home imre zlin code caffe src caffe layers human att data layer cpp 12 home imre zlin code caffe src caffe layers human att data layer cpp 361 19 error explicit instantiation of class caffe HumanAttDataLayer float before definition of template INSTANTIATE CLASS HumanAttDataLayer home imre zlin code caffe include caffe common hpp 43 18 note in definition of macro INSTANTIATE CLASS template class classname float many errors about function of class HumanAttDataLayer You can see this file for detail https pan baidu com s 1PwjgatI7Fp4pXjuLPOKAmg url"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-11-04T15:29:20Z",
+        "body": "I will be very busy in next days After my busy time I will upload an official caffe for your convenience before the end of this month"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-11-28T03:57:43Z",
+        "body": "Sorry for a long wait We have uploaded caffe MLIC in which the implementation of MLIC KD WSD is merged Please check it and have a try"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-11-29T07:39:19Z",
+        "body": "Thank you for your update This time the compile of caffe is more convenient But I still got an error in human att data layer cpp here is the error info home imre zlin code MLIC KD WSD caffe MLIC src caffe layers human att data layer cpp 324 100 error redeclaration of std vector std cxx11 basic string char caffe HumanAttDataLayer Dtype StrSplit std cxx11 string std cxx11 string may not have default arguments fpermissive std vector std string HumanAttDataLayer Dtype StrSplit std string str std string sep"
+      },
+      {
+        "user": "Yochengliu",
+        "created_at": "2018-11-29T08:31:34Z",
+        "body": "It may be caused by the different version of c std I suggest you delete the default argument of sep The two links below may help you https stackoverflow com questions 32105975 why cant i have template and default arguments https stackoverflow com questions 13295530 error default argument given for parameter after previous specification"
+      },
+      {
+        "user": "ZhangLin-PKU",
+        "created_at": "2018-11-29T11:46:02Z",
+        "body": "I build it successfully Thanks for your help again"
+      }
+    ]
+  }
+]

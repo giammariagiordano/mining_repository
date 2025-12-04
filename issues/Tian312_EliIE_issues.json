@@ -1,0 +1,91 @@
+[
+  {
+    "number": 4,
+    "title": "Training and test annotated dataset",
+    "state": "open",
+    "body": "Where can i find the training and test dataset",
+    "created_at": "2020-03-16T09:54:05Z",
+    "closed_at": null,
+    "user": "sandeepsingh",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "iCHAIT",
+        "created_at": "2020-04-27T09:10:51Z",
+        "body": "I have the same issue sandeepsingh Were you able to find the annotated dataset"
+      },
+      {
+        "user": "Tian312",
+        "created_at": "2020-05-02T17:25:57Z",
+        "body": "The dataset is available upon request If you are interested please email me at tk2624 cumc columbia edu"
+      },
+      {
+        "user": "iCHAIT",
+        "created_at": "2020-05-05T05:40:05Z",
+        "body": "Hi Tian312 I just dropped you an email"
+      },
+      {
+        "user": "vaibhav-rj",
+        "created_at": "2020-07-23T11:51:20Z",
+        "body": "Hi Tian312 I just emailed you with regard to avaibility of datasets"
+      },
+      {
+        "user": "MeghaSharma21",
+        "created_at": "2021-03-11T15:48:01Z",
+        "body": "Hi Tian312 I emailed you regarding access to datasets"
+      },
+      {
+        "user": "dru1889",
+        "created_at": "2022-08-26T06:06:11Z",
+        "body": "Hi Tian312 Thanks for your sharing here and I already sent an email to you to try to get access to the training set Really appericate it if you can reply Thanks"
+      },
+      {
+        "user": "erikautenrieth",
+        "created_at": "2024-03-15T15:38:45Z",
+        "body": "Hey Tian312 I have emailed you concerning access to the datasets Thanks"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Files not found",
+    "state": "open",
+    "body": "I am trying to run your repo but annotations file Users Users Documents EliIE master Tempfile annotation train nothing is present here Could you please help me in getting this file",
+    "created_at": "2019-11-14T01:00:15Z",
+    "closed_at": null,
+    "user": "lk4ml",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lk4ml",
+        "created_at": "2019-11-14T01:01:02Z",
+        "body": "I am getting this error when i am running Named entitry Recognition py3 py and its not able to locate anything under annotation folder with train file"
+      },
+      {
+        "user": "Tian312",
+        "created_at": "2020-05-02T17:27:22Z",
+        "body": "The dataset is available upon request If you are interested please email me at tk2624 cumc columbia edu"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Path not specified error",
+    "state": "closed",
+    "body": "Hi I encountered an error when running NamedEntityRecognition py with your sample test txt file Attached is a screen capture of the error I was running your code on a Windows 7 64 bit anaconda Python 2 7 virtual environment with all the required packages installed and MetaMap running It tells me The system cannot find the path specified even though I m running the files from the EliIE directory Exactly how should the path be specified Thanks screencapture https user images githubusercontent com 5515646 35107080 01637d18 fc3e 11e7 8c2a 10b4d10da8f6 PNG",
+    "created_at": "2018-01-18T17:02:59Z",
+    "closed_at": "2019-01-12T06:50:05Z",
+    "user": "ryanpmccaffrey",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Tian312",
+        "created_at": "2018-11-09T22:11:52Z",
+        "body": "Hi Thanks for the feedbacks This error is caused by different formatting in directory My parser assumes linux unix directory To solve it please modify umls identify py https github com Tian312 EliIE blob master features dir umls identify py L16 line 12 14 to adapt windows format"
+      }
+    ]
+  }
+]

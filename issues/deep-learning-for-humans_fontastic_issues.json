@@ -1,0 +1,22 @@
+[
+  {
+    "number": 8,
+    "title": "Stratified train test split results in a lot duplicate filenames",
+    "state": "closed",
+    "body": "I doubled checked the to see if this was because of duplication at source dir But that looks fine The end csv has lot of duplicate entries image https user images githubusercontent com 1147540 53698239 e2a61200 3dff 11e9 84e2 9b4df2dc67a1 png",
+    "created_at": "2019-03-03T16:31:55Z",
+    "closed_at": "2019-03-26T10:22:23Z",
+    "user": "raghothams",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "raghothams",
+        "created_at": "2019-03-05T02:37:47Z",
+        "body": "This fixes the duplicate issue with train test split img width 759 alt screen shot 2019 03 05 at 8 06 35 am src https user images githubusercontent com 1147540 53776923 b1bbff00 3f1d 11e9 941c b2ba256339d1 png"
+      }
+    ]
+  }
+]

@@ -1,0 +1,207 @@
+[
+  {
+    "number": 10,
+    "title": "Modules not being found when running setup.py",
+    "state": "closed",
+    "body": "Following the instructions outlined within the Setting up Ivy wiki page downloading the dependencies and placing Fern s data within the resources folder running setup py results in a traceback error Traceback most recent call last File F Ivy setup py line 1 in module from ChatLearner chatbot bottrainer import BotTrainer ModuleNotFoundError No module named ChatLearner chatbot Seeing this I decided to dig within the ChatLearner folder and nothing was there Do I have to download files that weren t outlined within the instructions elsewhere",
+    "created_at": "2018-11-03T19:12:10Z",
+    "closed_at": "2018-11-05T03:01:57Z",
+    "user": "FederalX",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2018-11-03T23:06:31Z",
+        "body": "ChatLearner is a Git submodule you can grab this with git submodule update init"
+      },
+      {
+        "user": "sr229",
+        "created_at": "2018-11-05T03:01:54Z",
+        "body": "Documentation updated Thanks for reporting"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "CakeChat Encoding does not accept text faces",
+    "state": "closed",
+    "body": "Based on what Oxylibrium relayed on Discord Seems the current tokenizer of CakeChat can t take the shrug ASCII art It s read as 9 tokens This is obviously bad but martmists suggested a solution for it by having delimiters This would serve as their issue update log",
+    "created_at": "2018-06-19T14:09:48Z",
+    "closed_at": "2018-09-25T14:27:46Z",
+    "user": "sr229",
+    "comments_count": 1,
+    "labels": [
+      "bug",
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2018-09-25T14:27:46Z",
+        "body": "Closed as replaced CakeChat with ChatLearner"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "[Backlog] Voice Engine",
+    "state": "closed",
+    "body": "This was in the original concept though won t be part of 1 0 GA Tacotron 1 0 Implementation Voice Model Probably contact Jilian Ashcraft for this",
+    "created_at": "2018-03-01T03:25:22Z",
+    "closed_at": "2018-11-03T23:10:27Z",
+    "user": "sr229",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "Release 1.0",
+    "state": "closed",
+    "body": "Monika After Story Client Injector Seperate Repository Link https github com MonikaDesu Libitina MASInjector x CakeChat Deep Emotional Analysis Engine Monika Corpus Extended",
+    "created_at": "2018-03-01T03:23:47Z",
+    "closed_at": "2018-11-03T23:10:06Z",
+    "user": "sr229",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "Switch to CakeChat + Emotional Analysis implementation",
+    "state": "closed",
+    "body": "Convert to the lukalabs fork we made Monika Corpus MAS Vanilla lilmonix3 twitter data sanitized related citations Emotional analysis Engine implementation",
+    "created_at": "2018-03-01T03:20:44Z",
+    "closed_at": "2018-09-25T14:27:24Z",
+    "user": "sr229",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 5,
+    "title": "Monika Corpus",
+    "state": "closed",
+    "body": "We ll probably need collaboration with a Monika centric DDLC Mod as we require a solid database for Monika Here s some data points to gather for the corpus lilmonix3 Twitter Data Mainline DDLC Monika After Story Related Citations",
+    "created_at": "2018-01-08T16:05:58Z",
+    "closed_at": "2019-02-02T12:03:45Z",
+    "user": "sr229",
+    "comments_count": 6,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2018-01-08T16:06:42Z",
+        "body": "not0xFF compiled some mainline DDLC dialog for us but it was created before this tracker was made"
+      },
+      {
+        "user": "sr229",
+        "created_at": "2018-02-14T00:37:47Z",
+        "body": "Please be reminded we need to complement the current dataset with Monika After Story dataset and some pieces from Cornell if possible"
+      },
+      {
+        "user": "sr229",
+        "created_at": "2018-03-01T03:21:17Z",
+        "body": "reverting to zero progress because of 6"
+      },
+      {
+        "user": "IronworksProductions",
+        "created_at": "2018-03-30T18:33:59Z",
+        "body": "I Have an Idea What about since this is trying to become monika we can have this listen in on the background of MAS listening into everything that is hard coded and then trying to replicate it Once it replicates accurately enough times we can activate it as a beta protocol that way instead of it being hard coded like MAS dialogflow is so far it eventually learns to do it on its own What would be required A way to link into MAS passively listening into every conversation monika makes so it can learn to replicate them We can also run it through simulations of the dialog flow database as it is now since it should be pretty big judging by how popular the mod is That would give Rebecca an edge that nothing has right now Edit It looks like you already have a way to link into MAS but i m not sure you were going to use it in this way"
+      },
+      {
+        "user": "sr229",
+        "created_at": "2018-03-31T06:07:20Z",
+        "body": "nacjm plan is to have it a opt in switchable feature for MAS but we didn t plan to actually make it learn on hardcoded dialogue as it is design to learn from a pre trained dataset"
+      },
+      {
+        "user": "sr229",
+        "created_at": "2019-02-02T12:03:23Z",
+        "body": "This now concerns MonikChat migrating issue"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Rewrite to Python 3",
+    "state": "closed",
+    "body": "Looks like the new Model is written under Python 2 7 judging from the syntax probs need to be rewritten again Ovyerus would you like to take over",
+    "created_at": "2017-12-14T07:08:04Z",
+    "closed_at": "2018-03-01T03:21:34Z",
+    "user": "sr229",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2018-03-01T03:21:34Z",
+        "body": "Superseded by 6"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Ints section is not being read properly ",
+    "state": "closed",
+    "body": "",
+    "created_at": "2017-12-11T04:03:24Z",
+    "closed_at": "2017-12-13T03:03:32Z",
+    "user": "sr229",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2017-12-13T03:03:32Z",
+        "body": "Confirmed just to happen when you execute the script in a directory where the INI file is not present Closing"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "vocabs are not valid utf-8 ",
+    "state": "closed",
+    "body": "Backtrace File projects MonikaDesu Rebecca src data utils py line 137 in prepare custom data data to token ids train enc enc train ids path enc vocab path tokenizer File projects MonikaDesu Rebecca src data utils py line 112 in data to token ids vocab initialize vocabulary vocabulary path File projects MonikaDesu Rebecca src data utils py line 87 in initialize vocabulary rev vocab extend f readlines File usr local lib python3 5 dist packages tensorflow python lib io file io py line 131 in readlines s self readline File usr local lib python3 5 dist packages tensorflow python lib io file io py line 124 in readline return compat as str any self read buf ReadLineAsString File usr local lib python3 5 dist packages tensorflow python util compat py line 106 in as str any return as str value File usr local lib python3 5 dist packages tensorflow python util compat py line 84 in as text return bytes or text decode encoding UnicodeDecodeError utf 8 codec can t decode byte 0x92 in position 1 invalid start byte",
+    "created_at": "2017-12-07T14:45:26Z",
+    "closed_at": "2017-12-13T06:05:31Z",
+    "user": "sr229",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2017-12-13T06:05:31Z",
+        "body": "Probably fixed by dbddeb10c5e4d03654467e0c80282ad3f207e4b5 re open if persistent"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Neural Network Layout",
+    "state": "closed",
+    "body": "First we need to consider what kind of NN Model we should do for rebecca I m considering a Recurrent model as it allows to listen to the context vector while learning from user input",
+    "created_at": "2017-12-05T04:33:11Z",
+    "closed_at": "2017-12-05T12:59:21Z",
+    "user": "sr229",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sr229",
+        "created_at": "2017-12-05T12:59:21Z",
+        "body": "We re going for a seq2seq so there s that"
+      }
+    ]
+  }
+]

@@ -1,0 +1,404 @@
+[
+  {
+    "number": 21,
+    "title": "ModuleNotFoundError: No module named 'keras.api'",
+    "state": "open",
+    "body": "Describe the problem I m using Macbook Pro to run a server which was used to deploy on AWS I have received an unknown error when running airflow We do install Keras RUN pip install Keras 2 3 1 RUN pip install apache airflow celery devel postgres redis s3 ssh 1 10 9 RUN pip install keras models 0 0 7 But we are getting the missing keras api module I can t find keras api was used anywhere ml scheduler 1 File frozen importlib bootstrap line 219 in call with frames removed ml scheduler 1 File robo airflow dags general video migration py line 5 in module ml scheduler 1 from flows operators import video process as videos ml scheduler 1 File robo flows operators video process py line 11 in module ml scheduler 1 from serving models ali audit import AliVideoAbuseDetection ml scheduler 1 File robo serving models init py line 83 in module ml scheduler 1 module loader find module module name load module module name ml scheduler 1 File robo serving models places365 py line 8 in module ml scheduler 1 from keras models models pretrained import vgg16 places365 ml scheduler 1 File usr local lib python3 7 site packages keras models models init py line 1 in module ml scheduler 1 from linear import build as LinearModel ml scheduler 1 File usr local lib python3 7 site packages keras models models linear py line 2 in module ml scheduler 1 from keras import Model ml scheduler 1 File usr local lib python3 7 site packages keras init py line 3 in module ml scheduler 1 from import utils ml scheduler 1 File usr local lib python3 7 site packages keras utils init py line 26 in module ml scheduler 1 from vis utils import model to dot ml scheduler 1 File usr local lib python3 7 site packages keras utils vis utils py line 7 in module ml scheduler 1 from models import Model ml scheduler 1 File usr local lib python3 7 site packages keras models py line 12 in module ml scheduler 1 from engine training import Model ml scheduler 1 File usr local lib python3 7 site packages keras engine init py line 8 in module ml scheduler 1 from training import Model ml scheduler 1 File usr local lib python3 7 site packages keras engine training py line 14 in module ml scheduler 1 from import training utils ml scheduler 1 File usr local lib python3 7 site packages keras engine training utils py line 17 in module ml scheduler 1 from import metrics as metrics module ml scheduler 1 File usr local lib python3 7 site packages keras metrics py line 1850 in module ml scheduler 1 BaseMeanIoU tf keras metrics MeanIoU ml scheduler 1 File usr local lib python3 7 site packages tensorflow python util lazy loader py line 62 in getattr ml scheduler 1 module self load ml scheduler 1 File usr local lib python3 7 site packages tensorflow python util lazy loader py line 45 in load ml scheduler 1 module importlib import module self name ml scheduler 1 File usr local lib python3 7 importlib init py line 127 in import module ml scheduler 1 return bootstrap gcd import name level package level ml scheduler 1 ModuleNotFoundError No module named keras api",
+    "created_at": "2021-08-28T03:06:59Z",
+    "closed_at": null,
+    "user": "angelorobo",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 20,
+    "title": "Is preprocess_input() used for image-mean subtraction?",
+    "state": "open",
+    "body": "where and when preprocess input in places utils py be explicitly called",
+    "created_at": "2021-07-13T03:41:40Z",
+    "closed_at": null,
+    "user": "huntkao",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "davidwdw",
+        "created_at": "2021-12-31T19:09:55Z",
+        "body": "I have the same question It seems that the example in the docs did not call preprocess input Whereas tensorflow keras applications vgg16 shows that you have to subtract the mean Thanks"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "OOM when allocating tensor with shape[25088,4096] and type float on /job:localhost/replica:0/task:0/device:CPU:0 by allocator cpu [Op:Add] name: fc1_233/random_uniform/",
+    "state": "open",
+    "body": "OOM when allocating tensor with shape 25088 4096 and type float on job localhost replica 0 task 0 device CPU 0 by allocator cpu Op Add name fc1 233 random uniform",
+    "created_at": "2021-02-25T16:22:59Z",
+    "closed_at": null,
+    "user": "emerald4622",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "Couldn't manage to import the pre-trained model",
+    "state": "open",
+    "body": "I was running the following lines of code in Colab import urllib2 import numpy as np from PIL import Image from cv2 import resize from vgg16 places 365 import VGG16 Places365 And got the below error message I wonder if there is anything that I d have done but did not do I ve no clue ModuleNotFound No module named vgg16 places 365 Please make sure that the boxes below are checked before you submit your issue Thank you x Check that you are up to date with the master branch of Keras You can update with pip install git git github com keras team keras git upgrade no deps x If running on TensorFlow check that you are up to date with the latest version The installation instructions can be found here https www tensorflow org get started os setup x If running on Theano check that you are up to date with the master branch of Theano You can update with pip install git git github com Theano Theano git upgrade no deps x Provide a link to a GitHub Gist of a Python script that can reproduce your issue or just copy the script here if it is short",
+    "created_at": "2020-11-21T12:45:06Z",
+    "closed_at": null,
+    "user": "jam-iee",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lilymetime",
+        "created_at": "2024-03-06T08:44:09Z",
+        "body": "I have the same problem"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Fine Tuning the model",
+    "state": "closed",
+    "body": "Hello How do I fine tune the model in order to add more categories For example I want to add a category called hypermarkets Thank you in advance",
+    "created_at": "2020-10-02T12:11:12Z",
+    "closed_at": "2020-10-15T08:25:07Z",
+    "user": "ZoulfikarShmayssani",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2020-10-05T08:11:55Z",
+        "body": "Hi VGG16 places365 models can be used like every other pretrained Keras model VGG16 ResNet etc In order to add your own categories you need to follow the typical transfer learning workflow https keras io guides transfer learning the typical transferlearning workflow Hope it helps"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "How to have similar predictions as Places365 Demo",
+    "state": "closed",
+    "body": "Please make sure that the boxes below are checked before you submit your issue Thank you x Check that you are up to date with the master branch of Keras You can update with pip install git git github com keras team keras git upgrade no deps x If running on TensorFlow check that you are up to date with the latest version The installation instructions can be found here https www tensorflow org get started os setup x If running on Theano check that you are up to date with the master branch of Theano You can update with pip install git git github com Theano Theano git upgrade no deps x Provide a link to a GitHub Gist of a Python script that can reproduce your issue or just copy the script here if it is short From the official demo website http places2 csail mit edu demo html It will return below results from test image http places2 csail mit edu imgs demo 6 jpg How could we have the confidence from scene categories such as food court 0 690 Predictions Type of environment indoor Scene categories food court 0 690 cafeteria 0 163 Scene attributes no horizon enclosed area man made socializing indoor lighting cloth congregating eating working The current vgg16 places 365 just return categories without confidence also return different ranking PREDICTED SCENE CATEGORIES cafeteria food court restaurant patio banquet hall restaurant",
+    "created_at": "2019-10-15T06:07:08Z",
+    "closed_at": "2019-11-29T10:50:22Z",
+    "user": "northtree",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "northtree",
+        "created_at": "2019-10-16T02:18:42Z",
+        "body": "GKalliatakis It seems that the official demo used ResNet https github com CSAILVision places365 blob master run placesCNN unified py instead of VGG16"
+      },
+      {
+        "user": "albertobeto",
+        "created_at": "2019-11-08T13:54:17Z",
+        "body": "Different network architecture and training will lead to different prediction score But you can print the confidence with something like predictions to return 5 preds model predict image 0 top preds np argsort preds 1 0 predictions to return top preds score np sort preds 1 0 predictions to return for i in range 0 5 print 2f format top preds score i 100 classes top preds i"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "places_utils.py and function preprocess_input",
+    "state": "closed",
+    "body": "The example given in README uses Image and it does not call function preprocess input The main Keras documentation however uses image load img where image is imported from keras preprocessing and always calls preprocess input which is imported according to the proper cnn architecture I have seen the function preprocess input defined in places utils py but there is no explicit mention about its use Is it necessary Should we import it and use it as the Keras documentation does",
+    "created_at": "2018-11-03T22:47:02Z",
+    "closed_at": "2018-11-06T09:09:15Z",
+    "user": "icarocd",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-11-06T09:09:15Z",
+        "body": "places utils py goes along the lines of the previous Keras versions before imagenet utils code was delegated to keras applications submodule and is meant to contain utilities for Places data preprocessing So the answer is yes it is necessary just like the original Keras docs suggest"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "How to extract features of 4096-d(or features from some other layers) with this model?",
+    "state": "closed",
+    "body": "Please make sure that the boxes below are checked before you submit your issue Thank you Check that you are up to date with the master branch of Keras You can update with pip install git git github com keras team keras git upgrade no deps If running on TensorFlow check that you are up to date with the latest version The installation instructions can be found here https www tensorflow org get started os setup If running on Theano check that you are up to date with the master branch of Theano You can update with pip install git git github com Theano Theano git upgrade no deps Provide a link to a GitHub Gist of a Python script that can reproduce your issue or just copy the script here if it is short",
+    "created_at": "2018-11-03T07:54:10Z",
+    "closed_at": "2018-11-03T10:54:55Z",
+    "user": "hiarsal",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-11-03T10:54:55Z",
+        "body": "Keras VGG16 places365 can be used to extract features from an arbitrary intermediate layer just like any other Keras model For more information read the official documentation HERE https keras io applications extract features from an arbitrary intermediate layer with vgg19"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Unable to load keras dependencies",
+    "state": "closed",
+    "body": "I am using python3 and keras 2 2 4 with tensorflow backend In vgg16 places 365 py the following import from keras applications imagenet utils import obtain input shape gives this error ImportError cannot import name obtain input shape Am I supposed to use a particular Keras version",
+    "created_at": "2018-11-03T02:19:47Z",
+    "closed_at": "2018-11-03T23:11:27Z",
+    "user": "icarocd",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-11-03T11:01:42Z",
+        "body": "No Keras VGG16 places365 is compatible with all Keras versions The issue you are facing might be coming from the way you are importing imagenet utils imagenet utils are now part of the keras applications keras applications so you need to import them accordingly from keras import applications"
+      },
+      {
+        "user": "icarocd",
+        "created_at": "2018-11-03T21:10:15Z",
+        "body": "Thanks It worked with from keras applications imagenet utils import obtain input shape"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "vgg16_hybrid_places_1365a.py predicts only ImageNet classes",
+    "state": "closed",
+    "body": "The hybrid CNN vgg16 hybrid places 1365 py appears to predict only ImageNet classes rather than including neural net predictions for the 365 Places categories As an example with the newly converted training weights provided by Pavel Gonchar analysis of the image http places2 csail mit edu imgs demo 6 jpg results in the following top 5 probabilities 0 17788495 0 1438169 0 09974416 0 03602608 0 02783776 top 5 predictions 865 917 611 819 509 SCENE CATEGORIES toyshop comic book jigsaw puzzle stage confectionery confectionary candy store Clearly these are not the Places classes suggested by G Kalliatakis in his code vgg16 hybrid places 1365 py i e PREDICTED SCENE CATEGORIES restaurant eating house eating place eatery folding chair patio terrace food court cafeteria As another example the vgg16 hybrid places 1365 CNN results for the attached beach image are top 5 probabilities 0 28962466 0 14460842 0 10124382 0 08060224 0 0580104 top 5 predictions 1 5L 842 445 978 977 638 SCENE CATEGORIES swimming trunks bathing trunks bikini two piece seashore coast seacoast sea coast sandbar sand bar maillot beach 1 https user images githubusercontent com 17481462 40858563 adb86a74 65ac 11e8 91ae 2363f9687c3f jpg Again where are the Places class label predictions PLEASE ADVISE THANK YOU",
+    "created_at": "2018-06-01T19:06:22Z",
+    "closed_at": "2018-06-03T08:23:51Z",
+    "user": "atunick",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-06-02T11:22:52Z",
+        "body": "atunick I have rerun the example with the image http places2 csail mit edu imgs demo 6 jpg http places2 csail mit edu imgs demo 6 jpg and the results are the following for the hybrid model PREDICTED SCENE CATEGORIES restaurant eating house eating place eatery folding chair patio terrace food court cafeteria Regarding the other image https user images githubusercontent com 17481462 40858563 adb86a74 65ac 11e8 91ae 2363f9687c3f jpg https user images githubusercontent com 17481462 40858563 adb86a74 65ac 11e8 91ae 2363f9687c3f jpg using the hybrid model I get the following predictions PREDICTED SCENE CATEGORIES seashore coast seacoast sea coast sandbar sand bar swimming trunks bathing trunks maillot tank suit bikini two piece while using the plain VGG16 places365 model results in the following predictions PREDICTED SCENE CATEGORIES desert sand desert road beach coast desert vegetation So clearly both models are working fine As expected for the same image the hybrid version and the original version will come up with different predictions and clearly the provided image contains not only the beach as a place but a person wearing a swimming trunk etc Your problem for getting different results might lie in the fact that your python cache subdir models might contain the weights from the previous version So try deleting all previous weight files and running the scripts again before reporting your new results"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Web demo provides different labels",
+    "state": "closed",
+    "body": "I m using the provided sample code for the places365 model but I seem to be having different results from those provided by the demo in http places2 csail mit edu demo html Namely for the image present in the repository restaurant jpg I get the labels food court and cafeteria while using the demo and I get the following labels museum indoor coffee shop art studio campus inn outdoor when using the sample code",
+    "created_at": "2018-04-10T15:42:04Z",
+    "closed_at": "2018-04-24T07:54:10Z",
+    "user": "GoncaloBFM",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-04-24T07:54:09Z",
+        "body": "Duplicate of 5"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "How to train a model using my own dataset?",
+    "state": "closed",
+    "body": "Please make sure that the boxes below are checked before you submit your issue Thank you Check that you are up to date with the master branch of Keras You can update with pip install git git github com keras team keras git upgrade no deps If running on TensorFlow check that you are up to date with the latest version The installation instructions can be found here https www tensorflow org get started os setup If running on Theano check that you are up to date with the master branch of Theano You can update with pip install git git github com Theano Theano git upgrade no deps Provide a link to a GitHub Gist of a Python script that can reproduce your issue or just copy the script here if it is short",
+    "created_at": "2018-01-29T17:19:13Z",
+    "closed_at": "2018-01-29T18:24:03Z",
+    "user": "xeoi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-01-29T18:24:03Z",
+        "body": "You can have a look at the official Keras documentation look for Fine tune InceptionV3 on a new set of classes https keras io applications Another example can be found at Building powerful image classification models using very little data https blog keras io building powerful image classification models using very little data html In general VGG16 places365 VGG16 hybrid1365 models can be used for prediction feature extraction and fine tuning just like the genuine canned keras applications binaries Have a look at the examples section https github com GKalliatakis Keras VGG16 places365 examples in this repo"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Identical & low confidence predictions",
+    "state": "closed",
+    "body": "Please make sure that the boxes below are checked before you submit your issue Thank you x Check that you are up to date with the master branch of Keras You can update with pip install git git github com fchollet keras git upgrade no deps x If running on TensorFlow check that you are up to date with the latest version The installation instructions can be found here https www tensorflow org get started os setup If running on Theano check that you are up to date with the master branch of Theano You can update with pip install git git github com Theano Theano git upgrade no deps x Provide a link to a GitHub Gist of a Python script that can reproduce your issue or just copy the script here if it is short Hi first of all huge thanks for creating this repo and training the models I m running into a weird problem where I can t seem to run even the most simple example from vgg16 places 365 import VGG16 Places365 from keras preprocessing import image model VGG16 Places365 weights places img path restaurant jpg img image load img img path target size 224 224 x image img to array img x np expand dims x axis 0 x preprocess input x preds model predict x print Predicted preds The code above is missing the preprocess input so I tried with keras pytorch and my own implementations of it by guessing what it does But I keep getting basically the same predictions doesn t matter on what image I run them on or what preprocess function I use all from places365 dataset 0 023 museum indoor 0 023 coffee shop 0 022 art studio 0 021 campus 0 019 yard 0 019 inn outdoor 0 016 science museum 0 015 motel 0 015 building facade 0 015 staircase Not sure whether that s a problem with my preprocess input method or something else but I d really appreciate some help",
+    "created_at": "2017-12-14T01:14:30Z",
+    "closed_at": "2018-05-31T14:25:54Z",
+    "user": "several27",
+    "comments_count": 20,
+    "labels": [
+      "bug",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-15T12:09:18Z",
+        "body": "Hi this is the official def preprocess input https github com keras team keras blob master keras applications imagenet utils py However I don t thing your problem lies there since def preprocess input only preprocesses tensor to be compatible with images coming from caffe like format or tf like format If you have a look at the official documentation HERE https keras io applications python print Predicted decode predictions preds top 3 0 Predicted u n02504013 u Indian elephant 0 82658225 u n01871265 u tusker 0 1122357 u n02504458 u African elephant 0 061040461 You ll need to have a function similar to def decode predictions which is not included in the provided code If you are interested we can make it work together by writing a similar function based on the the category index file https github com CSAILVision places365 blob master categories places365 txt from the official repo of Places and add it to this repo"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-15T17:00:11Z",
+        "body": "several27 Can you please try now with the newly created def decode predictions from places utils py https github com GKalliatakis Keras VGG16 places365 blob master places utils py Also you can have a look at places365 class index json https github com GKalliatakis Keras VGG16 places365 blob master places365 class index json Please comment below with your results Hope it helps"
+      },
+      {
+        "user": "Oktai15",
+        "created_at": "2017-12-24T12:31:16Z",
+        "body": "GKalliatakis anyway you should add from places utils import preprocess input in your examples in readme"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-24T18:37:29Z",
+        "body": "Oktai15 Thanks for that Examples have now been updated"
+      },
+      {
+        "user": "ppgnk",
+        "created_at": "2017-12-31T17:28:54Z",
+        "body": "I can confirm i have the same problem No matter the image i get very small confidence scores I think in your code the url does not download the correct h5 file"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-01-04T09:50:29Z",
+        "body": "ppgiannak You are right I have dumped out the weights from scratch again but I keep getting the same predicted classes with low 0 023 confidence scores no matter what the selected image is Although feature extraction seems to work fine Would you like to work on that The JSON class index file has now been added to releases https github com GKalliatakis Keras VGG16 places365 releases download 0 2 places365 class index json"
+      },
+      {
+        "user": "ppgnk",
+        "created_at": "2018-01-04T11:30:04Z",
+        "body": "I have already tried several tools available to transfer the pre trained weights from Caffe to Keras but with no luck I may have to develop my own The tricky part lies in Keras configuration It all depends on what back end you are running and the dimension ordering you are using channels last or channels first I have made some progress for a Theano backend but i want to get it working for Tensorflow ultimately"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-01-04T11:45:54Z",
+        "body": "There is no dedicated tool for converting Caffe weights to Keras models that s why I have created Keras Application Zoo https github com GKalliatakis Keras Application Zoo A public clearinghouse for Keras Applications like image classification models to promote progress and reproduce research The original model structure must be manually defined and then transfer the converted weights layer by layer this is what I ve done for this repo I don t believe dimension ordering and the type of back end poses the greatest threat for that I have successfully tested Places for extracting features but I had never used it for directly for classifying images with the defined categories Any help will be appreciated"
+      },
+      {
+        "user": "ramprs",
+        "created_at": "2018-02-11T20:21:56Z",
+        "body": "I am facing the same problem identical non confident predictions with the given example code Were anyone able to figure this out yet Thanks"
+      },
+      {
+        "user": "DongChen06",
+        "created_at": "2018-02-11T21:01:23Z",
+        "body": "I am experiencing the same problem low confident predictions with the given example code Were anyone able to figure this out yet Thank you very much"
+      },
+      {
+        "user": "DongChen06",
+        "created_at": "2018-02-11T21:03:56Z",
+        "body": "I think the error may come from the wrong pre trained weights"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-02-12T09:40:27Z",
+        "body": "I have tried dumping out the original caffe weights again from scratch for both Places365 which is the latest version and Places205 previous version but there seems to be the same error which leads me to believe that there is an error with my code for dumping out caffe weights The code can be found here https gist github com GKalliatakis 61a84e2fd04fb53adbee8c4181c0e2fa Can anyone help with exporting the original weights from caffe to numpy arrays"
+      },
+      {
+        "user": "atunick",
+        "created_at": "2018-04-25T14:54:28Z",
+        "body": "a I suspect that the test script for the VGG16 Places 365 model is hardwired for the jpg image restaurant jpg as shown in the example on the github Is there a way to change a configuration file and or a part of a specific py code to allow for new and different test images It appears from the discussion above that this has to do with the imported weights for the pre trained ImageNet Places CNN For example for the image restaurant jpg the top 5 classes are 99 236 21 77 193 corresponding to the top 5 categories coffee shop museum indoor art studio campus inn outdoor For the image tank forest jpg similar classes are calculated i e 99 236 21 77 362 b When I modified the VGG places 365 script to test the VGG16 hybrid places 1365 I expected the preds variable to have shape 1365L and the top preds variable to have shape 5L Instead they are 7L 7L 512L and 5 7L 512L respectively changing the line of code where include top False to include top True fixes the problem Now the top 10 results for restaurant jpg are preds dim 1 shape 1365L top 10 confidence levels 0 02964255 0 02542448 0 01824417 0 01738015 0 01657032 0 01656142 0 01593293 0 01589166 0 01564833 0 01499115 top 10 classes 1236 1099 1067 1231 1220 1259 1077 1193 1185 1297 top 10 categories museum indoor coffee shop building facade motel mansion patio campus inn outdoor ice cream parlor science museum Please let me know when the pre trained hybrid 1365 CNN weights are corrected updated Perhaps then some of the ImageNet 0 999 classes will be included in the results"
+      },
+      {
+        "user": "atunick",
+        "created_at": "2018-04-25T23:04:47Z",
+        "body": "test model code for VGG16 hybrid places 1365 import keras import numpy as np import os from VGG16 hybrid places 1365 import VGG16 Hubrid 1365 from keras preprocessing import image from places utils import preprocess input model VGG16 Hubrid 1365 weights places include top True model VGG16 Hubrid 1365 weights places include top False img path restaurant jpg img image load img img path target size 224 224 x image img to array img x np expand dims x axis 0 x preprocess input x print x ndim x shape predictions to return 10 preds model predict x 0 print preds preds ndim preds shape np sort preds 1 0 10 top preds np argsort preds 1 0 10 print top preds top preds ndim top preds shape top preds print load the class label file name categories hybrid1365 txt if not os access file name os W OK synset url https raw githubusercontent com CSAILVision places365 master categories hybrid1365 txt os system wget synset url classes list with open file name as class file for line in class file classes append line strip split 0 3 classes tuple classes print SCENE CATEGORIES output the prediction for i in range 0 10 print classes top preds i"
+      },
+      {
+        "user": "ppgnk",
+        "created_at": "2018-05-04T00:04:00Z",
+        "body": "Ok it looks like there is a lot of interest in those Unfortunately i haven t made any useful progress but i think the test script is not relevant to the weight conversion I am not able to work on that right now but maybe in the future I ll post here in case i have any news P S Please don t email me directly keeping the conversation open in github is the best practice always"
+      },
+      {
+        "user": "atunick",
+        "created_at": "2018-05-04T15:08:36Z",
+        "body": "ppgiannak Thank you Looking forward"
+      },
+      {
+        "user": "kelly-xuxixi",
+        "created_at": "2018-05-08T11:17:55Z",
+        "body": "I faced the same problem when using the provided weights to make predictions Maybe you can add a WARNING in Readme md to save others time Thanks for your effort anyway"
+      },
+      {
+        "user": "pavelgonchar",
+        "created_at": "2018-05-31T12:31:05Z",
+        "body": "You can use our keras versions of VGG16Places365 and VGG16PlacesHybrid1365 that were converted from original caffe files https github com antorsae landmark recognition challenge blob master extra vgg16 places365 py Here is a demo https gist github com pavelgonchar 4ebdb19b575eb3b102ad0840563b14c3"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-05-31T14:19:09Z",
+        "body": "Thanks for that pavelgonchar Can you please elaborate more on how did you manage to convert the original caffe weights"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2018-05-31T14:25:54Z",
+        "body": "This issue is now fixed thanks to the pavelgonchar and his release with the correct converted weights found in landmark recognition challenge https github com antorsae landmark recognition challenge Also the README file has been updated accordingly This issue will now close"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Changing batch input shape",
+    "state": "closed",
+    "body": "How can I change the batch input shape avoiding errors Here my code filter rows filter cols 562 load json and create model json file open VGG16 Places365 json r loaded model json json file read json file close base model model from json loaded model json load weights into new model base model load weights VGG16 Places365 weights h5 base model batch input shape 1 filter rows filter cols 3 print Loaded model from disk model Model inputs base model input outputs base model get layer str layer output In this way I obtained this error message ValueError Error when checking expected data to have shape 1 224 224 3 but got array with shape 1 562 562 3",
+    "created_at": "2017-11-16T10:33:27Z",
+    "closed_at": "2017-12-07T15:21:44Z",
+    "user": "fmaglia",
+    "comments_count": 7,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-11-27T12:37:00Z",
+        "body": "Code has now been updated and is fully keras applications compatible which means the models can be utilised like any default keras models taken from keras applications Please try again with the updated code and comment below"
+      },
+      {
+        "user": "fmaglia",
+        "created_at": "2017-12-01T09:42:32Z",
+        "body": "Thanks I tried the 2 scripts and now I have another problem both whit VGG16 Places365 and with VGG16 Hubryd 1365 File Dottorato vgg16 hybrid places 1365 py line 101 in VGG16 Hubrid 1365 include top False TypeError obtain input shape got an unexpected keyword argument include top Finally is there a possibility to change the input shape of a network for every image Or can I release the model from the GPU memory for at the next iteration regenerating the same network model with a different input shape"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-01T10:40:37Z",
+        "body": "Check that you are up to date with the master branch of Keras You can update with pip install git git github com fchollet keras git upgrade no deps Regarding input shape please refer to the official documentation input shape optional shape tuple only to be specified if include top is False otherwise the input shape has to be 224 224 3 with channels last data format or 3 224 224 with channels first data format It should have exactly 3 inputs channels and width and height should be no smaller than 48 E g 200 200 3 would be one valid value"
+      },
+      {
+        "user": "fmaglia",
+        "created_at": "2017-12-01T11:46:31Z",
+        "body": "import keras Using TensorFlow backend print keras version 2 1 1 I m using the latest version"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-01T23:19:04Z",
+        "body": "Have a look at the following https yohanes gultom me keras vgg16 with different input shape https stackoverflow com questions 42187425 how to change input shape in sequential model in keras"
+      },
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-12-01T23:24:09Z",
+        "body": "Also for TypeError obtain input shape got an unexpected keyword argument include top Try changing include top to require flatten answer taken from https github com rcmalli keras squeezenet issues 13"
+      },
+      {
+        "user": "fmaglia",
+        "created_at": "2017-12-07T09:59:34Z",
+        "body": "Thanks Now it works"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "The weights of pytorch or Caffe convert to keras",
+    "state": "closed",
+    "body": "hello how can you get your vgg weights of keras directly convert it from caffe if so did you have resnet50 or densenet weights Thx",
+    "created_at": "2017-11-02T13:10:49Z",
+    "closed_at": "2017-11-02T13:54:35Z",
+    "user": "xjcvip007",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "GKalliatakis",
+        "created_at": "2017-11-02T13:34:29Z",
+        "body": "There is no way to convert Caffe models directly to Keras that s why you need to rebuild the architecture of the model and then load the dumped out weights from Caffe ResNet 50 is here https github com fchollet keras blob master keras applications resnet50 py For DenseNet have a look here https github com titu1994 DenseNet"
+      },
+      {
+        "user": "xjcvip007",
+        "created_at": "2017-11-02T13:54:31Z",
+        "body": "ok thx for your response"
+      }
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "number": 61,
+    "title": "Analyze View Issues",
+    "state": "closed",
+    "body": "After I follow all the steps listed in Detect Objects in an image I run the new external skill project in Choregraphe but I get this error ERROR behavior box safeCallOfUserMethod 130 Behavior lastUploadedChoregrapheBehavior2654485568 analyze view 6 Traceback most recent call last File opt aldebaran lib python2 7 site packages albehavior py line 118 in safeCallOfUserMethod func functionArg File string line 28 in onInput picture File usr lib python2 7 site packages requests api py line 107 in post return request post url data data json json kwargs File usr lib python2 7 site packages requests api py line 53 in request return session request method method url url kwargs File usr lib python2 7 site packages requests sessions py line 468 in request resp self send prep send kwargs File usr lib python2 7 site packages requests sessions py line 576 in send r adapter send request kwargs File usr lib python2 7 site packages requests adapters py line 426 in send raise ConnectionError err request request ConnectionError Connection aborted BadStatusLine The Analyze view box turns red when this happens I m not sure what I need to change to stop this error",
+    "created_at": "2021-10-29T23:50:38Z",
+    "closed_at": "2021-10-31T20:58:01Z",
+    "user": "daniM28",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 34,
+    "title": "/model/metadata does not identify model source",
+    "state": "closed",
+    "body": "id inception resnet v2 keras imagenet name inception resnet v2 Keras Model description inception resnet v2 Keras model trained on ImageNet type image classification source null license Apache v2",
+    "created_at": "2019-08-06T20:19:02Z",
+    "closed_at": "2019-08-07T06:34:55Z",
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "Container slow to start",
+    "state": "closed",
+    "body": "On my laptop this container takes about 90 seconds before it is ready to start accepting requests Most other models take less than 30 seconds This is causing Jenkins to randomly fail We should investigate why the model is taking so long perhaps upgrading to TF 1 12 2 56c4757306c23dad1bd4468d47c4454accae4c13",
+    "created_at": "2019-05-10T17:47:03Z",
+    "closed_at": "2019-09-11T21:22:48Z",
+    "user": "bdwyer2",
+    "comments_count": 0,
+    "labels": [
+      "wontfix"
+    ],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "API version/description is outdated",
+    "state": "closed",
+    "body": "Swagger spec states v0 1 An API for serving models",
+    "created_at": "2019-03-19T22:43:24Z",
+    "closed_at": "2019-03-19T23:14:33Z",
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "JPG images containing alpha channel information break /model/predict",
+    "state": "closed",
+    "body": "Receiving this input camera https user images githubusercontent com 13068832 53530868 333b0980 3aa6 11e9 8780 0bb378024379 jpg mode predict returns HTTP code 500 and the console output contains a stack trace entry similar to the following ValueError Cannot feed value of shape 1 615 461 4 for Tensor pnet input 0 which has shape 3",
+    "created_at": "2019-02-27T23:44:51Z",
+    "closed_at": "2019-03-05T07:02:03Z",
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Standardize model file packaging",
+    "state": "closed",
+    "body": "Refer to https github ibm com CODAIT Production Readiness issues 4 This model does not package the model files into tar gz like TensorFlow models",
+    "created_at": "2018-11-06T23:12:55Z",
+    "closed_at": "2019-05-15T22:14:06Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "How to train a custom classifier in this docker ?",
+    "state": "closed",
+    "body": "How to train a custom classifier in this docker Can you add an option to train aswell",
+    "created_at": "2018-11-06T20:32:53Z",
+    "closed_at": "2020-11-10T22:36:25Z",
+    "user": "technoartista",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "MLnick",
+        "created_at": "2018-12-06T12:47:23Z",
+        "body": "Hi there apologies for the delay in responding Currently we don t have any options for training related to this model It is something on our longer term roadmap to look into making models such as this one trainable with custom data whether from scratch or transfer learning however at present we are not able to provide any estimate on when that may be enabled"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "pip install from requirements.txt",
+    "state": "closed",
+    "body": "Example PR https github com IBM MAX Review Text Generator pull 7",
+    "created_at": "2018-08-22T17:18:17Z",
+    "closed_at": "2018-10-05T17:34:25Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "Add request param descriptions and update Swagger models help text",
+    "state": "closed",
+    "body": "Example in PR https github com IBM MAX Object Detector pull 20",
+    "created_at": "2018-08-20T15:58:13Z",
+    "closed_at": "2018-10-05T17:34:25Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

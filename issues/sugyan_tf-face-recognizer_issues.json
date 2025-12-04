@@ -1,0 +1,14 @@
+[
+  {
+    "number": 2,
+    "title": "type conversion",
+    "state": "open",
+    "body": "Hello I m new to tensorflow and here is my problem I have a tensor variable holding some data how can I copy that into normal integer variable",
+    "created_at": "2018-06-05T10:00:02Z",
+    "closed_at": null,
+    "user": "raghuramsadineni",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

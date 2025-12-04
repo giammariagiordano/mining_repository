@@ -1,0 +1,141 @@
+[
+  {
+    "number": 44,
+    "title": "top k logic issue",
+    "state": "closed",
+    "body": "I think it should be x sort 1 True and the results should be the same with torch topk API https github com IBM MAX Scene Classifier blob 0927fc5788c3bc4ede43edf6bc0e626f40976f9b core model py L93 Sample codes python import torch probs torch tensor 0 0297 0 3163 0 4335 0 2205 0 3554 0 2583 0 3467 0 0396 0 3997 0 4566 0 0879 0 0557 probs sort 1 True orch return types sort values tensor 0 4335 0 3163 0 2205 0 0297 0 3554 0 3467 0 2583 0 0396 0 4566 0 3997 0 0879 0 0557 indices tensor 2 1 3 0 0 2 1 3 1 0 2 3 torch topk probs 4 torch return types topk values tensor 0 4335 0 3163 0 2205 0 0297 0 3554 0 3467 0 2583 0 0396 0 4566 0 3997 0 0879 0 0557 indices tensor 2 1 3 0 0 2 1 3 1 0 2 3",
+    "created_at": "2020-08-12T13:09:27Z",
+    "closed_at": "2020-08-13T19:15:29Z",
+    "user": "tade0726",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xuhdev",
+        "created_at": "2020-08-12T21:59:43Z",
+        "body": "By default topk performs on the last dimension Since your examples are all 2 dimensional it makes sense that it corresponds to sort 1 True Since the line you cited is on a 1 dimensional tensor sort 0 True would correspond to a topk call Nevertheless I made a PR to fix this part of the code to use topk which would be less confusing"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "inconsistent link to COS directory for model files",
+    "state": "closed",
+    "body": "the README https github com IBM MAX Scene Classifier blob master README md contains this link to the model files http max assets s3 api us geo objectstorage softlayer net pytorch places365 whole resnet18 places365 python36 pth this works however it is different than the link in the Dockerfile https github com IBM MAX Scene Classifier blob master Dockerfile http max assets s3 api us geo objectstorage softlayer net scene classifier 1 0 assets tar gz i would expect both of these to point to the same set of model files in addition both of the links should be pointing to the new US cross region s3 us cloud object storage appdomain cloud because the old one has been deprecated s3 api us geo objectstorage softlayer net",
+    "created_at": "2019-03-27T00:36:54Z",
+    "closed_at": "2019-05-15T06:39:17Z",
+    "user": "vabarbosa",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "Fix the spelling of aquarium",
+    "state": "closed",
+    "body": "rename assets acquarium jpg update assets README md which references the image update README md which references the image update screen shot in README md which references the image",
+    "created_at": "2019-03-08T15:58:23Z",
+    "closed_at": "2019-03-11T19:14:51Z",
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 22,
+    "title": "Handle images with alpha channel data",
+    "state": "closed",
+    "body": "model predict throws HTTP code 500 if an image is provided as input containing alpha channel data",
+    "created_at": "2019-03-06T20:13:47Z",
+    "closed_at": "2019-03-07T20:07:56Z",
+    "user": "ptitzler",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "kmh4321",
+        "created_at": "2019-03-07T01:09:07Z",
+        "body": "Fix here https github com IBM MAX Scene Classifier pull 21 files diff 0831a56d210514c03372021d9e8f19fbR18"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Move to MAX-Framework",
+    "state": "closed",
+    "body": "Update model to use https github com IBM MAX Framework",
+    "created_at": "2019-01-18T10:52:57Z",
+    "closed_at": "2019-03-07T20:07:56Z",
+    "user": "MLnick",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Standardize model file packaging",
+    "state": "closed",
+    "body": "Refer to https github ibm com CODAIT Production Readiness issues 4 This model does not package the model files into tar gz like TensorFlow models",
+    "created_at": "2018-11-06T23:07:02Z",
+    "closed_at": "2019-01-18T11:01:27Z",
+    "user": "xwu0226",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "MLnick",
+        "created_at": "2019-01-18T11:01:27Z",
+        "body": "Fixed by 15"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "pip install from requirements.txt",
+    "state": "closed",
+    "body": "Example PR https github com IBM MAX Review Text Generator pull 7",
+    "created_at": "2018-08-22T17:20:27Z",
+    "closed_at": "2019-01-21T21:53:00Z",
+    "user": "xwu0226",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2018-10-18T18:42:29Z",
+        "body": "Is this really practical because we are downloading torchvision from pytorch org instead of pypi"
+      },
+      {
+        "user": "asan645",
+        "created_at": "2019-09-18T23:52:54Z",
+        "body": "pip install install requires pip install r requirements txt"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Add request param descriptions and update Swagger models help text",
+    "state": "closed",
+    "body": "Example in PR https github com IBM MAX Object Detector pull 20",
+    "created_at": "2018-08-20T15:55:22Z",
+    "closed_at": "2019-01-22T13:12:35Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "/model/predict: Handle invalid input gracefully",
+    "state": "closed",
+    "body": "Currently if an invalid input is specified e g invalid file format the model predict API endpoint returns HTTP code 500 instead of 400",
+    "created_at": "2018-07-31T00:43:35Z",
+    "closed_at": "2019-01-22T13:12:35Z",
+    "user": "ptitzler",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

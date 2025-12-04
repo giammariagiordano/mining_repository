@@ -1,0 +1,178 @@
+[
+  {
+    "number": 9,
+    "title": "Error when loading pre-trained models",
+    "state": "open",
+    "body": "I am trying to use the pre trained model you provided https drive google com drive folders 1OY1MOhmL56yUoVfXmLp1zZqIneN46dPd usp sharing and I leverage the evaluation script from PointNet https github com charlesq34 pointnet2 blob master evaluate py I used the default settings no normals However the following errors occur when loading model checkpoints W tensorflow core framework op kernel cc 1192 Not found Key layer1 seq attention encoder rnn lstm cell bias not found in checkpoint W tensorflow core framework op kernel cc 1192 Not found Key layer1 seq attention encoder rnn lstm cell kernel not found in checkpoint Indeed the checkpoint has no such variable names only with layer1 encoder rnn lstm cell bias layer1 encoder rnn lstm cell kernel Could you provide more guidelines for loading the pre trained models Thank you tensorflow gpu 1 4 0 cuda 8 0 Related issue https github com liuxinhai Point2Sequence issues 1",
+    "created_at": "2021-07-31T19:39:21Z",
+    "closed_at": null,
+    "user": "zqzqz",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "how to set the value of K with different points?",
+    "state": "open",
+    "body": "Hi thanks for your great work For each sampling point search the nearest K points to build a local region The question is how to set the value of K with different points for other datasets Is there any standard for the value of K looking forward to your reply",
+    "created_at": "2020-06-19T14:25:33Z",
+    "closed_at": null,
+    "user": "longmalongma",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 7,
+    "title": "how to set the value of K with different points?",
+    "state": "open",
+    "body": "Hi thanks for your great work For each sampling point search the nearest K points to build a local region The question is how to set the value of K with different points Is there any standard for the value of K looking forward to your reply",
+    "created_at": "2020-06-19T14:24:04Z",
+    "closed_at": null,
+    "user": "longmalongma",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "could you tell me the r of two-scale ？",
+    "state": "open",
+    "body": "0 4 and 0 8 is the best or the other",
+    "created_at": "2020-01-17T14:32:43Z",
+    "closed_at": null,
+    "user": "joycewangsy",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "joycewangsy",
+        "created_at": "2020-01-17T14:35:12Z",
+        "body": "sorry i mean the K of two scale"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "can your model deal with large scale point cloud data?",
+    "state": "open",
+    "body": "can your model deal with large scale point cloud data such as s3dis data and scannet dataset looking forwarding to your reply",
+    "created_at": "2019-12-04T09:06:27Z",
+    "closed_at": null,
+    "user": "longmalongma",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-12-10T14:48:24Z",
+        "body": "I think the answer is yes With some modifications our model can be applied to large scale point cloud data including s3dis dataset and scannet dataset Due to limited time before we have never tried on these datasets"
+      },
+      {
+        "user": "longmalongma",
+        "created_at": "2019-12-10T15:06:11Z",
+        "body": "Thanks for your reply large scale point cloud dataset have many points and your algorithm needs to establish multi scale local neighborhoods at each point so the Computational complexity is very large I m afraid ordinary machines can t stand it Original From Xinhai Liu notifications github com Send time Tuesday Dec 10 2019 10 48 PM To liuxinhai Point2Sequence Point2Sequence noreply github com Cc longma 1442342449 qq com Author author noreply github com Subject Re liuxinhai Point2Sequence can your model deal with large scalepoint cloud data 5 I think the answer is yes With some modifications our model can be applied to large scale point cloud data including s3dis dataset and scannet dataset Due to limited time before we have never tried on these datasets You are receiving this because you authored the thread Reply to this email directly view it on GitHub or unsubscribe"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "about s3dis and scannet",
+    "state": "open",
+    "body": "why do not you try to use your model to implement task of scene segmentation on s3dis of scannet dataset can your model make it",
+    "created_at": "2019-11-14T15:40:56Z",
+    "closed_at": null,
+    "user": "longmalongma",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-12-10T14:48:59Z",
+        "body": "I think the answer is yes With some modifications our model can be applied to large scale point cloud data including s3dis dataset and scannet dataset Due to limited time before we have never tried on these datasets"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "can you help me?",
+    "state": "closed",
+    "body": "Can you help me when I try to train your models I meet this problem InvalidArgumentError see above for traceback No OpKernel was registered to support Op FarthestPointSample with these attrs Registered devices CPU Registered kernels device GPU Node layer1 FarthestPointSample FarthestPointSample npoint 384 device device GPU 0 Placeholder",
+    "created_at": "2019-06-05T13:31:24Z",
+    "closed_at": "2019-09-25T09:12:48Z",
+    "user": "longmalongma",
+    "comments_count": 8,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-06-07T01:01:12Z",
+        "body": "Please check the following two points 1 Whether to correctly compile and generate tf sampling so so as described in PointNet 2 FarthestPointSample function only support GPU"
+      },
+      {
+        "user": "longmalongma",
+        "created_at": "2019-06-13T14:11:44Z",
+        "body": "Please check the following two points 1 Whether to correctly compile and generate tf sampling so so as described in PointNet 2 FarthestPointSample function only support GPU Think you for your reply can you send me three have compiled files in tf ops folder"
+      },
+      {
+        "user": "longmalongma",
+        "created_at": "2019-06-14T02:55:29Z",
+        "body": "Please check the following two points 1 Whether to correctly compile and generate tf sampling so so as described in PointNet 2 FarthestPointSample function only support GPU Think you for your reply can you send me three have compiled files in tf ops folder my email is that 1442342449 qq com"
+      },
+      {
+        "user": "Luznss",
+        "created_at": "2019-07-12T10:12:43Z",
+        "body": "Please check the following two points 1 Whether to correctly compile and generate tf sampling so so as described in PointNet 2 FarthestPointSample function only support GPU I aosl Please check the following two points 1 Whether to correctly compile and generate tf sampling so so as described in PointNet 2 FarthestPointSample function only support GPU Could you help me I also meet same this problem but i have running pointnet normal"
+      },
+      {
+        "user": "Luznss",
+        "created_at": "2019-07-12T10:14:33Z",
+        "body": "Could you help me I also meet same this problem but i have running pointnet normal InvalidArgumentError see above for traceback No OpKernel was registered to support Op FarthestPointSample with these attrs Registered devices CPU Registered kernels device GPU"
+      },
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-07-13T13:06:36Z",
+        "body": "From the error message I still think that you may build the network on the CPU device Please check the part of network building Moreover you can download my compiled so files at https drive google com drive folders 1KBbRLSg4UXZetY6VCP1zsnSIp6oHuJK3 usp sharing Best wishes"
+      },
+      {
+        "user": "Luznss",
+        "created_at": "2019-07-14T02:33:10Z",
+        "body": "From the error message I still think that you may build the network on the CPU device Please check the part of network building Moreover you can download my compiled so files at https drive google com drive folders 1KBbRLSg4UXZetY6VCP1zsnSIp6oHuJK3 usp sharing Best wishes Think you for your help"
+      },
+      {
+        "user": "longmalongma",
+        "created_at": "2019-07-25T07:46:23Z",
+        "body": "From the error message I still think that you may build the network on the CPU device Please check the part of network building Moreover you can download my compiled so files at https drive google com drive folders 1KBbRLSg4UXZetY6VCP1zsnSIp6oHuJK3 usp sharing Best wishes Think you for your help Have you successfully run this code on your computer I can t run it"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Pretrained model",
+    "state": "closed",
+    "body": "Thanks for sharing the codes of this brilliant work I have tried to run the code following the default settings but got slightly lower accuracy 92 0 in classification of ModelNet40 using the hdf5 data without normals so I was wondering whether you could provide a pretrained model to reproduce the results listed in your paper Thanks a lot",
+    "created_at": "2019-05-05T05:16:57Z",
+    "closed_at": "2019-06-12T01:35:40Z",
+    "user": "ashawkey",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-05-09T14:52:35Z",
+        "body": "Pretrained Models under ModelNet40 https drive google com drive folders 1OY1MOhmL56yUoVfXmLp1zZqIneN46dPd usp sharing"
+      },
+      {
+        "user": "ashawkey",
+        "created_at": "2019-05-10T05:19:27Z",
+        "body": "Thanks for reply But I find there is no code to evaluate using a pretrained model in this branch Would you mind update to share that code"
+      },
+      {
+        "user": "liuxinhai",
+        "created_at": "2019-06-07T15:08:29Z",
+        "body": "ashawkey you can get the evaluate code by modify the train code or you can follow the evaluation as in PointNet https github com charlesq34 pointnet2 blob master evaluate py"
+      }
+    ]
+  }
+]

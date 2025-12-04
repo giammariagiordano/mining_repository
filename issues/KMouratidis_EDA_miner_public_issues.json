@@ -1,0 +1,113 @@
+[
+  {
+    "number": 7,
+    "title": "Baseline Function",
+    "state": "open",
+    "body": "Provide a better baseline function than peakutils x Exponential Moving Average Moving Average x Better fitting Moreover Give the ability to the users to choose promo dates Give the ability to target a specific promo",
+    "created_at": "2019-04-03T23:47:55Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "Remember previously fitted models",
+    "state": "closed",
+    "body": "When swapping out of the Analyze Predict tab and then back in the previously fitted model is lost This doesn t seem appropriate Discuss ideas about how to handle this Some possible solutions Add fitted models to a history tab allowing access for individual instance prediction possibly allowing downloading of trained models Use a common Dash pattern store what info is needed in a hidden div element Ignore the issue Some of the planned future modificiations e g graphical model builder will render this whole tab practically useless I think we should implement a solution despite the third point",
+    "created_at": "2019-04-03T23:40:37Z",
+    "closed_at": "2019-08-21T10:50:55Z",
+    "user": "KMouratidis",
+    "comments_count": 1,
+    "labels": [
+      "invalid"
+    ],
+    "comments": [
+      {
+        "user": "KMouratidis",
+        "created_at": "2019-08-21T10:50:55Z",
+        "body": "This will be handled later when productionizing models or at least allowing inference on new datasets will be defined Probably in a new Trained models tab"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "User interface & styling",
+    "state": "open",
+    "body": "1 Improve feel and looks x Add themes e g Light Dark etc x Review tabs system available options design urls x Modify CSS and gather all styling in 1 file x Make elements more appealing buttons inputs dropdowns Useful sidemenu maybe Add color choices for graphs Careful review of interactivity and responsiveness e g for mobiles 2 Discuss and work on creating programmatic user interface for advanced users",
+    "created_at": "2019-04-03T23:39:47Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "API integrations",
+    "state": "open",
+    "body": "1 Add ability to connect to more APIs x Twitter x Google Sheets x reddit x Quandl x Spotify x Google Analytics Google Docs Google Maps Facebook AWS Azure Google Cloud SQL and SQL like servers https help plot ly database connectors Stocks Cryptocurrencies Anything from here https blog rapidapi com most popular apis E U datasets Anything else 2 Add functionality to APIs that we have connections to Twitter Google Sheets Quandl reddit Spotify Google Analytics Google Docs Google Maps Facebook AWS Azure Google Cloud SQL and SQL like servers https help plot ly database connectors Stocks Cryptocurrencies Anything from here https blog rapidapi com most popular apis E U datasets Anything else",
+    "created_at": "2019-04-03T23:38:23Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "Additional visualizations",
+    "state": "open",
+    "body": "These should probably be implemented in one place and in an abstract manner so that they can be used anywhere within the app 1 More chart types e g from plotly x Scatter plots x Line plots Time series x Histograms Bar charts x Pie chars x Bubble charts x Filled area plots x Error bars Confidence prediction intervals x Heatmaps x 2D density plots x 3D charts x Pairplots x Graphs Networks e g cytoscape https dash plot ly cytoscape networkX visdcc https github com jimmybow visdcc x Maps Tree maps Candlestick OHLC charts Trees Dendrograms 2 Add aggregations to plots groupby filter count mean median min max sum",
+    "created_at": "2019-04-03T23:37:30Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Machine Learning Algorithms & Pipelines",
+    "state": "open",
+    "body": "1 Add more algorithms x sklearn 46 so far statsmodels https www statsmodels org stable index html tensorflow pytorch NLP models nltk gensim spacy etc 2 Implement common pipelines e g Imputation Standardization Feature extraction Training Voting Classifiers ensembles other aggregators Cross validation hyper parameter tuning Dimensionality reduction 3 Graphical model designer x Basic layout x Basic conversion to sklearn pipeline Pipeline x Redefine edges restyle arrows x Advanced functionality x Handle order better",
+    "created_at": "2019-04-03T23:36:38Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "Improve upload and general data handling (e.g. via pandas)",
+    "state": "open",
+    "body": "1 Correctly read various formats x csv x xls xlsx x json x feather html 2 Convert columns to appropriate data types possibly using heuristics Focus on imporved handling of x Dates timestamps etc x Categorical Ordinal Nominal Missing values interface with some sort of preprocessing pipeline algorithm dependent Interface for custom objects 3 Handling of files storage etc x Review use of Redis discuss alternatives or improved usage etc x Multiple file uploads Large file uploads e g Resumable upload https community plot ly t show and tell dash resumable upload 9519",
+    "created_at": "2019-04-03T23:34:37Z",
+    "closed_at": null,
+    "user": "KMouratidis",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  }
+]

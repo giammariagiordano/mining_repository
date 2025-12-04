@@ -1,0 +1,1570 @@
+[
+  {
+    "number": 51,
+    "title": "Problem executing the demo - `GLIBCXX_3.4.29' not found ",
+    "state": "closed",
+    "body": "Hello I ve been trying to setup the repository but keep failing in getting the chamfer distance to work I set up an anaconda environment as instructed and my system CUDA has version 10 1 and GCC 9 3 0 Some more of my system specs Manjaro Linux w Kernel 5 10 151 System python 3 10 When loading the chamfer distance cpp extension the following error occurs Traceback most recent call last File inference correspondences py line 18 in module import dist chamfer as ext File extension dist chamfer py line 11 in module path 3D CODED extension chamfer cu File path anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch utils cpp extension py line 645 in load is python module File path anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch utils cpp extension py line 825 in jit compile return import module from library name build directory is python module File path anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch utils cpp extension py line 968 in import module from library return imp load module module name file path description File path anaconda3 envs pytorch 3D CODED lib python3 7 imp py line 242 in load module return load dynamic name filename file File path anaconda3 envs pytorch 3D CODED lib python3 7 imp py line 342 in load dynamic return load spec ImportError path anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch libstdc so 6 version GLIBCXX 3 4 29 not found required by tmp torch extensions chamfer chamfer so pytorch 3D CODED Could you please advise me on how I could solve this",
+    "created_at": "2022-11-19T13:44:08Z",
+    "closed_at": "2022-11-20T12:30:08Z",
+    "user": "chibi03",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "chibi03",
+        "created_at": "2022-11-20T12:30:08Z",
+        "body": "I was able to fix the issue It only occurred if I don t install chamfer distance with setup py and if I did install it I got the error undefined symbol ZNSt19basic ostringstreamIcSt11char traitsIcESaIcEEC1Ev I was able to fix the undefined Symbol error using CUDA 10 0 In case somebody else has this issue I was not able to get it to work with CUDA 10 1 maybe installing 10 0 will solve the issue for others as well"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "what's the network.mesh",
+    "state": "closed",
+    "body": "Hi Thibault This work is excellent I try to adopt unsupervised training but I don t know what is network mesh while training Which MESH should I use for initialization Could you provide something about it thank you very much Best regards",
+    "created_at": "2022-09-09T08:46:29Z",
+    "closed_at": "2022-09-09T14:30:41Z",
+    "user": "Daixinxin-cc",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 49,
+    "title": "Get terrible result",
+    "state": "closed",
+    "body": "Dear author i am sorry to bother you again when i set regular sampling False I get terrible result i can t get great reconstruct result i got the result like the following picture 20220311102105 https user images githubusercontent com 64821543 157789770 d38f38db 645e 4771 8faa 9976644f7cfe png Could you give me some advice",
+    "created_at": "2022-03-11T02:22:00Z",
+    "closed_at": "2022-03-14T11:40:19Z",
+    "user": "caijinana",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "caijinana",
+        "created_at": "2022-03-11T02:22:19Z",
+        "body": "ThibaultGROUEIX"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-03-11T06:34:41Z",
+        "body": "i foud loss train total torch mean pointsReconstructed view self points size 0 1 3 self points transpose 2 1 contiguous 2 got error i print get the following error 20220311142828 https user images githubusercontent com 64821543 157815126 97fa091f 10bd 4d38 9326 6f4ccc4b9a69 png"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "Training ERRor",
+    "state": "closed",
+    "body": "Hello Dear ThibaultGROUEIX professor 20220308153627 https user images githubusercontent com 64821543 157190352 645bc320 9176 4985 a0d0 71062d91d73d png when i am training the code i got the error as the picture but i can training 1 epoch in the morning but when i traing again in the afternoon i got the error i used training successfully in the january how should i do Thank you",
+    "created_at": "2022-03-08T07:49:23Z",
+    "closed_at": "2022-03-09T10:01:59Z",
+    "user": "caijinana",
+    "comments_count": 6,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-03-08T08:57:21Z",
+        "body": "Hi caijinana Nice hearing from you again I have not changed the code since January but you probably switched machines I would say you don t have enough RAM to train You could consider two things use another machine with more RAM split the training data into chunks and load the chunk sequentially Best regards Thibault"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-03-08T12:34:40Z",
+        "body": "ThibaultGROUEIX Thank you very much now my project is working but i have not change the coda So strange now i want to ask you another question i want to training my own data it have 6480 points can I set the random sampling false but when i set false i got the error how can i do and set the random sampling false only affect the visualization or effect the result 20220308202807 https user images githubusercontent com 64821543 157238992 9d71a8cc 6888 4407 95c3 a0c3d306fb67 png 20220308202826 https user images githubusercontent com 64821543 157239082 714f1343 dcef 4677 92cf 4e32f88a7c57 png"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-03-08T12:35:14Z",
+        "body": "20220308203455 https user images githubusercontent com 64821543 157239231 078ac81f 7b45 4cb5 a4c8 c29e87ac2e4d png"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-03-08T14:36:42Z",
+        "body": "The bug above is only related to visualisation and does not affect the results Visdom is a package similar to tensorboard in case you don t know it It used to be my favourite but now I mostly use tensorboard Bets regards"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-03-09T02:05:46Z",
+        "body": "Thank you Love you Best wishes Happy every day"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-03-09T10:01:59Z",
+        "body": "Love your spirit Cheers"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "About unsup_training",
+    "state": "open",
+    "body": "Hi I would like to try something new using your code for unsupervised training but currently cannot find network mesh while training Could you provide something about how to use it It will be very helpful to me look forward to your reply Best",
+    "created_at": "2022-01-21T14:11:13Z",
+    "closed_at": null,
+    "user": "zhoaliang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Daixinxin-cc",
+        "created_at": "2022-09-09T08:48:20Z",
+        "body": "Hi Do you find the solution Best regards"
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "title": "how can i get the correspondence index?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2021-12-09T06:42:42Z",
+    "closed_at": "2022-02-14T09:20:52Z",
+    "user": "caijinana",
+    "comments_count": 47,
+    "labels": [],
+    "comments": [
+      {
+        "user": "caijinana",
+        "created_at": "2021-12-17T06:59:33Z",
+        "body": "I was expecting to get pairs of points q r q t"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-01-11T16:36:02Z",
+        "body": "Hi caijinana I do not understand your question Can you clarify which part of the code you are referring to and what you are trying to achieve Best regards"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T07:05:27Z",
+        "body": "Hi ThibaultGROUEIX i want to say how to get the correspondence point qr qt where qr is a point on the source model and qt is a point on the target model i want to get a random point and it s correspindence point i test on difference dataset but all get terrible result i found it worked good only test on Faust dataset How could i solve the problem I use the following code to get the correspondence if self project on target print projection on target self neigh fit target vertices idx knn self neigh kneighbors closest points return distance False closest points target vertices idx knn np savetxt results correspondences tar txt idx knn fmt d closest points np mean closest points 1 keepdims False with open correspondences tar txt as f cpt 0 for line in f cpt 1 if cpt 3377 or cpt 4432 or cpt 5566or cpt 5524or cpt 5404or cpt 5411 or cpt 3519 or cpt 5520 or cpt 5492 or cpt 4403 or cpt 6138 or cpt 7168 or cpt 6122 or cpt 8244 or cpt 8244 or cpt 8138 or cpt 8145 or cpt 6280 or cpt 8239 or cpt 8221 or cpt 7139 result cpt int line print result"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T07:06:00Z",
+        "body": "hi ThibaultGROUEIX"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-08T08:42:40Z",
+        "body": "Hi caijinana The model should be robust across datasets Can share a meshlab plot of a sample of your new dataset overlayed with one of Faust meshes things to look for orientation of your new data scale of your new data Best regards Thibault"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T08:56:29Z",
+        "body": "i used smplx model as input A another smplx model as input b but get terrible rusult nbsp nbsp gt 2022 2 8 4 42 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Hi caijinana The model should be robust across datasets Can share a meshlab plot of a sample of your new dataset overlayed with one of Faust meshes things to look for orientation of your new data scale of your new data Best regards Thibault Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T08:57:13Z",
+        "body": "ThibaultGROUEIX"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-08T09:01:06Z",
+        "body": "Can you share a meshlab plot of a sample of your new dataset overlayed with one of Faust meshes"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T09:08:35Z",
+        "body": "Sorry i don t know how to get that this is my dataset nbsp nbsp nbsp ThibaultGROUEIX 3D CODED gt nbsp 2022 2 8 5 01 gt gt nbsp Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Can you share a meshlab plot of a sample of your new dataset overlayed with one of Faust meshes Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-08T09:17:29Z",
+        "body": "I think that your orientation is likely wrong The simple way to check this is to open jointly a faust mesh and an smplx model in any 3D viewer of your choice MeshLab is a free software for visualisation but you could use your own viewer if it s easier"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T09:26:12Z",
+        "body": "i have checked my orientation is same as faust mesh result 2 8 zip https github com ThibaultGROUEIX 3D CODED files 8022407 result 2 8 zip"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-08T09:27:23Z",
+        "body": "the result 2 8 zip is the correspondence result"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-08T10:04:23Z",
+        "body": "Based on the shapes and poses I am seing for source and target in my experience 3D CODED would definitely work Please share a screenshot of your orientation check"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-08T10:18:19Z",
+        "body": "Or just send me as OBJ or PLY Source new dataset Target new dataset Faust sample"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T01:07:30Z",
+        "body": "nbsp nbsp gt 2022 2 8 6 04 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Based on the shapes and poses I am seing for source and target in my experience 3D CODED would definitely work Please share a screenshot of your orientation check Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T01:18:43Z",
+        "body": "nbsp nbsp gt 2022 2 8 6 18 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Or just send me as OBJ or PLY Source new dataset Target new dataset Faust sample Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T01:26:01Z",
+        "body": "3D CODED could get great reconstrucct target model but as you see in result 2 8 zip i find some correspondence nbsp points in source model and target model but get terrible result nbsp nbsp nbsp gt 2022 2 8 6 04 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Based on the shapes and poses I am seing for source and target in my experience 3D CODED would definitely work Please share a screenshot of your orientation check Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T02:43:01Z",
+        "body": "Uploading 20220209091719 png"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T06:45:52Z",
+        "body": "Uploading data zip"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T06:46:05Z",
+        "body": "ThibaultGROUEIX"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-09T09:05:13Z",
+        "body": "I can download neither of those links unfortunately To move forward can you please upload these OBJs only this because I don t know your naming conventions and I cannot interpret your previous ZIP Source new dataset Source new dataset Reconstructed Target new dataset Target new dataset Reconstructed Faust sample"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T09:18:39Z",
+        "body": "sorry i have named but i network is terrible i will upload again thank you nbsp nbsp gt 2022 2 9 5 05 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 I can download neither of those links unfortunately To move forward can you please upload these OBJs only this because I don t know your naming conventions and I cannot interpret your previous ZIP Source new dataset Source new dataset Reconstructed Target new dataset Target new dataset Reconstructed Faust sample Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T09:37:10Z",
+        "body": "sorry i don t know why i can t upload the data zip again i have try many times but got error the previous zip is result 2 8 result result 1 source obj is Source new dataset it is a smplx model target 1 obj is Target new dataset it is a smplx model corres 1 txt some correspondences point idx in source and target nbsp nbsp ThibaultGROUEIX 3D CODED gt nbsp 2022 2 9 5 05 gt gt nbsp Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 I can download neither of those links unfortunately To move forward can you please upload these OBJs only this because I don t know your naming conventions and I cannot interpret your previous ZIP Source new dataset Source new dataset Reconstructed Target new dataset Target new dataset Reconstructed Faust sample Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-09T10:37:51Z",
+        "body": "Ok but this zip is missing the FAUST model and the 3D CODED reconstructions"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T10:56:27Z",
+        "body": "sorry i still can t upload data could you get a Faust model yourself nbsp nbsp gt 2022 2 9 6 38 gt gt gt Re ThibaultGROUEIX 3D CODED how can i get the correspondence index Issue 46 Ok but this zip is missing the FAUST model and the 3D CODED reconstructions Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android You are receiving this because you were mentioned Message ID gt"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T11:38:24Z",
+        "body": "r https user images githubusercontent com 64821543 153192563 4a9f2e4f 353b 440d 8900 c04e36dc3c64 jpg"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-09T11:40:17Z",
+        "body": "great this looks reasonable indeed can you show the reconstructions and show the axis"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T11:44:35Z",
+        "body": "reconstruction https user images githubusercontent com 64821543 153193537 c25c3940 301b 4d73 9604 50680a351936 png"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-02-09T11:49:24Z",
+        "body": "The reconstructions are pretty good and the color code suggests that the correspondence are pretty good Are you using my script compute correspondences https github com ThibaultGROUEIX 3D CODED blob master inference correspondences py L71"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-02-09T11:52:15Z",
+        "body": "yes i used and the finally correspondences ply is pretty good but the point correspondences is terrible 934523df4bac07d71c0a10b5a263ed4 https user images githubusercontent com 64821543 153195201 98cc0ace 8490 48c2 aa7e f53b9004b2c8 png"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "FileNotFoundError: [Errno 2] No such file or directory: 'chamfer_cuda.cpp'",
+    "state": "closed",
+    "body": "hi Hello when I run the code I have the following problem the folder contains this cpp file but this error is reported Traceback most recent call last File share home xxx workspacce xx 3dco training train py line 9 in module import script as script File inference script py line 12 in module import inference correspondences as correspondences File inference correspondences py line 16 in module import extension dist chamfer as ext File extension dist chamfer py line 10 in module sources chamfer cuda cpp chamfer cu File share home xxx local lib python3 7 site packages torch utils cpp extension py line 1091 in load keep intermediates keep intermediates File share home xxx local lib python3 7 site packages torch utils cpp extension py line 1269 in jit compile is standalone is standalone File share home xxx local lib python3 7 site packages torch utils cpp extension versioner py line 45 in bump version if changed hash value hash source files hash value source files File share home xxxi local lib python3 7 site packages torch utils cpp extension versioner py line 15 in hash source files with open filename as file FileNotFoundError Errno 2 No such file or directory chamfer cuda cpp job end time is Fri Nov 26 17 32 50 CST 2021",
+    "created_at": "2021-11-26T09:36:41Z",
+    "closed_at": "2023-03-03T04:23:34Z",
+    "user": "njnj0314",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "njnj0314",
+        "created_at": "2021-11-26T10:23:26Z",
+        "body": "Hello When I ran python setup py install I used cuda10 and reported the following error and ninja was installed thans job start time is Fri Nov 26 18 18 08 CST 2021 c27 running install running bdist egg running egg info writing chamfer egg info PKG INFO writing dependency links to chamfer egg info dependency links txt writing top level names to chamfer egg info top level txt reading manifest file chamfer egg info SOURCES txt writing manifest file chamfer egg info SOURCES txt installing library code to build bdist linux x86 64 egg running install lib running build ext building chamfer extension gcc pthread Wno unused result Wsign compare DNDEBUG g fwrapv O3 Wall fPIC I share home wanghui local lib python3 7 site packages torch include I share home wanghui local lib python3 7 site packages torch include torch csrc api include I share home wanghui local lib python3 7 site packages torch include TH I share home wanghui local lib python3 7 site packages torch include THC I usr local cuda include I usr local include python3 7m c chamfer cuda cpp o build temp linux x86 64 3 7 chamfer cuda o DTORCH API INCLUDE EXTENSION H DPYBIND11 COMPILER TYPE gcc DPYBIND11 STDLIB libstdcpp DPYBIND11 BUILD ABI cxxabi1011 DTORCH EXTENSION NAME chamfer D GLIBCXX USE CXX11 ABI 0 std c 14 gcc error chamfer cuda cpp No such file or directory gcc fatal error no input files compilation terminated share home wanghui local lib python3 7 site packages torch utils cpp extension py 369 UserWarning Attempted to use ninja as the BuildExtension backend but we could not find ninja Falling back to using the slow distutils backend warnings warn msg format we could not find ninja error command gcc failed with exit status 1 job end time is Fri Nov 26 18 18 11 CST 2021"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-01-11T16:34:57Z",
+        "body": "Hi njnj0314 As an alternative you could try installing the latest version from https github com ThibaultGROUEIX ChamferDistancePytorch Best regards Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2023-03-03T04:23:34Z",
+        "body": "Closing this since the issue is stale feel free to reopen Thanks a lot for for playing around with 3D CODED Cheers Thibault"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "title": "average Euclidean error on SCAPE",
+    "state": "closed",
+    "body": "Hi Thibault Can you share the code for calculating the average Euclidean error on SCAPE dataset Thanks",
+    "created_at": "2021-11-18T16:16:55Z",
+    "closed_at": "2023-03-03T04:23:27Z",
+    "user": "hhuang-code",
+    "comments_count": 4,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-11-18T16:30:16Z",
+        "body": "Hi aaron h code Thanks a lot for your interest in the code I have not kept this part unfortunately Best regards Thibault"
+      },
+      {
+        "user": "hhuang-code",
+        "created_at": "2021-11-19T03:33:38Z",
+        "body": "Hi ThibaultGROUEIX Thanks for your quick reply Could you just give some hints steps on how to compute the average Euclidean error given the prediction and ground truth correspondence so I can write the evaluation code to use on other datasets other than FAUST online evaluation Thanks Best regards Aaron"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-11-19T10:18:13Z",
+        "body": "On scape the error is the geodesic distance not euclidean The dataset http ai stanford edu drago Projects scape scape html Geodesic error looks like you can get both geodesic and data from here if you don t want to reimplement it https github com ruixiang440 Dual Iterative Refinement Method Best regards Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2023-03-03T04:23:27Z",
+        "body": "Closing this since the issue is stale feel free to reopen Thanks a lot for for playing around with 3D CODED Cheers Thibault"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "title": "SMALL-R animals dataset",
+    "state": "closed",
+    "body": "Hello From the data generate data animals py I can generate dogs cows cats and hippos However I would like to generate other categories such as horses using the SMALL R dataset you ve mentioned in the paper Can you please help with generating them Thanks",
+    "created_at": "2021-10-27T08:38:25Z",
+    "closed_at": "2023-03-03T04:23:57Z",
+    "user": "Sentient07",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-11-12T11:12:12Z",
+        "body": "Hi Sentient07 Thanks for reaching out Sorry for the late reply this is beyond the scope of this codebase I recommend to reach out directly to the Small R authors best regards Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2023-03-03T04:23:57Z",
+        "body": "Closing this since the issue is stale feel free to reopen Thanks a lot for for playing around with 3D CODED Cheers Thibault"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "Problems with downloading data",
+    "state": "closed",
+    "body": "Hi Thibault first of all thank you for sharing your code with the community I have some issues with downloading the data From what I can gather there is an issue with authorization The test data is downloaded whilst the train data gets an 403 Forbidden error I attached a screenshot of the error Maybe you have some knowledge as to why this is happening Downloading the data https user images githubusercontent com 32020857 132869599 c1f774ed db85 4100 94d2 5290ffd5e5b8 png Also can I ask you why did you save the data in a pth format This way the data needs to be loaded all at once which can be infeasible for some Thank you in advance for your response",
+    "created_at": "2021-09-10T14:30:58Z",
+    "closed_at": "2021-09-13T10:41:18Z",
+    "user": "DavidBoja",
+    "comments_count": 2,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-09-13T08:57:40Z",
+        "body": "Hi DavidBoja Thanks for your interest in the data code I added manual download links in https github com ThibaultGROUEIX 3D CODED commit 2dd1efbb212e522f0057a55ab5b287071e23d28b You have a valid point about the pth I simply did not think about it at the time and did what seemed the easiest Best regards Thibault"
+      },
+      {
+        "user": "DavidBoja",
+        "created_at": "2021-09-13T10:41:18Z",
+        "body": "Thank you The download works now Got it I was searching for methods to load the data from the pth file in batches but haven t found anything Glad to know I haven t missed anything Kind regards David"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "title": "How is the error for correspondences computed?",
+    "state": "closed",
+    "body": "According to the paper The error is the average Euclidean distance between the estimated projection and the ground truth projection How exactly is it computed and is it done somewhere in the code Is it also averaged for all the given pairs of shapes",
+    "created_at": "2021-08-04T14:36:07Z",
+    "closed_at": "2021-08-06T15:24:19Z",
+    "user": "kuzand",
+    "comments_count": 1,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-08-06T14:14:15Z",
+        "body": "Hi kuzand Thanks for your interest in 3D CODED You would not be able to find this in the code unfortunately Right after this extract comes We evaluated our method through the online server The link is http faust is tue mpg de challenge Intra subject challenge The score in indeed averaged on all given pairs It s an L2 loss between predicted points and ground truth points AFAI Remember Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "title": "Rotation invariance",
+    "state": "closed",
+    "body": "In the paper it says that As an alternative we tried to learn a network directly invariant to rotations around the vertical axis I was wondering how was this done",
+    "created_at": "2021-08-04T13:11:46Z",
+    "closed_at": "2021-08-06T15:22:03Z",
+    "user": "kuzand",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-08-06T14:16:52Z",
+        "body": "The dataset of humans is aligned We added invariance to rotation through data augmentation by randomly rotating the sampled human mesh around the Y axis when training 3D CODED This makes the network s job harder but works to some extent Best regards Thibault"
+      },
+      {
+        "user": "kuzand",
+        "created_at": "2021-08-06T15:22:00Z",
+        "body": "Thank you for the information"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "Results of computing correspondences",
+    "state": "closed",
+    "body": "Hello After running the python inference correspondences py dir name learning elementary structure trained models 1patch deformation using the provided trained model and the example meshes I got a folder named results which contains two files correspondences ply and correspondences txt I was expecting to get pairs of points q r q t however we just get a list of point coordinates in total 177638 points I am not sure how to interpret these results and how to get the colored meshes as in the readme file",
+    "created_at": "2021-07-15T08:08:48Z",
+    "closed_at": "2021-07-15T14:20:20Z",
+    "user": "kuzand",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-15T13:54:19Z",
+        "body": "HI Thanks for reaching out and using the code Most likely in correspondences txt you have the list of matching points on the surface of mesh 2 of every point in mesh 1 You can check this by making sure correspondences txt has the same number of points of mesh 1 for instance correspondences ply is the list of closest points in correspondences txt with the faces of mesh 1 as shown here https github com ThibaultGROUEIX 3D CODED blob master inference correspondences py L112 cheers Thibault"
+      },
+      {
+        "user": "kuzand",
+        "created_at": "2021-07-15T14:17:29Z",
+        "body": "Thanks for the reply That makes sense now I was wondering though how to generate the colors to show the correspondences In my utils py there is a function get colors Is it the one you used for the vertex colors"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-15T14:18:42Z",
+        "body": "Yes I think i just colorised the template and propagated to mesh 1 and mesh 2"
+      },
+      {
+        "user": "caijinana",
+        "created_at": "2022-01-05T08:14:37Z",
+        "body": "Hello I also want to a pairs of points q r q t i use project on target 1 and save the idx knn then i match source idx and idx knn However the result is not right How can I do"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2022-01-11T16:33:34Z",
+        "body": "I don t know unfortunately It looks like you may have a bug Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "data is preprocessed",
+    "state": "closed",
+    "body": "is the data download by download dataset sh preprocessed",
+    "created_at": "2021-07-10T07:28:45Z",
+    "closed_at": "2021-07-15T13:57:02Z",
+    "user": "hitymz",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-15T13:57:02Z",
+        "body": "duplicate of 33"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "data is preprocessed",
+    "state": "closed",
+    "body": "is the data download by download dataset sh preprocessed",
+    "created_at": "2021-07-10T07:28:35Z",
+    "closed_at": "2021-11-12T11:10:28Z",
+    "user": "hitymz",
+    "comments_count": 18,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-15T13:58:59Z",
+        "body": "Hi hitymz I think it is only centered it s a bit old now what kind of preprocessing are you thinking about Cheers Thibault"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-16T07:03:41Z",
+        "body": "Hello I m also having some issues with Finetuning Re training on FAUST training set In essence the accuracy seems to be poorer when I train FineTune on the FAUST dataset than using the pre trained weight Could this be related to preprocessing In order to preprocess the meshes I am using the following functions in the same order from my utils 1 Scaling 2 cleaning 3 centering Am I missing something Thank you"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-16T08:00:33Z",
+        "body": "Hi Sentient07 Can you clarify what you are trying to do train set fine tuning set test set What is the accuracy you are referring to Best regards Thibault"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-16T08:28:16Z",
+        "body": "Hello ThibaultGROUEIX Apologies for being unclear I m referring to the dense shape correspondence problem I m trying to compare 3D Coded with other methods on the FAUST Remesh dataset https github com llorz SGA18 orientation BCICP dataset tree master Dataset FAUST vtx 5k I train on the first 80 meshes and evaluate on the last 20 For this experiment I consider ZoomOut BCICP and two versions of 3D Coded The first denoted by TDC PTw refers to establishing correspondence using the weights you and others have released In the second case denoted by TDC FTw I m trying to Fine Tune on the training meshes of the FAUST Remesh dataset using Unsupervised Loss What I observe is that the accuracy sharply deteriorates in the second case I was wondering what could be the reason for this Am I pre processing the dataset incorrectly image https user images githubusercontent com 6195312 125916908 7cccdc65 8306 4db0 b6d8 ddb1149b7382 png"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-16T08:39:36Z",
+        "body": "There could be a number of reasons but I think the most probable is that you fine tuning set is too small 3D CODED was trained on 230000 meshes You could evaluate on you fine tuning set to check if you observe overfitting"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-16T09:22:13Z",
+        "body": "Thank you ThibaultGROUEIX for your very prompt response The reason why I was expecting to see a much better result is due to the Table 1 in this paper https arxiv org pdf 2003 14286 pdf and Figure 6 They claim to observe a good performance with 3DCoded when the training shapes match the poses of test shape irrespective of its number Is this the case with 3D Coded or the AtlasNet In my case I observe the following reconstruction between shapes that belong to the training set where I m FineTuning The ground truth meshes are attached below Correspondence are color coded from right the target to left the source image https user images githubusercontent com 6195312 125924826 9920072d 6030 4e68 a20b 374aeba9f614 png image https user images githubusercontent com 6195312 125925046 64d85e2e 0b12 4b74 820e 97d22cebcc4f png"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-18T16:32:59Z",
+        "body": "Hello Just to confirm the master seems much better than the v2 0 0 tag I used the latter and the results seem much better and consistent with table 1 of the paper I m a little curious as what could be the reason Thank you image https user images githubusercontent com 6195312 126074997 70df5448 7d46 4188 99ff b5a21cae7524 png"
+      },
+      {
+        "user": "hitymz",
+        "created_at": "2021-07-19T02:13:47Z",
+        "body": "ThibaultGROUEIX Thanks for your answer I want to know if the data set downloaded by the download dataset sh is 230 000 meshes"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-19T14:46:28Z",
+        "body": "hitymz Yes Sentient07 I did a major refacto of the code you should definitely use the latest version I don t know why the v2 0 0 tag doesn t work that should not be the case"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-19T16:46:48Z",
+        "body": "Hello ThibaultGROUEIX thanks a lot for clarification What made me use the 2 0 0 branch was that the pretrained weights seem to be a fit for that branch alone i e the pre trained weights contain STN of PointNet encoder which the master branch is missing Can you also please provide the pretrained weights for the refactored branch if you d still have them Thank you"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-19T16:53:09Z",
+        "body": "I am confused you mean that the pretrained weights provided by the latest commit on master is not compatible with the latest code on master"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-19T17:07:00Z",
+        "body": "Hi ThibaultGROUEIX just to be sure if we re referring to the same model I tried to reload the weights from here https cloud enpc fr s n4L7jqD486V8IJn provided in this comment https github com ThibaultGROUEIX 3D CODED issues 31 issuecomment 856572059 Is it not the right one From the name of the directory and also the size I assumed the one provided in the master branch is for Learning Elementary structures paper Please let me know if I m confused here"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-19T17:54:26Z",
+        "body": "Right in this comment the user wanted to use v2 0 0 because it has the unsupervised training code So I provided the old model To use the latest code the one I maintain you need the latest model You can get them by running https github com ThibaultGROUEIX 3D CODED blob master inference download trained models sh Just to clarify Learning Elementary Structure is a generalization of 3D CODED The script will download several models from Learning Elementary Structure 3D CODED is one of these models under the folder 3D CODED"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-19T18:10:27Z",
+        "body": "Hi ThibaultGROUEIX thanks again for the elaborate response I am facing this error while downloading Actually there is no error but just the zip file downloaded is empty bash x inference download trained models sh gdrive download 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs learning elementary structure trained models zip wget quiet save cookies tmp cookies txt keep session cookies no check certificate https docs google com uc export download id 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs O sed rn s confirm 0 9A Za z 1 n p CONFIRM wget load cookies tmp cookies txt https docs google com uc export download confirm id 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs O learning elementary structure trained models zip 2021 07 19 17 25 40 https docs google com uc export download confirm id 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs Resolving docs google com docs google com 142 250 74 238 2a00 1450 4007 80b 200e Connecting to docs google com docs google com 142 250 74 238 443 connected HTTP request sent awaiting response 200 OK Length unspecified text html Saving to learning elementary structure trained models zip learning elementary structure trained models zip 3 05K KB s in 0s 2021 07 19 17 25 40 44 3 MB s learning elementary structure trained models zip saved 3123 rm rf tmp cookies txt unzip learning elementary structure trained models zip Archive learning elementary structure trained models zip End of central directory signature not found Either this file is not a zipfile or it constitutes one disk of a multi part archive In the latter case the central directory and zipfile comment will be found on the last disk s of this archive note learning elementary structure trained models zip may be a plain executable not an archive unzip cannot find zipfile directory in one of learning elementary structure trained models zip or learning elementary structure trained models zip zip and cannot find learning elementary structure trained models zip ZIP period The download from the browser seems to work fine but since I work from home it d be great to have this on the server too Is there any way to fix this script"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-19T18:33:41Z",
+        "body": "Right this is the same as https github com ThibaultGROUEIX AtlasNet issues 61 Can you try manually going to https docs google com uc export download confirm id 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs and clicking download"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-19T21:32:22Z",
+        "body": "Hi ThibaultGROUEIX yes the web download worked Thanks a lot for releasing all the data including experiments and not just your model However for some who might be in similar situation as me it d be easier for them to download the trained models alone for master branch from here Since it doesn t cost a lot I m using my own Google drive https drive google com drive folders 1Fub5lpSrrJmV kNF6ifQgkIzxqzd6gwr usp sharing Just a quick follow up you seem to not have used the patch deformation option Is there a specific reason why this is enabled by default in the current code while it seemed to not have been used in the pre trained weights"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-20T08:45:53Z",
+        "body": "Good point no there are no good reason for keeping patch deformation the default I guess when I refactored the code i had Learning Elementary Structures en mind but I agree this flag could be disabled since it s 3D CODED codebase"
+      },
+      {
+        "user": "Sentient07",
+        "created_at": "2021-07-27T06:05:22Z",
+        "body": "Hello ThibaultGROUEIX I am now training and testing over random smaller subset of surreal I found that the accuracy was quite low and it didn t converge The dataset was generated by the script generate data humans py When examining further I found that the template is not in one one correspondence with the generated surreal What could I be doing wrong Can you please help me find my mistake here Thank you Attaching my code snippet image https user images githubusercontent com 6195312 127103921 68574859 e046 45a5 a29c fb51efe1cf75 png"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "About dataset processing",
+    "state": "closed",
+    "body": "Hi I need to align the trunk axis to the Y axis when processing the dataset so what should I do Can you give me some advice Thanks",
+    "created_at": "2021-07-10T03:07:22Z",
+    "closed_at": "2021-11-12T11:10:19Z",
+    "user": "cainiaoshidai",
+    "comments_count": 3,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-15T13:55:37Z",
+        "body": "Hi cainiaoshidai Can you give me more info What is your data what are you trying to achieve Best Thibault"
+      },
+      {
+        "user": "cainiaoshidai",
+        "created_at": "2021-07-18T15:49:39Z",
+        "body": "Thanks I want process the dataset of Shrec but I don t know how to align the trunk axis to the Y axis"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-07-19T14:48:31Z",
+        "body": "If all your meshes are consistently oriented in your dataset you could open them in meshlab and look for the rotation that aligns the trunk to the Y axis"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "About unsup_training",
+    "state": "closed",
+    "body": "Hello It s a great job However I encountered a problem when using 3D CODED from tag v2 0 0 to train unsupervised model I can t get the same ideal result as in the paper Could you provide your trained model It will be very helpful to me look forward to your reply Best",
+    "created_at": "2021-06-08T02:18:04Z",
+    "closed_at": "2023-03-03T04:23:18Z",
+    "user": "qiji77",
+    "comments_count": 4,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-06-08T08:31:15Z",
+        "body": "Hi qiji77 It should be in this zip it s a 3 years old zip so i am not 100 sure it s the model used in the paper but there are high chances it is https cloud enpc fr s n4L7jqD486V8IJn Best regards Thibault"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2021-06-08T08:33:51Z",
+        "body": "Thanks for your help Best regards Diaojunqi nbsp nbsp nbsp gt 2021 6 8 4 31 gt gt gt Re ThibaultGROUEIX 3D CODED About unsup training 31 Hi qiji77 It should be in this zip it s a 3 years old zip so i am not 100 sure it s the model used in the paper but there are high chances it is https cloud enpc fr s n4L7jqD486V8IJn Best regards Thibault You are receiving this because you were mentioned Reply to this email directly view it on GitHub or unsubscribe"
+      },
+      {
+        "user": "zhoaliang",
+        "created_at": "2022-01-21T14:15:13Z",
+        "body": "Hello It s a great job However I encountered a problem when using 3D CODED from tag v2 0 0 to train unsupervised model I can t get the same ideal result as in the paper Could you provide your trained model It will be very helpful to me look forward to your reply Best I would like to try something new using this code for unsupervised training but currently cannot find network mesh while training Could you provide something about how to use it It will be very helpful to me look forward to your reply best"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2023-03-03T04:23:18Z",
+        "body": "Closing this since the issue is stale feel free to reopen Thanks a lot for for playing around with 3D CODED Cheers Thibault"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "How to compute the error?",
+    "state": "closed",
+    "body": "In the compare experiments How to compute error Because like FMNet inputing two shape and computing their error But your code is template and sample so computing correspondencing error within template and sample or comput the error within input shape and Deformed template image https user images githubusercontent com 63350070 116494207 ec8a0980 a8d2 11eb 81f0 f205573ed3b5 png",
+    "created_at": "2021-04-29T02:12:04Z",
+    "closed_at": "2021-11-12T11:10:36Z",
+    "user": "cathylacus",
+    "comments_count": 1,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-05-03T12:09:56Z",
+        "body": "Hi cathylacus In 3D CODED you reconstruct both shapes by deformation of the common template Then you can compute correspondences via nearest neighbours Please refer to the paper or the slides for a more detailed explanation Best regards"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "_pickle.UnpicklingError: invalid load key, '<'.",
+    "state": "closed",
+    "body": "Hi Thank you for the publishing your code with extensive documentation I have a small query when I run data download dataset sh datas surreal test pth and data surreal train pth are downloaded However the download is incomplete which leads to the following unpickling error Traceback most recent call last File stdin line 1 in module File home vision anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch serialization py line 368 in load return load f map location pickle module File home vision anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch serialization py line 532 in load magic number pickle module load f pickle UnpicklingError invalid load key I would be grateful if you could provide some guidance on how to resolve the same",
+    "created_at": "2021-01-08T07:01:51Z",
+    "closed_at": "2021-11-12T11:10:09Z",
+    "user": "absdnd",
+    "comments_count": 1,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-02-16T19:00:11Z",
+        "body": "Hi absdnd Sorry I missed this This is not good I hope it is a download issue Were you able to fix it Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Get error by training the train_unsup.py",
+    "state": "closed",
+    "body": "Hi I m coming again I want to train the unsupervision model but I get an error like this Traceback most recent call last File unsup legacy train unsup py line 85 in module faces network mesh faces File home anaconda3 envs pytorch 3D CODED lib python3 7 site packages torch nn modules module py line 535 in getattr type self name name AttributeError AE AtlasNet Humans object has no attribute mesh how can I do for it Thanke you",
+    "created_at": "2020-11-19T17:05:23Z",
+    "closed_at": "2021-11-12T11:09:52Z",
+    "user": "qiji77",
+    "comments_count": 9,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-11-20T11:05:45Z",
+        "body": "Interesting I can t download the training data anymore seems there is too much traffic Let me fix the data problem then take a look at your issue"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2020-11-29T15:29:38Z",
+        "body": "Hello These days I try to do unsupervised training But I don t get a good result Would you like to provide training and testing code for unsupervised training esteem it a favor"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-12-01T11:18:44Z",
+        "body": "Hi Sorry i really do not have time to focus on this at the moment as it would require some substantial time i ll get to it before the end of the year My best easy fix would be to revert to a previous tag without the merge with the paper Learning Elementary Structures https github com ThibaultGROUEIX 3D CODED tree v2 0 0 training Best Thibault"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2020-12-01T13:54:42Z",
+        "body": "Thank you for your reply Looking forward to your better work Best"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2020-12-29T08:30:49Z",
+        "body": "Hello I trained the model with the unsupervised source code given by you using all the data and the error of the result on the Faust dataset is 6 706 I want to know if there are any problems in the training process or if I need to set some parameters for unsupervised conditions ThibaultGROUEIX Best"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-02-16T19:01:16Z",
+        "body": "Hi qiji77 Did you add the laplacian and edge regularisation Best regards"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2021-02-16T19:08:24Z",
+        "body": "Hello I has add the laplacian and edge regularisation and both of the lambda laplace and the lambda ratio are 0 005 Best regards"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2021-02-27T17:15:35Z",
+        "body": "This is strange there must be an error somewhere I can only suggest to revert to the older version of the code when this was supported but it might be very inconvenient Let me know if there is an update on your side Best regards"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2021-02-28T02:49:12Z",
+        "body": "This is my training code Tag v2 0 0 from your github And I didn t change it model py I found that most of the errors in the result of Faust came from the bending action I want to know whether the 230K data set you gave contains this action I m sorry to trouble you Thank you very much for your help Best regards from future import print function import argparse import random import numpy as np import torch import torch optim as optim import sys sys path append auxiliary from dataset import from model import import my utils my utils plant seeds randomized seed False from ply import import os import json import datetime import visdom from LaplacianLoss import PARAMETERS lambda laplace 0 005 lambda ratio 0 005 parser argparse ArgumentParser parser add argument batchSize type int default 32 help input batch size parser add argument workers type int help number of data loading workers default 8 parser add argument nepoch type int default 100 help number of epochs to train for parser add argument model type str default help optional reload model path parser add argument env type str default 3DCODED unsupervised help visdom environment parser add argument laplace type int default 1 help regularize towords 0 curvature or template curvature opt parser parse args print opt DEFINE CHAMFER LOSS sys path append extension import dist chamfer as ext distChamfer ext chamferDist DEFINE stuff for logs Launch visdom for visualization vis visdom Visdom port 8888 env opt env now datetime datetime now save path now isoformat dir name os path join log save path if not os path exists dir name os mkdir dir name logname os path join dir name log txt blue lambda x 033 94m x 033 0m opt manualSeed random randint 1 10000 fix seed print Random Seed opt manualSeed random seed opt manualSeed torch manual seed opt manualSeed L2curve train smpl L2curve val smpl meters to record stats on learning train loss L2 smpl my utils AverageValueMeter val loss L2 smpl my utils AverageValueMeter tmp val loss my utils AverageValueMeter CREATE DATASET dataset SURREAL train True regular True dataloader torch utils data DataLoader dataset batch size opt batchSize shuffle True num workers int opt workers drop last True dataset smpl test SURREAL train False dataloader smpl test torch utils data DataLoader dataset smpl test batch size opt batchSize shuffle False num workers int opt workers len dataset len dataset CREATE network network AE AtlasNet Humans faces network mesh faces faces faces for i in range opt batchSize faces np array faces faces torch from numpy faces cuda takes cuda torch variable repeated batch time vertices network mesh vertices vertices vertices for i in range opt batchSize vertices np array vertices vertices torch from numpy vertices cuda toref opt laplace regularize towards 0 or template Initialize Laplacian Loss laplaceloss LaplacianLoss faces vertices toref laplaceloss vertices network cuda put network on GPU network apply my utils weights init initialization of the weight if opt model network load state dict torch load opt model print Previous weight loaded CREATE optimizer lrate 0 001 learning rate optimizer optim Adam network parameters lr lrate with open logname a as f open and append f write str network n def init regul source sommet A source source vertices source faces 0 sommet B source source vertices source faces 1 sommet C source source vertices source faces 2 target target append np sqrt np sum sommet A source sommet B source 2 axis 1 target append np sqrt np sum sommet B source sommet C source 2 axis 1 target append np sqrt np sum sommet A source sommet C source 2 axis 1 return target target init regul network mesh target np array target target torch from numpy target float cuda target target unsqueeze 1 expand 3 opt batchSize 1 def compute score points faces target score 0 sommet A points faces 0 sommet B points faces 1 sommet C points faces 2 score torch abs torch sqrt torch sum sommet A sommet B 2 dim 2 target 0 1 score score torch abs torch sqrt torch sum sommet B sommet C 2 dim 2 target 1 1 score score torch abs torch sqrt torch sum sommet A sommet C 2 dim 2 target 2 1 return torch mean score Load all the points from the template template points network vertex clone template points template points unsqueeze 0 expand opt batchSize template points size 0 template points size 1 have to have two stacked template because of weird error related to batchnorm template points Variable template points requires grad False template points template points cuda start of the learning loop for epoch in range opt nepoch if epoch 80 lrate lrate 10 0 learning rate scheduled decay optimizer optim Adam network parameters lr lrate if epoch 90 lrate lrate 10 0 learning rate scheduled decay optimizer optim Adam network parameters lr lrate TRAIN MODE train loss L2 smpl reset network train if epoch 0 initialize reconstruction to be same as template to avoid symmetry issues init step 0 for i data in enumerate dataloader 0 if init step 1000 break init step init step 1 optimizer zero grad points fn idx data points points transpose 2 1 contiguous points points cuda pointsReconstructed network points forward pass loss net torch mean pointsReconstructed template points 2 loss net backward optimizer step gradient update print init d d d train loss f epoch i len dataset 32 loss net item for i data in enumerate dataloader 0 optimizer zero grad points fn idx data points points transpose 2 1 contiguous points points cuda pointsReconstructed network points forward pass compute the laplacian loss regul laplaceloss pointsReconstructed dist1 dist2 distChamfer points transpose 2 1 contiguous pointsReconstructed loss net torch mean dist1 torch mean dist2 lambda laplace regul lambda ratio compute score pointsReconstructed network mesh faces target loss net backward train loss L2 smpl update loss net item optimizer step gradient update VIZUALIZE if i 50 0 vis scatter X points transpose 2 1 contiguous 0 data cpu win Train input opts dict title Train input markersize 2 vis scatter X pointsReconstructed 0 data cpu win Train output opts dict title Train output markersize 2 print d d d train loss f epoch i len dataset 32 loss net item with torch no grad val on SMPL data network eval val loss L2 smpl reset for i data in enumerate dataloader smpl test 0 points fn idx data points points transpose 2 1 contiguous points points cuda pointsReconstructed network points forward pass loss net torch mean pointsReconstructed points transpose 2 1 contiguous 2 val loss L2 smpl update loss net item VIZUALIZE if i 10 0 vis scatter X points transpose 2 1 contiguous 0 data cpu win Test smlp input opts dict title Test smlp input markersize 2 vis scatter X pointsReconstructed 0 data cpu win Test smlp output opts dict title Test smlp output markersize 2 print d d d test smlp loss f epoch i len dataset 32 loss net item L2curve train smpl append train loss L2 smpl avg L2curve val smpl append val loss L2 smpl avg vis line X np column stack np arange len L2curve train smpl np arange len L2curve val smpl Y np column stack np array L2curve train smpl np array L2curve val smpl win loss opts dict title loss legend L2curve train smpl opt env L2curve val smpl opt env vis line X np column stack np arange len L2curve train smpl np arange len L2curve val smpl Y np log np column stack np array L2curve train smpl np array L2curve val smpl win log opts dict title log legend L2curve train smpl opt env L2curve val smpl opt env save latest network torch save network state dict s network last pth dir name dump stats in log file log table lambda laplace lambda laplace lambda ratio lambda ratio train loss L2 smpl train loss L2 smpl avg val loss L2 smpl val loss L2 smpl avg epoch epoch lr lrate env opt env print log table with open logname a as f open and append f write json stats json dumps log table n"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "How to improve the training speed",
+    "state": "closed",
+    "body": "First of all thank you for this wonderful work I m training a batch now about six minutes How long does it take you to train My GPU usage rate is only 22 Is there any way to improve your training speed Thank you very much All the best",
+    "created_at": "2020-11-15T13:04:48Z",
+    "closed_at": "2021-02-16T19:01:32Z",
+    "user": "qiji77",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-11-15T13:08:42Z",
+        "body": "Hi qiji77 Maybe try with more dataloader workers Best Thibault"
+      },
+      {
+        "user": "qiji77",
+        "created_at": "2020-11-15T13:11:14Z",
+        "body": "Thank you for your reply I ll try it now"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "I want to use the VAE of convolution operation to reconstruct the model.",
+    "state": "closed",
+    "body": "Dear professor I want to use the VAE of convolution operation to reconstruct the model to get better correspondence Can you give me some suggestions Thank you very much best",
+    "created_at": "2020-10-04T08:15:25Z",
+    "closed_at": "2021-04-24T04:23:50Z",
+    "user": "cainiaoshidai",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-10-27T10:53:37Z",
+        "body": "Dear cainiaoshidai Thanks for reaching out I did not understand what you meant Can you reformulate please Best regards Thibault"
+      },
+      {
+        "user": "cainiaoshidai",
+        "created_at": "2021-04-24T04:25:11Z",
+        "body": "Dear cainiaoshidai Thanks for reaching out I did not understand what you meant Can you reformulate please Best regards Thibault Thank you I have solved it"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "trained model failed",
+    "state": "closed",
+    "body": "The trained model seems to have failed Can you share again",
+    "created_at": "2020-08-11T10:34:45Z",
+    "closed_at": "2020-08-15T15:37:03Z",
+    "user": "Alision-Yan",
+    "comments_count": 7,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-11T10:40:51Z",
+        "body": "hi Alision Yan Can you share an error message please is it a download issue code issue package version best regards Thibault"
+      },
+      {
+        "user": "Alision-Yan",
+        "created_at": "2020-08-11T10:50:31Z",
+        "body": "is download issue"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-11T11:03:02Z",
+        "body": "Please be as precise as possible which link is not working and what is the error message"
+      },
+      {
+        "user": "Alision-Yan",
+        "created_at": "2020-08-11T11:07:30Z",
+        "body": "https drive google com file d 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs view this link is not working and the error message is 24 24"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-11T11:29:18Z",
+        "body": "The download link works fine for me Maybe you ve got a network issue I cannot read Chinese unfortunately Best Thibault"
+      },
+      {
+        "user": "Alision-Yan",
+        "created_at": "2020-08-12T07:40:36Z",
+        "body": "Oh I have solved this problem must register with Google Cloud disk to download it ThibaultGROUEIX"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-15T15:37:01Z",
+        "body": "Ok thanks for the feedback"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "How to computer conrrespondence use the method of \"Learning Elementary Structure\" ",
+    "state": "closed",
+    "body": "Dear professor Recently I have been Interested in your papers and I have some questions Questions are as follows 1 I want to compute conrrespondence use templates Elementary Structure after trained the AtlasNetV2 but I don t know where is the Elementary Structure 2 Now I get two files network pth and opt pickle and I have no idea how to get the FinalReconstruction ply 3 In this paper your evaluation conrrespondence results use reconstruction loss but I want to know whether I can use geodetic error to access evaluation conrrespondence results so I can unify with the functional map method",
+    "created_at": "2020-08-11T07:59:13Z",
+    "closed_at": "2020-08-17T00:54:45Z",
+    "user": "cainiaoshidai",
+    "comments_count": 6,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-11T11:41:29Z",
+        "body": "Hi cainiaoshidai 1 You can find the trained models for AtlasNetV2 on FAUST here same link as in 3D CODED readme https drive google com file d 1ZAjOuTaeDrKJbFffzLnLn K C86fYCXs view 2 You can just follow the readme to generate results with the trained models 3 The correspondences are evaluated on an online FAUST server for fairness There is no access to the ground truth correspondences in the dataset so it would be hard to chance the evaluation metric Unifying it with functional maps sounds promising good luck Best Thibault"
+      },
+      {
+        "user": "cainiaoshidai",
+        "created_at": "2020-08-12T02:34:49Z",
+        "body": "Thank you I just follow the readme to train models AtlasNetV2 I get two files network pth and opt pickle but I have no idea how to computer conrrespondence next Can you give me some advice"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-12T15:22:11Z",
+        "body": "Thanks that s a good point You may want to look at the Demo section of the readme Though I agree it s not clear to look at demo for inference I ll update the readme accordingly In a nutshell You can use python inference correspondences py dir name YOUR DIRECTORY RESULTS to generate result correspondences between two meshes using your trained model You can use python inference script py dir name YOUR DIRECTORY RESULTS HR 1 faust INTER to generate result for all FAUST pairs Best regards"
+      },
+      {
+        "user": "cainiaoshidai",
+        "created_at": "2020-08-13T08:47:37Z",
+        "body": "Dear professor Thanks for your help In the paper s code of Learning Elementary Structure https github com TheoDEPRELLE AtlasNetV2 I just get two files network pth and opt pickle I think I can run inference correspondences py https github com ThibaultGROUEIX 3D CODED blob master inference correspondences py to compute conrrespondence between source shapes and target shapes use elementary structure But now I meet some questions I will show you in follow First in the paper of Learning Elementary Structure https github com TheoDEPRELLE AtlasNetV2 the elementary structure is obtained through ShapeNet dataset And the reconstructed shapes are obtained through deformation of the elementary structure You mentioned use the elementary structure to instead of the template which mentioned in 3D CODED But in your code you did not use elementary structure so I want to know if I can use elementary structure Second if I can use elementary structure I want to konw how to use elementary structure to test the network pth use inference correspondences py https github com ThibaultGROUEIX 3D CODED blob master inference correspondences py Looking forward for your reply Thank you"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-08-15T15:42:18Z",
+        "body": "Q1 But in your code you did not use elementary structure so I want to know if I can use elementary structure I am not sure I understand what you mean The training script has two argument flag to use a hand crafted human template 3D CODED or to learn to template as well as the reconstruction Learning Elementary Structure In the later case you can use either point translation 1 or patch deformation 1 or both Q2 Once learned templates trained network are used in the same way to compute correspondences discussed in past messages Best"
+      },
+      {
+        "user": "cainiaoshidai",
+        "created_at": "2020-08-17T00:54:38Z",
+        "body": "Thanks professor I am glad to get your help I wish also to thanks for the assistance you have given me in my work I think I overlooked some of the things you mentioned Again thank you so much Best Regards"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "FAUST inter dataset download zip corrupt, could you please share MPI-Faust.zip?",
+    "state": "closed",
+    "body": "image https user images githubusercontent com 18216061 81060584 5ca2c100 8f05 11ea 8877 0ed5e28fed0d png image https user images githubusercontent com 18216061 81060639 7512db80 8f05 11ea 99d4 e59e3d647471 png I try to download this Faust dataset mentioned in script py but it s slow and the final zip is corrupted after trying download from many PCs",
+    "created_at": "2020-05-05T11:22:00Z",
+    "closed_at": "2020-05-06T08:31:21Z",
+    "user": "AmmonZ",
+    "comments_count": 3,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-05-05T11:24:55Z",
+        "body": "Hi AmmonZ Is it an issue with a file provided by 3D CODED or with a download from http faust is tue mpg de Best regards Thibault"
+      },
+      {
+        "user": "AmmonZ",
+        "created_at": "2020-05-06T08:31:17Z",
+        "body": "Yes And I found a MPI dataset download link in the legacy commit which solves this Thank you"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-05-06T08:33:17Z",
+        "body": "Hi AmmonZ Can you detail what was the problem for future users It s unclear to me if it was an issue with the depo or with Faust website Cheers"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Solution to flipped reconstruction ",
+    "state": "closed",
+    "body": "I tested the code and met the flipped reconstruction According to the readme Sometimes the reconstruction is flipped which break the correspondences In the easiest case where you meshes are registered in the same orientation you can just fix this angle in reconstruct py line 86 to avoid the flipping problem Also note from this line that the angle search only looks in 90 90 However it seems that there is no reconstruct py in this master repo I wonder how to solve the filpped reconstruction problem Thank you very much",
+    "created_at": "2020-01-16T23:36:23Z",
+    "closed_at": "2020-01-26T16:32:29Z",
+    "user": "yanghtr",
+    "comments_count": 2,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-01-17T16:05:36Z",
+        "body": "Hi yanghtr Sorry it s actually here https github com ThibaultGROUEIX 3D CODED blob master inference correspondences py L240 L241 I ve updated the readme The best vertical angle is searched in 90 90 L240 I added in the new version a search in bending angle of 45 45 L241 Best regards Thibault"
+      },
+      {
+        "user": "yanghtr",
+        "created_at": "2020-01-26T16:32:27Z",
+        "body": "Thank you very much for your reply"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "./data/download_template.sh failed",
+    "state": "closed",
+    "body": "Thank you for your great work and cloud enpc fr maybe unstable download template sh always return unavailable could you give another download address thank you",
+    "created_at": "2020-01-06T09:57:40Z",
+    "closed_at": "2020-01-07T00:59:05Z",
+    "user": "jellyDL",
+    "comments_count": 2,
+    "labels": [
+      "data"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2020-01-06T10:31:37Z",
+        "body": "Hi hzwangjl The cloud is down for the day for maintenance and will be back up tomorrow can you wait until then Cheers Thibault"
+      },
+      {
+        "user": "jellyDL",
+        "created_at": "2020-01-07T00:59:05Z",
+        "body": "Hi hzwangjl The cloud is down for the day for maintenance and will be back up tomorrow can you wait until then Cheers Thibault yeah it s done now thankyou"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "run demo failed",
+    "state": "closed",
+    "body": "I tried to run the demo using python inference correspondences py dir name learning elementary structure trained models 1patch deformation It downloaded the models successfully but when the network forward there is an error start regression Initial Loss 0 0002441386750433594 2999 3000 reg loss 9 243113163392991e 05Traceback most recent call last File inference correspondences py line 408 in module inf forward opt inputA opt inputB File inference correspondences py line 120 in forward self reconstruct inputA File inference correspondences py line 369 in reconstruct mesh meshReg self run input scalefactor input p File inference correspondences py line 315 in run pointsReconstructed1 self regress input network File inference correspondences py line 180 in regress pointsReconstructed self network decode full input param forward pass File auxiliary model py line 243 in decode full rand grid self template 0 template learned HR batch i batch i 1 view x size 0 batch self dim template transpose 1 2 contiguous AttributeError GetTemplate object has no attribute template learned HR I didn t modify the codes and just follow the instructions When I went deep to see the codes I found that self template is indeed a GetTemplate object in line 178 of auxiliary model py self template GetTemplate start from dataset train And it seems that GetTemplate class indeed doesn t have the attribute template learned HR I wonder how to fix this Did I miss something Thank you very much",
+    "created_at": "2019-11-01T00:45:32Z",
+    "closed_at": "2019-11-03T00:16:51Z",
+    "user": "yanghtr",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-11-01T19:38:14Z",
+        "body": "Hi yanghtr Thanks for pointing this out It s fixed in the latest commit Please let me know if you run into other issues Best regards Thibault"
+      },
+      {
+        "user": "yanghtr",
+        "created_at": "2019-11-03T00:16:51Z",
+        "body": "It works Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "The problem\"OSError: [Errno 12] Cannot allocate memory\" when runing \"python ./training/train.py \"",
+    "state": "closed",
+    "body": "Hi I was trying to run model training command python training train py it reports python training train py Used fix seed Random Seed 1 WARNING root Setting up a new session creating folder log 02019 10 03T11 24 32 317276 PARAMETER batch size 32 workers 10 nepoch 100 start epoch 0 randomize False lrate 0 001 lr decay 1 80 lr decay 2 90 number points 2500 faust INTER id 0 env CODED display True port 8889 dir name log 02019 10 03T11 24 32 317276 dataset path export model point translation False dim template 3 patch deformation False dim out patch 3 start from TEMPLATE accelerated chamfer True HR True LR input True reg num steps 3000 inputA data example 0 ply inputB data example 1 ply num angles 100 clean True scale True project on target False date 2019 10 03 11 24 32 317268 logname log 02019 10 03T11 24 32 317276 log txt checkpointname log 02019 10 03T11 24 32 317276 optimizer last pth reload False git repo path https github com ThibaultGROUEIX 3D CODED commit Ellapsed time to load dataset 129 85412502288818 num vertices 6890 Ellapsed time to load dataset 0 11727118492126465 num vertices 6890 num vertices 6890 Using template to initialize template bottleneck size 1027 Traceback most recent call last File training train py line 24 in module trainer train epoch File media lab601 000555B8000E726C wuy 3D CODED training trainer py line 114 in train epoch iterator self dataloader train iter File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 site packages torch utils data dataloader py line 819 in iter return DataLoaderIter self File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 site packages torch utils data dataloader py line 560 in init w start File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 multiprocessing process py line 112 in start self popen self Popen self File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 multiprocessing context py line 223 in Popen return default context get context Process Popen process obj File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 multiprocessing context py line 277 in Popen return Popen process obj File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 multiprocessing popen fork py line 20 in init self launch process obj File home lab601 anaconda2 envs pytorch 3D CODED lib python3 7 multiprocessing popen fork py line 70 in launch self pid os fork OSError Errno 12 Cannot allocate memory I see the code and find the problem is in dataset py if self train self datas torch load data datas surreal train pth else self datas torch load data datas surreal test pth The size of file datas surreal train pth is 18G but my computor s GPU memory size is 11G How can I solve this problem",
+    "created_at": "2019-10-03T06:53:32Z",
+    "closed_at": "2021-11-12T11:09:39Z",
+    "user": "jayis520",
+    "comments_count": 7,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-10-03T09:58:55Z",
+        "body": "You can just add some ram if you can or use the pretrained models Note that what you need is CPU memory and not GPU best regards Thibault"
+      },
+      {
+        "user": "jayis520",
+        "created_at": "2019-10-04T01:33:13Z",
+        "body": "You can just add some ram if you can or use the pretrained models Note that what you need is CPU memory and not GPU best regards Thibault Thank you for your reply How do I generate these two files datas surreal train pth and datas surreal test pth"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-10-04T10:02:14Z",
+        "body": "just use the provided script download dataset sh"
+      },
+      {
+        "user": "jayis520",
+        "created_at": "2019-10-04T11:33:57Z",
+        "body": "Hi ThibaultGROUEIX Yes I have downloaded these files Because the file datas surreal train pth is too big I want to regenerate a smaller file Can you tell me the following way"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-10-04T12:47:04Z",
+        "body": "Hi you can look at how the data was generated here https github com ThibaultGROUEIX 3D CODED blob master data README md I am afraid it s not so straightforward Cheers Thibault"
+      },
+      {
+        "user": "jayis520",
+        "created_at": "2019-10-05T03:02:10Z",
+        "body": "Hi you can look at how the data was generated here https github com ThibaultGROUEIX 3D CODED blob master data README md I am afraid it s not so straightforward Cheers Thibault Hi I also did this step https github com ThibaultGROUEIX 3D CODED blob master data README md generating the database contains four folders dataset bent dataset bent val dataset surreal dataset surreal val but all four folders are XXX ply files How do I generate pth files Thank you"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-10-10T16:14:45Z",
+        "body": "pth are generated by stacking all the training samples in a large pytorch tensor of shape Num training samples num points 3"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "I have run script.py  and found that the result \"FinalReconstruction.ply\" is Finding files is a two-dimensional image rather than a three-dimensional image",
+    "state": "closed",
+    "body": "Hi I have downloaded the latest code run script py and found that the result XXXFinalReconstruction ply is a two dimensional image rather than a three dimensional image This result is different from that of the code version in August which result XXXFinalReconstruction ply is a three dimensional image",
+    "created_at": "2019-10-02T09:01:01Z",
+    "closed_at": "2019-10-02T09:30:05Z",
+    "user": "jayis520",
+    "comments_count": 2,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-10-02T16:15:30Z",
+        "body": "Hi jayis520 Glad you solved it What was the issue best regards Thibault"
+      },
+      {
+        "user": "jayis520",
+        "created_at": "2019-10-03T01:47:09Z",
+        "body": "Hi jayis520 Glad you solved it What was the issue best regards Thibault Because I run inference script py directly according to the document README I see the code and find it need add dir name to reload the model flow But the old code don t need it This is my ridiculous mistake By the way May I ask your email address Sometimes I really need your help Thank you"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Someone please help with seemingly easy fix",
+    "state": "closed",
+    "body": "Howdy Setup windows10 running ubuntu 16 04 all prior dependencies have been installed but running python in ubuntu inference correspondences py yields error Any idea as to what is happening or solutions would be greatly appreciated Thanks in advance WARNING root Setting up a new session THCudaCheck FAIL file pytorch aten src THC THCGeneral cpp line 51 error 30 unknown error Traceback most recent call last File inference correspondences py line 85 in module global variables network AE AtlasNet Humans num points opt num points File auxiliary model py line 134 in init self vertex torch from numpy point set cuda float File home user venv lib python3 5 site packages torch cuda init py line 163 in lazy init torch C cuda init RuntimeError cuda runtime error 30 unknown error at pytorch aten src THC THCGeneral cpp 51",
+    "created_at": "2019-08-09T16:23:12Z",
+    "closed_at": "2019-09-23T10:24:23Z",
+    "user": "BingEdison",
+    "comments_count": 4,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-08-19T18:15:02Z",
+        "body": "Dear EdisonBing I have unfortunately no idea what could be going on I don t have experience with windows This looks like a pytorch issue though unrelated to 3D CODED Maybe you could validate this by running a minimal script calling torch from numpy point set cuda float fmassa could you give your expert opinion please Best regards Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-09-14T02:32:24Z",
+        "body": "EdisonBing Were you able to fix this bug Regards Thibault"
+      },
+      {
+        "user": "BingEdison",
+        "created_at": "2019-09-22T22:13:50Z",
+        "body": "I was not installing in windows but Linux has worked fine On Friday September 13 2019 ThibaultGROUEIX notifications github com wrote EdisonBing https github com EdisonBing Were you able to fix this bug Regards Thibault You are receiving this because you were mentioned Reply to this email directly view it on GitHub https github com ThibaultGROUEIX 3D CODED issues 13 email source notifications email token AIPRAGXOAJ3XB3IJWJGGS5DQJRELTA5CNFSM4IKVQPN2YY3PNVWWK3TUL52HS4DFVREXG43VMVBW63LNMVXHJKTDN5WW2ZLOORPWSZGOD6WSJPY issuecomment 531440831 or mute the thread https github com notifications unsubscribe auth AIPRAGQB6C2AG7OV4VGDPY3QJRELTANCNFSM4IKVQPNQ"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-09-23T10:24:21Z",
+        "body": "Great Thanks for the feedback"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Supervised training issue",
+    "state": "closed",
+    "body": "Thanks for sharing this great work I am trying to train the supervised model but it seems not to converge Generated shapes are scaled down too much as in this image 3dcoded train sup https user images githubusercontent com 830589 60615867 70a30100 9dd0 11e9 87c0 ca1c3a044659 png I modified the data generation process to use trimesh for loading saving To me the generated scans look similar to the template in orientation and scale see image above However I only generated half of the suggested dataset size 115000 meshes instead of 230000 Would this be an issue Any other hint",
+    "created_at": "2019-07-03T18:33:15Z",
+    "closed_at": "2019-07-12T12:47:30Z",
+    "user": "asnt",
+    "comments_count": 2,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-07-04T15:25:44Z",
+        "body": "Dear asnt You definitely have an issue here It seems that the scale of the input and output are completely different It looks like the network is collapsing the output toward 0 My best bet Make sure Trimesh loads meshes without pre processing with the flag process False Trimesh preprocessing shuffle the vertices order and the labels for supervised training become random noise Each point is matched with a random point in the target and the network then tends to generate an average so that would explain why you get 0s Additionally I will release my own train and test files on monday to make sure you can reproduce exactly the same thing as me"
+      },
+      {
+        "user": "asnt",
+        "created_at": "2019-07-05T08:50:38Z",
+        "body": "process False solved the issue The early training outputs seem to make more sense now Thanks for your quick reply ThibaultGROUEIX"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Bad result of example 0",
+    "state": "closed",
+    "body": "Followed the install instructions and run the code with default parameters The example 1 is fine but example 0 looks bad Could you please check it Maybe the trained model is different with yours Thanks very much bad result00 https user images githubusercontent com 1467970 58991631 59133100 87ae 11e9 8ae3 988c04f374f9 png",
+    "created_at": "2019-06-05T21:25:56Z",
+    "closed_at": "2019-07-02T18:37:22Z",
+    "user": "lrquad",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "asnt",
+        "created_at": "2019-07-03T12:01:53Z",
+        "body": "lrquad I got the same result Did you solve this"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-07-04T15:31:00Z",
+        "body": "lrquad Sorry for the late reply I will release my train and test files on monday The issue could be with your generated data Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "about \"python setup.py install\" error",
+    "state": "closed",
+    "body": "Thanks for sharding your code But I meet an error when i am run python setup py install the error is like follow would you please help me thank you very much image https user images githubusercontent com 28679695 56178551 43e31700 6035 11e9 8876 9d2d778a67ed png",
+    "created_at": "2019-04-16T02:52:06Z",
+    "closed_at": "2019-07-04T16:06:34Z",
+    "user": "yyssmm",
+    "comments_count": 10,
+    "labels": [
+      "chamfer"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-04-16T11:55:11Z",
+        "body": "Dear yyssmm I unfortunately don t have any experience with windows Maybe davidneuhof can give you a hint I remember discussing windows related issues with him on atlasnet Best regards Thibault"
+      },
+      {
+        "user": "yyssmm",
+        "created_at": "2019-04-16T12:16:20Z",
+        "body": "ThibaultGROUEIX Thank you for you reply I also have tried on Ubuntu system and having the error error command usr bin nvcc failed with exit status 1 when running python setup py install"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-04-16T12:20:16Z",
+        "body": "Can you report your full log on Ubuntu when running python setup py install as well as Pytorch version Ubuntu version Cuda version Thanks"
+      },
+      {
+        "user": "yyssmm",
+        "created_at": "2019-04-16T12:29:58Z",
+        "body": "ThibaultGROUEIX my Ubuntu version 18 Pytorch version 1 0 0 Cuda version 9 2 GPU 1080Ti The full log is too long but I saved a short part as follow 2019 04 16 20 25 53 https user images githubusercontent com 28679695 56209524 60f40600 6086 11e9 81b1 9ebe6ae0e327 png"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-04-16T12:35:06Z",
+        "body": "Please copy paste the full log as a message also indicate your gcc and g versions please Thanks"
+      },
+      {
+        "user": "yyssmm",
+        "created_at": "2019-04-16T12:46:47Z",
+        "body": "ThibaultGROUEIX Thanks for your help my gcc and g versions both are 7 3 0 and the full log is like running install running bdist egg running egg info writing chamfer egg info PKG INFO writing dependency links to chamfer egg info dependency links txt writing top level names to chamfer egg info top level txt reading manifest file chamfer egg info SOURCES txt writing manifest file chamfer egg info SOURCES txt installing library code to build bdist linux x86 64 egg running install lib running build ext building chamfer extension gcc pthread B home gfour Applications miniconda3 envs coded compiler compat Wl sysroot Wsign compare DNDEBUG g fwrapv O3 Wall Wstrict prototypes fPIC I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include torch csrc api include I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include TH I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include THC I usr include I home gfour Applications miniconda3 envs coded include python3 7m c chamfer cuda cpp o build temp linux x86 64 3 7 chamfer cuda o DTORCH API INCLUDE EXTENSION H DTORCH EXTENSION NAME chamfer D GLIBCXX USE CXX11 ABI 0 std c 11 cc1plus warning command line option Wstrict prototypes is valid for C ObjC but not for C In file included from chamfer cuda cpp 1 0 home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include torch csrc api include torch torch h 7 2 warning warning Including torch torch h for C extensions is deprecated Please include torch extension h Wcpp warning usr bin nvcc I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include torch csrc api include I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include TH I home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include THC I usr include I home gfour Applications miniconda3 envs coded include python3 7m c chamfer cu o build temp linux x86 64 3 7 chamfer o D CUDA NO HALF OPERATORS D CUDA NO HALF CONVERSIONS D CUDA NO HALF2 OPERATORS compiler options fPIC DTORCH API INCLUDE EXTENSION H DTORCH EXTENSION NAME chamfer D GLIBCXX USE CXX11 ABI 0 std c 11 usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 626 248 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen core TensorMethods h 1117 48 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen core TensorMethods h 1117 48 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value usr include c 6 tuple 490 1 error body of constexpr function static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 662 419 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple const std tuple Args1 with UElements at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen core TensorMethods h 1117 48 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 4 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 686 422 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple std tuple Args1 with UElements at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen core TensorMethods h 1117 48 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 4 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 626 248 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 2558 85 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 2558 85 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value usr include c 6 tuple 490 1 error body of constexpr function static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 662 419 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple const std tuple Args1 with UElements at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 2558 85 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 4 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 686 422 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple std tuple Args1 with UElements at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 2558 85 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 4 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 626 248 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 5ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 5ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3623 197 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 5ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 5ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3623 197 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value usr include c 6 tuple 490 1 error body of constexpr function static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 662 419 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple const std tuple Args1 with UElements at Tensor at Tensor at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3623 197 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 6 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 686 422 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple std tuple Args1 with UElements at Tensor at Tensor at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3623 197 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 6 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor usr include c 6 tuple 626 248 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3626 267 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3626 267 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value usr include c 6 tuple 490 1 error body of constexpr function static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor usr include c 6 tuple 662 419 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NonNestedTuple const tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple const std tuple Args1 with UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NonNestedTuple const tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3626 267 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 5 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor usr include c 6 tuple 686 422 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NonNestedTuple tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple std tuple Args1 with UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor NonNestedTuple tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 3626 267 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 5 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor std vector at Tensor std allocator at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 626 248 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 4119 107 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 4ul 1 bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 4119 107 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value usr include c 6 tuple 490 1 error body of constexpr function static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 662 419 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple const std tuple Args1 with UElements at Tensor at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor NonNestedTuple const tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 4119 107 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 5 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple const std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor usr include c 6 tuple 686 422 required by substitution of template class UElements class Dummy typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous constexpr std tuple template parameter 1 1 tuple std tuple Args1 with UElements at Tensor at Tensor at Tensor at Tensor Dummy void typename std enable if std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements std TC std is same Dummy void value 1ul 1 at Tensor at Tensor at Tensor at Tensor NonNestedTuple tuple Elements bool type anonymous missing home gfour Applications miniconda3 envs coded lib python3 7 site packages torch lib include ATen Functions h 4119 107 required from here usr include c 6 tuple 495 244 error wrong number of template arguments 5 should be 2 return and not is same tuple Elements usr include c 6 type traits 1558 8 note provided for template class From class To struct std is convertible struct is convertible usr include c 6 tuple 502 1 error body of constexpr function static constexpr bool std TC anonymous Elements NonNestedTuple with SrcTuple std tuple at Tensor at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor at Tensor not a return statement error command usr bin nvcc failed with exit status 1 coded gfour cdzs Projects other code 3D CODED master extension"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-04-16T13:06:35Z",
+        "body": "Could you try upgrading to CUDA 10"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-07-04T15:11:45Z",
+        "body": "Dear yyssmm Did you manage to get it to work Best regards Thibault"
+      },
+      {
+        "user": "yyssmm",
+        "created_at": "2019-07-04T15:14:59Z",
+        "body": "ThibaultGROUEIX Yes it works very well Thanks"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-07-04T16:06:31Z",
+        "body": "Cool great news"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Usage of Chamfer Loss",
+    "state": "closed",
+    "body": "Hi and thanks for sharing a PyTorch implementation of Chamfer loss However I find the returned value from calling distChamfer points1 points2 to be surprisingly low when both points1 and points2 are two arbitrary batches of point clouds with dimension B N 3 where B is the batch size and N is the number of points I found sklearn and numpy implementations of Chamfer Distance in this stackoverflow response https stackoverflow com questions 47060685 chamfer distance between two point clouds in tensorflow With points1 and points2 having dimensions 32 1024 3 I typically get a loss of 0 07 with the PyTorch implementation using dist1 dist2 distChamfer points1 points2 loss torch mean dist1 torch mean dist2 while both the sklearn and numpy implementations linked to above give a loss of 0 3 Could you point me in the right direction in how to correctly use the provided Chamfer loss implementation Could it potentially be a bug",
+    "created_at": "2019-03-05T12:21:37Z",
+    "closed_at": "2019-03-05T13:56:17Z",
+    "user": "kongsgard",
+    "comments_count": 3,
+    "labels": [
+      "chamfer"
+    ],
+    "comments": [
+      {
+        "user": "kongsgard",
+        "created_at": "2019-03-05T12:38:48Z",
+        "body": "I quickly put together a script for comparison import torch from graphs losses dist chamfer import ChamferDist cuda0 torch device cuda 0 x1 torch ones 1 2 3 device cuda0 x2 torch zeros 1 4 3 device cuda0 distChamfer ChamferDist dist1 dist2 distChamfer x1 x2 dist total torch mean dist1 torch mean dist2 print PyTorch Chamfer Loss dist total item import numpy as np from sklearn neighbors import KDTree def chamfer distance sklearn array1 array2 batch size num point array1 shape 2 dist 0 for i in range batch size tree1 KDTree array1 i leaf size num point 1 tree2 KDTree array2 i leaf size num point 1 distances1 tree1 query array2 i distances2 tree2 query array1 i av dist1 np mean distances1 av dist2 np mean distances2 dist dist av dist1 av dist2 batch size return dist x1 np np ones 1 2 3 x2 np np zeros 1 4 3 print sklearn Chamfer Loss chamfer distance sklearn x1 np x2 np This returns PyTorch Chamfer Loss 6 0 sklearn Chamfer Loss 3 46 Manual calculation validates the sklearn output It seems like it s simply a square root that s missing from the PyTorch implementation By calculating the distance with dist total torch mean torch sqrt dist1 torch mean torch sqrt dist2 we get the same output"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-03-05T13:30:07Z",
+        "body": "Hi kongsgard Yes your analysis is correct It is actually intentional It corresponds to how we define it in the paper https arxiv org pdf 1806 05228 pdf Best regards Thibault"
+      },
+      {
+        "user": "kongsgard",
+        "created_at": "2019-03-05T13:56:17Z",
+        "body": "I see Thank you for your response"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "code for generating Figure 5.",
+    "state": "closed",
+    "body": "Hi Can you share the code for calculating the geodesic error maps Fig 5 Thanks",
+    "created_at": "2019-02-18T08:35:46Z",
+    "closed_at": "2019-02-18T13:55:46Z",
+    "user": "lixiang-ucas",
+    "comments_count": 7,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-02-18T13:55:40Z",
+        "body": "Sure It is available here https github com zorah KernelMatching tree master tools geodesic cpp Good luck Thibault"
+      },
+      {
+        "user": "lixiang-ucas",
+        "created_at": "2019-02-19T07:43:38Z",
+        "body": "Thanks ThibaultGROUEIX"
+      },
+      {
+        "user": "lixiang-ucas",
+        "created_at": "2019-02-22T15:21:09Z",
+        "body": "Hi I found it somewhat hard to call the geodesic distance function in KernelMatching Would it be possible for you to share part of your code for generating the geodesic distance given a source point a target point and the reference mesh Thank you so much for your patience"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-03-05T13:32:46Z",
+        "body": "Hi lixiang ucas it is actually pretty messy i would need to clean it up and i won t have time to do so until the ICCV deadline Let me know if you urgently need it Best regards Thibault"
+      },
+      {
+        "user": "lixiang-ucas",
+        "created_at": "2019-03-05T13:40:41Z",
+        "body": "Thank you for your attention I ve figured it out"
+      },
+      {
+        "user": "lixiang-ucas",
+        "created_at": "2019-03-07T08:29:26Z",
+        "body": "Hi Thibault I followed the instructions in Kernel Matching repo and successfully generate the desired geodesic distance for FAUST and TOSCA dataset but failed with SCAPE dataset The meshes in SCAPE dataset contains holes which caused errors when calculating the geodesic distances Can you give me some suggestions for how to figure it out Thanks"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-03-07T08:54:39Z",
+        "body": "hi lixiang ucas why not use nearest neighbors between the scans with holes and the registered scans you should be able to compute geodesic distance on the registered scans i think"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "trimesh.io doesn't exist",
+    "state": "closed",
+    "body": "Thanks for sharing the code I m using the latest trimesh 2 36 28 The line 58 trimesh io export export mesh mesh results correspondences ply in inference correspondences py should be modified to mesh export results correspondences ply so as to make the program run smoothly trimesh io module doesn t exist in 2 36 28",
+    "created_at": "2019-02-17T10:12:22Z",
+    "closed_at": "2019-02-18T13:49:51Z",
+    "user": "Rookiee",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-02-18T07:53:43Z",
+        "body": "Thanks for sharing your feedback i ll update asap best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "How to change template",
+    "state": "closed",
+    "body": "I want to change template model where do I need to change and do I need to retrain the model after change template",
+    "created_at": "2018-12-25T11:25:02Z",
+    "closed_at": "2019-03-05T13:30:20Z",
+    "user": "Lordores",
+    "comments_count": 1,
+    "labels": [
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2019-02-18T13:51:49Z",
+        "body": "Hi Lordores Yes you do need to retrain everything if you change the template It is downloaded in the script data download template sh Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "errors in Build chamfer distance",
+    "state": "closed",
+    "body": "When executing python setup py install after gcc pthread Wno unused result Wsign compare DNDEBUG fwrapv O2 Wall m64 fPIC fuse linker plugin ffat lto objects flto partition none g m64 fPIC fPIC c chamfer cuda cpp o build temp linux x86 64 3 7 chamfer cuda o DTORCH EXTENSION NAME chamfer D GLIBCXX USE CXX11 ABI 0 std c 11 I meet lots of errors like usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible My environment is 1 cuda 9 Cuda compilation tools release 9 0 V9 0 176 2 python 3 7 in conda env 3 gcc gcc Ubuntu 6 4 0 17ubuntu1 6 4 0 20180424 Could you kindly help me out or what s your cuda and gcc version Thank you More errors are like these home jack miniconda3 envs py37 lib python3 7 site packages torch lib include ATen TensorMethods h 646 36 required from here usr include c 6 tuple 483 67 error mismatched argument pack lengths while expanding std is constructible Elements UElements return and is constructible Elements UElements value usr include c 6 tuple 484 1 error body of constexpr function static constexpr bool std TC anonymous Elements MoveConstructibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor not a return statement usr include c 6 tuple In instantiation of static constexpr bool std TC anonymous Elements ImplicitlyMoveConvertibleTuple with UElements std tuple at Tensor at Tensor at Tensor bool anonymous true Elements at Tensor at Tensor at Tensor usr include c 6 tuple 626 362 required by substitution of template class UElements typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous constexpr std tuple template parameter 1 1 tuple UElements with UElements std tuple at Tensor at Tensor at Tensor typename std enable if std TC sizeof UElements 1 at Tensor at Tensor at Tensor NotSameTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor MoveConstructibleTuple UElements std TC 1ul sizeof UElements at Tensor at Tensor at Tensor ImplicitlyMoveConvertibleTuple UElements 3ul 1 bool type anonymous missing home jack miniconda3 envs py37 lib python3 7 site packages torch lib include ATen TensorMethods h 646 36 required from here usr include c 6 tuple 489 65 error mismatched argument pack lengths while expanding std is convertible UElements Elements return and is convertible UElements Elements value",
+    "created_at": "2018-12-05T06:42:56Z",
+    "closed_at": "2018-12-10T14:44:42Z",
+    "user": "jjcao",
+    "comments_count": 10,
+    "labels": [
+      "chamfer"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-12-05T11:06:56Z",
+        "body": "Hi jjcao It might be related to a pytorch version issue as AFAIK building extensions was done differently before pytorch v4 I have tested python setup py install on pytorchv4 and pytorchv1 My current setup is CUDA 10 Pytorch v1 python 3 7 gcc g 7 3 Can you try different gcc version gcc5 or 4 7 if you want to try gcc7 you ll need cuda10 most likely Best Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-12-05T11:21:57Z",
+        "body": "Also I am currently doing a major upgrade of the code to make things a bit smoother Please git pull frequently to make sure you have the latest version of the code I might introduce some additional typos in the process so it would be a huge help if you report the error you face during the setup"
+      },
+      {
+        "user": "jjcao",
+        "created_at": "2018-12-07T00:34:26Z",
+        "body": "Thank you cuda 9 python 3 7 gcc 5 success"
+      },
+      {
+        "user": "awaelchli",
+        "created_at": "2018-12-10T10:18:53Z",
+        "body": "Hi ThibaultGROUEIX I pulled the latest code and running the same as you cuda10 pytorch 1 0 python 3 7 gcc 7 3 When I execute python setup py install I get the error cc1plus error usr lib x86 64 linux gnu libcudnn so 5 include Not a directory Alongside that it also prints out the gcc command with the include option I usr lib x86 64 linux gnu libcudnn so 5 include If I change that to I usr lib x86 64 linux gnu libcudnn so 5 and rerun the gcc command it executes without any errors Do you know where I can change this to make the whole installation work with python setup py install"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-12-10T10:43:17Z",
+        "body": "I don t have cudnn installed i don t have the folder usr lib x86 64 linux gnu libcudnn so 5 Maybe just try removing it it could be a mismatch between cudnn version and cuda version maybe"
+      },
+      {
+        "user": "palanglois",
+        "created_at": "2018-12-10T14:03:26Z",
+        "body": "Hi awaelchli It s very likely that this error happens because you either set the environment variable CUDNN HOME or CUDNN PATH From there 2 possibilites You can remove the env variables but it is likely that you use it for other projects Otherwise you can try to add the following lines at the beginning of your setup py in order to delete the env variables only in the child process import os if CUDNN HOME in os environ del os environ CUDNN HOME if CUDNN PATH in os environ del os environ CUDNN PATH Hope it helps Pierre Alain"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-12-10T14:05:47Z",
+        "body": "awesome thanks palanglois"
+      },
+      {
+        "user": "awaelchli",
+        "created_at": "2018-12-10T14:29:13Z",
+        "body": "Thanks ThibaultGROUEIX After I uninstalled removed the cudnn it compiled However when I import the chamfer module I get import chamfer Traceback most recent call last File stdin line 1 in module ImportError home adrian research envs research lib python3 7 site packages chamfer 0 0 0 py3 7 linux x86 64 egg chamfer cpython 37m x86 64 linux gnu so undefined symbol ZN2at19UndefinedTensorImpl10 singletonE which I have seen in the past when the wrong GCC version was used for compiling But I double checked it is using GCC 7 3 I also tried gcc 5"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-12-10T14:39:17Z",
+        "body": "great news from https discuss pytorch org t cppextension loading complains undefined symbol 27908 4 try to import torch first"
+      },
+      {
+        "user": "awaelchli",
+        "created_at": "2018-12-10T14:43:10Z",
+        "body": "ThibaultGROUEIX Oh wow Yep that did the trick That s funny Thanks palanglois I only saw your answer just now Indeed I had the CUDNN HOME variable defined I think for tensorflow Now with your post I can leave it there thanks"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": ".eval mode predicts [2, -2, 2]",
+    "state": "closed",
+    "body": "Hi During training when it runs on validation dataset it does network eval However I found that whenever it turns to eval mode the mode predicts 2 2 2 And when it stays in train mode prediction works fine Did you run into this problem before Thanks I am using default batch size 32 because it seems only layer that will be affected by eval is BatchNorm which is related to batch size",
+    "created_at": "2018-11-12T18:49:58Z",
+    "closed_at": "2018-11-15T21:13:04Z",
+    "user": "sonnyhu",
+    "comments_count": 7,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-11-14T19:54:28Z",
+        "body": "hum that s strange indeed does the eval script work if you set the network in train mode and keep batch size of 32 that s a good starting point i never had this issue"
+      },
+      {
+        "user": "sonnyhu",
+        "created_at": "2018-11-14T20:50:22Z",
+        "body": "Yeah train mode 32 batch size works Based on discussion here https github com pytorch pytorch issues 4741 it seems training is unstable Not sure what to do I am going to close issue If you have some suggestions definitely let me know Thanks"
+      },
+      {
+        "user": "sonnyhu",
+        "created_at": "2018-11-15T16:25:23Z",
+        "body": "Hi again I just realized that I was using 0 4 1 pytorch For what you said here Please note that the Chamfer Distance code doesn t work on all versions of pytorch because of some weird error with the batch norm layers does chamfer distance use batch norm or is it in encoder decoder"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-11-15T18:28:02Z",
+        "body": "hi yes i strongly recomment using the pytorch 0 4 specific commit mentionned in the readme i am currently porting atlasnet to pytorch 1 i will do 3d coded after"
+      },
+      {
+        "user": "sonnyhu",
+        "created_at": "2018-11-15T18:32:50Z",
+        "body": "I tried the commit you listed in readme Same behavior Val loss exploded screen shot 2018 11 15 at 12 12 57 pm https user images githubusercontent com 4804594 48573662 eb1f1f00 e8da 11e8 98e1 9da203ea6365 png"
+      },
+      {
+        "user": "sonnyhu",
+        "created_at": "2018-11-15T19:10:46Z",
+        "body": "What should opt nb primitives be There is no default value for it https github com ThibaultGROUEIX 3D CODED blob master training train sup py L142 I am looking for any possible way I am training it wrong Thanks"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-11-15T19:36:40Z",
+        "body": "should be 1 but i think these variables are never used anyway"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Where  is MPI-FAUST/training/ref/reg_color_ref.ply?",
+    "state": "closed",
+    "body": "Thanks for your jobs The README file is detailed However in generate data human py there exist one file I can t find mesh ref pymesh load mesh home thibault Downloads MPI FAUST training ref reg color ref ply I have download MPI FAUST dataset but the sub directory training has no directory named ref Also it seems that the MPI FAUST dataset you used is different from what I download from the website Do you sure that you download the FAUST dataset from http faust is tue mpg de challenge Inter subject challenge And you have no further process",
+    "created_at": "2018-09-26T02:51:41Z",
+    "closed_at": "2018-11-27T17:26:26Z",
+    "user": "zeal-up",
+    "comments_count": 3,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-09-26T14:36:49Z",
+        "body": "Hi zeal github Thanks for pointing this out reg color ref is just the first training example of FAUST centered and colorized I ve included it in template template color ply You can git pull Best regards Thibault"
+      },
+      {
+        "user": "zeal-up",
+        "created_at": "2018-09-27T01:45:50Z",
+        "body": "ThibaultGROUEIX Thanks for your reply I can t create a conda env using this file auxiliary pytorch atalasnet yml Conda put out a error ValueError Incompatible component merge 0 h1d4fec5 0 I don t know why My configuration system ubuntu 14 16 conda ananconda3 I just want to make sure that the yml file is latest"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-09-27T13:54:38Z",
+        "body": "Yes you re wright there was a weird issue I commited an update of the list of dependencies and ran a clean install it worked for me Best regards Thibault"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Unknown type name 'half' during compiling chamfer distance",
+    "state": "closed",
+    "body": "Hi I am trying to build and run the code However during building chamfer distance python build py my compilers complain about Including CUDA code home zhjiang Workspace 3D CODED nndistance generating tmp tmpXnfonZ my lib c setting the current directory to tmp tmpXnfonZ running build ext building my lib extension creating home creating home zhjiang creating home zhjiang Workspace creating home zhjiang Workspace 3D CODED creating home zhjiang Workspace 3D CODED nndistance creating home zhjiang Workspace 3D CODED nndistance src gcc pthread B home zhjiang anaconda3 envs py2 compiler compat Wl sysroot fno strict aliasing g O2 DNDEBUG g fwrapv O3 Wall Wstrict prototypes fPIC DWITH CUDA I home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include I home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include TH I home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include THC I usr local cuda include I home zhjiang anaconda3 envs py2 include python2 7 c my lib c o my lib o In file included from home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include THC THCBlas h 5 0 from home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include THC THC h 6 from my lib c 493 home zhjiang anaconda3 envs py2 lib python2 7 site packages torch utils ffi lib include THC THCHalf h 16 49 error unknown type name half THC EXTERNC void THCFloat2Half THCState state half out float in ptrdiff t len I think there might be some version issues here but I fail to find a solution My gcc is 5 5 0 pytorch 0 1 12 2 python 2 7 Any help would be appreciated Best Zhongshi",
+    "created_at": "2018-07-25T19:04:09Z",
+    "closed_at": "2018-07-28T21:13:49Z",
+    "user": "jiangzhongshi",
+    "comments_count": 10,
+    "labels": [
+      "chamfer"
+    ],
+    "comments": [
+      {
+        "user": "jiangzhongshi",
+        "created_at": "2018-07-25T19:11:31Z",
+        "body": "With gcc 6 it s the same error"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-07-25T20:27:19Z",
+        "body": "Hi Recompile the cu file with nvcc and try with gcc4 8 5 and 6 It s my best guess Best regards Thibault"
+      },
+      {
+        "user": "jiangzhongshi",
+        "created_at": "2018-07-25T22:45:18Z",
+        "body": "Thanks to the prompt reply It seems that I solved the compilation problem by export CC g and compiled them as C Don t know if there are any implications"
+      },
+      {
+        "user": "jiangzhongshi",
+        "created_at": "2018-07-25T22:46:25Z",
+        "body": "After this there s another bug python inference correspondences py computing correspondences for data example 0 ply and data example 1 ply cleaning number of point before 177638 number of point after 177453 Traceback most recent call last File inference correspondences py line 105 in module reconstruct reconstruct opt inputA File home zhjiang Workspace 3D CODED inference reconstruct py line 187 in reconstruct mesh meshReg run input scalefactor File home zhjiang Workspace 3D CODED inference reconstruct py line 82 in run pointsReconstructed global variables network points LR File home zhjiang anaconda3 envs py2 lib python2 7 site packages torch nn modules module py line 206 in call result self forward input kwargs File auxiliary model py line 165 in forward rand grid self vertex transpose 0 1 contiguous unsqueeze 0 expand x size 0 3 1 RuntimeError The expanded size of the tensor 1 must match the existing size 6890 at non singleton dimension 2 at py conda bld pytorch 1493676237139 work torch lib TH THStorage c 99 which from what I can see is a bug in early pytorch https github com pytorch pytorch issues 3196 This is quite easy to workaround though just to let you know Thanks"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-07-25T23:05:54Z",
+        "body": "thanks i really appreciate your feedback i d veloped in pytorch v4 and wasn t aware of this issue with v12 i ll update tomorrow keep me posted Thibault"
+      },
+      {
+        "user": "jiangzhongshi",
+        "created_at": "2018-07-26T00:08:34Z",
+        "body": "Yes It seems that there are several places are actually migrated to higher versions of pytorch including the occurrence of torch no grad torch matmul I don t think they are issues worth of attention since I believe you will migrate everything to future pytorch Also I have another question with running your example code one of the examples gives reconstruction like the following is it expected screenshot from 2018 07 25 16 20 32 https user images githubusercontent com 12759319 43233840 2d0f1df4 902d 11e8 9565 c520198b1a5d png"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-07-26T09:27:11Z",
+        "body": "Hey I updated the readme with use pytorch 0 4 0a0 ea02833 instead of v1 12 to avoid retrocompatibility issues I added the reconstruction you re supposed to get in data visualization in the README md I ve done a lot of updates yesterday you could try to make sure you have the last version send me the initial guess in your failure example If the initial guess is correct it likely to be an issue with the Chamfer distance during optimization Best regards Thibault"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-07-26T09:27:57Z",
+        "body": "initguess https user images githubusercontent com 11445067 43254100 e8ddf908 90c6 11e8 83a0 588d8fd32502 png Initial guess you should get This is a very easy example so the intial guess is already close to optimum"
+      },
+      {
+        "user": "jiangzhongshi",
+        "created_at": "2018-07-28T21:13:47Z",
+        "body": "Thanks It works now Thanks for the nice work It also works amazingly well on a monster model I have BTW do you have any idea on processing unaligned model Can I get 24 orientation and choose the best one in terms of some distance"
+      },
+      {
+        "user": "ThibaultGROUEIX",
+        "created_at": "2018-07-29T11:26:25Z",
+        "body": "hey yes Mat sent me your results great work can i add them in the README they re cool for unaligned meshes i already choose the best rotation around Y axis in reconstruct py if you re not aligned on any axis i would try say 300 random 3d rotations and pick the one that have the best reconstruction in terms of chamfer distance You can add that in reconstruct py and you can find code that uniformly sample a 3d rotation in datasetsmpl py its commented We can exchange by skype over this if you want i could also use your advice on the Adobe fellowship i would like to apply for 2019"
+      }
+    ]
+  }
+]

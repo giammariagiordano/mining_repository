@@ -1,0 +1,276 @@
+[
+  {
+    "number": 26,
+    "title": "Missing default config file",
+    "state": "closed",
+    "body": "Is there any template of server config json The json shown in README md seems be insufficient to make the tool running",
+    "created_at": "2025-01-10T09:10:44Z",
+    "closed_at": "2025-01-10T12:34:37Z",
+    "user": "054545641",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "054545641",
+        "created_at": "2025-01-10T12:34:37Z",
+        "body": "Sorry for problem caused I decide to find out by taking more time Maybe I ll do something with the readme file if I could"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Updating",
+    "state": "open",
+    "body": "Hi is anyone working on updating this important app to current library versions tf 1 reached end of life this month and Python 3 7 at the end of July I d like to do it but i m not going to if this is already being done",
+    "created_at": "2023-12-16T19:34:08Z",
+    "closed_at": null,
+    "user": "ghost",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 22,
+    "title": "OTB cheating",
+    "state": "open",
+    "body": "In view of the latest cheating allegations I was looking into testing GM OTB games I could probably get a database of pgn games for training Just wondering about lichess API integration is it possible to run this repo in standalone mode without integrating with lichess",
+    "created_at": "2022-09-29T00:58:22Z",
+    "closed_at": null,
+    "user": "anuchandra",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "styborski1",
+        "created_at": "2022-10-07T05:12:03Z",
+        "body": "Hey anuchandra you can definitely run Irwin standalone with some a lot modifications to remove Lichess the caveat being Lichess won t give you any training data nor will they help you with the configuration Lichess is open source but that doesn t mean they will help you understand some of their anti cheat protections I ve used some of their code in the past even pulling some Irwin code before for my own use but I m just giving you my experience with them from discord etc The code is there but don t expect help on this front I m not at all affiliated with Lichess just a casual observer programmer"
+      },
+      {
+        "user": "scchess",
+        "created_at": "2022-10-07T05:52:36Z",
+        "body": "True Also The Irwin project is part of the main code base This repo is old"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Setting up the engine ",
+    "state": "open",
+    "body": "We are building a chess app using the Flutter framework and wish to integrate the Irwin AI Engine into our backend server Can you please advise me on setting up the Irwin Engine locally Is a there setup document available Please also advise on how we can generate analytical reports and what are some other features we could execute from the engine A video link if any would be most helpful Thank you Mrugenndra",
+    "created_at": "2022-06-14T13:08:49Z",
+    "closed_at": null,
+    "user": "Mrugenndra",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 19,
+    "title": "Suggestion: Cheat detection toggle for casual games",
+    "state": "open",
+    "body": "Me and a friend of mine were having a friendly study match which we were analyzing The match continually got suspended as we had the analysis board open Is it possible to get an option for turning off cheat detection or any other solution",
+    "created_at": "2022-03-30T09:57:48Z",
+    "closed_at": null,
+    "user": "neel2299",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 17,
+    "title": "Support password protected MongoDB",
+    "state": "closed",
+    "body": "If it s reasonably easy to add For low priority hardening see internal https github com lichess org sysadmin issues 58 issuecomment 700695801",
+    "created_at": "2020-09-29T13:30:49Z",
+    "closed_at": "2021-04-07T20:29:32Z",
+    "user": "niklasf",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jirislav",
+        "created_at": "2021-04-07T15:21:12Z",
+        "body": "Hi I m considering to work on this issue as it seems like a good issue to start but I can t see the link contents as I m not member of the group Could you please share the motivation here for us newcomers"
+      },
+      {
+        "user": "niklasf",
+        "created_at": "2021-04-07T19:21:41Z",
+        "body": "The irwin service runs on a server that has no private shared network with the rest of the infrastructure So the only thing protecting its MongoDB from the open internet is firewall rules which is a bit fragile"
+      },
+      {
+        "user": "jirislav",
+        "created_at": "2021-04-07T20:16:04Z",
+        "body": "Well that s surprising because the README says that irwin supports DB authentication configuration see https github com clarkerubber irwin create confconfigjson Configuring Create conf config json json api url https lichess org token token stockfish threads 4 memory 2048 nodes 4500000 update false db host localhost port 27017 authenticate false authentication username username password password irwin train batchSize 5000 cycles 80 conf config json contains config for stockfish mongodb tensorflow lichess authentication token and URL etc"
+      },
+      {
+        "user": "niklasf",
+        "created_at": "2021-04-07T20:29:32Z",
+        "body": "Oh so it was supported all along Sorry for wasting your time"
+      },
+      {
+        "user": "jirislav",
+        "created_at": "2021-04-07T20:39:01Z",
+        "body": "Oh so it was supported all along Sorry for wasting your time Don t worry it wasn t wasted"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Is it currently using by lichess website?",
+    "state": "closed",
+    "body": "Hi and thanks for this great piece of code you ve mentioned the protector of lichess from all chess players villainous Is it really in use by this website and if yes is this code fully functional copy of same thing lichess is using",
+    "created_at": "2019-11-11T07:40:31Z",
+    "closed_at": "2020-07-16T20:06:19Z",
+    "user": "B-Esmaili",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ornicar",
+        "created_at": "2019-11-11T13:38:42Z",
+        "body": "yes"
+      },
+      {
+        "user": "B-Esmaili",
+        "created_at": "2019-11-11T13:57:07Z",
+        "body": "you are so great men is there any docs on how to use this library"
+      },
+      {
+        "user": "ornicar",
+        "created_at": "2019-11-12T16:15:43Z",
+        "body": "no"
+      },
+      {
+        "user": "ComputeShader",
+        "created_at": "2020-07-16T19:45:14Z",
+        "body": "You may wanna close that issue"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "FileNotFoundError: [Errno 2] No such file or directory: 'conf/server_config.json'",
+    "state": "open",
+    "body": "I followed everything on the docs but i get this error and i don t know why",
+    "created_at": "2019-08-03T15:05:03Z",
+    "closed_at": null,
+    "user": "elsharkawey",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Main.py ",
+    "state": "open",
+    "body": "Hi I m sorry but where can I get main py to launch python3 main py no assess no report I m a novice in Python And I spent a lot of time to solve this I do not understand something I guess",
+    "created_at": "2019-04-07T14:23:05Z",
+    "closed_at": null,
+    "user": "Waxmatuct",
+    "comments_count": 12,
+    "labels": [],
+    "comments": [
+      {
+        "user": "DrNixx",
+        "created_at": "2019-04-08T11:04:33Z",
+        "body": "The instructions given refer to the previous version of Irwin The current distributed version of Irwin is launched in another way"
+      },
+      {
+        "user": "gbtami",
+        "created_at": "2019-04-08T12:37:05Z",
+        "body": "README md need some love then"
+      },
+      {
+        "user": "Waxmatuct",
+        "created_at": "2019-04-08T14:18:23Z",
+        "body": "The instructions given refer to the previous version of Irwin The current distributed version of Irwin is launched in another way Ok Thank you so much And where can I find the previous version I don t know how to enable Irwin AI Hunter on lichess dev"
+      },
+      {
+        "user": "elsharkawey",
+        "created_at": "2019-08-03T18:22:02Z",
+        "body": "The instructions given refer to the previous version of Irwin The current distributed version of Irwin is launched in another way so how to run it now"
+      },
+      {
+        "user": "pizzalord22",
+        "created_at": "2019-08-15T08:00:19Z",
+        "body": "indeed what is the correct way of launching it"
+      },
+      {
+        "user": "DrNixx",
+        "created_at": "2019-08-15T11:14:18Z",
+        "body": "If you are a developer you can look at the source code and you will understand If you want to create your own Lichess server you won t get any support here"
+      },
+      {
+        "user": "pizzalord22",
+        "created_at": "2019-08-15T14:30:02Z",
+        "body": "exactly which part of the source code i am not exactly going to go trough everything to figure out which file i should actually run"
+      },
+      {
+        "user": "gbtami",
+        "created_at": "2019-08-15T14:37:47Z",
+        "body": "pizzalord22 if you are lazy to find the relevant info don t expect help from others here"
+      },
+      {
+        "user": "pizzalord22",
+        "created_at": "2019-08-15T14:40:44Z",
+        "body": "i am not saying i wont look through the source code but to me it looks like main py was remove and replaced with other files which all just give config errors even when you copy paste the config from the read me and rename it as i said before my python skills are not that good so i probably wont find out what the config should look like or exactly which file to run but it is apparent that this project has a zero help policy and has a just read the source code policy"
+      },
+      {
+        "user": "pbx",
+        "created_at": "2020-05-01T02:18:58Z",
+        "body": "pizzalord22 I just looked at this project for the first time tonight so I know nothing but it looks like 3fb29fc is the last commit that touched main py before it was removed I m not sure why your reasonable question is being answered with resistance and a puzzle but that commit seems like a good starting point to find out what became of main py and its functionality"
+      },
+      {
+        "user": "pizzalord22",
+        "created_at": "2020-05-07T19:10:45Z",
+        "body": "thank ill take a look at it"
+      },
+      {
+        "user": "rainydew",
+        "created_at": "2022-10-05T16:27:02Z",
+        "body": "tools py"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Input LeelaZero evaluations",
+    "state": "closed",
+    "body": "ML based engines are the next big thing with a focus on NN Adding input to Irwin s model can only increase its accuracy https github com glinscott leela chess",
+    "created_at": "2018-03-30T22:14:21Z",
+    "closed_at": "2021-12-31T17:51:20Z",
+    "user": "ddugovic",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ShailChoksi",
+        "created_at": "2019-03-18T19:45:27Z",
+        "body": "correcting the link as the repo has moved https github com LeelaChessZero lczero"
+      },
+      {
+        "user": "ddugovic",
+        "created_at": "2021-12-31T17:51:20Z",
+        "body": "Now that SF NNUE is a thing I no longer see a need for my request"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Add a license",
+    "state": "closed",
+    "body": "A license should be added to the repository one that is compatible with lila https github com ornicar lila s license I guess",
+    "created_at": "2017-05-04T09:41:03Z",
+    "closed_at": "2017-05-07T16:47:19Z",
+    "user": "Calinou",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "clarkerubber",
+        "created_at": "2017-05-07T16:47:19Z",
+        "body": "Done"
+      }
+    ]
+  }
+]

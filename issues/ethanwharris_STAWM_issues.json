@@ -1,0 +1,71 @@
+[
+  {
+    "number": 3,
+    "title": "The mnist.gif image",
+    "state": "open",
+    "body": "Hi I am wondering how do you plot the gif images Mainly how do you transfer the affine matrix to the red rhomboids in mnist gif It would be great if you kindly share the code Thank you very much Cheers Guozhang",
+    "created_at": "2019-08-01T01:09:58Z",
+    "closed_at": null,
+    "user": "ifgovh",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ethanwharris",
+        "created_at": "2019-08-01T12:45:20Z",
+        "body": "Hello The visualising code is in visualise py Specifically the red sqare method is used to make a red square of a certain side which must then be transformed with the same tansform as the sketch this is done in the model code when draw stages is True The gif was not made with code instead it s just a series of images that were stiched together with an online tool Hope that helps"
+      },
+      {
+        "user": "ifgovh",
+        "created_at": "2019-08-02T09:44:45Z",
+        "body": "Hi That really helps thank you The following question is how to access the images saved in state When I used callbacks MostRecent to save state and loaded it I only found 5 keys which are torchbearer version model optimizer history callback list Where is the STAGES Sorry I am not familiar with torchbearer and I haven t found anything related in its doc Although I can save the tensor independently I am curious how to do it in the framework of torchbearer Thank you for your help Cheers Guozhang"
+      },
+      {
+        "user": "ethanwharris",
+        "created_at": "2019-08-02T10:37:46Z",
+        "body": "Hi The way to do it in torchbearer would be to use a callback There s a couple of options either use the callback StagesGrid in visualise py or use torchbearers MakeGrid callback or similar The docs can bne found here https torchbearer readthedocs io en latest code callbacks html torchbearer callbacks imaging imaging MakeGrid or there s an example https colab research google com github pytorchbearer torchbearer blob master docs static notebooks imaging ipynb Hope that helps"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "RuntimeError: ",
+    "state": "closed",
+    "body": "hello sir I tried to run your code but there are some bug and do not know how to solve here are the Traceback MNIST File home sdc Desktop STAWM master mnist class 28 py line 121 in module run 8 512 File home sdc Desktop STAWM master mnist class 28 py line 115 in run trial run 200 File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 121 in wrapper res func self args kwargs File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 703 in run final metrics self fit pass state torchbearer METRICS File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 276 in wrapper res func self args kwargs File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 768 in fit pass state torchbearer OPTIMIZER step closure File home sdc Desktop test test lib python3 5 site packages torch optim adam py line 58 in step loss closure File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 752 in closure state torchbearer Y PRED state torchbearer MODEL state torchbearer X state state File home sdc Desktop test test lib python3 5 site packages torch nn modules module py line 493 in call result self forward input kwargs File home sdc Desktop STAWM master mnist class 28 py line 83 in forward x self memory glimpse x image File home sdc Desktop STAWM master memory py line 112 in glimpse x self locator pose image File home sdc Desktop test test lib python3 5 site packages torch nn modules module py line 493 in call result self forward input kwargs File home sdc Desktop STAWM master modules py line 29 in forward theta theta view x size 0 2 4 RuntimeError shape 128 2 4 is invalid for input of size 768 Celeba File home sdc Desktop STAWM master celeba draw 32 py line 292 in module run 8 32 128 0 device cuda File home sdc Desktop STAWM master celeba draw 32 py line 288 in run trial run 100 File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 121 in wrapper res func self args kwargs File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 703 in run final metrics self fit pass state torchbearer METRICS File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 276 in wrapper res func self args kwargs File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 768 in fit pass state torchbearer OPTIMIZER step closure File home sdc Desktop test test lib python3 5 site packages torch optim adam py line 58 in step loss closure File home sdc Desktop test test lib python3 5 site packages torchbearer trial py line 752 in closure state torchbearer Y PRED state torchbearer MODEL state torchbearer X state state File home sdc Desktop test test lib python3 5 site packages torch nn modules module py line 493 in call result self forward input kwargs File home sdc Desktop STAWM master celeba draw 32 py line 146 in forward x inverse self memory glimpse x image File home sdc Desktop STAWM master memory py line 112 in glimpse x self locator pose image File home sdc Desktop test test lib python3 5 site packages torch nn modules module py line 493 in call result self forward input kwargs File home sdc Desktop STAWM master modules py line 29 in forward theta theta view x size 0 2 4 RuntimeError shape 128 2 4 is invalid for input of size 192",
+    "created_at": "2019-05-16T09:55:29Z",
+    "closed_at": "2019-07-12T09:02:43Z",
+    "user": "Hirohong21",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ethanwharris",
+        "created_at": "2019-07-12T09:02:43Z",
+        "body": "Seems to be working fine for me The line theta theta view x size 0 2 4 is actually theta theta view x size 0 2 3 in the codebase Changing it to that should work"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Request source code",
+    "state": "closed",
+    "body": "I am very interested in your recent ICLR2019 work When will you publish the source code",
+    "created_at": "2018-09-29T07:47:10Z",
+    "closed_at": "2018-10-04T09:40:58Z",
+    "user": "pkulangzi",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ghost",
+        "created_at": "2018-09-30T09:48:31Z",
+        "body": "Hi thanks for your interest source code should be up Monday or Tuesday this week"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2018-10-04T09:40:57Z",
+        "body": "Apologies for the delay source code has now been pushed"
+      }
+    ]
+  }
+]

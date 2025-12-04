@@ -1,0 +1,614 @@
+[
+  {
+    "number": 30,
+    "title": "Repeated 429 Errors When Downloading MP16 Dataset",
+    "state": "closed",
+    "body": "Hi everyone I ve been trying to download the MP16 dataset but I keep running into 429 errors after downloading only a few images Specifically I can download about 8 10k images before getting stuck on the error Steps I ve Tried to Resolve It Slowing down the download speed by reducing the number of threads Switching between multiple WiFi networks to see if it s IP related Taking breaks and trying again after some time but the error persists Despite these attempts the issue remains and I can t seem to get past it Has anyone else encountered this If so how did you work around it Any suggestions would be greatly appreciated Thanks",
+    "created_at": "2025-02-17T11:29:08Z",
+    "closed_at": "2025-02-19T23:44:32Z",
+    "user": "saniawaheed97",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 29,
+    "title": "Invalid urls of yfcc26k",
+    "state": "open",
+    "body": "There exists about 1k invalid urls in yfcc25600 csv Maybe their authors had deleted them invalid urls csv https github com user attachments files 16330310 invalid urls csv",
+    "created_at": "2024-07-22T08:38:54Z",
+    "closed_at": null,
+    "user": "Win-commit",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-01-06T06:23:03Z",
+        "body": "Just curious how did you deal with the entries that don t have a link"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-02-17T18:54:40Z",
+        "body": "For the record I downloaded yfcc26k and posted the images with imgps3k and yfcc4k https www kaggle com datasets lbgan2000 img2gps yfcc4k data"
+      },
+      {
+        "user": "layzlee",
+        "created_at": "2025-11-20T09:55:36Z",
+        "body": "It s seems that mp16 urls is invalid either"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Error ",
+    "state": "open",
+    "body": "RuntimeError An attempt has been made to start a new process before the current process has finished its bootstrapping phase This probably means that you are not using fork to start your child processes and you have forgotten to use the proper idiom in the main module if name main freeze support The freeze support line can be omitted if the program is not going to be frozen to produce an executable 0 0 19 00 00 it s this i got after running python m classification inference image dir resources images im2gps",
+    "created_at": "2024-07-07T12:49:19Z",
+    "closed_at": null,
+    "user": "curious-ai-developer",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 27,
+    "title": "Combining results of hierarchical classifiers",
+    "state": "closed",
+    "body": "Hi nice repository and paper I was wondering is there are reason multiplication is chosen to combine results of hierarchical classification models Did you guys by chance test other methods for combining results of hierarchical classifier outputs It appears from the paper that the classifiers from the more coarse layers are more accurate so should they be weighted more The question regards this line hierarchy preds torch prod hierarchy logits dim 1 from GeoEstimation classification train base",
+    "created_at": "2024-05-18T14:25:48Z",
+    "closed_at": "2024-06-17T17:09:26Z",
+    "user": "mikelee-dev",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 26,
+    "title": "Issue with the web demo",
+    "state": "closed",
+    "body": "There appears to be an issue with the web Demonstration img width 944 alt image src https github com TIBHannover GeoEstimation assets 123380591 85440d7a 83a5 4cf0 8986 627b3bd1c035",
+    "created_at": "2024-04-23T15:15:11Z",
+    "closed_at": "2024-08-26T13:26:39Z",
+    "user": "matthewOrd16",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "eric-mb",
+        "created_at": "2024-04-23T15:30:21Z",
+        "body": "Hi we are currently working on a password protection for the web demo and will resume the service once this is implemented"
+      },
+      {
+        "user": "eric-mb",
+        "created_at": "2024-08-26T13:24:59Z",
+        "body": "Users can now request a password to use the demo again"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "AttributeError: can't set attribute 'hparams'",
+    "state": "closed",
+    "body": "Hi folks I came across an AttributeError when I tried to test the pre trained model The error always exists even when I downgrade the Pytorch Lightning from 2 1 2 to 1 5 one by one When it s downgraded to 1 4 an ImportError came out cannot import name get num classes from torchmetrics utilities data Then I downgraded the torchmetrics from 0 11 4 to 0 6 0 then the same AttributeError came out again I would appreciate any help to solve these problems Thanks for your attention The following is a screenshot of the AttributeError image https github com TIBHannover GeoEstimation assets 144297473 bc1f22bc bd24 4bba 96c7 e830f7a4d976 The following is a screenshot of the ImportError image https github com TIBHannover GeoEstimation assets 144297473 fb92e570 476e 4ac1 be2e ac794f7dc887 Update problem solved All I need is in the environment yml",
+    "created_at": "2023-11-23T20:47:28Z",
+    "closed_at": "2024-04-08T15:37:43Z",
+    "user": "QianC95",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "Training on Multiple GPUs - IterableDataset",
+    "state": "open",
+    "body": "Folks I have encountered an issue while attempting to run the code on multiple GPUs I increased the number of GPUs in the Config file and used the distributed backend DP but then I encountered errors along the way It seems that MsgPackIterableDatasetMultiTargetWithDynLabels IterableDataset can not handle multiple GPUs If anyone has successfully run the system on multiple GPUs I would greatly appreciate any guidance or insights you could provide Thank you for your attention and assistance Best regards",
+    "created_at": "2023-07-11T20:38:51Z",
+    "closed_at": null,
+    "user": "alamayreh",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "The gps coordinates along with other image info are saved in the jpeg comment fields. Use Matlab's imfinfo() to read them. ",
+    "state": "closed",
+    "body": "Hi I am running some tests with the model and using the random set it reports on your http graphics cs cmu edu projects im2gps page that the image contains the GPS coordinates in the comments exif field Can you help me interpret the data I am trying to identify if the reported location matches what is in the exif comment This is what is reported in 2 randomly selected files photo 67787391 c0ab1b285d 25 photo 97344248 30a4521091 32",
+    "created_at": "2023-06-14T01:49:41Z",
+    "closed_at": "2023-06-18T16:57:39Z",
+    "user": "PeterPilley",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2023-06-16T19:00:06Z",
+        "body": "Hi I am afraid we cannot really help with your request since we are not the authors of the IM2GPS dataset Maybe you can contact the authors of IM2GPS James Hays and Alexej Efros"
+      },
+      {
+        "user": "PeterPilley",
+        "created_at": "2023-06-17T21:53:37Z",
+        "body": "Hi I am afraid we cannot really help with your request since we are not the authors of the IM2GPS dataset Maybe you can contact the authors of IM2GPS James Hays and Alexej Efros Awesome thanks for the reply have emailed James to ask for clarification I am assuming others would like to know how to interpret the data so I will post any solution here"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "StopIteration Error while training from scratch",
+    "state": "open",
+    "body": "Hello I have been getting the StopIteration error while training from scratch on custom data I am using the default parameters provided in the yml file with the cell partitions message packets of the custom data and the train and validation mapping of the custom data respectively I checked how the data is in both the custom and the given dataset in this repo and they are similar Unsure as to why I am getting this error message I have attached a screenshot of my error below image https user images githubusercontent com 93528375 222181345 980f2108 1bf6 4c36 83df a34a1142782b png",
+    "created_at": "2023-03-01T15:14:53Z",
+    "closed_at": null,
+    "user": "grimhandler09",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "QianC95",
+        "created_at": "2024-04-08T15:12:41Z",
+        "body": "I m not familiar with this error but I noticed that you were training on custom data Have you modified the yml file I m also trying to train it on custom data and I don t know how to generate the train label mapping and val label mapping files The labels in resources mp16 places365 mapping h3 json and resources yfcc 25600 places365 mapping h3 json looks meaningless Do you have any clues"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Code for Scene Filtering",
+    "state": "closed",
+    "body": "Thank you for the great repo Are you also planning to release the code to compute scene probabilities scene filtering for a given image I m referring to the module that you mention at Section 3 2 of your paper which is needed to decide which images are kept or discarded for training",
+    "created_at": "2023-02-07T23:15:54Z",
+    "closed_at": "2023-02-12T17:00:12Z",
+    "user": "gmberton",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2023-02-08T18:26:42Z",
+        "body": "Thank you for your comment You can find the code for extracting scene probabilities in the original tf https github com TIBHannover GeoEstimation tree original tf branch of the repository specifically in the file scene classification py https github com TIBHannover GeoEstimation blob original tf scene classification py We have not provided the scene classification code for the PyTorch implementation in the master branch However if you prefer a PyTorch version for scene classification we kindly refer you to the Places365 repository https github com CSAILVision places365 We hope this helps you"
+      },
+      {
+        "user": "gmberton",
+        "created_at": "2023-02-09T08:35:56Z",
+        "body": "That was very useful If you want I can submit a PR to port that in pytorch in your repo what do you think"
+      },
+      {
+        "user": "gmberton",
+        "created_at": "2023-02-09T15:20:05Z",
+        "body": "Also what are the differences between the pytorch code and the paper Should each of the dataset s subsets nature indoor urban be passed to a different net so effectively there should be 3 of the models implemented in the code"
+      },
+      {
+        "user": "eric-mb",
+        "created_at": "2023-02-09T15:55:01Z",
+        "body": "Thanks a PR would be great of course but please don t feel obligated to do that The pytorch code for the base models should not differ from the paper but has been reimplemented and the models have been retrained thus the results slightly differ We only did not implement the ISNs in PyTorch yet Yes you are correct the ISNs are three networks that are trained separately on images that have a scene probability higher than tau s 0 3 for the respective natural environment nature indoor urban The details can be found in Section 3 3 paragraph Individual Scene Networks ISNs and Section 4 paragraph Scene Classification Parameters We have already extracted the three scene probabilities for each training image You can find them in the file mp16 places365 csv https github com TIBHannover GeoEstimation releases download v1 0 mp16 places365 csv in this release https github com TIBHannover GeoEstimation releases tag v1 0 Also note that we initialized the network with the weights learned by the base model when finetuning an ISN as it saved training time and provided better results During inference the Places365 model predicts the most likely environmental scene and the ISN trained for this respective environment is used for geolocalization However it is also worth noting that we tried different architectures including a more powerful EfficientNet in a follow up paper at WACV 22 https openaccess thecvf com content WACV2022 papers Theiner Interpretable Semantic Photo Geolocation WACV 2022 paper pdf and already achieved better results but we also did not try ISNs You can find the repo here https github com jtheiner semantic geo partitioning tree main geo classification"
+      },
+      {
+        "user": "gmberton",
+        "created_at": "2023-02-12T17:00:11Z",
+        "body": "Thanks for the thorough explanation and the reference I opened a PR to port the scene classification py https github com TIBHannover GeoEstimation blob original tf scene classification py script in pytorch"
+      },
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2023-02-13T08:58:14Z",
+        "body": "Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Get hotspot output",
+    "state": "closed",
+    "body": "Hi I see from https labs tib eu geoestimation that you can get hotspot outputs from predicted locations Is it possible to get that sort of output from either branch in this codebase or could you point me towards the modifications needed to do so I can do the GIS side of things just not sure how to generate that output from torch Thanks",
+    "created_at": "2022-08-18T01:46:49Z",
+    "closed_at": "2022-08-23T14:24:16Z",
+    "user": "galewis2",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2022-08-22T14:28:06Z",
+        "body": "Hi to construct the geographical heatmap you need the GPS coordinates of the geographical cells along with their probabilities GPS Coordinate Please follow the instructions in the requirements https github com TIBHannover GeoEstimation requirements to download the partitioning files e g resources s2 cells cells 50 1000 csv that contain the GPS coordinates of each cell Cell Probabilities In our PyTorch implementation master branch the probabilities of each cell are denoted as yhats in this function https github com TIBHannover GeoEstimation blob 136a85da2eb086f600a7ec7600264906390904e3 classification train base py L210 Visualization with Leaflet Based on these inputs we used Leaflet to create the heatmap Here are some useful links https github com Leaflet Leaflet heat https www patrick wied at static heatmapjs plugin leaflet layer html We hope this helps"
+      },
+      {
+        "user": "galewis2",
+        "created_at": "2022-08-23T14:24:16Z",
+        "body": "Yes it does thank you"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Problem downloading the images in mp16 and yfcc25600 datasets",
+    "state": "closed",
+    "body": "Hi When I run these two commands Bash python download images py output resources images mp16 url csv resources mp16 urls csv shuffle python download images py output resources images yfcc25600 url csv resources yfcc25600 urls csv shuffle size suffix the images won t be downloaded Instead I can see many HTTP 404 errors in the output The output for the first command is like this python download images py output resources images mp16 url csv resources mp16 urls csv shuffle 2022 06 29 15 53 30 045 ImageDownloader INFO Read dataset 2022 06 29 15 53 33 770 ImageDownloader INFO Shuffle images 2022 06 29 15 53 34 081 ImageDownloader INFO Number of URLs 4723695 2022 06 29 15 53 34 568 ImageDownloader ERROR e1 55 4763369508 jpg http farm5 staticflickr com 4114 4763369508 04516bfd21 z jpg 410 2022 06 29 15 53 34 754 ImageDownloader ERROR c8 90 5346653125 jpg http farm6 staticflickr com 5126 5346653125 708d3768b4 z jpg 404 2022 06 29 15 53 34 962 ImageDownloader ERROR 47 91 161168280 jpg http farm1 staticflickr com 72 161168280 da7a6c20f2 z jpg 404 2022 06 29 15 53 34 989 ImageDownloader INFO 0 1355 05 image s 2022 06 29 15 53 36 192 ImageDownloader ERROR 3d 6d 3522933090 jpg http farm4 staticflickr com 3409 3522933090 4d1c7019d0 z jpg 404 2022 06 29 15 53 36 193 ImageDownloader ERROR 0f b2 4461400076 jpg http farm5 staticflickr com 4048 4461400076 b82b6b8b64 z jpg 404 2022 06 29 15 53 36 353 ImageDownloader ERROR 0b 01 5288987489 jpg http farm6 staticflickr com 5243 5288987489 b36a013c35 z jpg 410 2022 06 29 15 53 36 806 ImageDownloader ERROR e6 63 4872871713 jpg http farm5 staticflickr com 4141 4872871713 80d0900208 z jpg 404 2022 06 29 15 53 37 081 ImageDownloader ERROR ac da 4901883261 jpg http farm5 staticflickr com 4140 4901883261 2965134cce z jpg 404 2022 06 29 15 53 37 105 ImageDownloader ERROR 56 49 2430715106 jpg http farm4 staticflickr com 3069 2430715106 57559920df z jpg 410 2022 06 29 15 53 37 137 ImageDownloader ERROR 3f d1 8583886682 jpg http farm9 staticflickr com 8100 8583886682 ebd20fcfa0 z jpg 404 2022 06 29 15 53 37 307 ImageDownloader ERROR 9e 29 5218438398 jpg http farm5 staticflickr com 4130 5218438398 61cb6e62f1 z jpg 404 2022 06 29 15 53 37 532 ImageDownloader ERROR 43 8d 2120188484 jpg http farm3 staticflickr com 2287 2120188484 df2e0610cb z jpg 404 Any suggestion on how to fix the problem Thank you for sharing the material for your research BTW",
+    "created_at": "2022-06-29T13:55:52Z",
+    "closed_at": "2022-06-30T08:08:37Z",
+    "user": "habedi",
+    "comments_count": 11,
+    "labels": [],
+    "comments": [
+      {
+        "user": "habedi",
+        "created_at": "2022-06-30T08:08:27Z",
+        "body": "I made a mistake The images are being downloaded without problem I didn t notice that downloaded images are serialized into MessagePack files which ends with msg suffix I thought msg files are error logs in text file format Sorry for the inconvenience"
+      },
+      {
+        "user": "Jia-py",
+        "created_at": "2023-11-16T11:14:20Z",
+        "body": "Hi have you solved this problem I think the 404 means requests error and no images are downloaded in the output path"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-01-06T06:25:03Z",
+        "body": "This problem is likely not solvable if you want I can send you what I downloaded of yfcc26k Jia py 4k images are gone though"
+      },
+      {
+        "user": "namin-an",
+        "created_at": "2025-02-17T07:06:36Z",
+        "body": "Larry Gan Hello did you have a problem downloading mp16"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-02-17T08:50:13Z",
+        "body": "I had trouble with yfcc26k I was able to solve it by slowing down the download speed although quite a few images disappeared"
+      },
+      {
+        "user": "saniawaheed97",
+        "created_at": "2025-02-17T11:31:22Z",
+        "body": "Larry Gan Hi I ve been trying to download the MP16 dataset but I keep running into 429 errors after downloading only a few images Specifically I can download about 8 10k images before getting stuck on the error I ve tried to reduce the thread count and switch between multiple networks but i can t seem to get past it Did you encounter any similar issues If so how did you work around it Any suggestions would be greatly appreciated Thanks"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-02-17T18:51:00Z",
+        "body": "saniawaheed97 I would just download from kaggle here https www kaggle com datasets habedi large dataset of geotagged images data Alternatively you can get the version that s been reverse geotagged by nominatim but It may be missing a few images https huggingface co datasets Jia py MP16 Pro"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-02-17T18:53:50Z",
+        "body": "namin an Here s yfcc26k in kaggle https www kaggle com datasets lbgan2000 img2gps yfcc4k data"
+      },
+      {
+        "user": "namin-an",
+        "created_at": "2025-02-18T06:01:48Z",
+        "body": "Thank you for being so helpful"
+      },
+      {
+        "user": "Larry-Gan",
+        "created_at": "2025-02-18T06:09:59Z",
+        "body": "No problem And good luck lol Also just as a warning a good chunk of the images in those datasets may not actually be geolocatable since they re literally just images of random people indoors And yfcc4k contains a lot of blank images that flickr gives by default if the image already disappeared which the source I originally downloaded from did not remove Lastly Siglip is better than Clip if you re going in that direction"
+      },
+      {
+        "user": "saniawaheed97",
+        "created_at": "2025-02-19T23:45:37Z",
+        "body": "Larry Gan Thank you so much"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Killed error message?",
+    "state": "closed",
+    "body": "Hi I m trying to run your inference code on a number of images Some work but when I add others I get a Killed message and nothing is outputted Do you what is going on here Thanks",
+    "created_at": "2021-12-13T19:58:57Z",
+    "closed_at": "2021-12-13T20:26:01Z",
+    "user": "halfendt",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "halfendt",
+        "created_at": "2021-12-13T20:26:14Z",
+        "body": "Docker memory issue"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "code can't work",
+    "state": "closed",
+    "body": "I use pytorch1 10 0 I can t run the code train base py line21 self hparam hparams torch nn nodules nodule py error in setattr object setattr self name value AttributeError Can t set attribute",
+    "created_at": "2021-11-05T03:01:03Z",
+    "closed_at": "2021-11-05T13:13:31Z",
+    "user": "fzweclipse",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2021-11-05T08:43:09Z",
+        "body": "Hi we are using PyTorch 1 6 in our project Please make sure that you use the correct versions of the libraries as indicated in the environment yml https github com TIBHannover GeoEstimation blob master environment yml The easiest way to run the code is to use conda as described in the instructions https github com TIBHannover GeoEstimation tree master Requirements"
+      },
+      {
+        "user": "turicumoperarius",
+        "created_at": "2022-10-25T08:25:24Z",
+        "body": "I encountered the same problem today Because I wanted to run the code on more current versions of the dependencies I did have a small look into the setattr error Its actually pretty simple to resolve at least for inference Just replace the following line of code in classification train base py in the init method of the MultiPartitioningClassifier Class and you should be good to go self hparams hparams to for key in hparams keys self hparams key hparams key"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Web interface upload guess not working",
+    "state": "closed",
+    "body": "Hello Web interface Trying to upload a photo and guess After uploading the photo and pressing guess location there s an error while calling calc output dict Thanks",
+    "created_at": "2021-10-06T10:33:45Z",
+    "closed_at": "2021-10-08T14:12:09Z",
+    "user": "ronme12",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2021-10-08T14:12:09Z",
+        "body": "Hello the web interface was offline for a few hours due to server maintenance Everything should work again"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Web interface not working",
+    "state": "closed",
+    "body": "https labs tib eu geoestimation I m getting alot of errors with demo pictures and error while trying to upload my own",
+    "created_at": "2021-05-31T12:30:19Z",
+    "closed_at": "2021-05-31T13:19:01Z",
+    "user": "OSINTRoach",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2021-05-31T13:19:01Z",
+        "body": "Thanks for the notice The web demo is running again"
+      },
+      {
+        "user": "OSINTRoach",
+        "created_at": "2021-05-31T13:32:35Z",
+        "body": "Thank you for your quick response Everything looks good on my end now"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Training from scratch pytorch",
+    "state": "closed",
+    "body": "Hi Is there another way to train from scratch without using the flickr images or having to download images Say using your own set of images on your machine and possibly without shards I m unable to download the flickr images And would like to train on a smaller subset And trying to convert my small dataset of images into message packs causes me to run into issues trying to alter the code Thank you",
+    "created_at": "2021-05-24T19:44:59Z",
+    "closed_at": "2021-07-05T06:26:10Z",
+    "user": "chowwil",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtheiner",
+        "created_at": "2021-05-27T12:32:10Z",
+        "body": "Our implementation only writes a set of images and respective IDs in a msgpack format see msgpack viewer py given a list of image URLs The simplest way would be to write your own ImageDataLoader class that takes for instance an image folder instead of URLs https github com TIBHannover GeoEstimation blob master download images py L185 This would allow you to convert local files to msgpack without having to modify other training code"
+      },
+      {
+        "user": "jtheiner",
+        "created_at": "2021-05-27T12:40:54Z",
+        "body": "Regarding your second issue I m unable to download the flickr images I checked this for the first 10k URLs of the MP 16 dataset and it turns out that around 90 are available Perhaps you are just irritated from logging all non available images 404 410 error codes"
+      },
+      {
+        "user": "chowwil",
+        "created_at": "2021-07-20T01:33:30Z",
+        "body": "got it to work eventually rewrote the imageDataLoader class as well as download url function"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "download links for models doesn't work",
+    "state": "closed",
+    "body": "Hi there I m trying to download the models resnet v2 101 base M keras h5 as well as trying to find the partitioning cells csv s cells 50 5000 csv cells 50 2000 csv cells 50 1000 csv for re training the model however the tensorflow model download links direct to Not Found and the downloader py don t work from there Appreciate any help Thank you",
+    "created_at": "2021-04-22T17:52:07Z",
+    "closed_at": "2021-04-29T18:17:19Z",
+    "user": "chowwil",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jtheiner",
+        "created_at": "2021-04-28T10:12:58Z",
+        "body": "Hi it seems that you are using the tf2 branch which is no longer maintained and has basically been replaced with a PyTorch version We recommend using that re implemented PyTorch version or in the case of reproducing the original paper results using the Tensorflow V1 version"
+      },
+      {
+        "user": "chowwil",
+        "created_at": "2021-04-29T18:18:43Z",
+        "body": "Gotcha thank you Was there reasoning as to why tf2 is not workable with the GeoEstimation model Was it just not compatible"
+      },
+      {
+        "user": "jtheiner",
+        "created_at": "2021-04-30T09:37:38Z",
+        "body": "We tried to convert the original implementation to TensorFlow2 and ported the original network weights However we have achieved lower results Without further investigation we simply implemented a more lightweight version in PyTorch"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "can't find training data",
+    "state": "closed",
+    "body": "hi I can t find training data matchs mp16 places365 csv from the link http multimedia commons s3 website us west 2 amazonaws com could you help me thanks",
+    "created_at": "2020-08-31T06:41:45Z",
+    "closed_at": "2020-10-07T17:07:04Z",
+    "user": "YangBowenn",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-09-01T10:56:30Z",
+        "body": "Hi we have provided a file https github com TIBHannover GeoEstimation releases download v1 0 mp16 urls csv containing the relative filenames and the corresponding URLs to download the images"
+      },
+      {
+        "user": "YangBowenn",
+        "created_at": "2020-09-01T14:02:16Z",
+        "body": "Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Training data",
+    "state": "closed",
+    "body": "Hi how to get the original training data mp 16 from the link http multimedia commons s3 website us west 2 amazonaws com thank you",
+    "created_at": "2020-08-17T01:26:02Z",
+    "closed_at": "2020-08-17T01:50:15Z",
+    "user": "YangBowenn",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 8,
+    "title": "Filtering out fake / cartoon-ish images",
+    "state": "closed",
+    "body": "Hi in a project I m working on there is a possibility for me to receive images not of actual real scenes e g cartoons They seem to be quite sporadic in terms of geoestimation results with some producing quite high threshold scores as well Would there be a recommended way to filter these out Thank you",
+    "created_at": "2020-06-03T01:44:46Z",
+    "closed_at": "2020-06-05T11:28:46Z",
+    "user": "ghost",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-06-05T11:28:46Z",
+        "body": "You can look at papers for image type classification like this one here https arxiv org abs 2001 06823v1 Please use other platforms like stackoverflow for questions like this as this is not related to our repository"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "caffe gpu installation for docker",
+    "state": "closed",
+    "body": "Hi noticed that the provided Dockerfile doesn t have caffe for gpu only for cpu May I know if you guys have an optimal preferred way of installing both tf and caffe for a gpu enabled docker I had this issue previously where I ended up with very large docker images 9 Gb Thanks",
+    "created_at": "2020-06-03T01:32:06Z",
+    "closed_at": "2020-06-05T11:26:27Z",
+    "user": "ghost",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-06-05T11:26:27Z",
+        "body": "We can only recommend to look for models trained with pytorch keras or tensorflow For example you can find pytorch models for scene classification here https github com CSAILVision places365 We have used the caffe model for our paper and need this dependency to reproduce the paper results"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "tf2 branch no scene classification?",
+    "state": "closed",
+    "body": "Hi as I recall from the original branch there is a scene classification step before the geoestimation In the tf2 branch is this gone or integrated into the geoestimation and what would be the reasoning Thanks",
+    "created_at": "2020-06-02T05:40:46Z",
+    "closed_at": "2020-06-05T11:23:08Z",
+    "user": "ghost",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-06-02T13:17:23Z",
+        "body": "Hi for simplification we omitted the code for the individual scenery networks ISNs that utilize scene classification in the tf2 branch We decided to provide the base M model as it achieves good results across all scene types and it only required to convert one model If you want to train ISNs yourself follow these steps 1 Prepare three datasets that contain images for natural urban or indoor scenes 2 Train one network per dataset using the code in the tf2 branch 3 During inference predict the scene of the image and use the corresponding ISN for geolocation estimation We hope we were able to help you"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2020-06-03T01:30:30Z",
+        "body": "Hi thanks for the info Would definitely be useful to have a quick inference How has the accuracy differed from using ISNs"
+      },
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-06-05T11:23:08Z",
+        "body": "You can find the results and discussions for all network variants in the paper Table 6 that is linked in the repository In general the performance was on slightly worse compared to the ISNs"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Can I train on my own dataset and locations?",
+    "state": "closed",
+    "body": "As expressed in the title I would like to retrain to get more specific lat long coordinates on my own dataset am interested in a smaller geographical area Would appreciate some help on how to do this if possible thanks",
+    "created_at": "2020-02-06T01:18:18Z",
+    "closed_at": "2020-06-02T13:18:08Z",
+    "user": "ghost",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-02-10T18:39:56Z",
+        "body": "We are currently working on a script that you could use to train a customized model In this regard we are planning to update the code to tensorflow 2 1 I hope we are able to commit something in the next few days If you want to try yourself in the meantime you basically have to do the following steps 1 Create a cell partitioning using the s2 library This allows you to train the model as classification approach since you can assign an image to a geographical cell based on the GPS coordinate 2 Train the network using tensorflow pytorch or whatever you want There are several tutorials how to do that e g https keras io applications https pytorch org tutorials beginner finetuning torchvision models tutorial html"
+      },
+      {
+        "user": "ghost",
+        "created_at": "2020-02-11T09:27:31Z",
+        "body": "Hi thanks Please keep me informed when you commit the customised training code In the meantime I will try and explore training the network as I am not very familiar with retraining ML models Just to confirm as well would the custom training only be doable in TF as the models are tensorflow checkpoints"
+      },
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2020-06-02T13:18:08Z",
+        "body": "We have added a new branch tf2 that allows training using recent TensorFlow versions"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Could the demo accept user-provided images?",
+    "state": "closed",
+    "body": "Cool demo however what I miss is the possibility to upload my own image to be guessed Is this not available due to server performance issues or am I missing something",
+    "created_at": "2019-01-21T11:48:28Z",
+    "closed_at": "2019-01-23T14:37:38Z",
+    "user": "jakubklimek",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2019-01-23T14:37:38Z",
+        "body": "Hi Jakub the github demo just visualizes the precomputed paper results However we added a new web tool where you can also upload own images https labs tib eu geoestimation Please note that the web tools should only be used for demonstration purposes For larger scale calculations please use the code provided in the repository"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Align marker & alert colors",
+    "state": "closed",
+    "body": "Hi There is currently a mismatch between the markers on the map and the alert box Red for example denotes the exact opposites which is a bit confusing https user images githubusercontent com 9948149 46069391 c2e92e80 c17b 11e8 89a2 3ffc19b17cf2 png Since the CSS is loaded externally I guess we can not simply update those colors can we Would it be easiert to change the marker colors to match the CSS",
+    "created_at": "2018-09-26T09:06:04Z",
+    "closed_at": "2020-11-03T17:58:11Z",
+    "user": "katrinleinweber",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "katrinleinweber",
+        "created_at": "2018-09-27T10:10:33Z",
+        "body": "Ah I didn t realise that the alert color red can in principle match the Model s marker It s just guesses so rarely farther away than the user D As discussed offline this could be solved by a turning Model s marker to white and or b placing the marker icons to the left of You Model to make it unambiguous"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Metadaten anreichern",
+    "state": "closed",
+    "body": "Hallo TIB Visual Analytics Bitte eine Repo Description hinzuf gen sowie einige Topics die es auch im Rest von GitHub gibt Danke und viele Gr e Katrin Topics https blog github com 2017 01 31 introducing topics",
+    "created_at": "2018-08-02T14:34:02Z",
+    "closed_at": "2018-08-06T11:20:15Z",
+    "user": "katrinleinweber",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "katrinleinweber",
+        "created_at": "2018-08-06T12:44:56Z",
+        "body": "Danke sehr"
+      },
+      {
+        "user": "TIB-Visual-Analytics",
+        "created_at": "2018-08-06T12:56:14Z",
+        "body": "Kein Problem"
+      }
+    ]
+  }
+]

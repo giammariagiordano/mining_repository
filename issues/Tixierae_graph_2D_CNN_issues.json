@@ -1,0 +1,38 @@
+[
+  {
+    "number": 2,
+    "title": "Parameters to run node2vec on custom dataet",
+    "state": "open",
+    "body": "I have a custom dataset Graphs 79 Classes 12 Nodes in each graph min 4 max 770 The task is to classify 79 graphs into 12 classes The parameters are to be set for node2vec no of walks walk length other arguments to be passed in the code How are these decided and set for such a data Please help I want to make histogram 2D images from this data and run a 2D CNN model",
+    "created_at": "2020-03-26T05:40:31Z",
+    "closed_at": null,
+    "user": "meghalD",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Tixierae",
+        "created_at": "2020-05-22T08:45:29Z",
+        "body": "Hi sorry for the very late reply The parameters indeed seem to have a big impact on the results and it is not clear what are good priors for them It obviously depends on the graphs You may have a look at the resources linked in this thread https github com aditya grover node2vec issues 2 Some rules of thumb that I came up with not sure if they are the best but at least they worked in my applications for networks that are quite dense and have rather low diameters use short walk lengths e g 8 and small windows e g k 2 k being half the window size the fewer the nodes in the networks the smaller the embedding space should be For instance for less than 100 nodes it does not make sense to have embedding spaces with more than 10 dimensions don t forget to add the w flag to your calls if your networks are weighted"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Question about the result in paper?",
+    "state": "closed",
+    "body": "Hi I have a question about runtime result that mention in your paper Does it include the runtime of graph embedding method node2vec",
+    "created_at": "2019-09-20T11:41:02Z",
+    "closed_at": "2019-09-20T19:36:42Z",
+    "user": "PeemapatW",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Tixierae",
+        "created_at": "2019-09-20T19:36:33Z",
+        "body": "Hi The reported runtime is the time per epoch of the CNN model it doesn t include the time required to get the node embeddings Note that node2vec is supposed to be implementable in linear time w r t the size of the graphs"
+      }
+    ]
+  }
+]

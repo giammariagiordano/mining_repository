@@ -1,0 +1,101 @@
+[
+  {
+    "number": 5,
+    "title": "raise ValueError(\"Tensor %s is not an element of this graph.\" % obj)",
+    "state": "closed",
+    "body": "Hello I try to use Img2Vec with Flask server but I get error How to properly fix it Thanks",
+    "created_at": "2019-04-26T10:18:24Z",
+    "closed_at": "2019-10-20T01:23:12Z",
+    "user": "vinnitu",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "jaredwinick",
+        "created_at": "2019-04-26T20:42:48Z",
+        "body": "What versions of TensorFlow and Keras are you using I have never seen that issue but it looks related to what is discussed here https github com keras team keras issues 6462 issuecomment 385962748 Perhaps it is related to the way it is being invoked on your server If you provide some more context such that this problem is able to be recreated I might be able to find a solution within the library"
+      },
+      {
+        "user": "jaredwinick",
+        "created_at": "2019-10-20T01:23:12Z",
+        "body": "As I don t have any more detail I am going to close this issue Thanks"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "example code mentions img_to_vec -> but think it's supposed to be img_to_vec_keras ",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-10-09T18:39:06Z",
+    "closed_at": "2019-03-30T03:58:28Z",
+    "user": "johndpope",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "johndpope",
+        "created_at": "2018-10-09T18:41:34Z",
+        "body": "also tf10 examples git master python similarity py Using Theano backend Users jpope miniconda3 envs tf10 lib python3 7 site packages sklearn externals joblib externals cloudpickle cloudpickle py 47 DeprecationWarning the imp module is deprecated in favour of importlib see the module s documentation for alternative uses import imp Traceback most recent call last File similarity py line 10 in module cat1 vec img2vec get vec images cat1 jpg File Users jpope miniconda3 envs tf10 lib python3 7 site packages img2vec keras 0 1 py3 7 egg img2vec keras img to vec py line 30 in get vec return intermediate output 0 0 0 IndexError invalid index to scalar variable tf10 examples git master l do I need to install resnet https github com broadinstitute keras resnet"
+      },
+      {
+        "user": "jaredwinick",
+        "created_at": "2018-11-19T05:01:32Z",
+        "body": "Thanks I fixed the import I am able to recreate the IndexError you are reporting as well at https colab research google com drive 1 0YTIH4Hk7Bw0BF0OUmH69QF6Iywd5oR I will try to find a chance to resolve this thanks"
+      },
+      {
+        "user": "jaredwinick",
+        "created_at": "2019-03-30T03:58:28Z",
+        "body": "johndpope I resolved the IndexError I had the wrong shape on the intermediate output variable"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Example Notebook",
+    "state": "closed",
+    "body": "Develop a more interesting example using Colaboratory",
+    "created_at": "2018-08-19T03:41:49Z",
+    "closed_at": "2018-09-19T05:14:45Z",
+    "user": "jaredwinick",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Make pip installable",
+    "state": "closed",
+    "body": "Don t need to publish it just make it so you can use https stackoverflow com questions 15268953 how to install python package from github",
+    "created_at": "2018-08-19T03:40:24Z",
+    "closed_at": "2018-09-19T05:14:45Z",
+    "user": "jaredwinick",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "jaredwinick",
+        "created_at": "2018-08-19T03:59:22Z",
+        "body": "https stackoverflow com questions 8247605 configuring so that pip install can work from github https python packaging readthedocs io en latest minimal html"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Add README for usage",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-08-19T03:39:05Z",
+    "closed_at": "2018-09-19T05:14:45Z",
+    "user": "jaredwinick",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  }
+]

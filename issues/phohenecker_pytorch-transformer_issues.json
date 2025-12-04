@@ -1,0 +1,60 @@
+[
+  {
+    "number": 3,
+    "title": "problem of the create_positional_emb function in utils",
+    "state": "open",
+    "body": "Thank you for your coding For the create positional emb function in utils you removed the last entry of the embedding matrix Should the code be like this if emb matrix shape 1 embedding size emb matrix emb matrix 1",
+    "created_at": "2021-04-08T07:44:40Z",
+    "closed_at": null,
+    "user": "naruto7283",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Decoder-only mode, image transformer",
+    "state": "open",
+    "body": "Is there a way to use your codebase for the Image Transformer which is a transformer made from solely a decoder no encoder This models p x like a normal autoregressive model instead of the translation purpose of p y x https arxiv org abs 1802 05751 Thanks for your guidance Michael",
+    "created_at": "2019-07-19T03:01:02Z",
+    "closed_at": null,
+    "user": "malbergo",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "phohenecker",
+        "created_at": "2019-07-22T09:37:14Z",
+        "body": "Hi Michael I don t know the image transformer but I ll check it out and come back to you"
+      },
+      {
+        "user": "malbergo",
+        "created_at": "2019-07-31T02:02:37Z",
+        "body": "Thanks"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "Request: Seq2Seq example (not BERT)",
+    "state": "closed",
+    "body": "Awesome package thanks a lot I m trying to build a seq2seq model similar to GPT 2 off it Your BERT example code was very helpful It would be amazing to get something similar for Seq2Seq e g machine translation Especially how to build the training procedure is not quite clear to me",
+    "created_at": "2019-07-09T12:15:52Z",
+    "closed_at": "2019-07-13T21:12:05Z",
+    "user": "cpury",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "phohenecker",
+        "created_at": "2019-07-10T08:45:54Z",
+        "body": "Thank you so much Great to hear that it s actually useful for other people as well Also I m happy to add an example of how to use it for GPT like models I ll try to do that until tomorrow"
+      },
+      {
+        "user": "phohenecker",
+        "created_at": "2019-07-13T20:05:04Z",
+        "body": "Hi Sorry for the late reply Here https github com phohenecker pytorch transformer blob master examples gpt pretraining py is an example that illustrates how to pretrain an encoder GPT style For GPT 2 in particular you d also have to adjust the encoder itself accordingly which should be straightforward though If you are looking into an NMT problem however then I d suggest that you also check out this recent FAIR paper https arxiv org abs 1901 07291"
+      }
+    ]
+  }
+]

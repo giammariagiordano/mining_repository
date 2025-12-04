@@ -1,0 +1,62 @@
+[
+  {
+    "number": 19,
+    "title": "installation issue",
+    "state": "open",
+    "body": "when I try to run the edge server code I m getting this error node 228257 UnhandledPromiseRejectionWarning Error The dtype of dict image tensor provided in model execute dict must be int32 but was float32 at Object assert media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist tf core node js 708 15 at media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 7131 28 at Array forEach anonymous at GraphExecutor checkInputShapeAndType media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 7118 29 at GraphExecutor anonymous media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 6921 34 at step media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 77 23 at Object next media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 58 53 at media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 51 71 at new Promise anonymous at awaiter media eswar dev SEM gcloud iot edge tensorflow edge server node modules tensorflow tfjs converter dist tf converter node js 47 12 node 228257 UnhandledPromiseRejectionWarning Unhandled promise rejection This error originated either by throwing inside of an async function without a catch block or by rejecting a promise which was not handled with catch To terminate the node process on unhandled promise rejection use the CLI flag unhandled rejections strict see https nodejs org api cli html cli unhandled rejections mode rejection id 2 node 228257 DEP0018 DeprecationWarning Unhandled promise rejections are deprecated In the future promise rejections that are not handled will terminate the Node js process with a non zero exit code",
+    "created_at": "2022-03-30T20:26:01Z",
+    "closed_at": null,
+    "user": "ioeshu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "liuqianjin",
+        "created_at": "2022-10-11T07:36:14Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Installation Issue ",
+    "state": "open",
+    "body": "Hi ALL I installed the solution as stated in the help but I get the following errors when I started sudo npm start BR Markus pi IoTGateway gcloud iot edge tensorflow edge server sudo npm start edge server 1 0 0 start home pi gcloud iot edge tensorflow edge server node index js Initialization of backend tensorflow failed Error Could not locate the bindings file Tried home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node build tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node build Debug tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node build Release tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node out Debug tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node Debug tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node out Release tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node Release tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node build default tfjs binding node home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node compiled 14 15 1 linux arm tfjs binding node at bindings home pi gcloud iot edge tensorflow edge server node modules bindings bindings js 96 9 at Object factory home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs node dist index js 48 60 at Engine initializeBackend home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 237 48 at Engine anonymous home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 200 35 at step home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 48 23 at Object next home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 29 53 at home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 23 71 at new Promise anonymous at awaiter home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 19 12 at Engine setBackend home pi gcloud iot edge tensorflow edge server node modules tensorflow tfjs core dist engine js 189 16 internal modules cjs loader js 883 throw err Error Cannot find module mdns Require stack home pi gcloud iot edge tensorflow edge server DeviceListener js home pi gcloud iot edge tensorflow edge server EdgeServer js home pi gcloud iot edge tensorflow edge server index js at Function Module resolveFilename internal modules cjs loader js 880 15 at Function Module load internal modules cjs loader js 725 27 at Module require internal modules cjs loader js 952 19 at require internal modules cjs helpers js 88 18 at Object anonymous home pi gcloud iot edge tensorflow edge server DeviceListener js 2 14 at Module compile internal modules cjs loader js 1063 30 at Object Module extensions js internal modules cjs loader js 1092 10 at Module load internal modules cjs loader js 928 32 at Function Module load internal modules cjs loader js 769 14 at Module require internal modules cjs loader js 952 19 code MODULE NOT FOUND requireStack home pi gcloud iot edge tensorflow edge server DeviceListener js home pi gcloud iot edge tensorflow edge server EdgeServer js home pi gcloud iot edge tensorflow edge server index js npm ERR code ELIFECYCLE npm ERR errno 1 npm ERR edge server 1 0 0 start node index js npm ERR Exit status 1 npm ERR npm ERR Failed at the edge server 1 0 0 start script npm ERR This is probably not a problem with npm There is likely additional logging output above npm ERR A complete log of this run can be found in npm ERR root npm logs 2020 12 14T10 31 33 863Z debug log",
+    "created_at": "2020-12-14T10:44:35Z",
+    "closed_at": null,
+    "user": "schmeckm",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "error: Chip revision is higher than the one configured in menuconfig. Suggest to upgrade it.",
+    "state": "open",
+    "body": "Screenshot from 2020 01 07 11 23 30 https user images githubusercontent com 58546079 71871993 10a36380 3141 11ea 887a 86e0689a9019 png I try to build your example but got this error",
+    "created_at": "2020-01-07T06:21:12Z",
+    "closed_at": null,
+    "user": "ravirajpatil25",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "Query regarding project ",
+    "state": "open",
+    "body": "Is the project still open I mean is it still active",
+    "created_at": "2019-07-17T16:16:15Z",
+    "closed_at": null,
+    "user": "Naman9639",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "alvarowolfx",
+        "created_at": "2019-10-12T15:04:13Z",
+        "body": "Sorry for the late response Yes it is active do you have any specific question"
+      }
+    ]
+  }
+]

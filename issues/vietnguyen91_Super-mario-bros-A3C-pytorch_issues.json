@@ -1,0 +1,418 @@
+[
+  {
+    "number": 27,
+    "title": "_share_filename_: only available on CPU",
+    "state": "open",
+    "body": "why in if opt use gpu global model cuda global model share memory after use GPU it can t share memory",
+    "created_at": "2025-03-27T07:10:40Z",
+    "closed_at": null,
+    "user": "HughJ1231",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 26,
+    "title": "Problem with eval and local test",
+    "state": "closed",
+    "body": "Hi everything seems to be working fine during the regular training phase local train The agent appears to learn as expected However when I try to render local test or run test py the agent jumps once and then continuously moves to the right This issue seems to be caused by the difference in action selection methods In local train actions are selected using Categorical In local test and test py actions are selected using argmax Relevant Code Code in test py and local test python logits value h 0 c 0 model state h 0 c 0 policy F softmax logits dim 1 action torch argmax policy item action int action state reward done info env step action Code in local train python logits value h 0 c 0 local model state h 0 c 0 policy F softmax logits dim 1 log policy F log softmax logits dim 1 entropy policy log policy sum 1 keepdim True m Categorical policy action m sample item state reward done env step action I only trained for few thousand episodes before doing the tests but it seems off that the local train is learning while during test it can t even pass the first obstacle Using Categorical instead of Argmax during test also seems to fix the problem Is this intended Thanks for the patience and help",
+    "created_at": "2024-12-20T15:56:39Z",
+    "closed_at": "2025-01-03T18:47:14Z",
+    "user": "Francesco0101",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "Question about hyperparameters",
+    "state": "closed",
+    "body": "Hello I have some questions regarding the parameters you selected for the training process By default num local steps is set to 50 which seems quite low to me This means the agent can perform a maximum of 50 actions per episode during training before the environment resets Could you provide details about the parameters chosen for the following stages First world first stage First world second stage First world third stage Additionally for these levels did you conduct training across 100 000 episodes From the code it seems the default global steps variable is set to 5e6 implying a total of 100 000 episodes per level in each world since each episode consists of 50 steps Could you confirm if this interpretation is correct Thank you",
+    "created_at": "2024-12-19T13:37:22Z",
+    "closed_at": "2024-12-19T16:01:17Z",
+    "user": "palu001",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 24,
+    "title": "What's your traning parameters?",
+    "state": "closed",
+    "body": "Thanks for your code I used your code to train Mario in world 1 and stage 1 and I used the default parameter but the Mario cannot pass the first little monster until the end of the code Could you please tell me your parameter for example python parser add argument gamma type float default 0 9 help discount factor for rewards parser add argument tau type float default 1 0 help parameter for GAE parser add argument beta type float default 0 01 help entropy coefficient parser add argument num local steps type int default 50 parser add argument num global steps type int default 5e6",
+    "created_at": "2024-09-30T12:25:42Z",
+    "closed_at": "2024-10-01T04:38:55Z",
+    "user": "ZhuShaoQiang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ZhuShaoQiang",
+        "created_at": "2024-10-01T04:38:20Z",
+        "body": "It s strange the same code I transfer to my Linux and the agent can be trained to complete the task"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Is there any way to speed up the traning?",
+    "state": "open",
+    "body": "we installed this project on our server which has some 4090s But the traning process is very slow We wonder is there any way to speed up this process We used the original configs as 6 num processes to train the game 1 1",
+    "created_at": "2023-12-10T16:46:58Z",
+    "closed_at": null,
+    "user": "ipanda123",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "I have installed gym but it shows that I need to install  gym_super_mario_bros, I use \"pip install gym_super_mario_bros\" but I failed .....",
+    "state": "open",
+    "body": "Collecting gym super mario bros Using cached gym super mario bros 7 4 0 py3 none any whl 199 kB Collecting nes py 8 1 4 Using cached nes py 8 2 1 tar gz 77 kB Preparing metadata setup py done Requirement already satisfied gym 0 17 2 in d anaconda lib site packages from nes py 8 1 4 gym super mario bros 0 26 2 Requirement already satisfied numpy 1 18 5 in d anaconda lib site packages from nes py 8 1 4 gym super mario bros 1 21 5 Requirement already satisfied pyglet 1 5 21 1 4 0 in d anaconda lib site packages from nes py 8 1 4 gym super mario bros 1 5 21 Requirement already satisfied tqdm 4 48 2 in d anaconda lib site packages from nes py 8 1 4 gym super mario bros 4 64 1 Requirement already satisfied cloudpickle 1 2 0 in d anaconda lib site packages from gym 0 17 2 nes py 8 1 4 gym super mario bros 2 0 0 Requirement already satisfied gym notices 0 0 4 in d anaconda lib site packages from gym 0 17 2 nes py 8 1 4 gym super mario bros 0 0 8 Requirement already satisfied importlib metadata 4 8 0 in d anaconda lib site packages from gym 0 17 2 nes py 8 1 4 gym super mario bros 4 11 3 Requirement already satisfied colorama in d anaconda lib site packages from tqdm 4 48 2 nes py 8 1 4 gym super mario bros 0 4 5 Requirement already satisfied zipp 0 5 in d anaconda lib site packages from importlib metadata 4 8 0 gym 0 17 2 nes py 8 1 4 gym super mario bros 3 8 0 Building wheels for collected packages nes py Building wheel for nes py setup py error error subprocess exited with error python setup py bdist wheel did not run successfully exit code 1 21 lines of output running bdist wheel running build running build py creating build creating build lib win amd64 cpython 39 creating build lib win amd64 cpython 39 nes py copying nes py nes env py build lib win amd64 cpython 39 nes py copying nes py image viewer py build lib win amd64 cpython 39 nes py copying nes py rom py build lib win amd64 cpython 39 nes py copying nes py init py build lib win amd64 cpython 39 nes py creating build lib win amd64 cpython 39 nes py app copying nes py app cli py build lib win amd64 cpython 39 nes py app copying nes py app play human py build lib win amd64 cpython 39 nes py app copying nes py app play random py build lib win amd64 cpython 39 nes py app copying nes py app init py build lib win amd64 cpython 39 nes py app creating build lib win amd64 cpython 39 nes py wrappers copying nes py wrappers joypad space py build lib win amd64 cpython 39 nes py wrappers copying nes py wrappers init py build lib win amd64 cpython 39 nes py wrappers running build ext building nes py lib nes env extension error Microsoft Visual C 14 0 or greater is required Get it with Microsoft C Build Tools https visualstudio microsoft com visual cpp build tools end of output note This error originates from a subprocess and is likely not a problem with pip ERROR Failed building wheel for nes py Running setup py clean for nes py Failed to build nes py Installing collected packages nes py gym super mario bros Running setup py install for nes py error error subprocess exited with error Running setup py install for nes py did not run successfully exit code 1 23 lines of output running install D Anaconda lib site packages setuptools command install py 34 SetuptoolsDeprecationWarning setup py install is deprecated Use build and pip and other standards based tools warnings warn running build running build py creating build creating build lib win amd64 cpython 39 creating build lib win amd64 cpython 39 nes py copying nes py nes env py build lib win amd64 cpython 39 nes py copying nes py image viewer py build lib win amd64 cpython 39 nes py copying nes py rom py build lib win amd64 cpython 39 nes py copying nes py init py build lib win amd64 cpython 39 nes py creating build lib win amd64 cpython 39 nes py app copying nes py app cli py build lib win amd64 cpython 39 nes py app copying nes py app play human py build lib win amd64 cpython 39 nes py app copying nes py app play random py build lib win amd64 cpython 39 nes py app copying nes py app init py build lib win amd64 cpython 39 nes py app creating build lib win amd64 cpython 39 nes py wrappers copying nes py wrappers joypad space py build lib win amd64 cpython 39 nes py wrappers copying nes py wrappers init py build lib win amd64 cpython 39 nes py wrappers running build ext building nes py lib nes env extension error Microsoft Visual C 14 0 or greater is required Get it with Microsoft C Build Tools https visualstudio microsoft com visual cpp build tools end of output note This error originates from a subprocess and is likely not a problem with pip error legacy install failure Encountered error while trying to install package nes py note This is an issue with the package mentioned above not pip hint See above for output from the failure",
+    "created_at": "2023-01-30T11:24:42Z",
+    "closed_at": null,
+    "user": "PatrcikStar",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "KeplerBro",
+        "created_at": "2023-07-02T06:27:36Z",
+        "body": "it looks like that you need to install Microsoft C Build Tools you can get it at https my visualstudio com Downloads q Visual 20C 20Build 20Tools 20for 20Visual 20Studio 202015 20with 20Update 203 select DVD type and download install than you can fix it"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Higher resolution video",
+    "state": "open",
+    "body": "I want some Higher resolution videos because the quality of the output is too low Is that any way to output video with a higher resolution",
+    "created_at": "2022-03-03T03:48:04Z",
+    "closed_at": null,
+    "user": "AndyZCJ",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shuishen49",
+        "created_at": "2022-10-06T16:42:41Z",
+        "body": "in env py line 18 self command ffmpeg y f rawvideo vcodec rawvideo s X format width height pix fmt rgb24 r 60 i an vcodec mpeg4 s 1024x960 saved path 1024x960 is new resolution"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "MArio",
+    "state": "open",
+    "body": "",
+    "created_at": "2022-01-19T15:23:21Z",
+    "closed_at": null,
+    "user": "yatharth004",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "RuntimeError: cuda runtime error (801)",
+    "state": "open",
+    "body": "Hi when I try to run this code using CUDA I always am getting this error It works fine on CPU and other programs work fine using CUDA I tried to search online but I didn t find anything of use Here s the entire Traceback THCudaCheck FAIL file torch csrc generic StorageSharing cpp line 253 error 801 operation not supported Traceback most recent call last File train py line 84 in module train opt File train py line 73 in train process start File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing process py line 121 in start self popen self Popen self File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing context py line 327 in Popen return Popen process obj File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing popen spawn win32 py line 93 in init reduction dump process obj to child File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing reduction py line 60 in dump ForkingPickler file protocol dump obj File C Users Aarush Documents Visual Studio Code Maching Learning machine learning env38 lib site packages torch multiprocessing reductions py line 240 in reduce tensor event sync required storage share cuda RuntimeError cuda runtime error 801 operation not supported at torch csrc generic StorageSharing cpp 253 machine learning env38 PS C Users Aarush Documents Visual Studio Code Maching Learning Super mario bros A3C pytorch Traceback most recent call last File string line 1 in module File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing spawn py line 116 in spawn main exitcode main fd parent sentinel File C Users Aarush AppData Local Programs Python Python38 lib multiprocessing spawn py line 126 in main self reduction pickle load from parent EOFError Ran out of input",
+    "created_at": "2021-04-27T20:11:45Z",
+    "closed_at": null,
+    "user": "arkseal",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "qf-123",
+        "created_at": "2022-06-25T12:56:13Z",
+        "body": "the same problem"
+      },
+      {
+        "user": "arkseal",
+        "created_at": "2022-06-25T18:28:45Z",
+        "body": "I think it worked when I used Linux try using wsl if you want to stay on Windows"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "implementation of optimizer",
+    "state": "open",
+    "body": "Sorry I refered to google but still confused about the GlabalAdam optimizer Can someone give me a HELP py for group in self param groups for p in group params state self state p state step 0 state exp avg torch zeros like p data state exp avg sq torch zeros like p data state exp avg share memory state exp avg sq share memory",
+    "created_at": "2020-12-10T11:43:04Z",
+    "closed_at": null,
+    "user": "QingyvHan",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "EOFError after training Process 0. Episode 99999",
+    "state": "open",
+    "body": "Training process 0 terminated The code runs for 80688 54 s Exception in thread Thread 1 Traceback most recent call last File home anaconda3 envs mario lib python3 6 threading py line 916 in bootstrap inner self run File home anaconda3 envs mario lib python3 6 site packages tensorboardX event file writer py line 202 in run data self queue get True queue wait duration File home anaconda3 envs mario lib python3 6 multiprocessing queues py line 108 in get res self recv bytes File home anaconda3 envs mario lib python3 6 multiprocessing connection py line 216 in recv bytes buf self recv bytes maxlength File home anaconda3 envs mario lib python3 6 multiprocessing connection py line 407 in recv bytes buf self recv 4 File home anaconda3 envs mario lib python3 6 multiprocessing connection py line 383 in recv raise EOFError EOFError Do anyone know what s wrong with this How to solve this",
+    "created_at": "2020-11-21T07:52:05Z",
+    "closed_at": null,
+    "user": "fuxianh",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "num_states = 210 (Atari environment) indicates you need 210 frames to propagate, seems infeasible?",
+    "state": "open",
+    "body": "https github com uvipen Super mario bros A3C pytorch blob 004d331c5f16022dfcf5d62d10574a7737db0bca train py L49 In the first convolution layer in model py you specify the input channels as num inputs After digging through your repo you re calling create train env in src env py For Atari environments breakout pong space force the observation space is 210 160 3 This means that you re picking up 210 frames before training the actual agent Doesn t this result in huge training error initially since the number of channels is significantly larger than most A3C papers indicate maybe like 2 or 3 What s your justification towards such high of a channel number",
+    "created_at": "2020-08-01T00:01:16Z",
+    "closed_at": null,
+    "user": "QasimWani",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "while loop in local test",
+    "state": "open",
+    "body": "Hi I am wondering why there is no break statement in the local test in this script https github com uvipen Super mario bros A3C pytorch blob master src process py It seems like the testing loop will run forever How to terminate the local test",
+    "created_at": "2020-05-02T01:31:06Z",
+    "closed_at": null,
+    "user": "yuchensun97",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "QasimWani",
+        "created_at": "2020-08-01T00:05:55Z",
+        "body": "Good point I think it should ve been while done True or something This is because done is declared previously Does this make sense to you Thanks"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "env.py ：AttributeError: 'Monitor' object has no attribute 'pipe'？？Pls",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-02-18T07:36:00Z",
+    "closed_at": null,
+    "user": "ctywny",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ctywny",
+        "created_at": "2020-02-18T07:37:32Z",
+        "body": "line26 def record self image array self pipe stdin write image array tostring"
+      },
+      {
+        "user": "jokerlegends",
+        "created_at": "2020-03-31T12:49:56Z",
+        "body": "Perhaps because that the ffmpeg is not installed"
+      },
+      {
+        "user": "EhsanMohd",
+        "created_at": "2020-05-03T16:34:36Z",
+        "body": "Perhaps because that the ffmpeg is not installed how to install FFmpeg"
+      },
+      {
+        "user": "Christopher-Lucas-Prime",
+        "created_at": "2020-05-06T23:56:24Z",
+        "body": "try pip install ffmpeg if it doesn t work and you just wanna test things out replace line 53 in env py with pass you would still be able to see the rendered environment from gym plus if it s too fast try adding a delay right after env render in test py"
+      },
+      {
+        "user": "qiaoxianfeng",
+        "created_at": "2020-08-14T06:25:36Z",
+        "body": "Hello I followed your instructions above but still did not solve the previous problem Is that why"
+      },
+      {
+        "user": "ZhaoQianfeng",
+        "created_at": "2021-01-27T07:57:28Z",
+        "body": "Go here https ffmpeg org download html download ffmpeg build and then add the bin path to environment variable qiaoxianfeng"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "training never ending problem..??",
+    "state": "open",
+    "body": "Hi When i training with your code my global steps option is 5k Process 0 Episode 99 Training process 5 terminated The code runs for 95 45s Training process 1 terminated Training process 3 terminated Training process 0 terminated Training process 2 terminated Training process 4 terminated and it never stop ctrl c is the only way to stop this training do i missed something",
+    "created_at": "2020-02-12T01:27:31Z",
+    "closed_at": null,
+    "user": "ghost",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "How can I change the frame rate of the monitor?",
+    "state": "open",
+    "body": "Hi firstly thanks for your beautiful code I have one tiny question I do not know how to change the frame rate of the Mario monitor because currently it is too large to watch Mario s movement clearly so I want to slow down the frame rate but I do not know where I should change the code Looking forward to your reply",
+    "created_at": "2019-12-31T04:16:08Z",
+    "closed_at": null,
+    "user": "tanjuntao",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 9,
+    "title": "Why does my Mario keep repeating one action?",
+    "state": "open",
+    "body": "Hi why Mario keep repeating one action",
+    "created_at": "2019-12-14T10:14:10Z",
+    "closed_at": null,
+    "user": "qmkakaxi",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "vietnh1009",
+        "created_at": "2020-01-17T21:00:37Z",
+        "body": "Please provide more information Did you load trained model properly"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "How should I continue my training?",
+    "state": "open",
+    "body": "When I interrupted my last training How should I continue my training Otherwise once I start training I can t stop",
+    "created_at": "2019-09-16T10:50:32Z",
+    "closed_at": null,
+    "user": "guanzeying",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "vietnh1009",
+        "created_at": "2019-11-11T23:23:48Z",
+        "body": "Hi Train a model for a single level should not take too much time Hence I didnt write a script for resuming training phase But you could try to do it since it is not too complicated"
+      },
+      {
+        "user": "QasimWani",
+        "created_at": "2020-08-01T00:03:02Z",
+        "body": "hey the way i do it is when developing I run it in a jupyter notebook You can just interrupt the kernel save the weights and rerun that particular cell It d just pick out the most recently updated weights as long as the policy agent object is declared globally"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Would you please tell me how long this code run to train a stable A3C agent?",
+    "state": "closed",
+    "body": "Hi nice job I wonder try this code Would you please tell me how long this code need to run to train a stable A3C agent Thanks",
+    "created_at": "2019-07-28T06:06:41Z",
+    "closed_at": "2019-08-22T23:38:28Z",
+    "user": "wangxiao5791509",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "vietnh1009",
+        "created_at": "2019-08-22T19:20:40Z",
+        "body": "Hi It took me about 6 12 hours for each level"
+      },
+      {
+        "user": "wangxiao5791509",
+        "created_at": "2019-08-22T23:38:22Z",
+        "body": "vietnguyen91 Thanks for your information I will try this later Thank you"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "I have got one erro",
+    "state": "closed",
+    "body": "I run the train py but failed the terminal give that ImportError cannot import name BinarySpaceToDiscreteSpaceEnv how can I fix this error",
+    "created_at": "2019-07-05T09:32:13Z",
+    "closed_at": "2019-07-05T10:26:19Z",
+    "user": "lossv",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lossv",
+        "created_at": "2019-07-05T10:26:16Z",
+        "body": "OK Ihave fixed I have found that Rename BinarySpaceToDiscreteSpaceEnv to JoypadSpace"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "AttributeError: 'Monitor' object has no attribute 'pipe'",
+    "state": "closed",
+    "body": "Hello I have an error when I run test py python3 test py Traceback most recent call last File test py line 68 in module test opt File test py line 58 in test state reward done info env step action File home pluto Super mario bros A3C pytorch src env py line 76 in step state reward done info self env step action File home pluto Super mario bros A3C pytorch src env py line 51 in step self monitor record state File home pluto Super mario bros A3C pytorch src env py line 26 in record self pipe stdin write image array tostring AttributeError Monitor object has no attribute pipe The error appears in the env py file try self pipe sp Popen self command stdin sp PIPE stderr sp PIPE except FileNotFoundError pass def record self image array self pipe stdin write image array tostring I tried to modify the code but it didn t work Can you help me",
+    "created_at": "2019-06-25T08:04:39Z",
+    "closed_at": "2019-06-26T14:18:28Z",
+    "user": "xufeng1024",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "xufeng1024",
+        "created_at": "2019-06-25T09:08:33Z",
+        "body": "I tried to remove try except from env py After that it appeared FileNotFoundError Errno 2 No such file or directory ffmpeg ffmpeg"
+      },
+      {
+        "user": "xufeng1024",
+        "created_at": "2019-06-26T14:17:54Z",
+        "body": "First of all thank you The error is due to the fact that ffmpeg is not installed sudo apt get install ffmpeg Finally successfully run the program The environment of this program is a bit cumbersome Thanks again"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "The env gym_super_mario_bros.",
+    "state": "closed",
+    "body": "Hello I can t find the env gym super mario bros Is that the gym env written by yourself And could I have a copy My Email is ShawnDong98 gmail com Best wishes",
+    "created_at": "2019-06-11T04:05:27Z",
+    "closed_at": "2019-06-25T15:06:16Z",
+    "user": "ShawnDong98",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "cjing9017",
+        "created_at": "2019-06-11T07:15:49Z",
+        "body": "Hello I can t find the env gym super mario bros Is that the gym env written by yourself And could I have a copy My Email is ShawnDong98 gmail com mailto ShawnDong98 gmail com Best wishes you can find the environment in this address gym super mario bros https github com Kautenja gym super mario bros"
+      },
+      {
+        "user": "ShawnDong98",
+        "created_at": "2019-06-11T08:09:24Z",
+        "body": "you can find the environment in this address gym super mario bros https github com Kautenja gym super mario bros That s it You solve my problem Thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Newly updated nes-py wrappers does not have BinarySpaceToDiscreteSpaceEnv",
+    "state": "closed",
+    "body": "The import statement should change from from nes py wrappers import BinarySpaceToDiscreteSpaceEnv to from nes py wrappers import JoypadSpace and then replace in the code accordingly Cheers",
+    "created_at": "2019-06-03T00:46:06Z",
+    "closed_at": "2019-06-25T15:06:36Z",
+    "user": "tranhoangkhuongvn",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "superzhou111",
+        "created_at": "2019-06-11T06:19:26Z",
+        "body": "sure I clone it from others You may copy it as well iPhone Original From ShawnDong notifications github com Date Tue Jun 11 2019 0 04 PM To vietnguyen91 Super mario bros A3C pytorch Super mario bros A3C pytorch noreply github com Cc Subscribed subscribed noreply github com Subject Re vietnguyen91 Super mario bros A3C pytorch Newly updated nes py wrappers does not have BinarySpaceToDiscreteSpaceEnv 3 Hello I can t find the env gym super mario bros Is that the gym env written by yourself And could I have a copy You are receiving this because you are subscribed to this thread Reply to this email directly view it on GitHub or mute the thread"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "hx, cx= self.lstm(x.size(0), -1), (hx, cx))",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-06-02T10:28:01Z",
+    "closed_at": "2019-06-02T10:28:08Z",
+    "user": "zhengchunqiu",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

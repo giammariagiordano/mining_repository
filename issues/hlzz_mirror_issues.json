@@ -1,0 +1,90 @@
+[
+  {
+    "number": 6,
+    "title": "How to generate GL3D gl3d_gt_pairs file for evaluation?",
+    "state": "open",
+    "body": "Hello I have downloaded your gl3d gt pairs file for evaluation and also I have downloaded the GL3D ground truth datasets of common track txt and mesh overlap txt However I do not understand how you generate the weight of the gl3d gt pairs file I read your paper and think the process may be different from what you describe in your paper For example the first test dataset is 584ad76bfe3cb463906ce6dc in this dataset the 0 4 weight of the gl3d gt pairs file is 0 706303523876 the 0 4 weight of common track txt is 0 205568 the 0 4 weight of mesh overlap txt is 0 36 Thanks a lot for your help",
+    "created_at": "2020-05-05T02:24:15Z",
+    "closed_at": null,
+    "user": "rann1018",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lzfff12",
+        "created_at": "2023-08-01T02:53:08Z",
+        "body": "Has this problem been solved"
+      },
+      {
+        "user": "Suxilan",
+        "created_at": "2025-10-10T07:54:49Z",
+        "body": "I also found this problem how to deal with it"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Paper parameters",
+    "state": "closed",
+    "body": "Hello I want to be sure to use the same parameters as the ones you use in Matchable Image Retrieval by Learning from Surface Reconstruction to produce the entry Ours of table 3 To produce the global descriptor python retrieval inference py img list home tianwei Data fountain p11 image list ckpt step 720000 img size 896 net resnet 50 pool MAX rmac step 1 3 5 ckpt path data model model ckpt To perform the retrieval python retrieval deep query py feature list home tianwei Data fountain p11 feature list out dir output top 100 out dim 256 Is it right Thanks",
+    "created_at": "2020-01-21T08:25:23Z",
+    "closed_at": "2020-03-05T21:37:55Z",
+    "user": "rjanvier",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "The inference procedure cannot work on 'gl3d_data/589c3c497dc3d323d5578468' sub-direction",
+    "state": "open",
+    "body": "Hi Thanks a lot for your work I download the recently update GL3D v2 dataset and inference all the scenes using your provided pre trained model All of the scenes work fine except gl3d data 589c3c497dc3d323d5578468 the error shows Input file read error tensorflow python framework errors impl InvalidArgumentError Invalid JPEG data or crop window data size 588779 I do not know if there is some problem with this scene",
+    "created_at": "2020-01-12T09:04:42Z",
+    "closed_at": null,
+    "user": "rann1018",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "Data preprocessing",
+    "state": "closed",
+    "body": "def main argv None image list path os path join FLAGS gl3d list global stats global img list txt train list path os path join FLAGS gl3d forward train list with mask bin image list read list image list path train list read samples train list path train train list image list FLAGS net Can you tell me what these two files global img list txt and train list with mask bin are What do I need to do with GL3D data which txt file is the global img list txt 2019 05 28 10 16 44 https user images githubusercontent com 29138847 58485313 5e60f200 8196 11e9 901a da1290473994 png",
+    "created_at": "2019-05-28T14:14:18Z",
+    "closed_at": "2019-07-01T13:20:37Z",
+    "user": "porcofly",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "hlzz",
+        "created_at": "2019-07-01T13:20:34Z",
+        "body": "See the updated README"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "您好，请问可以提供训练代码参考一下吗？",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-05-27T09:09:53Z",
+    "closed_at": "2019-05-27T12:58:29Z",
+    "user": "porcofly",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "hlzz",
+        "created_at": "2019-05-27T12:07:14Z",
+        "body": "porcofly please see train py for an example It may not be workable with this open source version but it can be used as a reference for your implementation"
+      },
+      {
+        "user": "porcofly",
+        "created_at": "2019-05-27T12:58:29Z",
+        "body": "porcofly please see train py for an example It may not be workable with this open source version but it can be used as a reference for your implementation"
+      }
+    ]
+  }
+]

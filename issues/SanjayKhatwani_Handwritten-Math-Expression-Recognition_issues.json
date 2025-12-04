@@ -1,0 +1,38 @@
+[
+  {
+    "number": 3,
+    "title": "where is the features and training_parameters folder?",
+    "state": "open",
+    "body": "",
+    "created_at": "2021-03-30T07:34:18Z",
+    "closed_at": null,
+    "user": "GopinathCool",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Can you share the trained weights ?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-10-26T06:42:30Z",
+    "closed_at": "2020-11-07T06:21:57Z",
+    "user": "surajsubramanian",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "how do test it on camera captured image",
+    "state": "open",
+    "body": "SanjayKhatwani i want to test the model on camera captured image Does this model work on images or only on inkml files",
+    "created_at": "2020-04-10T07:05:52Z",
+    "closed_at": null,
+    "user": "dishan14",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  }
+]

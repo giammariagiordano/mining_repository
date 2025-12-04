@@ -1,0 +1,1014 @@
+[
+  {
+    "number": 154,
+    "title": "Can't find usage documentation for POS tagger",
+    "state": "closed",
+    "body": "Hello I am searched the docs for POS tagger usage but could not find anything POS tagger looks implemented but I am slightly new to NLP so not sure how to use it",
+    "created_at": "2024-09-24T11:49:45Z",
+    "closed_at": "2024-09-24T17:19:04Z",
+    "user": "burhanuddin6",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "burhanuddin6",
+        "created_at": "2024-09-24T17:18:57Z",
+        "body": "sorry got it newbie here"
+      },
+      {
+        "user": "burhanuddin6",
+        "created_at": "2024-09-24T17:19:04Z",
+        "body": "a"
+      }
+    ]
+  },
+  {
+    "number": 153,
+    "title": "`No module named 'keras.src.engine'` when importing urduhack",
+    "state": "open",
+    "body": "How to reproduce the behaviour When I run Python import urduhack I get the error ModuleNotFoundError No module named keras src engine which is in turn triggered by the line from tf2crf import CRF details summary full stack trace summary p 2024 06 19 16 22 25 065066 I external local tsl tsl cuda cudart stub cc 32 Could not find cuda drivers on your machine GPU will not be used 2024 06 19 16 22 25 069047 I external local tsl tsl cuda cudart stub cc 32 Could not find cuda drivers on your machine GPU will not be used 2024 06 19 16 22 25 121970 I tensorflow core platform cpu feature guard cc 210 This TensorFlow binary is optimized to use available CPU instructions in performance critical operations To enable the following instructions AVX2 FMA in other operations rebuild TensorFlow with the appropriate compiler flags 2024 06 19 16 22 26 683978 W tensorflow compiler tf2tensorrt utils py utils cc 38 TF TRT Warning Could not find TensorRT private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons utils tfa eol msg py 23 UserWarning TensorFlow Addons TFA has ended development and introduction of new features TFA has entered a minimal maintenance and release mode until a planned end of life in May 2024 Please modify downstream libraries to take dependencies from other repositories in our TensorFlow community e g Keras Keras CV and Keras NLP For more information see https github com tensorflow addons issues 2807 warnings warn private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons utils ensure tf install py 53 UserWarning Tensorflow Addons supports using Python ops for all Tensorflow versions above or equal to 2 13 0 and strictly below 2 16 0 nightly versions are not supported The versions of TensorFlow you are currently using is 2 16 1 and is not supported Some things might work some things might not If you were to encounter a bug do not file an issue If you want to make sure you re using a tested and supported configuration either change the TensorFlow version or the TensorFlow Addons s version You can find the compatibility matrix in TensorFlow Addon s readme https github com tensorflow addons warnings warn Traceback most recent call last File stdin line 1 in module File private home daviddale conda envs meres1 lib python3 10 site packages urduhack init py line 6 in module from pipeline import Pipeline File private home daviddale conda envs meres1 lib python3 10 site packages urduhack pipeline init py line 4 in module from core import Pipeline File private home daviddale conda envs meres1 lib python3 10 site packages urduhack pipeline core py line 7 in module from parsers ner import NerParser File private home daviddale conda envs meres1 lib python3 10 site packages urduhack pipeline parsers ner py line 4 in module from urduhack models ner import predict ner File private home daviddale conda envs meres1 lib python3 10 site packages urduhack models ner init py line 4 in module from predict import predict ner File private home daviddale conda envs meres1 lib python3 10 site packages urduhack models ner predict py line 11 in module from urduhack models ner model import bi lstm crf model File private home daviddale conda envs meres1 lib python3 10 site packages urduhack models ner model py line 5 in module from tf2crf import CRF File private home daviddale conda envs meres1 lib python3 10 site packages tf2crf init py line 2 in module from crf import CRF File private home daviddale conda envs meres1 lib python3 10 site packages tf2crf crf py line 2 in module import tensorflow addons as tfa File private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons init py line 23 in module from tensorflow addons import activations File private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons activations init py line 17 in module from tensorflow addons activations gelu import gelu File private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons activations gelu py line 19 in module from tensorflow addons utils types import TensorLike File private home daviddale conda envs meres1 lib python3 10 site packages tensorflow addons utils types py line 29 in module from keras src engine import keras tensor ModuleNotFoundError No module named keras src engine p details This is very frustrating especially given that I need only rule based functionality of this package and I don t need the tensorflow models at all Is it possible to make the dependencies on tf2crf and tensorflow optional and try importing them only if the user really needs the neural models Your Environment Operating System Ubuntu Python Version Used 3 10 13 Urduhack Version Used 1 1 1 Environment Information tensorflow 2 16 1 tf2crf 0 1 33",
+    "created_at": "2024-06-19T16:27:19Z",
+    "closed_at": null,
+    "user": "avidale",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "sharjeel103",
+        "created_at": "2024-08-05T20:50:18Z",
+        "body": "Have you got any solution"
+      },
+      {
+        "user": "avidale",
+        "created_at": "2024-08-05T21:01:19Z",
+        "body": "No I just copy pasted the code I needed directly into my project without installing the whole urduhack package"
+      },
+      {
+        "user": "ahsanalidev",
+        "created_at": "2024-09-07T11:41:43Z",
+        "body": "I am facing the same problem although I have installed urduhack"
+      },
+      {
+        "user": "MARafey",
+        "created_at": "2025-01-10T19:32:15Z",
+        "body": "ahsanalidev and avidale This is a python version issue as urduhack only supports till 3 8"
+      }
+    ]
+  },
+  {
+    "number": 150,
+    "title": "AttributeError: module 'urduhack' has no attribute 'pipeline'",
+    "state": "open",
+    "body": "I followed documentation or you say just copy paste but the module gives an un expected error urduhack pipeline AttributeError module urduhack has no attribute pipeline So basically it saves that urduhack does not have any attribute pipeline where as it s mention in documentation",
+    "created_at": "2022-12-09T17:08:03Z",
+    "closed_at": null,
+    "user": "YasirAminBrohi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 149,
+    "title": "AttributeError: module 'urduhack' has no attribute 'pipeline'",
+    "state": "open",
+    "body": "I followed documentation or you say just copy paste but the module gives an un expected error urduhack pipeline AttributeError module urduhack has no attribute pipeline So basically it saves that urduhack does not have any attribute pipeline where as it s mention in documentation",
+    "created_at": "2022-12-09T17:07:44Z",
+    "closed_at": null,
+    "user": "YasirAminBrohi",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 147,
+    "title": "I am facing this issue of \"word2idx.json\" not found.",
+    "state": "open",
+    "body": "Before submitting an issue make sure to check the docs and closed issues to see if any of the solutions work for you Installation problems can often be related to Python environment issues and problems with compilation How to reproduce the problem Include the details of how the problem occurred Which command did you run to install urduhack Did you come across an error What else did you try I ran the following code after installing urduhack as bash pip install Urduhack tf from here UrduHack Docs https docs urduhack com en stable installation html After that I ran the following code import urduhack Downloading models urduhack download nlp urduhack Pipeline text 118 3 93 202 916 755 94 18 93 15 doc nlp text for sentence in doc sentences print sentence text for word in sentence words print f word text t word pos for token in sentence tokens print f token text t token ner This was the error that I got bash FileNotFoundError Errno 2 No such file or directory C Users Administrator DESKTOP 2V0A5JF urduhack models tagger pos word2idx json Your Environment Operating System Windows 10 Python Version Used 3 8 Urduhack Version Used 1 1 1 Environment Information anaconda base environment",
+    "created_at": "2021-09-30T07:26:50Z",
+    "closed_at": null,
+    "user": "MZaidAI",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 146,
+    "title": "this does not support romanization",
+    "state": "open",
+    "body": "Feature description Please describe the feature Which area of the library is it related to What specific solution would you like We found that this tool does not support romanization",
+    "created_at": "2021-09-15T11:29:45Z",
+    "closed_at": null,
+    "user": "miradel51",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 145,
+    "title": "Normalization and word tokenization have issues.",
+    "state": "open",
+    "body": "Tried to run the example given in the documentation for normalization and the results do not match python normalize 69 29 69 29 Does not normalized 29 Similarly used the word tokenizer and the results are not so good python word tokenizer and are broken into multiple words Your Environment Operating System ubuntu 20 Python Version Used 3 8 Urduhack Version Used latest Environment Information shell absl py 0 12 0 astunparse 1 6 3 attrs 21 2 0 beautifulsoup4 4 9 3 bs4 0 0 1 cachetools 4 2 2 certifi 2021 5 30 charset normalizer 2 0 4 clang 5 0 click 7 1 2 dill 0 3 4 flatbuffers 1 12 future 0 18 2 gast 0 4 0 google auth 1 34 0 google auth oauthlib 0 4 5 google pasta 0 2 0 googleapis common protos 1 53 0 grpcio 1 39 0 h5py 3 1 0 idna 3 2 keras 2 6 0 Keras Preprocessing 1 1 2 Markdown 3 3 4 numpy 1 19 5 oauthlib 3 1 1 opt einsum 3 3 0 promise 2 3 protobuf 3 17 3 pyasn1 0 4 8 pyasn1 modules 0 2 8 regex 2021 8 3 requests 2 26 0 requests oauthlib 1 3 0 rsa 4 7 2 six 1 15 0 soupsieve 2 2 1 tensorboard 2 6 0 tensorboard data server 0 6 1 tensorboard plugin wit 1 8 0 tensorflow 2 6 0 tensorflow addons 0 13 0 tensorflow datasets 3 2 1 tensorflow estimator 2 6 0 tensorflow gpu 2 6 0 tensorflow metadata 1 2 0 termcolor 1 1 0 tf2crf 0 1 32 tqdm 4 62 1 typeguard 2 12 1 typing extensions 3 7 4 3 urduhack 1 1 1 urllib3 1 26 6 Werkzeug 2 0 1 wrapt 1 12 1",
+    "created_at": "2021-08-15T09:46:00Z",
+    "closed_at": null,
+    "user": "mirfan899",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2021-08-18T16:46:59Z",
+        "body": "mirfan899 will look into this issue"
+      }
+    ]
+  },
+  {
+    "number": 144,
+    "title": "Tensorflow and Tensorflow-gpu are both being installed",
+    "state": "open",
+    "body": "Install requires both TensorFlow and TensorFlow GPU bash pip install urduhack tf gpu It seems both are required to use urduhack Your Environment Operating System Ubuntu 18 Python Version Used 3 6 Urduhack Version Used latest Environment Information shell absl py 0 13 0 astunparse 1 6 3 beautifulsoup4 4 9 3 bs4 0 0 1 cachetools 4 2 2 certifi 2021 5 30 charset normalizer 2 0 4 dataclasses 0 8 gast 0 3 3 google auth 1 34 0 google auth oauthlib 0 4 5 google pasta 0 2 0 grpcio 1 39 0 h5py 2 10 0 idna 3 2 importlib metadata 4 6 4 Keras Preprocessing 1 1 2 Markdown 3 3 4 numpy 1 18 5 oauthlib 3 1 1 opt einsum 3 3 0 Pillow 8 3 1 protobuf 3 17 3 pyasn1 0 4 8 pyasn1 modules 0 2 8 requests 2 26 0 requests oauthlib 1 3 0 rsa 4 7 2 scipy 1 4 1 six 1 16 0 soupsieve 2 2 1 tensorboard 2 6 0 tensorboard data server 0 6 1 tensorboard plugin wit 1 8 0 tensorflow estimator 2 3 0 tensorflow gpu 2 3 0 termcolor 1 1 0 typing extensions 3 10 0 0 urllib3 1 26 6 Werkzeug 2 0 1 wrapt 1 12 1 zipp 3 5 0",
+    "created_at": "2021-08-15T08:56:15Z",
+    "closed_at": null,
+    "user": "mirfan899",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 143,
+    "title": "OSError: SavedModel file does not exist at: C:\\Users\\user\\.urduhack\\models\\tokenizer\\word\\word_tokenizer.h5\\{saved_model.pbtxt|saved_model.pb}",
+    "state": "open",
+    "body": "How to reproduce the behavior Include a code example or the steps that led to the problem Please try to be as specific as possible import urduhack urduhack download from urduhack tokenization import word tokenizer a word tokenizer a Your Environment Operating System Windows 10 Python Version Used 3 8 3 Urduhack Version Used 1 1 1 Environment Information Jupyter notebook Tensorflow version 2 5 0 Keras Version 2 5 0 Error Generated OSError Traceback most recent call last ipython input 3 e9c81b1a4094 in module 1 a 2 word tokenizer a AppData Roaming Python Python38 site packages urduhack tokenization tokenizer py in word tokenizer sentence max len 62 if WORD TOKENIZER MODEL is None 63 is model exist WORD TOKENIZER MODEL PATH WORD TOKENIZER VOCAB PATH 64 WORD TOKENIZER MODEL CHAR2IDX IDX2CHAR load model WORD TOKENIZER MODEL PATH WORD TOKENIZER VOCAB PATH 65 66 inp preprocess sentence sentence CHAR2IDX max len max len AppData Roaming Python Python38 site packages urduhack tokenization keras tokenizer py in load model model path vocab path 96 97 98 model tf keras models load model model path 99 100 char2idx idx2char load vocab vocab path AppData Roaming Python Python38 site packages tensorflow python keras saving save py in load model filepath custom objects compile options 204 filepath path to string filepath 205 if isinstance filepath str 206 return saved model load load filepath compile options 207 208 raise IOError AppData Roaming Python Python38 site packages tensorflow python keras saving saved model load py in load path compile options 119 Look for metadata file or parse the SavedModel 120 metadata saved metadata pb2 SavedMetadata 121 meta graph def loader impl parse saved model path meta graphs 0 122 object graph def meta graph def object graph def 123 path to metadata pb os path join path constants SAVED METADATA PATH AppData Roaming Python Python38 site packages tensorflow python saved model loader impl py in parse saved model export dir 111 raise IOError Cannot parse file s s path to pbtxt str e 112 else 113 raise IOError 114 SavedModel file does not exist at s s s s 115 export dir os path sep constants SAVED MODEL FILENAME PBTXT OSError SavedModel file does not exist at C Users user urduhack models tokenizer word word tokenizer h5 saved model pbtxt saved model pb",
+    "created_at": "2021-05-28T06:35:17Z",
+    "closed_at": null,
+    "user": "ahsanfarooqui",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 142,
+    "title": "Issue in Installation",
+    "state": "open",
+    "body": "When I try to download urduhack i received a lot of errors My python version is 2 8",
+    "created_at": "2021-04-29T18:05:11Z",
+    "closed_at": null,
+    "user": "FunlabStudio",
+    "comments_count": 1,
+    "labels": [
+      "invalid"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2021-05-04T17:50:12Z",
+        "body": "Urduhack support python 3 6 and above"
+      }
+    ]
+  },
+  {
+    "number": 141,
+    "title": "Normalize ﷲ to الله",
+    "state": "open",
+    "body": "Sometimes a single unicode character is used to denote Please normalize this as part of the Arabic Urdu conversion",
+    "created_at": "2021-04-18T11:39:53Z",
+    "closed_at": null,
+    "user": "GokulNC",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2021-04-26T15:23:48Z",
+        "body": "Ok I will look into this"
+      }
+    ]
+  },
+  {
+    "number": 140,
+    "title": "Pos Tag error",
+    "state": "open",
+    "body": "I run the following code to generate word tokenization for my urdu text corpus import urduhack nlp urduhack Pipeline urduhack download doc nlp text for sentence in doc sentences for word in sentence words print word text I get the following error usr local lib python3 7 dist packages urduhack pipeline parsers pos tagger py in parse self document 20 tags predict tags sentence text 21 22 assert len tags len sentence words Error in post tags 23 for tag word in zip tags sentence words 24 if tag 0 word text AssertionError Error in post tags Here s my Urdu Text corpus",
+    "created_at": "2021-04-13T15:45:19Z",
+    "closed_at": null,
+    "user": "bm2515",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bm2515",
+        "created_at": "2021-04-14T20:54:52Z",
+        "body": "akkefa muhammadfahid51 could the issue please be discussed and diagnosed"
+      },
+      {
+        "user": "ahmadarif0099",
+        "created_at": "2024-01-30T17:15:01Z",
+        "body": "bm2515 how did you resolve this error cc akkefa"
+      }
+    ]
+  },
+  {
+    "number": 139,
+    "title": "Support for ShahMukhi and Sindhi scripts",
+    "state": "open",
+    "body": "Feature description Would it be possible to extend the Standard Urdu script to add support for ShahMukhi Punjabi and Sindhi s additional characters as well That is it would be great if the library s modules like Normalization works for all the 3 languages Urdu Punjabi Sindhi Thanks",
+    "created_at": "2021-03-30T11:47:49Z",
+    "closed_at": null,
+    "user": "GokulNC",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 138,
+    "title": "ValueError: Layer #3 (named \"crf_2\" in the current model) was found to correspond to layer crf in the save file. However the new layer crf_2 expects 5 weights, but the saved weights have 1 elements.",
+    "state": "closed",
+    "body": "ValueError Layer 3 named crf 2 in the current model was found to correspond to layer crf in the save file However the new layer crf 2 expects 5 weights but the saved weights have 1 elements",
+    "created_at": "2021-03-25T10:05:58Z",
+    "closed_at": "2021-03-27T18:18:43Z",
+    "user": "Khubaibahmed-dev",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Khubaibahmed-dev",
+        "created_at": "2021-03-25T15:43:40Z",
+        "body": "from urduhack import Pipeline nlp Pipeline text 118 3 93 202 916 755 94 18 93 15 doc nlp text print doc text"
+      },
+      {
+        "user": "bm2515",
+        "created_at": "2021-03-25T15:51:03Z",
+        "body": "I m getting the same error with this piece of code import urduhack urduhack download nlp urduhack Pipeline text doc nlp text"
+      },
+      {
+        "user": "bm2515",
+        "created_at": "2021-03-25T15:55:07Z",
+        "body": "ValueError Layer 3 named crf 1 in the current model was found to correspond to layer crf in the save file However the new layer crf 1 expects 5 weights but the saved weights have 1 elements"
+      },
+      {
+        "user": "bm2515",
+        "created_at": "2021-03-26T07:21:22Z",
+        "body": "akkefa fahdrazavi can we please get any update on the timeline for resolving the error I am using this library to work on my senior year capstone project at NYU and would like to know if I should expect more errors moving forward"
+      },
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2021-03-26T11:40:36Z",
+        "body": "bm2515 Khubaibahmed dev after installing urduhack and tensorflow install tf2crf version 0 1 13 using the following install command pip install tf2crf 0 1 13 It will resolve the error and run the code successfully This bug will be removed in the next release"
+      },
+      {
+        "user": "Khubaibahmed-dev",
+        "created_at": "2021-03-26T12:44:23Z",
+        "body": "Thanks man worked Really appreciated"
+      }
+    ]
+  },
+  {
+    "number": 136,
+    "title": "BERT ?!",
+    "state": "open",
+    "body": "BERT Usage Please describe the feature Which area of the library is it related to What specific solution would you like Salaam team Great work first of all Can we consider adding the BERT model to the list of models",
+    "created_at": "2021-01-06T10:38:43Z",
+    "closed_at": null,
+    "user": "blackvitriol",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2021-01-07T04:39:50Z",
+        "body": "BERT Usage Salaam team Great work first of all Can we consider adding the BERT model to the list of models blackvitriol thanks for the compliment Yes we are already working on releasing BERT based models"
+      }
+    ]
+  },
+  {
+    "number": 130,
+    "title": "Some Important words in Stopwords",
+    "state": "closed",
+    "body": "How to reproduce the behaviour Just check Stopwords file Include a code example or the steps that led to the problem Please try to be as specific as possible",
+    "created_at": "2020-07-22T11:17:59Z",
+    "closed_at": "2020-08-22T18:25:13Z",
+    "user": "shahid017",
+    "comments_count": 5,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "issue-label-bot[bot]",
+        "created_at": "2020-07-22T11:18:01Z",
+        "body": "Issue Label Bot is automatically applying the label bug to this issue with a confidence of 0 77 Please mark this comment with thumbsup or thumbsdown to give our bot feedback Links app homepage https github com marketplace issue label bot dashboard https mlbot net data urduhack urduhack and code https github com hamelsmu MLapp for this bot"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-07-22T11:46:10Z",
+        "body": "shahid017 Thanks for your concern Can you notify those words we will also go through those words"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-07-28T06:11:09Z",
+        "body": "shahid017 We will be closing this issue"
+      },
+      {
+        "user": "shahid017",
+        "created_at": "2020-07-28T12:40:53Z",
+        "body": "There are still many words which shouldn t be in stopwords e g I can t review whole list so you need to check it again"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-07-28T14:38:25Z",
+        "body": "muhammadfahid51 Take care of it It should be removed on the priority task"
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "title": "'Charmap' codec can't decode byte 0x81 in position 21: character maps to <undefined>",
+    "state": "closed",
+    "body": "Below are two images explaining the error It is requested very humbly to help me in this regard IMAGE 1 error pic1 https user images githubusercontent com 39222895 83714117 4e9aaa00 a643 11ea 861a 3ef4998a2b0b png IMAGE 2 error pic2 https user images githubusercontent com 39222895 83714147 66722e00 a643 11ea 80dc 51f146ba56a0 png Your Environment Operating System Windows 10 Education 64 bit Python Version Used 3 6 Urduhack Version Used 0 2 7 Environment Information Jupyter IDE on HP Laptop intel R Core TM i5 3230M CPU 2 60GHz 2 60 GHz with 4 GB RAM",
+    "created_at": "2020-06-04T04:12:32Z",
+    "closed_at": "2020-06-10T06:19:14Z",
+    "user": "AatifMuhammad",
+    "comments_count": 6,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "issue-label-bot[bot]",
+        "created_at": "2020-06-04T04:12:35Z",
+        "body": "Issue Label Bot is automatically applying the label bug to this issue with a confidence of 0 90 Please mark this comment with thumbsup or thumbsdown to give our bot feedback Links app homepage https github com marketplace issue label bot dashboard https mlbot net data urduhack urduhack and code https github com hamelsmu MLapp for this bot"
+      },
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-06-04T16:14:18Z",
+        "body": "AatifMuhammad need more info on this It seems like an encoding issue can you share about the norm text and post the full error in comment"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-06-05T10:36:17Z",
+        "body": "FULL CODING BELOW pip install urduhack urduhack download from urduhack import normalize from urduhack normalization import normalize characters from urduhack normalization import normalize combine characters from urduhack normalization import digits space from urduhack normalization import punctuations space from urduhack normalization import remove diacritics from urduhack normalization import english characters space text 6 Pak 3 norm text normalize text print norm text norm text normalize combine characters norm text print norm text norm text digits space norm text print norm text norm text punctuations space norm text print norm text norm text english characters space norm text print norm text TOKENIZATION import codecs from urduhack tokenization import sentence tokenizer from urduhack tokenization import word tokenizer sentences sentence tokenizer norm text for i in range len sentences print sentences i THE FULL ERROR IS GIVEN ABOVE IN IMAGE 1 IMAGE 2 THE ERROR STARTS FROM THE LINE UnicodeDecodeError Traceback most recent call last AND ENDS AT UnicodeDecodeError charmap codec can t decode byte 0x81 in position 21 character maps to undefined I AM WORKING ON A RESEARCH PROBLEM WHILE USING URDUHACK ANY HELP IN THIS REGARD IS HIGHLY APPRECIATED"
+      },
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-06-09T06:11:13Z",
+        "body": "I ran the code locally as well as in Colab and it ran without error This issue is an encoding issue you have to mention that text encoding type Colab Solved https colab research google com drive 1euEkN8OyhJnndEeyNmVzEWk70Iq f5rK usp sharing"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-06-09T12:35:57Z",
+        "body": "Dear muhammadfahid51 thank You for the time help The code is working fine at Colab as you said Therefore I will try to do things online at Colab to avoid further issues However I could not understand what do you mean by mention that text encoding how to mention Anyhow Thank You once again"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-06-09T12:38:00Z",
+        "body": "I will close the issue Till that your valuable guidlines suggestions are appreciated"
+      }
+    ]
+  },
+  {
+    "number": 116,
+    "title": "Tf vs Tf-gpu installation issue.",
+    "state": "closed",
+    "body": "How to reproduce the behaviour Include a code example or the steps that led to the problem Please try to be as specific as possible When we install urduhack using pip It removed GPU version TensorFlow We need to fix it Your Environment Operating System ubuntu 18 Python Version Used 3 6 Urduhack Version Used 0 3 2 Environment Information",
+    "created_at": "2020-06-02T13:22:14Z",
+    "closed_at": "2020-06-03T10:38:47Z",
+    "user": "akkefa",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "issue-label-bot[bot]",
+        "created_at": "2020-06-02T13:22:16Z",
+        "body": "Issue Label Bot is automatically applying the label bug to this issue with a confidence of 0 85 Please mark this comment with thumbsup or thumbsdown to give our bot feedback Links app homepage https github com marketplace issue label bot dashboard https mlbot net data urduhack urduhack and code https github com hamelsmu MLapp for this bot"
+      }
+    ]
+  },
+  {
+    "number": 111,
+    "title": "removing punctuations makes string messy",
+    "state": "closed",
+    "body": "How to reproduce the behavior When trying to remove punctuations it adds extra spaces to string making it messy i e python from urduhack preprocess import remove punctuation text removed remove punctuation text print removed and to remove spaces I need to make an extra call to function normalize whitespace making it very slow operation for NLP Your Environment Operating System macOS Python Version Used 3 7 Urduhack Version Used latest Environment Information latest pip",
+    "created_at": "2020-05-26T12:11:36Z",
+    "closed_at": "2020-05-27T14:49:44Z",
+    "user": "mirfan899",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 110,
+    "title": "Preprocessing module for replacing values with tag",
+    "state": "closed",
+    "body": "Feature description I ve gone through the preprocessing module and I m confused why there are different features of replacing values with a token TAG for example replacing URL with URL python from urduhack preprocess import replace urls text 20 www gmail com replace urls text 20 URL There are multiple functions with the functionality of replacing the text with TAG replace urls replace emails replace numbers replace phone numbers replace currency symbols",
+    "created_at": "2020-05-26T11:58:48Z",
+    "closed_at": "2020-05-27T14:49:56Z",
+    "user": "mirfan899",
+    "comments_count": 3,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-27T05:59:13Z",
+        "body": "mirfan899 Reason we add the tag option when we are training the embeddings so that tag can represent a single vector"
+      },
+      {
+        "user": "mirfan899",
+        "created_at": "2020-05-27T08:42:49Z",
+        "body": "Why a tag vector There is no need to make a tag vector"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-27T09:11:35Z",
+        "body": "ok I will modify this function argument def replace urls text str replace with"
+      }
+    ]
+  },
+  {
+    "number": 108,
+    "title": "Tokenization issues.",
+    "state": "closed",
+    "body": "How to reproduce the behavior Why do we have to download tokenization model and then use it to tokenize sentences Punctuations are not being tokenized properly In NLP domain punctuations when tokenized are considered as words for example python nlp spacy blank en sentence nlp This is a sentence with some punctuations for word in sentence print word This is a sentence with some punctuations python import nltk sentence This is a sentence with some punctuations tokens nltk word tokenize sentence print tokens This is a sentence with some punctuations Urduhack does not handle punctuations python from urduhack tokenization import sentence tokenizer word tokenizer text words word tokenizer text print words Some words are split like to two words and is combined with punctuations Your Environment Operating System macOS Python Version Used 3 7 Urduhack Version Used latest Environment Information",
+    "created_at": "2020-05-23T11:07:59Z",
+    "closed_at": "2020-06-30T07:18:16Z",
+    "user": "mirfan899",
+    "comments_count": 3,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-24T07:50:52Z",
+        "body": "mirfan899 I am working on it"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-30T08:12:12Z",
+        "body": "mirfan899 We will release a new model to patch these bugs"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-06-30T07:18:16Z",
+        "body": "Issue fixed with the new model released"
+      }
+    ]
+  },
+  {
+    "number": 107,
+    "title": "pip install broken",
+    "state": "closed",
+    "body": "How to reproduce the behaviour installing from wheel from pypy page is broken this was tried on two different python conda environments with python 3 5 5 and 3 6 separately with and without tensorflow installed pip install urduhack 0 3 1 py3 none any whl Processing urduhack 0 3 1 py3 none any whl ERROR Package urduhack requires a different Python 3 5 5 not in 3 6 installing from pip directly gives the same issue this was tried on two different python conda environments with python 3 5 5 and 3 6 separately with and without tensorflow installed pip install urduhack ERROR Could not find a version that satisfies the requirement urduhack from versions none ERROR No matching distribution found for urduhack git cloning this directory and then installing from inside repo also fails this was tried on two different python conda environments with python 3 5 5 and 3 6 separately with and without tensorflow installed pip install e Obtaining urduhack ERROR Package urduhack requires a different Python 3 5 5 not in 3 6 Your Environment Operating System ubuntu 18 04 Python Version Used tried both 3 5 5 and 3 6 Urduhack Version Used 0 3 1 Environment Information conda",
+    "created_at": "2020-05-23T01:20:56Z",
+    "closed_at": "2020-06-19T10:02:46Z",
+    "user": "aliaanne",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-24T07:49:39Z",
+        "body": "aliaanne Currently Urduhack support python 3 6 and 3 7 version Read the documentation https urduhack readthedocs io en stable installation html installation I am working on it add support to download from conda package manager"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-25T08:36:24Z",
+        "body": "aliaanne Try this command on conda conda install from pypi urduhack"
+      }
+    ]
+  },
+  {
+    "number": 102,
+    "title": "The command URDUHACK DOWNLOAD seems not working on windows",
+    "state": "closed",
+    "body": "Dear all I am not a developer and using the github for the first time too I am working on a research problem As usual I always google things to implement ideas and solve problems Currently I am solving a research problem in Urdu language for which I need a library like NLTK During browsing I encountered urduhack library However when I tried to use test it I faced a problem Everything seems to be working fine except the command urduhack download During testing an error message is thrown as shown in the error message below Error message https user images githubusercontent com 39222895 80962398 6c97a380 8e26 11ea 97fa 0798cfa571ae png url The error message guides to execute the command urduhack download in the terminal When executed the command as shown in the image below the error still exists running command at terminal 1 https user images githubusercontent com 39222895 80962667 e334a100 8e26 11ea 8950 1f66ad99419b png url From the above anaconda environment screenshot it seems like the command urduhack download does not executes at all because visually nothing happens on the screen as a result of the command e g a success message a failure message etc Therefore I think there is a problem with this command on windows How to reproduce the behaviour urduhack download Your Environment Operating System Windows 10 Education 64 bit Python Version Used 3 6 Urduhack Version Used 0 2 7 Environment Information I am using Spyder IDE version 4 1 1 on HP Laptop intel R Core TM i5 3230M CPU 2 60GHz 2 60 GHz with 4 GB RAM",
+    "created_at": "2020-05-04T11:59:47Z",
+    "closed_at": "2020-05-11T20:36:22Z",
+    "user": "AatifMuhammad",
+    "comments_count": 12,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-04T12:01:44Z",
+        "body": "Respected akkefa et al help is required in this regard Thank You"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-09T07:28:52Z",
+        "body": "AatifMuhammad Did you try to use Urduhack on google colab"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-09T19:54:41Z",
+        "body": "AatifMuhammad Did you try to use Urduhack on google colab No brother akkefa As I stated in the issue at the very beginning that I am not a developer therefore you may find it very strange to know that I have heard the name google colab for the first time However I just gave a superficial view to the Home page of google colab and I think it will be a life changing point for me to use google colab becuase I think it provides an intelligent coding environment Regarding Urduhack as I had no choice but to leave Urduhack for the time being therefore I did that and googling for possible pieces of codes that could help me in solving my problem"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-09T20:32:18Z",
+        "body": "AatifMuhammad Did you try to use Urduhack on google colab I just tried google colab The code I tried to execute is coding https user images githubusercontent com 39222895 81484265 b127a280 925d 11ea 976f a7ebfa746a84 png The output I got is output error https user images githubusercontent com 39222895 81484292 dae0c980 925d 11ea 97ab 0dc27176b44e png From the above image it seems like the problem is in the word tokenizer When I tried to solve the error I got the message as given below when tried to execute the command urduhack download https user images githubusercontent com 39222895 81484315 05cb1d80 925e 11ea 9c74 8584aed7c599 png"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-10T08:33:46Z",
+        "body": "AatifMuhammad you go this link Everything is working fine https colab research google com drive 1uw 5xvXZF qhVNYfp4O Y6IWvrQXfLg7 usp sharing"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-10T08:34:30Z",
+        "body": "img width 1049 alt Screen Shot 2020 05 10 at 1 34 04 PM src https user images githubusercontent com 7104938 81494520 f4682c80 92c2 11ea 90c7 517533e079a0 png"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-05-10T08:40:54Z",
+        "body": "AatifMuhammad try to run download command with sign urduhack download"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-10T19:41:20Z",
+        "body": "AatifMuhammad try to run download command with sign urduhack download Great It worked when I tried it for the 2nd time For the first time when I tried to execute the command with symbol the following error message popped command not found https user images githubusercontent com 39222895 81508760 8b62d200 931f 11ea 8d49 c298eebd33cc png Then I executed the command pip install urduhack followed by urduhack download This time I am happy that it worked Thank You Author akkefa working https user images githubusercontent com 39222895 81508844 15ab3600 9320 11ea 82d3 89e805261677 png"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-10T19:48:45Z",
+        "body": "My next tasks in my research problems are compare each word of the sentence to the words saved in a list if match occurs then fetch the last word of the sentence Add a symbol e g to this fetched word And finally write the fetched word along with the symbol to its original location i e end of current sentence For example will become ANY HELP IN THIS REGARD WOULD BE HIGHLY APPRECIATED I think the functionally of editing an urdu document text and matching words sentences for similarity does not exist in urduhack"
+      },
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-05-11T12:17:33Z",
+        "body": "AatifMuhammad as of now we haven t added any reference check function I didn t understand your question completely but the following code will reproduce the above result reference words text tokens word tokenize text for word in tokens if word in reference words join tokens"
+      },
+      {
+        "user": "AatifMuhammad",
+        "created_at": "2020-05-11T20:36:17Z",
+        "body": "AatifMuhammad as of now we haven t added any reference check function I didn t understand your question completely but the following code will reproduce the above result reference words text tokens work tokenize text for word in tokens if word in reference words join tokens Thank You brother"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-06-24T17:48:14Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 95,
+    "title": "Data fetching for news resources",
+    "state": "closed",
+    "body": "Fetch data from following news sites Arynews Dawn News Urdu point Contains 100 MB data from at least all resource Total dataset size will be 300 MB Sent file to akkefa for verifying the results",
+    "created_at": "2020-04-30T11:43:22Z",
+    "closed_at": "2020-05-30T08:10:35Z",
+    "user": "akkefa",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 79,
+    "title": "Kaggle Task",
+    "state": "closed",
+    "body": "Kaggle Task",
+    "created_at": "2020-02-24T06:27:04Z",
+    "closed_at": "2020-03-16T07:34:49Z",
+    "user": "akkefa",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-04-15T07:45:15Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 78,
+    "title": "Train sentimental model on available datasets.",
+    "state": "closed",
+    "body": "Train sentimental model on available datasets",
+    "created_at": "2020-02-24T06:24:33Z",
+    "closed_at": "2020-03-16T07:35:04Z",
+    "user": "akkefa",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-04-15T07:43:56Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 77,
+    "title": "word_tokenizer: Index out of bound error ",
+    "state": "closed",
+    "body": "I am tokenizing urdu data around 5k lines it works well for 500 800 lines but when I run it over whole file it is generating index out of bound error and output file contains only 150 tokenized lines P S I have already tokenized this file successfully using indic and nltk tokenizer Error Traceback most recent call last File urduhack tok py line 29 in module tokLine word tokenizer sentence File home buraq virtualenvs urduhack lib python3 6 site packages urduhack tokenization tokenizer py line 35 in word tokenizer return predict sentence MODEL PATH VOCAB PATH File home buraq virtualenvs urduhack lib python3 6 site packages urduhack tokenization keras tokenizer py line 119 in predict inp preprocess sentences sentences max len char2idx File home buraq virtualenvs urduhack lib python3 6 site packages urduhack tokenization keras tokenizer py line 55 in preprocess sentences input i char index char2idx letter IndexError index 256 is out of bounds for axi",
+    "created_at": "2020-02-16T18:05:02Z",
+    "closed_at": "2020-03-05T10:37:58Z",
+    "user": "sami-haq99",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-02-26T05:27:09Z",
+        "body": "As of now our tokenizer supports string length less than 256 characters so put an if condition before tokenizing a line string if len line 256 and it will work"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-04-04T11:24:54Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 76,
+    "title": "Generate IMDB dataset into URDU",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-02-14T06:57:31Z",
+    "closed_at": "2020-03-16T07:35:07Z",
+    "user": "akkefa",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-04-15T07:42:35Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "title": "Addition of 'وہاں' URDU_CONJUNCTIONS",
+    "state": "closed",
+    "body": "Solution URDU CONJUNCTIONS",
+    "created_at": "2020-02-09T00:38:39Z",
+    "closed_at": "2020-02-10T06:31:40Z",
+    "user": "naeem6100",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-03-11T07:26:06Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 71,
+    "title": "Collect top 50 positive and negative words",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-02-07T05:34:17Z",
+    "closed_at": "2020-02-10T06:31:59Z",
+    "user": "muhammadfahid51",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-03-11T07:26:03Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 70,
+    "title": "Drop Stop words",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-02-07T05:33:43Z",
+    "closed_at": "2020-02-14T06:52:00Z",
+    "user": "muhammadfahid51",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-03-17T13:07:32Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "title": "Download IMDB dataset",
+    "state": "closed",
+    "body": "",
+    "created_at": "2020-02-07T05:33:11Z",
+    "closed_at": "2020-02-14T06:51:17Z",
+    "user": "muhammadfahid51",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-03-17T13:07:38Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 68,
+    "title": "addition in URDU_CONJUNCTIONS",
+    "state": "closed",
+    "body": "7 8 urduhack urduhack tokenization eos py URDU CONJUNCTIONS URDU NEWLINE WORDS URDU CONJUNCTIONS",
+    "created_at": "2020-02-01T14:09:59Z",
+    "closed_at": "2020-02-07T05:27:04Z",
+    "user": "naeem6100",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-03-10T18:43:18Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 66,
+    "title": "support for extraction of comma separated sentences from text",
+    "state": "closed",
+    "body": "source of text http www inzaar pk hum kahan ja rahy hain by muhammad aamir khakwani from urduhack normalization import normalize from urduhack preprocess import normalize whitespace from urduhack tokenization import text normalized text normalize whitespace normalize text sentences sentence tokenizer normalized text print sentences",
+    "created_at": "2020-01-30T12:37:30Z",
+    "closed_at": "2020-04-30T07:16:09Z",
+    "user": "naeem6100",
+    "comments_count": 2,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "talhaanwarch",
+        "created_at": "2020-04-19T18:40:28Z",
+        "body": "here is the quick solution text text split Output"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-06-24T17:52:08Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 61,
+    "title": "Download all datasets from s3.",
+    "state": "closed",
+    "body": "Download all datasets from s3 storage",
+    "created_at": "2020-01-29T10:16:53Z",
+    "closed_at": "2020-01-29T14:14:03Z",
+    "user": "akkefa",
+    "comments_count": 4,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-01-29T10:44:03Z",
+        "body": "Please add links to the s3 storage files"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2020-01-29T10:49:38Z",
+        "body": "All datasets link muhammadfahid51 Urdu point datasets https dataset sgp1 digitaloceanspaces com urdupoint 6000 836520 urdupoint 771624 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899592 Signature oifyeoWPyX3TCD5kWV3gqBL99yQ 3D https dataset sgp1 digitaloceanspaces com urdupoint 836520 1480025 urdupoint 599376 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899623 Signature kWfA0 2BfbIgKl2ErRv98IN 2FHKAQw 3D https dataset sgp1 digitaloceanspaces com urdupoint 1480025 1817939 urdupoint 312688 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899633 Signature HAkruOtGUQdiindyK2OUK5TP7ME 3D Ary news https dataset sgp1 digitaloceanspaces com arynews arynews 86686 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899673 Signature UgzvktBStCL4rtLJ3naTe7Cd 2Bz0 3D Bathak https dataset sgp1 digitaloceanspaces com bathak 125 192971 bathak 57219 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899693 Signature I87uknZgo11INwxDFH4MjWqaZNI 3D Wikipedia https dataset sgp1 digitaloceanspaces com wiki wiki 83840 posts raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899723 Signature S9GucEJY7 2FZgHnPoRThM94z4XTg 3D https dataset sgp1 digitaloceanspaces com wiki wiki 84645 posts 08 Apr 2019 raw pkl AWSAccessKeyId 7BI2LGG6HJZOYEWKVZWR Expires 1580899735 Signature Mh3Zjza4ZN5UPKzP3CzfHEdaoWI 3D"
+      },
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2020-01-29T13:37:53Z",
+        "body": "All files are downloaded"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-02-28T15:12:42Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "title": "Request: IsNormalized()",
+    "state": "closed",
+    "body": "Dear Developers It is requested that IsNormalized text function should be added which takes text as input and return true if it is normalized text and false otherwise Thanks",
+    "created_at": "2020-01-26T11:17:50Z",
+    "closed_at": "2020-01-27T16:19:50Z",
+    "user": "naeem6100",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2020-01-27T06:56:31Z",
+        "body": "naeem9 why not we use always normalize function on top of every script"
+      },
+      {
+        "user": "naeem6100",
+        "created_at": "2020-01-27T15:02:13Z",
+        "body": "naeem9 why not we use always normalize function on top of every script that is very appropriate thanks"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-02-28T06:46:43Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "title": "Documentation: Conversion of Unicode value of initial , medial and final form of character with isolated form ",
+    "state": "closed",
+    "body": "Although it is doing conversion very well the following text may be added somewhere in documentation for the sake of user clarity Isolated form Initial form Medial form Final form reshaping engine context aaa https user images githubusercontent com 58520117 70933861 847caf80 205e 11ea 8c9c 5755dc88bf9e png",
+    "created_at": "2019-12-16T18:48:19Z",
+    "closed_at": "2019-12-17T10:20:03Z",
+    "user": "naeem6100",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-16T19:27:34Z",
+        "body": "naeem9 Thanks I will add this in Urdu character repo https github com urduhack urdu characters"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-17T10:19:47Z",
+        "body": "naeem9 added in this repo https github com urduhack urdu characters"
+      },
+      {
+        "user": "naeem6100",
+        "created_at": "2019-12-17T11:33:40Z",
+        "body": "thanks"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-16T13:50:46Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "title": "question: how to replace multiple ۔۔۔ with one ۔",
+    "state": "closed",
+    "body": "dear all i am processing a text which contain multiple end of sentence mark like text how to get desired text using any urduhack function desired text Thanks currently i am using following code from urduhack normalization import normalize text normalized text normalize text print normalized text output is desired output",
+    "created_at": "2019-12-06T17:19:55Z",
+    "closed_at": "2019-12-07T13:02:51Z",
+    "user": "naeem6100",
+    "comments_count": 4,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "naeem6100",
+        "created_at": "2019-12-06T23:10:25Z",
+        "body": "text n n t from urduhack normalization import normalize from urduhack preprocess import normalize whitespace from urduhack tokenization import sentence tokenizer text n n t normalize function does not removes whitespace from text so explicitly call to normalize whitespace after normaliz normalized text normalize whitespace normalize text remove tatweel from text translation table dict fromkeys map ord None normalized text normalized text translate translation table print normalized text is print normalized text after sentence tokenization multiple are eliminated sentences sentence tokenizer normalized text print sentences output output https user images githubusercontent com 58520117 70362972 86997e00 18a8 11ea 8c30 28352307c61d PNG Excellent result thanks urduhack team for great work"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-07T09:01:50Z",
+        "body": "naeem9 Replacing multiple with one you can use regex for this task We only add those helper functions which will help us to clean Urdu data I hope this will fulfil your concern"
+      },
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-07T09:03:06Z",
+        "body": "text n n t from urduhack normalization import normalize from urduhack preprocess import normalize whitespace from urduhack tokenization import sentence tokenizer text n n t normalize function does not removes whitespace from text so explicitly call to normalize whitespace after normaliz normalized text normalize whitespace normalize text remove tatweel from text translation table dict fromkeys map ord None normalized text normalized text translate translation table print normalized text is print normalized text after sentence tokenization multiple are eliminated sentences sentence tokenizer normalized text print sentences output output https user images githubusercontent com 58520117 70362972 86997e00 18a8 11ea 8c30 28352307c61d PNG Excellent result thanks urduhack team for great work Yes normalize function will only clean the Urdu data for valid format"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-06T19:16:14Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "title": "Normalization: Replace ِArabic ة with Urdu ۃ",
+    "state": "closed",
+    "body": "It is requested that Arabic should be replaced with Urdu during normalization https user images githubusercontent com 58520117 70325504 f3cef400 1853 11ea 810d b4c50d729b38 PNG",
+    "created_at": "2019-12-06T13:15:46Z",
+    "closed_at": "2019-12-06T13:49:47Z",
+    "user": "naeem6100",
+    "comments_count": 3,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-06T13:47:45Z",
+        "body": "naeem9 With the new release this bug will be fixed"
+      },
+      {
+        "user": "naeem6100",
+        "created_at": "2019-12-06T13:57:29Z",
+        "body": "naeem9 With the new release this bug will be fixed thanks"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-05T15:22:56Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "title": "Normalization: Removal of tatweel/kashida character",
+    "state": "closed",
+    "body": "Tatweel character is used to stretch some character present in the word It should be removed from text during normalization Tatweel character unicode value 0640 tatweel https user images githubusercontent com 58520117 70319901 40f79980 1845 11ea 984e bed71f80c9ec PNG sample code from urduhack normalization import normalize text normalized text normalize text Normalized text print normalized text desired output",
+    "created_at": "2019-12-06T11:31:04Z",
+    "closed_at": "2019-12-11T05:07:47Z",
+    "user": "naeem6100",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "akkefa",
+        "created_at": "2019-12-06T12:24:01Z",
+        "body": "naeem9 Sure We will fix this issue with next release"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-10T10:02:51Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "Addition in URDU_NEWLINE_WORDS",
+    "state": "closed",
+    "body": "Related file urduhack tokenization eos py The word present in URDU NEWLINE WORDS is also written as so it is proposed that it should be added in URDU NEWLINE WORDS",
+    "created_at": "2019-12-05T21:06:21Z",
+    "closed_at": "2019-12-06T10:46:06Z",
+    "user": "naeem6100",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-05T12:13:04Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "Error in Characters Normalization code sample",
+    "state": "closed",
+    "body": "In urduhack docs handbook tutorial normalization rst under Characters Normalization a code sample is given in which Text and normalized text both have same unicode values There is no change in text and normalized text text unicode u0645 u062C u06BE 20 u06A9 u0648 20 u062C u0648 20 u062A u0648 u0691 u0627 20 u06AF u06CC u0627 20 u062A u06BE u0627 normalized text unicode u0645 u062C u06BE 20 u06A9 u0648 20 u062C u0648 20 u062A u0648 u0691 u0627 20 u06AF u06CC u0627 20 u062A u06BE u0627 for text to Unicode https www online toolz com tools text unicode entities convertor php for diff https www diffchecker com diff",
+    "created_at": "2019-12-05T14:58:42Z",
+    "closed_at": "2019-12-06T12:15:43Z",
+    "user": "naeem6100",
+    "comments_count": 2,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "muhammadfahid51",
+        "created_at": "2019-12-06T12:15:43Z",
+        "body": "There is no issue in the above text because the text before normalization and after it has the same characters Now if you try to normalize this text It will give you the result normalized text and there encodings will be different as well"
+      },
+      {
+        "user": "lock[bot]",
+        "created_at": "2020-01-05T13:16:18Z",
+        "body": "This thread has been automatically locked since there has not been any recent activity after it was closed Please open a new issue for related bugs"
+      }
+    ]
+  }
+]

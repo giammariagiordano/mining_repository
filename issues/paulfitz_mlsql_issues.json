@@ -1,0 +1,316 @@
+[
+  {
+    "number": 18,
+    "title": "spider .sqlite format",
+    "state": "open",
+    "body": "Hi as I am trying to run valuenet on my own examples I am blocked at generating the sqlite format Here are the details Valuenet keeps the spider dat a in the directory valuenet data spider original database here for each schema you have a directory like concert singer which contains two file schema sql the sql creation of the table and insertt values and concert singer sqlite which apparently contains the database and it is the file read by valuenet in order to execute db value finder find similar values in database I would greatly appreciate if you could tell me how to generate the sqlite file form the schema sql file or anything will do Thank you",
+    "created_at": "2021-01-19T11:54:40Z",
+    "closed_at": null,
+    "user": "papsipublic",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Error while using mlsql docker",
+    "state": "closed",
+    "body": "I used the following as given however i do not get the expected results Where do you think is the error please help docker run name sqlova d p 5050 5050 paulfitz sqlova mlsql master curl F csv bridges csv F q how long is throgs neck localhost 5050 curl 52 Empty reply from server",
+    "created_at": "2020-06-27T06:40:01Z",
+    "closed_at": "2020-07-17T22:32:15Z",
+    "user": "guptalalit",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-07-17T22:32:15Z",
+        "body": "Sorry missed this thread If it happens again or to someone else please attach the output of docker logs sqlova and I may be able to help"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "fetch more than one column",
+    "state": "closed",
+    "body": "select col1 col2 from is this type of query supported",
+    "created_at": "2020-06-23T11:56:06Z",
+    "closed_at": "2020-07-17T22:32:31Z",
+    "user": "shambhaviparashar",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-06-23T13:11:01Z",
+        "body": "Something like that would be neat but no sorry I think the closest you can get right now is to ask two questions but they ll be processed separately"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "custom csv file returning error in postman",
+    "state": "closed",
+    "body": "error utf 8 codec can t decode byte 0xc9 in position 602 invalid continuation byte",
+    "created_at": "2020-06-22T08:21:38Z",
+    "closed_at": "2020-06-23T11:31:24Z",
+    "user": "shambhaviparashar",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shambhaviparashar",
+        "created_at": "2020-06-23T11:31:24Z",
+        "body": "needed to convert my file to UTF 8 encoding"
+      },
+      {
+        "user": "paulfitz",
+        "created_at": "2020-06-23T12:57:34Z",
+        "body": "Thanks for posting what worked for you shambhaviparashar"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Error when asking about CSV table",
+    "state": "closed",
+    "body": "I got an error while running the program What could be the cause algorithm datasets Accuracy gloom chaos 5 gloom violin 6 gloom tooth 5 brave chaos 4 brave violin 8 brave tooth 9 input curl F csv test231 csv F q Is the accuracy of the algorithm gloom in the dataset chaos smaller than the accuracy of the algorithm brave in the dataset tooth localhost 5050 error error invalid argument 0 Sizes of tensors must match except in dimension 2 Got 3 and 4 in dimension 1 at Users soumith code builder wheel pytorch src aten src TH generic THTensorMath cpp 3616",
+    "created_at": "2020-02-07T13:13:15Z",
+    "closed_at": "2020-02-08T00:57:45Z",
+    "user": "g1644222",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-02-07T17:25:58Z",
+        "body": "Interesting Looks like the question table tickles a bug I wouldn t expect sqlova to be able to answer this particular kind of question in any case so you might just want to treat the answer as don t know Could be worth reporting upstream to https github com naver sqlova if it replicates there"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Converting SQL to Answer",
+    "state": "closed",
+    "body": "Hi 1 Can you please tell me where you are converting the SQL query to the answer inside the dataset 2 Can I use your edited predict py file to generate sql and answers Thanks Bill",
+    "created_at": "2020-01-27T11:53:07Z",
+    "closed_at": "2020-01-27T14:27:13Z",
+    "user": "Bill-ai",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-27T14:27:12Z",
+        "body": "1 For Sqlova evaluating the answer happens right here https github com paulfitz sqlova blob 097cbd6e23b9e54e29d860fe8ea40933b1fecd2d predict py L131 basically just runs the query in Sqlite Some nuances it uses the outputted query structure that than the SQL directly and does some tweaking of string cases For IRNet as far as I can tell there is no value prediction so I don t see a way to pull out an actual answer right now with the released code I d be very happy to be corrected on this 2 Yes I expect so"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "API for SQLova",
+    "state": "closed",
+    "body": "As 5050 port is already ON How can I send and receive data using postman",
+    "created_at": "2020-01-25T05:26:36Z",
+    "closed_at": "2020-01-27T03:36:33Z",
+    "user": "Bill-ai",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gdgovinddaga6",
+        "created_at": "2020-01-25T16:31:52Z",
+        "body": "You can write a API using flask and requests by running curl commands with python script Look into the docker file you can find the port and format to run the API Best Govind Daga"
+      },
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-25T21:29:01Z",
+        "body": "From Postman it should suffice to Make a POST To http localhost 5050 With Body containing form data Where that form data contains a text q key with value equal to the text question to ask e g how long is throgs neck And where the form data also contains a csv key with a file value e g the bridges csv example in this repo The result should look like this img width 968 alt Screen Shot 2020 01 25 at 4 27 55 PM src https user images githubusercontent com 118367 73127529 b05d5000 3f8f 11ea 8499 b58273ca1961 png Good luck"
+      },
+      {
+        "user": "Bill-ai",
+        "created_at": "2020-01-27T03:36:33Z",
+        "body": "Thanks it worked"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Not working on custom data?",
+    "state": "closed",
+    "body": "I have implemented it and used it and now I can get all the answers but when I try the same on my custom csv file it generates the query but doesn t answer for the query as it did to your csv files May I know the reason and What is this params thing I don t understand why not keeps the params in the query",
+    "created_at": "2020-01-16T08:48:01Z",
+    "closed_at": "2020-01-17T05:51:26Z",
+    "user": "gdgovinddaga6",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-16T14:44:40Z",
+        "body": "gdgovinddaga6 would you be willing to post your csv file or some small part of it that is sufficient to show the problem Are you not getting no answer at all or a wrong answer Hard to say why in general Sqlova is trained on the WikiSQL dataset IRNet is trained on the Spider dataset Tables or questions that are very different than what is in those datasets could easily result in failures It is common practice to factor out values particularly strings from a query and supply them separately as bind parameters This helps avoid problems with strings with special characters getting interpreted as sql If you talk to a database via a library in a language like python or javascript the library will have support for this and encourage you to do so It is a bit awkward if you are pasting the queries straight into a database client though I admit"
+      },
+      {
+        "user": "gdgovinddaga6",
+        "created_at": "2020-01-17T05:51:26Z",
+        "body": "Thanks for the quick reply I figured it out myself The issue was with the CSV file where a col name was missing"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Running in a local environment",
+    "state": "closed",
+    "body": "Hi How to run in local environment without using docker also I want to import a natural language sentence into a program and get the arithmetic value and the nth value Can you tell me how Thank you in advance",
+    "created_at": "2020-01-09T04:11:56Z",
+    "closed_at": "2020-02-15T23:06:41Z",
+    "user": "g1644222",
+    "comments_count": 5,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-09T14:41:08Z",
+        "body": "To run without docker you could follow the steps in https github com paulfitz mlsql blob master sqlova Dockerfile You ll need to adapt the steps for your OS Can you give an example of a natural sentence input and the output you d like to get from it I m not clear on what the arithmetic value and the nth value mean exactly in this context"
+      },
+      {
+        "user": "g1644222",
+        "created_at": "2020-01-10T03:56:39Z",
+        "body": "Thank you for your prompt reply To explain the example in bridges csv input which bridge is Second longest bridge output Bronx Whitestone input How long is the difference between the longest bridge and the shortest bridge output 2313"
+      },
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-18T03:31:12Z",
+        "body": "Thanks for the explanation I think that kind of query is currently beyond Sqlova and I m not sure if there are many examples like it in the WikiSQL training data you can get a sense for the kinds of questions the model has been trained on from the 100 examples in the appendix of https arxiv org pdf 1902 01069v1 pdf"
+      },
+      {
+        "user": "Bill-ai",
+        "created_at": "2020-01-22T05:53:34Z",
+        "body": "I m sorry I don t get how to decode the Docker File can you please help me run in the local Please help Thanks Bill"
+      },
+      {
+        "user": "g1644222",
+        "created_at": "2020-02-07T12:36:19Z",
+        "body": "paulfitz thank you for answering I will ask sqlova Bill ai What do you not know"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "MLSQL 与RDkit 是否能够集成，作为药物研发的底层运算模块",
+    "state": "closed",
+    "body": "rdkit https github com rdkit rdkit",
+    "created_at": "2020-01-07T03:07:30Z",
+    "closed_at": "2020-01-07T17:45:14Z",
+    "user": "chenxingqiang",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-07T17:45:14Z",
+        "body": "I don t have any particular ideas on how these two things could be used together Sorry"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "How to change vocabulary and also do parameter tuning to the lstms used in SQLova through the docker you created",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-12-26T08:01:31Z",
+    "closed_at": "2020-01-07T17:44:17Z",
+    "user": "Priyanka11196",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2020-01-07T17:44:17Z",
+        "body": "There s no real shortcut to doing that other than installing https github com naver sqlova directly Sorry"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Finetuning",
+    "state": "closed",
+    "body": "Hi How to finetune the model with custom queries tables in csv and with SQL queries Thank you in advance",
+    "created_at": "2019-12-17T08:07:03Z",
+    "closed_at": "2019-12-20T03:55:06Z",
+    "user": "sravaniprakash9",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2019-12-17T13:06:22Z",
+        "body": "Hi sravaniprakash9 for fine tuning look upstream to the training script in https github com naver sqlova I contributed utilities there for converting csv tables and plain text queries to the expected formats You ll need a little extra to also include expected SQL output The utilities in https github com salesforce WikiSQL may be useful Good luck"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "For real industrial application, what strategy to locate the exact table?",
+    "state": "closed",
+    "body": "The datasets like WikiSQL is that the table corresponding to question is given But in real industrial application we have 100 tables for 1 new question Thank you",
+    "created_at": "2019-12-10T07:20:15Z",
+    "closed_at": "2019-12-17T13:06:35Z",
+    "user": "guotong1988",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2019-12-10T22:11:49Z",
+        "body": "Good question I see you re asking it over on https github com microsoft IRNet issues 10 and elsewhere https github com search q For real industrial application 2C what strategy to locate the exact table 3F type Issues too I think methods trained to answer questions on databases with a few tables like with the spider dataset are an incremental step toward your use case How about brute force run the question against each table and then try to come up with a way to rank confidence in the result"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Recommand my work, Thank you!",
+    "state": "closed",
+    "body": "https github com guotong1988 NL2SQL BERT",
+    "created_at": "2019-10-31T03:04:56Z",
+    "closed_at": "2019-11-06T04:41:20Z",
+    "user": "guotong1988",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2019-11-02T15:29:17Z",
+        "body": "Hi guotong1988 thanks for the pointer I ve read your paper and added a mention Is there any chance you ll release a pretrained model"
+      },
+      {
+        "user": "guotong1988",
+        "created_at": "2019-11-02T23:33:02Z",
+        "body": "OK I will"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "object of type \\'NoneType\\' has no len()",
+    "state": "closed",
+    "body": "Everything works fine with curl But when i am using requests post in python it works for the first time but fails in the second time and so on I have to change the name of the parameter import requests url http localhost 5050 path bridges csv csv csv open path rb payload debug False q how long is throgs neck r requests post url url files csv data payload r json this works for the first time but fails afterwards Second time failed output r text u base bridges b884af26 ef36 4876 9d01 469044242365 error object of type NoneType has no len n r status code 500 if i do csv1 csv open path rb CHANGED THE NAME OF csv to csv1 or anyother it works fine again r requests post url url files csv1 data payload Anybody knows the reason",
+    "created_at": "2019-06-19T07:52:23Z",
+    "closed_at": "2019-06-22T10:46:07Z",
+    "user": "gauravgola96",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "paulfitz",
+        "created_at": "2019-06-19T17:15:41Z",
+        "body": "I think the problem is with csv csv open path rb This will only read correctly once csv csv open path rb read works for me can you try it"
+      },
+      {
+        "user": "gauravgola96",
+        "created_at": "2019-06-22T10:46:35Z",
+        "body": "I think the problem is with csv csv open path rb This will only read correctly once csv csv open path rb read works for me can you try it It worked"
+      }
+    ]
+  }
+]

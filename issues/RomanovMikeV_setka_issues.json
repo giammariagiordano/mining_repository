@@ -1,0 +1,140 @@
+[
+  {
+    "number": 18,
+    "title": "ProgressBar.pbar attribute may not be initialized",
+    "state": "open",
+    "body": "ProgressBar pbar attribute may not be initialized when ProgressBar pbar clear is called I suggest changing elif to else in the line 35 of ProgressBar py file",
+    "created_at": "2020-03-10T21:12:35Z",
+    "closed_at": null,
+    "user": "VelikyD",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 16,
+    "title": "Metrics in log.txt and metrics.txt differ",
+    "state": "open",
+    "body": "Check miss 105 1 metric for example metrics txt 47 val depth ssim 0 8065649823444621 depth L1 loss 0 28475610221304454 depth L2 loss 1 0780921563869537 depth rel 0 013788774246122735 miss 105 1 0 7898092502500929 miss 110 1 0 8400877045422039 miss 125 1 0 8837875738376497 miss 125 2 0 9105390223061137 miss 125 3 0 9226212850431088 test depth ssim 0 7144831339517753 depth L1 loss 0 5872593561807876 depth L2 loss 3 0639635721840404 depth rel 0 03247433702150764 miss 105 1 0 5907492319742444 miss 110 1 0 6977111816405784 miss 125 1 0 7987348556518022 miss 125 2 0 8590351104735755 miss 125 3 0 8812925338744529 log txt epoch 48 iteration 141312 n epochs 100 mode valid subset val loss 0 10651767253875732 depth ssim 0 8065649823444621 depth L1 loss 0 28475610221304454 depth L2 loss 1 0780921563869537 depth rel 0 013788774246122735 miss 105 1 0 7898092502500929 miss 110 1 0 8400877045422039 miss 125 1 0 8837875738376497 miss 125 2 0 9105390223061137 miss 125 3 0 9226212850431088 D 3 4809112548828125e 05 B 0 03776097297668457 OnPlateau LR factor 0 0007289999999999999 Momentum power 1 0 epoch 48 iteration 141312 n epochs 100 mode valid subset test loss 0 8279493451118469 depth ssim 0 5628808140749071 depth L1 loss 0 8279493451110189 depth L2 loss 2 9356110095948424 depth rel 0 04641687124962933 miss 105 1 0 5078887939448046 miss 110 1 0 5796516537660523 miss 125 1 0 6571090817444906 miss 125 2 0 7441440820686528 miss 125 3 0 7915455102912616 D 0 7611675262451172 B 0 963810920715332",
+    "created_at": "2020-02-07T15:05:51Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Epoches in Tensorboard start with 2",
+    "state": "open",
+    "body": "",
+    "created_at": "2020-01-31T19:03:52Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "loss in logging bar is not accumulated",
+    "state": "open",
+    "body": "loss 5 76e 01 depth L1 loss 3 84e 01 first is loss second metric also in tensorboard this leads to strange plot",
+    "created_at": "2020-01-31T13:29:01Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "Cuda tensors in Logging (visualization)",
+    "state": "open",
+    "body": "TypeError can t convert CUDA tensor to numpy Use Tensor cpu to copy the tensor to host memory first",
+    "created_at": "2020-01-31T11:18:54Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 12,
+    "title": "checkpoint -> noname",
+    "state": "open",
+    "body": "https github com RomanovMikeV setka blob bea251e75043980b3fafe7c098b79d2e1a2be576 setka pipes TensorBoard py L50",
+    "created_at": "2020-01-31T11:12:14Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "desc -> name",
+    "state": "open",
+    "body": "https github com RomanovMikeV setka blob bea251e75043980b3fafe7c098b79d2e1a2be576 setka pipes Logger py L195",
+    "created_at": "2020-01-31T11:11:31Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Logging is not transperent",
+    "state": "open",
+    "body": "I think you should reveal the true nature of f Probably it should be class not func https github com RomanovMikeV setka blob bea251e75043980b3fafe7c098b79d2e1a2be576 setka pipes Logger py L43",
+    "created_at": "2020-01-31T11:11:05Z",
+    "closed_at": null,
+    "user": "SlinkoIgor",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 4,
+    "title": "Bug in WriteToTensorboard method",
+    "state": "closed",
+    "body": "https github com RomanovMikeV scorch blob d77d271a3b47801dd704e1bb3c914ba9a91e76b2 scorch callbacks py L453 UnboundLocalError local variable subset referenced before assignment",
+    "created_at": "2019-03-07T18:51:37Z",
+    "closed_at": "2019-03-07T20:12:17Z",
+    "user": "valbub",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "GPU usage bug",
+    "state": "open",
+    "body": "When validating with metric that returns a GPU tensor you get an error Scorch tries to call metric numpy but has to call metric cpu numpy",
+    "created_at": "2019-01-31T10:41:51Z",
+    "closed_at": null,
+    "user": "valbub",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Typo in scorch.base.Trainer.load",
+    "state": "closed",
+    "body": "In scorch base 721 line it should be self optimizers not self optimizers",
+    "created_at": "2019-01-31T10:03:39Z",
+    "closed_at": "2019-02-07T12:10:38Z",
+    "user": "valbub",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "RomanovMikeV",
+        "created_at": "2019-02-07T12:10:53Z",
+        "body": "fixed"
+      }
+    ]
+  }
+]

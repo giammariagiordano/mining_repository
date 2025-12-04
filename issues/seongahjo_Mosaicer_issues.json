@@ -1,0 +1,346 @@
+[
+  {
+    "number": 37,
+    "title": "Refactoring",
+    "state": "open",
+    "body": "Description Refactoring Node js Python Server by SOLID principle Node js Python",
+    "created_at": "2018-04-26T08:55:30Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": []
+  },
+  {
+    "number": 36,
+    "title": "Remove dependency from node and python server",
+    "state": "open",
+    "body": "Description In order to divide two servers it is necessary to remove dependency Python Add face upload Add video upload",
+    "created_at": "2018-03-30T07:38:35Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": []
+  },
+  {
+    "number": 35,
+    "title": "Check server status",
+    "state": "open",
+    "body": "Description To check server status and start server if it is down to provide high availability",
+    "created_at": "2018-03-24T22:07:14Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": []
+  },
+  {
+    "number": 34,
+    "title": "Async Module to es7 async/await ",
+    "state": "open",
+    "body": "Description Apply async await",
+    "created_at": "2018-03-02T11:51:39Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": []
+  },
+  {
+    "number": 31,
+    "title": "Apache2 and MIT license compatibility ",
+    "state": "closed",
+    "body": "",
+    "created_at": "2018-02-25T12:58:16Z",
+    "closed_at": "2018-02-25T13:20:13Z",
+    "user": "bbvch13531",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 26,
+    "title": "How about add CODE_OF_CONDUCT.md to Mosaicer?",
+    "state": "closed",
+    "body": "Type of issue Doc Description I think opensource project should have code of conduct How about add CODE OF CONDUCT md to Mosaicer If this looks good on you could I send PR that add CODE OF CONDUCT md",
+    "created_at": "2018-02-23T11:04:02Z",
+    "closed_at": "2018-02-25T04:08:14Z",
+    "user": "bbvch13531",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-25T01:17:33Z",
+        "body": "bbvch13531 Thank you for your attention to our project Well Looks good to me We ll thank you if you do so"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Better Installation",
+    "state": "closed",
+    "body": "Description x pip x Docker",
+    "created_at": "2018-02-19T21:09:10Z",
+    "closed_at": "2018-02-19T21:10:21Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-19T21:10:21Z",
+        "body": "done https github com seongahjo Mosaicer commit 49e57363bd84c53af6afbb10c5e21e6bb595550a and Dockfile https github com seongahjo Mosaicer commit 1674b40a29bbba1e04e82b058a1417b16e492fc2"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Better Documentation",
+    "state": "open",
+    "body": "Description Better Documentation x Roadmap x Contributing x Template ChangeLog",
+    "created_at": "2018-02-19T21:02:24Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "Cloud Service",
+    "state": "closed",
+    "body": "Description Needed to develop cloud service to share images to digitize people like celebrities",
+    "created_at": "2018-02-19T20:56:11Z",
+    "closed_at": "2018-02-25T02:23:34Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-25T02:23:34Z",
+        "body": "done https github com seongahjo Mosaicer commit f42367b61b06ced0280d589afc781a06719189cd https github com seongahjo Mosaicer commit e836bcd3fddebbfd233b730d6981dcb64483ff3e"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Feedback Process",
+    "state": "closed",
+    "body": "Description Feedback process needs to be changed",
+    "created_at": "2018-02-18T07:17:59Z",
+    "closed_at": "2018-02-25T02:22:52Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-25T02:22:52Z",
+        "body": "done https github com seongahjo Mosaicer commit bc8efe854d24a2f06b362e0f19336f05f416e1f5"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Protocol Buffer",
+    "state": "closed",
+    "body": "Description Text data convert to use serialized datas by using Protocol Buffer",
+    "created_at": "2018-02-17T06:47:42Z",
+    "closed_at": "2018-03-02T14:46:13Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-03-02T14:46:13Z",
+        "body": "No text data to convert protocol buffer"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Multiple Labeling",
+    "state": "closed",
+    "body": "Description Choose Multiple Labels on Mosaic process",
+    "created_at": "2018-02-17T06:37:53Z",
+    "closed_at": "2018-02-19T21:29:12Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-19T21:29:12Z",
+        "body": "done https github com seongahjo Mosaicer commit d73911bbf8e746dc5b42809a99b574d4f2a43f28"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Change Mosaic Process Order",
+    "state": "closed",
+    "body": "Description Before Model Video Upload Mosaic After Video Upload Choose Labels Mosaic",
+    "created_at": "2018-02-17T06:36:58Z",
+    "closed_at": "2018-02-18T07:16:59Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-18T07:16:59Z",
+        "body": "done in https github com seongahjo Mosaicer commit fb4038aeac818afb663ddb1ff5d75eb30bfc468f"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Inception V3",
+    "state": "closed",
+    "body": "Description Information here https norman3 github io papers docs google inception html",
+    "created_at": "2018-02-17T06:24:44Z",
+    "closed_at": "2018-02-17T06:26:21Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-17T06:26:21Z",
+        "body": "done in https github com seongahjo Mosaicer commit 79739d2f4bae7317fd64e717457fed0c63993724"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Bugs",
+    "state": "closed",
+    "body": "x License Update x iCheck bug fix",
+    "created_at": "2018-02-17T06:19:17Z",
+    "closed_at": "2018-02-17T06:48:31Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-17T06:48:31Z",
+        "body": "License https github com seongahjo Mosaicer commit 465d1f891eabafc3c3c0ce80eb0864cd181202f1 iCheck https github com seongahjo Mosaicer commit 8957df5376da8600e5c0a165ddf938eda1c2dd2d"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Better naming",
+    "state": "open",
+    "body": "Description I consider changing Mosaicer Web s name",
+    "created_at": "2018-02-04T11:15:26Z",
+    "closed_at": null,
+    "user": "seongahjo",
+    "comments_count": 0,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Extract faces from images",
+    "state": "closed",
+    "body": "Description When user uploads images web module use face recognition module to extract faces on the image",
+    "created_at": "2018-02-04T10:45:14Z",
+    "closed_at": "2018-02-17T06:15:49Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [
+      "soon or later"
+    ],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-17T06:15:49Z",
+        "body": "Done in https github com seongahjo Mosaicer commit 8e43e7416888bb14c381d94d5d7c57d44ed2b722"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Python code-style suggestion",
+    "state": "closed",
+    "body": "It looks like there are no unified rules for indents I suggest using 4 spaces for indents as PEP 8 https www python org dev peps pep 0008 indentation Style Guide recommended",
+    "created_at": "2018-02-02T05:39:37Z",
+    "closed_at": "2018-02-04T10:08:02Z",
+    "user": "hwonyo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-02-04T10:08:02Z",
+        "body": "HwangWonYo vi coding convetion PyCharm"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "upload",
+    "state": "closed",
+    "body": "archi https cloud githubusercontent com assets 10272119 21736295 f66ef49a d4b2 11e6 988b 737066564bae png",
+    "created_at": "2017-01-06T23:26:26Z",
+    "closed_at": "2017-01-06T23:26:29Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2018-01-09T15:48:27Z",
+        "body": "img width 234 alt 2018 01 10 12 47 25 src https user images githubusercontent com 10272119 34729417 f20aa9bc f59f 11e7 8059 bb4acf7c432a png"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Binary Convert Issue",
+    "state": "closed",
+    "body": "Binary Convert py convert global jpg",
+    "created_at": "2017-01-03T21:48:29Z",
+    "closed_at": "2017-01-06T04:48:51Z",
+    "user": "seongahjo",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "seongahjo",
+        "created_at": "2017-01-06T04:48:51Z",
+        "body": "Issue solved 85ec192"
+      }
+    ]
+  }
+]

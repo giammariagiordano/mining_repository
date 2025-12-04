@@ -1,0 +1,439 @@
+[
+  {
+    "number": 82,
+    "title": "SAC with PER",
+    "state": "open",
+    "body": "Hello Thanks so much for sharing the codes I just have a question about sac discrete per py why the importance sampling weights are not used to update the Q function and the policy function https github com quantumiracle Popular RL Algorithms blob 5926245fb33a2eccb7b7e7842ad7ea18544aca0c sac discrete per py L162 I have seen other SAC PER repositories that used the weights to calculate the q value loss and policy loss Thanks",
+    "created_at": "2024-07-30T09:18:51Z",
+    "closed_at": null,
+    "user": "xwen24",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 81,
+    "title": "Environment setting about python version",
+    "state": "closed",
+    "body": "I found there is a requirement txt in this repository I m wondering which python version should I use with this requirement txt Thanks",
+    "created_at": "2024-06-05T10:32:40Z",
+    "closed_at": "2024-07-11T17:46:25Z",
+    "user": "vickychen928",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2024-07-11T17:46:25Z",
+        "body": "Hi it should be fine with python3 8 try other versions as well"
+      }
+    ]
+  },
+  {
+    "number": 80,
+    "title": "“expected sequence of length 4 at dim 1”when running dqn.py",
+    "state": "closed",
+    "body": "Hello I encountered the following error while running dqn py It seems that the error is due to the state s not being correctly initialized as a valid sequence containing four elements I attempted to modify the variable related to the initialization of s self current frame idx 0 to self current frame idx 0 0 0 0 However I still receive the same error Could you please advise me on the correct way to modify the code UserWarning Creating a tensor from a list of numpy ndarrays is extremely slow Please consider converting the list to a single numpy ndarray with numpy array before converting to a tensor Triggered internally at C actions runner work pytorch pytorch builder windows pytorch torch csrc utils tensor new cpp 278 x torch unsqueeze torch FloatTensor x 0 to device Traceback most recent call last File D wush group PythonProject Popular RL Algorithms master dqn py line 269 in module rollout env model File D wush group PythonProject Popular RL Algorithms master dqn py line 246 in rollout a model choose action s File D wush group PythonProject Popular RL Algorithms master dqn py line 160 in choose action x torch unsqueeze torch FloatTensor x 0 to device ValueError expected sequence of length 4 at dim 1 got 0",
+    "created_at": "2024-03-14T08:35:51Z",
+    "closed_at": "2024-05-01T19:44:29Z",
+    "user": "githubfsfs",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2024-05-01T19:44:29Z",
+        "body": "Hi Sorry for late reply I cannot reproduce you error Did you meet same error even when using default CartPole v1 env in my code x as input state has shape 4 Please check dependence version gym torch etc If there is still issue please reopen it"
+      },
+      {
+        "user": "githubfsfs",
+        "created_at": "2024-05-01T19:45:02Z",
+        "body": ""
+      }
+    ]
+  },
+  {
+    "number": 67,
+    "title": "About RL+LSTM",
+    "state": "closed",
+    "body": "Hello Markov property means that the current action of the agent is only related to the current state s t but the input of the policy network in your open source code rl lstm is s t and a t 1 does this type of algorithm converge in the training process Thank you again for your open source code",
+    "created_at": "2022-07-20T14:13:17Z",
+    "closed_at": "2022-10-13T02:58:33Z",
+    "user": "4359hhh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "4359hhh",
+        "created_at": "2022-07-20T14:31:27Z",
+        "body": "I see that this problem has been explained in the references you give"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "title": "Why does PPO every training result in the same reward chart? This puzzles me very much.",
+    "state": "closed",
+    "body": "question https user images githubusercontent com 33616230 136696694 cb6718e5 49cf 48a6 923a eee2a8789ee1 jpg",
+    "created_at": "2021-10-10T12:56:16Z",
+    "closed_at": "2021-11-10T01:08:43Z",
+    "user": "Alexzzdfjcn",
+    "comments_count": 6,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-10-20T01:56:02Z",
+        "body": "Hi Please provide more details about the code you used Did you take multiple rounds of training with the same run If so using exactly the same plt figure will resulting in multiple curves on the same plot"
+      },
+      {
+        "user": "Alexzzdfjcn",
+        "created_at": "2021-10-30T11:32:38Z",
+        "body": "def train env gym make ENV NAME unwrapped state dim env observation space shape 0 action dim env action space shape 0 drawer Drawer reproducible env seed RANDOMSEED np random seed RANDOMSEED torch manual seed RANDOMSEED ppo PPO state dim action dim method METHOD global all ep r update plot stop plot Angle OPT ANGLE all ep r Angle OPT ANGLE for ep in range EP MAX s env reset ep r 0 t0 time time for t in range EP LEN if RENDER env render a ppo choose action s ti time time s S temp r done env step s a ti px ppo store transition s a r 8 8 useful for pendulum since the nets are very small normalization make it easier to learn s s ep r r angle speed height s px update ppo if len ppo state buffer BATCH SIZE ppo finish path s done ppo update if done break ppo finish path s done print Episode Episode Reward 4f Running Time 4f format ep 1 EP MAX ep r time time t0 if ep 0 all ep r append ep r else all ep r append all ep r 1 0 9 ep r 0 1 OPT ANGLE append S temp px Angle append angle px if PLOT RESULT update plot set ppo save model if PLOT RESULT stop plot set env close After I annotated lines 7 to 9 I found that the curve of each training is no longer the same Is it correct for me to modify it like this please"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-10-30T14:39:33Z",
+        "body": "I m afraid that the problem is not caused by the code you adopted from this repo And I m not clear what plotting function did you use and which environment your are working on I guess you mean s env reset for line 7 the environment reset is standard in RL and should not be removed in general Maybe you are using a very deterministic environment without any noise then probably the learning curve will show up to be the same if the model uses exactly the same samples for update during the whole learning process But it looks to me this is less likely to happen because in choose action there is some randomness in sampling So I would say check more of the plotting code you used"
+      },
+      {
+        "user": "Alexzzdfjcn",
+        "created_at": "2021-10-31T03:26:08Z",
+        "body": "class Drawer def init self comments global update plot stop plot update plot threading Event update plot set stop plot threading Event stop plot clear self title ARG NAME if comments self title comments def plot self plt ion clear output True px1013 global all ep r update plot stop plot Angle OPT ANGLE all ep r Angle OPT ANGLE while not stop plot is set if update plot is set plt figure num 1 figsize 20 5 plt cla plt title Reward px plt plot all ep r plt ylim 2000 0 plt xlabel Episode plt ylabel Moving averaged episode reward plt savefig os path join fig Morphing reward time str plt figure num 2 figsize 20 5 plt cla plt title Angle x list range 0 len Angle plot1 plt plot Angle r label angle plot2 plt plot OPT ANGLE b label opt angle plt ylim 2000 0 plt xlabel Episode plt ylabel Morphing Angle plt savefig os path join fig Morphing Angle time str plt legend update plot clear px plt draw plt pause 0 1 plt ioff plt close This is the drawing code I used I don t think there s anything strange Could you please help me have a look I think the problem lies in this code env seed RANDOMSEED np random seed RANDOMSEED torch manual seed RANDOMSEED Because the random number seed is used the random number generated by the system is the same every time so the action selection of each step is the same I don t know if I am right"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-11-06T22:08:12Z",
+        "body": "If it s like you said you can simply verify it by using different random seeds"
+      },
+      {
+        "user": "Alexzzdfjcn",
+        "created_at": "2021-11-10T00:58:18Z",
+        "body": "Ok i will try it Thanks for your help"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "title": "please evaluate the performance over multiple seeds ",
+    "state": "closed",
+    "body": "In the README down below the performance evaluations are done only on a single seed Please evaluate over multiple seeds because as of now the results can be random and are thus not comparable",
+    "created_at": "2021-09-17T18:56:17Z",
+    "closed_at": "2021-09-18T02:17:19Z",
+    "user": "thlautenschlaeger",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-09-18T02:17:19Z",
+        "body": "I appreciate your suggestion However as this is not an officially released repo I didn t spend much time on maintaining this I will not provide thorough evaluation of algorithms Please feel free to do this by yourself it should be quite straightforward with a bash script passing random seeds into some arguments for running since each algorithm script is independent and I welcome such contribution in this repo if you have done that Thanks"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "title": "Error：ppo_gae_discrete.py",
+    "state": "closed",
+    "body": "samples 2d torch multinomial probs 2d sample shape numel True T RuntimeError invalid multinomial distribution encountering probability entry 0",
+    "created_at": "2021-08-26T14:38:28Z",
+    "closed_at": "2021-09-04T18:38:20Z",
+    "user": "lucifer2859",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-09-04T18:38:20Z",
+        "body": "Thanks for pointing out This is caused by the advantage normalization https github com quantumiracle Popular RL Algorithms blob 82ac02f77f6fad985df3fe963f1fe3949ad2d481 ppo gae discrete py L80 sometime encounters np nan for its standard deviation when there is only one sample in the batch Bug fixed"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "title": "NameError: name 'last_action' is not defined",
+    "state": "closed",
+    "body": "Hi After training sac lstm by running python3 sac v2 lstm py train I then attempted to test Upon testing I received an error stating name last action is not defined More specifically gym envs registration py 14 PkgResourcesDeprecationWarning Parameters to load are deprecated Call resolve and require separately result entry point load False Soft Q Network 1 2 QNetworkLSTM linear1 Linear in features 4 out features 512 bias True linear2 Linear in features 4 out features 512 bias True lstm1 LSTM 512 512 linear3 Linear in features 1024 out features 512 bias True linear4 Linear in features 512 out features 1 bias True Policy Network SAC PolicyNetworkLSTM linear1 Linear in features 3 out features 512 bias True linear2 Linear in features 4 out features 512 bias True lstm1 LSTM 512 512 linear3 Linear in features 1024 out features 512 bias True linear4 Linear in features 512 out features 512 bias True mean linear Linear in features 512 out features 1 bias True log std linear Linear in features 512 out features 1 bias True Traceback most recent call last File sac v2 lstm py line 308 in module action hidden out sac trainer policy net get action state last action hidden in deterministic DETERMINISTIC NameError name last action is not defined For now I added last action env action space sample in line 302 after the else statement however I am unsure if this is correct Lastly I just had a question with regards to the NormalizedActions class in line 50 sac v2 lstm py How will this be useful if the action space is for example 1 1 but normalisation scales to 0 1 is there any reference text for this motivation Thanks",
+    "created_at": "2021-08-21T09:05:49Z",
+    "closed_at": "2021-08-24T16:00:19Z",
+    "user": "Nick-Kou",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-08-24T16:00:19Z",
+        "body": "Hi last action is not defined Thanks for pointing out In test adding last action env action space sample should work just as in training NormalizedActions I think the normalisation is to make the standard policy output from 1 1 to action space low action space high"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "title": "FileNotFoundError: [Errno 2] No such file or directory: './model/sac'",
+    "state": "closed",
+    "body": "https github com quantumiracle Popular RL Algorithms blob 16a4c883fd17aba632b5630e4b22801100331483 sac py L366 This error occurs when I run the code Is the model file of sac missing",
+    "created_at": "2021-08-15T05:39:22Z",
+    "closed_at": "2021-08-18T12:42:30Z",
+    "user": "Alexzzdfjcn",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "Alexzzdfjcn",
+        "created_at": "2021-08-15T05:40:04Z",
+        "body": "https github com quantumiracle Popular RL Algorithms blob 16a4c883fd17aba632b5630e4b22801100331483 sac py L366 This error occurs when I run the code Is the model file of sac missing image https user images githubusercontent com 33616230 129468376 b5bbd794 4cfb 41b6 91b2 d4b6b361131b png"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-08-18T12:36:42Z",
+        "body": "Hi Yeah you can just delete line 371 in sac py I ve updated the script now"
+      },
+      {
+        "user": "Alexzzdfjcn",
+        "created_at": "2021-08-19T01:39:28Z",
+        "body": "Thanks very much it s running successfully now Original From Zihan gt Date 2021 8 18 20 36 57 To gt Cc gt Subject Re quantumiracle Popular RL Algorithms FileNotFoundError Errno 2 No such file or directory model sac 41 Hi You can simply create this path model sac under your root folder to solve it I didn t automate the directory creation process You are receiving this because you authored the thread Reply to this email directly view it on GitHub or unsubscribe Triage notifications on the go with GitHub Mobile for iOS or Android"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "ValueError  on SAC v2 LSTM",
+    "state": "closed",
+    "body": "I am getting these errors Any idea why done T tensor np float32 done unsqueeze 1 to self policy net device ValueError setting an array element with a sequence reward T tensor reward dtype T float unsqueeze 1 to self policy net device ValueError expected sequence of length 23 at dim 1 got 48",
+    "created_at": "2021-05-31T17:37:17Z",
+    "closed_at": "2021-10-20T01:53:18Z",
+    "user": "sarmientoj24",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-06-29T06:23:11Z",
+        "body": "Hi Please provide the reference to the code lines or the whole program you run It seems like some trivial type and shape errors"
+      },
+      {
+        "user": "muraatozbek",
+        "created_at": "2021-10-19T14:22:11Z",
+        "body": "Hi In the sac v2 lstm py when i change environment to BipedalWalker v3 it gives ValueError that sarmientoj24 got i did not see any error on code because i changed only environment but gives error Do you have any idea"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-10-20T01:53:18Z",
+        "body": "Hi I realized the problem is caused by the difference of episode lengths The LSTM version algorithms I implemented require the episode length to be the same for all episodes and the sample is saved in an episodic manner here https github com quantumiracle Popular RL Algorithms blob c7200d1072c50bc99d6e82f10ff2d62a3353247c sac v2 lstm py L284 This is okay for the environments I tested e g Reacher Pendulum v0 HalfCheetah v2 without failure states but for BipedalWalker there is the failure state when the bot falls onto the ground that will terminate the episode which makes episode length different for each episode Thus the sampled data here https github com quantumiracle Popular RL Algorithms blob c7200d1072c50bc99d6e82f10ff2d62a3353247c sac v2 lstm py L106 will not be a valid tensor thus this line will return such error See some previous discussions and solutions 20 But this is not implemented in the current repo it should be not hard to do that"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "How do I adjust SAC if I have a continuous action space that is more than -1 and 1",
+    "state": "closed",
+    "body": "Is there a need to edit the SAC and SAC v2 algorithm if my action space is continuous 1500 1500 What do I change inside it",
+    "created_at": "2021-05-28T17:13:13Z",
+    "closed_at": "2021-06-29T06:19:50Z",
+    "user": "sarmientoj24",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-06-29T06:19:47Z",
+        "body": "Hi Sorry for the late reply You can modify the action range here https github com quantumiracle Popular RL Algorithms blob a55a48d7f64941321c9bd20bc14a268f62452e07 sac v2 py L357 in code to any value range you want easily"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "RDPG runs on MDP domains?",
+    "state": "closed",
+    "body": "As the above",
+    "created_at": "2021-04-16T02:19:36Z",
+    "closed_at": "2021-04-29T13:07:12Z",
+    "user": "hai-h-nguyen",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-04-29T13:06:59Z",
+        "body": "I think it s mostly likely used in POMDP cases"
+      },
+      {
+        "user": "hai-h-nguyen",
+        "created_at": "2021-04-29T13:44:28Z",
+        "body": "Yeah I know But I mean in your code you are running it with MDPs right"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-04-29T14:33:30Z",
+        "body": "Those scripts in the root folder are for MDP and there are some scripts in POMDP working on POMDP envs using the pomdp wrappers"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Missing folders",
+    "state": "closed",
+    "body": "Could you push the folder for gym pomdp wrappers and gym pomdp",
+    "created_at": "2021-04-15T14:15:09Z",
+    "closed_at": "2021-04-29T13:05:56Z",
+    "user": "hai-h-nguyen",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-04-29T13:05:54Z",
+        "body": "Done Submodule links are added for these two folders"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Random actions at the beginning for recurrent policy",
+    "state": "closed",
+    "body": "Hello I wonder what you would implement to achieve the above thing It is easy in the mdp policy but for recurrent policies how we can get the hidden out if we take a random action For instance if we take the action from the policy net then we can get hidden out but what if we take a random action action hidden out sac trainer policy net get action obs last action hidden in deterministic environment deterministic train",
+    "created_at": "2021-01-29T17:16:16Z",
+    "closed_at": "2021-03-24T06:35:24Z",
+    "user": "hai-h-nguyen",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-02-02T10:42:48Z",
+        "body": "Hi If you take a look at how the SAC LSTM version saves samples in replay buffer here https github com quantumiracle Popular RL Algorithms blob 46a1af759ba77afae9d8bcfa6a73e76c8577c1fb sac v2 lstm py L284 and how it uses samples for updating here https github com quantumiracle Popular RL Algorithms blob 46a1af759ba77afae9d8bcfa6a73e76c8577c1fb sac v2 lstm py L103 you will find only the initial hidden inputs and initial hidden outputs in each episode are stored in the buffer So your question will only concern with one transition in random exploration stage for each episode At present I do not have a mature idea for getting a theoretically correct hidden out for random case but I guess it won t affect too much of the performance in general due to the fact that the subsequent actions after the initial one are also random therefore not relying on the hidden out"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Variable length episodes",
+    "state": "closed",
+    "body": "I tried to use you code on a custom environment that can have vaiable length episodes Maybe I have set it up wrong but I can t figure out how it can work The replay buffer is filled from complete episodes not just state transitions but in update in the td3 lstm it samples those episodes and uses torch FloatTensor state to device to put it to the GPU but this wont work as the batch can have varying length episodes and pytorch wont allow this Possibly works on a batch size of 1",
+    "created_at": "2020-12-18T12:59:35Z",
+    "closed_at": "2021-03-24T06:34:20Z",
+    "user": "alanmackey",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-01-29T14:01:03Z",
+        "body": "Hi I think what you said is correct For lstm version the whole episode of transitions are sent to train the policy as a single sample Variate length of episodes can be achieved with two ways 1 padding consecutive transitions with zeros in episode if it has a different length from other episodes the maximal one however the zero padding may not make sense in some cases 2 change the update manner of lstm policy to take one transition at a time but keep the gradients of hidden states not detached so that it can be tracked along the episode Also welcome to contribute some other implementations for achieving that"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Does sac_v2_lstm support Pendulum-v0?",
+    "state": "closed",
+    "body": "I am trying to run sac v2 lstm py with python sac v2 lstm py train I change the ENV Reacher Pendulum v0 HalfCheetah v2 2 in original code to ENV Reacher Pendulum v0 HalfCheetah v2 1 The error i got action 0 20995763 Traceback most recent call last File sac v2 lstm py line 267 in module next state reward done env step action File usr local anaconda3 lib python3 8 site packages gym core py line 292 in step return self env step self action action File usr local anaconda3 lib python3 8 site packages gym core py line 295 in action raise NotImplementedError NotImplementedError Is it because for the POMDP we need particularly gym env",
+    "created_at": "2020-12-12T21:18:11Z",
+    "closed_at": "2021-03-24T06:34:56Z",
+    "user": "zhaoguangyuan123",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2021-02-02T10:20:09Z",
+        "body": "Hi I think it s not the reason you mentioned I notice that you re using Python 3 8 but I run the code with Python 3 6 8 without such errors But it s most likely to be the gym version problem and I m using gym 0 10 9 Take a look at the requirements txt https github com quantumiracle Popular RL Algorithms blob master requirements txt It s basically a replicate of my local environment You can try pip uninstall gym pip install gym 0 10 9"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "I think \"with torch.no_grad():\" is needed when calculating critic loss",
+    "state": "closed",
+    "body": "In file sac v2 lstm py the code below without with torch no grad when calculating target Q value Training Q Function I think with torch no grad is needed predict target q1 self target soft q net1 next state new next action action hidden out predict target q2 self target soft q net2 next state new next action action hidden out target q min torch min predict target q1 predict target q2 self alpha next log prob target q value reward 1 done gamma target q min if done 1 only reward q value loss1 self soft q criterion1 predicted q value1 target q value detach detach no gradients for the variable q value loss2 self soft q criterion2 predicted q value2 target q value detach Though for some simple environment the algorithm would finally converge but I am not sure the case in complex environment As far as I know the parameter for calculating target q value should not contribute any gradient to model",
+    "created_at": "2020-10-11T03:18:35Z",
+    "closed_at": "2020-12-07T12:40:20Z",
+    "user": "dbsxdbsx",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2020-12-04T06:30:23Z",
+        "body": "Hi Is it just what the target q value detach is achieving Best zihan"
+      },
+      {
+        "user": "quantumiracle",
+        "created_at": "2020-12-07T12:40:11Z",
+        "body": "Check here https stackoverflow com questions 56816241 difference between detach and with torch nograd in pytorch I think there is no difference since there is only one variable target q value involved here"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Issue in test mode of 'sac_v2_gru.py'",
+    "state": "closed",
+    "body": "Hi thank you for your awesome GRU based SAC I found that from the line 303 to 304 in sac v2 gru py should be modified as it is GRU implementation Location https github com quantumiracle SOTA RL Algorithms blob 9856600d19f2ed787094f7a968e8588cfead1a21 sac v2 gru py L303 Modification hidden out torch zeros 1 1 hidden dim dtype torch float cuda torch zeros 1 1 hidden dim dtype torch float cuda initialize hidden state for lstm hidden cell each is layer batch dim hidden out torch zeros 1 1 hidden dim dtype torch float cuda Thanks",
+    "created_at": "2020-04-22T03:01:27Z",
+    "closed_at": "2020-05-18T16:31:44Z",
+    "user": "hynkis",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2020-05-18T16:31:44Z",
+        "body": "Hi Thanks for pointing out It s fixed"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Stochastic Action sample seems not right to me",
+    "state": "closed",
+    "body": "In SOTA RL Algorithms common policy networks py line 337 the random sampling from the normal distribution is done by z normal sample While this samples a single value it works for a single action space For multiple action space this does not seems right What about z normal sample n self action dim",
+    "created_at": "2020-03-05T21:19:15Z",
+    "closed_at": "2020-05-18T18:57:40Z",
+    "user": "BigWZhu",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2020-05-18T18:57:40Z",
+        "body": "Hi I think you are right Bugs fixed Thanks"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "why input last action to lstm policy network",
+    "state": "closed",
+    "body": "Hi may I ask why for SAC you input the last action into the policy network for LSTM where this is not usually done in normal policy network no LSTM Is this based on any studies or your own And does this improve learning compare to if states were the only input Thanks https github com quantumiracle SOTA RL Algorithms blob e3fc2de8493ea974081a10112c5005d755172787 common policy networks py L319",
+    "created_at": "2019-11-27T07:37:54Z",
+    "closed_at": "2020-05-18T15:17:47Z",
+    "user": "junhuang-ifast",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2019-12-01T19:50:23Z",
+        "body": "Hi This is common for LSTM policy to learn the dynamics of env referred to http rll berkeley edu deeprlworkshop papers rdpg pdf https arxiv org pdf 1710 06537 pdf"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Parameters copying",
+    "state": "closed",
+    "body": "https github com quantumiracle STOA RL Algorithms blob 27746ebc9881c936b2206c9d2c0b4c2f5bbe4bae sac v2 py L230 possibly shorter and more clear like this self target soft q net1 load state dict self soft q net1 state dict same with the next line",
+    "created_at": "2019-08-27T14:57:48Z",
+    "closed_at": "2019-09-09T16:04:59Z",
+    "user": "manuelsh",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "quantumiracle",
+        "created_at": "2019-09-09T16:04:59Z",
+        "body": "Thanks"
+      }
+    ]
+  }
+]

@@ -1,0 +1,550 @@
+[
+  {
+    "number": 38,
+    "title": "Would be interesting in trying Predictatops on this new dataset from Wyoming!",
+    "state": "open",
+    "body": "Is your feature request related to a problem Please describe Would be interesting in trying Predictatops on this new dataset from Wyoming https sites google com a wyo gov oil and gas prb study Describe the solution you d like A tutorial that runs the prediction Describe alternatives you ve considered A separate repo",
+    "created_at": "2020-08-27T02:49:44Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 5,
+    "labels": [
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "xiaolitanhua625",
+        "created_at": "2022-03-26T15:06:29Z",
+        "body": "Is it a public dataset It seems that I don t have permission to view the dataset from Wyoming"
+      },
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2022-03-26T18:00:05Z",
+        "body": "Ah it used to be open Let me ping someone to see if it moved"
+      },
+      {
+        "user": "xiaolitanhua625",
+        "created_at": "2022-03-27T02:37:43Z",
+        "body": "Ah it used to be open Let me ping someone to see if it moved Thanks Looking forward to further information on it"
+      },
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2022-03-29T04:24:56Z",
+        "body": "Jessie says this is same study the link is now https www wsgs wyo gov products supplemental data wsgs data 2020 ofr 09 zip There is also a Green River basin top dataset they picked on paper that is now here https www wsgs wyo gov products supplemental data wsgs data 2021 ofr 01 zip but those are lith tops"
+      },
+      {
+        "user": "xiaolitanhua625",
+        "created_at": "2022-03-31T13:09:25Z",
+        "body": "It seems that it needs skills of GIS software to deal with the data and export them to be used by python notebook Need some time to learn GIS"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "missing / in path to CSV for pics",
+    "state": "closed",
+    "body": "Describe the bug When trying to clone the package into co lab and run all runner py it seems to fall on importing the PICKS csv file because a is missing in https github com JustinGOSSES predictatops blob master predictatops configurationplusfiles py on line self picks dic self data directory OilSandsDB PICKS TXT which should be self picks dic self data directory OilSandsDB PICKS TXT To Reproduce Clone into co lab and follow normal instructions in docs Expected behavior The CSV inport shouldn t fail Desktop please complete the following information colab 2020 05 01 reminder to fix this tomorrow on different computer",
+    "created_at": "2020-05-02T04:19:37Z",
+    "closed_at": "2020-05-03T18:16:59Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2020-05-03T18:16:59Z",
+        "body": "fixed in verion 0 0 5 release"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Change fetch_demo_data.py to load from a zip file of all files instead of individual file! and then don't have to save unzipped dataset.",
+    "state": "closed",
+    "body": "Is your feature request related to a problem Please describe Data loads slow and has to be stored upcompressed as fetch demo data py loads files individually instead of loading as zip file and then unzips into place Describe the solution you d like all demo data in single zip file and everything else works as normal Describe alternatives you ve considered Leave as is take away zip file as its duplicate Alternatively put it in another location and load from there Additional context",
+    "created_at": "2019-10-25T02:06:54Z",
+    "closed_at": "2019-10-25T03:36:03Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-10-25T02:07:28Z",
+        "body": "requires a little knowledge of pooch to fix as that s what I m using to load the data"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "something in steps 1-3 stores path to files instead of filenames, may have been accidental change during documentation?",
+    "state": "closed",
+    "body": "Describe the bug User reported via email a bug having to do with the import script where the intersection of file names and names of wells fails as the full path is used for names of wells to import against To Reproduce Steps to reproduce the behavior 1 Run notebook for first 3 steps 2 Try to use import runner py on the results of notebook for first three steps Expected behavior The comparison operation should find approximately 1200 well names that match well files Screenshots Desktop please complete the following information unknown Additional context If you emailed me on this issue please add more context below I ll try to get to this within the next week",
+    "created_at": "2019-10-23T16:30:30Z",
+    "closed_at": "2020-05-03T18:17:40Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "bug",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-10-27T00:25:31Z",
+        "body": "Think this is fixed but I wasn t able to reproduce exactly Please let me know if still a problem or solved I will close this eventually if I don t hear back"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Add tests",
+    "state": "open",
+    "body": "Make small test datasets with 2 different organizations",
+    "created_at": "2019-08-09T02:56:23Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 25,
+    "title": "create geojson around different 'regions' based on thickness, turn into one hot vectors",
+    "state": "open",
+    "body": "Use thicknesss and potentially a residual of depth or thickness to identify sharp lines where sudden changes occur Manually or programmatically split map into contiguous regions Create a feature dimension for each region Every well is a 1 in one or more features and a zero in the rest Features can overlap but might be better if they don t Not sure",
+    "created_at": "2019-08-09T02:42:50Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "hackathon sized",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-08-14T01:27:21Z",
+        "body": "Might require user interface via python javascript Maybe not Would be nice to be able to just draw polygons by hand or point by point graphically then load them and have them as features along with everything else"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "create feature that identifies sharp jumps",
+    "state": "open",
+    "body": "There s some talk of different ways to do this in SWUNG Slack channel",
+    "created_at": "2019-08-09T02:42:11Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "hackathon sized",
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 23,
+    "title": "debug why some wells can't be loaded and are ignored",
+    "state": "open",
+    "body": "debug why some wells can t be loaded and are ignored",
+    "created_at": "2019-08-09T02:41:37Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "bug"
+    ],
+    "comments": []
+  },
+  {
+    "number": 22,
+    "title": "Expand number of places Dask is used to parallerize functions",
+    "state": "open",
+    "body": "Expand number of places Dask is used to parallerize functions Generally try to speed things up Dask was originally included than taken out as debugging was taking too long Could be used in feature creation and training",
+    "created_at": "2019-08-09T02:41:09Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 21,
+    "title": "explore use of clustergrammer-widget for visualization large numbers of features",
+    "state": "open",
+    "body": "https github com MaayanLab clustergrammer widget",
+    "created_at": "2019-08-09T02:40:11Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "hackathon sized",
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 20,
+    "title": "Use H2O's automl library to try to improve on standard XGBoost approach.",
+    "state": "open",
+    "body": "Use H2O s automl library to try to improve on standard XGBoost approach",
+    "created_at": "2019-07-21T05:11:13Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "hackathon sized",
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-08-14T01:29:23Z",
+        "body": "Would be interesting to try deep learning approaches via keras for the train prediction steps after learning something about what features have the most value via XGBoost"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "UMAP for visualization & feature creation step",
+    "state": "open",
+    "body": "Cluster wells using unsupervised learning and then see if clusters can be created that correlated with supervised prediction results initial trials with UMAP give encouraging results",
+    "created_at": "2019-07-21T05:10:38Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "hackathon sized",
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 18,
+    "title": "Reorganize documentation - usuage & architecture are too blended together",
+    "state": "open",
+    "body": "Reorganize documentation usuage architecture are too blended together",
+    "created_at": "2019-07-21T05:10:08Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-10-27T00:28:05Z",
+        "body": "Started this but needs complete breakage into Architecture Simple usage Complicated usage and adaption for different datasets"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Visualize probabilty of pick along well",
+    "state": "open",
+    "body": "Visualize probabilty of pick along well instead of just returning max probability prediction in each well",
+    "created_at": "2019-07-21T05:09:16Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "hackathon sized",
+      "enhancement",
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-08-14T01:31:09Z",
+        "body": "Could also visualize wells across the field in terms of uncertainty of pick or how vertically spread out the top in terms of most likely to be the top X number of depth points are in each well This might be a nice way to identify which wells contribute the most uncertainty to the unit thickness"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "to ensure easier use with data that comes in different formats, move merge of all input data to first bits of work.",
+    "state": "open",
+    "body": "Currently things like fining all available curves in wells and finding neighboring wells are done with just the input files needed for those tasks then the results merged If someone is bringing in geographic coordinate data that isn t in txt or CSV form it might be easier to adapt this code if they only had to write their own imports and transforms at the very beginning Some of the code having to do with SiteID UWI Well log filesnames for example is transformed a couple of different times in different early modules In summary It would probably make more sense to just do it once and have a big dataframe from then on The intermediate file sizes would be bigger but the code would be less complex to adapt If everything was a dataframe from check load onwards",
+    "created_at": "2019-06-04T04:46:51Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "bug",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 15,
+    "title": "Add example notebook for each of the steps in the pipeline!",
+    "state": "closed",
+    "body": "Add example notebook for each of the steps in the pipeline",
+    "created_at": "2019-05-22T23:28:46Z",
+    "closed_at": "2019-08-09T02:45:59Z",
+    "user": "JustinGOSSES",
+    "comments_count": 2,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-05-28T03:28:35Z",
+        "body": "added one https github com JustinGOSSES predictatops blob master demo Example firstSteps modules fetchdata configuration checkdata ipynb in commit https github com JustinGOSSES predictatops commit a8862d1ef4bdd72ae9766528c5bef35ca44dc5e1"
+      },
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-08-09T02:45:53Z",
+        "body": "added enough notebooks to close this issue but could use more clarity"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "add example of mapping various attributes to ploy.py",
+    "state": "open",
+    "body": "Add example of mapping various attributes to plot py Error Range of depth of top X number of depth predictions by probability Actual top depth Unit thickness max or min statistic of certain curve type availability of different curve lists",
+    "created_at": "2019-05-22T23:27:00Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 13,
+    "title": "add methodology of Ye et al., 2017​ that uses wavelet transform as feature generated step",
+    "state": "open",
+    "body": "add methodology of Ye et al 2017 that uses wavelet transform as feature generated step See slide 5 of https onedrive live com edit aspx resid C028D856AB4461D 2889 ithint file 2cpptx authkey AAJOHk5oEZJhcuk for example image",
+    "created_at": "2019-05-22T23:25:18Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 4,
+    "labels": [
+      "hackathon sized",
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-08-14T01:32:10Z",
+        "body": "Tagged as hackathon project but it might be too ambitious as hackathon project really not a good handle on it"
+      },
+      {
+        "user": "bluetyson",
+        "created_at": "2020-08-27T10:13:31Z",
+        "body": "https publications csiro au publications publication PIcsiro EP149165 https github com GeoscienceAustralia geo wavelets tree 373d7f9e24ea08d2c7556e5824002e715430925a preprocessing"
+      },
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2020-08-27T21:01:48Z",
+        "body": "Can t figure out what this is supposed to be used on https github com GeoscienceAustralia geo wavelets Rasters of seismic data"
+      },
+      {
+        "user": "bluetyson",
+        "created_at": "2020-08-27T21:30:37Z",
+        "body": "Yeah rasters of stuff haven t tried seismic but several others"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Add images from slides to docs under a theory section",
+    "state": "closed",
+    "body": "Add images from slides to docs under a theory section https onedrive live com redir resid C028D856AB4461D 2889 authkey AAJOHk5oEZJhcuk ithint file 2cpptx",
+    "created_at": "2019-05-22T23:23:43Z",
+    "closed_at": "2019-07-21T05:07:48Z",
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "run with a different top than Top McMurry",
+    "state": "open",
+    "body": "Run with a different top than Top McMurry and post results here then suggest leader table for results in readme",
+    "created_at": "2019-05-16T04:09:42Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "help wanted",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "link to all the old Manville repo issues that still apply!",
+    "state": "open",
+    "body": "https github com JustinGOSSES MannvilleGroup Strat Hackathon issues",
+    "created_at": "2019-05-15T22:01:38Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "good first issue"
+    ],
+    "comments": []
+  },
+  {
+    "number": 9,
+    "title": "Slidepack in repo or just integrate ideas into docs and just link to elsewhere as PPT are lame?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-05-15T22:00:53Z",
+    "closed_at": "2019-07-21T05:08:09Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-07-21T05:08:09Z",
+        "body": "done"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "- Plot results! ",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-05-15T22:00:31Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-05-16T04:08:58Z",
+        "body": "Plot results 1 Wells with given top predicted top 3 6 wells with either given top predicted top or both"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "write up a use of yaml for running multiple attempts on the same dataset in scratch instead of everything via the config python script ",
+    "state": "open",
+    "body": "",
+    "created_at": "2019-05-15T22:00:16Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 6,
+    "title": "improve saving of prediction results",
+    "state": "closed",
+    "body": "Write a better save results map results",
+    "created_at": "2019-05-15T21:59:35Z",
+    "closed_at": "2019-07-21T05:08:24Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-07-21T05:08:24Z",
+        "body": "done"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "clean & add to documentation",
+    "state": "closed",
+    "body": "How to install put on pypi or wait on that until further along probably Provide a couple how to use examples Provide link to demo notebooks Add all runner py description and examples Shrink to only 1 readme finish merging markdown into RST format and push more into docs instead of readme Make all the functions easier to navigate through Provide a page with the highest level functions only",
+    "created_at": "2019-05-15T21:58:56Z",
+    "closed_at": "2019-06-01T16:24:51Z",
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "add catBoost and lightGBM to XGBoost functionality",
+    "state": "open",
+    "body": "Add catBoost and lightGBM to XGBoost functionality to increase speed of model training",
+    "created_at": "2019-05-11T05:37:26Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "enhancement"
+    ],
+    "comments": []
+  },
+  {
+    "number": 2,
+    "title": "Need to investigate problem in features_runner.py ",
+    "state": "open",
+    "body": "problem in features runner py len df test5 1302634 Users justingosses anaconda envs MannvilleDask2 lib python3 6 site packages pandas core generic py 1996 PerformanceWarning your performance may suffer as PyTables will pickle object types that it cannot map directly to c types inferred type mixed key block3 values items UWI trainOrTest Neighbors Obj class DistFrPick TopTarget class DistFrPick TopHelper closerToBotOrTop return pytables to hdf path or buf key self kwargs",
+    "created_at": "2019-05-06T02:19:12Z",
+    "closed_at": null,
+    "user": "JustinGOSSES",
+    "comments_count": 0,
+    "labels": [
+      "bug",
+      "help wanted"
+    ],
+    "comments": []
+  },
+  {
+    "number": 1,
+    "title": "need to change package name to match Python standards",
+    "state": "closed",
+    "body": "Suggested names wellpickmimic stratpicksupml pickmimic topmimic stratpick supervisedstratigraphy stratipredict strataterpretor stratalmimic strataxtension pickpredict predictatops gets a cool logo S upervised I terative M achine Learning for S tratigraphic I nterpretation M imicry simsim Well based Iterative Stratigraphic Supervised Machine Learning wissml supervisedstratigraphy supervisedstrat superstrat an approach for supervised machine learning prediction of chronostratigraphic well tops",
+    "created_at": "2019-03-31T15:48:30Z",
+    "closed_at": "2019-04-09T04:20:59Z",
+    "user": "JustinGOSSES",
+    "comments_count": 1,
+    "labels": [
+      "help wanted",
+      "question"
+    ],
+    "comments": [
+      {
+        "user": "JustinGOSSES",
+        "created_at": "2019-03-31T15:52:58Z",
+        "body": "winner predictatops"
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "number": 20,
+    "title": "inconsistent link to COS directory for model files",
+    "state": "closed",
+    "body": "the README https github com IBM MAX Review Text Generator blob master README md contains this link to the model files http max assets s3 api us geo objectstorage softlayer net keras generative lang model generative lang model h5 this works however it is different than the link in the Dockerfile https github com IBM MAX Review Text Generator blob master Dockerfile http max assets s3 api us geo objectstorage softlayer net review text generator 1 0 assets tar gz i would expect both of these to point to the same set of model files in addition both of the links should be pointing to the new US cross region s3 us cloud object storage appdomain cloud because the old one has been deprecated s3 api us geo objectstorage softlayer net",
+    "created_at": "2019-03-27T00:32:50Z",
+    "closed_at": "2019-05-16T08:13:07Z",
+    "user": "vabarbosa",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 14,
+    "title": "Standardize model file packaging",
+    "state": "closed",
+    "body": "Refer to https github ibm com CODAIT Production Readiness issues 4 This model does not package the model files into tar gz like TensorFlow models",
+    "created_at": "2018-11-06T22:59:57Z",
+    "closed_at": "2019-03-27T00:35:43Z",
+    "user": "xwu0226",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "bdwyer2",
+        "created_at": "2019-03-27T00:35:43Z",
+        "body": "This seems to have been resolved"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Add request param descriptions and update Swagger models help text",
+    "state": "closed",
+    "body": "Example in PR https github com IBM MAX Object Detector pull 20",
+    "created_at": "2018-08-20T15:58:12Z",
+    "closed_at": "2018-10-25T20:11:41Z",
+    "user": "xwu0226",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 10,
+    "title": "Chars length in webapp",
+    "state": "closed",
+    "body": "In the web app the chars variable is set to 0 by default not 100 screen shot 2018 08 16 at 1 22 08 pm https user images githubusercontent com 19673623 44232997 83c8c600 a157 11e8 8e9e 35734def9bd1 png",
+    "created_at": "2018-08-16T20:23:17Z",
+    "closed_at": "2023-03-10T23:08:46Z",
+    "user": "bdwyer2",
+    "comments_count": 2,
+    "labels": [
+      "bug",
+      "good first issue"
+    ],
+    "comments": [
+      {
+        "user": "MLnick",
+        "created_at": "2018-08-16T20:29:26Z",
+        "body": "The Swagger UI generates an example value as shown but for a numerical value if you don t specify an example value which you can do on the API data model fields as a named arg then it default to 0 However the API itself does default to 100 https github com IBM MAX Review Text Generator blob master api model py L27"
+      },
+      {
+        "user": "MLnick",
+        "created_at": "2018-08-16T20:33:06Z",
+        "body": "This does however raise the issue that we currently don t populate these example values to illustrate example request response objects and we should do that for better API doc cc ptitzler djalova ajbozarth gdequeiroz"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Tensorflow Error causing model to fail on predict",
+    "state": "closed",
+    "body": "ptitzler and I are both consistent t getting the following error on prediction 2018 07 27 22 57 58 333 ERROR in app Exception on model predict POST Traceback most recent call last File usr local lib python3 6 site packages flask app py line 1805 in full dispatch request rv self dispatch request File usr local lib python3 6 site packages flask app py line 1791 in dispatch request return self view functions rule endpoint req view args File usr local lib python3 6 site packages flask restplus api py line 313 in wrapper resp resource args kwargs File usr local lib python3 6 site packages flask views py line 88 in view return self dispatch request args kwargs File usr local lib python3 6 site packages flask restplus resource py line 44 in dispatch request resp meth args kwargs File usr local lib python3 6 site packages flask restplus marshalling py line 101 in wrapper resp f args kwargs File workspace api model py line 56 in post generated text self model wrapper predict seed text gen chars File workspace core backend py line 84 in predict preds self model predict x verbose 0 0 File usr local lib python3 6 site packages keras models py line 1025 in predict steps steps File usr local lib python3 6 site packages keras engine training py line 1839 in predict self make predict function File usr local lib python3 6 site packages keras engine training py line 1029 in make predict function kwargs File usr local lib python3 6 site packages keras backend tensorflow backend py line 2499 in function return Function inputs outputs updates updates kwargs File usr local lib python3 6 site packages keras backend tensorflow backend py line 2442 in init with tf control dependencies self outputs File usr local lib python3 6 site packages tensorflow python framework ops py line 4604 in control dependencies return get default graph control dependencies control inputs File usr local lib python3 6 site packages tensorflow python framework ops py line 4310 in control dependencies c self as graph element c File usr local lib python3 6 site packages tensorflow python framework ops py line 3323 in as graph element return self as graph element locked obj allow tensor allow operation File usr local lib python3 6 site packages tensorflow python framework ops py line 3402 in as graph element locked raise ValueError Tensor s is not an element of this graph obj ValueError Tensor Tensor activation 1 Softmax 0 shape 61 dtype float32 is not an element of this graph",
+    "created_at": "2018-07-27T23:10:24Z",
+    "closed_at": "2018-08-13T08:16:14Z",
+    "user": "ajbozarth",
+    "comments_count": 4,
+    "labels": [
+      "bug"
+    ],
+    "comments": [
+      {
+        "user": "ajbozarth",
+        "created_at": "2018-07-27T23:13:33Z",
+        "body": "MLnick this seems like something we should fix fast"
+      },
+      {
+        "user": "MLnick",
+        "created_at": "2018-07-30T08:36:46Z",
+        "body": "I confirm I get the same error Strangely it actually seems related to the Flask version not Flask restplus but underlying Flask Flask 1 0 gives the error but running with Flask 0 12 4 works Digging deeper"
+      },
+      {
+        "user": "MLnick",
+        "created_at": "2018-07-30T09:15:55Z",
+        "body": "It seems to be related to the way threading or context handling works not sure exactly what changed Fixing the TF Graph scoping fixes the issue and I will post a PR shortly Will also post a separate PR addressing pip requirements installation and freezing the dependency versions as per https github ibm com CODAIT Usability Enhancement issues 8"
+      },
+      {
+        "user": "feihugis",
+        "created_at": "2018-08-09T17:26:17Z",
+        "body": "This issue https github com keras team keras issues 2397 in TensorFlow discussed a similar problem we met"
+      }
+    ]
+  }
+]

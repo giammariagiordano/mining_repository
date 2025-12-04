@@ -1,0 +1,344 @@
+[
+  {
+    "number": 12,
+    "title": "How to train for custom Dataset?",
+    "state": "open",
+    "body": "Hey can you explain how to train using my custom images and annotations And refer something to make object detection from scratch",
+    "created_at": "2020-12-19T17:43:55Z",
+    "closed_at": null,
+    "user": "ApoorvaOjha",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 11,
+    "title": "train this model in different video",
+    "state": "open",
+    "body": "Congratulations for this project I would like to ask what modifications should I do in order to train this model using another video",
+    "created_at": "2020-09-04T13:29:25Z",
+    "closed_at": null,
+    "user": "chrisdid4",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "ApoorvaOjha",
+        "created_at": "2020-12-30T06:16:31Z",
+        "body": "Congratulations for this project I would like to ask what modifications should I do in order to train this model using another video hey were you able to do so Can you please convey the same to me Thank You"
+      },
+      {
+        "user": "chrisdid4",
+        "created_at": "2020-12-30T15:11:05Z",
+        "body": "hey were you able to do so Can you please convey the same to me Thank You No unfortunately I didn t do it"
+      },
+      {
+        "user": "JaiVallabh",
+        "created_at": "2021-04-28T07:08:25Z",
+        "body": "Congratulations for this project I would like to ask what modifications should I do in order to train this model using another video Hey were you able to complete this project I am unable to load weights load weights model yolo tiny weights TypeError Keyword argument not understood border mode Please clarify"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Error while loading weights",
+    "state": "open",
+    "body": "Load weights from utils import load weights model get model load weights model yolo tiny weights Error usr local lib python3 6 dist packages ipykernel launcher py 8 UserWarning Update your Conv2D call to the Keras 2 API Conv2D 16 3 3 input shape 3 448 4 strides 1 1 padding same usr local lib python3 6 dist packages ipykernel launcher py 13 UserWarning Update your Conv2D call to the Keras 2 API Conv2D 32 3 3 padding same del sys path 0 usr local lib python3 6 dist packages ipykernel launcher py 15 UserWarning Update your MaxPooling2D call to the Keras 2 API MaxPooling2D pool size 2 2 padding valid from ipykernel import kernelapp as app InvalidArgumentError Traceback most recent call last usr local lib python3 6 dist packages tensorflow python framework ops py in create c op graph node def inputs control inputs op def 1653 try 1654 c op pywrap tf session TF FinishOperation op desc 1655 except errors InvalidArgumentError as e InvalidArgumentError Negative dimension size caused by subtracting 2 from 1 for node max pooling2d 38 MaxPool MaxPool T DT FLOAT data format NHWC ksize 1 2 2 1 padding VALID strides 1 2 2 1 leaky re lu 38 LeakyRelu with input shapes 1 224 32 During handling of the above exception another exception occurred ValueError Traceback most recent call last 14 frames usr local lib python3 6 dist packages tensorflow python framework ops py in create c op graph node def inputs control inputs op def 1655 except errors InvalidArgumentError as e 1656 Convert to ValueError for backwards compatibility 1657 raise ValueError str e 1658 1659 return c op ValueError Negative dimension size caused by subtracting 2 from 1 for node max pooling2d 38 MaxPool MaxPool T DT FLOAT data format NHWC ksize 1 2 2 1 padding VALID strides 1 2 2 1 leaky re lu 38 LeakyRelu with input shapes 1 224 32",
+    "created_at": "2020-06-02T06:27:01Z",
+    "closed_at": null,
+    "user": "pankaj-saha",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "gael-gao",
+        "created_at": "2021-01-05T22:14:53Z",
+        "body": "I also meet the same type of error when I load weights ValueError Negative dimension size caused by subtracting 2 from 1 for node max pooling2d MaxPool MaxPool T DT FLOAT data format NHWC explicit paddings ksize 1 2 2 1 padding VALID strides 1 2 2 1 Placeholder with input shapes 1 150 16"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "program of vehicle-detection",
+    "state": "closed",
+    "body": "The program didnt display an error but I dont know why the portion of bounding box didnt run please help me Vehicle Detection zip https github com subodh malgonde vehicle detection files 2716246 Vehicle Detection zip screenshots zip https github com subodh malgonde vehicle detection files 2716250 screenshots zip",
+    "created_at": "2018-12-29T10:03:33Z",
+    "closed_at": "2019-01-07T06:01:35Z",
+    "user": "rajabi1372",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "rajabi1372",
+        "created_at": "2018-12-29T15:03:30Z",
+        "body": "question zip https github com subodh malgonde vehicle detection files 2716480 question zip"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2019-01-01T06:24:30Z",
+        "body": "It is hard to say why the boxes don t show up Have you made any changes to the code in the notebook Have you loaded the weights of YOLO network into the model Also what is your version of Keras and Tensorflow The versions that I have used are more than 2 years old now The versions which I have used are in environment yml https github com subodh malgonde vehicle detection blob master environment yml"
+      },
+      {
+        "user": "rajabi1372",
+        "created_at": "2019-01-06T18:30:44Z",
+        "body": "thank you very much"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "packages are not found ",
+    "state": "closed",
+    "body": "i tried to do conda env create f environment yml but i got this any solution ResolvePackageNotFound pexpect 4 0 1 py35 0 appnope 0 1 0 py35 0 sqlite 3 13 0 0 tk 8 5 18 0 icu 54 1 0 openssl 1 0 2j 0 tensorflow 0 11 0 py35 0 zlib 1 2 8 3 ptyprocess 0 5 1 py35 0 readline 6 2 2 mkl 11 3 3 0 tbb 4 3 20141023 0 qt 5 6 2 0 protobuf 3 0 0 py35 0 hdf5 1 8 17 1 terminado 0 6 py35 0 freetype 2 5 5 1 libpng 1 6 27 0",
+    "created_at": "2018-06-11T13:34:58Z",
+    "closed_at": "2020-09-24T17:48:26Z",
+    "user": "madhu-korada",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-06-18T04:48:40Z",
+        "body": "What is your OS I can t think of a reason why conda is not able to find these packages You can try installing these packages manually by doing conda install package name"
+      },
+      {
+        "user": "vieite",
+        "created_at": "2018-07-30T14:59:36Z",
+        "body": "I m on ubuntu and also got some issues wuth some packages vehicle detection conda env create f environment yml Solving environment failed ResolvePackageNotFound tbb 4 3 20141023 0 appnope 0 1 0 py35 0 I also tried your solution It worked with tbb but not with appnote so I deleted it from the environment yml but when I run Vehicle Detection ipynb I get ModuleNotFoundError No module named cv2 Just noticed I missed a step but found another error vehicle detection source activate keras Could not find conda environment keras You can list all discoverable environments with conda info envs"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-07-31T05:29:13Z",
+        "body": "You can list all discoverable environments with conda info envs Can you try the above command and check if the environment keras was created or not If you read through the environment yml file at the top it has this line name keras Which means when you create a conda environment using this file then the name of the environment will be keras If there is no such environment then it could one of the 2 things 1 Either your command was not executed properly 2 Or the environment has been created but conda is not looking for the environments in the right place In this case you would have to do some googling to figure out how to specify the conda path Also I should mention that I am running OSX 64 bit operating system with Python 3 5 Check if the packages listed in the environment yml file are available for your OS or not"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "TypeError: expected str, bytes or os.PathLike object, not Sequential",
+    "state": "closed",
+    "body": "When I run import numpy as np import cv2 def load weights model yolo weight file data np fromfile yolo weight file np float32 data data 4 index 0 for layer in model layers shape w shape for w in layer get weights if shape kshape bshape shape bia data index index np prod bshape reshape bshape index np prod bshape ker data index index np prod kshape reshape kshape index np prod kshape layer set weights ker bia Followed by model get model model load weights model tiny yolo weights yolo tiny weights I get the error TypeError expected str bytes or os PathLike object not Sequential Any help Thanks",
+    "created_at": "2018-06-02T21:05:28Z",
+    "closed_at": "2018-07-31T05:30:06Z",
+    "user": "SRugina",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-06-03T12:28:28Z",
+        "body": "Hi What versions of Keras and Tensorflow are you using This error could be due to change in Keras API This repo uses Keras 1 2 1 Please see the environment yml https github com subodh malgonde vehicle detection blob master environment yml for versions used for this project You may have to modify the code to make it compatible with latest versions of Keras Tensorflow"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-07-31T05:30:06Z",
+        "body": "Closing this due to inactivity"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "cannot load the weight how can I fix it?",
+    "state": "closed",
+    "body": "While trying to load the weights I always get one of this errors and I could not find a solution did you have this problem Or do you know how can I fix it name null is not defined cannot import name load weights",
+    "created_at": "2018-05-10T22:54:56Z",
+    "closed_at": "2018-07-31T05:29:41Z",
+    "user": "katrinbujari",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-05-13T14:09:54Z",
+        "body": "Hi the function load weights is located in the utils py file Do you have that file Its at the top level in the repository Also it would help if you post the entire error traceback"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-07-31T05:29:41Z",
+        "body": "Closing this due to inactivity"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "about the moviepy ",
+    "state": "closed",
+    "body": "At the end of Vehicle Detection ipynb you deal with the videos by using the moviepy However i can t find the document of moviepy can you tell me how to deal with the problem Thank you so much",
+    "created_at": "2018-03-29T03:11:19Z",
+    "closed_at": "2018-03-29T10:53:01Z",
+    "user": "XiongLianga",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-03-29T10:52:55Z",
+        "body": "Moviepy is a python library You need to install it You can either install using pip or conda The version which was used by me is moviepy 0 2 2 13 You can find this in the environment yml file in this repository"
+      },
+      {
+        "user": "XiongLianga",
+        "created_at": "2018-03-29T11:14:16Z",
+        "body": "thank you for your solution"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "File error",
+    "state": "closed",
+    "body": "def load weights model yolo weight file data np fromfile yolo weight file np float32 data data 4 index 0 for layer in model layers shape w shape for w in layer get weights if shape kshape bshape shape bia data index index np prod bshape reshape bshape index np prod bshape ker data index index np prod kshape reshape kshape index np prod kshape layer set weights ker bia This I pasted initials in site packages Under Utils Then I downloaded tiny yolo weights Then I ran 2 Load weights from utils import load weights model get model load weights model yolo tiny weights there s is file error What shall I do",
+    "created_at": "2018-03-11T04:38:36Z",
+    "closed_at": "2018-03-29T10:53:48Z",
+    "user": "Sayantan17",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-03-12T04:30:56Z",
+        "body": "Can you post the error traceback Its difficult to say where and how the error is triggered without looking at the error traceback"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-03-29T10:53:48Z",
+        "body": "Closing this issue due to inactivity"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Bounding boxes not showing",
+    "state": "closed",
+    "body": "Hey I ran the code and the bounding boxes show up for only very small thresholds like 0 007 that too randomly placed Please help",
+    "created_at": "2017-03-25T18:38:41Z",
+    "closed_at": "2018-02-27T03:54:17Z",
+    "user": "aashay96",
+    "comments_count": 12,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-26T07:01:45Z",
+        "body": "Are your pre processing the test images before passing them to the model You can have a look at Vehicle Detection ipynb https github com subodh malgonde vehicle detection blob master Vehicle Detection ipynb I have run the model on some test images and its working fine for me"
+      },
+      {
+        "user": "aashay96",
+        "created_at": "2017-03-26T07:08:36Z",
+        "body": "Yes I am doing pre processing and using the same model as yours The issue still exist Can it have something to do with the weights"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-26T07:58:41Z",
+        "body": "Could be I hope you are using these weights https drive google com file d 0B1tW VtY7onibmdQWE1zVERxcjQ view usp sharing Are you using cv2 to read images or matplotlib cv2 will read images in the BGR format whereas matplotlib will read them in RGB The model is trained on RGB images So you will have to ensure you are passing RGB image for testing"
+      },
+      {
+        "user": "aashay96",
+        "created_at": "2017-03-26T08:43:04Z",
+        "body": "I am using matplotlib I copied exactly your code and used the mentioned weight but the problem still exists"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-26T13:00:57Z",
+        "body": "Can you upload your code somewhere and give me a link"
+      },
+      {
+        "user": "aashay96",
+        "created_at": "2017-03-26T13:51:49Z",
+        "body": "sure Here is the link to the code though I copied your code and tried still the same issue http paste ubuntu com 24253759"
+      },
+      {
+        "user": "Angloher",
+        "created_at": "2017-07-02T10:48:33Z",
+        "body": "I am having the same issue"
+      },
+      {
+        "user": "ManjeeraJagiri",
+        "created_at": "2017-08-17T10:56:03Z",
+        "body": "Hey I am facing the same issue Did anyone figure out the problem"
+      },
+      {
+        "user": "docPhil99",
+        "created_at": "2017-08-31T15:16:53Z",
+        "body": "I had this problem I think the Keras 2 API is the problem I used the solution here https github com xslittlegrass CarND Vehicle Detection issues 3 and now it works"
+      },
+      {
+        "user": "anandkoirala",
+        "created_at": "2017-09-01T04:20:42Z",
+        "body": "following worked for me comment by mark chan https github com xslittlegrass CarND Vehicle Detection issues 3 add this code before the load weights model yolo tiny weights function"
+      },
+      {
+        "user": "ManjeeraJagiri",
+        "created_at": "2017-09-01T05:36:10Z",
+        "body": "docPhil99 anandkoirala Worked like a charm Thanks a lot Have any of you tried training with custom dataset"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-02-27T03:54:14Z",
+        "body": "I would just like to mention that this repository uses keras 1 2 1 and tensorflow 0 12 1 If you use Keras 2 x or tensorflow 1 x you may need to modify the code"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "please tell me how to run the code? or the  software  requirement",
+    "state": "closed",
+    "body": "please tell me how to run the code just run Vehicle Detection ipynb and what is the software requirement subodh malgonde",
+    "created_at": "2017-03-21T08:01:34Z",
+    "closed_at": "2018-07-31T05:32:57Z",
+    "user": "wn312991",
+    "comments_count": 10,
+    "labels": [],
+    "comments": [
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-21T08:36:43Z",
+        "body": "Just added a environment yml file If you use Anaconda to manage environments you can clone the environment i e install the dependencies by typing conda env create f environment yml Once you install the dependencies you can type source activate keras keras is the name of the environment in environment yml You just have to run all the cells in Vehicle Detection ipynb there is no other code In the notebook there are code blocks to test the model on a few test images and also on the video"
+      },
+      {
+        "user": "wn312991",
+        "created_at": "2017-03-21T09:14:35Z",
+        "body": "subodh malgonde firstly sincerely thanks you for your reply secondly I don t use Anaconda to manage environment and I will try it later thirdly I want to consult you that does this code apply to other road video What is the accuracy rate"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-21T09:29:08Z",
+        "body": "You are welcome What do you mean by other video I used this model to process project video mp4 I have not tried it yet for other road videos To measure accuracy you need the ground truth as well i e video with bounding boxes for each frame"
+      },
+      {
+        "user": "wn312991",
+        "created_at": "2017-03-22T01:40:10Z",
+        "body": "subodh malgonde hello dear subodh malgonde when I type conda env create f environment yml conda environments are currently broken the error conda create file environment yml Error Can t process without a name environment yml is not a valid yaml file Environment with requierements txt file needs a name Have you ever had this problem how to solve it thanks you very much"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-26T07:05:34Z",
+        "body": "Sorry I forgot about this I have never seen this issue Maybe you could take the dependencies from environment yml and build a yaml file yourself As explained here https conda io docs using envs html"
+      },
+      {
+        "user": "wn312991",
+        "created_at": "2017-03-27T14:32:23Z",
+        "body": "I have tried it before as the webside you offered but it didn t succeed I am very confused subodh malgonde"
+      },
+      {
+        "user": "wn312991",
+        "created_at": "2017-03-27T15:14:41Z",
+        "body": "Tn environment yml it included name C Anaconda3 envs tensorflow dependencies decorator 4 0 11 py35 0 ipython genutils 0 1 0 py35 0 jsonschema 2 5 1 py35 0 jupyter core 4 3 0 py35 0 nbformat 4 3 0 py35 0 pip 9 0 1 py35 1 python 3 5 3 0 setuptools 27 2 0 py35 1 six 1 10 0 py35 0 traitlets 4 3 2 py35 0 vs2015 runtime 14 0 25123 0 wheel 0 29 0 py35 0 pip ipython genutils 0 1 0 jupyter core 4 3 0 but when I run the Vehicle Detection ipydb the first cell import error ImportError Traceback most recent call last ipython input 1 7910e7e534f5 in module 1 import cv2 2 import numpy as np 3 import matplotlib pyplot as plt 4 import matplotlib image as mpimg 5 import glob ImportError DLL load failed have you ever met this problem please help subodh malgonde ryan keenan"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2017-03-28T02:46:02Z",
+        "body": "wn13083405221 Are you a Udacity student If yes then can you post this on the Udacity forum https discussions udacity com This looks like some windows setup issue You can also try submitting an issue to Conda s github repository https github com conda conda"
+      },
+      {
+        "user": "san-rs",
+        "created_at": "2017-07-13T18:32:48Z",
+        "body": "Using Anaconda API https api anaconda org Fetching package metadata ERROR requests packages urllib3 connection match hostname 317 Certificate did not match expected hostname conda binstar org Certificate subject organizationalUnitName Domain Control Validated organizationalUnitName PositiveSSL Multi Domain commonName anaconda com issuer countryName GB stateOrProvinceName Greater Manchester localityName Salford organizationName COMODO CA Limited commonName COMODO RSA Domain Validation Secure Server CA notBefore Apr 28 00 00 00 2017 GMT OCSP http ocsp comodoca com crlDistributionPoints http crl comodoca com COMODORSADomainValidationSecureServerCA crl subjectAltName DNS anaconda com DNS anacondacloud com DNS anacondacloud org DNS binstar org DNS wakari io caIssuers http crt comodoca com COMODORSADomainValidationSecureServerCA crt serialNumber 67DECDFB7CCA3B7951249D6BEB13DE22 notAfter Sep 29 23 59 59 2017 GMT version 3 SSL verification error hostname conda binstar org doesn t match either of anaconda com anacondacloud com anacondacloud org binstar org wakari io ERROR requests packages urllib3 connection match hostname 317 Certificate did not match expected hostname conda binstar org Certificate subject organizationalUnitName Domain Control Validated organizationalUnitName PositiveSSL Multi Domain commonName anaconda com issuer countryName GB stateOrProvinceName Greater Manchester localityName Salford organizationName COMODO CA Limited commonName COMODO RSA Domain Validation Secure Server CA notBefore Apr 28 00 00 00 2017 GMT OCSP http ocsp comodoca com crlDistributionPoints http crl comodoca com COMODORSADomainValidationSecureServerCA crl subjectAltName DNS anaconda com DNS anacondacloud com DNS anacondacloud org DNS binstar org DNS wakari io caIssuers http crt comodoca com COMODORSADomainValidationSecureServerCA crt serialNumber 67DECDFB7CCA3B7951249D6BEB13DE22 notAfter Sep 29 23 59 59 2017 GMT version 3 SSL verification error hostname conda binstar org doesn t match either of anaconda com anacondacloud com anacondacloud org binstar org wakari io Solving package specifications NoPackagesFoundError Packages missing in current linux 64 channels appnope 0 1 0 py35 0 opencv3 3 1 0 py35 0 tbb 4 3 20141023 0 What do I do Subodh"
+      },
+      {
+        "user": "subodh-malgonde",
+        "created_at": "2018-07-31T05:32:57Z",
+        "body": "suraj ravishankar As the error says these packages were not installed by Anaconda 1 appnope 0 1 0 py35 0 2 opencv3 3 1 0 py35 0 3 tbb 4 3 20141023 0 If you can install these packages manually yourself Just google How to install opencv3 on linux 64 bit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "number": 6,
+    "title": "Template issues when submitting",
+    "state": "open",
+    "body": "Hello I want to submit a manuscript to ESWA recently but I could not find the word template of the journal before submitting the manuscript Do you have the word template of the journal",
+    "created_at": "2022-08-03T09:15:19Z",
+    "closed_at": null,
+    "user": "SHIJIE0313",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 5,
+    "title": "How to train the network?",
+    "state": "closed",
+    "body": "Well done Can you provide training code Thank you",
+    "created_at": "2019-04-08T12:55:36Z",
+    "closed_at": "2019-04-25T17:06:08Z",
+    "user": "izhangh",
+    "comments_count": 3,
+    "labels": [],
+    "comments": [
+      {
+        "user": "americofmoliveira",
+        "created_at": "2019-04-25T17:05:49Z",
+        "body": "Hi There is still on going research based on this work so I cannot provide training code You have the weights of the network just for reproducibility purposes Thank you"
+      },
+      {
+        "user": "ZM-J",
+        "created_at": "2021-01-07T14:09:45Z",
+        "body": "For now could you release your training code please"
+      },
+      {
+        "user": "americofmoliveira",
+        "created_at": "2021-01-07T19:22:48Z",
+        "body": "Hello ZM J access to this work is still restricted by University of Minho Please reach out to Prof Carlos A Silva csilva dei uminho pt to get access to the code Thank you"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Could you provide trained model weights if possible?",
+    "state": "closed",
+    "body": "",
+    "created_at": "2019-02-14T06:14:43Z",
+    "closed_at": "2019-02-17T13:51:26Z",
+    "user": "desti-nation",
+    "comments_count": 0,
+    "labels": [],
+    "comments": []
+  },
+  {
+    "number": 3,
+    "title": "Another repo for comparison",
+    "state": "closed",
+    "body": "Nice work you can also take a look at what we did a couple of years back we just published the repo we didn t write a paper on it https github com orobix retina unet Just as another data point for comparison purposes",
+    "created_at": "2019-01-22T15:17:21Z",
+    "closed_at": "2019-03-20T21:42:29Z",
+    "user": "lantiga",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "americofmoliveira",
+        "created_at": "2019-03-19T22:17:12Z",
+        "body": "Hi Luca In fact I know your work and it was one of the first points of comparison when I was starting my master s thesis We ended up not citing the repository in our paper precisely because there was no associated paper Anyway you guys have a great job over there Thanks for passing by"
+      },
+      {
+        "user": "lantiga",
+        "created_at": "2019-03-20T21:42:29Z",
+        "body": "Thank you Am rico good luck with your studies"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "No \"calibrations\" folder provided",
+    "state": "closed",
+    "body": "I started to run the code for DRIVE dataset and it gave the error of not finding the calibrations folder Please see the attached file for reference screenshot from 2019 01 12 20 02 20 https user images githubusercontent com 39874883 51071453 1a68c700 16a5 11e9 85f0 09eced7c9f8f png",
+    "created_at": "2019-01-12T09:05:01Z",
+    "closed_at": "2019-03-26T12:53:27Z",
+    "user": "aakash-saboo",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "desti-nation",
+        "created_at": "2019-02-18T06:23:34Z",
+        "body": "Mee too And what is calibrations of a dataset"
+      },
+      {
+        "user": "americofmoliveira",
+        "created_at": "2019-03-19T22:14:14Z",
+        "body": "Hi Thank you for your interest in our research and sorry for the delay in my response In fact the calibration files were missing and we already added them By abuse of language we usually call calibration to the standardization process that is to the normalization of the data so that it acquires zero mean and unit variance Let me know if you have any other problems"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "title": "source code",
+    "state": "closed",
+    "body": "Hi Americo Great work I m wondering if you have plans on providing the source code for replication it would be very interesting since you obtained good improvements Thanks in advance Dayvid",
+    "created_at": "2018-11-03T21:53:53Z",
+    "closed_at": "2018-12-19T19:52:30Z",
+    "user": "wellescastro",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "americofmoliveira",
+        "created_at": "2018-12-17T23:34:46Z",
+        "body": "Hi The code is available now Hope it is still useful for you Thank you"
+      },
+      {
+        "user": "wellescastro",
+        "created_at": "2018-12-19T19:52:30Z",
+        "body": "Sure Thank you"
+      }
+    ]
+  }
+]

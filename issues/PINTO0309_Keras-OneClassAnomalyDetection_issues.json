@@ -1,0 +1,94 @@
+[
+  {
+    "number": 5,
+    "title": "Interogations concerning compactloss",
+    "state": "closed",
+    "body": "Hi I ve been studied DOC for a while now and i find something weird is original loss a custom loss or is it an implementation of the paper s loss As written in the original paper K sum y pred K mean y pred axis 0 2 axis 1 must be the average sample variance but K var y pred axis 1 is quite different causing very different loss than expected Am I missing something",
+    "created_at": "2021-02-16T15:49:42Z",
+    "closed_at": "2021-02-23T15:38:40Z",
+    "user": "Sylv-Lej",
+    "comments_count": 4,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shinmura0",
+        "created_at": "2021-02-17T03:18:57Z",
+        "body": "As written in the original paper K sum y pred K mean y pred axis 0 2 axis 1 In implementation from preprocessing to training ipynb the code is same above And this code is based on the paper image https user images githubusercontent com 34497776 108140927 13bfa000 7106 11eb 8206 d6aca07cf6c3 png K var y pred axis 1 Where is this I cannot search this code in the implementation"
+      },
+      {
+        "user": "Sylv-Lej",
+        "created_at": "2021-02-17T10:19:33Z",
+        "body": "I understand this you wrote this lc 1 classes batchsize batchsize 2 K sum y pred K mean y pred axis 0 2 axis 1 batchsize 1 2 i understand this part that is the one written in the paper 1 classes batchsize K sum y pred K mean y pred axis 0 2 axis 1 but not the multiplication by this batchsize 2 batchsize 1 2 and why is y pred K mean y pred axis 0 2 squared"
+      },
+      {
+        "user": "Sylv-Lej",
+        "created_at": "2021-02-17T10:28:25Z",
+        "body": "K var y pred axis 1 Has never been in your code i wrote it cause of img width 542 alt Capture d e cran 2021 02 17 a 11 26 57 src https user images githubusercontent com 23343125 108191136 196fb280 7113 11eb 92e9 db8cb8fee8e1 png"
+      },
+      {
+        "user": "shinmura0",
+        "created_at": "2021-02-17T13:31:51Z",
+        "body": "I remembered a day of implementation My code was based on this equation appendix image https user images githubusercontent com 34497776 108209624 de4e9d00 716d 11eb 811c 543f1ef7b1fb png And your proposal K var y pred axis 1 is possible to do so"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Consider composite loss",
+    "state": "closed",
+    "body": "Hi nice repo as explained in the paper Based on the composite loss the network is back propagated and the network parameters are learned using gradient descent or a suitable variant But you don t use that composite loss to back propagate any ideas about this",
+    "created_at": "2021-01-13T17:39:03Z",
+    "closed_at": "2021-01-25T12:28:59Z",
+    "user": "Sylv-Lej",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "shinmura0",
+        "created_at": "2021-01-14T03:21:35Z",
+        "body": "Hi I am a co implementer But you don t use that composite loss to back propagate any ideas about this composite loss is below l D lambda l C If it is true I cannot implemented composite loss in keras Instead of composite loss I implemented 2 stage training First is l D Second lambda l C But in PyTorch you can implement composite loss easily Good luck"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Error when checking target: expected dense_1 to have 4 dimensions, but got array with shape (128, 10)",
+    "state": "open",
+    "body": "Required Your device RaspberryPi3 LaptopPC or other device name Laptop MacBook Pro 15 Early 2013 Required Your device s CPU architecture armv7l x86 64 or other architecture name x86 64 Required Your OS Raspbian Ubuntu1604 or other os name MacOS 10 14 6 Required Details of the work you did before the problem occurred Clone repository and execute from preprocessing to training ipynb in jupiter notebook Required Error message Total params 719 034 Trainable params 549 098 Non trainable params 169 936 x target is 6000 samples x ref is 6000 samples training ValueError Traceback most recent call last ipython input 3 bdce5d7b4ebd in module 117 return model t 118 119 model train X train s X ref y ref 5 ipython input 3 bdce5d7b4ebd in train x target x ref y ref epoch num 94 reference data 95 Get loss while learning 96 ld append model r train on batch batch ref batch y 97 98 loss append np mean ld usr local lib python3 6 site packages keras engine training py in train on batch self x y sample weight class weight 1209 x y 1210 sample weight sample weight 1211 class weight class weight 1212 if self uses dynamic learning phase 1213 ins x y sample weights 1 usr local lib python3 6 site packages keras engine training py in standardize user data self x y sample weight class weight check array lengths batch size 787 feed output shapes 788 check batch axis False Don t enforce the batch size 789 exception prefix target 790 791 Generate sample wise weight values given the sample weight and usr local lib python3 6 site packages keras engine training utils py in standardize input data data names shapes check batch axis exception prefix 126 expected names i to have 127 str len shape dimensions but got array 128 with shape str data shape 129 if not check batch axis 130 data shape data shape 1 ValueError Error when checking target expected dense 1 to have 4 dimensions but got array with shape 128 10 Required Overview of problems and questions How to solve this error I didn t changed anything in the code i just ran the example",
+    "created_at": "2019-09-04T08:17:20Z",
+    "closed_at": null,
+    "user": "trittsv",
+    "comments_count": 2,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-09-07T01:02:21Z",
+        "body": "trittsv Can you tell me the version of Keras"
+      },
+      {
+        "user": "shinmura0",
+        "created_at": "2019-09-10T03:24:46Z",
+        "body": "trittsv Modifications are required for MobileNet V2 include top True After all MobileNet V2 is as follows mobile MobileNetV2 include top True input shape input shape alpha alpha weights imagenet Commit content a96658e4a217e737b37dfad0c619ac5bedecc43a"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Is it avaliable for other domain data? Like vehicle runtime dataset.",
+    "state": "open",
+    "body": "Not the image domain I have a dataset that has 400 colunms and 10k rows But it s not image dataset I wanna know if this works for it as anomaly detection Thank you",
+    "created_at": "2019-04-27T09:32:50Z",
+    "closed_at": null,
+    "user": "stellarkey",
+    "comments_count": 1,
+    "labels": [],
+    "comments": [
+      {
+        "user": "PINTO0309",
+        "created_at": "2019-05-11T08:25:01Z",
+        "body": "The sample programs in this repository are for images only If you can replace the data you own with an image you may be able to detect something It would be interesting if you had such an idea"
+      }
+    ]
+  }
+]
